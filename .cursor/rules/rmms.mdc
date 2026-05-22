@@ -1,0 +1,42 @@
+---
+description: RMMS 2026 project context — knowledge base, tech stack, business rules
+alwaysApply: true
+---
+
+# RMMS 2026 — AI Context
+
+Dự án **RMMS 2026** (Retail Merchandiser Management System): quản lý PG/Leader tại cửa hàng bán lẻ.
+
+**Knowledge base** nằm tại `knowledge-base/`. Trước khi implement, đọc file liên quan:
+
+| Chủ đề | File |
+|--------|------|
+| Tổng quan | `knowledge-base/00-overview.md` |
+| Thuật ngữ | `knowledge-base/01-glossary.md` |
+| Tech stack | `knowledge-base/02-tech-stack.md` |
+| Kiến trúc | `knowledge-base/03-architecture.md` |
+| Data model | `knowledge-base/04-data-model.md` |
+| API conventions | `knowledge-base/05-api-conventions.md` |
+| Business rules (SOURCE OF TRUTH) | `knowledge-base/06-business-rules.md` |
+| Acceptance criteria (AC-1..35) | `knowledge-base/07-acceptance-criteria.md` |
+| Coding standards | `knowledge-base/08-coding-standards.md` |
+| Module specs | `knowledge-base/modules/M01..M16` |
+| Sprint plan | `knowledge-base/sprints/sprint-00..18` |
+| Prompts | `knowledge-base/prompts/` |
+
+## Tech stack (bắt buộc)
+
+- **Backend**: .NET 8, EF Core, PostgreSQL 16, Redis, Hangfire, SignalR
+- **Web**: Next.js 14 (App Router), TypeScript, Ant Design Pro, TanStack Query, Zustand
+- **Mobile**: Flutter 3.x, Riverpod 2, Dio, Hive
+
+## Quy tắc khi generate code
+
+1. Dùng thuật ngữ domain từ `01-glossary.md` (PG, Leader, BUH, Store, Shift, Face Verification...)
+2. Business logic theo `06-business-rules.md` — trích dẫn BR-xxx
+3. Endpoints theo `05-api-conventions.md`; entities theo `04-data-model.md`
+4. Tham chiếu AC-xxx khi implement acceptance criteria
+5. Giải thích bằng tiếng Việt; code/identifiers bằng tiếng Anh; user-visible strings song ngữ vi+en
+6. Không implement scope ngoài Phase 1 (xem `knowledge-base/prompts/system-prompt.md`)
+
+Chi tiết đầy đủ: `@knowledge-base/prompts/system-prompt.md`
