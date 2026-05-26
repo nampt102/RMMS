@@ -2,6 +2,18 @@
 
 Bộ knowledge base này được thiết kế để **bất kỳ AI coding tool nào** (Claude, ChatGPT, Cursor, Copilot, Windsurf, Cody...) đều có thể ingest và hiểu context dự án RMMS 2026 Phase 1.
 
+## 🚀 BẮT ĐẦU TỪ ĐÂY (cho AI session mới và dev mới)
+
+**ĐỌC FILE NÀY TRƯỚC TIÊN:** [`PROJECT-STATE.md`](./PROJECT-STATE.md)
+
+Đây là snapshot trạng thái dự án **ngay lúc này** — đã build cái gì, chưa build cái gì, đang block ở đâu, bước kế tiếp là gì. Mọi file khác là spec (mong đợi), `PROJECT-STATE.md` là thực tế (đã làm).
+
+Sau đó:
+1. [`CHANGELOG.md`](./CHANGELOG.md) — log lịch sử đã làm gì khi nào
+2. [`decisions/`](./decisions/) — ADRs đã chốt (kiến trúc, lib, pattern)
+3. [`sprints/sprint-00.md`](./sprints/sprint-00.md) — sprint hiện tại + tasks còn lại
+4. Các file spec dưới đây (theo nhu cầu)
+
 ## Cách sử dụng
 
 ### Option 1: Claude Projects
@@ -31,6 +43,10 @@ Bộ knowledge base này được thiết kế để **bất kỳ AI coding tool
 ```
 knowledge-base/
 ├── README.md                          # This file
+├── PROJECT-STATE.md                   # 🚀 LIVE STATUS — read this first
+├── CHANGELOG.md                       # Historical log of milestones
+├── decisions/                         # Architecture Decision Records (ADRs)
+│   └── README.md                      # ADR template + index
 ├── 00-overview.md                     # Project context, goals, stakeholders
 ├── 01-glossary.md                     # Terminology: PG, Leader, BUH, etc.
 ├── 02-tech-stack.md                   # Technology decisions
@@ -85,12 +101,19 @@ knowledge-base/
 ## Maintenance
 
 Khi có thay đổi:
-- Update file tương ứng
-- Update `CHANGELOG.md` (sẽ tạo khi cần)
-- Re-upload vào AI tool đang dùng
+
+| Loại thay đổi | File cần update |
+|---|---|
+| Hoàn thành 1 capability lớn (module, integration, sprint) | `PROJECT-STATE.md` + `CHANGELOG.md` |
+| Chốt quyết định kiến trúc / lib / pattern | Tạo ADR mới trong `decisions/` + update index trong `decisions/README.md` |
+| Spec thay đổi (business rule, API contract…) | File spec tương ứng (`06-business-rules.md`, `05-api-conventions.md`, …) + ghi entry trong `CHANGELOG.md` |
+| Sprint progress | `sprints/sprint-XX.md` (tick checkbox + ngày) |
+
+**Quy tắc cho AI sessions:** Khi user yêu cầu làm xong việc gì có scope > 1 file code, **bắt buộc cập nhật `PROJECT-STATE.md` + `CHANGELOG.md` trước khi kết thúc session**, để session sau không phải đoán đã làm gì.
 
 ---
 
-**Generated**: 2026-05-22  
+**Knowledge base initial commit**: 2026-05-22  
+**Last structural update**: 2026-05-24 (added PROJECT-STATE.md + CHANGELOG.md + decisions/)  
 **Plan version**: v1.0  
 **Source PRD**: AppRMMS2026.pdf (Document v1.0)
