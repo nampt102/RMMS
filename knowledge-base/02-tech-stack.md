@@ -2,10 +2,12 @@
 
 ## Quick Reference
 
+> **Note (2026-05-24):** Backend platform was changed from .NET 8 to **.NET 10 LTS** — see [`decisions/ADR-009-dotnet-10-lts.md`](decisions/ADR-009-dotnet-10-lts.md).
+
 | Layer | Technology | Version | Purpose |
 |---|---|---|---|
-| Backend | .NET | 8.0 (LTS) | Web API |
-| Backend ORM | EF Core | 8.x | Database access |
+| Backend | .NET | **10.0 (LTS)** | Web API |
+| Backend ORM | EF Core | 10.x | Database access |
 | Database | PostgreSQL | 16.x | Primary data store |
 | Cache/Queue | Redis | 7.x | Cache, Hangfire queue, session |
 | Background jobs | Hangfire | 1.8.x | Scheduled jobs, notifications, deadline checks |
@@ -35,13 +37,16 @@
 
 ## Backend Stack — Detailed
 
-### Why .NET 8?
-- LTS support until November 2026, then .NET 10 LTS path
+### Why .NET 10 LTS? (revised 2026-05-24 — see ADR-009)
+- **LTS support until November 2028** — covers all of Phase 1 + ~1 year of post-launch operations with no forced framework migration
+- Skipping .NET 8 (EOL Nov 2026, mid-Phase 1B) avoids a costly 3–5 dev-day migration during the most critical phase
+- .NET 9 was rejected outright: STS only, support ends mid-2026
 - Runs native on Linux with same performance as Windows
-- Devs already know C#
-- Hangfire, EF Core, SignalR, Workflow Core are mature
+- Devs already know C# (now using C# 14 via `LangVersion=latest`)
+- Hangfire, EF Core, SignalR, all mature; .NET 10 packages stable (6+ months since GA)
 - Strong typing reduces runtime bugs
 - Memory-efficient (~150MB per API instance baseline)
+- Smaller / faster Docker images via Ubuntu 24.04 (Noble) base in modern .NET tags
 
 ### Project Structure (Clean Architecture-ish)
 ```

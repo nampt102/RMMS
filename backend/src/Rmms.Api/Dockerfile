@@ -1,7 +1,7 @@
 # ============== Rmms.Api Dockerfile ==============
 # Multi-stage build: SDK → runtime, non-root user, healthcheck.
 
-FROM mcr.microsoft.com/dotnet/aspnet:8.0-jammy AS base
+FROM mcr.microsoft.com/dotnet/aspnet:10.0 AS base
 WORKDIR /app
 EXPOSE 8080
 ENV ASPNETCORE_URLS=http://+:8080 \
@@ -12,7 +12,7 @@ ENV ASPNETCORE_URLS=http://+:8080 \
 RUN groupadd --system --gid 1001 rmms \
  && useradd  --system --uid 1001 --gid rmms --no-create-home rmms
 
-FROM mcr.microsoft.com/dotnet/sdk:8.0-jammy AS build
+FROM mcr.microsoft.com/dotnet/sdk:10.0 AS build
 WORKDIR /src
 COPY ["Directory.Build.props", "./"]
 COPY ["Directory.Packages.props", "./"]

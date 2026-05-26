@@ -1,5 +1,3 @@
-using Microsoft.EntityFrameworkCore;
-
 namespace Rmms.Application.Common.Interfaces;
 
 /// <summary>
@@ -10,5 +8,4 @@ namespace Rmms.Application.Common.Interfaces;
 public interface IAppDbContext
 {
     Task<int> SaveChangesAsync(CancellationToken ct = default);
-    DatabaseFacade Database { get; }
 }

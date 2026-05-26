@@ -58,8 +58,11 @@ Content template:
 | _ADR-006_ | _PostGIS deferred; NetTopologySuite for geofence_ | _Planned_ | _—_ |
 | _ADR-007_ | _Caddy as reverse proxy (auto-SSL)_ | _Planned_ | _—_ |
 | _ADR-008_ | _Tailwind preflight disabled in web (AntD wins)_ | _Planned_ | _—_ |
+| [ADR-009](./ADR-009-dotnet-10-lts.md) | Adopt .NET 10 LTS directly (skip .NET 8) | **Accepted** | 2026-05-24 |
 
 When an ADR is authored, replace its row with a real link and date.
+
+> **Numbering note:** ADR-009 was authored before ADR-001..008 because it arose unexpectedly during scaffold build verification. The reserved slots 001..008 will be filled in later sessions. This is normal — ADR numbers are immutable once assigned; they don't have to be authored in order.
 
 ## Conventions
 

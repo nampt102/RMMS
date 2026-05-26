@@ -2,9 +2,9 @@
 
 > **READ THIS FIRST.** This file is the single source of truth for "where the project is right now". Every AI session and every new dev should open this file before doing anything else. Update on every significant milestone.
 
-**Last updated:** 2026-05-24
+**Last updated:** 2026-05-24 (evening — restore errors resolved)
 **Current phase:** Phase 1A — Sprint 00 (Foundation)
-**Current sprint progress:** ~60% (scaffold done, CI + first migration outstanding)
+**Current sprint progress:** ~70% (scaffold + .NET 10 + NuGet restore issues resolved; CI + first DB migration outstanding)
 
 ---
 
@@ -12,14 +12,14 @@
 
 The repository now contains a working **scaffold** for all three apps:
 
-- ✅ **Backend** — .NET 8 modular monolith (Clean Architecture), 7 projects + 2 test projects, builds expected
+- ✅ **Backend** — **.NET 10 LTS** modular monolith (Clean Architecture), 7 projects + 2 test projects, builds expected. Migrated from initial .NET 8 target 2026-05-24 per [ADR-009](./decisions/ADR-009-dotnet-10-lts.md).
 - ✅ **Web** — Next.js 14 (App Router) + Ant Design Pro + TanStack Query + Zustand + next-intl
 - ✅ **Mobile** — Flutter 3.22 + Riverpod 2 + Dio + Hive + ARB-based l10n
 - ✅ **Local infra** — `docker-compose.yml` for PostgreSQL 16 + Redis 7 + MinIO + Seq + Caddy
 - ❌ **No business logic yet** — no User/Auth/Store entities, no real endpoints (only `/api/v1/health`)
 - ❌ **No CI/CD** — `.github/workflows/` not created
 - ❌ **No migrations applied** — `AppDbContext` has zero `DbSet<T>` properties
-- ❌ **No ADR yet** — `decisions/` folder exists but empty (ADR-001 planned next)
+- ✅ **First ADR authored** — `decisions/ADR-009-dotnet-10-lts.md` (numbered 009 to keep slots 001–008 for previously-planned ADRs)
 
 If you are an AI tool generating code: assume the scaffold is the foundation, but ANY entity/endpoint/feature you propose must be implemented from scratch — there is no existing User table, no auth middleware applied to any route, no SignalR hub, no Hangfire job. Follow the modules in `modules/M01..M16` order; do NOT skip ahead unless explicitly asked.
 
@@ -111,8 +111,9 @@ RMMS/                                       # root
 
 ## Architecture decisions made (informally — pending ADR)
 
-These are decisions the team has converged on but no ADR is written yet (planned next):
+These are decisions the team has converged on; **ADR-009 is authored**, ADRs 001–008 still pending:
 
+0. **(ADR-009, authored 2026-05-24)** **.NET 10 LTS adopted; .NET 8 and .NET 9 rejected.** See `decisions/ADR-009-dotnet-10-lts.md`.
 1. **Modular Monolith, NOT microservices.** Reasons: 2-dev team, single customer, single VPS, scope still solidifying. Rejected `.NET Aspire` from `nampt102/microservice-patterns` as base; selectively borrow Mediator/Outbox/CircuitBreaker patterns when needed.
 2. **MediatR replaced by `Martin Othmar's Mediator`** (`Mediator.SourceGenerator` + `Mediator.Abstractions`). Reason: MediatR went commercial in v12. The replacement is MIT-licensed, source-generator-based, faster, and API-compatible enough for migration if needed.
 3. **UUID v7 app-generated** (`Rmms.Domain.Common.UuidV7`). No PostgreSQL extension needed; still time-ordered for B-tree locality.
@@ -122,15 +123,15 @@ These are decisions the team has converged on but no ADR is written yet (planned
 7. **Caddy as reverse proxy** with auto-SSL. Hangfire/Swagger/API all proxied through it in production.
 8. **Tailwind preflight disabled** in web (`corePlugins.preflight: false`) to avoid AntD reset conflicts.
 
-These should become **ADR-001 through ADR-008** once formalized. Folder `knowledge-base/decisions/` is ready.
+These should become **ADR-001 through ADR-008** once formalized. ADR-009 (.NET 10) is already written. Folder `knowledge-base/decisions/` is ready.
 
 ---
 
 ## Immediate next steps (priority order)
 
-1. **VERIFY** scaffold builds locally (`dotnet build`, `pnpm build`, `flutter analyze`). Required before any further work. — **user to run on Windows machine**
-2. **ADR-001**: Modular Monolith over Microservices. — small doc, ~1 hour
-3. **CI/CD**: 3 GitHub Actions workflows (`backend.yml`, `web.yml`, `mobile.yml`). — ~1 day
+1. **VERIFY** scaffold builds locally on **.NET 10** (`dotnet --version` shows `10.0.x` → `cd backend && dotnet restore && dotnet build`). Required before any further work. — **user to run on Windows machine**
+2. **ADR-001 through ADR-008**: write the remaining planned ADRs (Modular Monolith, Mediator choice, UUID v7, soft-delete, snake_case, PostGIS-deferred, Caddy, Tailwind preflight). — ~2 hours total
+3. **CI/CD**: 3 GitHub Actions workflows (`backend.yml`, `web.yml`, `mobile.yml`). Backend workflow targets .NET 10 via `actions/setup-dotnet@v4`. — ~1 day
 4. **M01 Day 1 (Sprint 00 → Sprint 01 transition)**:
    - First EF Core migration: `users`, `devices`, `refresh_tokens`, `audit_log`
    - Endpoints: `POST /auth/register`, `POST /auth/login`, `POST /auth/refresh`, `POST /auth/logout`

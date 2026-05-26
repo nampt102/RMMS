@@ -8,7 +8,7 @@ namespace Rmms.Application.Common.Behaviors;
 /// Logs request name and elapsed milliseconds for every Mediator message.
 /// Structured log property <c>RequestName</c> makes it easy to alert on slow handlers.
 /// </summary>
-public sealed class LoggingBehavior<TRequest, TResponse> : IPipelineBehavior<TRequest, TResponse>
+public sealed partial class LoggingBehavior<TRequest, TResponse> : IPipelineBehavior<TRequest, TResponse>
     where TRequest : IMessage
 {
     private readonly ILogger<LoggingBehavior<TRequest, TResponse>> _logger;
@@ -17,8 +17,8 @@ public sealed class LoggingBehavior<TRequest, TResponse> : IPipelineBehavior<TRe
 
     public async ValueTask<TResponse> Handle(
         TRequest message,
-        MessageHandlerDelegate<TRequest, TResponse> next,
-        CancellationToken cancellationToken)
+        CancellationToken cancellationToken,
+        MessageHandlerDelegate<TRequest, TResponse> next)
     {
         var requestName = typeof(TRequest).Name;
         var sw = Stopwatch.StartNew();
@@ -26,18 +26,20 @@ public sealed class LoggingBehavior<TRequest, TResponse> : IPipelineBehavior<TRe
         {
             var response = await next(message, cancellationToken);
             sw.Stop();
-            _logger.LogInformation(
-                "Handled {RequestName} in {ElapsedMs}ms",
-                requestName, sw.ElapsedMilliseconds);
+            LogHandled(_logger, requestName, sw.ElapsedMilliseconds);
             return response;
         }
         catch (Exception ex)
         {
             sw.Stop();
-            _logger.LogWarning(ex,
-                "Failed {RequestName} after {ElapsedMs}ms: {Message}",
-                requestName, sw.ElapsedMilliseconds, ex.Message);
+            LogFailed(_logger, ex, requestName, sw.ElapsedMilliseconds);
             throw;
         }
     }
+
+    [LoggerMessage(Level = LogLevel.Information, Message = "Handled {RequestName} in {ElapsedMs}ms")]
+    private static partial void LogHandled(ILogger logger, string requestName, long elapsedMs);
+
+    [LoggerMessage(Level = LogLevel.Warning, Message = "Failed {RequestName} after {ElapsedMs}ms")]
+    private static partial void LogFailed(ILogger logger, Exception ex, string requestName, long elapsedMs);
 }

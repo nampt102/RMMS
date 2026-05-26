@@ -5,16 +5,17 @@
 <Project>
 
   <PropertyGroup>
-    <!-- Target framework -->
-    <TargetFramework>net8.0</TargetFramework>
-    <LangVersion>12.0</LangVersion>
+    <!-- Target framework — .NET 10 LTS (Nov 2025 → Nov 2028) per ADR-009 -->
+    <TargetFramework>net10.0</TargetFramework>
+    <LangVersion>latest</LangVersion>
 
     <!-- Type safety -->
     <Nullable>enable</Nullable>
     <ImplicitUsings>enable</ImplicitUsings>
     <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
-    <WarningsNotAsErrors>NU1701;CS1591</WarningsNotAsErrors>
+    <WarningsNotAsErrors>NU1701;CS1591;CA1716;CA1707;CA1848;CA1861;CA1873</WarningsNotAsErrors>
     <GenerateDocumentationFile>false</GenerateDocumentationFile>
+    <NoWarn>$(NoWarn);IDE0005</NoWarn>
 
     <!-- Analyzers -->
     <EnableNETAnalyzers>true</EnableNETAnalyzers>

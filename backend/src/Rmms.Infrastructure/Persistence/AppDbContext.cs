@@ -1,5 +1,4 @@
 using Microsoft.EntityFrameworkCore;
-using Microsoft.EntityFrameworkCore.Infrastructure;
 using Rmms.Application.Common.Interfaces;
 
 namespace Rmms.Infrastructure.Persistence;
@@ -15,8 +14,6 @@ public sealed class AppDbContext : DbContext, IAppDbContext
 
     // Add DbSet<T> here as entities are introduced.
     // Example: public DbSet<User> Users => Set<User>();
-
-    DatabaseFacade IAppDbContext.Database => Database;
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
