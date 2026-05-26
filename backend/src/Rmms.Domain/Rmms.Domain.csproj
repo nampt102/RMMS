@@ -1,0 +1,11 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <AssemblyName>Rmms.Domain</AssemblyName>
+    <RootNamespace>Rmms.Domain</RootNamespace>
+  </PropertyGroup>
+
+  <!-- Domain is the CORE — must not depend on any infrastructure / framework -->
+  <!-- Allowed: only base libs (System.*, abstractions) -->
+
+</Project>

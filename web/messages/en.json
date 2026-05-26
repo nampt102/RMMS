@@ -1,0 +1,32 @@
+{
+  "app": {
+    "name": "RMMS 2026",
+    "tagline": "Retail Merchandiser Management System"
+  },
+  "common": {
+    "loading": "Loading...",
+    "save": "Save",
+    "cancel": "Cancel",
+    "submit": "Submit",
+    "search": "Search",
+    "yes": "Yes",
+    "no": "No",
+    "back": "Back"
+  },
+  "auth": {
+    "login": {
+      "title": "Sign in",
+      "email": "Email",
+      "password": "Password",
+      "submit": "Sign in",
+      "forgot": "Forgot password?"
+    }
+  },
+  "errors": {
+    "INVALID_CREDENTIALS": "Wrong email or password.",
+    "TOKEN_EXPIRED": "Your session has expired.",
+    "VALIDATION_FAILED": "Invalid data.",
+    "NOT_FOUND": "Not found.",
+    "INTERNAL_ERROR": "Something went wrong."
+  }
+}

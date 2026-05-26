@@ -1,0 +1,32 @@
+{
+  "app": {
+    "name": "RMMS 2026",
+    "tagline": "Hệ thống quản lý PG/Leader"
+  },
+  "common": {
+    "loading": "Đang tải...",
+    "save": "Lưu",
+    "cancel": "Huỷ",
+    "submit": "Gửi",
+    "search": "Tìm kiếm",
+    "yes": "Có",
+    "no": "Không",
+    "back": "Quay lại"
+  },
+  "auth": {
+    "login": {
+      "title": "Đăng nhập",
+      "email": "Email",
+      "password": "Mật khẩu",
+      "submit": "Đăng nhập",
+      "forgot": "Quên mật khẩu?"
+    }
+  },
+  "errors": {
+    "INVALID_CREDENTIALS": "Email hoặc mật khẩu không đúng.",
+    "TOKEN_EXPIRED": "Phiên đăng nhập đã hết hạn.",
+    "VALIDATION_FAILED": "Dữ liệu không hợp lệ.",
+    "NOT_FOUND": "Không tìm thấy dữ liệu.",
+    "INTERNAL_ERROR": "Đã xảy ra lỗi không mong muốn."
+  }
+}

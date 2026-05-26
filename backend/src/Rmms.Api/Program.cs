@@ -1,0 +1,135 @@
+using System.Text;
+using Microsoft.AspNetCore.Authentication.JwtBearer;
+using Microsoft.IdentityModel.Tokens;
+using Rmms.Api.Authentication;
+using Rmms.Api.Middlewares;
+using Rmms.Application;
+using Rmms.Application.Common.Interfaces;
+using Rmms.Infrastructure;
+using Serilog;
+
+var builder = WebApplication.CreateBuilder(args);
+
+// ----- Serilog (structured logs per 02-tech-stack.md) -----
+builder.Host.UseSerilog((ctx, lc) => lc
+    .ReadFrom.Configuration(ctx.Configuration)
+    .Enrich.FromLogContext()
+    .Enrich.WithMachineName()
+    .Enrich.WithThreadId());
+
+// ----- Layer registrations -----
+builder.Services.AddApplication();
+builder.Services.AddInfrastructure(builder.Configuration);
+
+// ----- HttpContext + CurrentUser -----
+builder.Services.AddHttpContextAccessor();
+builder.Services.AddScoped<ICurrentUser, HttpContextCurrentUser>();
+
+// ----- AuthN (JWT) per 05-api-conventions.md -----
+var jwt = builder.Configuration.GetSection("Jwt");
+var jwtKey = jwt["SigningKey"] ?? throw new InvalidOperationException("Missing Jwt:SigningKey.");
+builder.Services
+    .AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
+    .AddJwtBearer(options =>
+    {
+        options.TokenValidationParameters = new TokenValidationParameters
+        {
+            ValidateIssuer = true,
+            ValidateAudience = true,
+            ValidateLifetime = true,
+            ValidateIssuerSigningKey = true,
+            ValidIssuer = jwt["Issuer"],
+            ValidAudience = jwt["Audience"],
+            IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(jwtKey)),
+            ClockSkew = TimeSpan.FromSeconds(30),
+        };
+    });
+
+builder.Services.AddAuthorization();
+
+// ----- CORS -----
+const string CorsPolicy = "RmmsDefault";
+builder.Services.AddCors(o => o.AddPolicy(CorsPolicy, p =>
+{
+    var origins = builder.Configuration.GetSection("Cors:AllowedOrigins").Get<string[]>() ?? Array.Empty<string>();
+    p.WithOrigins(origins).AllowAnyHeader().AllowAnyMethod().AllowCredentials();
+}));
+
+// ----- i18n (vi default, en supported) per 05-api-conventions.md "Accept-Language" -----
+builder.Services.AddLocalization();
+builder.Services.Configure<Microsoft.AspNetCore.Builder.RequestLocalizationOptions>(o =>
+{
+    var supported = new[] { "vi", "en" }
+        .Select(c => new System.Globalization.CultureInfo(c)).ToArray();
+    o.DefaultRequestCulture = new Microsoft.AspNetCore.Localization.RequestCulture("vi");
+    o.SupportedCultures = supported;
+    o.SupportedUICultures = supported;
+});
+
+// ----- Controllers + JSON options -----
+builder.Services.AddControllers()
+    .AddJsonOptions(o =>
+    {
+        o.JsonSerializerOptions.PropertyNamingPolicy = System.Text.Json.JsonNamingPolicy.CamelCase;
+        o.JsonSerializerOptions.DictionaryKeyPolicy = System.Text.Json.JsonNamingPolicy.CamelCase;
+        o.JsonSerializerOptions.PropertyNameCaseInsensitive = true;
+        o.JsonSerializerOptions.DefaultIgnoreCondition =
+            System.Text.Json.Serialization.JsonIgnoreCondition.WhenWritingNull;
+    });
+
+// ----- OpenAPI -----
+builder.Services.AddEndpointsApiExplorer();
+builder.Services.AddSwaggerGen(o =>
+{
+    o.SwaggerDoc("v1", new() { Title = "RMMS API", Version = "v1" });
+    var bearer = new Microsoft.OpenApi.Models.OpenApiSecurityScheme
+    {
+        Name = "Authorization",
+        Type = Microsoft.OpenApi.Models.SecuritySchemeType.Http,
+        Scheme = "bearer",
+        BearerFormat = "JWT",
+        In = Microsoft.OpenApi.Models.ParameterLocation.Header,
+        Description = "JWT Authorization header — Bearer {token}",
+    };
+    o.AddSecurityDefinition("Bearer", bearer);
+    o.AddSecurityRequirement(new Microsoft.OpenApi.Models.OpenApiSecurityRequirement
+    {
+        [new Microsoft.OpenApi.Models.OpenApiSecurityScheme
+        {
+            Reference = new Microsoft.OpenApi.Models.OpenApiReference
+            {
+                Type = Microsoft.OpenApi.Models.ReferenceType.SecurityScheme, Id = "Bearer",
+            },
+        }] = Array.Empty<string>(),
+    });
+});
+
+// ----- Health checks -----
+builder.Services.AddHealthChecks();
+
+var app = builder.Build();
+
+// ===== Middleware pipeline =====
+app.UseSerilogRequestLogging();
+app.UseMiddleware<ExceptionHandlingMiddleware>();
+app.UseRequestLocalization();
+
+if (app.Environment.IsDevelopment())
+{
+    app.UseSwagger();
+    app.UseSwaggerUI();
+}
+
+app.UseHttpsRedirection();
+app.UseCors(CorsPolicy);
+app.UseAuthentication();
+app.UseAuthorization();
+
+app.MapControllers();
+app.MapHealthChecks("/health/live");
+app.MapHealthChecks("/health/ready");
+
+await app.RunAsync();
+
+// Marker for WebApplicationFactory<Program> in integration tests.
+public partial class Program { }

@@ -1,0 +1,86 @@
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.8.0.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{A1A1A1A1-1111-1111-1111-111111111111}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "tests", "tests", "{B1B1B1B1-2222-2222-2222-222222222222}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Rmms.Api", "src\Rmms.Api\Rmms.Api.csproj", "{C1C1C1C1-A001-4001-8001-100000000001}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Rmms.Application", "src\Rmms.Application\Rmms.Application.csproj", "{C1C1C1C1-A002-4001-8001-100000000002}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Rmms.Domain", "src\Rmms.Domain\Rmms.Domain.csproj", "{C1C1C1C1-A003-4001-8001-100000000003}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Rmms.Infrastructure", "src\Rmms.Infrastructure\Rmms.Infrastructure.csproj", "{C1C1C1C1-A004-4001-8001-100000000004}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Rmms.Shared", "src\Rmms.Shared\Rmms.Shared.csproj", "{C1C1C1C1-A005-4001-8001-100000000005}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Rmms.Worker", "src\Rmms.Worker\Rmms.Worker.csproj", "{C1C1C1C1-A006-4001-8001-100000000006}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Rmms.UnitTests", "tests\Rmms.UnitTests\Rmms.UnitTests.csproj", "{C1C1C1C1-B001-4001-8001-200000000001}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Rmms.IntegrationTests", "tests\Rmms.IntegrationTests\Rmms.IntegrationTests.csproj", "{C1C1C1C1-B002-4001-8001-200000000002}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{D1D1D1D1-3333-3333-3333-333333333333}"
+	ProjectSection(SolutionItems) = preProject
+		..\Directory.Build.props = ..\Directory.Build.props
+		Directory.Packages.props = Directory.Packages.props
+		..\.editorconfig = ..\.editorconfig
+		..\.gitignore = ..\.gitignore
+		..\README.md = ..\README.md
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{C1C1C1C1-A001-4001-8001-100000000001}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C1C1C1C1-A001-4001-8001-100000000001}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C1C1C1C1-A001-4001-8001-100000000001}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C1C1C1C1-A001-4001-8001-100000000001}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C1C1C1C1-A002-4001-8001-100000000002}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C1C1C1C1-A002-4001-8001-100000000002}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C1C1C1C1-A002-4001-8001-100000000002}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C1C1C1C1-A002-4001-8001-100000000002}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C1C1C1C1-A003-4001-8001-100000000003}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C1C1C1C1-A003-4001-8001-100000000003}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C1C1C1C1-A003-4001-8001-100000000003}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C1C1C1C1-A003-4001-8001-100000000003}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C1C1C1C1-A004-4001-8001-100000000004}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C1C1C1C1-A004-4001-8001-100000000004}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C1C1C1C1-A004-4001-8001-100000000004}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C1C1C1C1-A004-4001-8001-100000000004}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C1C1C1C1-A005-4001-8001-100000000005}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C1C1C1C1-A005-4001-8001-100000000005}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C1C1C1C1-A005-4001-8001-100000000005}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C1C1C1C1-A005-4001-8001-100000000005}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C1C1C1C1-A006-4001-8001-100000000006}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C1C1C1C1-A006-4001-8001-100000000006}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C1C1C1C1-A006-4001-8001-100000000006}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C1C1C1C1-A006-4001-8001-100000000006}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C1C1C1C1-B001-4001-8001-200000000001}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C1C1C1C1-B001-4001-8001-200000000001}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C1C1C1C1-B001-4001-8001-200000000001}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C1C1C1C1-B001-4001-8001-200000000001}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C1C1C1C1-B002-4001-8001-200000000002}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C1C1C1C1-B002-4001-8001-200000000002}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C1C1C1C1-B002-4001-8001-200000000002}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C1C1C1C1-B002-4001-8001-200000000002}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{C1C1C1C1-A001-4001-8001-100000000001} = {A1A1A1A1-1111-1111-1111-111111111111}
+		{C1C1C1C1-A002-4001-8001-100000000002} = {A1A1A1A1-1111-1111-1111-111111111111}
+		{C1C1C1C1-A003-4001-8001-100000000003} = {A1A1A1A1-1111-1111-1111-111111111111}
+		{C1C1C1C1-A004-4001-8001-100000000004} = {A1A1A1A1-1111-1111-1111-111111111111}
+		{C1C1C1C1-A005-4001-8001-100000000005} = {A1A1A1A1-1111-1111-1111-111111111111}
+		{C1C1C1C1-A006-4001-8001-100000000006} = {A1A1A1A1-1111-1111-1111-111111111111}
+		{C1C1C1C1-B001-4001-8001-200000000001} = {B1B1B1B1-2222-2222-2222-222222222222}
+		{C1C1C1C1-B002-4001-8001-200000000002} = {B1B1B1B1-2222-2222-2222-222222222222}
+	EndGlobalSection
+EndGlobal

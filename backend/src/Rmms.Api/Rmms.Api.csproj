@@ -1,0 +1,53 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <AssemblyName>Rmms.Api</AssemblyName>
+    <RootNamespace>Rmms.Api</RootNamespace>
+    <UserSecretsId>rmms-api-9a3c4e2b-1f6d-4a8e-9b5c-7e1f3a2d8c91</UserSecretsId>
+    <DockerDefaultTargetOS>Linux</DockerDefaultTargetOS>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Rmms.Application\Rmms.Application.csproj" />
+    <ProjectReference Include="..\Rmms.Infrastructure\Rmms.Infrastructure.csproj" />
+    <ProjectReference Include="..\Rmms.Shared\Rmms.Shared.csproj" />
+  </ItemGroup>
+
+  <ItemGroup Label="ASP.NET Core">
+    <PackageReference Include="Microsoft.AspNetCore.OpenApi" />
+    <PackageReference Include="Microsoft.AspNetCore.Authentication.JwtBearer" />
+    <PackageReference Include="Microsoft.AspNetCore.SignalR.StackExchangeRedis" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Design" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" />
+  </ItemGroup>
+
+  <ItemGroup Label="Hangfire (dashboard)">
+    <PackageReference Include="Hangfire.AspNetCore" />
+  </ItemGroup>
+
+  <ItemGroup Label="Validation">
+    <PackageReference Include="FluentValidation.AspNetCore" />
+  </ItemGroup>
+
+  <ItemGroup Label="Logging / Telemetry">
+    <PackageReference Include="Serilog.AspNetCore" />
+    <PackageReference Include="Serilog.Sinks.Console" />
+    <PackageReference Include="Serilog.Sinks.File" />
+    <PackageReference Include="Serilog.Sinks.Seq" />
+    <PackageReference Include="Serilog.Enrichers.Environment" />
+    <PackageReference Include="Serilog.Enrichers.Thread" />
+    <PackageReference Include="Sentry.AspNetCore" />
+    <PackageReference Include="Sentry.Serilog" />
+  </ItemGroup>
+
+  <ItemGroup Label="OpenAPI">
+    <PackageReference Include="Swashbuckle.AspNetCore" />
+    <PackageReference Include="Swashbuckle.AspNetCore.Annotations" />
+  </ItemGroup>
+
+  <ItemGroup Label="Rate limiting">
+    <PackageReference Include="AspNetCoreRateLimit" />
+    <PackageReference Include="AspNetCoreRateLimit.Redis" />
+  </ItemGroup>
+
+</Project>

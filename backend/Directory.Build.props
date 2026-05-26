@@ -1,0 +1,23 @@
+<!--
+  Backend-level overrides. Inherits from ../Directory.Build.props at repo root.
+-->
+<Project>
+
+  <!-- Pull root props first -->
+  <Import Project="$([MSBuild]::GetPathOfFileAbove('Directory.Build.props', '$(MSBuildThisFileDirectory)../'))" />
+
+  <PropertyGroup>
+    <RootNamespace>Rmms</RootNamespace>
+    <Company>Motives Vietnam</Company>
+    <Product>RMMS 2026</Product>
+    <Authors>Motives Vietnam IT Team</Authors>
+    <Copyright>© 2026 Motives Vietnam</Copyright>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <!-- Allow internals to be tested -->
+    <InternalsVisibleTo Include="Rmms.UnitTests" />
+    <InternalsVisibleTo Include="Rmms.IntegrationTests" />
+  </ItemGroup>
+
+</Project>

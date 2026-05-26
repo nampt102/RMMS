@@ -1,0 +1,11 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <AssemblyName>Rmms.Shared</AssemblyName>
+    <RootNamespace>Rmms.Shared</RootNamespace>
+  </PropertyGroup>
+
+  <!-- DTOs / contracts that may be shared with FE (via OpenAPI codegen) -->
+  <!-- Keep it pure — no EF, no MediatR -->
+
+</Project>

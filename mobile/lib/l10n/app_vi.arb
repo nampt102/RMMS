@@ -1,0 +1,21 @@
+{
+  "@@locale": "vi",
+  "appName": "RMMS",
+  "@appName": { "description": "Application name" },
+  "loginTitle": "Đăng nhập",
+  "loginEmailLabel": "Email",
+  "loginPasswordLabel": "Mật khẩu",
+  "loginSubmit": "Đăng nhập",
+  "loginForgot": "Quên mật khẩu?",
+  "commonLoading": "Đang tải...",
+  "commonRetry": "Thử lại",
+  "commonCancel": "Huỷ",
+  "commonOk": "OK",
+  "checkInTitle": "Chấm công vào ca",
+  "checkOutTitle": "Chấm công ra ca",
+  "errorInvalidCredentials": "Email hoặc mật khẩu không đúng.",
+  "errorTokenExpired": "Phiên đăng nhập đã hết hạn.",
+  "errorNetwork": "Không kết nối được máy chủ. Vui lòng kiểm tra mạng.",
+  "errorFakeGps": "Phát hiện GPS giả. Vui lòng tắt mock location.",
+  "errorFaceVerification": "Xác thực khuôn mặt thất bại. Vui lòng thử lại."
+}

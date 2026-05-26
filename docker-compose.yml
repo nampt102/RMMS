@@ -1,0 +1,156 @@
+# ============================================================
+# RMMS 2026 — Local development stack
+# Bring up the supporting services first, then API/Worker.
+# Usage:
+#   cp .env.example .env
+#   docker compose up -d postgres redis minio   # infra only
+#   docker compose up -d                        # full stack (api+worker)
+# ============================================================
+
+name: rmms
+
+services:
+  # ---------- PostgreSQL 16 ----------
+  postgres:
+    image: postgres:16-alpine
+    container_name: rmms-postgres
+    restart: unless-stopped
+    environment:
+      POSTGRES_DB: ${POSTGRES_DB:-rmms}
+      POSTGRES_USER: ${POSTGRES_USER:-rmms}
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:-rmms_dev_pw}
+      TZ: Asia/Ho_Chi_Minh
+    ports:
+      - "5432:5432"
+    volumes:
+      - postgres-data:/var/lib/postgresql/data
+      - ./infra/postgres/init:/docker-entrypoint-initdb.d:ro
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U ${POSTGRES_USER:-rmms} -d ${POSTGRES_DB:-rmms}"]
+      interval: 10s
+      timeout: 5s
+      retries: 10
+    networks: [rmms-net]
+
+  # ---------- Redis 7 ----------
+  redis:
+    image: redis:7-alpine
+    container_name: rmms-redis
+    restart: unless-stopped
+    command: ["redis-server", "--appendonly", "yes", "--maxmemory", "256mb", "--maxmemory-policy", "allkeys-lru"]
+    ports:
+      - "6379:6379"
+    volumes:
+      - redis-data:/data
+    healthcheck:
+      test: ["CMD", "redis-cli", "ping"]
+      interval: 10s
+      timeout: 3s
+      retries: 10
+    networks: [rmms-net]
+
+  # ---------- MinIO (S3-compatible object storage) ----------
+  minio:
+    image: minio/minio:latest
+    container_name: rmms-minio
+    restart: unless-stopped
+    command: server /data --console-address ":9001"
+    environment:
+      MINIO_ROOT_USER: ${MINIO_ROOT_USER:-rmms}
+      MINIO_ROOT_PASSWORD: ${MINIO_ROOT_PASSWORD:-rmms_dev_pw}
+    ports:
+      - "9000:9000"   # S3 API
+      - "9001:9001"   # MinIO console
+    volumes:
+      - minio-data:/data
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:9000/minio/health/live"]
+      interval: 30s
+      timeout: 5s
+      retries: 5
+    networks: [rmms-net]
+
+  # ---------- Seq (structured log viewer, optional) ----------
+  seq:
+    image: datalust/seq:latest
+    container_name: rmms-seq
+    restart: unless-stopped
+    environment:
+      ACCEPT_EULA: "Y"
+    ports:
+      - "5341:80"
+    volumes:
+      - seq-data:/data
+    networks: [rmms-net]
+    profiles: ["dev"]
+
+  # ---------- API ----------
+  api:
+    build:
+      context: ./backend
+      dockerfile: src/Rmms.Api/Dockerfile
+    container_name: rmms-api
+    restart: unless-stopped
+    depends_on:
+      postgres: { condition: service_healthy }
+      redis:    { condition: service_healthy }
+      minio:    { condition: service_started }
+    environment:
+      ASPNETCORE_ENVIRONMENT: ${ASPNETCORE_ENVIRONMENT:-Development}
+      ConnectionStrings__Postgres: "Host=postgres;Port=5432;Database=${POSTGRES_DB:-rmms};Username=${POSTGRES_USER:-rmms};Password=${POSTGRES_PASSWORD:-rmms_dev_pw};Include Error Detail=true"
+      ConnectionStrings__Redis: "redis:6379,abortConnect=false"
+      Jwt__SigningKey: ${JWT_SIGNING_KEY:-replace_me_with_32+_bytes_strong_random_secret_value}
+      Jwt__Issuer: ${JWT_ISSUER:-rmms.local}
+      Jwt__Audience: ${JWT_AUDIENCE:-rmms.clients}
+      MinIO__Endpoint: "minio:9000"
+      MinIO__AccessKey: ${MINIO_ROOT_USER:-rmms}
+      MinIO__SecretKey: ${MINIO_ROOT_PASSWORD:-rmms_dev_pw}
+    ports:
+      - "5080:8080"
+    networks: [rmms-net]
+    profiles: ["full"]
+
+  # ---------- Worker (Hangfire) ----------
+  worker:
+    build:
+      context: ./backend
+      dockerfile: src/Rmms.Worker/Dockerfile
+    container_name: rmms-worker
+    restart: unless-stopped
+    depends_on:
+      postgres: { condition: service_healthy }
+      redis:    { condition: service_healthy }
+    environment:
+      DOTNET_ENVIRONMENT: ${DOTNET_ENVIRONMENT:-Development}
+      ConnectionStrings__Postgres: "Host=postgres;Port=5432;Database=${POSTGRES_DB:-rmms};Username=${POSTGRES_USER:-rmms};Password=${POSTGRES_PASSWORD:-rmms_dev_pw};Include Error Detail=true"
+      ConnectionStrings__Redis: "redis:6379,abortConnect=false"
+    networks: [rmms-net]
+    profiles: ["full"]
+
+  # ---------- Caddy reverse proxy ----------
+  caddy:
+    image: caddy:2-alpine
+    container_name: rmms-caddy
+    restart: unless-stopped
+    depends_on: [api]
+    ports:
+      - "80:80"
+      - "443:443"
+    volumes:
+      - ./infra/caddy/Caddyfile:/etc/caddy/Caddyfile:ro
+      - caddy-data:/data
+      - caddy-config:/config
+    networks: [rmms-net]
+    profiles: ["full"]
+
+volumes:
+  postgres-data:
+  redis-data:
+  minio-data:
+  seq-data:
+  caddy-data:
+  caddy-config:
+
+networks:
+  rmms-net:
+    driver: bridge

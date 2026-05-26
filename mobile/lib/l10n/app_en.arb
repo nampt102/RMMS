@@ -1,0 +1,20 @@
+{
+  "@@locale": "en",
+  "appName": "RMMS",
+  "loginTitle": "Sign in",
+  "loginEmailLabel": "Email",
+  "loginPasswordLabel": "Password",
+  "loginSubmit": "Sign in",
+  "loginForgot": "Forgot password?",
+  "commonLoading": "Loading...",
+  "commonRetry": "Retry",
+  "commonCancel": "Cancel",
+  "commonOk": "OK",
+  "checkInTitle": "Check in",
+  "checkOutTitle": "Check out",
+  "errorInvalidCredentials": "Wrong email or password.",
+  "errorTokenExpired": "Your session has expired.",
+  "errorNetwork": "Cannot reach the server. Check your connection.",
+  "errorFakeGps": "Mock GPS detected. Disable mock location.",
+  "errorFaceVerification": "Face verification failed. Please try again."
+}

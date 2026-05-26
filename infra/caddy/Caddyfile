@@ -1,0 +1,40 @@
+# =========================================================
+# RMMS — Caddy reverse proxy
+# Dev: localhost (HTTP only)
+# Prod: replace {host} with real domain — Caddy auto-provisions Let's Encrypt
+# =========================================================
+
+{
+    # Global options
+    email it@motivesvn.com
+    admin off
+}
+
+# ---------- Local dev (HTTP only) ----------
+:80 {
+    encode gzip zstd
+
+    @api path /api/* /swagger* /health/* /hangfire*
+    handle @api {
+        reverse_proxy api:8080
+    }
+
+    # Default → 404 (web app will be served separately during dev via `pnpm dev`)
+    handle {
+        respond "RMMS reverse proxy — request did not match any route" 404
+    }
+
+    log {
+        output stdout
+        format console
+    }
+}
+
+# ---------- Production (HTTPS auto SSL) ----------
+# Uncomment and replace placeholder host in prod environments
+# api.rmms.example.com {
+#     reverse_proxy api:8080
+# }
+# admin.rmms.example.com {
+#     reverse_proxy web:3000
+# }
