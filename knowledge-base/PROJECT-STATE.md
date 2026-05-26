@@ -2,7 +2,7 @@
 
 > **READ THIS FIRST.** This file is the single source of truth for "where the project is right now". Every AI session and every new dev should open this file before doing anything else. Update on every significant milestone.
 
-**Last updated:** 2026-05-24 (evening — restore errors resolved)
+**Last updated:** 2026-05-26 (mobile platform folders relocated to `mobile/`)
 **Current phase:** Phase 1A — Sprint 00 (Foundation)
 **Current sprint progress:** ~70% (scaffold + .NET 10 + NuGet restore issues resolved; CI + first DB migration outstanding)
 
@@ -70,7 +70,9 @@ RMMS/                                       # root
 │       ├── middleware.ts                   # next-intl locale routing
 │       └── types/api.ts                    # mirrors backend Rmms.Shared
 └── mobile/
-    ├── pubspec.yaml, analysis_options.yaml, l10n.yaml, .gitignore, README.md
+    ├── android/ ios/ linux/ macos/ windows/  # Flutter platform (org com.rmms)
+    ├── pubspec.yaml, pubspec.lock, analysis_options.yaml, l10n.yaml, .gitignore, README.md
+    ├── assets/{images,icons}/
     └── lib/
         ├── main.dart, app.dart
         ├── core/
@@ -95,7 +97,7 @@ RMMS/                                       # root
   - `GET /swagger` — Swagger UI in Development
   - `GET /health/live`, `/health/ready` — minimal health checks
 - `pnpm dev` in `web/` should serve `http://localhost:3000` with home page and `/login`
-- `flutter run` (after `flutter create .` to fill platform folders) should boot to Login screen
+- `flutter run` in `mobile/` should boot to Login screen (requires Flutter SDK + platform folders under `mobile/`)
 - `docker compose up -d postgres redis minio` brings up infra (Caddy + api need `--profile full`)
 
 ## What does NOT work yet

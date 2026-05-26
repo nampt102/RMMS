@@ -14,7 +14,7 @@ const nextConfig = {
   },
   images: {
     remotePatterns: [
-      { protocol: "https", hostname: "**.motivesvn.com" },
+      { protocol: "https", hostname: "**.gmail.com" },
       { protocol: "http", hostname: "localhost" },
     ],
   },

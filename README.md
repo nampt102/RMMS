@@ -56,6 +56,7 @@ cd mobile
 flutter pub get
 dart run build_runner build --delete-conflicting-outputs
 flutter run
+# Platform folders: mobile/android, mobile/ios, … (org com.rmms)
 ```
 
 ## Quy ước

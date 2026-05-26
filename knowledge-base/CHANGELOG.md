@@ -6,6 +6,25 @@ Append-only chronological log of significant project milestones, decisions, and 
 
 ---
 
+## 2026-05-26 — Relocate Flutter platform folders to `mobile/` (fix mistaken root scaffold)
+
+**By:** AI-assisted, after `flutter create` was accidentally run at monorepo root (commit 38fc4b2).
+
+**Problem:** `android/`, `ios/`, `lib/main.dart`, root `pubspec.yaml`, and Flutter web artifacts (`web/index.html`, …) landed at repo root — conflicting with Next.js `web/` app.
+
+**Fix:**
+
+- Moved `android/`, `ios/`, `linux/`, `macos/`, `windows/`, `.metadata` → `mobile/`
+- Removed root Flutter artifacts: `pubspec.yaml`, `pubspec.lock`, `analysis_options.yaml`, `lib/`, `test/`, `rmms.iml`
+- Removed Flutter web pollution from `web/` (kept Next.js `src/`, `package.json`, …)
+- Fixed Android `flutter.source` path (`..`), applicationId/namespace → `com.rmms`
+- Fixed iOS/macOS bundle identifiers → `com.rmms`
+- Added `mobile/assets/{images,icons}/.gitkeep`; updated `mobile/README.md`, root `README.md`, `PROJECT-STATE.md`
+
+**Outcome:** Monorepo layout restored — mobile code + native runners all under `mobile/` only.
+
+---
+
 ## 2026-05-24 (evening) — Backend restore failures resolved (NU1008 / NU1109 / NU1507 / NU1903)
 
 **By:** AI-assisted, in response to `dotnet restore` output on dev machine after .NET 10 migration.

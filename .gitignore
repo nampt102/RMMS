@@ -75,7 +75,7 @@ web/.swc/
 web/next-env.d.ts
 web/.vercel/
 
-# ============ Flutter ============
+# Flutter
 mobile/.dart_tool/
 mobile/.flutter-plugins
 mobile/.flutter-plugins-dependencies
@@ -94,6 +94,8 @@ mobile/ios/.symlinks/
 mobile/ios/Flutter/Flutter.framework
 mobile/ios/Flutter/Flutter.podspec
 mobile/ios/Flutter/flutter_export_environment.sh
+mobile/ios/Flutter/Generated.xcconfig
+mobile/ios/Flutter/ephemeral/
 mobile/**/*.g.dart
 mobile/**/*.freezed.dart
 mobile/**/*.gr.dart

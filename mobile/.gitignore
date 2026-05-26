@@ -22,7 +22,6 @@ lib/l10n/generated/
 # Flutter
 .flutter-plugins
 .flutter-plugins-dependencies
-.metadata
 
 # Android
 android/.gradle/
