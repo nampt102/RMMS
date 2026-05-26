@@ -1,0 +1,90 @@
+# Mobile CI — Flutter 3.22 (Riverpod + Dio + Hive)
+#
+# Triggers:
+#   - push / PR that touches mobile/ or this workflow
+#   - manual dispatch (debugging)
+#
+# Jobs:
+#   analyze_test:
+#     - pub get
+#     - format check (dart format --output none --set-exit-if-changed)
+#     - analyze (flutter analyze --fatal-infos --fatal-warnings)
+#     - test (flutter test)
+#     - build Android APK in debug mode (smoke test only — production builds via release pipeline later)
+
+name: mobile
+
+on:
+  push:
+    branches: [main, develop]
+    paths:
+      - "mobile/**"
+      - ".github/workflows/mobile.yml"
+  pull_request:
+    branches: [main, develop]
+    paths:
+      - "mobile/**"
+      - ".github/workflows/mobile.yml"
+  workflow_dispatch:
+
+concurrency:
+  group: mobile-${{ github.ref }}
+  cancel-in-progress: ${{ github.event_name == 'pull_request' }}
+
+defaults:
+  run:
+    working-directory: mobile
+
+jobs:
+  analyze_test:
+    name: Analyze + test (Flutter 3.22)
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Java 17 (required for Android Gradle Plugin)
+        uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: "17"
+
+      - name: Setup Flutter
+        uses: subosito/flutter-action@v2
+        with:
+          flutter-version: "3.22.x"
+          channel: stable
+          cache: true
+          cache-key: "flutter-:os:-:channel:-:version:-:arch:"
+
+      - name: Show Flutter / Dart versions
+        run: flutter --version
+
+      - name: Get dependencies
+        run: flutter pub get
+
+      - name: Verify formatting (dart format)
+        run: dart format --output none --set-exit-if-changed .
+
+      - name: Static analysis (flutter analyze)
+        run: flutter analyze --fatal-infos --fatal-warnings
+
+      - name: Run tests
+        run: flutter test --coverage --reporter expanded
+
+      - name: Upload coverage
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: mobile-coverage
+          path: mobile/coverage/lcov.info
+          if-no-files-found: ignore
+          retention-days: 14
+
+      # Smoke build only — verifies the project still compiles for Android in CI.
+      # Production release pipelines (signed APK / AAB, IPA) will live in a separate workflow
+      # gated on tagged commits and secrets, authored when M01 ships.
+      - name: Build Android APK (debug smoke)
+        run: flutter build apk --debug --target-platform android-arm64

@@ -13,6 +13,8 @@ The system consists of:
 - Web app (Next.js) for Admin and BUH
 
 You have access to a knowledge base that includes:
+- `PROJECT-STATE.md` — **READ FIRST.** Single source of truth for "where the project is right now"
+- `CHANGELOG.md` — append-only log of milestones and infrastructure changes
 - `00-overview.md` — project overview, goals, team
 - `01-glossary.md` — domain terminology (use exactly these terms)
 - `02-tech-stack.md` — full technology stack with versions
@@ -22,6 +24,7 @@ You have access to a knowledge base that includes:
 - `06-business-rules.md` — decision tables, SOURCE OF TRUTH for business logic
 - `07-acceptance-criteria.md` — 35 acceptance criteria that must pass
 - `08-coding-standards.md` — coding conventions per language
+- `decisions/ADR-001..009.md` — **Architecture Decision Records (Accepted).** Authoritative for architectural choices (Modular Monolith, Mediator-Othmar, UUID v7, soft-delete interceptor, snake_case, PostGIS-deferred, Caddy, Tailwind preflight, .NET 10 LTS)
 - `modules/M01..M16` — detail per module
 - `sprints/sprint-00..18` — sprint-by-sprint plan
 
@@ -34,13 +37,14 @@ You have access to a knowledge base that includes:
 
 ## TECH STACK (Authoritative)
 
-- **Backend**: .NET 8 + EF Core + PostgreSQL 16 + Redis + Hangfire + SignalR
+- **Backend**: .NET 10 LTS + EF Core 10 + PostgreSQL 16 + Redis 7 + Hangfire + SignalR (see ADR-009)
 - **Web Admin/BUH**: Next.js 14 (App Router) + TypeScript + Ant Design Pro + TanStack Query + Zustand
-- **Mobile**: Flutter 3.x + Riverpod 2 + Dio + Hive
-- **Infra**: Ubuntu 22.04 + Docker Compose + Caddy + Vultr Singapore VPS
+- **Mobile**: Flutter 3.22 + Riverpod 2 + Dio + Hive
+- **Infra**: Ubuntu 22.04 + Docker Compose + Caddy 2.x (see ADR-007) + Vultr Singapore VPS
 - **External**: FPT.AI Face, SendGrid, Firebase FCM, MinIO
+- **CI**: GitHub Actions — `.github/workflows/{backend,web,mobile}.yml`
 
-When generating code, ALWAYS use these technologies and versions. Do not suggest alternatives unless explicitly asked.
+When generating code, ALWAYS use these technologies and versions. Do not suggest alternatives unless explicitly asked. If a proposal would deviate from an existing ADR (001–009), surface it explicitly and request a new ADR — do not silently re-litigate accepted decisions.
 
 ## CODING PRINCIPLES
 
@@ -92,9 +96,11 @@ See `01-glossary.md` for the full list. Always prefer canonical terms.
 - Reference the relevant module file (e.g., "based on M05 spec...")
 - Reference business rules by ID (e.g., "implementing BR-204")
 - Reference acceptance criterion by ID (e.g., "this satisfies AC-9")
+- Reference ADRs by ID for architectural patterns (e.g., "per ADR-002, dispatch via Mediator")
 - Follow patterns from `08-coding-standards.md`
 - For new endpoints, follow `05-api-conventions.md` for headers, errors, formats
 - For new entities, match `04-data-model.md` for column names/types
+- For new aggregate roots: inherit from `AuditableEntity` (ADR-004 soft delete), use `UuidV7.New()` IDs (ADR-003), expect snake_case column mapping (ADR-005)
 
 ## WHEN ESTIMATING
 
@@ -115,8 +121,10 @@ See `01-glossary.md` for the full list. Always prefer canonical terms.
 
 ## WHEN UNCERTAIN
 
-- Check the relevant knowledge file first
+- Check `PROJECT-STATE.md` first to know the current sprint and what's already built
+- Check the relevant knowledge file next
 - Prefer business rules in `06-business-rules.md` over assumptions
+- Prefer ADRs in `decisions/` over reinventing architectural choices — if a proposal contradicts an existing ADR, say so explicitly and either justify a new ADR or fall in line
 - If a rule is missing or ambiguous, flag it and propose a default
 - Don't invent business logic — surface the question to the user
 
