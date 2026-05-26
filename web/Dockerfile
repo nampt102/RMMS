@@ -17,6 +17,7 @@ RUN corepack enable
 COPY --from=deps /app/node_modules ./node_modules
 COPY . .
 ENV NEXT_TELEMETRY_DISABLED=1
+ENV NEXT_OUTPUT_STANDALONE=true
 RUN \
   if [ -f pnpm-lock.yaml ]; then pnpm build; \
   else npm run build; fi

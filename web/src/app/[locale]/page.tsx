@@ -1,6 +1,9 @@
+import { setRequestLocale } from "next-intl/server";
 import { useTranslations } from "next-intl";
 
-export default function HomePage() {
+export default function HomePage({ params: { locale } }: { params: { locale: string } }) {
+  setRequestLocale(locale);
+
   const t = useTranslations("app");
   return (
     <main className="flex min-h-screen flex-col items-center justify-center gap-3 p-8">

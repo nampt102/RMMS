@@ -6,7 +6,9 @@ const withNextIntl = createNextIntlPlugin("./src/lib/i18n/request.ts");
 const nextConfig = {
   reactStrictMode: true,
   poweredByHeader: false,
-  output: "standalone",
+  // Standalone is required for Docker (see web/Dockerfile). Opt-in locally — Windows
+  // dev machines often lack symlink permission (EPERM) during `next build`.
+  output: process.env.NEXT_OUTPUT_STANDALONE === "true" ? "standalone" : undefined,
   experimental: {
     typedRoutes: true,
   },
