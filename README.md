@@ -74,4 +74,4 @@ Modules ưu tiên: M01 Auth/Device → M02 Stores → M03 Shifts → M04 Attenda
 ## Liên hệ
 
 - Tech Lead / PM: (cập nhật)
-- Email: it@motivesvn.com
+- Email: nampt
