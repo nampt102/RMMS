@@ -50,19 +50,17 @@ Content template:
 
 | ID | Title | Status | Date |
 |---|---|---|---|
-| _ADR-001_ | _Modular Monolith over Microservices/Aspire_ | _Planned_ | _—_ |
-| _ADR-002_ | _Mediator (Martin Othmar) replaces MediatR_ | _Planned_ | _—_ |
-| _ADR-003_ | _UUID v7 app-generated PK_ | _Planned_ | _—_ |
-| _ADR-004_ | _Soft delete via EF Core interceptor_ | _Planned_ | _—_ |
-| _ADR-005_ | _snake_case PostgreSQL via EFCore.NamingConventions_ | _Planned_ | _—_ |
-| _ADR-006_ | _PostGIS deferred; NetTopologySuite for geofence_ | _Planned_ | _—_ |
-| _ADR-007_ | _Caddy as reverse proxy (auto-SSL)_ | _Planned_ | _—_ |
-| _ADR-008_ | _Tailwind preflight disabled in web (AntD wins)_ | _Planned_ | _—_ |
+| [ADR-001](./ADR-001-modular-monolith.md) | Modular Monolith over Microservices/Aspire | **Accepted** | 2026-05-26 |
+| [ADR-002](./ADR-002-mediator-martin-othmar.md) | Mediator (Martin Othmar) replaces MediatR | **Accepted** | 2026-05-26 |
+| [ADR-003](./ADR-003-uuid-v7-app-generated.md) | UUID v7 app-generated PK | **Accepted** | 2026-05-26 |
+| [ADR-004](./ADR-004-soft-delete-interceptor.md) | Soft delete via EF Core interceptor | **Accepted** | 2026-05-26 |
+| [ADR-005](./ADR-005-snake-case-postgres.md) | snake_case PostgreSQL via EFCore.NamingConventions | **Accepted** | 2026-05-26 |
+| [ADR-006](./ADR-006-postgis-deferred.md) | PostGIS deferred; NetTopologySuite for geofence | **Accepted** | 2026-05-26 |
+| [ADR-007](./ADR-007-caddy-reverse-proxy.md) | Caddy as reverse proxy (auto-SSL) | **Accepted** | 2026-05-26 |
+| [ADR-008](./ADR-008-tailwind-preflight-disabled.md) | Tailwind preflight disabled in web (AntD wins) | **Accepted** | 2026-05-26 |
 | [ADR-009](./ADR-009-dotnet-10-lts.md) | Adopt .NET 10 LTS directly (skip .NET 8) | **Accepted** | 2026-05-24 |
 
-When an ADR is authored, replace its row with a real link and date.
-
-> **Numbering note:** ADR-009 was authored before ADR-001..008 because it arose unexpectedly during scaffold build verification. The reserved slots 001..008 will be filled in later sessions. This is normal — ADR numbers are immutable once assigned; they don't have to be authored in order.
+> **Numbering note:** ADR-009 was authored on 2026-05-24 (during scaffold build verification) before ADR-001..008 (authored 2026-05-26). This is fine — ADR numbers are immutable once assigned and don't have to be authored in order.
 
 ## Conventions
 

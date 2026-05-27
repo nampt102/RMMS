@@ -6,6 +6,58 @@ Append-only chronological log of significant project milestones, decisions, and 
 
 ---
 
+## 2026-05-26 (late) — ADR-001..008 authored + GitHub Actions CI workflows added
+
+**By:** AI-assisted, after tech lead confirmed .NET 10 scaffold built cleanly on Windows machine.
+
+**Architecture Decision Records — all 8 previously-planned ADRs Accepted:**
+
+- [ADR-001](decisions/ADR-001-modular-monolith.md) — Modular Monolith over microservices / .NET Aspire. Reasons: 2-dev team, single customer, single VPS, scope still solidifying.
+- [ADR-002](decisions/ADR-002-mediator-martin-othmar.md) — `Mediator` by Martin Othmar (MIT, source-generator-based) replaces MediatR (v12 commercial license).
+- [ADR-003](decisions/ADR-003-uuid-v7-app-generated.md) — UUID v7 generated in C# (`Rmms.Domain.Common.UuidV7`), no Postgres extension. Time-ordered → B-tree friendly. Enables offline-form-draft client-side ID minting.
+- [ADR-004](decisions/ADR-004-soft-delete-interceptor.md) — Soft delete via EF Core `SaveChangesInterceptor` (`AuditableEntityInterceptor`). Single enforcement point. Satisfies CR-1.
+- [ADR-005](decisions/ADR-005-snake-case-postgres.md) — `EFCore.NamingConventions` `UseSnakeCaseNamingConvention()`. PascalCase entities → snake_case tables/columns/FKs automatically.
+- [ADR-006](decisions/ADR-006-postgis-deferred.md) — PostGIS deferred to Phase 2. NetTopologySuite + Haversine handles BR-204 (300m geofence). `GpsCoordinate.DistanceMetersTo()` works on both mobile and backend.
+- [ADR-007](decisions/ADR-007-caddy-reverse-proxy.md) — Caddy 2.x with auto-SSL via Let's Encrypt. Single Caddyfile per environment. `caddy_data` volume backed up daily.
+- [ADR-008](decisions/ADR-008-tailwind-preflight-disabled.md) — `corePlugins.preflight: false` in `web/tailwind.config.ts`. Ant Design's reset is canonical; Tailwind keeps utility classes only.
+
+**CI/CD workflows added under `.github/workflows/`:**
+
+- `backend.yml` — .NET 10 build + test. `actions/setup-dotnet@v4` with `dotnet-version: 10.0.x`. NuGet cache keyed on `Directory.Packages.props` + csproj hashes. Postgres 16 + Redis 7 service containers for integration tests. `dotnet format --verify-no-changes` enforces .editorconfig. Test results + cobertura coverage uploaded as artifacts.
+- `web.yml` — pnpm 9.15 + Node 20 LTS. Steps: `pnpm install --frozen-lockfile`, `pnpm lint`, `pnpm type-check`, `pnpm test` (vitest), `pnpm build`. pnpm cache via `actions/setup-node@v4`.
+- `mobile.yml` — Flutter 3.22.x via `subosito/flutter-action@v2`. Steps: `flutter pub get`, `dart format --set-exit-if-changed`, `flutter analyze --fatal-warnings`, `flutter test --coverage`, `flutter build apk --debug` (smoke build). Java 17 via `actions/setup-java@v4` for Android Gradle Plugin.
+
+All 3 workflows use:
+
+- `paths:` filters → workflow only triggers when its app's files change
+- `concurrency:` with `cancel-in-progress: true` on PRs → no wasted runner minutes
+- `workflow_dispatch:` for manual runs
+- Artifact upload (test results, coverage) for visibility
+
+**Files changed:**
+
+- `knowledge-base/decisions/ADR-001-modular-monolith.md` (new)
+- `knowledge-base/decisions/ADR-002-mediator-martin-othmar.md` (new)
+- `knowledge-base/decisions/ADR-003-uuid-v7-app-generated.md` (new)
+- `knowledge-base/decisions/ADR-004-soft-delete-interceptor.md` (new)
+- `knowledge-base/decisions/ADR-005-snake-case-postgres.md` (new)
+- `knowledge-base/decisions/ADR-006-postgis-deferred.md` (new)
+- `knowledge-base/decisions/ADR-007-caddy-reverse-proxy.md` (new)
+- `knowledge-base/decisions/ADR-008-tailwind-preflight-disabled.md` (new)
+- `knowledge-base/decisions/README.md` — ADR index updated, all 9 rows linked + Accepted
+- `.github/workflows/backend.yml` (new)
+- `.github/workflows/web.yml` (new)
+- `.github/workflows/mobile.yml` (new)
+- `backend/src/Rmms.Api/Rmms.Api.csproj` — rewritten via bash heredoc to remove 11 trailing NULL bytes (latent from earlier Edit; build was passing despite them but file is now clean)
+- `knowledge-base/PROJECT-STATE.md` — phase progress bumped to ~85%; CI/CD and ADRs moved out of "not working yet"; next-steps list updated.
+
+**Not yet verified:**
+
+- First CI run on a real push (workflows are syntactically valid YAML, but only an actual GitHub Actions execution can confirm caches/services/test invocations work end-to-end).
+- `dotnet format --verify-no-changes` may flag style issues on first run — fix-then-merge cycle expected on the first PR that exercises the backend workflow.
+
+---
+
 ## 2026-05-26 — Relocate Flutter platform folders to `mobile/` (fix mistaken root scaffold)
 
 **By:** AI-assisted, after `flutter create` was accidentally run at monorepo root (commit 38fc4b2).

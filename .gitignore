@@ -10,6 +10,15 @@ desktop.ini
 *.swo
 *~
 
+# MS Office lock / temp files (created when a doc is open in Excel/Word/PowerPoint)
+~$*.xlsx
+~$*.xlsm
+~$*.xls
+~$*.docx
+~$*.doc
+~$*.pptx
+~$*.ppt
+
 # IDE
 .idea/
 .vscode/*

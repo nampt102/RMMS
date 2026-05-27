@@ -1,0 +1,152 @@
+# Backend CI — .NET 10 LTS (see ADR-009)
+#
+# Triggers:
+#   - push / PR that touches backend/ or this workflow
+#   - manual dispatch (debugging)
+#
+# Jobs:
+#   build_test:
+#     - restore (cached NuGet)
+#     - format check (dotnet format --verify-no-changes)
+#     - build (Release, warnings-as-errors — see Directory.Build.props)
+#     - unit tests (always)
+#     - integration tests (with Postgres 16 + Redis 7 service containers)
+
+name: backend
+
+on:
+  push:
+    branches: [main, develop]
+    paths:
+      - "backend/**"
+      - "Directory.Build.props"
+      - ".github/workflows/backend.yml"
+  pull_request:
+    branches: [main, develop]
+    paths:
+      - "backend/**"
+      - "Directory.Build.props"
+      - ".github/workflows/backend.yml"
+  workflow_dispatch:
+
+concurrency:
+  group: backend-${{ github.ref }}
+  cancel-in-progress: ${{ github.event_name == 'pull_request' }}
+
+env:
+  DOTNET_NOLOGO: "true"
+  DOTNET_CLI_TELEMETRY_OPTOUT: "true"
+  DOTNET_SKIP_FIRST_TIME_EXPERIENCE: "true"
+  NUGET_PACKAGES: ${{ github.workspace }}/.nuget/packages
+
+jobs:
+  build_test:
+    name: Build + test (.NET 10)
+    runs-on: ubuntu-latest
+    timeout-minutes: 25
+
+    # Service containers for integration tests
+    # Versions match docker-compose.yml in repo root
+    services:
+      postgres:
+        image: postgres:16-alpine
+        env:
+          POSTGRES_USER: rmms
+          POSTGRES_PASSWORD: rmms_dev
+          POSTGRES_DB: rmms_test
+        ports:
+          - 5432:5432
+        options: >-
+          --health-cmd="pg_isready -U rmms -d rmms_test"
+          --health-interval=5s
+          --health-timeout=5s
+          --health-retries=10
+
+      redis:
+        image: redis:7-alpine
+        ports:
+          - 6379:6379
+        options: >-
+          --health-cmd="redis-cli ping"
+          --health-interval=5s
+          --health-timeout=5s
+          --health-retries=10
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup .NET 10
+        uses: actions/setup-dotnet@v4
+        with:
+          dotnet-version: 10.0.x
+          # Keep cache off here; we use a richer NuGet cache below.
+
+      - name: Cache NuGet packages
+        uses: actions/cache@v4
+        with:
+          path: ${{ env.NUGET_PACKAGES }}
+          key: nuget-${{ runner.os }}-${{ hashFiles('backend/Directory.Packages.props', 'backend/**/*.csproj') }}
+          restore-keys: |
+            nuget-${{ runner.os }}-
+
+      - name: Restore
+        working-directory: backend
+        run: dotnet restore Rmms.sln
+        # Note: in .NET 10 the legacy `--locked-mode=false` CLI flag is parsed
+        # incorrectly (MSBuild treats the trailing `false` as a second project
+        # → MSB1008). Locked mode is controlled via
+        # <RestoreLockedMode>false</RestoreLockedMode> in Directory.Build.props.
+
+      - name: Verify formatting (dotnet format)
+        working-directory: backend
+        run: dotnet format Rmms.sln --verify-no-changes --no-restore --severity error
+        # --severity error: only fail on actual formatting errors (whitespace,
+        # final newline, missing usings reorder). Analyzer warnings (CA1848 etc.)
+        # are still enforced via Directory.Build.props in the Build step.
+
+      - name: Build (Release, warnings-as-errors)
+        working-directory: backend
+        run: dotnet build Rmms.sln --configuration Release --no-restore
+
+      - name: Run unit tests
+        working-directory: backend
+        run: >-
+          dotnet test tests/Rmms.UnitTests/Rmms.UnitTests.csproj
+          --configuration Release
+          --no-build
+          --logger "trx;LogFileName=unit-tests.trx"
+          --collect:"XPlat Code Coverage"
+          --results-directory ./TestResults
+
+      - name: Run integration tests
+        working-directory: backend
+        env:
+          # AppDbContext + Redis connection strings used by Testcontainers fallback / direct host
+          ConnectionStrings__Postgres: "Host=localhost;Port=5432;Database=rmms_test;Username=rmms;Password=rmms_dev"
+          ConnectionStrings__Redis: "localhost:6379"
+        run: >-
+          dotnet test tests/Rmms.IntegrationTests/Rmms.IntegrationTests.csproj
+          --configuration Release
+          --no-build
+          --logger "trx;LogFileName=integration-tests.trx"
+          --collect:"XPlat Code Coverage"
+          --results-directory ./TestResults
+
+      - name: Upload test results
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: backend-test-results
+          path: backend/TestResults/**/*.trx
+          if-no-files-found: ignore
+          retention-days: 14
+
+      - name: Upload coverage reports
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: backend-coverage
+          path: backend/TestResults/**/coverage.cobertura.xml
+          if-no-files-found: ignore
+          retention-days: 14

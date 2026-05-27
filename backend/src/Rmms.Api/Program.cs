@@ -98,7 +98,8 @@ builder.Services.AddSwaggerGen(o =>
         {
             Reference = new Microsoft.OpenApi.Models.OpenApiReference
             {
-                Type = Microsoft.OpenApi.Models.ReferenceType.SecurityScheme, Id = "Bearer",
+                Type = Microsoft.OpenApi.Models.ReferenceType.SecurityScheme,
+                Id = "Bearer",
             },
         }] = Array.Empty<string>(),
     });

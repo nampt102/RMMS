@@ -1,0 +1,95 @@
+# Web CI — Next.js 14 + AntD Pro + pnpm
+#
+# Triggers:
+#   - push / PR that touches web/ or this workflow
+#   - manual dispatch (debugging)
+#
+# Jobs:
+#   build_test:
+#     - install (pnpm with frozen lockfile)
+#     - lint (next lint)
+#     - type-check (tsc --noEmit)
+#     - test (vitest)
+#     - build (next build)
+
+name: web
+
+on:
+  push:
+    branches: [main, develop]
+    paths:
+      - "web/**"
+      - ".github/workflows/web.yml"
+  pull_request:
+    branches: [main, develop]
+    paths:
+      - "web/**"
+      - ".github/workflows/web.yml"
+  workflow_dispatch:
+
+concurrency:
+  group: web-${{ github.ref }}
+  cancel-in-progress: ${{ github.event_name == 'pull_request' }}
+
+env:
+  # Disable Next.js anonymous telemetry on CI
+  NEXT_TELEMETRY_DISABLED: "1"
+
+defaults:
+  run:
+    working-directory: web
+
+jobs:
+  build_test:
+    name: Build + test (Next.js 14)
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup pnpm
+        uses: pnpm/action-setup@v4
+        with:
+          version: 9.15.0
+          run_install: false
+
+      - name: Setup Node.js 20 LTS
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: "pnpm"
+          cache-dependency-path: web/pnpm-lock.yaml
+
+      - name: Install dependencies (frozen lockfile)
+        run: pnpm install --frozen-lockfile
+
+      - name: Lint (next lint)
+        run: pnpm lint
+
+      - name: Type-check (tsc --noEmit)
+        run: pnpm type-check
+
+      - name: Run tests (vitest)
+        run: pnpm test
+        env:
+          # Vitest CI defaults — fail on console.error, no watch
+          CI: "true"
+
+      - name: Build (next build)
+        run: pnpm build
+        env:
+          # Required at build time; matches .env.example
+          NEXT_PUBLIC_API_BASE_URL: "https://api.example.local"
+          NEXT_PUBLIC_APP_VERSION: ${{ github.sha }}
+
+      - name: Upload .next build output
+        if: github.event_name == 'push' && github.ref == 'refs/heads/main'
+        uses: actions/upload-artifact@v4
+        with:
+          name: web-next-build
+          path: |
+            web/.next
+            !web/.next/cache
+          retention-days: 7
