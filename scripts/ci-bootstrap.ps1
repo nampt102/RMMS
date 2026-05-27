@@ -1,24 +1,24 @@
-# RMMS — Sprint 00 → Sprint 01 CI bootstrap
+# RMMS - Sprint 00 -> Sprint 01 CI bootstrap
 # ----------------------------------------------------------------------------
-# Mục đích:
-#   1) Commit & push lên main:
-#        - .github/workflows/{backend,web,mobile}.yml  (CI/CD mới)
-#        - knowledge-base/decisions/ADR-001..008.md   (8 ADRs Accepted)
-#        - knowledge-base/decisions/README.md         (ADR index updated)
-#        - knowledge-base/PROJECT-STATE.md            (~85% progress)
-#        - knowledge-base/CHANGELOG.md                (entry mới)
-#        - knowledge-base/prompts/system-prompt.md    (sync với .cursor rule)
-#        - .cursor/rules/rmms.mdc                     (sync với system prompt)
-#   2) Tạo nhánh chore/ci-bootstrap với 3 file ".ci-trigger" nhỏ để
-#      kích hoạt cả 3 workflows trên PR đầu tiên.
-#   3) Push nhánh và in URL mở PR.
+# Purpose:
+#   1) Commit & push to main:
+#        - .github/workflows/{backend,web,mobile}.yml  (new CI/CD)
+#        - knowledge-base/decisions/ADR-001..008.md    (8 Accepted ADRs)
+#        - knowledge-base/decisions/README.md          (ADR index updated)
+#        - knowledge-base/PROJECT-STATE.md             (~85% progress)
+#        - knowledge-base/CHANGELOG.md                 (new entry)
+#        - knowledge-base/prompts/system-prompt.md     (sync with cursor rule)
+#        - .cursor/rules/rmms.mdc                      (sync with system prompt)
+#   2) Create branch chore/ci-bootstrap with three small .ci-trigger files
+#      so all 3 workflows fire on the first PR.
+#   3) Push branch and print PR URL.
 #
-# KHÔNG đụng vào:
-#   - mobile/** (87 file đang "modified" chỉ là noise CRLF/LF, sẽ xử lý sau
-#     bằng .gitattributes ở một PR riêng)
-#   - ~$RMMS-Phase1-Plan.xlsx (lock file của Excel)
+# DOES NOT touch:
+#   - mobile/** (87 files showing as "modified" are just CRLF/LF noise;
+#     fix via .gitattributes in a follow-up PR)
+#   - ~$RMMS-Phase1-Plan.xlsx (Excel lock file)
 #
-# Cách chạy:
+# How to run:
 #   cd D:\WORKING\SOURCECODE\RMMS
 #   powershell -ExecutionPolicy Bypass -File .\scripts\ci-bootstrap.ps1
 # ----------------------------------------------------------------------------
@@ -30,26 +30,26 @@ function Step($n, $msg) {
     Write-Host "==> [$n] $msg" -ForegroundColor Cyan
 }
 
-# Đảm bảo ta đang ở repo root
+# Move to repo root regardless of where the script is invoked from
 Set-Location -Path $PSScriptRoot\..
 
 Step 1 "Sanity check"
 git rev-parse --is-inside-work-tree | Out-Null
 $branch = (git branch --show-current).Trim()
 if ($branch -ne "main") {
-    Write-Error "Đang ở nhánh '$branch'. Hãy checkout main trước khi chạy script này."
+    Write-Error "Currently on branch '$branch'. Please checkout main before running this script."
 }
-Write-Host "OK — repo + branch main"
+Write-Host "OK - inside repo and on main"
 
-Step 2 "Set git identity (nếu chưa có)"
-$cfgName  = (git config user.name) 2>$null
+Step 2 "Set git identity (if missing)"
+$cfgName  = (git config user.name)  2>$null
 $cfgEmail = (git config user.email) 2>$null
 if ([string]::IsNullOrWhiteSpace($cfgName))  { git config user.name  "James" }
 if ([string]::IsNullOrWhiteSpace($cfgEmail)) { git config user.email "jamesphan@motivesvn.com" }
 Write-Host ("user.name  = " + (git config user.name))
 Write-Host ("user.email = " + (git config user.email))
 
-Step 3 "Stage workflows + ADRs + KB updates (KHÔNG stage mobile/* CRLF noise)"
+Step 3 "Stage workflows + ADRs + KB updates (NOT mobile CRLF noise)"
 git add `
     .github/workflows/backend.yml `
     .github/workflows/web.yml `
@@ -73,10 +73,10 @@ git add `
     .cursor/rules/rmms.mdc
 
 Write-Host ""
-Write-Host "Files đã staged:"
+Write-Host "Staged files:"
 git diff --cached --name-status
 
-Step 4 "Commit lên main"
+Step 4 "Commit to main"
 $msg1 = @"
 chore(ci+adr): bootstrap GitHub Actions workflows and finalize ADR-001..008
 
@@ -102,55 +102,55 @@ Refs: ADR-001..008, ADR-009.
 
 git commit -m $msg1
 
-Step 5 "Push lên origin/main"
+Step 5 "Push to origin/main"
 git push origin main
 
-Step 6 "Tạo nhánh chore/ci-bootstrap"
+Step 6 "Create branch chore/ci-bootstrap"
 git checkout -b chore/ci-bootstrap
 
-Step 7 "Tạo 3 file .ci-trigger để kích hoạt cả 3 workflows"
-# Mỗi file nằm trong path filter của workflow tương ứng.
+Step 7 "Create 3 .ci-trigger files to fire all 3 workflows"
 $timestamp = (Get-Date -Format "yyyy-MM-ddTHH:mm:ssK")
 
-@"
+$backendTrigger = @"
 # CI trigger marker
 
 This file exists to trigger the backend GitHub Actions workflow on the
-``chore/ci-bootstrap`` PR. It can be safely deleted in a follow-up PR
-once CI is confirmed green.
+``chore/ci-bootstrap`` PR. Safe to delete in a follow-up PR once CI is green.
 
 Generated at: $timestamp
-"@ | Set-Content -Path "backend\.ci-trigger.md" -Encoding UTF8
+"@
 
-@"
+$webTrigger = @"
 # CI trigger marker
 
 This file exists to trigger the web GitHub Actions workflow on the
-``chore/ci-bootstrap`` PR. It can be safely deleted in a follow-up PR
-once CI is confirmed green.
+``chore/ci-bootstrap`` PR. Safe to delete in a follow-up PR once CI is green.
 
 Generated at: $timestamp
-"@ | Set-Content -Path "web\.ci-trigger.md" -Encoding UTF8
+"@
 
-@"
+$mobileTrigger = @"
 # CI trigger marker
 
 This file exists to trigger the mobile GitHub Actions workflow on the
-``chore/ci-bootstrap`` PR. It can be safely deleted in a follow-up PR
-once CI is confirmed green.
+``chore/ci-bootstrap`` PR. Safe to delete in a follow-up PR once CI is green.
 
 Generated at: $timestamp
-"@ | Set-Content -Path "mobile\.ci-trigger.md" -Encoding UTF8
+"@
+
+Set-Content -Path "backend\.ci-trigger.md" -Value $backendTrigger -Encoding UTF8
+Set-Content -Path "web\.ci-trigger.md"     -Value $webTrigger     -Encoding UTF8
+Set-Content -Path "mobile\.ci-trigger.md"  -Value $mobileTrigger  -Encoding UTF8
 
 git add backend/.ci-trigger.md web/.ci-trigger.md mobile/.ci-trigger.md
 
-Step 8 "Commit + push nhánh chore/ci-bootstrap"
+Step 8 "Commit + push chore/ci-bootstrap"
 $msg2 = @"
 chore(ci): noop trigger files for first CI run verification
 
 Adds .ci-trigger.md under backend/, web/, mobile/ so the three workflows
-(backend.yml, web.yml, mobile.yml) all fire on this PR — required as the
-first end-to-end check that:
+(backend.yml, web.yml, mobile.yml) all fire on this PR - the first
+end-to-end check that:
   - actions/setup-dotnet@v4 resolves .NET 10
   - pnpm 9.15 + Node 20 cache works
   - subosito/flutter-action@v2 resolves Flutter 3.22.x
@@ -163,16 +163,17 @@ These files will be removed in a follow-up PR after CI is confirmed green.
 git commit -m $msg2
 git push -u origin chore/ci-bootstrap
 
-Step 9 "DONE — mở PR theo link sau"
+Step 9 "DONE - open the PR using the link below"
 $repoUrl = (git config --get remote.origin.url) -replace '\.git$',''
 $prUrl   = "$repoUrl/compare/main...chore/ci-bootstrap?expand=1"
 Write-Host ""
-Write-Host "PR URL:"  -ForegroundColor Green
-Write-Host $prUrl     -ForegroundColor Green
+Write-Host "PR URL:" -ForegroundColor Green
+Write-Host $prUrl    -ForegroundColor Green
 Write-Host ""
-Write-Host "Sau khi mở PR, kiểm tra tab Checks — phải thấy 3 jobs:"
+Write-Host "Once the PR is open, check the Checks tab for 3 jobs:"
 Write-Host "  - backend / Build + test (.NET 10)"
 Write-Host "  - web / Build + test (Next.js 14)"
 Write-Host "  - mobile / Analyze + test (Flutter 3.22)"
 Write-Host ""
-Write-Host "Khi cả 3 đều xanh -> báo lại cho AI session để cập nhật PROJECT-STATE.md và đóng Sprint 00."
+Write-Host "When all 3 are green, report back so PROJECT-STATE.md can be updated"
+Write-Host "and Sprint 00 closed."
