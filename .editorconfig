@@ -18,7 +18,12 @@ indent_size = 2
 # ===== .NET / C# =====
 [*.{cs,csx,vb}]
 indent_size = 4
-charset = utf-8-bom
+# charset inherited from [*] above (utf-8 without BOM).
+# We deliberately do NOT require utf-8-bom because:
+#   - Files written on Windows + Linux + macOS interleave; BOM is brittle.
+#   - dotnet build / Roslyn handle utf-8 (no BOM) correctly since .NET 5+.
+#   - `dotnet format --verify-no-changes` flags missing BOM as CHARSET error,
+#     which blocked CI without buying any real correctness.
 # Code style — see 08-coding-standards.md
 csharp_style_namespace_declarations = file_scoped:warning
 csharp_style_var_when_type_is_apparent = true:suggestion

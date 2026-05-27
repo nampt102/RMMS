@@ -54,7 +54,9 @@ jobs:
       - name: Setup Flutter
         uses: subosito/flutter-action@v2
         with:
-          flutter-version: "3.22.x"
+          # 3.27.x ships Dart 3.6 — satisfies flutter_lints ^5.0.0 (needs Dart >=3.5).
+          # Bumped from 3.22.x in 2026-05-27 to unblock CI "Get dependencies" step.
+          flutter-version: "3.27.x"
           channel: stable
           cache: true
           cache-key: "flutter-:os:-:channel:-:version:-:arch:"

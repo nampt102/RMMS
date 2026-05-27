@@ -92,12 +92,14 @@ jobs:
 
       - name: Restore
         working-directory: backend
-        run: dotnet restore Rmms.sln
+        run: dotnet restore Rmms.sln --locked-mode=false
 
       - name: Verify formatting (dotnet format)
         working-directory: backend
-        run: dotnet format Rmms.sln --verify-no-changes --no-restore --severity warn
-        # Non-zero exit if files are not formatted per .editorconfig.
+        run: dotnet format Rmms.sln --verify-no-changes --no-restore --severity error
+        # --severity error: only fail on actual formatting errors (whitespace,
+        # final newline, missing usings reorder). Analyzer warnings (CA1848 etc.)
+        # are still enforced via Directory.Build.props in the Build step.
 
       - name: Build (Release, warnings-as-errors)
         working-directory: backend
