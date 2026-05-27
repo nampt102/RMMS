@@ -54,9 +54,11 @@ jobs:
       - name: Setup Flutter
         uses: subosito/flutter-action@v2
         with:
-          # 3.27.x ships Dart 3.6 — satisfies flutter_lints ^5.0.0 (needs Dart >=3.5).
-          # Bumped from 3.22.x in 2026-05-27 to unblock CI "Get dependencies" step.
-          flutter-version: "3.27.x"
+          # 3.32.x ships Dart 3.8 — required by retrofit 4.9.1 (and indirectly
+          # by retrofit_generator, json_serializable in recent versions).
+          # Earlier bumps: 3.22 → 3.27 (Dart 3.6 for flutter_lints ^5.0.0);
+          # 3.27 → 3.32 (Dart 3.8 for retrofit ^4.9).
+          flutter-version: "3.32.x"
           channel: stable
           cache: true
           cache-key: "flutter-:os:-:channel:-:version:-:arch:"
