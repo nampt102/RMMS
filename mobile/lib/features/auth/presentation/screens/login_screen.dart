@@ -51,8 +51,9 @@ class _LoginScreenState extends ConsumerState<LoginScreen> {
                   keyboardType: TextInputType.emailAddress,
                   textInputAction: TextInputAction.next,
                   decoration: InputDecoration(labelText: l.loginEmailLabel),
-                  validator: (v) =>
-                      (v == null || !v.contains('@')) ? 'Email không hợp lệ' : null,
+                  validator: (v) => (v == null || !v.contains('@'))
+                      ? 'Email không hợp lệ'
+                      : null,
                 ),
                 const SizedBox(height: 16),
                 TextFormField(
