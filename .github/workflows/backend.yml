@@ -92,7 +92,7 @@ jobs:
 
       - name: Restore
         working-directory: backend
-        run: dotnet restore Rmms.sln --locked-mode=false
+        run: dotnet restore Rmms.sln
 
       - name: Verify formatting (dotnet format)
         working-directory: backend

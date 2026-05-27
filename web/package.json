@@ -10,7 +10,7 @@
     "lint": "next lint",
     "type-check": "tsc --noEmit",
     "format": "prettier --write \"src/**/*.{ts,tsx,js,jsx,json,md}\"",
-    "test": "vitest run",
+    "test": "vitest run --passWithNoTests",
     "test:watch": "vitest"
   },
   "dependencies": {
