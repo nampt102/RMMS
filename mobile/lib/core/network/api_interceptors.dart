@@ -59,7 +59,9 @@ class DeviceHeadersInterceptor extends Interceptor {
     try {
       final android = await info.androidInfo;
       return android.id;
-    } catch (_) {/* iOS */}
+    } catch (_) {
+      /* iOS */
+    }
     try {
       final ios = await info.iosInfo;
       return ios.identifierForVendor;

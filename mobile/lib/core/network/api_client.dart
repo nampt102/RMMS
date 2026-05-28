@@ -16,10 +16,7 @@ final dioProvider = Provider<Dio>((ref) {
       connectTimeout: const Duration(seconds: 15),
       receiveTimeout: const Duration(seconds: 30),
       sendTimeout: const Duration(seconds: 30),
-      headers: {
-        'Accept': 'application/json',
-        'Accept-Language': 'vi',
-      },
+      headers: {'Accept': 'application/json', 'Accept-Language': 'vi'},
     ),
   );
 

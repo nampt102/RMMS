@@ -10,27 +10,22 @@ class AppTheme {
   static const Color kWarning = Color(0xFFFAAD14);
 
   static ThemeData get light => ThemeData(
-        useMaterial3: true,
-        colorSchemeSeed: kPrimary,
-        brightness: Brightness.light,
-        appBarTheme: const AppBarTheme(
-          centerTitle: true,
-          elevation: 0,
-        ),
-        inputDecorationTheme: const InputDecorationTheme(
-          border: OutlineInputBorder(),
-          isDense: true,
-        ),
-        filledButtonTheme: FilledButtonThemeData(
-          style: FilledButton.styleFrom(
-            minimumSize: const Size.fromHeight(48),
-          ),
-        ),
-      );
+    useMaterial3: true,
+    colorSchemeSeed: kPrimary,
+    brightness: Brightness.light,
+    appBarTheme: const AppBarTheme(centerTitle: true, elevation: 0),
+    inputDecorationTheme: const InputDecorationTheme(
+      border: OutlineInputBorder(),
+      isDense: true,
+    ),
+    filledButtonTheme: FilledButtonThemeData(
+      style: FilledButton.styleFrom(minimumSize: const Size.fromHeight(48)),
+    ),
+  );
 
   static ThemeData get dark => ThemeData(
-        useMaterial3: true,
-        colorSchemeSeed: kPrimary,
-        brightness: Brightness.dark,
-      );
+    useMaterial3: true,
+    colorSchemeSeed: kPrimary,
+    brightness: Brightness.dark,
+  );
 }
