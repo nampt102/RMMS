@@ -6,7 +6,7 @@ part 'auth_user.g.dart';
 /// Authenticated user — mirrors backend JWT payload (sub, email, role).
 /// See knowledge-base/05-api-conventions.md.
 @freezed
-class AuthUser with _$AuthUser {
+sealed class AuthUser with _$AuthUser {
   const factory AuthUser({
     required String id,
     required String email,
@@ -14,7 +14,8 @@ class AuthUser with _$AuthUser {
     required UserRole role,
   }) = _AuthUser;
 
-  factory AuthUser.fromJson(Map<String, dynamic> json) => _$AuthUserFromJson(json);
+  factory AuthUser.fromJson(Map<String, dynamic> json) =>
+      _$AuthUserFromJson(json);
 }
 
 enum UserRole {
