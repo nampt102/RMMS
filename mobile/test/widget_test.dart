@@ -6,7 +6,9 @@ void main() {
   testWidgets('App smoke test — boots without throwing', (tester) async {
     await tester.pumpWidget(
       const ProviderScope(
-        child: MaterialApp(home: Scaffold(body: Center(child: Text('hello')))),
+        child: MaterialApp(
+          home: Scaffold(body: Center(child: Text('hello'))),
+        ),
       ),
     );
     expect(find.text('hello'), findsOneWidget);

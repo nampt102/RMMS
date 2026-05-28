@@ -7,8 +7,10 @@ class AuthApi {
 
   final Dio _dio;
 
-  Future<LoginEnvelope> login(
-      {required String email, required String password}) async {
+  Future<LoginEnvelope> login({
+    required String email,
+    required String password,
+  }) async {
     final response = await _dio.post<Map<String, dynamic>>(
       '/auth/login',
       data: {'email': email, 'password': password},
@@ -19,15 +21,12 @@ class AuthApi {
 }
 
 class LoginEnvelope {
-  LoginEnvelope({
-    required this.accessToken,
-    required this.refreshToken,
-  });
+  LoginEnvelope({required this.accessToken, required this.refreshToken});
 
   factory LoginEnvelope.fromJson(Map<String, dynamic> json) => LoginEnvelope(
-        accessToken: json['accessToken'] as String,
-        refreshToken: json['refreshToken'] as String,
-      );
+    accessToken: json['accessToken'] as String,
+    refreshToken: json['refreshToken'] as String,
+  );
 
   final String accessToken;
   final String refreshToken;

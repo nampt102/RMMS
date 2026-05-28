@@ -9,14 +9,10 @@ Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
 
   // Portrait only for PG/Leader screens (camera + check-in flow is portrait).
-  await SystemChrome.setPreferredOrientations([
-    DeviceOrientation.portraitUp,
-  ]);
+  await SystemChrome.setPreferredOrientations([DeviceOrientation.portraitUp]);
 
   // Local storage (Hive) — for offline form drafts and small caches.
   await Hive.initFlutter();
 
-  runApp(
-    const ProviderScope(child: RmmsApp()),
-  );
+  runApp(const ProviderScope(child: RmmsApp()));
 }
