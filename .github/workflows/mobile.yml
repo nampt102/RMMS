@@ -45,14 +45,14 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
 
-      - name: Setup Java 21 (required for Android Gradle Plugin 9.x)
-        # AGP 9.x (defined in mobile/android/settings.gradle.kts) requires JDK 21.
-        # Bumped from JDK 17 in 2026-05-28 after `:app:compileFlutterBuildDebug`
-        # failed in CI with Flutter 3.44 + AGP 9.0.1.
+      - name: Setup Java 17 (required for Android Gradle Plugin 8.x)
+        # AGP 8.7 (in mobile/android/settings.gradle.kts) needs JDK 17.
+        # Downgraded from AGP 9 + JDK 21 combo (Mar 2026 release) due to
+        # Flutter 3.44 incompatibility — see Flutter#169475.
         uses: actions/setup-java@v4
         with:
           distribution: temurin
-          java-version: "21"
+          java-version: "17"
 
       - name: Setup Flutter
         uses: subosito/flutter-action@v2
@@ -109,7 +109,15 @@ jobs:
           retention-days: 14
 
       # Smoke build only — verifies the project still compiles for Android in CI.
-      # Production release pipelines (signed APK / AAB, IPA) will live in a separate workflow
-      # gated on tagged commits and secrets, authored when M01 ships.
+      # Production release pipelines (signed APK / AAB, IPA) will live in a separate
+      # workflow gated on tagged commits and secrets, authored when M01 ships.
+      - name: Flutter clean (avoid stale package_config from build_runner)
+        run: flutter clean
+
+      - name: Re-fetch deps + generated files after clean
+        run: |
+          flutter pub get
+          dart run build_runner build --delete-conflicting-outputs
+
       - name: Build Android APK (debug smoke)
         run: flutter build apk --debug --target-platform android-arm64
