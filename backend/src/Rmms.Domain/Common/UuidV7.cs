@@ -29,6 +29,12 @@ public static class UuidV7
         // Variant RFC 4122: top 2 bits of byte[8] = 10
         bytes[8] = (byte)((bytes[8] & 0x3F) | 0x80);
 
-        return new Guid(bytes);
+        // IMPORTANT: must use bigEndian: true. The legacy `new Guid(byte[])`
+        // constructor interprets bytes 0-3, 4-5, 6-7 as LITTLE-endian fields,
+        // which would swap byte[6] (our version nibble) and byte[7], making
+        // the canonical string form non-compliant with RFC 9562.
+        // The bigEndian overload (added in .NET 8) reads the buffer exactly
+        // as RFC 4122 / 9562 specify.
+        return new Guid(bytes, bigEndian: true);
     }
 }

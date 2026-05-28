@@ -54,11 +54,12 @@ jobs:
       - name: Setup Flutter
         uses: subosito/flutter-action@v2
         with:
-          # 3.32.x ships Dart 3.8 — required by retrofit 4.9.1 (and indirectly
-          # by retrofit_generator, json_serializable in recent versions).
-          # Earlier bumps: 3.22 → 3.27 (Dart 3.6 for flutter_lints ^5.0.0);
-          # 3.27 → 3.32 (Dart 3.8 for retrofit ^4.9).
-          flutter-version: "3.32.x"
+          # 3.44.x ships Dart 3.12 — current stable on dev machine.
+          # Keeping CI Flutter == local Flutter prevents `dart format` drift
+          # between dev environment and CI (Dart formatter rules change
+          # subtly across major Dart versions).
+          # Version history: 3.22 → 3.27 → 3.32 → 3.44.
+          flutter-version: "3.44.x"
           channel: stable
           cache: true
           cache-key: "flutter-:os:-:channel:-:version:-:arch:"
