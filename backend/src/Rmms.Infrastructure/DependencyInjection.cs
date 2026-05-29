@@ -3,6 +3,7 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Rmms.Application.Common.Abstractions;
 using Rmms.Application.Common.Interfaces;
+using Rmms.Application.Email;
 using Rmms.Infrastructure.Audit;
 using Rmms.Infrastructure.Email;
 using Rmms.Infrastructure.Identity;
@@ -59,6 +60,10 @@ public static class DependencyInjection
 
         // ----- Email -----
         // Sprint 01: console-only. Sprint 01 Day 8 will branch to SendGrid based on Email:Provider config.
+        services.Configure<EmailOptions>(config.GetSection(EmailOptions.SectionName));
+        services.Configure<AppUrlOptions>(config.GetSection(AppUrlOptions.SectionName));
+        services.AddScoped<IEmailTemplateRenderer, EmailTemplateRenderer>();
+
         var emailProvider = config.GetSection("Email")["Provider"]?.ToLowerInvariant() ?? "console";
         switch (emailProvider)
         {

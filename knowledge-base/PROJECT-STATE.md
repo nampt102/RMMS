@@ -2,10 +2,10 @@
 
 > **READ THIS FIRST.** This file is the single source of truth for "where the project is right now". Every AI session and every new dev should open this file before doing anything else. Update on every significant milestone.
 
-**Last updated:** 2026-05-28 (evening — Sprint 01 Day 1 complete: domain entities + EF migration generated)
-**Current phase:** Phase 1A — **Sprint 01 (M01 Auth & Devices), Day 1 of 10**
+**Last updated:** 2026-05-29 (Sprint 01 Day 2 complete: register + verify-email endpoints live, smoke-tested end-to-end)
+**Current phase:** Phase 1A — **Sprint 01 (M01 Auth & Devices), Day 2 of 10**
 **Sprint 00 status:** ✅ **CLOSED** (100% — scaffold + .NET 10 + 9 ADRs + 3 CI workflows green)
-**Sprint 01 progress:** ~10% — Day 1 deliverables shipped (domain entities, EF config, DI wiring, first migration `Init_M01_M02_Foundation` generated locally; ready for Day 2 endpoint work)
+**Sprint 01 progress:** ~20% — Day 1 (domain + migration) + Day 2 (register + verify-email) shipped; Day 3 (login + device check + refresh) starting next
 
 ---
 
@@ -131,7 +131,7 @@ All 9 ADRs are **Accepted** and live in `knowledge-base/decisions/`:
 
 ---
 
-## Sprint 01 — M01 Auth & Devices (Day 1 of 10 done, 2026-05-28 → 2026-06-11)
+## Sprint 01 — M01 Auth & Devices (Day 2 of 10 done, 2026-05-28 → 2026-06-11)
 
 **Day 1 ✅** (2026-05-28 evening): Domain layer + EF migration + DI wiring
 
@@ -140,9 +140,21 @@ All 9 ADRs are **Accepted** and live in `knowledge-base/decisions/`:
 - Post-migration SQL `001_audit_log_append_only.sql` for CR-1 enforcement
 - See `sprints/sprint-01.md` for the full day-by-day plan
 
-**Day 2 ⏭** (2026-05-29): JWT issuance + Register + Verify-Email endpoints
+**Day 2 ✅** (2026-05-29): Register + Verify-Email endpoints (smoke-tested end-to-end)
 
-**Day 3–10**: see Sprint 01 plan
+- `POST /api/v1/auth/register` (BR-101) — PG self-registration with email, BCrypt cost 12, FluentValidation rules (email format, password ≥8 chars + 1 letter + 1 digit)
+- `POST /api/v1/auth/verify-email` — token-based activation, single-use, 24h TTL
+- `IEmailTemplateRenderer` with vi/en templates for verify-email + reset-password + admin-created-account
+- `ConsoleEmailSender` (Dev/CI) prints email content to Serilog — E2E tests can scrape token from log
+- `OpaqueToken` helper (256-bit random, SHA-256 hex hashing) reused across refresh / email / reset tokens
+- `ResultMapping` translates `Result.Error` → HTTP status + ErrorEnvelope per `05-api-conventions.md`
+- `EnumFormatting.ToSnakeCase<T>()` for API response strings (e.g., `PendingEmailVerify` → `pending_email_verify`)
+- Audit log emits `user.registered` + `user.email_verified` per CR-1
+- Migration applied to fresh Postgres + PostGIS image; smoke test passed: register → verify → user `status=active` + 2 audit rows
+
+**Day 3 ⏭** (2026-05-30): Login + Device check (BR-105) + Refresh token rotation + Logout
+
+**Day 4–10**: see Sprint 01 plan
 
 ## Sprint 00 — closed 2026-05-28 ✅
 

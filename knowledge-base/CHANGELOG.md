@@ -6,6 +6,78 @@ Append-only chronological log of significant project milestones, decisions, and 
 
 ---
 
+## 2026-05-29 — Sprint 01 Day 2: Register + Verify-Email endpoints (M01)
+
+**By:** Tech lead (MotivesVN IT), AI-assisted
+
+**Outcome:** First 2 production endpoints of M01 live and smoke-tested end-to-end on local Docker stack. PG can self-register via email and activate their account by clicking the verification link — flow A of AC-1.
+
+### Endpoints
+
+- `POST /api/v1/auth/register` (BR-101)
+  - FluentValidation: email format + length ≤255, password ≥8 chars + 1 letter + 1 digit, fullName 1–255, phone ≤20, language ∈ {vi, en}.
+  - Handler: normalize email (lowercase + trim) → uniqueness check (incl. soft-deleted via `IgnoreQueryFilters`) → BCrypt cost-12 hash → `User.Register()` (status `pending_email_verify`) → issue `EmailVerificationToken` (256-bit random + SHA-256 hash, 24h TTL) → render vi/en email template → send via `IEmailSender` (`ConsoleEmailSender` in Dev) → audit `user.registered` → `SaveChanges` atomically.
+  - Returns `201 Created` with `{ data: { userId, email, status: "pending_email_verify" } }`.
+
+- `POST /api/v1/auth/verify-email`
+  - Token plaintext from email URL → SHA-256 hash → DB lookup by unique hash index.
+  - Reject: unknown (`TOKEN_INVALID`), expired (`EMAIL_TOKEN_EXPIRED`), used (`EMAIL_TOKEN_USED`).
+  - Idempotent: re-verifying already-active user returns success (no state change).
+  - On success: `user.VerifyEmail(now)` (status → `active`) + `token.MarkUsed(now)` + audit `user.email_verified`.
+
+### Application layer (8 new files)
+
+- `Common/Security/OpaqueToken.cs` — reusable 256-bit random + SHA-256 hash helper; used by Register, VerifyEmail, ResetPassword, ChangeDevice (planned).
+- `Common/EnumFormatting.cs` — `ToSnakeCase<TEnum>()` extension for API response strings; keeps response shape consistent with DB column values (snake_case per ADR-005).
+- `Auth/Register/{RegisterUserCommand, RegisterUserResponse, RegisterUserCommandValidator, RegisterUserCommandHandler}.cs`.
+- `Auth/VerifyEmail/{VerifyEmailCommand, VerifyEmailResponse, VerifyEmailCommandValidator, VerifyEmailCommandHandler}.cs`.
+- `Email/IEmailTemplateRenderer.cs` — interface for vi/en transactional emails; 3 templates: verify-email, password-reset, admin-created-account.
+
+### Infrastructure layer (3 new files)
+
+- `Email/EmailTemplateRenderer.cs` — string-interpolation templates (HTML + plaintext) bound from `AppUrlOptions` (link base URL) + `EmailOptions` (brand name). RazorLight templating deferred to Sprint 03 (M14 News).
+- `Email/EmailOptions.cs` + `Email/AppUrlOptions.cs` — config bindings.
+
+### Api layer (3 new files)
+
+- `Controllers/AuthController.cs` — `[ApiController] [Route("api/v1/auth")] [AllowAnonymous]` with 2 endpoints + Swagger annotations.
+- `Dtos/Auth/{RegisterRequest, VerifyEmailRequest}.cs` — positional records; .NET 10 validation source generator requires attributes on parameters (not `[property: ...]`) — fixed during smoke test.
+- `Common/ResultMapping.cs` — translates `Result<T>.IsFailure` to HTTP status (Validation→400, NotFound→404, Conflict→409, Unauthorized→401, Forbidden→403) + ErrorEnvelope per `05-api-conventions.md`.
+
+### Modified
+
+- `Shared/Errors/ErrorCodes.cs` — added `EmailAlreadyRegistered`, `AccountLocked`, `RefreshTokenReused`, `PermissionDenied`.
+- `Infrastructure/DependencyInjection.cs` — wired `EmailOptions`, `AppUrlOptions`, `IEmailTemplateRenderer`.
+- `Api/appsettings.json` — added `App.AppBaseUrl` + extended `Email` section.
+
+### Bug-hunt rounds (all resolved during smoke test)
+
+1. **`.NET 10` validation source-generator rejects `[property: Required]` on positional record parameters** — switched DTOs to use parameter-level attributes (no `property:` prefix).
+2. **`status` response was `"pendingemailverify"`** (PascalCase concatenated) instead of `"pending_email_verify"` — fixed by routing through `EnumFormatting.ToSnakeCase<T>()` so API responses match DB values + spec.
+
+### Day 2 infra discoveries (rolled into knowledge-base)
+
+- **Local Postgres conflict on Windows host:** developer machine had a system PostgreSQL service listening on `localhost:5432`, preempting the Docker port mapping. Switched `docker-compose.yml` postgres ports to `5433:5432` (and matched `appsettings.Development.json`) — Option A from the troubleshooting guide.
+- **`appsettings.Development.json` not picked up by `dotnet ef` CLI** unless `ASPNETCORE_ENVIRONMENT=Development` is set. Use `--connection` flag or set env var per session.
+- **Stale Postgres volume from `postgres:16-alpine` → `postgis/postgis:16-3.4` switch** caused `role "rmms" does not exist` until `docker compose down -v` triggered fresh init scripts.
+
+### Smoke test results (2026-05-29)
+
+- Register `test1@example.com` → 201 with `userId=019e72f3-2cf9-77b7-b642-0b6f9aea0359`, status `pending_email_verify`.
+- Console log captured verify URL with token plaintext.
+- Verify-email with that token → 200, status `active`.
+- DB verified: `users.status=active`, `users.email_verified_at IS NOT NULL`, `email_verification_tokens.used_at IS NOT NULL`, `audit_log` contains both `user.registered` + `user.email_verified` rows with correct metadata.
+
+### Carry-forward to Day 3
+
+- `POST /api/v1/auth/login` with BR-105 device check (return 403 `DEVICE_NOT_AUTHORIZED` + create pending row).
+- `POST /api/v1/auth/refresh` with rotation + reuse detection (revoke all on reuse).
+- `POST /api/v1/auth/logout` (revoke refresh per device).
+- `LoginUserCommand`, `RefreshTokenCommand`, `LogoutCommand` + handlers + validators.
+- Audit emits: `auth.login_success`, `auth.login_failed`, `auth.refresh_rotated`, `auth.refresh_reused`, `auth.logout`, `device.registered`, `device.change_requested`.
+
+---
+
 ## 2026-05-28 (evening) — Sprint 01 Day 1: Domain layer + first EF migration
 
 **By:** Tech lead (MotivesVN IT), AI-assisted

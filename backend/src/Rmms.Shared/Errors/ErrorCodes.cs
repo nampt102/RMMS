@@ -17,12 +17,16 @@ public static class ErrorCodes
     // ---------- Auth ----------
     public const string InvalidCredentials = "INVALID_CREDENTIALS";
     public const string EmailNotVerified = "EMAIL_NOT_VERIFIED";
+    public const string EmailAlreadyRegistered = "EMAIL_ALREADY_REGISTERED";
     public const string AccountInactive = "ACCOUNT_INACTIVE";
+    public const string AccountLocked = "ACCOUNT_LOCKED";
     public const string TokenExpired = "TOKEN_EXPIRED";
     public const string TokenInvalid = "TOKEN_INVALID";
     public const string RefreshTokenRevoked = "REFRESH_TOKEN_REVOKED";
+    public const string RefreshTokenReused = "REFRESH_TOKEN_REUSED";
     public const string DeviceNotAuthorized = "DEVICE_NOT_AUTHORIZED";
     public const string PasswordTooWeak = "PASSWORD_TOO_WEAK";
+    public const string PermissionDenied = "PERMISSION_DENIED";
 
     // ---------- Attendance ----------
     public const string StoreNotAssigned = "STORE_NOT_ASSIGNED";
