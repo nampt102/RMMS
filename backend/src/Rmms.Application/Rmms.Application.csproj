@@ -21,6 +21,14 @@
     <PackageReference Include="Mapster.DependencyInjection" />
     <PackageReference Include="Microsoft.Extensions.DependencyInjection.Abstractions" />
     <PackageReference Include="Microsoft.Extensions.Logging.Abstractions" />
+
+    <!--
+      EF Core core types (DbSet<T>, IQueryable extensions) are referenced from
+      Rmms.Application.Common.Interfaces.IAppDbContext per Clean Architecture
+      "interfaces in Application, implementation in Infrastructure" pattern.
+      This package brings ONLY abstractions; provider (Npgsql) stays in Infrastructure.
+    -->
+    <PackageReference Include="Microsoft.EntityFrameworkCore" />
   </ItemGroup>
 
 </Project>

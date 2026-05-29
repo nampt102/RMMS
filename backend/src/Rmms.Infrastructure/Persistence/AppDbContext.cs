@@ -1,5 +1,9 @@
 using Microsoft.EntityFrameworkCore;
 using Rmms.Application.Common.Interfaces;
+using Rmms.Domain.Audit;
+using Rmms.Domain.Auth;
+using Rmms.Domain.Devices;
+using Rmms.Domain.Users;
 
 namespace Rmms.Infrastructure.Persistence;
 
@@ -12,8 +16,18 @@ public sealed class AppDbContext : DbContext, IAppDbContext
 {
     public AppDbContext(DbContextOptions<AppDbContext> options) : base(options) { }
 
-    // Add DbSet<T> here as entities are introduced.
-    // Example: public DbSet<User> Users => Set<User>();
+    // ----- M01 Identity & Access -----
+    public DbSet<User> Users => Set<User>();
+    public DbSet<RefreshToken> RefreshTokens => Set<RefreshToken>();
+    public DbSet<LoginHistory> LoginHistory => Set<LoginHistory>();
+    public DbSet<EmailVerificationToken> EmailVerificationTokens => Set<EmailVerificationToken>();
+    public DbSet<PasswordResetToken> PasswordResetTokens => Set<PasswordResetToken>();
+
+    // ----- M02 Device Management -----
+    public DbSet<UserDevice> UserDevices => Set<UserDevice>();
+
+    // ----- Cross-cutting -----
+    public DbSet<AuditLog> AuditLogs => Set<AuditLog>();
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {

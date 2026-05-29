@@ -2,9 +2,10 @@
 
 > **READ THIS FIRST.** This file is the single source of truth for "where the project is right now". Every AI session and every new dev should open this file before doing anything else. Update on every significant milestone.
 
-**Last updated:** 2026-05-26 (ADR-001..008 authored + GitHub Actions workflows added)
-**Current phase:** Phase 1A — Sprint 00 (Foundation)
-**Current sprint progress:** ~85% (scaffold + .NET 10 + NuGet restore resolved + 9/9 ADRs authored + CI/CD for backend/web/mobile; first DB migration is the last outstanding piece before Sprint 01 / M01 can start)
+**Last updated:** 2026-05-28 (evening — Sprint 01 Day 1 complete: domain entities + EF migration generated)
+**Current phase:** Phase 1A — **Sprint 01 (M01 Auth & Devices), Day 1 of 10**
+**Sprint 00 status:** ✅ **CLOSED** (100% — scaffold + .NET 10 + 9 ADRs + 3 CI workflows green)
+**Sprint 01 progress:** ~10% — Day 1 deliverables shipped (domain entities, EF config, DI wiring, first migration `Init_M01_M02_Foundation` generated locally; ready for Day 2 endpoint work)
 
 ---
 
@@ -16,10 +17,13 @@ The repository now contains a working **scaffold** for all three apps:
 - ✅ **Web** — Next.js 14 (App Router) + Ant Design Pro + TanStack Query + Zustand + next-intl
 - ✅ **Mobile** — Flutter 3.22 + Riverpod 2 + Dio + Hive + ARB-based l10n
 - ✅ **Local infra** — `docker-compose.yml` for PostgreSQL 16 + Redis 7 + MinIO + Seq + Caddy
-- ❌ **No business logic yet** — no User/Auth/Store entities, no real endpoints (only `/api/v1/health`)
-- ✅ **CI/CD authored** — `.github/workflows/{backend,web,mobile}.yml`: lint + build + test, with concurrency control, path filters, NuGet / pnpm / Flutter caching, Postgres+Redis service containers for backend integration tests
-- ❌ **No migrations applied** — `AppDbContext` has zero `DbSet<T>` properties
+- ✅ **Domain layer M01+M02 entities** — `User`, `UserDevice`, `RefreshToken`, `LoginHistory`, `AuditLog`, `EmailVerificationToken`, `PasswordResetToken` with factory methods, invariants, future-proofing hooks (SSO/MFA/Face columns reserved)
+- ✅ **First EF migration generated** — `Init_M01_M02_Foundation` creates 7 tables + indexes + partial unique index `WHERE status='active'` enforcing BR-105 at DB level; post-migration SQL `001_audit_log_append_only.sql` revokes UPDATE/DELETE on `audit_log` per CR-1
+- ✅ **CI/CD green on main** — all 3 workflows pass: backend (Restore→Format→Build→Tests with Postgres+Redis services), web (Lint→Type-check→Test→Build), mobile (pub get→build_runner→Format→Analyze→Tests). Android APK smoke build deferred to Sprint 03 release.yml (Flutter#169475 upstream regression).
+- ❌ **No endpoints yet** — only `/api/v1/health` from scaffold; M01 endpoints (`/auth/*`, `/admin/users/*`) land in Day 2-7
 - ✅ **All 9 ADRs authored** — `decisions/ADR-001..009.md` covers Modular Monolith, Mediator (Othmar), UUID v7, soft-delete interceptor, snake_case naming, PostGIS-deferred, Caddy reverse proxy, Tailwind preflight-off, and .NET 10 LTS
+- ✅ **Mobile toolchain pinned** — Flutter 3.44, Dart 3.12, AGP 8.11, Kotlin 2.2.20, Gradle 8.13, JDK 17 (verified compatible with Flutter team's stable matrix)
+- ✅ **Service abstractions in Application** — `IPasswordHasher`, `IJwtTokenService`, `IRefreshTokenGenerator`, `IEmailSender`, `IAuditLogger`, `IClientContext` (implementations in Infrastructure: BCrypt cost 12, HS256 JWT, SHA-256 hashed refresh tokens, console email for Dev, append-only audit logger)
 
 If you are an AI tool generating code: assume the scaffold is the foundation, but ANY entity/endpoint/feature you propose must be implemented from scratch — there is no existing User table, no auth middleware applied to any route, no SignalR hub, no Hangfire job. Follow the modules in `modules/M01..M16` order; do NOT skip ahead unless explicitly asked.
 
@@ -102,11 +106,10 @@ RMMS/                                       # root
 
 ## What does NOT work yet
 
-- **No real auth.** JWT middleware is wired in `Program.cs` but no `User` entity exists, no `/auth/login` endpoint, no token issuance. Login screen on web + mobile are stub forms only.
-- **No database migrations.** `AppDbContext` has zero `DbSet<T>`. Running `dotnet ef database update` will create an empty DB.
-- **No business endpoints.** Only `/api/v1/health` exists.
-- **External integrations not wired.** FPT.AI Face, SendGrid, Firebase FCM, MinIO are listed in `Directory.Packages.props` but `Rmms.Infrastructure/DependencyInjection.cs` has only `TODO(M01+)` markers for them.
-- **No outbox pattern, no SignalR hub, no Hangfire jobs registered.**
+- **No `/auth/*` endpoints.** Domain entities + EF migration are in place but commands/handlers/controllers ship Day 2-5. Mobile + web login screens are still stub forms.
+- **External integrations not wired.** SendGrid (Day 8 of Sprint 01), FPT.AI Face (M06), Firebase FCM (M14), MinIO (M13) all have TODOs in `Rmms.Infrastructure/DependencyInjection.cs`. Email currently uses `ConsoleEmailSender` that logs to Serilog (Dev/CI default).
+- **No outbox pattern, no SignalR hub, no Hangfire jobs registered yet.** Hangfire host runs but has no jobs scheduled — cleanup job for expired refresh / verification tokens lands Day 6.
+- **Auth-related screens not wired.** Mobile `Register` / `EmailVerify` / `Login` / `Forgot` / `Reset` and Web Admin `User Management` UI ship Day 3-7.
 
 ---
 
@@ -128,17 +131,37 @@ All 9 ADRs are **Accepted** and live in `knowledge-base/decisions/`:
 
 ---
 
-## Immediate next steps (priority order)
+## Sprint 01 — M01 Auth & Devices (Day 1 of 10 done, 2026-05-28 → 2026-06-11)
 
-1. ✅ **VERIFY** scaffold builds locally on **.NET 10** — **done 2026-05-26**. All 8 projects produce `bin/Debug/net10.0/*.dll`; `Rmms.Api.exe` + `Rmms.Worker.exe` runtime artifacts present; restore caches up to date.
-2. ✅ **ADR-001 through ADR-008** — **done 2026-05-26**. All 9 ADRs Accepted in `knowledge-base/decisions/`.
-3. ✅ **CI/CD** — **done 2026-05-26**. `.github/workflows/{backend,web,mobile}.yml` written with lint + build + test + caching + path filters. Backend workflow uses `actions/setup-dotnet@v4` with `10.0.x` and Postgres 16 + Redis 7 service containers for integration tests.
-4. ⏭ **(NEXT)** Push the workflow files and confirm the first CI run goes green on a small "noop" PR — required before any feature PR can use CI as the gate. — ~30 min
-5. **M01 Day 1 (Sprint 00 → Sprint 01 transition)**:
-   - First EF Core migration: `users`, `devices`, `refresh_tokens`, `audit_log`
-   - Endpoints: `POST /auth/register`, `POST /auth/login`, `POST /auth/refresh`, `POST /auth/logout`
-   - JWT issuance with rotation
-   - Authorization policies for `pg`/`leader`/`buh`/`admin`
+**Day 1 ✅** (2026-05-28 evening): Domain layer + EF migration + DI wiring
+
+- 7 Domain entities + 3 enums + 6 service abstractions + 7 EF configurations + 4 Infrastructure impls
+- Migration `Init_M01_M02_Foundation` generated locally (7 tables: `users`, `user_devices`, `refresh_tokens`, `login_history`, `audit_log`, `email_verification_tokens`, `password_reset_tokens`)
+- Post-migration SQL `001_audit_log_append_only.sql` for CR-1 enforcement
+- See `sprints/sprint-01.md` for the full day-by-day plan
+
+**Day 2 ⏭** (2026-05-29): JWT issuance + Register + Verify-Email endpoints
+
+**Day 3–10**: see Sprint 01 plan
+
+## Sprint 00 — closed 2026-05-28 ✅
+
+1. ✅ Scaffold verified building locally on .NET 10
+2. ✅ 9 ADRs (001–009) Accepted
+3. ✅ CI/CD — `.github/workflows/{backend,web,mobile}.yml` all green on main
+4. ✅ Mobile toolchain stabilized (Flutter 3.44 + AGP 8.11 + Kotlin 2.2.20 + Gradle 8.13 + JDK 17)
+
+## Sprint 01 — M01 Auth & Devices (2026-05-28 → 2026-06-11, 2 weeks)
+
+**Goal:** First production-grade module — user identity, single-device enforcement, JWT issuance + rotation, auth-loggable per CR-1.
+
+**Day 1 deliverables (the "first migration" milestone):**
+- EF Core migration: `users`, `devices`, `refresh_tokens`, `audit_log`
+- Endpoints: `POST /auth/register`, `POST /auth/login`, `POST /auth/refresh`, `POST /auth/logout`
+- JWT issuance with rotation per `05-api-conventions.md`
+- Authorization policies for `pg` / `leader` / `buh` / `admin`
+
+See `sprints/sprint-01.md` for the full day-by-day plan, risks, and extensibility hooks.
 
 After M01 ships, the order is M02 → M03 → M04 per `modules/M*.md` per Phase 1A plan.
 

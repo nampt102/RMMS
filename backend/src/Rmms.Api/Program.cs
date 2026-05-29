@@ -21,13 +21,20 @@ builder.Host.UseSerilog((ctx, lc) => lc
 builder.Services.AddApplication();
 builder.Services.AddInfrastructure(builder.Configuration);
 
-// ----- HttpContext + CurrentUser -----
+// ----- HttpContext + CurrentUser + ClientContext -----
 builder.Services.AddHttpContextAccessor();
 builder.Services.AddScoped<ICurrentUser, HttpContextCurrentUser>();
+builder.Services.AddScoped<Rmms.Application.Common.Abstractions.IClientContext, HttpContextClientContext>();
 
 // ----- AuthN (JWT) per 05-api-conventions.md -----
+// Note: Infrastructure layer binds `JwtOptions` from the same `Jwt` section
+// for issuance (see Rmms.Infrastructure.Identity.JwtTokenService).
 var jwt = builder.Configuration.GetSection("Jwt");
 var jwtKey = jwt["SigningKey"] ?? throw new InvalidOperationException("Missing Jwt:SigningKey.");
+if (System.Text.Encoding.UTF8.GetByteCount(jwtKey) < 32)
+{
+    throw new InvalidOperationException("Jwt:SigningKey must be at least 32 bytes for HS256.");
+}
 builder.Services
     .AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
     .AddJwtBearer(options =>
