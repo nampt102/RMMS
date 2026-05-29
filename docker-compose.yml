@@ -10,9 +10,9 @@
 name: rmms
 
 services:
-  # ---------- PostgreSQL 16 ----------
+  # ---------- PostgreSQL 16 + PostGIS (required by EF migration / NetTopologySuite) ----------
   postgres:
-    image: postgres:16-alpine
+    image: postgis/postgis:16-3.4
     container_name: rmms-postgres
     restart: unless-stopped
     environment:
