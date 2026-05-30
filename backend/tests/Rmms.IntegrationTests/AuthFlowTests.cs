@@ -44,6 +44,10 @@ public sealed class AuthFlowTests
         var verify = await client.PostAsJsonAsync("/api/v1/auth/verify-email", new { token = verifyToken });
         verify.StatusCode.Should().Be(HttpStatusCode.OK);
 
+        // 2b) A PG MUST supply device info (BR-105). A device-less login is rejected.
+        var noDevice = await client.PostAsJsonAsync("/api/v1/auth/login", new { email, password });
+        noDevice.StatusCode.Should().Be(HttpStatusCode.Forbidden);
+
         // 3) Login -> 200 with access + refresh tokens
         var login = await client.PostAsJsonAsync("/api/v1/auth/login", new
         {

@@ -1,23 +1,29 @@
 "use client";
 
-import { Button, Card, Form, Input, Typography } from "antd";
+import { App, Button, Card, Form, Input, Typography } from "antd";
 import { useTranslations } from "next-intl";
+import { useRouter } from "next/navigation";
+import { useLoginMutation, type LoginRequest } from "@/features/auth/api/login";
+import { errorCodeFromUnknown } from "@/features/auth/lib/auth-error";
 
 const { Title } = Typography;
 
-type LoginFormValues = {
-  email: string;
-  password: string;
-};
-
-export default function LoginPage() {
+export default function LoginPage({ params: { locale } }: { params: { locale: string } }) {
   const t = useTranslations("auth.login");
+  const tErrors = useTranslations("errors");
+  const router = useRouter();
+  const { message } = App.useApp();
+  const login = useLoginMutation();
 
-  const onFinish = async (values: LoginFormValues) => {
-    // TODO(M01): call POST /api/v1/auth/login via lib/api/client.ts
-    // For now, just log so the scaffold is wired end-to-end.
-    // eslint-disable-next-line no-console
-    console.log("login submit", values);
+  const onFinish = async (values: LoginRequest) => {
+    try {
+      await login.mutateAsync(values);
+      // Admin dashboard shell lands in Day 7 — redirect to the locale home for now.
+      router.replace(`/${locale}`);
+    } catch (error) {
+      const code = errorCodeFromUnknown(error);
+      message.error(tErrors.has(code) ? tErrors(code) : tErrors("INTERNAL_ERROR"));
+    }
   };
 
   return (
@@ -26,22 +32,14 @@ export default function LoginPage() {
         <Title level={3} className="!mb-6 text-center">
           {t("title")}
         </Title>
-        <Form<LoginFormValues> layout="vertical" onFinish={onFinish}>
-          <Form.Item
-            label={t("email")}
-            name="email"
-            rules={[{ required: true, type: "email" }]}
-          >
+        <Form<LoginRequest> layout="vertical" onFinish={onFinish} disabled={login.isPending}>
+          <Form.Item label={t("email")} name="email" rules={[{ required: true, type: "email" }]}>
             <Input autoComplete="email" />
           </Form.Item>
-          <Form.Item
-            label={t("password")}
-            name="password"
-            rules={[{ required: true, min: 8 }]}
-          >
+          <Form.Item label={t("password")} name="password" rules={[{ required: true, min: 8 }]}>
             <Input.Password autoComplete="current-password" />
           </Form.Item>
-          <Button type="primary" htmlType="submit" block>
+          <Button type="primary" htmlType="submit" block loading={login.isPending}>
             {t("submit")}
           </Button>
         </Form>

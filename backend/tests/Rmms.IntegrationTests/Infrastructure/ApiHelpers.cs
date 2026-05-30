@@ -33,6 +33,17 @@ public static class ApiHelpers
         return await ExtractAsync(resp, "accessToken");
     }
 
+    /// <summary>
+    /// Web login (no device payload) — the path used by Leader/BUH/Admin. Returns the access
+    /// token, or null if login did not return 200. BR-105 device check is PG-scoped, so web
+    /// users authenticate without a device.
+    /// </summary>
+    public static async Task<string?> LoginNoDeviceAsync(this HttpClient client, string email, string password)
+    {
+        var resp = await client.PostAsJsonAsync("/api/v1/auth/login", new { email, password });
+        return resp.IsSuccessStatusCode ? await ExtractAsync(resp, "accessToken") : null;
+    }
+
     /// <summary>Read a string field nested under the <c>data</c> envelope.</summary>
     public static async Task<string?> ExtractAsync(HttpResponseMessage resp, string field)
     {

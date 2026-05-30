@@ -4,12 +4,15 @@ namespace Rmms.Api.Dtos.Auth;
 
 /// <summary>
 /// Request body for <c>POST /api/v1/auth/login</c>.
-/// Device info MUST be sent on every login (BR-105 device check).
+/// <para>
+/// <see cref="Device"/> is REQUIRED for PG (mobile, BR-105 device check) and OPTIONAL
+/// for Leader / BUH / Admin (web). Web clients omit it; the device check is PG-scoped.
+/// </para>
 /// </summary>
 public sealed record LoginRequest(
     [Required][EmailAddress][MaxLength(255)] string Email,
     [Required][MaxLength(128)] string Password,
-    [Required] LoginDeviceDto Device);
+    LoginDeviceDto? Device = null);
 
 public sealed record LoginDeviceDto(
     [Required][MaxLength(255)] string DeviceId,

@@ -24,9 +24,16 @@
   },
   "errors": {
     "INVALID_CREDENTIALS": "Email hoặc mật khẩu không đúng.",
+    "EMAIL_NOT_VERIFIED": "Email chưa được xác minh.",
+    "ACCOUNT_INACTIVE": "Tài khoản đã bị vô hiệu hoá. Vui lòng liên hệ Admin.",
+    "ACCOUNT_LOCKED": "Tài khoản tạm khoá do đăng nhập sai quá nhiều lần.",
+    "DEVICE_NOT_AUTHORIZED": "Tài khoản PG vui lòng đăng nhập bằng ứng dụng di động.",
+    "RATE_LIMIT_EXCEEDED": "Quá nhiều lần thử. Vui lòng đợi và thử lại sau.",
+    "PERMISSION_DENIED": "Bạn không có quyền truy cập.",
     "TOKEN_EXPIRED": "Phiên đăng nhập đã hết hạn.",
     "VALIDATION_FAILED": "Dữ liệu không hợp lệ.",
     "NOT_FOUND": "Không tìm thấy dữ liệu.",
+    "NETWORK_ERROR": "Không kết nối được máy chủ. Kiểm tra mạng và thử lại.",
     "INTERNAL_ERROR": "Đã xảy ra lỗi không mong muốn."
   }
 }

@@ -105,20 +105,36 @@ internal sealed class LoginCommandHandler : IRequestHandler<LoginCommand, Result
                 message: "Email hoặc mật khẩu không đúng.", ct);
         }
 
-        // ----- 4. Device check (BR-105) -----
-        var deviceResult = await ResolveDeviceAsync(user, command.Device, now, ct);
-        if (deviceResult.IsFailure)
+        // ----- 4. Device check (BR-105) — PG only -----
+        // Leader/BUH/Admin (web) are not device-locked: device is ignored and tokens
+        // are not bound to a user_devices row (deviceId = Guid.Empty in the JWT claim).
+        UserDevice? device = null;
+        if (user.Role == UserRole.Pg)
         {
-            await _db.SaveChangesAsync(ct); // persist any login_history + audit + pending device row
-            return Result.Failure<LoginResponse>(deviceResult.Error);
+            if (command.Device is null)
+            {
+                // PG must always send device info (the mobile app does). Reject otherwise.
+                return await FailLoginAsync(user, deviceId: null, reason: "device_required",
+                    code: ErrorCodes.DeviceNotAuthorized,
+                    message: "Thông tin thiết bị là bắt buộc đối với tài khoản PG.", ct);
+            }
+
+            var deviceResult = await ResolveDeviceAsync(user, command.Device, now, ct);
+            if (deviceResult.IsFailure)
+            {
+                await _db.SaveChangesAsync(ct); // persist any login_history + audit + pending device row
+                return Result.Failure<LoginResponse>(deviceResult.Error);
+            }
+
+            device = deviceResult.Value;
         }
 
-        var device = deviceResult.Value;
+        var tokenDeviceId = device?.Id ?? Guid.Empty;
 
         // ----- 5. Issue tokens -----
-        var accessToken = _jwt.IssueAccess(user.Id, user.Email, user.Role, device.Id, now);
+        var accessToken = _jwt.IssueAccess(user.Id, user.Email, user.Role, tokenDeviceId, now);
         var refreshGen = _refreshTokenGen.Generate();
-        var refreshToken = RefreshToken.Issue(user.Id, device.Id, refreshGen.Hash, now, _refreshLifetime);
+        var refreshToken = RefreshToken.Issue(user.Id, tokenDeviceId, refreshGen.Hash, now, _refreshLifetime);
         _db.RefreshTokens.Add(refreshToken);
 
         // ----- 6. User touch -----
@@ -127,7 +143,7 @@ internal sealed class LoginCommandHandler : IRequestHandler<LoginCommand, Result
         // ----- 7. Login history + audit -----
         _db.LoginHistory.Add(LoginHistory.RecordSuccess(
             userId: user.Id,
-            deviceId: device.Id,
+            deviceId: device?.Id,
             ip: _clientContext.IpAddress,
             userAgent: _clientContext.UserAgent,
             at: now));
@@ -136,7 +152,7 @@ internal sealed class LoginCommandHandler : IRequestHandler<LoginCommand, Result
             action: AuditAction.AuthLoginSuccess,
             targetEntity: "user",
             targetId: user.Id,
-            metadata: new { user.Email, device_id = device.DeviceId, device_status = device.Status.ToSnakeCase() },
+            metadata: new { user.Email, device_id = device?.DeviceId, device_status = device?.Status.ToSnakeCase() },
             ct: ct);
 
         await _db.SaveChangesAsync(ct);

@@ -58,4 +58,23 @@ public sealed class AdminAuthorizationTests
 
         resp.StatusCode.Should().Be(HttpStatusCode.Unauthorized);
     }
+
+    [Fact]
+    public async Task WebUser_LogsInWithoutDevice_AndCanCallApi()
+    {
+        // BR-105 is PG-scoped: Leader/BUH/Admin (web) authenticate without a device payload.
+        var admin = await _factory.SeedUserAsync(UserRole.Admin);
+        using var client = _factory.CreateClient();
+
+        var token = await client.LoginNoDeviceAsync(admin.Email, admin.Password);
+        token.Should().NotBeNullOrEmpty("web admin login must succeed without device info");
+
+        client.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer", token);
+
+        var me = await client.GetAsync("/api/v1/auth/me");
+        me.StatusCode.Should().Be(HttpStatusCode.OK);
+
+        var users = await client.GetAsync("/api/v1/admin/users?page=1&pageSize=10");
+        users.StatusCode.Should().Be(HttpStatusCode.OK);
+    }
 }

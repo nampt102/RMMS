@@ -38,7 +38,7 @@ public sealed class LoginHistory : Entity
 
     private LoginHistory() { }
 
-    public static LoginHistory RecordSuccess(Guid userId, Guid deviceId, IPAddress? ip, string userAgent, DateTimeOffset at) =>
+    public static LoginHistory RecordSuccess(Guid userId, Guid? deviceId, IPAddress? ip, string userAgent, DateTimeOffset at) =>
         new()
         {
             UserId = userId,

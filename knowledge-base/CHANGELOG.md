@@ -6,6 +6,29 @@ Append-only chronological log of significant project milestones, decisions, and 
 
 ---
 
+## 2026-05-30 — Sprint 01 W1 close-out: device check scoped to PG (BR-105) + Web Admin login wired
+
+**By:** Tech lead (MotivesVN IT), AI-assisted
+
+**Status:** ✅ Backend builds clean (warnings-as-errors) + 45 unit tests green. ✅ Web `type-check` + `lint` + `next build` green. ⏳ Backend integration tests not re-run locally (Testcontainers host-resolution issue on the Windows/Docker Desktop dev box — fails in `RmmsApiFactory.InitializeAsync` before any test logic; unaffected on the Linux CI runner). This closes the last open **Week 1 (Day 1–5)** item, `FE-W-D5`.
+
+### Backend — `/auth/login` device check is now PG-only (correct per BR-105)
+
+- **Problem:** the login contract forced a `device` object on *every* login and ran the single-active-device check for *all* roles. BR-105/BR-106 are explicitly **PG-scoped**, and the OS validator only accepts `ios`/`android` — so Leader/BUH/Admin (web) could not authenticate. The demo script (#7) requires an Admin to log into Web Admin with no device ceremony.
+- **Change:** `device` is now **optional** at the transport + command level (`LoginRequest.Device` / `LoginCommand.Device` nullable). In `LoginCommandHandler`, the BR-105 device resolution runs **only when `user.Role == Pg`** (a PG with no device → `403 DEVICE_NOT_AUTHORIZED`). Non-PG users skip device entirely; their tokens carry `device_id = Guid.Empty` and create no `user_devices` row. `LoginHistory.RecordSuccess` now takes a nullable `deviceId`; `GetMeQueryHandler` treats `Guid.Empty` as "no device".
+- **No schema change** — `refresh_tokens.device_id` / `login_history.device_id` have no FK to `user_devices`, so the empty/null sentinel is safe.
+- **Tests** — `AdminAuthorizationTests.WebUser_LogsInWithoutDevice_AndCanCallApi` (web admin logs in device-less → `/me` + `/admin/users` 200); `AuthFlowTests` now asserts a verified PG is rejected (403) when logging in without device. New `ApiHelpers.LoginNoDeviceAsync` helper.
+
+### Web (Next.js) — `FE-W-D5` Admin login screen wired
+
+- `useLoginMutation` calls `POST /api/v1/auth/login` with **no device payload**, maps the response `user.userId → AuthUser.id`, and persists tokens + user to the Zustand store (`persist` → localStorage, survives reload).
+- `(auth)/login/page.tsx` wired to the mutation: submit → on success `router.replace('/{locale}')`; on failure surfaces a localized AntD `message.error`. Button shows a loading state; the form is disabled while pending.
+- `errorCodeFromUnknown` extracts the backend `{ error: { code } }` envelope (no-response → `NETWORK_ERROR`); added `errors.*` keys (`EMAIL_NOT_VERIFIED`, `ACCOUNT_INACTIVE`, `ACCOUNT_LOCKED`, `DEVICE_NOT_AUTHORIZED` → "PG must use the mobile app", `RATE_LIMIT_EXCEEDED`, `PERMISSION_DENIED`, `NETWORK_ERROR`) to both `messages/vi.json` + `messages/en.json`.
+
+> Week 1 (Day 1–5) is now functionally complete across BE + mobile FE + web FE. Remaining Sprint 01 work is **Week 2**: BE Day 6 (Hangfire token-cleanup job + `/auth/me/device-status` skeleton), FE-W Day 7 (user-management UI + route guard), Day 8 i18n/resx + Serilog enrichment, Day 9 tests, Day 10 UAT/demo.
+
+---
+
 ## 2026-05-30 — Sprint 01 Day 5–6 (mobile FE): M01 auth flow wired end-to-end on Flutter
 
 **By:** Tech lead (MotivesVN IT), AI-assisted

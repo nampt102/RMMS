@@ -25,8 +25,9 @@ internal sealed class GetMeQueryHandler : IRequestHandler<GetMeQuery, Result<MeD
                 Error.NotFound(ErrorCodes.NotFound, "Không tìm thấy người dùng."));
         }
 
+        // Web users (Leader/BUH/Admin) carry an empty device_id claim — no device row to load.
         MeDeviceDto? device = null;
-        if (query.DeviceId is { } deviceId)
+        if (query.DeviceId is { } deviceId && deviceId != Guid.Empty)
         {
             device = await _db.UserDevices
                 .AsNoTracking()

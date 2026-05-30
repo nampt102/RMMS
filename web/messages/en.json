@@ -24,9 +24,16 @@
   },
   "errors": {
     "INVALID_CREDENTIALS": "Wrong email or password.",
+    "EMAIL_NOT_VERIFIED": "Email is not verified.",
+    "ACCOUNT_INACTIVE": "This account is inactive. Contact your administrator.",
+    "ACCOUNT_LOCKED": "Account temporarily locked after too many failed attempts.",
+    "DEVICE_NOT_AUTHORIZED": "PG accounts must sign in via the mobile app.",
+    "RATE_LIMIT_EXCEEDED": "Too many attempts. Please wait and try again later.",
+    "PERMISSION_DENIED": "You do not have permission to access this.",
     "TOKEN_EXPIRED": "Your session has expired.",
     "VALIDATION_FAILED": "Invalid data.",
     "NOT_FOUND": "Not found.",
+    "NETWORK_ERROR": "Cannot reach the server. Check your connection and try again.",
     "INTERNAL_ERROR": "Something went wrong."
   }
 }

@@ -109,12 +109,13 @@ public sealed class AuthController : ControllerBase
     // ─────────────────────────────────────────────────────────────────────────
 
     /// <summary>
-    /// Login with email + password + device fingerprint. Returns JWT access + refresh tokens.
+    /// Login with email + password. Returns JWT access + refresh tokens.
     /// </summary>
     /// <remarks>
-    /// **Device check (BR-105):** every PG can have at most 1 active device.
-    /// First device → auto-active. Different device while another is active → 403 DEVICE_NOT_AUTHORIZED,
-    /// pending_approval row created for Leader/Admin approval (Sprint 02).
+    /// **Device check (BR-105) — PG only:** every PG can have at most 1 active device, so the
+    /// mobile app MUST send <c>device</c>. First device → auto-active; a different device while
+    /// another is active → 403 DEVICE_NOT_AUTHORIZED + pending_approval row (Sprint 02 approval UI).
+    /// Leader/BUH/Admin (web) are not device-locked and omit <c>device</c>.
     /// </remarks>
     [HttpPost("login")]
     [AllowAnonymous]
@@ -136,13 +137,15 @@ public sealed class AuthController : ControllerBase
         var command = new LoginCommand(
             Email: request.Email,
             Password: request.Password,
-            Device: new LoginDeviceInfo(
-                DeviceId: request.Device.DeviceId,
-                DeviceName: request.Device.DeviceName,
-                Os: request.Device.Os,
-                OsVersion: request.Device.OsVersion ?? string.Empty,
-                AppVersion: request.Device.AppVersion ?? string.Empty,
-                FcmToken: request.Device.FcmToken));
+            Device: request.Device is null
+                ? null
+                : new LoginDeviceInfo(
+                    DeviceId: request.Device.DeviceId,
+                    DeviceName: request.Device.DeviceName,
+                    Os: request.Device.Os,
+                    OsVersion: request.Device.OsVersion ?? string.Empty,
+                    AppVersion: request.Device.AppVersion ?? string.Empty,
+                    FcmToken: request.Device.FcmToken));
 
         var result = await _mediator.Send(command, ct);
 
