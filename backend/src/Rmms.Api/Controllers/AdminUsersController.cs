@@ -2,6 +2,7 @@ using Mediator;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using Rmms.Api.Authentication;
 using Rmms.Api.Common;
 using Rmms.Api.Dtos.Admin;
 using Rmms.Application.Admin.Users.AdminResetPassword;
@@ -14,12 +15,12 @@ namespace Rmms.Api.Controllers;
 /// <summary>
 /// Admin-only user CRUD per M01 spec.
 ///
-/// Authorization: <c>Roles = "admin"</c> — JWT role claim mapping configured in
-/// <c>Program.cs</c> (<c>RoleClaimType = "role"</c>).
+/// Authorization: <see cref="AuthorizationPolicies.AdminOnly"/> — JWT role claim mapping
+/// configured in <c>Program.cs</c> (<c>RoleClaimType = "role"</c>, <c>MapInboundClaims = false</c>).
 /// </summary>
 [ApiController]
 [Route("api/v1/admin/users")]
-[Authorize(Roles = "admin")]
+[Authorize(Policy = AuthorizationPolicies.AdminOnly)]
 public sealed class AdminUsersController : ControllerBase
 {
     private readonly IMediator _mediator;

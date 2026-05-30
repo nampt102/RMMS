@@ -6,6 +6,22 @@ Append-only chronological log of significant project milestones, decisions, and 
 
 ---
 
+## 2026-06-01 — Sprint 01 Day 5: Authorization policies + middleware hardening + /auth/me + integration tests
+
+**By:** Tech lead (MotivesVN IT), AI-assisted
+
+**Status:** ✅ Built clean (warnings-as-errors) + `dotnet test` green, including Testcontainers integration tests (PostGIS + Redis).
+
+- **Authorization policies** — `AuthorizationPolicies` (`PgOnly`/`LeaderOnly`/`BuhOnly`/`AdminOnly`/`PgOrLeader`/`AnyAuthenticated`) via `AddRmmsAuthorization()`. `AdminUsersController` now uses `[Authorize(Policy = AdminOnly)]`.
+- **Idempotency** — `IdempotencyMiddleware` (Redis): caches 2xx responses 24h keyed by user+method+path+`X-Idempotency-Key`, replays on repeat, `409 IDEMPOTENCY_KEY_REUSED` on concurrent duplicate, fails open.
+- **Login rate limit** — `ILoginRateLimiter` + `RedisLoginRateLimiter`: 5 failed logins / 15 min per (email+IP) → `429 RATE_LIMIT_EXCEEDED`; resets on success.
+- **`GET /auth/me`** — `GetMeQuery`/`GetMeQueryHandler`/`MeDto`: current user profile + active device, identity sourced from JWT claims only.
+- **Integration tests** — `RmmsApiFactory` (Testcontainers PostGIS + Redis, applies migrations, capturing email sender) + `AuthFlowTests` (full happy path) + `AdminAuthorizationTests` (admin 200 / leader 403 / no-token 401 — regression for the MapInboundClaims auth bug).
+
+**Build/test notes:** resolved analyzer-as-error issues (`CA1822`/`ASP0026`/`CA1859`/`CA1861`); integration fixture needs `Microsoft.AspNetCore.TestHost` and a non-`Collection`-suffixed collection class (`CA1711`). Discovered that `Program.cs` reads `Jwt:SigningKey` eagerly, so integration tests must rely on the `appsettings.json` key rather than overriding it (otherwise issuance/validation key mismatch → 401).
+
+---
+
 ## 2026-05-31 — Sprint 01 Day 4 verification: end-to-end smoke test GREEN + JWT auth fix
 
 **By:** Tech lead (MotivesVN IT), AI-assisted

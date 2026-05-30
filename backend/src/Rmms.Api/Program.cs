@@ -62,7 +62,7 @@ builder.Services
         };
     });
 
-builder.Services.AddAuthorization();
+builder.Services.AddRmmsAuthorization();
 
 // ----- CORS -----
 const string CorsPolicy = "RmmsDefault";
@@ -74,13 +74,13 @@ builder.Services.AddCors(o => o.AddPolicy(CorsPolicy, p =>
 
 // ----- i18n (vi default, en supported) per 05-api-conventions.md "Accept-Language" -----
 builder.Services.AddLocalization();
+var supportedCultures = new[] { "vi", "en" }
+    .Select(c => new System.Globalization.CultureInfo(c)).ToArray();
 builder.Services.Configure<Microsoft.AspNetCore.Builder.RequestLocalizationOptions>(o =>
 {
-    var supported = new[] { "vi", "en" }
-        .Select(c => new System.Globalization.CultureInfo(c)).ToArray();
     o.DefaultRequestCulture = new Microsoft.AspNetCore.Localization.RequestCulture("vi");
-    o.SupportedCultures = supported;
-    o.SupportedUICultures = supported;
+    o.SupportedCultures = supportedCultures;
+    o.SupportedUICultures = supportedCultures;
 });
 
 // ----- Controllers + JSON options -----
@@ -155,6 +155,9 @@ app.UseHttpsRedirection();
 app.UseCors(CorsPolicy);
 app.UseAuthentication();
 app.UseAuthorization();
+
+// Idempotent replay for mutations carrying X-Idempotency-Key (scoped per authenticated user).
+app.UseMiddleware<IdempotencyMiddleware>();
 
 app.MapControllers();
 app.MapHealthChecks("/health/live");

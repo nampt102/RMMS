@@ -51,6 +51,7 @@ public static class DependencyInjection
             ?? throw new InvalidOperationException("Missing ConnectionStrings:Redis in configuration.");
         services.AddSingleton<IConnectionMultiplexer>(_ => ConnectionMultiplexer.Connect(redisConn));
         services.AddStackExchangeRedisCache(o => o.Configuration = redisConn);
+        services.AddSingleton<ILoginRateLimiter, Services.RedisLoginRateLimiter>();
 
         // ----- M01 Identity (Sprint 01) -----
         services.Configure<Rmms.Application.Common.Options.JwtOptions>(
