@@ -49,6 +49,10 @@ builder.Services
             ValidAudience = jwt["Audience"],
             IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(jwtKey)),
             ClockSkew = TimeSpan.FromSeconds(30),
+            // Map our custom "role" claim → ClaimTypes.Role so [Authorize(Roles="admin")] works.
+            // Our JWT emits role as lowercase string ("admin", "leader", "buh", "pg") — match exactly.
+            RoleClaimType = "role",
+            NameClaimType = System.IdentityModel.Tokens.Jwt.JwtRegisteredClaimNames.Sub,
         };
     });
 
@@ -117,6 +121,19 @@ builder.Services.AddHealthChecks();
 
 var app = builder.Build();
 
+// ===== CLI commands (run BEFORE HTTP pipeline) =====
+// Pattern: `dotnet run -- seed-admin --email=... --password=...`
+// EF Core design-time tools also pass `args` here; ignore unknown commands silently
+// so `dotnet ef migrations add` continues to work.
+if (args.Length > 0)
+{
+    var firstArg = args[0];
+    if (firstArg.Equals("seed-admin", StringComparison.OrdinalIgnoreCase))
+    {
+        return await Rmms.Api.Cli.SeedAdminCommand.RunAsync(args, app.Services);
+    }
+}
+
 // ===== Middleware pipeline =====
 app.UseSerilogRequestLogging();
 app.UseMiddleware<ExceptionHandlingMiddleware>();
@@ -138,6 +155,7 @@ app.MapHealthChecks("/health/live");
 app.MapHealthChecks("/health/ready");
 
 await app.RunAsync();
+return 0;
 
 // Marker for WebApplicationFactory<Program> in integration tests.
 public partial class Program { }

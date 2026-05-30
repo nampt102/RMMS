@@ -53,7 +53,8 @@ public static class DependencyInjection
         services.AddStackExchangeRedisCache(o => o.Configuration = redisConn);
 
         // ----- M01 Identity (Sprint 01) -----
-        services.Configure<JwtOptions>(config.GetSection(JwtOptions.SectionName));
+        services.Configure<Rmms.Application.Common.Options.JwtOptions>(
+            config.GetSection(Rmms.Application.Common.Options.JwtOptions.SectionName));
         services.AddSingleton<IPasswordHasher, BCryptPasswordHasher>();
         services.AddSingleton<IJwtTokenService, JwtTokenService>();
         services.AddSingleton<IRefreshTokenGenerator, RefreshTokenGenerator>();

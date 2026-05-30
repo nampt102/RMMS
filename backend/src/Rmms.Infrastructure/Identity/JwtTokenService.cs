@@ -5,6 +5,7 @@ using System.Text;
 using Microsoft.Extensions.Options;
 using Microsoft.IdentityModel.Tokens;
 using Rmms.Application.Common.Abstractions;
+using Rmms.Application.Common.Options;
 using Rmms.Domain.Enums;
 
 namespace Rmms.Infrastructure.Identity;
