@@ -3,7 +3,7 @@
 > **READ THIS FIRST.** This file is the single source of truth for "where the project is right now". Every AI session and every new dev should open this file before doing anything else. Update on every significant milestone.
 
 **Last updated:** 2026-05-30 — **Sprint 01 Week 1 (Day 1–5) closed**: device check scoped to PG (BR-105), Web Admin login wired (`FE-W-D5`). Backend builds clean + 45 unit tests green; web `type-check`/`lint`/`build` green. · mobile FE Day 3–6 auth flow code-complete (pending macOS verify)
-**Current phase:** Phase 1A — **Sprint 01 (M01 Auth & Devices), Week 1 (Day 1–5) ✅ complete → starting Week 2 (Day 6–10)**
+**Current phase:** Phase 1A — **Sprint 01 (M01 Auth & Devices), Week 2 in progress — Day 6 (BE) ✅ done; next FE-W Day 7**
 **Sprint 00 status:** ✅ **CLOSED** (100% — scaffold + .NET 10 + 9 ADRs + 3 CI workflows green)
 **Sprint 01 progress:** ~60% — **Week 1 (Day 1–5) functionally complete across BE + mobile FE + web FE.** Backend Day 1–5 shipped + verified (domain + migration + 10 auth endpoints + admin user CRUD + CLI seed + authz policies + idempotency + login rate-limit + `/auth/me` + integration tests); end-to-end smoke `scripts/smoke-day4.ps1` PASS. **Login device check corrected to PG-only (BR-105)** so Leader/BUH/Admin authenticate device-less — backend builds clean + 45 unit tests green. **Web Admin login screen wired** to `useLoginMutation` + Zustand persist + localized error envelope (`type-check`/`lint`/`next build` green). Mobile FE auth surface code-complete (pending macOS verify). **Next: Week 2** — BE Day 6 (Hangfire token-cleanup job + `/auth/me/device-status`), FE-W Day 7 (user-management UI + route guard), Day 8–10.
 
@@ -112,7 +112,7 @@ RMMS/                                       # root
 
 - **No `/auth/*` endpoints.** Domain entities + EF migration are in place but commands/handlers/controllers ship Day 2-5. Mobile + web login screens are still stub forms.
 - **External integrations not wired.** SendGrid (Day 8 of Sprint 01), FPT.AI Face (M06), Firebase FCM (M14), MinIO (M13) all have TODOs in `Rmms.Infrastructure/DependencyInjection.cs`. Email currently uses `ConsoleEmailSender` that logs to Serilog (Dev/CI default).
-- **No outbox pattern, no SignalR hub, no Hangfire jobs registered yet.** Hangfire host runs but has no jobs scheduled — cleanup job for expired refresh / verification tokens lands Day 6.
+- **No outbox pattern, no SignalR hub yet.** ✅ First Hangfire recurring job registered: `auth-token-cleanup` (hourly) in `Rmms.Worker` hard-deletes used/expired verification + reset tokens and expired refresh tokens (Day 6). `GET /auth/me/device-status` skeleton shipped (authenticated read).
 - **Auth-related screens wired (mobile + web login).** ✅ Mobile `Register` / `EmailVerify` / `Login` / `Forgot` / `Reset` / device-pending all wired to the live API + `rmms://` deep links (full M01 mobile FE, **code complete, pending macOS verification**). ✅ **Web Admin login** wired to `POST /auth/login` (device-less, BR-105 PG-only) → Zustand persist + localized errors → redirect (`FE-W-D5`, green on type-check/lint/build). ⏳ Web Admin `User Management` UI + route guard still pending (Day 7 / Week 2).
 
 ---

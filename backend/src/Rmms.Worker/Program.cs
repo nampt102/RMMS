@@ -3,6 +3,7 @@ using Hangfire.PostgreSql;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Rmms.Application;
+using Rmms.Application.Common.Abstractions;
 using Rmms.Application.Common.Interfaces;
 using Rmms.Infrastructure;
 using Rmms.Worker;
@@ -40,4 +41,19 @@ builder.Services.AddHangfireServer(opts =>
 });
 
 var host = builder.Build();
+
+// ----- Recurring jobs -----
+// Auth token cleanup (M01 Sprint 01 Day 6): hourly hard-delete of spent/expired tokens.
+// Use IRecurringJobManager (resolved from DI) rather than the static RecurringJob facade so
+// it binds to the configured storage without relying on JobStorage.Current init timing.
+using (var scope = host.Services.CreateScope())
+{
+    var recurringJobs = scope.ServiceProvider.GetRequiredService<IRecurringJobManager>();
+    recurringJobs.AddOrUpdate<ITokenCleanupService>(
+        "auth-token-cleanup",
+        "low",
+        svc => svc.RunAsync(CancellationToken.None),
+        Cron.Hourly());
+}
+
 await host.RunAsync();

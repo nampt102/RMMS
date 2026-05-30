@@ -272,4 +272,31 @@ public sealed class AuthController : ControllerBase
             ? ResultMapping.Ok(result.Value)
             : ResultMapping.Failure(result.Error, HttpContext.TraceIdentifier);
     }
+
+    /// <summary>
+    /// Status of the device tied to the current access token (M02 skeleton).
+    /// </summary>
+    /// <remarks>
+    /// Sprint 01 ships the authenticated read (`active` / `none` / `unknown`). The pending-device
+    /// polling variant for the mobile "device pending approval" screen — callable by a not-yet-approved
+    /// device, plus push/in-app notification — lands in Sprint 02 alongside the approval workflow.
+    /// </remarks>
+    [HttpGet("me/device-status")]
+    [Authorize(Policy = AuthorizationPolicies.AnyAuthenticated)]
+    [ProducesResponseType(typeof(object), StatusCodes.Status200OK)]
+    [ProducesResponseType(StatusCodes.Status401Unauthorized)]
+    public async Task<IActionResult> DeviceStatus(CancellationToken ct)
+    {
+        if (_currentUser.UserId is not { } userId)
+        {
+            return ResultMapping.Failure(
+                Error.Unauthorized(ErrorCodes.TokenInvalid, "Bạn cần đăng nhập."),
+                HttpContext.TraceIdentifier);
+        }
+
+        var result = await _mediator.Send(new GetDeviceStatusQuery(userId, _currentUser.DeviceId), ct);
+        return result.IsSuccess
+            ? ResultMapping.Ok(result.Value)
+            : ResultMapping.Failure(result.Error, HttpContext.TraceIdentifier);
+    }
 }

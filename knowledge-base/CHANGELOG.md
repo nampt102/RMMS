@@ -6,6 +6,18 @@ Append-only chronological log of significant project milestones, decisions, and 
 
 ---
 
+## 2026-05-30 — Sprint 01 Day 6 (BE): Hangfire token-cleanup job + `/auth/me/device-status` skeleton
+
+**By:** Tech lead (MotivesVN IT), AI-assisted
+
+**Status:** ✅ Backend builds clean (Worker + Api), 51 unit tests green (+6: token cleanup + device-status). Recurring job verified to register; run against the dev DB by the Worker.
+
+- **Token cleanup job** — `ITokenCleanupService` / `TokenCleanupService` (Application/Maintenance) hard-deletes (a) email-verification + (b) password-reset tokens that are used or past their 24h TTL, and (c) refresh tokens past their 30d expiry. **Revoked-but-unexpired** refresh rows are intentionally KEPT so reuse detection still works inside their window. Registered as a Hangfire **hourly** recurring job (`auth-token-cleanup`, `low` queue) in `Rmms.Worker` via `IRecurringJobManager` (avoids `JobStorage.Current` init-timing pitfalls). Tokens are plain `Entity` (not soft-deleted), so `RemoveRange` truly deletes; load-then-remove is fine at the 24h/30d hourly cadence (switch to `ExecuteDelete` only if volumes grow).
+- **`GET /auth/me/device-status`** — `GetDeviceStatusQuery`/Handler/`DeviceStatusDto` (placed in `Auth.Me` to avoid colliding with the `DeviceStatus` enum namespace). Authenticated read returning the snake_case status of the device bound to the access token: `active` (PG), `none` (web/`Guid.Empty` token), or `unknown` (missing row). The pending-device polling variant (callable by a not-yet-approved device) + push/in-app notification stays **Sprint 02** with the approval workflow.
+- **Tests** — `TokenCleanupServiceTests` (deletes used/expired, keeps live + revoked-unexpired; zero-case) + `GetDeviceStatusQueryHandlerTests` (web→none, active device→active, unknown).
+
+---
+
 ## 2026-05-30 — Sprint 01 W1 close-out: device check scoped to PG (BR-105) + Web Admin login wired
 
 **By:** Tech lead (MotivesVN IT), AI-assisted

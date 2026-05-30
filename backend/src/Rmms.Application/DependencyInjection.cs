@@ -2,7 +2,9 @@ using System.Reflection;
 using FluentValidation;
 using Mediator;
 using Microsoft.Extensions.DependencyInjection;
+using Rmms.Application.Common.Abstractions;
 using Rmms.Application.Common.Behaviors;
+using Rmms.Application.Maintenance;
 
 namespace Rmms.Application;
 
@@ -27,6 +29,9 @@ public static class DependencyInjection
         // Pipeline behaviors (order matters: outermost listed first).
         services.AddScoped(typeof(IPipelineBehavior<,>), typeof(LoggingBehavior<,>));
         services.AddScoped(typeof(IPipelineBehavior<,>), typeof(ValidationBehavior<,>));
+
+        // Maintenance jobs (invoked by the Hangfire worker).
+        services.AddScoped<ITokenCleanupService, TokenCleanupService>();
 
         return services;
     }
