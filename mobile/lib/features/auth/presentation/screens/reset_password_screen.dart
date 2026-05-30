@@ -5,27 +5,40 @@ import 'package:go_router/go_router.dart';
 import '../../../../core/network/api_exception.dart';
 import '../../../../core/router/app_router.dart';
 import '../../../../l10n/generated/app_localizations.dart';
-import '../../application/auth_controller.dart';
+import '../../data/auth_repository.dart';
 import '../auth_error_text.dart';
 
-class LoginScreen extends ConsumerStatefulWidget {
-  const LoginScreen({super.key});
+class ResetPasswordScreen extends ConsumerStatefulWidget {
+  const ResetPasswordScreen({super.key, this.initialToken});
+
+  /// Token delivered via the `rmms://reset-password?token=...` deep link.
+  /// When null/empty the user can paste the code manually (sprint-01 R-4).
+  final String? initialToken;
 
   @override
-  ConsumerState<LoginScreen> createState() => _LoginScreenState();
+  ConsumerState<ResetPasswordScreen> createState() =>
+      _ResetPasswordScreenState();
 }
 
-class _LoginScreenState extends ConsumerState<LoginScreen> {
+class _ResetPasswordScreenState extends ConsumerState<ResetPasswordScreen> {
   final _formKey = GlobalKey<FormState>();
-  final _emailCtrl = TextEditingController();
+  late final TextEditingController _tokenCtrl;
   final _passwordCtrl = TextEditingController();
+  final _confirmCtrl = TextEditingController();
   bool _loading = false;
   String? _errorText;
 
   @override
+  void initState() {
+    super.initState();
+    _tokenCtrl = TextEditingController(text: widget.initialToken ?? '');
+  }
+
+  @override
   void dispose() {
-    _emailCtrl.dispose();
+    _tokenCtrl.dispose();
     _passwordCtrl.dispose();
+    _confirmCtrl.dispose();
     super.dispose();
   }
 
@@ -39,16 +52,17 @@ class _LoginScreenState extends ConsumerState<LoginScreen> {
     });
 
     try {
-      // The router guard navigates on the resulting auth-state change
-      // (authenticated → home, deviceNotAuthorized → pending screen).
-      await ref.read(authControllerProvider.notifier).login(
-            email: _emailCtrl.text.trim(),
-            password: _passwordCtrl.text,
+      await ref.read(authRepositoryProvider).resetPassword(
+            token: _tokenCtrl.text.trim(),
+            newPassword: _passwordCtrl.text,
           );
+      if (!mounted) return;
+      ScaffoldMessenger.of(context).showSnackBar(
+        SnackBar(content: Text(l.resetSuccess)),
+      );
+      context.go(AppRoutes.login);
     } on ApiException catch (e) {
       if (mounted) setState(() => _errorText = authErrorText(l, e));
-    } catch (_) {
-      if (mounted) setState(() => _errorText = l.errorGeneric);
     } finally {
       if (mounted) setState(() => _loading = false);
     }
@@ -59,46 +73,51 @@ class _LoginScreenState extends ConsumerState<LoginScreen> {
     final l = AppLocalizations.of(context);
 
     return Scaffold(
-      appBar: AppBar(title: Text(l.loginTitle)),
+      appBar: AppBar(title: Text(l.resetTitle)),
       body: SafeArea(
         child: Padding(
           padding: const EdgeInsets.all(24),
           child: Form(
             key: _formKey,
-            child: Column(
-              crossAxisAlignment: CrossAxisAlignment.stretch,
+            child: ListView(
               children: [
-                const SizedBox(height: 32),
+                const SizedBox(height: 8),
+                Text(l.resetIntro),
+                const SizedBox(height: 24),
                 TextFormField(
-                  controller: _emailCtrl,
-                  keyboardType: TextInputType.emailAddress,
-                  textInputAction: TextInputAction.next,
+                  controller: _tokenCtrl,
                   enabled: !_loading,
-                  autofillHints: const [AutofillHints.username, AutofillHints.email],
-                  decoration: InputDecoration(labelText: l.loginEmailLabel),
-                  validator: (v) => (v == null || !v.contains('@'))
-                      ? l.loginEmailInvalid
-                      : null,
+                  decoration: InputDecoration(labelText: l.resetTokenLabel),
+                  validator: (v) =>
+                      (v == null || v.trim().isEmpty) ? l.resetTokenRequired : null,
                 ),
                 const SizedBox(height: 16),
                 TextFormField(
                   controller: _passwordCtrl,
                   obscureText: true,
-                  textInputAction: TextInputAction.done,
                   enabled: !_loading,
-                  autofillHints: const [AutofillHints.password],
-                  decoration: InputDecoration(labelText: l.loginPasswordLabel),
+                  decoration:
+                      InputDecoration(labelText: l.resetNewPasswordLabel),
                   validator: (v) =>
                       (v == null || v.length < 8) ? l.loginPasswordTooShort : null,
+                ),
+                const SizedBox(height: 16),
+                TextFormField(
+                  controller: _confirmCtrl,
+                  obscureText: true,
+                  enabled: !_loading,
+                  textInputAction: TextInputAction.done,
+                  decoration: InputDecoration(labelText: l.resetConfirmLabel),
+                  validator: (v) =>
+                      (v != _passwordCtrl.text) ? l.resetPasswordMismatch : null,
                   onFieldSubmitted: (_) => _submit(),
                 ),
                 if (_errorText != null) ...[
                   const SizedBox(height: 16),
                   Text(
                     _errorText!,
-                    style: TextStyle(
-                      color: Theme.of(context).colorScheme.error,
-                    ),
+                    style:
+                        TextStyle(color: Theme.of(context).colorScheme.error),
                   ),
                 ],
                 const SizedBox(height: 24),
@@ -110,19 +129,7 @@ class _LoginScreenState extends ConsumerState<LoginScreen> {
                           width: 20,
                           child: CircularProgressIndicator(strokeWidth: 2),
                         )
-                      : Text(l.loginSubmit),
-                ),
-                const SizedBox(height: 12),
-                TextButton(
-                  onPressed: _loading
-                      ? null
-                      : () => context.push(AppRoutes.forgotPassword),
-                  child: Text(l.loginForgot),
-                ),
-                TextButton(
-                  onPressed:
-                      _loading ? null : () => context.push(AppRoutes.register),
-                  child: Text(l.loginRegister),
+                      : Text(l.resetSubmit),
                 ),
               ],
             ),

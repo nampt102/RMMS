@@ -2,7 +2,7 @@
 
 > **READ THIS FIRST.** This file is the single source of truth for "where the project is right now". Every AI session and every new dev should open this file before doing anything else. Update on every significant milestone.
 
-**Last updated:** 2026-05-31 (Sprint 01 Day 4 complete + unit tests + **end-to-end smoke GREEN**: full M01 auth surface verified over the real HTTP/JWT pipeline)
+**Last updated:** 2026-05-31 (Sprint 01 Day 4 complete + unit tests + **end-to-end smoke GREEN**: full M01 auth surface verified over the real HTTP/JWT pipeline) · **+ mobile FE Day 5–6 auth flow code-complete (pending macOS verify)**
 **Current phase:** Phase 1A — **Sprint 01 (M01 Auth & Devices), Day 5 of 10 ✅ (build + tests GREEN)**
 **Sprint 00 status:** ✅ **CLOSED** (100% — scaffold + .NET 10 + 9 ADRs + 3 CI workflows green)
 **Sprint 01 progress:** ~50% — Day 1-4 shipped + verified; Day 5 backend (authz policies, idempotency + login rate-limit middleware, /auth/me, integration tests) **built clean and all tests pass** (`dotnet test` green; integration tests run on Testcontainers PostGIS + Redis). Day 1-4 shipped (domain + migration + 9 auth endpoints + admin user CRUD + CLI seed + unit tests for Day 4 handlers) and **verified end-to-end via `scripts/smoke-day4.ps1` (all steps PASS)**. Day 5 (auth policies + idempotency + rate limit + /me) starting next.
@@ -111,7 +111,7 @@ RMMS/                                       # root
 - **No `/auth/*` endpoints.** Domain entities + EF migration are in place but commands/handlers/controllers ship Day 2-5. Mobile + web login screens are still stub forms.
 - **External integrations not wired.** SendGrid (Day 8 of Sprint 01), FPT.AI Face (M06), Firebase FCM (M14), MinIO (M13) all have TODOs in `Rmms.Infrastructure/DependencyInjection.cs`. Email currently uses `ConsoleEmailSender` that logs to Serilog (Dev/CI default).
 - **No outbox pattern, no SignalR hub, no Hangfire jobs registered yet.** Hangfire host runs but has no jobs scheduled — cleanup job for expired refresh / verification tokens lands Day 6.
-- **Auth-related screens not wired.** Mobile `Register` / `EmailVerify` / `Login` / `Forgot` / `Reset` and Web Admin `User Management` UI ship Day 3-7.
+- **Auth-related screens wired (mobile).** ✅ Mobile `Register` / `EmailVerify` / `Login` / `Forgot` / `Reset` / device-pending all wired to the live API + `rmms://` deep links (full M01 mobile FE, **code complete, pending macOS verification**). ⏳ Web Admin `User Management` UI still pending (Day 7).
 
 ---
 
@@ -186,7 +186,7 @@ All 9 ADRs are **Accepted** and live in `knowledge-base/decisions/`:
 > - Integration test fixture: needs `using Microsoft.AspNetCore.TestHost;` for `ConfigureTestServices`; collection class renamed to avoid `CA1711` (no `Collection` suffix).
 > - **JWT signing key in tests:** `Program.cs` reads `Jwt:SigningKey` EAGERLY at top-level, before `WebApplicationFactory` appends its in-memory config — so the test fixture must NOT override `Jwt:SigningKey` (issuance via runtime `JwtOptions` would then mismatch validation → 401). Both sides use the `appsettings.json` key. Connection strings / Email are read at runtime so overriding them is safe. *(Future option: validate JWT via `IOptions<JwtOptions>` to make the key overridable in tests.)*
 >
-> Remaining Day 5 plan items (mobile/web login UI) are FE tasks, not yet started.
+> **Mobile FE (full M01, Day 3–6) ⏳ code complete, pending macOS verification:** Register (BR-101) → Email-verify (auto via deep link or manual code) → Login → secure-storage token persistence → router guard; `DEVICE_NOT_AUTHORIZED` → device-pending screen; auto-refresh interceptor (single-flight, R-3); install-scoped device UUID v4 (R-7); Forgot/Reset screens; `rmms://` custom-scheme deep links wired in `AndroidManifest.xml` + iOS `Info.plist` (R-4 manual fallback retained, Universal/App Links → Sprint 02); typed `ApiException` + bilingual error copy; unit + widget tests. Verify on Mac: `flutter pub get` → `dart run build_runner build --delete-conflicting-outputs` → `dart format .` → `flutter analyze --fatal-infos --fatal-warnings` → `flutter test`. **Web Admin login + user-management UI still not started (Day 7).**
 
 **Day 6–10**: see Sprint 01 plan
 

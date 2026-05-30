@@ -24,6 +24,22 @@
 	<string>????</string>
 	<key>CFBundleVersion</key>
 	<string>$(FLUTTER_BUILD_NUMBER)</string>
+	<!-- Custom-scheme deep links: rmms://verify-email?token=… and
+	     rmms://reset-password?token=… (M01, sprint-01 Day 4/6).
+	     Universal Links over https are deferred to Sprint 02 (R-4). -->
+	<key>CFBundleURLTypes</key>
+	<array>
+		<dict>
+			<key>CFBundleTypeRole</key>
+			<string>Editor</string>
+			<key>CFBundleURLName</key>
+			<string>com.rmms.deeplink</string>
+			<key>CFBundleURLSchemes</key>
+			<array>
+				<string>rmms</string>
+			</array>
+		</dict>
+	</array>
 	<key>LSRequiresIPhoneOS</key>
 	<true/>
 	<key>UIApplicationSceneManifest</key>

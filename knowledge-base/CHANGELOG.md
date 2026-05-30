@@ -6,6 +6,26 @@ Append-only chronological log of significant project milestones, decisions, and 
 
 ---
 
+## 2026-05-30 — Sprint 01 Day 5–6 (mobile FE): M01 auth flow wired end-to-end on Flutter
+
+**By:** Tech lead (MotivesVN IT), AI-assisted
+
+**Status:** ⏳ Code complete, awaiting verification on macOS (Flutter not installed on the Windows dev box). Needs `flutter pub get` → `build_runner build` → `dart format .` → `flutter analyze` → `flutter test`.
+
+- **Login flow** — `LoginScreen` now calls `POST /auth/login` via `AuthRepository`, persists the issued access/refresh tokens in `flutter_secure_storage`, and routes on the resulting auth state. `DEVICE_NOT_AUTHORIZED` (BR-105) transitions to a dedicated **device-pending screen** instead of surfacing as a form error.
+- **Session state + router guard** — `AuthController` (`Notifier<AuthState>`: unknown/unauthenticated/authenticated/deviceNotAuthorized) drives a `GoRouter` `redirect` via a `ValueNotifier` `refreshListenable`; silent session restore on launch calls `/auth/me`.
+- **Device fingerprint (R-7)** — install-scoped UUID v4 generated once and stored in secure storage (survives updates, wiped on uninstall). `DeviceInfoService` is the single source for both the `X-Device-Id` header and the `/auth/login` body, keeping them consistent.
+- **Auto-refresh interceptor** — `AuthInterceptor` rotates the refresh token once on 401 and replays the original request through a token-less Dio; `TokenRefresher` uses a single-flight guard so concurrent 401s trigger exactly one `/auth/refresh` (R-3, avoids reuse-detection revoke storms).
+- **Forgot / Reset password screens** — `forgot-password` (neutral confirmation) + `reset-password` (token from `rmms://reset-password?token=` deep-link query, with manual-code fallback per R-4). Mutation calls send a per-request `X-Idempotency-Key`.
+- **Register + Email-verify (Day 3–4 FE)** — `RegisterScreen` (BR-101 PG self-register, client-side password rule ≥8 + 1 letter + 1 digit mirroring the server) → routes to `VerifyEmailScreen`, which auto-verifies a deep-link token or accepts a manually pasted code.
+- **Deep links wired at OS level** — added `app_links` dep + `rmms` custom scheme to `AndroidManifest.xml` (intent-filter) and iOS `Info.plist` (`CFBundleURLTypes`). `DeepLinkService` routes `rmms://verify-email?token=` and `rmms://reset-password?token=` to the right screen. https Universal/App Links remain deferred to Sprint 02 (R-4).
+- **Errors + i18n** — `ApiException.fromDio` decodes the `{ error: {...} }` envelope to a typed code; `authErrorText` maps codes (incl. `EMAIL_ALREADY_REGISTERED`, `PASSWORD_TOO_WEAK`, `EMAIL_TOKEN_EXPIRED/USED`) to bilingual copy. All new strings added to `app_vi.arb` + `app_en.arb`.
+- **Tests** — `auth_logic_test.dart` (envelope parsing, role mapping, UUID v4) + `login_screen_test.dart` + `register_screen_test.dart` (validation gating + repository call, mocktail).
+
+> This completes the **M01 mobile FE surface for Sprint 01** (register → verify → login → device-pending → forgot/reset, with deep-link + auto-refresh). Pure-Dart backend is unchanged. Native Universal/App Links and the device-approval polling UI remain Sprint 02.
+
+---
+
 ## 2026-06-01 — Sprint 01 Day 5: Authorization policies + middleware hardening + /auth/me + integration tests
 
 **By:** Tech lead (MotivesVN IT), AI-assisted

@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
 import '../../../../l10n/generated/app_localizations.dart';
+import '../../../auth/application/auth_controller.dart';
+import '../../../auth/application/auth_state.dart';
 
 class HomeScreen extends ConsumerWidget {
   const HomeScreen({super.key});
@@ -9,12 +11,38 @@ class HomeScreen extends ConsumerWidget {
   @override
   Widget build(BuildContext context, WidgetRef ref) {
     final l = AppLocalizations.of(context);
+    final auth = ref.watch(authControllerProvider);
+    final user = auth is AuthAuthenticated ? auth.user : null;
+
     return Scaffold(
-      appBar: AppBar(title: Text(l.appName)),
-      body: const Center(
-        child: Text(
-          'Scaffold ok. M01 sẽ thay màn hình này.',
-          textAlign: TextAlign.center,
+      appBar: AppBar(
+        title: Text(l.appName),
+        actions: [
+          IconButton(
+            tooltip: l.homeLogout,
+            icon: const Icon(Icons.logout),
+            onPressed: () =>
+                ref.read(authControllerProvider.notifier).logout(),
+          ),
+        ],
+      ),
+      body: Center(
+        child: Padding(
+          padding: const EdgeInsets.all(24),
+          child: Column(
+            mainAxisSize: MainAxisSize.min,
+            children: [
+              Text(
+                user == null ? l.appName : l.homeWelcome(user.fullName),
+                textAlign: TextAlign.center,
+                style: Theme.of(context).textTheme.titleLarge,
+              ),
+              if (user != null) ...[
+                const SizedBox(height: 8),
+                Text(l.homeRoleLabel(user.role.name)),
+              ],
+            ],
+          ),
         ),
       ),
     );

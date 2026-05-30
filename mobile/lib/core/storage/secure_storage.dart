@@ -7,6 +7,7 @@ class SecureStorage {
 
   static const _kAccessToken = 'rmms.access_token';
   static const _kRefreshToken = 'rmms.refresh_token';
+  static const _kDeviceId = 'rmms.device_id';
 
   final FlutterSecureStorage _storage;
 
@@ -21,6 +22,24 @@ class SecureStorage {
     await _storage.write(key: _kRefreshToken, value: refresh);
   }
 
+  /// True when both tokens are present — used to decide whether to attempt a
+  /// silent session restore on app launch.
+  Future<bool> hasTokens() async {
+    final access = await readAccessToken();
+    final refresh = await readRefreshToken();
+    return (access != null && access.isNotEmpty) &&
+        (refresh != null && refresh.isNotEmpty);
+  }
+
+  /// Install-scoped device fingerprint (sprint-01 R-7). Persists across app
+  /// updates but is wiped on uninstall, so a reinstall counts as a new device.
+  Future<String?> readDeviceId() => _storage.read(key: _kDeviceId);
+
+  Future<void> writeDeviceId(String deviceId) =>
+      _storage.write(key: _kDeviceId, value: deviceId);
+
+  /// Clears the auth session. Keeps the device id (it must survive logout so the
+  /// same physical device stays recognized by BR-105 on the next login).
   Future<void> clear() async {
     await _storage.delete(key: _kAccessToken);
     await _storage.delete(key: _kRefreshToken);

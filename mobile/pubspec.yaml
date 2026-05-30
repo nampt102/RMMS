@@ -8,6 +8,7 @@ environment:
   flutter: ">=3.44.0"
 
 dependencies:
+  app_links: ^6.3.2 # rmms:// deep links (email verify + password reset)
   cached_network_image: ^3.4.1
   camera: ^0.11.0+2 # selfie + store photo for check-in
   collection: ^1.18.0

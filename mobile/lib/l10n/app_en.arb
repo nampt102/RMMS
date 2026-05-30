@@ -1,20 +1,92 @@
 {
   "@@locale": "en",
   "appName": "RMMS",
+
   "loginTitle": "Sign in",
   "loginEmailLabel": "Email",
   "loginPasswordLabel": "Password",
   "loginSubmit": "Sign in",
   "loginForgot": "Forgot password?",
+  "loginEmailInvalid": "Invalid email.",
+  "loginPasswordTooShort": "Password must be at least 8 characters.",
+  "loginRegister": "No account yet? Sign up",
+
+  "registerTitle": "Sign up",
+  "registerIntro": "Create a PG account with your email. You'll need to verify it before signing in.",
+  "registerFullNameLabel": "Full name",
+  "registerFullNameRequired": "Please enter your full name.",
+  "registerPhoneLabel": "Phone number",
+  "registerPhoneOptional": "Optional",
+  "registerPasswordRule": "At least 8 characters, including 1 letter and 1 digit.",
+  "registerSubmit": "Sign up",
+  "registerHaveAccount": "Already have an account? Sign in",
+
+  "verifyTitle": "Verify email",
+  "verifyIntro": "Enter the verification code from your email, or open the link in the email to verify.",
+  "verifyIntroWithEmail": "We sent a verification link to {email}. Enter the code from the email or open the link to verify.",
+  "@verifyIntroWithEmail": {
+    "placeholders": { "email": { "type": "String" } }
+  },
+  "verifyTokenLabel": "Verification code",
+  "verifyTokenRequired": "Please enter the verification code.",
+  "verifySubmit": "Verify",
+  "verifySuccessTitle": "Verified",
+  "verifySuccessBody": "Your email has been verified. Please sign in.",
+  "verifyGoToLogin": "Sign in",
+
   "commonLoading": "Loading...",
   "commonRetry": "Retry",
   "commonCancel": "Cancel",
   "commonOk": "OK",
+
   "checkInTitle": "Check in",
   "checkOutTitle": "Check out",
+
   "errorInvalidCredentials": "Wrong email or password.",
   "errorTokenExpired": "Your session has expired.",
   "errorNetwork": "Cannot reach the server. Check your connection.",
   "errorFakeGps": "Mock GPS detected. Disable mock location.",
-  "errorFaceVerification": "Face verification failed. Please try again."
+  "errorFaceVerification": "Face verification failed. Please try again.",
+  "errorEmailNotVerified": "Email not verified. Please check your inbox.",
+  "errorAccountInactive": "This account is inactive. Contact your administrator.",
+  "errorAccountLocked": "Account temporarily locked after too many failed attempts.",
+  "errorRateLimited": "Too many attempts. Please wait and try again later.",
+  "errorEmailAlreadyRegistered": "This email is already registered.",
+  "errorPasswordTooWeak": "Password is too weak. Use at least 8 characters with 1 letter and 1 digit.",
+  "errorEmailTokenExpired": "The verification link has expired. Please register again to get a new one.",
+  "errorEmailTokenUsed": "This verification link has already been used.",
+  "errorGeneric": "Something went wrong. Please try again.",
+
+  "forgotTitle": "Forgot password",
+  "forgotIntro": "Enter your email. If it exists, we'll send a password reset link.",
+  "forgotEmailLabel": "Email",
+  "forgotSubmit": "Send link",
+  "forgotSentTitle": "Sent (if the email exists)",
+  "forgotSentBody": "Please check your inbox and follow the instructions to reset your password.",
+  "forgotEnterCode": "I already have a reset code",
+  "forgotBackToLogin": "Back to sign in",
+
+  "resetTitle": "Reset password",
+  "resetIntro": "Enter the reset code from your email and your new password.",
+  "resetTokenLabel": "Reset code",
+  "resetNewPasswordLabel": "New password",
+  "resetConfirmLabel": "Confirm password",
+  "resetSubmit": "Reset password",
+  "resetSuccess": "Password reset successful. Please sign in again.",
+  "resetPasswordMismatch": "Passwords do not match.",
+  "resetTokenRequired": "Please enter the reset code.",
+
+  "devicePendingTitle": "Device pending approval",
+  "devicePendingBody": "This device is not yet authorized for your account. A request was sent to your Leader/Admin. Please try again once it is approved.",
+  "devicePendingBackToLogin": "Back to sign in",
+
+  "homeLogout": "Sign out",
+  "homeWelcome": "Welcome, {name}",
+  "@homeWelcome": {
+    "placeholders": { "name": { "type": "String" } }
+  },
+  "homeRoleLabel": "Role: {role}",
+  "@homeRoleLabel": {
+    "placeholders": { "role": { "type": "String" } }
+  }
 }
