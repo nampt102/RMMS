@@ -22,6 +22,38 @@
       "forgot": "Quên mật khẩu?"
     }
   },
+  "admin": {
+    "appTitle": "RMMS Quản trị",
+    "logout": "Đăng xuất"
+  },
+  "users": {
+    "title": "Quản lý người dùng",
+    "create": "Thêm người dùng",
+    "createTitle": "Tạo người dùng mới",
+    "editTitle": "Cập nhật người dùng",
+    "search": "Tìm theo email / tên",
+    "email": "Email",
+    "fullName": "Họ tên",
+    "phone": "Số điện thoại",
+    "role": "Vai trò",
+    "status": "Trạng thái",
+    "language": "Ngôn ngữ",
+    "lastLogin": "Đăng nhập gần nhất",
+    "actions": "Thao tác",
+    "edit": "Sửa",
+    "resetPassword": "Đặt lại mật khẩu",
+    "resetConfirm": "Gửi email đặt lại mật khẩu cho người dùng này?",
+    "createSuccess": "Đã tạo người dùng. Mật khẩu ban đầu đã được gửi qua email (xem log API ở môi trường dev).",
+    "updateSuccess": "Đã cập nhật người dùng.",
+    "resetSuccess": "Đã gửi email đặt lại mật khẩu.",
+    "role_pg": "PG",
+    "role_leader": "Leader",
+    "role_buh": "BUH",
+    "role_admin": "Admin",
+    "status_active": "Đang hoạt động",
+    "status_inactive": "Vô hiệu hoá",
+    "status_pending": "Chờ xác minh email"
+  },
   "errors": {
     "INVALID_CREDENTIALS": "Email hoặc mật khẩu không đúng.",
     "EMAIL_NOT_VERIFIED": "Email chưa được xác minh.",

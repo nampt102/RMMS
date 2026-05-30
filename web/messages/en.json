@@ -22,6 +22,38 @@
       "forgot": "Forgot password?"
     }
   },
+  "admin": {
+    "appTitle": "RMMS Admin",
+    "logout": "Sign out"
+  },
+  "users": {
+    "title": "User management",
+    "create": "Add user",
+    "createTitle": "Create a new user",
+    "editTitle": "Update user",
+    "search": "Search by email / name",
+    "email": "Email",
+    "fullName": "Full name",
+    "phone": "Phone",
+    "role": "Role",
+    "status": "Status",
+    "language": "Language",
+    "lastLogin": "Last login",
+    "actions": "Actions",
+    "edit": "Edit",
+    "resetPassword": "Reset password",
+    "resetConfirm": "Send a password-reset email to this user?",
+    "createSuccess": "User created. An initial password was emailed (see the API console in dev).",
+    "updateSuccess": "User updated.",
+    "resetSuccess": "Password-reset email sent.",
+    "role_pg": "PG",
+    "role_leader": "Leader",
+    "role_buh": "BUH",
+    "role_admin": "Admin",
+    "status_active": "Active",
+    "status_inactive": "Inactive",
+    "status_pending": "Pending email verify"
+  },
   "errors": {
     "INVALID_CREDENTIALS": "Wrong email or password.",
     "EMAIL_NOT_VERIFIED": "Email is not verified.",

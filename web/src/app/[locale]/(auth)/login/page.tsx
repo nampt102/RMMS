@@ -18,8 +18,8 @@ export default function LoginPage({ params: { locale } }: { params: { locale: st
   const onFinish = async (values: LoginRequest) => {
     try {
       await login.mutateAsync(values);
-      // Admin dashboard shell lands in Day 7 — redirect to the locale home for now.
-      router.replace(`/${locale}`);
+      // Land on the Admin user-management page (the Sprint 01 admin home).
+      router.replace(`/${locale}/users`);
     } catch (error) {
       const code = errorCodeFromUnknown(error);
       message.error(tErrors.has(code) ? tErrors(code) : tErrors("INTERNAL_ERROR"));

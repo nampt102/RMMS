@@ -6,6 +6,30 @@ Append-only chronological log of significant project milestones, decisions, and 
 
 ---
 
+## 2026-05-30 — Sprint 01 Day 7: Web Admin user management + route guard (FE-W) + refresh-reuse tests (BE)
+
+**By:** Tech lead (MotivesVN IT), AI-assisted
+
+**Status:** ✅ Web `type-check` + `lint` + `next build` green (`/vi/users` + `/en/users` generated). ✅ Backend 54 unit tests green (+3 refresh-token tests).
+
+### Web (Next.js) — `FE-W-D7` user management
+
+- **User list** — `(admin)/users/page.tsx` uses AntD **ProTable** with server-side pagination + filters (role / status selects + email/name keyword) wired to `GET /api/v1/admin/users`. Role rendered as colored `Tag`; status as ProTable badge enum.
+- **Create user** — toolbar `ModalForm` (email / full name / phone / role∈{leader,buh,admin} / language) → `POST /admin/users`; success toast notes the initial password is emailed (Console sink in dev).
+- **Edit + status toggle** — per-row `ModalForm` (full name / phone / status active↔inactive / language) → `PATCH /admin/users/:id`.
+- **Reset password** — per-row `Popconfirm` → `POST /admin/users/:id/reset-password`.
+- **API hooks** — `features/users/api.ts`: `fetchUsers` (drives ProTable.request) + TanStack `useCreateUser` / `useUpdateUser` / `useResetUserPassword` (invalidate on success). Errors localized via the shared `errorCodeFromUnknown` + `errors.*` keys.
+- **Route guard** — `(admin)/layout.tsx` is a client-side guard + shell (header with current email + logout). The JWT lives in the Zustand store (localStorage), which the Next.js middleware can't read, so the guard runs on the client: unauthenticated visitors are redirected to `/{locale}/login`; a `hydrated` flag prevents an SSR/client mismatch and premature redirect. Login now redirects to `/{locale}/users`.
+- **i18n** — added `admin.*` + `users.*` keys to `messages/vi.json` + `messages/en.json` (roles, statuses, actions, toasts).
+
+### Backend — `BE-D7` refresh-token reuse detection tests
+
+- `RefreshTokenCommandHandlerTests`: reused (revoked) token → all active tokens revoked + `auth.refresh_reused` audit + `REFRESH_TOKEN_REUSED`; valid token → rotates (old revoked + `ReplacedByTokenId` linked, new active) + `auth.refresh_rotated`; unknown token → `REFRESH_TOKEN_REVOKED`.
+
+> **Note on the route guard vs. sprint plan:** the Day 7 plan said "middleware checks JWT". Because tokens are stored client-side (Zustand/localStorage) rather than in an httpOnly cookie, a server middleware can't see them — the guard is implemented client-side instead. Revisit if/when we move tokens to httpOnly cookies (would also need a CSRF strategy).
+
+---
+
 ## 2026-05-30 — Sprint 01 Day 6 (BE): Hangfire token-cleanup job + `/auth/me/device-status` skeleton
 
 **By:** Tech lead (MotivesVN IT), AI-assisted
