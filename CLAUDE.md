@@ -43,6 +43,23 @@ You have access to a knowledge base that includes:
 
 When generating code, ALWAYS use these technologies and versions. Do not suggest alternatives unless explicitly asked. If a proposal would deviate from an existing ADR (001–009), surface it explicitly and request a new ADR — do not silently re-litigate accepted decisions.
 
+## UI/UX SKILL (MANDATORY FOR WEB)
+
+When doing ANY web (Next.js + Ant Design Pro) UI/UX work, you MUST invoke the **`ui-ux-pro-max`** skill first and follow its guidance. This applies to:
+
+- Designing or scaffolding pages/layouts (login, dashboard, admin panel, user management, detail/forms)
+- Creating or refactoring UI components (buttons, modals, navbar, sidebar, cards, tables, forms, charts)
+- Choosing color systems, typography/font pairings, spacing, layout systems, interaction states
+- Reviewing / fixing / improving / polishing existing web UI
+
+Rules:
+- Invoke `ui-ux-pro-max` **before** writing or editing web UI code, and apply its style/color/typography/layout recommendations.
+- Stay within the agreed stack: Ant Design Pro components + Tailwind utilities (ADR-008: Tailwind Preflight OFF — AntD reset wins). Do NOT introduce new UI libraries the skill might suggest unless explicitly approved via ADR.
+- Keep all user-visible strings i18n-keyed (vi default + en) per the coding principles — never hardcode copy the skill produces.
+- Mobile (Flutter) is out of this skill's mandatory scope, but its design principles (spacing, color, typography, accessibility) may be used as reference.
+
+If the `ui-ux-pro-max` skill is not available in the current session, say so and proceed with best-practice AntD Pro defaults, noting that the skill should be loaded (restart the session) for richer guidance.
+
 ## CODING PRINCIPLES
 
 1. **Type safety everywhere** — no `any`/`dynamic`/`object` shortcuts
