@@ -10,9 +10,9 @@ import {
   type ActionType,
   type ProColumns,
 } from "@ant-design/pro-components";
-import { App, Button, Popconfirm, Tag } from "antd";
-import { useTranslations } from "next-intl";
-import { useRef } from "react";
+import { App, Button, Descriptions, Divider, Drawer, Popconfirm, Space, Switch, Tag, Typography } from "antd";
+import { useLocale, useTranslations } from "next-intl";
+import { useRef, useState } from "react";
 import {
   fetchUsers,
   useCreateUser,
@@ -32,8 +32,10 @@ const ROLE_COLORS: Record<string, string> = {
 export default function UsersPage() {
   const t = useTranslations("users");
   const tErrors = useTranslations("errors");
+  const locale = useLocale();
   const { message } = App.useApp();
   const actionRef = useRef<ActionType>();
+  const [detail, setDetail] = useState<AdminUser | null>(null);
 
   const createUser = useCreateUser();
   const updateUser = useUpdateUser();
@@ -43,6 +45,9 @@ export default function UsersPage() {
     const code = errorCodeFromUnknown(error);
     message.error(tErrors.has(code) ? tErrors(code) : tErrors("INTERNAL_ERROR"));
   };
+
+  const fmtDate = (value: string | null) =>
+    value ? new Date(value).toLocaleString(locale === "en" ? "en-US" : "vi-VN") : "—";
 
   const roleEnum = {
     pg: { text: t("role_pg") },
@@ -56,6 +61,10 @@ export default function UsersPage() {
     inactive: { text: t("status_inactive"), status: "Default" },
     pending_email_verify: { text: t("status_pending"), status: "Warning" },
   };
+
+  const roleTag = (role: AdminUser["role"]) => (
+    <Tag color={ROLE_COLORS[role] ?? "default"}>{roleEnum[role]?.text ?? role}</Tag>
+  );
 
   const columns: ProColumns<AdminUser>[] = [
     {
@@ -71,7 +80,7 @@ export default function UsersPage() {
       dataIndex: "role",
       valueType: "select",
       valueEnum: roleEnum,
-      render: (_, row) => <Tag color={ROLE_COLORS[row.role] ?? "default"}>{roleEnum[row.role]?.text ?? row.role}</Tag>,
+      render: (_, row) => roleTag(row.role),
     },
     {
       title: t("status"),
@@ -90,6 +99,9 @@ export default function UsersPage() {
       valueType: "option",
       key: "option",
       render: (_, row) => [
+        <a key="detail" onClick={() => setDetail(row)}>
+          {t("viewDetail")}
+        </a>,
         <EditUserButton key="edit" user={row} onDone={() => actionRef.current?.reload()} onError={showError} update={updateUser} t={t} />,
         <Popconfirm
           key="reset"
@@ -109,7 +121,31 @@ export default function UsersPage() {
     },
   ];
 
+  const toggleStatus = async (checked: boolean) => {
+    if (!detail) return;
+    const status = checked ? "active" : "inactive";
+    try {
+      await updateUser.mutateAsync({ id: detail.id, payload: { status } });
+      setDetail({ ...detail, status });
+      message.success(t("updateSuccess"));
+      actionRef.current?.reload();
+    } catch (error) {
+      showError(error);
+    }
+  };
+
+  const resetForDetail = async () => {
+    if (!detail) return;
+    try {
+      await resetPassword.mutateAsync(detail.id);
+      message.success(t("resetSuccess"));
+    } catch (error) {
+      showError(error);
+    }
+  };
+
   return (
+    <>
     <ProTable<AdminUser>
       headerTitle={t("title")}
       actionRef={actionRef}
@@ -189,6 +225,60 @@ export default function UsersPage() {
         </ModalForm>,
       ]}
     />
+
+    <Drawer
+      title={t("detailTitle")}
+      width={520}
+      open={detail !== null}
+      onClose={() => setDetail(null)}
+      destroyOnClose
+    >
+      {detail && (
+        <>
+          <Descriptions column={1} bordered size="small" styles={{ label: { width: 160 } }}>
+            <Descriptions.Item label={t("email")}>
+              <Typography.Text copyable>{detail.email}</Typography.Text>
+            </Descriptions.Item>
+            <Descriptions.Item label={t("fullName")}>{detail.fullName}</Descriptions.Item>
+            <Descriptions.Item label={t("phone")}>{detail.phone || "—"}</Descriptions.Item>
+            <Descriptions.Item label={t("role")}>{roleTag(detail.role)}</Descriptions.Item>
+            <Descriptions.Item label={t("status")}>
+              {statusEnum[detail.status as keyof typeof statusEnum]?.text ?? detail.status}
+            </Descriptions.Item>
+            <Descriptions.Item label={t("language")}>
+              {detail.preferredLanguage === "en" ? "English" : "Tiếng Việt"}
+            </Descriptions.Item>
+            <Descriptions.Item label={t("emailVerifiedAt")}>
+              {detail.emailVerifiedAt ? fmtDate(detail.emailVerifiedAt) : t("notVerified")}
+            </Descriptions.Item>
+            <Descriptions.Item label={t("lastLogin")}>{fmtDate(detail.lastLoginAt)}</Descriptions.Item>
+            <Descriptions.Item label={t("createdAt")}>{fmtDate(detail.createdAt)}</Descriptions.Item>
+            <Descriptions.Item label={t("updatedAt")}>{fmtDate(detail.updatedAt)}</Descriptions.Item>
+          </Descriptions>
+
+          <Divider />
+
+          <Space align="center">
+            <span>{t("statusToggle")}</span>
+            <Switch
+              checked={detail.status === "active"}
+              loading={updateUser.isPending}
+              onChange={toggleStatus}
+            />
+            <span>{detail.status === "active" ? t("status_active") : t("status_inactive")}</span>
+          </Space>
+
+          <Divider />
+
+          <Popconfirm title={t("resetConfirm")} onConfirm={resetForDetail}>
+            <Button danger loading={resetPassword.isPending}>
+              {t("resetPassword")}
+            </Button>
+          </Popconfirm>
+        </>
+      )}
+    </Drawer>
+    </>
   );
 }
 
