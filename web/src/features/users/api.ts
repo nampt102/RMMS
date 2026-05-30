@@ -11,7 +11,10 @@ const USERS_KEY = ["admin", "users"] as const;
  * so it returns the raw paginated envelope rather than going through TanStack Query.
  */
 export async function fetchUsers(params: ListUsersParams): Promise<PaginatedResponse<AdminUser>> {
-  const { data } = await apiClient.get<PaginatedResponse<AdminUser>>("/admin/users", {
+  // The API wraps every success body in `{ data: ... }` (see ResultMapping.Ok), and the
+  // paginated payload is itself `{ data: [...], meta: {...} }` — so the wire shape is
+  // `{ data: { data: [...], meta: {...} } }`. Unwrap the outer envelope here.
+  const { data } = await apiClient.get<ApiResponse<PaginatedResponse<AdminUser>>>("/admin/users", {
     params: {
       page: params.page,
       pageSize: params.pageSize,
@@ -20,7 +23,7 @@ export async function fetchUsers(params: ListUsersParams): Promise<PaginatedResp
       search: params.search || undefined,
     },
   });
-  return data;
+  return data.data;
 }
 
 /** Create a Leader / BUH / Admin (initial password is emailed by the backend). */
