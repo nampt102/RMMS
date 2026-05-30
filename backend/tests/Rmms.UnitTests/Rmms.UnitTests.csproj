@@ -22,6 +22,9 @@
     <PackageReference Include="Moq" />
     <PackageReference Include="Bogus" />
     <PackageReference Include="coverlet.collector" />
+
+    <!-- EF Core InMemory provider for handler unit tests -->
+    <PackageReference Include="Microsoft.EntityFrameworkCore.InMemory" />
   </ItemGroup>
 
 </Project>

@@ -2,10 +2,12 @@
 
 > **READ THIS FIRST.** This file is the single source of truth for "where the project is right now". Every AI session and every new dev should open this file before doing anything else. Update on every significant milestone.
 
-**Last updated:** 2026-05-29 (Sprint 01 Day 2 complete: register + verify-email endpoints live, smoke-tested end-to-end)
-**Current phase:** Phase 1A — **Sprint 01 (M01 Auth & Devices), Day 2 of 10**
+**Last updated:** 2026-05-31 (Sprint 01 Day 4 complete + unit tests + **end-to-end smoke GREEN**: full M01 auth surface verified over the real HTTP/JWT pipeline)
+**Current phase:** Phase 1A — **Sprint 01 (M01 Auth & Devices), Day 4 of 10**
 **Sprint 00 status:** ✅ **CLOSED** (100% — scaffold + .NET 10 + 9 ADRs + 3 CI workflows green)
-**Sprint 01 progress:** ~20% — Day 1 (domain + migration) + Day 2 (register + verify-email) shipped; Day 3 (login + device check + refresh) starting next
+**Sprint 01 progress:** ~40% — Day 1-4 shipped (domain + migration + 9 auth endpoints + admin user CRUD + CLI seed + unit tests for Day 4 handlers) and **verified end-to-end via `scripts/smoke-day4.ps1` (all steps PASS)**. Day 5 (auth policies + idempotency + rate limit + /me) starting next.
+
+> **Auth pipeline fix (2026-05-31):** `[Authorize(Roles="admin")]` was returning 403 for valid admin tokens. Root cause: JwtBearer default `MapInboundClaims = true` remaps short claim names (`sub`, etc.), desyncing the explicit `RoleClaimType="role"` / `NameClaimType="sub"`. Fixed by setting `options.MapInboundClaims = false` in `Program.cs`. This class of bug is invisible to handler unit tests (they bypass the HTTP auth pipeline) — caught only by the smoke test. **Action item for Day 5:** add a `WebApplicationFactory` integration test asserting `/admin/*` returns 200 for `admin` role and 403 for non-admin.
 
 ---
 
@@ -142,19 +144,35 @@ All 9 ADRs are **Accepted** and live in `knowledge-base/decisions/`:
 
 **Day 2 ✅** (2026-05-29): Register + Verify-Email endpoints (smoke-tested end-to-end)
 
-- `POST /api/v1/auth/register` (BR-101) — PG self-registration with email, BCrypt cost 12, FluentValidation rules (email format, password ≥8 chars + 1 letter + 1 digit)
-- `POST /api/v1/auth/verify-email` — token-based activation, single-use, 24h TTL
-- `IEmailTemplateRenderer` with vi/en templates for verify-email + reset-password + admin-created-account
-- `ConsoleEmailSender` (Dev/CI) prints email content to Serilog — E2E tests can scrape token from log
-- `OpaqueToken` helper (256-bit random, SHA-256 hex hashing) reused across refresh / email / reset tokens
-- `ResultMapping` translates `Result.Error` → HTTP status + ErrorEnvelope per `05-api-conventions.md`
-- `EnumFormatting.ToSnakeCase<T>()` for API response strings (e.g., `PendingEmailVerify` → `pending_email_verify`)
-- Audit log emits `user.registered` + `user.email_verified` per CR-1
-- Migration applied to fresh Postgres + PostGIS image; smoke test passed: register → verify → user `status=active` + 2 audit rows
+- `POST /api/v1/auth/register` (BR-101) + `POST /auth/verify-email`
+- `IEmailTemplateRenderer` vi/en; `ConsoleEmailSender` Dev/CI; `OpaqueToken` shared helper
+- `ResultMapping` (Result.Error → HTTP + ErrorEnvelope); `EnumFormatting.ToSnakeCase<T>()`
+- Audit `user.registered` + `user.email_verified`
 
-**Day 3 ⏭** (2026-05-30): Login + Device check (BR-105) + Refresh token rotation + Logout
+**Day 3 ✅** (2026-05-30): Login + Device check (BR-105) + Refresh rotation + Logout
 
-**Day 4–10**: see Sprint 01 plan
+- `POST /auth/login` — credential check + device fingerprint resolution (BR-105):
+  - First device → auto-active; same device → reuse; different device → `403 DEVICE_NOT_AUTHORIZED` + pending row for Sprint 02 approval UI
+- `POST /auth/refresh` — rotation + **reuse detection** (revokes ALL active tokens on detected reuse, audit `auth.refresh_reused` severity=high)
+- `POST /auth/logout` — idempotent token revoke
+- `JwtOptions` moved Infrastructure → Application (Clean Architecture fix)
+- Audit: `auth.login_success`, `auth.login_failed`, `auth.refresh_rotated`, `auth.refresh_reused`, `auth.logout`, `device.registered`, `device.change_requested`
+
+**Day 4 ✅** (2026-05-31): Forgot/Reset password + Admin user CRUD + CLI seed + **unit tests**
+
+- `POST /auth/forgot-password` — silent success; emails reset link only for Active users (timing-attack mitigation)
+- `POST /auth/reset-password` — applies new password + revokes ALL active refresh tokens (force re-login everywhere)
+- `GET /admin/users` — paginated, filters role/status/search (case-insensitive Contains, EF translates to ILIKE on Postgres)
+- `POST /admin/users` (Authorize Roles=admin) — Leader/BUH/Admin only (PG must self-register); random 12-char initial password emailed
+- `PATCH /admin/users/:id` — profile + status toggle; revokes refresh on inactivate; audit `user.status_changed` + `user.updated_by_admin`
+- `POST /admin/users/:id/reset-password` — admin force-issues reset link
+- `dotnet run --project src/Rmms.Api -- seed-admin --email=... --password=...` — bootstrap CLI (idempotent)
+- JWT `RoleClaimType="role"` mapping so `[Authorize(Roles="admin")]` works with our JWT
+- **6 handler unit-test classes (~37 tests)** with EF InMemory + Moq-free helpers (FakePasswordHasher / TestClock / CapturingEmailSender / InMemoryAuditLogger / FakeTemplateRenderer / UserFactory) — full happy + failure-path coverage on Day 4 handlers
+
+**Day 5 ⏭** (2026-06-01): GET /auth/me + Authorization policies + X-Idempotency-Key middleware + Rate limit on /auth/login + integration tests
+
+**Day 6–10**: see Sprint 01 plan
 
 ## Sprint 00 — closed 2026-05-28 ✅
 

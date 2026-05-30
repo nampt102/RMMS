@@ -37,8 +37,15 @@ internal sealed class GetUsersQueryHandler : IRequestHandler<GetUsersQuery, Resu
 
         if (!string.IsNullOrWhiteSpace(query.Search))
         {
-            var s = query.Search.Trim().ToLowerInvariant();
-            q = q.Where(u => EF.Functions.ILike(u.Email, $"%{s}%") || EF.Functions.ILike(u.FullName, $"%{s}%"));
+            // Case-insensitive contains via StringComparison.OrdinalIgnoreCase.
+            // EF Core 8+ translates this to `ILIKE '%s%'` on Postgres (or `LOWER + LIKE`
+            // on providers that lack ILIKE). We deliberately avoid Npgsql's `EF.Functions.ILike`
+            // here because Application layer depends only on EF Core abstractions, not the
+            // Npgsql provider — see ADR-001 / Clean Architecture rules in 08-coding-standards.md.
+            var s = query.Search.Trim();
+            q = q.Where(u =>
+                u.Email.Contains(s, StringComparison.OrdinalIgnoreCase) ||
+                u.FullName.Contains(s, StringComparison.OrdinalIgnoreCase));
         }
 
         var total = await q.CountAsync(ct);
@@ -61,7 +68,7 @@ internal sealed class GetUsersQueryHandler : IRequestHandler<GetUsersQuery, Resu
                 u.UpdatedAt))
             .ToListAsync(ct);
 
-        return new PaginatedResponse<AdminUserDto>(items, page, pageSize, total);
+        return new PaginatedResponse<AdminUserDto>(items, PaginationMeta.Build(page, pageSize, total));
     }
 
     private static bool TryParseRole(string raw, out UserRole role)

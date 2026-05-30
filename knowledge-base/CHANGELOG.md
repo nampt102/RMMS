@@ -6,6 +6,132 @@ Append-only chronological log of significant project milestones, decisions, and 
 
 ---
 
+## 2026-05-31 — Sprint 01 Day 4 verification: end-to-end smoke test GREEN + JWT auth fix
+
+**By:** Tech lead (MotivesVN IT), AI-assisted
+
+**Outcome:** The full M01 auth + admin surface is now verified end-to-end over the real HTTP/JWT pipeline (not just handler unit tests). One real authorization bug found and fixed.
+
+### Fix — JWT role authorization (Program.cs)
+
+- `[Authorize(Roles = "admin")]` returned **403 for valid admin tokens**. Root cause: JwtBearer default `MapInboundClaims = true` remaps short JWT claim names (e.g. `sub` → `ClaimTypes.NameIdentifier`), which desynced the explicit `RoleClaimType = "role"` / `NameClaimType = "sub"`. Fixed by adding `options.MapInboundClaims = false` so claim names are preserved exactly as issued.
+- Not caught by Day 4 handler unit tests because they bypass the HTTP auth pipeline. **Day 5 follow-up:** add a `WebApplicationFactory` integration test for `/admin/*` (200 for `admin`, 403 for non-admin).
+
+### Tooling — smoke test scripts
+
+- `scripts/smoke-day4.ps1` — end-to-end smoke covering register → verify-email → login → device check → refresh rotation + reuse detection → forgot/reset → admin login → admin user CRUD → authorization (PG → 403) → logout idempotency. Made compatible with **Windows PowerShell 5.1** (avoids `-SkipHttpErrorCheck` and `ConvertFrom-Json -Depth`, which are PS6+ only) and idempotent across runs (unique `smoke.*+<timestamp>` test emails).
+- `scripts/cleanup-smoke.ps1` — removes `smoke.%@example.com` test users + dependent auth rows after a run; leaves `audit_log` intact per CR-1 (append-only).
+
+---
+
+## 2026-05-31 — Sprint 01 Day 4: Forgot/Reset password + Admin user CRUD + CLI seed + unit tests
+
+**By:** Tech lead (MotivesVN IT), AI-assisted
+
+**Outcome:** Full M01 user-management surface (PG self-service password recovery + Admin CRUD over all users) lives behind the API and has unit-test coverage on every handler. First Authorize-protected endpoints in the codebase work end-to-end. Bootstrap CLI lets a fresh deploy create an initial Admin without going through email verification.
+
+### Endpoints (5 new)
+
+**`/api/v1/auth/*`** — extended for password recovery:
+
+- `POST /auth/forgot-password` — silent success regardless of whether email exists (timing-attack mitigation). Issues a 24h single-use `password_reset_tokens` row + emails reset link only for Active users. Always emits an audit row.
+- `POST /auth/reset-password` — exchanges token for password change. Hashes new password (BCrypt cost 12) and **revokes ALL active refresh tokens for the user** (force re-login on every device). Marks token used. Audit `user.password_reset` with `revoked_refresh_count`.
+
+**`/api/v1/admin/users/*`** — first `[Authorize(Roles = "admin")]` endpoints:
+
+- `GET /admin/users` — paginated list. Filters: `role`, `status`, `search` (case-insensitive contains, EF Core translates to `ILIKE '%s%'` on Postgres). Page size capped at 100. Ordered by `created_at DESC`.
+- `POST /admin/users` — creates Leader / BUH / Admin (BR-102/103/104). PG accounts rejected (must self-register per BR-101). Generates 12-char random initial password (alphabet excludes `0/O/1/l/I` for readability), hashes via BCrypt cost 12, emails plaintext to user with `[ADMIN] {email}` template, audit `user.created_by_admin`.
+- `PATCH /admin/users/:id` — profile updates (`full_name`, `phone`, `preferred_language`) + status transitions (`active` ↔ `inactive`). When user becomes Inactive, ALL active refresh tokens revoked. Returns 422 if Admin tries to Activate a `pending_email_verify` user (must verify email first). Audit: `user.status_changed` (with `from`/`to`) + `user.updated_by_admin`.
+- `POST /admin/users/:id/reset-password` — Admin force-issues a reset link for any user (same flow as forgot-password but identified by user_id, no email leak check). Audit metadata includes `triggered_by: "admin"`.
+
+### CLI bootstrap (1 new command)
+
+`dotnet run --project src/Rmms.Api -- seed-admin --email=admin@... --password=... [--full-name="System Admin"] [--language=vi]`:
+
+- Routed in `Program.cs` BEFORE the HTTP pipeline starts (`if (args.Length > 0 && args[0] == "seed-admin") return ...`).
+- Idempotent — exits 0 with notice if email already exists.
+- Skips audit log (no Admin actor yet to attribute to — bootstrap-only).
+- Validates: `--password` ≥ 8 chars + ≥ 1 letter + ≥ 1 digit; `--language ∈ {vi, en}`.
+
+### Application layer (12 new files)
+
+```
+Application/Auth/ForgotPassword/   { Command, Validator, Handler }
+Application/Auth/ResetPassword/    { Command, Validator, Handler }
+Application/Admin/Users/           { AdminUserDto }
+Application/Admin/Users/CreateAdminUser/    { Command, Validator, Handler }
+Application/Admin/Users/GetUsers/  { Query (paged + filter), Handler }
+Application/Admin/Users/UpdateUser/ { Command, Validator, Handler }
+Application/Admin/Users/AdminResetPassword/ { Command, Handler }
+```
+
+### Api layer (5 new files)
+
+```
+Controllers/AdminUsersController.cs   (4 endpoints; Authorize Roles=admin)
+Cli/SeedAdminCommand.cs               (CLI command handler)
+Dtos/Auth/ForgotPasswordRequest.cs
+Dtos/Auth/ResetPasswordRequest.cs
+Dtos/Admin/CreateUserRequest.cs
+Dtos/Admin/UpdateUserRequest.cs
+```
+
+### Modified (2 files)
+
+- `Api/Program.cs`
+  - JWT `RoleClaimType = "role"` so `[Authorize(Roles = "admin")]` matches our JWT claim shape.
+  - JWT `NameClaimType = JwtRegisteredClaimNames.Sub`.
+  - CLI dispatch (`SeedAdminCommand.RunAsync`) before `app.RunAsync()`; returns int exit code.
+- `Api/Controllers/AuthController.cs` — added `POST /auth/forgot-password` + `POST /auth/reset-password`.
+
+### Unit tests (15 new files — 6 handler test classes, ~37 tests, plus 9 shared helpers)
+
+Test infrastructure (`tests/Rmms.UnitTests/Common/`):
+
+- `TestDbContextFactory.cs` — fresh `AppDbContext` per test on EF Core InMemory provider.
+- `TestClock.cs` — deterministic `IDateTimeProvider` with `Advance(TimeSpan)`.
+- `TestClientContext.cs`, `TestCurrentUser.cs` — stub ambient context.
+- `FakePasswordHasher.cs` — `plain:{value}` encoding instead of BCrypt cost 12 (~200ms savings per test).
+- `InMemoryAuditLogger.cs` — `ConcurrentBag<AuditCall>` capture for assertions.
+- `CapturingEmailSender.cs` — `ConcurrentBag<EmailMessage>` capture.
+- `FakeTemplateRenderer.cs` — deterministic email bodies (`reset token=...`, `pwd=...`) so tests can scrape exact values.
+- `UserFactory.cs` — `CreatePgPendingVerify`, `CreateActivePg`, `CreateInactivePg`, `CreateAdmin`.
+
+Test classes (`tests/Rmms.UnitTests/Application/`):
+
+- `Auth/ForgotPasswordCommandHandlerTests.cs` — 6 tests: active user issues token+email; unknown email silent success; inactive silent success; pending_email_verify silent success; expiry math; email normalization.
+- `Auth/ResetPasswordCommandHandlerTests.cs` — 6 tests: valid token + revoke all refresh; unknown / used / expired tokens; vanished user; audit emission.
+- `Admin/CreateAdminUserCommandHandlerTests.cs` — 5 tests: 3 valid roles parametrized; duplicate email; case-insensitive dup; initial password meets complexity; email normalization.
+- `Admin/GetUsersQueryHandlerTests.cs` — 7 tests: empty page; pagination; role / status filters; case-insensitive search; page size cap (100); descending order.
+- `Admin/UpdateUserCommandHandlerTests.cs` — 7 tests: profile update; deactivate → revoke tokens; reactivate; activating pending → validation error; not found; status-change audit shape.
+- `Admin/AdminResetPasswordCommandHandlerTests.cs` — 4 tests: happy path; not found; audit metadata `triggered_by="admin"`; expiry.
+
+Package additions:
+
+- `Microsoft.EntityFrameworkCore.InMemory` 10.0.4 added to `Directory.Packages.props` and referenced in `Rmms.UnitTests.csproj` for handler-level test isolation. (Integration tests Day 9 will use Testcontainers Postgres for full SQL fidelity.)
+
+### Behavior fixes during build
+
+1. **`EF.Functions.ILike`** unavailable in Application layer (Npgsql-only) — switched to `string.Contains(s, StringComparison.OrdinalIgnoreCase)`. EF Core 8+ translates this to `ILIKE` on Postgres, keeping Clean Architecture intact (no Npgsql leak into Application).
+2. **`PaginatedResponse<T>` constructor** — used wrong signature; corrected to `(IReadOnlyList<T>, PaginationMeta)` with `PaginationMeta.Build(...)` helper.
+3. **CA1311 / CA1862 / CA1304** culture-aware string analyzers triggered by `.ToLower().Contains(s)` — replaced with `StringComparison.OrdinalIgnoreCase` overload (also more efficient).
+4. **CA1826** triggered by `.First()` on `IReadOnlyList<T>` — switched to indexer `[0]`.
+
+### Verified
+
+- `dotnet build` — 0 errors (warnings only, all pre-allowed via `WarningsNotAsErrors`).
+- `dotnet test tests/Rmms.UnitTests` — all ~37 handler tests + 2 pre-existing domain tests pass.
+
+### Carry-forward to Day 5
+
+- `GET /auth/me` — return current user + active device.
+- Named authorization policies (`PgOnly`, `LeaderOnly`, `BuhOnly`, `AdminOnly`, `PgOrLeader`, `AnyAuthenticated`).
+- `X-Idempotency-Key` middleware — Redis-backed, 24h TTL, returns cached response on hit.
+- Rate limit on `/auth/login` — 5 fails per email+IP per 15 min via `AspNetCoreRateLimit` + Redis store.
+- Integration tests via Testcontainers Postgres + Redis (Day 9 budget).
+
+---
+
 ## 2026-05-29 — Sprint 01 Day 2: Register + Verify-Email endpoints (M01)
 
 **By:** Tech lead (MotivesVN IT), AI-assisted

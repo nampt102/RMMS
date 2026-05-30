@@ -39,6 +39,12 @@ builder.Services
     .AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
     .AddJwtBearer(options =>
     {
+        // Keep JWT claim names EXACTLY as issued ("role", "sub", "email").
+        // With the default (true), the handler remaps short claim names (e.g.
+        // "sub" -> ClaimTypes.NameIdentifier) which desyncs the explicit
+        // RoleClaimType="role" / NameClaimType="sub" set below and makes
+        // [Authorize(Roles="admin")] return 403 even for a valid admin token.
+        options.MapInboundClaims = false;
         options.TokenValidationParameters = new TokenValidationParameters
         {
             ValidateIssuer = true,
