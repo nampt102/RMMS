@@ -6,6 +6,28 @@ Append-only chronological log of significant project milestones, decisions, and 
 
 ---
 
+## 2026-05-30 — Sprint 01 Day 9: tests + hardening (coverage gate met)
+
+**By:** Tech lead (MotivesVN IT), AI-assisted
+
+**Status:** ✅ Backend **96 unit tests** green. ✅ Web **vitest 8/8** + type-check + lint + build green. ✅ Coverage gate ≥70% met (generated code excluded): Domain 72.6%, Application 90.7%, combined 81.2%.
+
+### Backend unit tests (now 96, was 54)
+- **`LoginCommandHandlerTests`** (9) — BR-105 device check: first device → auto-active, same device → reuse, different device → 403 `DEVICE_NOT_AUTHORIZED` + pending row, non-PG device-less login, PG-without-device rejected; status/credential gates (wrong password, unknown email, pending-verify, inactive).
+- **`RegisterUserCommandHandlerTests`**, **`VerifyEmailCommandHandlerTests`**, **`LogoutCommandHandlerTests`**, **`GetMeQueryHandlerTests`** — previously only integration-covered handlers.
+- **`CommandValidatorTests`** (21) — all 9 M01 FluentValidation validators (Register/Login/Reset/Forgot/Logout/Refresh/VerifyEmail/CreateAdminUser/UpdateUser): valid + key invalid paths (weak password, bad email, bad OS, invalid role/status/language).
+
+### Web unit tests (vitest, new)
+- `vitest.config.ts` (happy-dom, `@`→`src` alias, automatic JSX runtime) + `vitest.setup.ts` (jest-dom).
+- `auth-error.test.ts` (envelope code, NETWORK_ERROR, INTERNAL_ERROR fallbacks), `login.test.tsx` (useLoginMutation persists tokens + maps `userId→id`; no store write on failure), `users/api.test.ts` (fetchUsers unwraps the double `data` envelope; filter forwarding).
+
+### Coverage
+- `coverlet.runsettings` excludes the source-generated Mediator dispatch/wrapper code (~1.3k lines emitted into `Rmms.Application`) + `[GeneratedCode]`/`[CompilerGenerated]` so the number reflects first-party logic. Run: `dotnet test ... --collect:"XPlat Code Coverage" --settings coverlet.runsettings`. **Result: Domain 72.6% · Application 90.7% · combined 81.2%** (≥70% gate). Without the exclusion the raw Application number is ~57% purely due to the generated Mediator plumbing that unit tests bypass by design.
+
+> Mobile widget tests (login + register) were delivered in the Day 3–9 mobile work; this entry covers the BE + web Day 9 items.
+
+---
+
 ## 2026-05-30 — Sprint 01 Day 8: error localization (vi/en) + Serilog enrichment + audit verification
 
 **By:** Tech lead (MotivesVN IT), AI-assisted

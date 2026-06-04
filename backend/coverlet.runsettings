@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  Coverage settings: dotnet test ... [settings] coverlet.runsettings
+
+  Excludes source-generated plumbing (the Mediator source generator emits ~1.3k lines of
+  dispatch/wrapper code into the Rmms.Application assembly) so the reported number reflects
+  first-party business logic, not generated infrastructure that unit tests intentionally
+  bypass (handlers are invoked directly).
+-->
+<RunSettings>
+  <DataCollectionRunSettings>
+    <DataCollectors>
+      <DataCollector friendlyName="XPlat code coverage">
+        <Configuration>
+          <Format>cobertura</Format>
+          <ExcludeByAttribute>GeneratedCodeAttribute,CompilerGeneratedAttribute,DebuggerNonUserCodeAttribute</ExcludeByAttribute>
+          <Exclude>[Rmms.Application]Mediator.*,[Rmms.Application]Microsoft.Extensions.DependencyInjection.*,[*]*HandlerWrapper*</Exclude>
+          <SkipAutoProps>true</SkipAutoProps>
+        </Configuration>
+      </DataCollector>
+    </DataCollectors>
+  </DataCollectionRunSettings>
+</RunSettings>
