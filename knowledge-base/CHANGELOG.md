@@ -6,6 +6,18 @@ Append-only chronological log of significant project milestones, decisions, and 
 
 ---
 
+## 2026-05-30 — Sprint 01 closed (CODE-COMPLETE) — Day 10 skipped
+
+**By:** Tech lead (MotivesVN IT), AI-assisted
+
+**Decision:** Sprint 01 (M01 Auth & Devices) is declared **code-complete** after Day 1–9. **Day 10 is skipped** — its items are manual/operational (UAT on physical Android/iOS devices, formal AC-1/AC-2 sign-off walkthrough, stakeholder demo, Swagger/OpenAPI export review) and are not blocking development. We move on to Sprint 02.
+
+- **Delivered (Day 1–9):** EF migration (M01+M02 foundation), 10 auth endpoints + `/auth/me/device-status`, admin user CRUD + seed CLI, JWT issue/rotate/reuse-detection, BR-105 device check **PG-only**, authz policies, `X-Idempotency-Key` middleware, login rate-limit, Hangfire token-cleanup job, error localization (vi/en) + Serilog enrichment + append-only audit (CR-1); **Web Admin** login + user management (list/create/edit/detail/reset) + client route guard + single-flight 401 refresh; **Mobile** full auth surface (register→verify→login→forgot/reset→device-pending) with `rmms://` deep links + auto-refresh.
+- **Quality:** 96 BE unit tests + integration tests (CI) + web vitest 8/8 + mobile widget tests; coverage gate met (Domain 72.6% / Application 90.7%, generated Mediator code excluded); 3 CI workflows green.
+- **⚠️ Deferred with Day 10 (NOT performed):** manual UAT on real devices, AC-1/AC-2 formal acceptance sign-off, live stakeholder demo, OpenAPI export review. Mobile FE still pending on-device verification on macOS (Flutter not installed on the Windows dev box). Carry these into Sprint 02 acceptance if formal sign-off is required.
+
+---
+
 ## 2026-05-30 — Sprint 01 Day 9: tests + hardening (coverage gate met)
 
 **By:** Tech lead (MotivesVN IT), AI-assisted
