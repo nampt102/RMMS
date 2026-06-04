@@ -4,6 +4,7 @@ using System.Net.Http.Json;
 using System.Text.Json;
 using FluentAssertions;
 using Rmms.IntegrationTests.Infrastructure;
+using Rmms.Shared.Errors;
 using Xunit;
 
 namespace Rmms.IntegrationTests;
@@ -83,6 +84,50 @@ public sealed class AuthFlowTests
     }
 
     [Fact]
+    public async Task RefreshTokenReuse_RevokesAllSessions_Returns401()
+    {
+        using var client = _factory.CreateClient();
+        var email = $"pg.{Guid.NewGuid():N}@example.com";
+        const string password = "Passw0rd1";
+
+        // Register -> verify -> login to obtain a usable refresh token (A).
+        await client.PostAsJsonAsync("/api/v1/auth/register", new
+        {
+            email,
+            password,
+            fullName = "Reuse PG",
+            phone = (string?)null,
+            preferredLanguage = "vi",
+        });
+        var verifyToken = _factory.Emails.LatestTokenFor(email);
+        await client.PostAsJsonAsync("/api/v1/auth/verify-email", new { token = verifyToken });
+
+        var login = await client.PostAsJsonAsync("/api/v1/auth/login", new
+        {
+            email,
+            password,
+            device = ApiHelpers.Device(),
+        });
+        login.StatusCode.Should().Be(HttpStatusCode.OK);
+        var (_, refreshA) = await ReadTokens(login);
+
+        // Rotate once: A -> B. A is now revoked (rotated).
+        var rotate = await client.PostAsJsonAsync("/api/v1/auth/refresh", new { refreshToken = refreshA });
+        rotate.StatusCode.Should().Be(HttpStatusCode.OK);
+        var (_, refreshB) = await ReadTokens(rotate);
+        refreshB.Should().NotBeNullOrEmpty().And.NotBe(refreshA);
+
+        // Replay the already-rotated token A -> reuse detected -> 401 + REFRESH_TOKEN_REUSED.
+        var reuse = await client.PostAsJsonAsync("/api/v1/auth/refresh", new { refreshToken = refreshA });
+        reuse.StatusCode.Should().Be(HttpStatusCode.Unauthorized);
+        (await ReadErrorCode(reuse)).Should().Be(ErrorCodes.RefreshTokenReused);
+
+        // Reuse nukes ALL active sessions, so the freshly issued B must also be dead now.
+        var afterNuke = await client.PostAsJsonAsync("/api/v1/auth/refresh", new { refreshToken = refreshB });
+        afterNuke.StatusCode.Should().Be(HttpStatusCode.Unauthorized);
+    }
+
+    [Fact]
     public async Task Login_WrongPassword_Returns401()
     {
         using var client = _factory.CreateClient();
@@ -104,5 +149,15 @@ public sealed class AuthFlowTests
         var access = data.TryGetProperty("accessToken", out var a) ? a.GetString() : null;
         var refresh = data.TryGetProperty("refreshToken", out var r) ? r.GetString() : null;
         return (access, refresh);
+    }
+
+    private static async Task<string?> ReadErrorCode(HttpResponseMessage resp)
+    {
+        var json = await resp.Content.ReadAsStringAsync();
+        using var doc = JsonDocument.Parse(json);
+        return doc.RootElement.TryGetProperty("error", out var error)
+            && error.TryGetProperty("code", out var code)
+            ? code.GetString()
+            : null;
     }
 }

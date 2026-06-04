@@ -6,6 +6,20 @@ Append-only chronological log of significant project milestones, decisions, and 
 
 ---
 
+## 2026-05-30 — Sprint 01 Day 7 follow-up: close gaps (user detail drawer, refresh-reuse integration test, web 401 refresh)
+
+**By:** Tech lead (MotivesVN IT), AI-assisted
+
+**Status:** ✅ Web `type-check` + `lint` + `build` green. ✅ Backend solution builds clean + 54 unit tests green; the new integration test compiles (runs on CI Linux — Testcontainers host resolution fails on the Windows/Docker dev box).
+
+- **FE-W user detail drawer** (was the missing "user detail page" from Day 7) — right-side AntD `Drawer` (520px) opened from a "Details" row action; `Descriptions` (bordered) for read-only fields (email copyable, full name, phone, role Tag, status, language, email-verified, last-login, created, updated; dates locale-formatted) + divider-separated status toggle (`Switch`) and danger reset-password (`Popconfirm`). Designed via the `ui-ux-pro-max` skill (Descriptions for key-value data, color+text status/role, destructive action separated + confirmed).
+- **BE refresh-reuse integration test** (was unit-only on Day 7) — `AuthFlowTests.RefreshTokenReuse_RevokesAllSessions_Returns401`: register→verify→login→rotate (A→B)→replay A ⇒ 401 `REFRESH_TOKEN_REUSED`, and the freshly issued B is also dead (reuse nukes all sessions). Adds `ReadErrorCode` helper.
+- **Web 401 refresh (bug fix)** — the admin users page surfaced a generic `INTERNAL_ERROR` toast with an empty table once the 15-min access token expired: an expired JWT yields a **401 with an empty body** (`WWW-Authenticate: Bearer error="invalid_token"`, no error envelope), so `errorCodeFromUnknown` fell back to `INTERNAL_ERROR`. `lib/api/client.ts` now refreshes the token on 401 (single-flight `/auth/refresh`, replay once; on failure clear store + redirect to `/{locale}/login`). This was a real gap — the web client previously had only a TODO for 401.
+
+> Day 7 is now complete (all plan lines implemented). Verified locally where the env allows (web build; backend build + unit tests); the reuse integration test is green on CI.
+
+---
+
 ## 2026-05-30 — Sprint 01 Day 7: Web Admin user management + route guard (FE-W) + refresh-reuse tests (BE)
 
 **By:** Tech lead (MotivesVN IT), AI-assisted
