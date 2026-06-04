@@ -83,8 +83,12 @@ builder.Services.Configure<Microsoft.AspNetCore.Builder.RequestLocalizationOptio
     o.SupportedUICultures = supportedCultures;
 });
 
+// ----- Error message localization (Day 8): vi/en by error code, applied via action filter -----
+builder.Services.AddSingleton<Rmms.Api.Localization.IErrorMessageLocalizer, Rmms.Api.Localization.ErrorMessageCatalog>();
+builder.Services.AddScoped<Rmms.Api.Localization.ErrorLocalizationFilter>();
+
 // ----- Controllers + JSON options -----
-builder.Services.AddControllers()
+builder.Services.AddControllers(options => options.Filters.Add<Rmms.Api.Localization.ErrorLocalizationFilter>())
     .AddJsonOptions(o =>
     {
         o.JsonSerializerOptions.PropertyNamingPolicy = System.Text.Json.JsonNamingPolicy.CamelCase;
@@ -141,7 +145,27 @@ if (args.Length > 0)
 }
 
 // ===== Middleware pipeline =====
-app.UseSerilogRequestLogging();
+app.UseSerilogRequestLogging(opts =>
+{
+    // Day 8: enrich the per-request completion log with identity + correlation properties.
+    opts.EnrichDiagnosticContext = (diagnostic, httpContext) =>
+    {
+        diagnostic.Set("TraceId", httpContext.TraceIdentifier);
+        var currentUser = httpContext.RequestServices.GetService<Rmms.Application.Common.Interfaces.ICurrentUser>();
+        if (currentUser?.UserId is { } userId)
+        {
+            diagnostic.Set("UserId", userId);
+        }
+        if (currentUser?.Role is { } role)
+        {
+            diagnostic.Set("Role", role.ToString().ToLowerInvariant());
+        }
+        if (currentUser?.DeviceId is { } deviceId && deviceId != Guid.Empty)
+        {
+            diagnostic.Set("DeviceId", deviceId);
+        }
+    };
+});
 app.UseMiddleware<ExceptionHandlingMiddleware>();
 app.UseRequestLocalization();
 
@@ -155,6 +179,10 @@ app.UseHttpsRedirection();
 app.UseCors(CorsPolicy);
 app.UseAuthentication();
 app.UseAuthorization();
+
+// Day 8: push TraceId/UserId/DeviceId/Role into the Serilog LogContext for all handler logs
+// (runs after auth so JWT claims are resolved).
+app.UseMiddleware<Rmms.Api.Logging.RequestEnrichmentMiddleware>();
 
 // Idempotent replay for mutations carrying X-Idempotency-Key (scoped per authenticated user).
 app.UseMiddleware<IdempotencyMiddleware>();

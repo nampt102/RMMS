@@ -6,6 +6,20 @@ Append-only chronological log of significant project milestones, decisions, and 
 
 ---
 
+## 2026-05-30 — Sprint 01 Day 8: error localization (vi/en) + Serilog enrichment + audit verification
+
+**By:** Tech lead (MotivesVN IT), AI-assisted
+
+**Status:** ✅ Backend solution builds clean + 54 unit tests + 5 catalog tests green (catalog runs locally, no container). Localization + audit integration tests compile and run on CI.
+
+- **Error message localization (vi/en)** — `IErrorMessageLocalizer` / `ErrorMessageCatalog` (code-keyed vi/en catalog) + `ErrorLocalizationFilter` (global `IActionFilter`) localize the `ErrorEnvelope.Error.Message` by error code for the active request culture (`Accept-Language` → `UseRequestLocalization`, default vi). Handlers keep one default (vi) message as a fallback; no per-controller changes. **Design note:** we key by `ErrorCodes` in a static catalog rather than authoring `.resx` XML — deterministic, unit-testable, and avoids resx path-convention pitfalls; same outcome the plan intended. Unknown codes pass through untouched.
+- **Serilog scope enrichment** — `RequestEnrichmentMiddleware` (after auth) pushes `TraceId` / `UserId` / `DeviceId` / `Role` into the Serilog `LogContext` so every handler log line carries them; the `UseSerilogRequestLogging` completion log is enriched via `EnrichDiagnosticContext` with the same properties (resolved from `ICurrentUser`).
+- **Audit verification (CR-1)** — `AuthFlowTests.AuthFlow_EmitsCr1AuditEntries` runs register→verify→login then queries `audit_log` by the user's id and asserts `user.registered` + `user.email_verified` + `auth.login_success` are present (complements existing per-handler `InMemoryAuditLogger` unit assertions).
+- **Tests** — `ErrorMessageCatalogTests` (vi default, en, regional culture → base, unknown code → null, unknown culture → vi); `Login_WrongCredentials_LocalizesMessage_ByAcceptLanguage` (en vs vi message via header, CI).
+- **i18n status** — mobile ARB (vi/en) for all auth screens and web next-intl strings (auth + admin + users + errors namespaces, vi/en) were already shipped in the Day 3–7 work, satisfying the Day 8 FE i18n items.
+
+---
+
 ## 2026-05-30 — Sprint 01 Day 7 follow-up: close gaps (user detail drawer, refresh-reuse integration test, web 401 refresh)
 
 **By:** Tech lead (MotivesVN IT), AI-assisted

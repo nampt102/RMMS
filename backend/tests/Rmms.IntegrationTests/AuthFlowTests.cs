@@ -3,6 +3,9 @@ using System.Net.Http.Headers;
 using System.Net.Http.Json;
 using System.Text.Json;
 using FluentAssertions;
+using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.DependencyInjection;
+using Rmms.Infrastructure.Persistence;
 using Rmms.IntegrationTests.Infrastructure;
 using Rmms.Shared.Errors;
 using Xunit;
@@ -128,6 +131,62 @@ public sealed class AuthFlowTests
     }
 
     [Fact]
+    public async Task Login_WrongCredentials_LocalizesMessage_ByAcceptLanguage()
+    {
+        using var client = _factory.CreateClient();
+
+        var en = new HttpRequestMessage(HttpMethod.Post, "/api/v1/auth/login")
+        {
+            Content = JsonContent.Create(new { email = "nobody@example.com", password = "WrongPwd1", device = ApiHelpers.Device() }),
+        };
+        en.Headers.Add("Accept-Language", "en");
+        var enResp = await client.SendAsync(en);
+        enResp.StatusCode.Should().Be(HttpStatusCode.Unauthorized);
+        (await ReadErrorMessage(enResp)).Should().Be("Wrong email or password.");
+
+        var vi = new HttpRequestMessage(HttpMethod.Post, "/api/v1/auth/login")
+        {
+            Content = JsonContent.Create(new { email = "nobody@example.com", password = "WrongPwd1", device = ApiHelpers.Device() }),
+        };
+        vi.Headers.Add("Accept-Language", "vi");
+        var viResp = await client.SendAsync(vi);
+        (await ReadErrorMessage(viResp)).Should().Be("Email hoặc mật khẩu không đúng.");
+    }
+
+    [Fact]
+    public async Task AuthFlow_EmitsCr1AuditEntries()
+    {
+        using var client = _factory.CreateClient();
+        var email = $"pg.{Guid.NewGuid():N}@example.com";
+        const string password = "Passw0rd1";
+
+        await client.PostAsJsonAsync("/api/v1/auth/register", new
+        {
+            email,
+            password,
+            fullName = "Audit PG",
+            phone = (string?)null,
+            preferredLanguage = "vi",
+        });
+        var verifyToken = _factory.Emails.LatestTokenFor(email);
+        await client.PostAsJsonAsync("/api/v1/auth/verify-email", new { token = verifyToken });
+        var login = await client.PostAsJsonAsync("/api/v1/auth/login", new { email, password, device = ApiHelpers.Device() });
+        login.StatusCode.Should().Be(HttpStatusCode.OK);
+
+        using var scope = _factory.Services.CreateScope();
+        var db = scope.ServiceProvider.GetRequiredService<AppDbContext>();
+        var user = await db.Users.SingleAsync(u => u.Email == email);
+        var actions = await db.AuditLogs
+            .Where(a => a.TargetId == user.Id)
+            .Select(a => a.Action)
+            .ToListAsync();
+
+        actions.Should().Contain("user.registered")
+            .And.Contain("user.email_verified")
+            .And.Contain("auth.login_success");
+    }
+
+    [Fact]
     public async Task Login_WrongPassword_Returns401()
     {
         using var client = _factory.CreateClient();
@@ -158,6 +217,16 @@ public sealed class AuthFlowTests
         return doc.RootElement.TryGetProperty("error", out var error)
             && error.TryGetProperty("code", out var code)
             ? code.GetString()
+            : null;
+    }
+
+    private static async Task<string?> ReadErrorMessage(HttpResponseMessage resp)
+    {
+        var json = await resp.Content.ReadAsStringAsync();
+        using var doc = JsonDocument.Parse(json);
+        return doc.RootElement.TryGetProperty("error", out var error)
+            && error.TryGetProperty("message", out var message)
+            ? message.GetString()
             : null;
     }
 }
