@@ -11,7 +11,8 @@
     "search": "Search",
     "yes": "Yes",
     "no": "No",
-    "back": "Back"
+    "back": "Back",
+    "delete": "Delete"
   },
   "auth": {
     "login": {
@@ -25,8 +26,69 @@
   "admin": {
     "appTitle": "RMMS Admin",
     "navUsers": "Users",
+    "navStores": "Stores",
+    "navAreas": "Areas",
+    "navCategories": "Categories",
     "navDevices": "Devices",
     "logout": "Sign out"
+  },
+  "stores": {
+    "title": "Store management",
+    "create": "Add store",
+    "createTitle": "Create a new store",
+    "editTitle": "Update store",
+    "search": "Search by code / name",
+    "code": "Code",
+    "name": "Name",
+    "address": "Address",
+    "area": "Area",
+    "status": "Status",
+    "gps": "GPS coords",
+    "latitude": "Latitude",
+    "longitude": "Longitude",
+    "createdAt": "Created at",
+    "actions": "Actions",
+    "edit": "Edit",
+    "activate": "Activate",
+    "deactivate": "Deactivate",
+    "activateConfirm": "Reactivate this store?",
+    "deactivateConfirm": "Deactivate this store? Ongoing schedules keep working until their end date.",
+    "deleteConfirm": "Delete this store?",
+    "createSuccess": "Store created.",
+    "updateSuccess": "Store updated.",
+    "statusSuccess": "Store status changed.",
+    "deleteSuccess": "Store deleted.",
+    "status_active": "Active",
+    "status_inactive": "Inactive"
+  },
+  "areas": {
+    "title": "Area management",
+    "create": "Add area",
+    "createTitle": "Create a new area",
+    "editTitle": "Update area",
+    "code": "Code",
+    "name": "Name",
+    "parent": "Parent area",
+    "actions": "Actions",
+    "edit": "Edit",
+    "deleteConfirm": "Delete this area?",
+    "createSuccess": "Area created.",
+    "updateSuccess": "Area updated.",
+    "deleteSuccess": "Area deleted."
+  },
+  "categories": {
+    "title": "Category management",
+    "create": "Add category",
+    "createTitle": "Create a new category",
+    "editTitle": "Update category",
+    "code": "Code",
+    "name": "Name",
+    "actions": "Actions",
+    "edit": "Edit",
+    "deleteConfirm": "Delete this category?",
+    "createSuccess": "Category created.",
+    "updateSuccess": "Category updated.",
+    "deleteSuccess": "Category deleted."
   },
   "devices": {
     "title": "Device change requests",
@@ -94,6 +156,11 @@
     "VALIDATION_FAILED": "Invalid data.",
     "NOT_FOUND": "Not found.",
     "NETWORK_ERROR": "Cannot reach the server. Check your connection and try again.",
-    "INTERNAL_ERROR": "Something went wrong."
+    "INTERNAL_ERROR": "Something went wrong.",
+    "CODE_ALREADY_EXISTS": "This code already exists. Please use a different one.",
+    "INVALID_REFERENCE": "Referenced item is invalid or does not exist.",
+    "INVALID_ASSIGNMENT": "Invalid assignment.",
+    "ASSIGNMENT_EXISTS": "This assignment already exists.",
+    "CONFLICT": "Conflict."
   }
 }

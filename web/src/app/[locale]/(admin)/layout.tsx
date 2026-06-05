@@ -1,7 +1,14 @@
 "use client";
 
 import { Button, Layout, Menu, Space, Typography } from "antd";
-import { LaptopOutlined, LogoutOutlined, TeamOutlined } from "@ant-design/icons";
+import {
+  AppstoreOutlined,
+  ApartmentOutlined,
+  LaptopOutlined,
+  LogoutOutlined,
+  ShopOutlined,
+  TeamOutlined,
+} from "@ant-design/icons";
 import { useTranslations } from "next-intl";
 import Link from "next/link";
 import { usePathname, useRouter } from "next/navigation";
@@ -53,6 +60,9 @@ export default function AdminLayout({
 
   const navItems = [
     { key: `/${locale}/users`, icon: <TeamOutlined />, label: <Link href={`/${locale}/users`}>{t("navUsers")}</Link> },
+    { key: `/${locale}/stores`, icon: <ShopOutlined />, label: <Link href={`/${locale}/stores`}>{t("navStores")}</Link> },
+    { key: `/${locale}/areas`, icon: <ApartmentOutlined />, label: <Link href={`/${locale}/areas`}>{t("navAreas")}</Link> },
+    { key: `/${locale}/categories`, icon: <AppstoreOutlined />, label: <Link href={`/${locale}/categories`}>{t("navCategories")}</Link> },
     { key: `/${locale}/devices`, icon: <LaptopOutlined />, label: <Link href={`/${locale}/devices`}>{t("navDevices")}</Link> },
   ];
   const selectedKey = navItems.find((i) => pathname.startsWith(i.key))?.key;

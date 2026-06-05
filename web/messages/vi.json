@@ -11,7 +11,8 @@
     "search": "Tìm kiếm",
     "yes": "Có",
     "no": "Không",
-    "back": "Quay lại"
+    "back": "Quay lại",
+    "delete": "Xoá"
   },
   "auth": {
     "login": {
@@ -25,8 +26,69 @@
   "admin": {
     "appTitle": "RMMS Quản trị",
     "navUsers": "Người dùng",
+    "navStores": "Điểm bán",
+    "navAreas": "Khu vực",
+    "navCategories": "Ngành hàng",
     "navDevices": "Thiết bị",
     "logout": "Đăng xuất"
+  },
+  "stores": {
+    "title": "Quản lý điểm bán",
+    "create": "Thêm điểm bán",
+    "createTitle": "Tạo điểm bán mới",
+    "editTitle": "Cập nhật điểm bán",
+    "search": "Tìm theo mã / tên",
+    "code": "Mã",
+    "name": "Tên",
+    "address": "Địa chỉ",
+    "area": "Khu vực",
+    "status": "Trạng thái",
+    "gps": "Toạ độ GPS",
+    "latitude": "Vĩ độ",
+    "longitude": "Kinh độ",
+    "createdAt": "Ngày tạo",
+    "actions": "Thao tác",
+    "edit": "Sửa",
+    "activate": "Kích hoạt",
+    "deactivate": "Vô hiệu hoá",
+    "activateConfirm": "Kích hoạt lại điểm bán này?",
+    "deactivateConfirm": "Vô hiệu hoá điểm bán này? Lịch đang chạy vẫn giữ nguyên đến ngày kết thúc.",
+    "deleteConfirm": "Xoá điểm bán này?",
+    "createSuccess": "Đã tạo điểm bán.",
+    "updateSuccess": "Đã cập nhật điểm bán.",
+    "statusSuccess": "Đã đổi trạng thái điểm bán.",
+    "deleteSuccess": "Đã xoá điểm bán.",
+    "status_active": "Đang hoạt động",
+    "status_inactive": "Ngừng hoạt động"
+  },
+  "areas": {
+    "title": "Quản lý khu vực",
+    "create": "Thêm khu vực",
+    "createTitle": "Tạo khu vực mới",
+    "editTitle": "Cập nhật khu vực",
+    "code": "Mã",
+    "name": "Tên",
+    "parent": "Khu vực cha",
+    "actions": "Thao tác",
+    "edit": "Sửa",
+    "deleteConfirm": "Xoá khu vực này?",
+    "createSuccess": "Đã tạo khu vực.",
+    "updateSuccess": "Đã cập nhật khu vực.",
+    "deleteSuccess": "Đã xoá khu vực."
+  },
+  "categories": {
+    "title": "Quản lý ngành hàng",
+    "create": "Thêm ngành hàng",
+    "createTitle": "Tạo ngành hàng mới",
+    "editTitle": "Cập nhật ngành hàng",
+    "code": "Mã",
+    "name": "Tên",
+    "actions": "Thao tác",
+    "edit": "Sửa",
+    "deleteConfirm": "Xoá ngành hàng này?",
+    "createSuccess": "Đã tạo ngành hàng.",
+    "updateSuccess": "Đã cập nhật ngành hàng.",
+    "deleteSuccess": "Đã xoá ngành hàng."
   },
   "devices": {
     "title": "Yêu cầu đổi thiết bị",
@@ -94,6 +156,11 @@
     "VALIDATION_FAILED": "Dữ liệu không hợp lệ.",
     "NOT_FOUND": "Không tìm thấy dữ liệu.",
     "NETWORK_ERROR": "Không kết nối được máy chủ. Kiểm tra mạng và thử lại.",
-    "INTERNAL_ERROR": "Đã xảy ra lỗi không mong muốn."
+    "INTERNAL_ERROR": "Đã xảy ra lỗi không mong muốn.",
+    "CODE_ALREADY_EXISTS": "Mã này đã tồn tại. Vui lòng dùng mã khác.",
+    "INVALID_REFERENCE": "Tham chiếu không hợp lệ hoặc không tồn tại.",
+    "INVALID_ASSIGNMENT": "Phân công không hợp lệ.",
+    "ASSIGNMENT_EXISTS": "Phân công này đã tồn tại.",
+    "CONFLICT": "Dữ liệu bị xung đột."
   }
 }
