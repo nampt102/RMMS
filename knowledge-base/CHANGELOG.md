@@ -6,6 +6,21 @@ Append-only chronological log of significant project milestones, decisions, and 
 
 ---
 
+## 2026-06-05 — Sprint 02 CLOSED
+
+**By:** Tech lead (MotivesVN IT), AI-assisted
+
+**Status:** ✅ Closed — core goal + AC-2 + AC-3 delivered (M02 + M03 across BE/web/mobile; 149 unit tests green).
+
+- **Done:** Admin CRUD (users/stores/areas/categories), assignment management (+ web panel), single-device enforcement (AC-2), device-change request flow end-to-end incl. Leader-scoped approval (AC-3, BR-106).
+- **Deferred (tracked, non-blocking):**
+  - Store **map view** (web) — list/CRUD/lat-lon shipped; interactive map needs a map library → **new ADR required** (no new UI lib without ADR).
+  - Mobile device-change **push** handling → **M14 Notification** (FCM infra); pending-approval screen already shipped; FCM token captured on login.
+  - **CSV bulk assignment** → Phase 2 (spec-marked).
+- **Next:** Sprint 03 → **M05 Attendance core** (attendance_records + state machine + history + Admin list; Face/M06, MinIO photos, and shift-binding/M07 deferred within S3).
+
+---
+
 ## 2026-06-05 — M03 close-out: macOS mobile verify + tooling/process
 
 **By:** Tech lead (MotivesVN IT), AI-assisted

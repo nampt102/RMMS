@@ -1,5 +1,7 @@
 # Sprint 2 — Phase 1A (W5-W6)
 
+> **STATUS: ✅ CLOSED (2026-06-05).** Core goal + AC-2 + AC-3 delivered (M02 + M03, BE/web/mobile, 149 unit tests green). Two items deferred with owners (see "Deferred" below) — not blocking.
+
 **Goal:** Org structure & assignment + Device management
 
 **Modules touched:** M2, M3
@@ -8,10 +10,16 @@
 
 ## Deliverables (Definition of Done)
 
-- [ ] Admin CRUD for users, stores, areas, categories
-- [ ] Assignment management
-- [ ] Single-device enforcement for PG
-- [ ] Device change request flow end-to-end
+- [x] Admin CRUD for users, stores, areas, categories
+- [x] Assignment management
+- [x] Single-device enforcement for PG
+- [x] Device change request flow end-to-end
+
+## Deferred (tracked, non-blocking)
+
+- **Store map view (web)** — list + CRUD + lat/lon shipped; interactive map view needs a map library (react-leaflet / Google Maps) → **requires a new ADR** (no new UI lib without ADR per CLAUDE.md). Deferred until that ADR.
+- **Mobile device-change push notification handling** — pending-approval screen shipped; FCM **push delivery** deferred to **M14 Notification** (FCM infra). FCM token is already captured/updated on login (`device.fcmToken`).
+- **CSV bulk assignment** — spec-marked Phase 2.
 
 ## User Stories / Key outcomes
 
