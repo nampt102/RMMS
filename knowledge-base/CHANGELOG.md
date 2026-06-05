@@ -18,8 +18,10 @@ Append-only chronological log of significant project milestones, decisions, and 
 - **Assignments** — `POST /admin/assignments/pg-leader` (re-assign ends previous active), `user-store` (assign + `DELETE` unassign), `user-category` (assign + `DELETE` unassign), `GET /admin/assignments/user/{id}` (leader + stores + categories).
 - **New error codes** — `CODE_ALREADY_EXISTS`, `INVALID_REFERENCE`, `INVALID_ASSIGNMENT`, `ASSIGNMENT_EXISTS` (+ vi/en catalog). New `AuditAction` constants for store/area/category/assignment.
 - **Web admin pages** — Stores (ProTable code/name/area/status/GPS, lat/lon `ProFormDigit`, activate/deactivate + delete confirmations), Areas (CRUD + optional parent), Categories (CRUD). Admin nav extended: Users · Stores · Areas · Categories · Devices. i18n vi+en.
+- **Web assignment panel** — `UserAssignmentsPanel` in the Users detail Drawer: PG→Leader `Select` (1:1), Store/Category closable Tags + add `Select` (1:N), empty states, localized errors, TanStack invalidation per user.
+- **Unit tests** — 35 M03 handler tests (xunit + FluentAssertions + EF InMemory); full suite **106 → 141 green**, 0 regressions. Covers create/dup/unknown-ref/notfound/reassign/idempotent/filter paths + GetUserAssignments.
 
-> **Not yet (M03 remaining):** assignment-panel UI (PG↔Leader, User↔Store/Category), unit tests (DoD ≥70%), mobile read endpoints (`/users/me/stores|leader`), then Leader-scoped device approval. Commits: `d93e172` (BE), `79464ab` (web), `efa3e23` (dev port 3010).
+> **Not yet (M03 remaining):** mobile read endpoints (`/users/me/stores|leader`), then Leader-scoped device approval. Commits: `d93e172` (BE), `79464ab` (web masters), `3c1c3b4` (assignment panel), `2645155` (tests), `efa3e23` (dev port 3010).
 
 ---
 
