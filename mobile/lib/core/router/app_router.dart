@@ -11,6 +11,7 @@ import '../../features/auth/presentation/screens/register_screen.dart';
 import '../../features/auth/presentation/screens/reset_password_screen.dart';
 import '../../features/auth/presentation/screens/verify_email_screen.dart';
 import '../../features/home/presentation/screens/home_screen.dart';
+import '../../features/organization/presentation/screens/my_assignments_screen.dart';
 import '../../l10n/generated/app_localizations.dart';
 
 /// Named routes — keep all path strings here.
@@ -25,6 +26,7 @@ class AppRoutes {
   static const String resetPassword = '/reset-password';
   static const String devicePending = '/device-pending';
   static const String home = '/';
+  static const String myAssignments = '/my-assignments';
   static const String checkIn = '/check-in';
   static const String checkOut = '/check-out';
 }
@@ -106,6 +108,10 @@ final appRouterProvider = Provider<GoRouter>((ref) {
       GoRoute(
         path: AppRoutes.home,
         builder: (context, state) => const HomeScreen(),
+      ),
+      GoRoute(
+        path: AppRoutes.myAssignments,
+        builder: (context, state) => const MyAssignmentsScreen(),
       ),
     ],
   );

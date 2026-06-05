@@ -88,5 +88,13 @@
   "homeRoleLabel": "Role: {role}",
   "@homeRoleLabel": {
     "placeholders": { "role": { "type": "String" } }
-  }
+  },
+  "homeViewAssignments": "View my assignments",
+
+  "assignmentsTitle": "My assignments",
+  "assignmentsLeader": "My Leader",
+  "assignmentsNoLeader": "No Leader assigned yet.",
+  "assignmentsStores": "My stores",
+  "assignmentsNoStores": "No stores assigned yet.",
+  "assignmentsError": "Couldn't load your assignments. Tap to retry."
 }

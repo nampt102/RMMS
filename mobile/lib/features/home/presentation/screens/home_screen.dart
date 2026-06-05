@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:go_router/go_router.dart';
 
+import '../../../../core/router/app_router.dart';
 import '../../../../l10n/generated/app_localizations.dart';
 import '../../../auth/application/auth_controller.dart';
 import '../../../auth/application/auth_state.dart';
@@ -41,6 +43,12 @@ class HomeScreen extends ConsumerWidget {
                 const SizedBox(height: 8),
                 Text(l.homeRoleLabel(user.role.name)),
               ],
+              const SizedBox(height: 24),
+              FilledButton.tonalIcon(
+                icon: const Icon(Icons.assignment_outlined),
+                label: Text(l.homeViewAssignments),
+                onPressed: () => context.push(AppRoutes.myAssignments),
+              ),
             ],
           ),
         ),

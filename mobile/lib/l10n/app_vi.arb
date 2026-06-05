@@ -89,5 +89,13 @@
   "homeRoleLabel": "Vai trò: {role}",
   "@homeRoleLabel": {
     "placeholders": { "role": { "type": "String" } }
-  }
+  },
+  "homeViewAssignments": "Xem phân công của tôi",
+
+  "assignmentsTitle": "Phân công của tôi",
+  "assignmentsLeader": "Leader quản lý",
+  "assignmentsNoLeader": "Chưa được gán Leader.",
+  "assignmentsStores": "Điểm bán của tôi",
+  "assignmentsNoStores": "Chưa được gán điểm bán.",
+  "assignmentsError": "Không tải được phân công. Chạm để thử lại."
 }
