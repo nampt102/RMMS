@@ -21,7 +21,11 @@ Append-only chronological log of significant project milestones, decisions, and 
 - **Web assignment panel** — `UserAssignmentsPanel` in the Users detail Drawer: PG→Leader `Select` (1:1), Store/Category closable Tags + add `Select` (1:N), empty states, localized errors, TanStack invalidation per user.
 - **Unit tests** — 35 M03 handler tests (xunit + FluentAssertions + EF InMemory); full suite **106 → 141 green**, 0 regressions. Covers create/dup/unknown-ref/notfound/reassign/idempotent/filter paths + GetUserAssignments.
 
-> **Not yet (M03 remaining):** mobile read endpoints (`/users/me/stores|leader`), then Leader-scoped device approval. Commits: `d93e172` (BE), `79464ab` (web masters), `3c1c3b4` (assignment panel), `2645155` (tests), `efa3e23` (dev port 3010).
+- **Mobile read endpoints** — `GET /users/me/stores` + `/users/me/leader` (AnyAuthenticated, identity from JWT, active assignments only). Flutter `organization` feature: Freezed `AssignedStore`/`AssignedLeader`, Dio api + repository, Riverpod providers, `MyAssignmentsScreen` (+ go_router route + Home button), vi/en ARB keys. (Mobile code-complete, pending macOS `build_runner` + `gen-l10n` + verify.)
+- **Leader-scoped device approval (BR-106)** — M02 endpoints `/devices/{pending,approve,reject}` switched AdminOnly → **AdminOrLeader**: Admins act on all; Leaders scoped to PGs they actively manage (`user_leader_assignments`). Non-managing Leader → `403 NOT_APPROVER` (no state change). New `AdminOrLeader` policy; `NOT_APPROVER` vi/en catalog entry.
+- **Tests** — total **149 green** (+8 since masters: 4 Me + 4 leader-scoping; device tests updated for new command signatures).
+
+> **M03 CODE-COMPLETE.** Commits: `d93e172` (BE masters), `79464ab` (web masters), `3c1c3b4` (assignment panel), `2645155` (unit tests), `64aac19` (mobile endpoints BE+Flutter), `5e65aac` (Leader-scoped approval), `efa3e23` (dev port 3010). **Next:** macOS mobile verify; then M04 work-schedules.
 
 ---
 
