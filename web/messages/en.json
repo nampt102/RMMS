@@ -24,7 +24,28 @@
   },
   "admin": {
     "appTitle": "RMMS Admin",
+    "navUsers": "Users",
+    "navDevices": "Devices",
     "logout": "Sign out"
+  },
+  "devices": {
+    "title": "Device change requests",
+    "userEmail": "Email",
+    "userFullName": "Full name",
+    "role": "Role",
+    "deviceName": "New device",
+    "os": "OS",
+    "requestedAt": "Requested at",
+    "actions": "Actions",
+    "approve": "Approve",
+    "approveConfirm": "Approve this new device? The current device will be replaced and signed out.",
+    "approveSuccess": "Device approved.",
+    "reject": "Reject",
+    "rejectTitle": "Reject device request",
+    "rejectReason": "Rejection reason",
+    "rejectReasonRequired": "Please enter a reason.",
+    "rejectSuccess": "Request rejected.",
+    "empty": "No pending device requests."
   },
   "users": {
     "title": "User management",

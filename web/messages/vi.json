@@ -24,7 +24,28 @@
   },
   "admin": {
     "appTitle": "RMMS Quản trị",
+    "navUsers": "Người dùng",
+    "navDevices": "Thiết bị",
     "logout": "Đăng xuất"
+  },
+  "devices": {
+    "title": "Yêu cầu đổi thiết bị",
+    "userEmail": "Email",
+    "userFullName": "Họ tên",
+    "role": "Vai trò",
+    "deviceName": "Thiết bị mới",
+    "os": "Hệ điều hành",
+    "requestedAt": "Thời điểm yêu cầu",
+    "actions": "Thao tác",
+    "approve": "Duyệt",
+    "approveConfirm": "Duyệt thiết bị mới này? Thiết bị cũ sẽ bị thay thế và đăng xuất.",
+    "approveSuccess": "Đã duyệt thiết bị.",
+    "reject": "Từ chối",
+    "rejectTitle": "Từ chối yêu cầu thiết bị",
+    "rejectReason": "Lý do từ chối",
+    "rejectReasonRequired": "Vui lòng nhập lý do.",
+    "rejectSuccess": "Đã từ chối yêu cầu.",
+    "empty": "Không có yêu cầu nào đang chờ duyệt."
   },
   "users": {
     "title": "Quản lý người dùng",

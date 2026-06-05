@@ -6,6 +6,21 @@ Append-only chronological log of significant project milestones, decisions, and 
 
 ---
 
+## 2026-05-31 — Sprint 02 M02: Device Requests admin page (web)
+
+**By:** Tech lead (MotivesVN IT), AI-assisted · designed via `ui-ux-pro-max`
+
+**Status:** ✅ Web type-check + lint (0 warnings) + build green; vitest 8/8.
+
+- **`(admin)/devices` page** — AntD ProTable listing `GET /api/v1/devices/pending` (columns: email, full name, role Tag, new device, OS, requested-at; locale-formatted date). Row actions: **Approve** (Popconfirm, primary affordance) → `POST /devices/:id/approve`; **Reject** (danger link → `ModalForm` requiring a reason, max 500, show-count) → `POST /devices/:id/reject`. Friendly **empty state** when no requests. Errors localized via `errorCodeFromUnknown`.
+- **`features/devices/`** — `fetchPendingDevices` (single-envelope unwrap) + TanStack `useApproveDevice` / `useRejectDevice`.
+- **Admin nav** — added a top `Menu` to `(admin)/layout.tsx` with Users + Devices links (active-route highlight via `usePathname`), so the two admin areas are discoverable.
+- **i18n** — `admin.navUsers/navDevices` + `devices.*` keys in `messages/{vi,en}.json`.
+
+> Applied `ui-ux-pro-max` guidance: approve = primary confirm, reject = destructive (danger) + reason modal, color+text role tags, helpful empty state, loading-safe async actions.
+
+---
+
 ## 2026-05-31 — Sprint 02 M02: device-change approval flow (BE)
 
 **By:** Tech lead (MotivesVN IT), AI-assisted

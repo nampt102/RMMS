@@ -1,9 +1,10 @@
 "use client";
 
-import { Button, Layout, Space, Typography } from "antd";
-import { LogoutOutlined } from "@ant-design/icons";
+import { Button, Layout, Menu, Space, Typography } from "antd";
+import { LaptopOutlined, LogoutOutlined, TeamOutlined } from "@ant-design/icons";
 import { useTranslations } from "next-intl";
-import { useRouter } from "next/navigation";
+import Link from "next/link";
+import { usePathname, useRouter } from "next/navigation";
 import { useEffect, useState } from "react";
 import { useAuthStore } from "@/lib/stores/auth-store";
 
@@ -27,6 +28,7 @@ export default function AdminLayout({
 }) {
   const t = useTranslations("admin");
   const router = useRouter();
+  const pathname = usePathname();
   const token = useAuthStore((s) => s.accessToken);
   const user = useAuthStore((s) => s.user);
   const clear = useAuthStore((s) => s.clear);
@@ -49,14 +51,30 @@ export default function AdminLayout({
     router.replace(`/${locale}/login`);
   };
 
+  const navItems = [
+    { key: `/${locale}/users`, icon: <TeamOutlined />, label: <Link href={`/${locale}/users`}>{t("navUsers")}</Link> },
+    { key: `/${locale}/devices`, icon: <LaptopOutlined />, label: <Link href={`/${locale}/devices`}>{t("navDevices")}</Link> },
+  ];
+  const selectedKey = navItems.find((i) => pathname.startsWith(i.key))?.key;
+
   return (
     <Layout className="min-h-screen">
-      <Header className="flex items-center justify-between">
-        <Text strong className="!text-white">
-          {t("appTitle")}
-        </Text>
+      <Header className="flex items-center justify-between gap-6">
+        <div className="flex min-w-0 items-center gap-6">
+          <Text strong className="whitespace-nowrap !text-white">
+            {t("appTitle")}
+          </Text>
+          <Menu
+            theme="dark"
+            mode="horizontal"
+            selectedKeys={selectedKey ? [selectedKey] : []}
+            items={navItems}
+            className="min-w-0 flex-1"
+            disabledOverflow
+          />
+        </div>
         <Space>
-          {user?.email && <Text className="!text-white/80">{user.email}</Text>}
+          {user?.email && <Text className="whitespace-nowrap !text-white/80">{user.email}</Text>}
           <Button type="text" icon={<LogoutOutlined />} className="!text-white" onClick={onLogout}>
             {t("logout")}
           </Button>
