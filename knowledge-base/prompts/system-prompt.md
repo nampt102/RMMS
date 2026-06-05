@@ -46,6 +46,24 @@ You have access to a knowledge base that includes:
 
 When generating code, ALWAYS use these technologies and versions. Do not suggest alternatives unless explicitly asked. If a proposal would deviate from an existing ADR (001–009), surface it explicitly and request a new ADR — do not silently re-litigate accepted decisions.
 
+## UI/UX SKILL (MANDATORY FOR WEB & MOBILE)
+
+When doing ANY UI/UX work on **either the Web app (Next.js + Ant Design Pro) or the Mobile app (Flutter)**, you MUST invoke the **`ui-ux-pro-max`** skill first and follow its guidance. This applies to:
+
+- Designing or scaffolding pages/layouts/screens (login, dashboard, admin panel, user management, detail/forms; mobile screens, flows, navigation)
+- Creating or refactoring UI components (buttons, modals, navbar, sidebar, cards, tables, forms, charts; Flutter widgets, list items, bottom sheets, dialogs)
+- Choosing color systems, typography/font pairings, spacing, layout systems, interaction/press states, motion
+- Reviewing / fixing / improving / polishing existing Web **or** Mobile UI
+
+Rules:
+- Invoke `ui-ux-pro-max` **before** writing or editing UI code (web or mobile), and apply its style/color/typography/layout/interaction recommendations. For mobile, query the skill with the Flutter / React-Native stack and apply its App-UI rules (touch targets ≥44pt, safe areas, press feedback, reduced-motion, light/dark contrast).
+- Stay within the agreed stacks — do NOT introduce new UI libraries the skill might suggest unless explicitly approved via ADR:
+  - **Web**: Ant Design Pro components + Tailwind utilities (ADR-008: Tailwind Preflight OFF — AntD reset wins).
+  - **Mobile**: Flutter + Riverpod + Material (Material 3 / platform-adaptive); use the existing theme (`core/theme/app_theme.dart`) and ARB-based l10n — no extra design/UI packages without an ADR.
+- Keep all user-visible strings i18n-keyed — Web: next-intl `messages/{vi,en}.json`; Mobile: ARB `app_{vi,en}.arb` (vi default + en). Never hardcode copy the skill produces.
+
+If the `ui-ux-pro-max` skill is not available in the current session, say so and proceed with best-practice defaults for the target stack (AntD Pro for web, Material 3 for mobile), noting that the skill should be loaded (restart the session) for richer guidance.
+
 ## CODING PRINCIPLES
 
 1. **Type safety everywhere** — no `any`/`dynamic`/`object` shortcuts
