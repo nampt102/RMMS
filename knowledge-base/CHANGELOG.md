@@ -6,6 +6,23 @@ Append-only chronological log of significant project milestones, decisions, and 
 
 ---
 
+## 2026-06-05 — Sprint 02 M03: Organization & Assignment (BE + web masters)
+
+**By:** Tech lead (MotivesVN IT), AI-assisted · web designed via `ui-ux-pro-max`
+
+**Status:** ✅ Backend builds clean (0 errors) + runtime smoke test pass (login → create area/store, assign pg-leader/user-store 204, GetUserAssignments OK). Web type-check + lint (0 warnings) + production build all green.
+
+- **Domain (M03)** — 6 aggregates: `Area` (self-ref hierarchy), `Category`, `Store` (GPS + `StoreStatus` enum), `UserLeaderAssignment` (1:1 active, effective-dated), `UserStoreAssignment` (1:N active), `UserCategoryAssignment`. Mirrors M01/M02 pattern (`AuditableEntity` + `IAggregateRoot`, factory methods, invariants).
+- **Migration `M03_Organization_Assignment`** — 6 tables + indexes; partial unique indexes enforce *one active Leader per PG* (`effective_to IS NULL`) and *one active store link per user*; unique `code` per master `WHERE deleted_at IS NULL`. Applied to dev DB.
+- **Backend CRUD** — `/admin/stores` (list paginated + area/status/search filter, create/update/status/delete), `/admin/areas`, `/admin/categories` (list+CRUD). All `AdminOnly`, soft-delete (ADR-004), audit (CR-1), FluentValidation, code-keyed vi/en errors.
+- **Assignments** — `POST /admin/assignments/pg-leader` (re-assign ends previous active), `user-store` (assign + `DELETE` unassign), `user-category` (assign + `DELETE` unassign), `GET /admin/assignments/user/{id}` (leader + stores + categories).
+- **New error codes** — `CODE_ALREADY_EXISTS`, `INVALID_REFERENCE`, `INVALID_ASSIGNMENT`, `ASSIGNMENT_EXISTS` (+ vi/en catalog). New `AuditAction` constants for store/area/category/assignment.
+- **Web admin pages** — Stores (ProTable code/name/area/status/GPS, lat/lon `ProFormDigit`, activate/deactivate + delete confirmations), Areas (CRUD + optional parent), Categories (CRUD). Admin nav extended: Users · Stores · Areas · Categories · Devices. i18n vi+en.
+
+> **Not yet (M03 remaining):** assignment-panel UI (PG↔Leader, User↔Store/Category), unit tests (DoD ≥70%), mobile read endpoints (`/users/me/stores|leader`), then Leader-scoped device approval. Commits: `d93e172` (BE), `79464ab` (web), `efa3e23` (dev port 3010).
+
+---
+
 ## 2026-05-31 — Sprint 02 M02: Device Requests admin page (web)
 
 **By:** Tech lead (MotivesVN IT), AI-assisted · designed via `ui-ux-pro-max`
