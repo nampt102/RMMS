@@ -6,6 +6,19 @@ Append-only chronological log of significant project milestones, decisions, and 
 
 ---
 
+## 2026-06-05 — M03 close-out: macOS mobile verify + tooling/process
+
+**By:** Tech lead (MotivesVN IT), AI-assisted
+
+**Status:** ✅ Mobile app verified on macOS dev box (analyze clean, app runs). All changes on `origin/main`.
+
+- **Mobile verified on macOS** — `flutter pub get` → `build_runner` (Freezed/json) → `gen-l10n` → `flutter analyze --fatal-infos --fatal-warnings` clean → app runs; M03 "My assignments" screen (stores + leader) works against `/users/me/*`.
+- **Analyzer cross-toolchain fix** — `prefer_initializing_formals` ignored in `mobile/analysis_options.yaml` (newer macOS analyzer flagged pre-existing Sprint-01 constructors; pinned CI Flutter 3.44 did not). M03 code already uses initializing formals. (`5bf9d11`)
+- **M03 test-data seed** — `backend/scripts/seed-m03-testdata.sql`: idempotent areas/stores/categories + assignments that bind to any existing PG/Leader; for spinning up demo data on a fresh DB (e.g. macOS box). (`b9efc5e`)
+- **UI/UX skill mandate extended to Mobile** — `ui-ux-pro-max` now MANDATORY for Flutter UI work too (was web-only), with App-UI rules (touch targets, safe areas, press feedback, contrast) and stack guardrails (Flutter + Riverpod + Material 3 + existing theme + ARB l10n, no new UI libs w/o ADR). Synced into both `CLAUDE.md` (`7bb4c0b`) and `knowledge-base/prompts/system-prompt.md` (`dc9f5d5`).
+
+---
+
 ## 2026-06-05 — Sprint 02 M03: Organization & Assignment (BE + web masters)
 
 **By:** Tech lead (MotivesVN IT), AI-assisted · web designed via `ui-ux-pro-max`
