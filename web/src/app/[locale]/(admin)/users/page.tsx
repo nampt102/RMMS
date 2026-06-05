@@ -21,6 +21,7 @@ import {
 } from "@/features/users/api";
 import type { AdminUser } from "@/features/users/types";
 import { errorCodeFromUnknown } from "@/features/auth/lib/auth-error";
+import { UserAssignmentsPanel } from "@/features/organization/UserAssignmentsPanel";
 
 const ROLE_COLORS: Record<string, string> = {
   pg: "blue",
@@ -275,6 +276,8 @@ export default function UsersPage() {
               {t("resetPassword")}
             </Button>
           </Popconfirm>
+
+          <UserAssignmentsPanel userId={detail.id} isPg={detail.role === "pg"} />
         </>
       )}
     </Drawer>

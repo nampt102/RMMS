@@ -8,11 +8,13 @@ import type {
   ListStoresParams,
   Store,
   UpdateStorePayload,
+  UserAssignments,
 } from "./types";
 
 const STORES_KEY = ["admin", "stores"] as const;
 const AREAS_KEY = ["admin", "areas"] as const;
 const CATEGORIES_KEY = ["admin", "categories"] as const;
+const ASSIGNMENTS_KEY = ["admin", "assignments"] as const;
 
 // ---------------- Stores ----------------
 
@@ -151,4 +153,69 @@ export function useDeleteCategory() {
     },
     onSuccess: () => qc.invalidateQueries({ queryKey: CATEGORIES_KEY }),
   });
+}
+
+// ---------------- Assignments ----------------
+
+/** All active stores for dropdowns (Phase 1: first 100 — see note in M03 spec). */
+export function useAllStores() {
+  return useQuery({
+    queryKey: [...STORES_KEY, "all"],
+    queryFn: async () => {
+      const { data } = await apiClient.get<ApiResponse<PaginatedResponse<Store>>>("/admin/stores", {
+        params: { page: 1, pageSize: 100 },
+      });
+      return data.data.data;
+    },
+  });
+}
+
+/** A user's active assignments (leader + stores + categories). */
+export function useUserAssignments(userId: string | null) {
+  return useQuery({
+    queryKey: [...ASSIGNMENTS_KEY, userId],
+    enabled: userId !== null,
+    queryFn: async () => {
+      const { data } = await apiClient.get<ApiResponse<UserAssignments>>(`/admin/assignments/user/${userId}`);
+      return data.data;
+    },
+  });
+}
+
+function useAssignmentMutation<TVars>(fn: (vars: TVars) => Promise<void>, userId: string | null) {
+  const qc = useQueryClient();
+  return useMutation({
+    mutationFn: fn,
+    onSuccess: () => qc.invalidateQueries({ queryKey: [...ASSIGNMENTS_KEY, userId] }),
+  });
+}
+
+export function useAssignPgLeader(userId: string | null) {
+  return useAssignmentMutation<string>(async (leaderUserId) => {
+    await apiClient.post("/admin/assignments/pg-leader", { pgUserId: userId, leaderUserId });
+  }, userId);
+}
+
+export function useAssignUserStore(userId: string | null) {
+  return useAssignmentMutation<string>(async (storeId) => {
+    await apiClient.post("/admin/assignments/user-store", { userId, storeId });
+  }, userId);
+}
+
+export function useUnassignUserStore(userId: string | null) {
+  return useAssignmentMutation<string>(async (storeId) => {
+    await apiClient.delete("/admin/assignments/user-store", { params: { userId, storeId } });
+  }, userId);
+}
+
+export function useAssignUserCategory(userId: string | null) {
+  return useAssignmentMutation<string>(async (categoryId) => {
+    await apiClient.post("/admin/assignments/user-category", { userId, categoryId });
+  }, userId);
+}
+
+export function useUnassignUserCategory(userId: string | null) {
+  return useAssignmentMutation<string>(async (categoryId) => {
+    await apiClient.delete("/admin/assignments/user-category", { params: { userId, categoryId } });
+  }, userId);
 }

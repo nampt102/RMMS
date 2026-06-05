@@ -90,6 +90,19 @@
     "updateSuccess": "Đã cập nhật ngành hàng.",
     "deleteSuccess": "Đã xoá ngành hàng."
   },
+  "assignments": {
+    "title": "Phân công",
+    "leader": "Leader quản lý",
+    "leaderPlaceholder": "Chọn Leader cho PG này",
+    "stores": "Điểm bán được gán",
+    "storesPlaceholder": "Thêm điểm bán...",
+    "noStores": "Chưa gán điểm bán nào",
+    "categories": "Ngành hàng được gán",
+    "categoriesPlaceholder": "Thêm ngành hàng...",
+    "noCategories": "Chưa gán ngành hàng nào",
+    "assignSuccess": "Đã cập nhật phân công.",
+    "unassignSuccess": "Đã gỡ phân công."
+  },
   "devices": {
     "title": "Yêu cầu đổi thiết bị",
     "userEmail": "Email",

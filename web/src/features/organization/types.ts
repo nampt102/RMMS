@@ -54,3 +54,16 @@ export type UpdateStorePayload = {
   longitude: number;
   areaId?: string;
 };
+
+// ---- Assignments (mirrors Rmms.Application.Organization.Assignments DTOs) ----
+
+export type AssignedRef = { id: string; code: string; name: string };
+
+export type AssignedLeader = { leaderUserId: string; fullName: string; email: string };
+
+export type UserAssignments = {
+  userId: string;
+  leader: AssignedLeader | null;
+  stores: AssignedRef[];
+  categories: AssignedRef[];
+};

@@ -90,6 +90,19 @@
     "updateSuccess": "Category updated.",
     "deleteSuccess": "Category deleted."
   },
+  "assignments": {
+    "title": "Assignments",
+    "leader": "Managing Leader",
+    "leaderPlaceholder": "Select a Leader for this PG",
+    "stores": "Assigned stores",
+    "storesPlaceholder": "Add a store...",
+    "noStores": "No stores assigned yet",
+    "categories": "Assigned categories",
+    "categoriesPlaceholder": "Add a category...",
+    "noCategories": "No categories assigned yet",
+    "assignSuccess": "Assignment updated.",
+    "unassignSuccess": "Assignment removed."
+  },
   "devices": {
     "title": "Device change requests",
     "userEmail": "Email",
