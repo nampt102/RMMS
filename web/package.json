@@ -4,7 +4,7 @@
   "private": true,
   "description": "RMMS 2026 — Admin & BUH web (Next.js 14 + AntD Pro)",
   "scripts": {
-    "dev": "next dev -p 3000",
+    "dev": "next dev -p 3010",
     "build": "next build",
     "start": "next start -p 3000",
     "lint": "next lint",

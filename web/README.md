@@ -7,8 +7,10 @@ Next.js 14 App Router · TypeScript · Ant Design Pro · TanStack Query · Zusta
 ```bash
 cp .env.example .env.local
 pnpm install            # or `npm install`
-pnpm dev                # http://localhost:3000
+pnpm dev                # http://localhost:3010
 ```
+
+> Dev runs on port **3010** (not 3000): some editors — e.g. Cursor/VS Code auto port-forward — hijack `localhost:3000` and return empty replies. Production (`next start`, Docker/Caddy per ADR-007) stays on 3000.
 
 The dev server proxies `/api/proxy/*` → `NEXT_PUBLIC_API_BASE_URL` (default `http://localhost:5080`).
 
