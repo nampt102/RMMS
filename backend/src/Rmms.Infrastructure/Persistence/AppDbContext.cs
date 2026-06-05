@@ -3,6 +3,7 @@ using Rmms.Application.Common.Interfaces;
 using Rmms.Domain.Audit;
 using Rmms.Domain.Auth;
 using Rmms.Domain.Devices;
+using Rmms.Domain.Organization;
 using Rmms.Domain.Users;
 
 namespace Rmms.Infrastructure.Persistence;
@@ -25,6 +26,14 @@ public sealed class AppDbContext : DbContext, IAppDbContext
 
     // ----- M02 Device Management -----
     public DbSet<UserDevice> UserDevices => Set<UserDevice>();
+
+    // ----- M03 Organization & Assignment -----
+    public DbSet<Area> Areas => Set<Area>();
+    public DbSet<Store> Stores => Set<Store>();
+    public DbSet<Category> Categories => Set<Category>();
+    public DbSet<UserLeaderAssignment> UserLeaderAssignments => Set<UserLeaderAssignment>();
+    public DbSet<UserStoreAssignment> UserStoreAssignments => Set<UserStoreAssignment>();
+    public DbSet<UserCategoryAssignment> UserCategoryAssignments => Set<UserCategoryAssignment>();
 
     // ----- Cross-cutting -----
     public DbSet<AuditLog> AuditLogs => Set<AuditLog>();

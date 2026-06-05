@@ -42,6 +42,10 @@ public sealed class ErrorMessageCatalog : IErrorMessageLocalizer
             [ErrorCodes.EmailTokenExpired] = ("Liên kết xác minh đã hết hạn. Vui lòng đăng ký lại để nhận liên kết mới.", "The verification link has expired. Please register again for a new one."),
             [ErrorCodes.EmailTokenUsed] = ("Liên kết xác minh đã được sử dụng.", "This verification link has already been used."),
             [ErrorCodes.IdempotencyKeyReused] = ("Yêu cầu trùng lặp đang được xử lý.", "A duplicate request is already in progress."),
+            [ErrorCodes.CodeAlreadyExists] = ("Mã này đã tồn tại. Vui lòng dùng mã khác.", "This code already exists. Please use a different one."),
+            [ErrorCodes.InvalidReference] = ("Tham chiếu không hợp lệ hoặc không tồn tại.", "Referenced item is invalid or does not exist."),
+            [ErrorCodes.InvalidAssignment] = ("Phân công không hợp lệ.", "Invalid assignment."),
+            [ErrorCodes.AssignmentExists] = ("Phân công này đã tồn tại.", "This assignment already exists."),
         };
 
     public string? Localize(string code, string culture)

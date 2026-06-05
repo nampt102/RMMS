@@ -2,6 +2,7 @@ using Microsoft.EntityFrameworkCore;
 using Rmms.Domain.Audit;
 using Rmms.Domain.Auth;
 using Rmms.Domain.Devices;
+using Rmms.Domain.Organization;
 using Rmms.Domain.Users;
 
 namespace Rmms.Application.Common.Interfaces;
@@ -22,6 +23,14 @@ public interface IAppDbContext
 
     // ----- M02 Device Management -----
     DbSet<UserDevice> UserDevices { get; }
+
+    // ----- M03 Organization & Assignment -----
+    DbSet<Area> Areas { get; }
+    DbSet<Store> Stores { get; }
+    DbSet<Category> Categories { get; }
+    DbSet<UserLeaderAssignment> UserLeaderAssignments { get; }
+    DbSet<UserStoreAssignment> UserStoreAssignments { get; }
+    DbSet<UserCategoryAssignment> UserCategoryAssignments { get; }
 
     // ----- Cross-cutting -----
     DbSet<AuditLog> AuditLogs { get; }

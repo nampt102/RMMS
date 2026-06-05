@@ -45,6 +45,12 @@ public static class ErrorCodes
     public const string EmailTokenExpired = "EMAIL_TOKEN_EXPIRED";
     public const string EmailTokenUsed = "EMAIL_TOKEN_USED";
 
+    // ---------- Organization & Assignment (M03) ----------
+    public const string CodeAlreadyExists = "CODE_ALREADY_EXISTS";
+    public const string InvalidReference = "INVALID_REFERENCE";
+    public const string InvalidAssignment = "INVALID_ASSIGNMENT";
+    public const string AssignmentExists = "ASSIGNMENT_EXISTS";
+
     // ---------- Form Engine ----------
     public const string FormNotAssigned = "FORM_NOT_ASSIGNED";
     public const string FormExpired = "FORM_EXPIRED";

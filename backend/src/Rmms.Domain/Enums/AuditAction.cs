@@ -31,5 +31,25 @@ public static class AuditAction
     public const string DeviceApproved = "device.approved";
     public const string DeviceRejected = "device.rejected";
 
-    // (M03+ actions appended here as modules ship)
+    // ----- M03 Organization & Assignment -----
+    public const string StoreCreated = "store.created";
+    public const string StoreUpdated = "store.updated";
+    public const string StoreStatusChanged = "store.status_changed";
+    public const string StoreDeleted = "store.deleted";
+
+    public const string AreaCreated = "area.created";
+    public const string AreaUpdated = "area.updated";
+    public const string AreaDeleted = "area.deleted";
+
+    public const string CategoryCreated = "category.created";
+    public const string CategoryUpdated = "category.updated";
+    public const string CategoryDeleted = "category.deleted";
+
+    public const string PgLeaderAssigned = "assignment.pg_leader_assigned";
+    public const string UserStoreAssigned = "assignment.user_store_assigned";
+    public const string UserStoreUnassigned = "assignment.user_store_unassigned";
+    public const string UserCategoryAssigned = "assignment.user_category_assigned";
+    public const string UserCategoryUnassigned = "assignment.user_category_unassigned";
+
+    // (M04+ actions appended here as modules ship)
 }
