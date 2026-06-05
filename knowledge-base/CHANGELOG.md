@@ -6,6 +6,24 @@ Append-only chronological log of significant project milestones, decisions, and 
 
 ---
 
+## 2026-05-31 — Sprint 02 M02: device-change approval flow (BE)
+
+**By:** Tech lead (MotivesVN IT), AI-assisted
+
+**Status:** ✅ Backend solution builds clean + 106 unit tests green (+10 device tests). AC-3 integration test compiles (runs on CI).
+
+Implements the BR-106 device-change approval flow on top of the Sprint 01 foundation (`user_devices` + pending rows + `UserDevice.Approve/Reject/MarkReplaced`):
+
+- **Endpoints** (`DevicesController`): `GET /api/v1/devices/me` (caller's active + pending device), `GET /api/v1/devices/pending` (Admin — requests awaiting approval), `POST /api/v1/devices/{id}/approve`, `POST /api/v1/devices/{id}/reject` (reason required).
+- **Approve** (`ApproveDeviceCommandHandler`): the requested device → Active; the user's current Active device → Replaced and its refresh tokens revoked (old app logs out on next refresh, per BR-106); audit `device.approved`. Guards: not-found → 404, non-pending → 409 `APPROVAL_NOT_PENDING`.
+- **Reject** (`RejectDeviceCommandHandler` + validator): pending → Rejected; audit `device.rejected` with reason; empty reason → 422 `REJECT_REASON_REQUIRED`.
+- **Queries**: `GetPendingDevicesQuery` (pending list + owner email/name/role), `GetMyDeviceQuery` (active + pending summary for the caller).
+- **Tests**: `DeviceApprovalHandlerTests` (approve replaces+revokes+audits, not-found, non-pending, reject, reject-validator), `DeviceQueryHandlerTests` (pending list, my-device active+pending, empty); `DeviceApprovalTests` integration (login device-1 ok → device-2 403 → admin approves → device-2 logs in).
+
+> **Scope note:** approval endpoints are `AdminOnly` this slice — fully satisfies AC-3 via the Admin path. **Leader-scoped approval** (a Leader approving only their assigned PGs) + the Leader mobile/web UI are enabled once M03 `user_leader_assignments` ships; switch the policy to Leader+Admin and add the assignment filter then. FCM push + email notification on new device requests also remain (M02 carry-forward).
+
+---
+
 ## 2026-05-30 — Sprint 01 closed (CODE-COMPLETE) — Day 10 skipped
 
 **By:** Tech lead (MotivesVN IT), AI-assisted
