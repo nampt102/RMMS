@@ -63,11 +63,20 @@ void main() {
     await tester.enterText(fields.at(4), confirm); // confirm
   }
 
+  /// Register form is a scrollable ListView — submit sits below the fold on the
+  /// default 800×600 test surface after filling all fields.
+  Future<void> tapSubmit(WidgetTester tester) async {
+    final submit = find.widgetWithText(FilledButton, 'Đăng ký');
+    await tester.ensureVisible(submit);
+    await tester.pumpAndSettle();
+    await tester.tap(submit);
+  }
+
   testWidgets('blocks submit when the confirmation does not match',
       (tester) async {
     await pump(tester);
     await fillValid(tester, confirm: 'different1');
-    await tester.tap(find.widgetWithText(FilledButton, 'Đăng ký'));
+    await tapSubmit(tester);
     await tester.pump();
 
     expect(find.text('Mật khẩu xác nhận không khớp.'), findsOneWidget);
@@ -83,7 +92,7 @@ void main() {
   testWidgets('registers and navigates on a valid submission', (tester) async {
     await pump(tester);
     await fillValid(tester, confirm: 'password1');
-    await tester.tap(find.widgetWithText(FilledButton, 'Đăng ký'));
+    await tapSubmit(tester);
     await tester.pumpAndSettle();
 
     verify(() => repo.register(
