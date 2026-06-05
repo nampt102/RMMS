@@ -12,6 +12,10 @@ analyzer:
     missing_required_param: error
     missing_return: error
     todo: ignore
+    # Constructor-body field assignment (`: _x = x`) is an intentional, readable
+    # style here. Newer analyzer/lints bundles flag this; the pinned CI toolchain
+    # (Flutter 3.44) does not. Ignore for cross-toolchain consistency.
+    prefer_initializing_formals: ignore
   language:
     strict-casts: true
     strict-inference: true
