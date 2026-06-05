@@ -4,6 +4,8 @@ using Rmms.Application.Devices.RejectDevice;
 using Rmms.Domain.Auth;
 using Rmms.Domain.Devices;
 using Rmms.Domain.Enums;
+using Rmms.Domain.Organization;
+using Rmms.Domain.Users;
 using Rmms.Infrastructure.Persistence;
 using Rmms.Shared.Errors;
 using Rmms.UnitTests.Common;
@@ -43,7 +45,7 @@ public sealed class DeviceApprovalHandlerTests
 
         var audit = new InMemoryAuditLogger();
         var result = await new ApproveDeviceCommandHandler(db, audit, clock)
-            .Handle(new ApproveDeviceCommand(pending.Id, approverId), default);
+            .Handle(new ApproveDeviceCommand(pending.Id, approverId, ApproverIsAdmin: true), default);
 
         result.IsSuccess.Should().BeTrue();
         db.UserDevices.Single(d => d.DeviceId == "dev-new").Status.Should().Be(DeviceStatus.Active);
@@ -57,7 +59,7 @@ public sealed class DeviceApprovalHandlerTests
     {
         await using var db = TestDbContextFactory.Create();
         var result = await new ApproveDeviceCommandHandler(db, new InMemoryAuditLogger(), new TestClock())
-            .Handle(new ApproveDeviceCommand(Guid.NewGuid(), Guid.NewGuid()), default);
+            .Handle(new ApproveDeviceCommand(Guid.NewGuid(), Guid.NewGuid(), ApproverIsAdmin: true), default);
 
         result.IsFailure.Should().BeTrue();
         result.Error.Code.Should().Be(ErrorCodes.NotFound);
@@ -73,7 +75,7 @@ public sealed class DeviceApprovalHandlerTests
         await db.SaveChangesAsync();
 
         var result = await new ApproveDeviceCommandHandler(db, new InMemoryAuditLogger(), clock)
-            .Handle(new ApproveDeviceCommand(active.Id, Guid.NewGuid()), default);
+            .Handle(new ApproveDeviceCommand(active.Id, Guid.NewGuid(), ApproverIsAdmin: true), default);
 
         result.IsFailure.Should().BeTrue();
         result.Error.Code.Should().Be(ErrorCodes.ApprovalNotPending);
@@ -90,7 +92,7 @@ public sealed class DeviceApprovalHandlerTests
 
         var audit = new InMemoryAuditLogger();
         var result = await new RejectDeviceCommandHandler(db, audit, clock)
-            .Handle(new RejectDeviceCommand(pending.Id, Guid.NewGuid(), "Không nhận ra thiết bị này"), default);
+            .Handle(new RejectDeviceCommand(pending.Id, Guid.NewGuid(), "Không nhận ra thiết bị này", ApproverIsAdmin: true), default);
 
         result.IsSuccess.Should().BeTrue();
         db.UserDevices.Single().Status.Should().Be(DeviceStatus.Rejected);
@@ -106,10 +108,66 @@ public sealed class DeviceApprovalHandlerTests
         await db.SaveChangesAsync();
 
         var result = await new RejectDeviceCommandHandler(db, new InMemoryAuditLogger(), clock)
-            .Handle(new RejectDeviceCommand(active.Id, Guid.NewGuid(), "reason"), default);
+            .Handle(new RejectDeviceCommand(active.Id, Guid.NewGuid(), "reason", ApproverIsAdmin: true), default);
 
         result.IsFailure.Should().BeTrue();
         result.Error.Code.Should().Be(ErrorCodes.ApprovalNotPending);
+    }
+
+    [Fact]
+    public async Task Approve_AsManagingLeader_Succeeds()
+    {
+        await using var db = TestDbContextFactory.Create();
+        var clock = new TestClock();
+        var leader = User.CreateByAdmin("leader@example.com", "plain:Pwd12345", "Leader", UserRole.Leader, null, "vi");
+        var pg = UserFactory.CreateActivePg("pg@example.com");
+        db.Users.AddRange(leader, pg);
+        db.UserLeaderAssignments.Add(UserLeaderAssignment.Create(pg.Id, leader.Id, new DateOnly(2026, 6, 1)));
+        var pending = SeedPending(db, pg.Id, "dev-new");
+        await db.SaveChangesAsync();
+
+        var result = await new ApproveDeviceCommandHandler(db, new InMemoryAuditLogger(), clock)
+            .Handle(new ApproveDeviceCommand(pending.Id, leader.Id, ApproverIsAdmin: false), default);
+
+        result.IsSuccess.Should().BeTrue();
+        db.UserDevices.Single(d => d.DeviceId == "dev-new").Status.Should().Be(DeviceStatus.Active);
+    }
+
+    [Fact]
+    public async Task Approve_AsNonManagingLeader_ReturnsNotApprover()
+    {
+        await using var db = TestDbContextFactory.Create();
+        var clock = new TestClock();
+        var leader = User.CreateByAdmin("leader@example.com", "plain:Pwd12345", "Leader", UserRole.Leader, null, "vi");
+        var pg = UserFactory.CreateActivePg("pg@example.com"); // NOT managed by leader
+        db.Users.AddRange(leader, pg);
+        var pending = SeedPending(db, pg.Id, "dev-new");
+        await db.SaveChangesAsync();
+
+        var result = await new ApproveDeviceCommandHandler(db, new InMemoryAuditLogger(), clock)
+            .Handle(new ApproveDeviceCommand(pending.Id, leader.Id, ApproverIsAdmin: false), default);
+
+        result.IsFailure.Should().BeTrue();
+        result.Error.Code.Should().Be(ErrorCodes.NotApprover);
+        db.UserDevices.Single().Status.Should().Be(DeviceStatus.PendingApproval, "rejected approval must not mutate state");
+    }
+
+    [Fact]
+    public async Task Reject_AsNonManagingLeader_ReturnsNotApprover()
+    {
+        await using var db = TestDbContextFactory.Create();
+        var clock = new TestClock();
+        var leader = User.CreateByAdmin("leader@example.com", "plain:Pwd12345", "Leader", UserRole.Leader, null, "vi");
+        var pg = UserFactory.CreateActivePg("pg@example.com");
+        db.Users.AddRange(leader, pg);
+        var pending = SeedPending(db, pg.Id, "dev-new");
+        await db.SaveChangesAsync();
+
+        var result = await new RejectDeviceCommandHandler(db, new InMemoryAuditLogger(), clock)
+            .Handle(new RejectDeviceCommand(pending.Id, leader.Id, "no", ApproverIsAdmin: false), default);
+
+        result.IsFailure.Should().BeTrue();
+        result.Error.Code.Should().Be(ErrorCodes.NotApprover);
     }
 
     [Theory]
@@ -117,7 +175,7 @@ public sealed class DeviceApprovalHandlerTests
     [InlineData("   ")]
     public void RejectValidator_RequiresReason(string reason)
     {
-        var r = new RejectDeviceCommandValidator().Validate(new RejectDeviceCommand(Guid.NewGuid(), Guid.NewGuid(), reason));
+        var r = new RejectDeviceCommandValidator().Validate(new RejectDeviceCommand(Guid.NewGuid(), Guid.NewGuid(), reason, ApproverIsAdmin: true));
         r.IsValid.Should().BeFalse();
         r.Errors.Should().Contain(e => e.ErrorCode == "REJECT_REASON_REQUIRED");
     }

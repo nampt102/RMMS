@@ -2,6 +2,9 @@ using FluentAssertions;
 using Rmms.Application.Devices.GetMyDevice;
 using Rmms.Application.Devices.GetPendingDevices;
 using Rmms.Domain.Devices;
+using Rmms.Domain.Enums;
+using Rmms.Domain.Organization;
+using Rmms.Domain.Users;
 using Rmms.UnitTests.Common;
 using Xunit;
 
@@ -20,7 +23,8 @@ public sealed class DeviceQueryHandlerTests
         db.UserDevices.Add(UserDevice.RegisterPendingApproval(pg.Id, "dev-pending", "Pending", "android", "14", "1.0.0", null));
         await db.SaveChangesAsync();
 
-        var result = await new GetPendingDevicesQueryHandler(db).Handle(new GetPendingDevicesQuery(), default);
+        var result = await new GetPendingDevicesQueryHandler(db)
+            .Handle(new GetPendingDevicesQuery(Guid.NewGuid(), IsAdmin: true), default);
 
         result.IsSuccess.Should().BeTrue();
         result.Value.Should().ContainSingle();
@@ -28,6 +32,28 @@ public sealed class DeviceQueryHandlerTests
         dto.UserEmail.Should().Be("pg@example.com");
         dto.DeviceName.Should().Be("Pending");
         dto.UserRole.Should().Be("pg");
+    }
+
+    [Fact]
+    public async Task GetPending_AsLeader_ReturnsOnlyManagedPgRequests()
+    {
+        await using var db = TestDbContextFactory.Create();
+        var today = new DateOnly(2026, 6, 1);
+        var leader = User.CreateByAdmin("leader@example.com", "plain:Pwd12345", "Leader", UserRole.Leader, null, "vi");
+        var managedPg = UserFactory.CreateActivePg("managed@example.com");
+        var otherPg = UserFactory.CreateActivePg("other@example.com");
+        db.Users.AddRange(leader, managedPg, otherPg);
+        db.UserLeaderAssignments.Add(UserLeaderAssignment.Create(managedPg.Id, leader.Id, today));
+        db.UserDevices.Add(UserDevice.RegisterPendingApproval(managedPg.Id, "dev-managed", "Managed", "android", "14", "1.0.0", null));
+        db.UserDevices.Add(UserDevice.RegisterPendingApproval(otherPg.Id, "dev-other", "Other", "android", "14", "1.0.0", null));
+        await db.SaveChangesAsync();
+
+        var result = await new GetPendingDevicesQueryHandler(db)
+            .Handle(new GetPendingDevicesQuery(leader.Id, IsAdmin: false), default);
+
+        result.IsSuccess.Should().BeTrue();
+        result.Value.Should().ContainSingle();
+        result.Value[0].UserEmail.Should().Be("managed@example.com");
     }
 
     [Fact]

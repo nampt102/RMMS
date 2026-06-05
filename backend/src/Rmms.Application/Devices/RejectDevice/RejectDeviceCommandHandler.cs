@@ -34,6 +34,17 @@ internal sealed class RejectDeviceCommandHandler : IRequestHandler<RejectDeviceC
             return Result.Failure(Error.Conflict(ErrorCodes.ApprovalNotPending, "Yêu cầu thiết bị không ở trạng thái chờ duyệt."));
         }
 
+        // Leader-scoping (BR-106): a Leader may only reject devices of PGs they actively manage.
+        if (!command.ApproverIsAdmin)
+        {
+            var manages = await _db.UserLeaderAssignments.AnyAsync(
+                a => a.LeaderUserId == command.ApproverUserId && a.PgUserId == device.UserId && a.EffectiveTo == null, ct);
+            if (!manages)
+            {
+                return Result.Failure(Error.Forbidden(ErrorCodes.NotApprover, "Bạn không quản lý PG này nên không thể từ chối thiết bị."));
+            }
+        }
+
         device.Reject(command.ApproverUserId, _clock.UtcNow);
 
         await _audit.RecordAsync(

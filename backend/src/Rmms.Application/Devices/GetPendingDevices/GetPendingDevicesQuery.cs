@@ -4,11 +4,12 @@ using Rmms.Domain.Common;
 namespace Rmms.Application.Devices.GetPendingDevices;
 
 /// <summary>
-/// Lists device-change requests awaiting approval (BR-106). Sprint 02 slice: Admin-scoped.
-/// Leader-scoped listing (only the leader's assigned PGs) is enabled once M03
-/// <c>user_leader_assignments</c> exists.
+/// Lists device-change requests awaiting approval (BR-106).
+/// Admins see all pending requests; Leaders see only requests from PGs they actively
+/// manage (via M03 <c>user_leader_assignments</c>, <c>effective_to IS NULL</c>).
 /// </summary>
-public sealed record GetPendingDevicesQuery : IRequest<Result<IReadOnlyList<PendingDeviceDto>>>;
+public sealed record GetPendingDevicesQuery(Guid CallerUserId, bool IsAdmin)
+    : IRequest<Result<IReadOnlyList<PendingDeviceDto>>>;
 
 public sealed record PendingDeviceDto(
     Guid DeviceId,

@@ -11,6 +11,7 @@ using Rmms.Application.Devices.GetMyDevice;
 using Rmms.Application.Devices.GetPendingDevices;
 using Rmms.Application.Devices.RejectDevice;
 using Rmms.Domain.Common;
+using Rmms.Domain.Enums;
 using Rmms.Shared.Errors;
 
 namespace Rmms.Api.Controllers;
@@ -18,9 +19,9 @@ namespace Rmms.Api.Controllers;
 /// <summary>
 /// Device management (M02 / BR-105 / BR-106).
 ///
-/// Sprint 02 slice: approval endpoints are <see cref="AuthorizationPolicies.AdminOnly"/>.
-/// Leader-scoped approval (a Leader approving only their assigned PGs) is enabled once
-/// M03 <c>user_leader_assignments</c> ships — switch the policy + add the assignment filter then.
+/// Approval endpoints are <see cref="AuthorizationPolicies.AdminOrLeader"/>: Admins act on
+/// all requests; Leaders are scoped (in the handlers) to PGs they actively manage via M03
+/// <c>user_leader_assignments</c>.
 /// </summary>
 [ApiController]
 [Route("api/v1/devices")]
@@ -34,6 +35,8 @@ public sealed class DevicesController : ControllerBase
         _mediator = mediator;
         _currentUser = currentUser;
     }
+
+    private bool CallerIsAdmin => _currentUser.Role == UserRole.Admin;
 
     /// <summary>The caller's active device + any pending device-change request.</summary>
     [HttpGet("me")]
@@ -53,23 +56,29 @@ public sealed class DevicesController : ControllerBase
             : ResultMapping.Failure(result.Error, HttpContext.TraceIdentifier);
     }
 
-    /// <summary>Device-change requests awaiting approval (Admin).</summary>
+    /// <summary>Device-change requests awaiting approval (Admin: all; Leader: own PGs).</summary>
     [HttpGet("pending")]
-    [Authorize(Policy = AuthorizationPolicies.AdminOnly)]
+    [Authorize(Policy = AuthorizationPolicies.AdminOrLeader)]
     [ProducesResponseType(typeof(object), StatusCodes.Status200OK)]
     [ProducesResponseType(StatusCodes.Status403Forbidden)]
     public async Task<IActionResult> Pending(CancellationToken ct)
     {
-        var result = await _mediator.Send(new GetPendingDevicesQuery(), ct);
+        if (_currentUser.UserId is not { } callerId)
+        {
+            return Unauthorized();
+        }
+
+        var result = await _mediator.Send(new GetPendingDevicesQuery(callerId, CallerIsAdmin), ct);
         return result.IsSuccess
             ? ResultMapping.Ok(result.Value)
             : ResultMapping.Failure(result.Error, HttpContext.TraceIdentifier);
     }
 
-    /// <summary>Approve a pending device-change request (BR-106).</summary>
+    /// <summary>Approve a pending device-change request (BR-106). Admin: any; Leader: own PGs.</summary>
     [HttpPost("{id:guid}/approve")]
-    [Authorize(Policy = AuthorizationPolicies.AdminOnly)]
+    [Authorize(Policy = AuthorizationPolicies.AdminOrLeader)]
     [ProducesResponseType(StatusCodes.Status204NoContent)]
+    [ProducesResponseType(StatusCodes.Status403Forbidden)]
     [ProducesResponseType(StatusCodes.Status404NotFound)]
     [ProducesResponseType(StatusCodes.Status409Conflict)]
     public async Task<IActionResult> Approve([FromRoute] Guid id, CancellationToken ct)
@@ -79,16 +88,17 @@ public sealed class DevicesController : ControllerBase
             return Unauthorized();
         }
 
-        var result = await _mediator.Send(new ApproveDeviceCommand(id, approverId), ct);
+        var result = await _mediator.Send(new ApproveDeviceCommand(id, approverId, CallerIsAdmin), ct);
         return result.IsSuccess
             ? NoContent()
             : ResultMapping.Failure(result.Error, HttpContext.TraceIdentifier);
     }
 
-    /// <summary>Reject a pending device-change request with a reason (BR-106).</summary>
+    /// <summary>Reject a pending device-change request with a reason (BR-106). Admin: any; Leader: own PGs.</summary>
     [HttpPost("{id:guid}/reject")]
-    [Authorize(Policy = AuthorizationPolicies.AdminOnly)]
+    [Authorize(Policy = AuthorizationPolicies.AdminOrLeader)]
     [ProducesResponseType(StatusCodes.Status204NoContent)]
+    [ProducesResponseType(StatusCodes.Status403Forbidden)]
     [ProducesResponseType(StatusCodes.Status404NotFound)]
     [ProducesResponseType(StatusCodes.Status409Conflict)]
     [ProducesResponseType(StatusCodes.Status422UnprocessableEntity)]
@@ -99,7 +109,7 @@ public sealed class DevicesController : ControllerBase
             return Unauthorized();
         }
 
-        var result = await _mediator.Send(new RejectDeviceCommand(id, approverId, request.Reason), ct);
+        var result = await _mediator.Send(new RejectDeviceCommand(id, approverId, request.Reason, CallerIsAdmin), ct);
         return result.IsSuccess
             ? NoContent()
             : ResultMapping.Failure(result.Error, HttpContext.TraceIdentifier);

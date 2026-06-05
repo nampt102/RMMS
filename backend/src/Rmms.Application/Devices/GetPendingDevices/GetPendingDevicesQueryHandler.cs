@@ -16,9 +16,21 @@ internal sealed class GetPendingDevicesQueryHandler
 
     public async ValueTask<Result<IReadOnlyList<PendingDeviceDto>>> Handle(GetPendingDevicesQuery query, CancellationToken ct)
     {
-        var rows = await _db.UserDevices
+        var pending = _db.UserDevices
             .AsNoTracking()
-            .Where(d => d.Status == DeviceStatus.PendingApproval)
+            .Where(d => d.Status == DeviceStatus.PendingApproval);
+
+        // Leaders only see requests from PGs they actively manage (M03 BR scoping).
+        if (!query.IsAdmin)
+        {
+            var managedPgIds = _db.UserLeaderAssignments
+                .AsNoTracking()
+                .Where(a => a.LeaderUserId == query.CallerUserId && a.EffectiveTo == null)
+                .Select(a => a.PgUserId);
+            pending = pending.Where(d => managedPgIds.Contains(d.UserId));
+        }
+
+        var rows = await pending
             .Join(_db.Users, d => d.UserId, u => u.Id, (d, u) => new
             {
                 d.Id,

@@ -19,6 +19,7 @@ public static class AuthorizationPolicies
     public const string BuhOnly = "BuhOnly";
     public const string AdminOnly = "AdminOnly";
     public const string PgOrLeader = "PgOrLeader";
+    public const string AdminOrLeader = "AdminOrLeader";
     public const string AnyAuthenticated = "AnyAuthenticated";
 
     // Lowercase role claim values — must match JwtTokenService output.
@@ -40,6 +41,7 @@ public static class AuthorizationPolicies
             options.AddPolicy(BuhOnly, p => p.RequireRole(RoleBuh));
             options.AddPolicy(AdminOnly, p => p.RequireRole(RoleAdmin));
             options.AddPolicy(PgOrLeader, p => p.RequireRole(RolePg, RoleLeader));
+            options.AddPolicy(AdminOrLeader, p => p.RequireRole(RoleAdmin, RoleLeader));
             options.AddPolicy(AnyAuthenticated, p => p.RequireAuthenticatedUser());
         });
 

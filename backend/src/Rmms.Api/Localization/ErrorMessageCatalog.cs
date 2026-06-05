@@ -46,6 +46,7 @@ public sealed class ErrorMessageCatalog : IErrorMessageLocalizer
             [ErrorCodes.InvalidReference] = ("Tham chiếu không hợp lệ hoặc không tồn tại.", "Referenced item is invalid or does not exist."),
             [ErrorCodes.InvalidAssignment] = ("Phân công không hợp lệ.", "Invalid assignment."),
             [ErrorCodes.AssignmentExists] = ("Phân công này đã tồn tại.", "This assignment already exists."),
+            [ErrorCodes.NotApprover] = ("Bạn không có quyền duyệt yêu cầu của PG này.", "You are not authorized to approve this PG's request."),
         };
 
     public string? Localize(string code, string culture)
