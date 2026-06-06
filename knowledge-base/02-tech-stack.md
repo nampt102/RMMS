@@ -23,7 +23,7 @@
 | Mobile HTTP | Dio + Retrofit | latest | API client |
 | Mobile storage | Hive | 2.x | Offline drafts, local cache |
 | Auth | Custom JWT | — | Access + Refresh tokens |
-| Face Recognition | FPT.AI Face | API | Identity verification |
+| Face Recognition | CompreFace (self-hosted, Docker) | v1.2.x | Identity verification — InsightFace/FaceNet under the hood; replaces FPT.AI per ADR-011 |
 | Push notification | Firebase Cloud Messaging | — | iOS + Android push |
 | Email | SendGrid (start), AWS SES (scale) | — | Transactional email |
 | File storage | MinIO (self-host) → S3 | — | Photos, documents |

@@ -1,0 +1,93 @@
+# ============================================================
+# RMMS 2026 — CompreFace (self-hosted face recognition, ADR-011)
+# Pinned to CompreFace v1.2.0 (Apache-2.0, exadel-inc/CompreFace).
+#
+# Run alongside the main stack (shares the external `rmms-net` network so the
+# API can reach it as http://compreface-fe:8080):
+#   docker network create rmms-net   # if not already created by the root compose
+#   docker compose -f infra/compreface/docker-compose.yml up -d
+#
+# Then open the UI at http://<host>:8000, create an account, an Application and a
+# "Recognition" service, and copy that service's API key into .env as
+# CompreFace__ApiKey. CPU model (~3–4 GB RAM) — ensure the VPS has headroom.
+# Not exposed through Caddy; keep it on the internal network only.
+# ============================================================
+name: rmms-compreface
+
+services:
+  compreface-postgres-db:
+    image: exadel/compreface-postgres-db:1.2.0
+    container_name: compreface-postgres-db
+    restart: unless-stopped
+    environment:
+      POSTGRES_USER: ${COMPREFACE_POSTGRES_USER:-compreface}
+      POSTGRES_PASSWORD: ${COMPREFACE_POSTGRES_PASSWORD:-compreface_dev_pw}
+      POSTGRES_DB: ${COMPREFACE_POSTGRES_DB:-frs}
+    volumes:
+      - compreface-pgdata:/var/lib/postgresql/data
+    networks: [rmms-net]
+
+  compreface-admin:
+    image: exadel/compreface-admin:1.2.0
+    container_name: compreface-admin
+    restart: unless-stopped
+    environment:
+      POSTGRES_USER: ${COMPREFACE_POSTGRES_USER:-compreface}
+      POSTGRES_PASSWORD: ${COMPREFACE_POSTGRES_PASSWORD:-compreface_dev_pw}
+      POSTGRES_URL: jdbc:postgresql://compreface-postgres-db:5432/${COMPREFACE_POSTGRES_DB:-frs}
+      SPRING_PROFILES_ACTIVE: dev
+      ENABLE_EMAIL_SERVER: "false"
+      ADMIN_JAVA_OPTS: -Xmx1g
+    depends_on:
+      - compreface-postgres-db
+      - compreface-api
+    networks: [rmms-net]
+
+  compreface-api:
+    image: exadel/compreface-api:1.2.0
+    container_name: compreface-api
+    restart: unless-stopped
+    environment:
+      POSTGRES_USER: ${COMPREFACE_POSTGRES_USER:-compreface}
+      POSTGRES_PASSWORD: ${COMPREFACE_POSTGRES_PASSWORD:-compreface_dev_pw}
+      POSTGRES_URL: jdbc:postgresql://compreface-postgres-db:5432/${COMPREFACE_POSTGRES_DB:-frs}
+      SPRING_PROFILES_ACTIVE: dev
+      API_JAVA_OPTS: -Xmx1g
+      SAVE_IMAGES_TO_DB: "true"
+    depends_on:
+      - compreface-postgres-db
+      - compreface-core
+    networks: [rmms-net]
+
+  compreface-core:
+    image: exadel/compreface-core:1.2.0
+    container_name: compreface-core
+    restart: unless-stopped
+    environment:
+      # CPU model; switch to a GPU image + runtime if the VPS has a GPU (ADR-011).
+      ML_PORT: 3000
+      UWSGI_PROCESSES: 2
+      UWSGI_THREADS: 1
+    networks: [rmms-net]
+
+  compreface-fe:
+    image: exadel/compreface-fe:1.2.0
+    container_name: compreface-fe
+    restart: unless-stopped
+    environment:
+      CLIENT_MAX_BODY_SIZE: 10M
+      PROXY_READ_TIMEOUT: 60000ms
+      ADMIN_API_JAVA_OPTS: -Xmx512m
+    ports:
+      - "8000:80"   # CompreFace UI / gateway (UI only — backend reaches it as compreface-fe:8080 internally)
+    depends_on:
+      - compreface-api
+      - compreface-admin
+    networks: [rmms-net]
+
+volumes:
+  compreface-pgdata:
+
+networks:
+  rmms-net:
+    external: true

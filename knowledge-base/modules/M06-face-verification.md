@@ -17,20 +17,25 @@
 
 Xác định đúng PG/Leader khi chấm công, tránh check-in hộ.
 
+> **Engine: self-hosted CompreFace (ADR-011), replacing FPT.AI.** Biometric embeddings live
+> inside CompreFace on our own VPS; our DB stores only the CompreFace `subject` id. A
+> config-gated dev face client keeps the flow exercisable without the service (tests/CI/local).
+
 ## Scope (Phase 1)
 
-- PG tự enroll khuôn mặt lần đầu (3 ảnh: front, left, right)
-- Lưu face template trong FPT.AI (chỉ ID reference trong DB)
-- Face verification BẮT BUỘC tại check-in/out
-- Capture selfie HD (1080p min) tại thời điểm verify
-- Nếu fail → tạo Admin Review entry
-- Admin xem selfie + so sánh với enrolled photo
+- PG tự enroll khuôn mặt lần đầu (3 ảnh: front, left, right) → đẩy vào CompreFace dưới `subject = userId`
+- Embedding (template) lưu trong **CompreFace self-hosted**; DB chỉ giữ `subject` id (`users.face_template_external_id`)
+- Face verification BẮT BUỘC tại check-in/out (CompreFace `recognize`: khớp khi `subject==userId` và `similarity ≥ ngưỡng 0.85`)
+- Capture selfie HD (1080p min) tại thời điểm verify; selfie gốc lưu MinIO (TTL 90 ngày, CR-4)
+- Nếu fail → attendance `FaceFailPendingReview` (Admin Review queue, không tạo bảng riêng — dùng status-driven của M05)
+- Admin xem selfie + so sánh với enrolled photo (lấy từ CompreFace/MinIO)
 - Admin action: confirm correct → attendance success / confirm wrong → no attendance
-- Re-enroll face khi cần (Admin trigger)
+- Re-enroll face khi cần (Admin trigger → xoá subject, buộc enroll lại)
 
 ## Data Entities
 
-- (uses users.face_template_external_id, users.face_enrolled_at)
+- (uses `users.face_template_external_id` = CompreFace subject id, `users.face_enrolled_at`)
+- No new table — embeddings are owned by CompreFace; review uses the M05 status-driven queue.
 
 See `04-data-model.md` for column-level definitions.
 
@@ -73,13 +78,14 @@ See `06-business-rules.md` for rule details.
 
 ## Key Implementation Notes
 
-- Vendor: FPT.AI Face API (primary), AWS Rekognition (backup option in S0 PoC)
-- Confidence threshold: 0.85 default — to be tuned during S4
-- Latency budget: <2s API call (else Mobile shows progress)
-- Privacy: face template stored in vendor, NOT in our DB
-- Selfies stored in MinIO with 90-day TTL, encrypted at rest
-- Liveness detection: enable if FPT.AI supports (paid feature), else manual via Admin review
-- Cost monitoring: alert if monthly verify count >10x average
+- **Engine: CompreFace (self-hosted, ADR-011)** — Docker service on the VPS, internal network only (not proxied by Caddy). Backend calls it via the `IFaceClient` port; a deterministic **dev face client** is used when `CompreFace:ApiKey` is unset (tests/CI/local), real `CompreFaceClient` when configured.
+- Endpoints used: enroll `POST /api/v1/recognition/faces?subject=<userId>`; verify `POST /api/v1/recognition/recognize`; remove `DELETE /api/v1/recognition/subjects/<userId>` (header `x-api-key`, multipart `file`).
+- Confidence threshold: **0.85** default — tune during S4. Match requires top `subject == userId`.
+- Latency budget: <2s (CPU model). If missed → enable GPU model or scale the CompreFace core.
+- Privacy: face **embeddings stored inside CompreFace** on our infra, NOT in our PostgreSQL (DB keeps only the subject id). Raw selfies in MinIO, 90-day TTL (CR-4).
+- Resource: CompreFace CPU model ≈ 3–4 GB RAM + its own Postgres → verify VPS headroom before enabling the `face` compose profile.
+- Face API down → attendance → `pending_review` (never a hard failure).
+- Liveness/anti-spoofing: CompreFace plugins if needed; else manual via Admin review.
 
 ## Definition of Done
 

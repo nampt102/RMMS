@@ -28,7 +28,7 @@ The repository now contains a working **scaffold** for all three apps:
 - ✅ **First EF migration generated** — `Init_M01_M02_Foundation` creates 7 tables + indexes + partial unique index `WHERE status='active'` enforcing BR-105 at DB level; post-migration SQL `001_audit_log_append_only.sql` revokes UPDATE/DELETE on `audit_log` per CR-1
 - ✅ **CI/CD green on main** — all 3 workflows pass: backend (Restore→Format→Build→Tests with Postgres+Redis services), web (Lint→Type-check→Test→Build), mobile (pub get→build_runner→Format→Analyze→Tests). Android APK smoke build deferred to Sprint 03 release.yml (Flutter#169475 upstream regression).
 - ❌ **No endpoints yet** — only `/api/v1/health` from scaffold; M01 endpoints (`/auth/*`, `/admin/users/*`) land in Day 2-7
-- ✅ **All 10 ADRs authored** — `decisions/ADR-001..010.md` covers Modular Monolith, Mediator (Othmar), UUID v7, soft-delete interceptor, snake_case naming, PostGIS-deferred, Caddy reverse proxy, Tailwind preflight-off, .NET 10 LTS, and react-leaflet+OSM store map
+- ✅ **All 11 ADRs authored** — `decisions/ADR-001..011.md` covers Modular Monolith, Mediator (Othmar), UUID v7, soft-delete interceptor, snake_case naming, PostGIS-deferred, Caddy reverse proxy, Tailwind preflight-off, .NET 10 LTS, react-leaflet+OSM store map, and self-hosted CompreFace face verification
 - ✅ **Mobile toolchain pinned** — Flutter 3.44, Dart 3.12, AGP 8.11, Kotlin 2.2.20, Gradle 8.13, JDK 17 (verified compatible with Flutter team's stable matrix)
 - ✅ **Service abstractions in Application** — `IPasswordHasher`, `IJwtTokenService`, `IRefreshTokenGenerator`, `IEmailSender`, `IAuditLogger`, `IClientContext` (implementations in Infrastructure: BCrypt cost 12, HS256 JWT, SHA-256 hashed refresh tokens, console email for Dev, append-only audit logger)
 
@@ -123,7 +123,7 @@ RMMS/                                       # root
 
 ## Architecture decisions made (all formalized as ADRs)
 
-All 9 ADRs are **Accepted** and live in `knowledge-base/decisions/`:
+All 11 ADRs are **Accepted** and live in `knowledge-base/decisions/`:
 
 | ID | Decision | Date |
 |---|---|---|
@@ -137,6 +137,7 @@ All 9 ADRs are **Accepted** and live in `knowledge-base/decisions/`:
 | [ADR-008](./decisions/ADR-008-tailwind-preflight-disabled.md) | Tailwind Preflight disabled — Ant Design reset wins | 2026-05-26 |
 | [ADR-009](./decisions/ADR-009-dotnet-10-lts.md) | .NET 10 LTS adopted; .NET 8 and .NET 9 rejected | 2026-05-24 |
 | [ADR-010](./decisions/ADR-010-store-map-react-leaflet.md) | react-leaflet + OpenStreetMap for store map view (Google Maps / Mapbox rejected) | 2026-06-06 |
+| [ADR-011](./decisions/ADR-011-compreface-self-hosted-face.md) | Self-hosted CompreFace for Face Verification — replaces FPT.AI (privacy + no per-call cost) | 2026-06-06 |
 
 ---
 
