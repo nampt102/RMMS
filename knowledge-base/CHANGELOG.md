@@ -6,6 +6,17 @@ Append-only chronological log of significant project milestones, decisions, and 
 
 ---
 
+## 2026-06-06 — Sprint 05 closed: M07 Work Schedule — mobile edit + themed status
+
+**By:** Tech lead (MotivesVN IT), AI-assisted
+
+**Status:** ✅ Sprint 05 DoD met. M07 backend + versioning (BR-308) were built ahead (16 unit tests); this entry closes the remaining mobile gap.
+
+- **Mobile edit flow:** `RegisterScheduleScreen` now supports an `editSchedule` param (single-day edit mode: prefilled shifts, hidden mode/date selectors) → `PATCH /schedule/{id}` via new `ScheduleApi.edit` / `ScheduleRepository.edit`. Editing an **approved** schedule triggers the BR-308 new-version flow (old stays effective until re-approval). `WorkSchedule.isEditable` (pending/edit_pending/approved) gates an **Edit** action on each schedule card; route passes the schedule via `extra`.
+- **Theme polish:** schedule status chips now use the themed `StatusPill` (success/warning/danger/info/neutral tones + icons) instead of hardcoded colors. ARB keys `scheduleEdit` / `registerEditTitle` / `registerEditHint` / `registerEditSaved` (vi default + en).
+- **Already complete (built ahead):** BE aggregate + CRUD + approve/reject + Leader scoping; web `/schedules` team overview with approve/reject; mobile register wizard (day/week/month) + multi-shift editor + submit/withdraw.
+- **Next:** Sprint 06 — M09 Approval Workflow Engine + BUH email-link (AC-17/18/19).
+
 ## 2026-06-06 — M06 CompreFace stack live + admin-side face enrollment (Sprint 04)
 
 **By:** Tech lead (MotivesVN IT), AI-assisted

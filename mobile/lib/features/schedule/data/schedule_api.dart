@@ -68,6 +68,21 @@ class ScheduleApi {
     return const [];
   }
 
+  /// Replace a schedule's shifts — `PATCH /schedule/{id}`. Returns the resulting
+  /// schedule id (a NEW version id when editing an approved schedule, BR-308).
+  Future<String> edit(String id, List<ShiftInput> shifts) async {
+    final response = await _dio.patch<Map<String, dynamic>>(
+      '/schedule/$id',
+      data: {'shifts': shifts.map((s) => s.toJson()).toList()},
+      options: _idempotent(),
+    );
+    final data = response.data?['data'];
+    if (data is Map<String, dynamic> && data['id'] is String) {
+      return data['id'] as String;
+    }
+    return id;
+  }
+
   /// Submit a draft for approval — `POST /schedule/{id}/submit`.
   Future<void> submit(String id) async {
     await _dio.post<void>('/schedule/$id/submit', options: _idempotent());

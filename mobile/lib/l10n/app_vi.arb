@@ -150,6 +150,7 @@
   "scheduleTitle": "Lịch làm việc",
   "scheduleEmpty": "Chưa có lịch trong 30 ngày tới.",
   "scheduleRegister": "Đăng ký lịch",
+  "scheduleEdit": "Sửa",
   "scheduleSubmit": "Gửi duyệt",
   "scheduleWithdraw": "Thu hồi",
   "scheduleSubmitted": "Đã gửi duyệt.",
@@ -179,6 +180,9 @@
   "registerNoStores": "Bạn chưa được phân công điểm bán nào.",
   "registerSave": "Lưu lịch",
   "registerSaved": "Đã tạo lịch.",
+  "registerEditTitle": "Sửa lịch",
+  "registerEditHint": "Sửa ca cho ngày này. Nếu lịch đã duyệt, bản sửa sẽ chờ duyệt lại và lịch cũ vẫn hiệu lực.",
+  "registerEditSaved": "Đã lưu thay đổi.",
   "registerNeedShift": "Thêm ít nhất một ca.",
   "registerSelectStore": "Vui lòng chọn điểm bán cho mỗi ca.",
 

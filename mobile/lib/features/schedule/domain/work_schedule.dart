@@ -48,4 +48,10 @@ sealed class WorkSchedule with _$WorkSchedule {
 
   /// Pending or edit-pending — can be withdrawn by the owner.
   bool get isWithdrawable => status == 'pending' || status == 'edit_pending';
+
+  /// Editable by the owner: pending/edit-pending edit in place; editing an
+  /// approved schedule creates a new edit-pending version (BR-308). Rejected /
+  /// superseded rows are terminal and not editable.
+  bool get isEditable =>
+      status == 'pending' || status == 'edit_pending' || status == 'approved';
 }

@@ -27,6 +27,9 @@ class ScheduleRepository {
   Future<List<String>> create(List<ScheduleDayInput> days) =>
       _guard(() => _api.create(days));
 
+  Future<String> edit(String id, List<ShiftInput> shifts) =>
+      _guard(() => _api.edit(id, shifts));
+
   Future<void> submit(String id) => _guard(() => _api.submit(id));
 
   Future<void> withdraw(String id) => _guard(() => _api.withdraw(id));

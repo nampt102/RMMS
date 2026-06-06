@@ -8,9 +8,9 @@
 
 ## Deliverables (Definition of Done)
 
-- [ ] Schedule registration day/week/month
-- [ ] Multi-shift, multi-store
-- [ ] Versioning: old active while edit pending
+- [x] Schedule registration day/week/month
+- [x] Multi-shift, multi-store
+- [x] Versioning: old active while edit pending (BR-308)
 
 ## User Stories / Key outcomes
 
@@ -19,25 +19,26 @@
 
 ## Tasks by Discipline
 
-### BE
-- [ ] work_schedules + shifts entities
-- [ ] Schedule CRUD
-- [ ] Version chain logic
-- [ ] Active schedule query
+### BE (done — built ahead in the M07 sprint, migration `M07_WorkSchedule`)
+- [x] work_schedules + shifts entities (`WorkSchedule` + owned `WorkScheduleShift`, status enum pending/approved/rejected/edit_pending/superseded, `Version`+`PreviousVersionId`)
+- [x] Schedule CRUD — create / edit (PATCH) / withdraw (soft-delete) / submit / approve / reject
+- [x] Version chain logic — `CreateEditedVersion()` + `Supersede()`; editing an approved schedule spawns a new edit_pending version, old stays effective until approved (BR-308)
+- [x] Active schedule query — `GET /schedule/me` + `GET /schedule/user/{id}` (Leader-scoped, Admin bypass)
 
 ### Mobile
-- [ ] Schedule calendar UI
-- [ ] Day detail
-- [ ] Register wizard for day/week/month
-- [ ] Multi-shift editor
-- [ ] Pending approval status
+- [~] Schedule calendar UI — list + date picker (no visual grid; acceptable for MVP)
+- [x] Day detail — shown inline per card (date, shifts, status, reject reason)
+- [x] Register wizard for day/week/month
+- [x] Multi-shift editor
+- [x] **Edit schedule** (`PATCH /schedule/{id}`) — reuses RegisterScheduleScreen in edit mode; approved-edit triggers BR-308 version flow
+- [x] Pending approval status — `StatusPill` (themed) for pending/approved/rejected/edit_pending/superseded
 
 ### Web
-- [ ] Team schedule overview
+- [x] Team schedule overview — `/schedules` (user picker + date range + table + approve/reject)
 
 ### QA
-- [ ] Date math edge cases
-- [ ] Versioning behavior
+- [x] Versioning behavior — covered by 16 backend unit tests incl. `Edit_ApprovedSchedule_CreatesEditVersion_OldStaysApproved` + `ApproveEdit_SupersedesOldApproved_NewBecomesEffective`
+- [~] Date math edge cases — covered for create/range; mobile manual UAT on Mac
 
 ## Demo
 

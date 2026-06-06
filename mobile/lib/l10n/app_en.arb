@@ -149,6 +149,7 @@
   "scheduleTitle": "Work schedule",
   "scheduleEmpty": "No schedules in the next 30 days.",
   "scheduleRegister": "Register schedule",
+  "scheduleEdit": "Edit",
   "scheduleSubmit": "Submit",
   "scheduleWithdraw": "Withdraw",
   "scheduleSubmitted": "Submitted for approval.",
@@ -178,6 +179,9 @@
   "registerNoStores": "You have no assigned stores yet.",
   "registerSave": "Save schedule",
   "registerSaved": "Schedule created.",
+  "registerEditTitle": "Edit schedule",
+  "registerEditHint": "Edit shifts for this day. If the schedule is approved, the edit awaits re-approval and the old one stays effective.",
+  "registerEditSaved": "Changes saved.",
   "registerNeedShift": "Add at least one shift.",
   "registerSelectStore": "Please select a store for each shift.",
 

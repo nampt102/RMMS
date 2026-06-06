@@ -5,6 +5,7 @@ import 'package:intl/intl.dart';
 
 import '../../../../core/network/api_exception.dart';
 import '../../../../core/router/app_router.dart';
+import '../../../../core/widgets/brand_widgets.dart';
 import '../../../../l10n/generated/app_localizations.dart';
 import '../../data/schedule_repository.dart';
 import '../../domain/work_schedule.dart';
@@ -116,11 +117,20 @@ class _ScheduleCard extends ConsumerWidget {
                 style: TextStyle(color: scheme.error),
               ),
             ],
-            if (schedule.isDraft || schedule.isWithdrawable) ...[
+            if (schedule.isEditable || schedule.isWithdrawable) ...[
               const SizedBox(height: 8),
               Row(
                 mainAxisAlignment: MainAxisAlignment.end,
                 children: [
+                  if (schedule.isEditable)
+                    TextButton.icon(
+                      onPressed: () =>
+                          context.push(AppRoutes.scheduleRegister, extra: schedule),
+                      icon: const Icon(Icons.edit_outlined, size: 18),
+                      label: Text(l.scheduleEdit),
+                    ),
+                  if (schedule.isEditable && (schedule.isDraft || schedule.isWithdrawable))
+                    const SizedBox(width: 8),
                   if (schedule.isDraft)
                     FilledButton.tonal(
                       onPressed: () => run(
@@ -176,18 +186,14 @@ class _StatusChip extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final l = AppLocalizations.of(context);
-    final (Color bg, Color fg, String label) = switch (status) {
-      'approved' => (const Color(0xFFE7F4EA), const Color(0xFF1B5E20), l.scheduleStatusApproved),
-      'rejected' => (const Color(0xFFFDECEA), const Color(0xFFB3261E), l.scheduleStatusRejected),
-      'edit_pending' => (const Color(0xFFFFF4E5), const Color(0xFF8A5300), l.scheduleStatusEditPending),
-      'superseded' => (const Color(0xFFEDEDED), const Color(0xFF5F5F5F), l.scheduleStatusSuperseded),
-      _ => (const Color(0xFFE8F0FE), const Color(0xFF174EA6), l.scheduleStatusPending),
+    final (BrandTone tone, IconData icon, String label) = switch (status) {
+      'approved' => (BrandTone.success, Icons.check_circle_outline, l.scheduleStatusApproved),
+      'rejected' => (BrandTone.danger, Icons.cancel_outlined, l.scheduleStatusRejected),
+      'edit_pending' => (BrandTone.warning, Icons.edit_calendar_outlined, l.scheduleStatusEditPending),
+      'superseded' => (BrandTone.neutral, Icons.history, l.scheduleStatusSuperseded),
+      _ => (BrandTone.info, Icons.hourglass_empty, l.scheduleStatusPending),
     };
-    return Container(
-      padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 4),
-      decoration: BoxDecoration(color: bg, borderRadius: BorderRadius.circular(999)),
-      child: Text(label, style: TextStyle(color: fg, fontWeight: FontWeight.w600, fontSize: 12)),
-    );
+    return StatusPill(label: label, icon: icon, tone: tone);
   }
 }
 

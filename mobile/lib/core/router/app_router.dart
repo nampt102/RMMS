@@ -12,6 +12,7 @@ import '../../features/auth/presentation/screens/reset_password_screen.dart';
 import '../../features/auth/presentation/screens/verify_email_screen.dart';
 import '../../features/home/presentation/screens/home_screen.dart';
 import '../../features/organization/presentation/screens/my_assignments_screen.dart';
+import '../../features/schedule/domain/work_schedule.dart';
 import '../../features/schedule/presentation/screens/my_schedule_screen.dart';
 import '../../features/schedule/presentation/screens/register_schedule_screen.dart';
 import '../../features/attendance/presentation/screens/attendance_history_screen.dart';
@@ -129,7 +130,8 @@ final appRouterProvider = Provider<GoRouter>((ref) {
         routes: [
           GoRoute(
             path: 'register',
-            builder: (context, state) => const RegisterScheduleScreen(),
+            builder: (context, state) =>
+                RegisterScheduleScreen(editSchedule: state.extra as WorkSchedule?),
           ),
         ],
       ),
