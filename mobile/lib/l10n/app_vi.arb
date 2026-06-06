@@ -97,11 +97,47 @@
     "placeholders": { "role": { "type": "String" } }
   },
   "homeViewAssignments": "Xem phân công của tôi",
+  "homeViewSchedule": "Lịch làm việc",
 
   "assignmentsTitle": "Phân công của tôi",
   "assignmentsLeader": "Leader quản lý",
   "assignmentsNoLeader": "Chưa được gán Leader.",
   "assignmentsStores": "Điểm bán của tôi",
   "assignmentsNoStores": "Chưa được gán điểm bán.",
-  "assignmentsError": "Không tải được phân công. Chạm để thử lại."
+  "assignmentsError": "Không tải được phân công. Chạm để thử lại.",
+
+  "scheduleTitle": "Lịch làm việc",
+  "scheduleEmpty": "Chưa có lịch trong 30 ngày tới.",
+  "scheduleRegister": "Đăng ký lịch",
+  "scheduleSubmit": "Gửi duyệt",
+  "scheduleWithdraw": "Thu hồi",
+  "scheduleSubmitted": "Đã gửi duyệt.",
+  "scheduleWithdrawn": "Đã thu hồi lịch.",
+  "scheduleWithdrawConfirm": "Thu hồi lịch này?",
+  "scheduleRejectedReason": "Lý do từ chối: {reason}",
+  "@scheduleRejectedReason": {
+    "placeholders": { "reason": { "type": "String" } }
+  },
+  "scheduleStatusPending": "Chờ duyệt",
+  "scheduleStatusApproved": "Đã duyệt",
+  "scheduleStatusRejected": "Bị từ chối",
+  "scheduleStatusEditPending": "Chờ duyệt (bản sửa)",
+  "scheduleStatusSuperseded": "Đã thay thế",
+
+  "registerTitle": "Đăng ký lịch",
+  "registerModeDay": "Ngày",
+  "registerModeWeek": "Tuần",
+  "registerModeMonth": "Tháng",
+  "registerPickDate": "Chọn ngày",
+  "registerDaysCount": "ngày sẽ được tạo",
+  "registerShifts": "Ca làm",
+  "registerStore": "Điểm bán",
+  "registerStart": "Bắt đầu",
+  "registerEnd": "Kết thúc",
+  "registerAddShift": "Thêm ca",
+  "registerNoStores": "Bạn chưa được phân công điểm bán nào.",
+  "registerSave": "Lưu lịch",
+  "registerSaved": "Đã tạo lịch.",
+  "registerNeedShift": "Thêm ít nhất một ca.",
+  "registerSelectStore": "Vui lòng chọn điểm bán cho mỗi ca."
 }

@@ -96,11 +96,47 @@
     "placeholders": { "role": { "type": "String" } }
   },
   "homeViewAssignments": "View my assignments",
+  "homeViewSchedule": "Work schedule",
 
   "assignmentsTitle": "My assignments",
   "assignmentsLeader": "My Leader",
   "assignmentsNoLeader": "No Leader assigned yet.",
   "assignmentsStores": "My stores",
   "assignmentsNoStores": "No stores assigned yet.",
-  "assignmentsError": "Couldn't load your assignments. Tap to retry."
+  "assignmentsError": "Couldn't load your assignments. Tap to retry.",
+
+  "scheduleTitle": "Work schedule",
+  "scheduleEmpty": "No schedules in the next 30 days.",
+  "scheduleRegister": "Register schedule",
+  "scheduleSubmit": "Submit",
+  "scheduleWithdraw": "Withdraw",
+  "scheduleSubmitted": "Submitted for approval.",
+  "scheduleWithdrawn": "Schedule withdrawn.",
+  "scheduleWithdrawConfirm": "Withdraw this schedule?",
+  "scheduleRejectedReason": "Reject reason: {reason}",
+  "@scheduleRejectedReason": {
+    "placeholders": { "reason": { "type": "String" } }
+  },
+  "scheduleStatusPending": "Pending",
+  "scheduleStatusApproved": "Approved",
+  "scheduleStatusRejected": "Rejected",
+  "scheduleStatusEditPending": "Pending (edit)",
+  "scheduleStatusSuperseded": "Superseded",
+
+  "registerTitle": "Register schedule",
+  "registerModeDay": "Day",
+  "registerModeWeek": "Week",
+  "registerModeMonth": "Month",
+  "registerPickDate": "Pick date",
+  "registerDaysCount": "days will be created",
+  "registerShifts": "Shifts",
+  "registerStore": "Store",
+  "registerStart": "Start",
+  "registerEnd": "End",
+  "registerAddShift": "Add shift",
+  "registerNoStores": "You have no assigned stores yet.",
+  "registerSave": "Save schedule",
+  "registerSaved": "Schedule created.",
+  "registerNeedShift": "Add at least one shift.",
+  "registerSelectStore": "Please select a store for each shift."
 }

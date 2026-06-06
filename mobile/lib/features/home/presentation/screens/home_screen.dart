@@ -49,6 +49,12 @@ class HomeScreen extends ConsumerWidget {
                 label: Text(l.homeViewAssignments),
                 onPressed: () => context.push(AppRoutes.myAssignments),
               ),
+              const SizedBox(height: 12),
+              FilledButton.tonalIcon(
+                icon: const Icon(Icons.calendar_month_outlined),
+                label: Text(l.homeViewSchedule),
+                onPressed: () => context.push(AppRoutes.schedule),
+              ),
             ],
           ),
         ),

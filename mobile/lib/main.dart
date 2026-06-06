@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:hive_flutter/hive_flutter.dart';
+import 'package:intl/date_symbol_data_local.dart';
 
 import 'app.dart';
 import 'core/notifications/fcm_service.dart';
@@ -15,6 +16,9 @@ Future<void> main() async {
 
   // Local storage (Hive) — for offline form drafts and small caches.
   await Hive.initFlutter();
+
+  // Locale-aware date formatting (vi + en) for schedule/attendance screens.
+  await initializeDateFormatting();
 
   // Register the FCM background handler before runApp. Guarded so a build
   // without Firebase config still launches (the handler self-initializes).

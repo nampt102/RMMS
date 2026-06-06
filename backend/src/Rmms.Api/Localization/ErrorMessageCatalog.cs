@@ -47,6 +47,14 @@ public sealed class ErrorMessageCatalog : IErrorMessageLocalizer
             [ErrorCodes.InvalidAssignment] = ("Phân công không hợp lệ.", "Invalid assignment."),
             [ErrorCodes.AssignmentExists] = ("Phân công này đã tồn tại.", "This assignment already exists."),
             [ErrorCodes.NotApprover] = ("Bạn không có quyền duyệt yêu cầu của PG này.", "You are not authorized to approve this PG's request."),
+            [ErrorCodes.RejectReasonRequired] = ("Vui lòng nhập lý do từ chối.", "A rejection reason is required."),
+            [ErrorCodes.ApprovalNotPending] = ("Mục này không ở trạng thái chờ duyệt.", "This item is not pending approval."),
+            [ErrorCodes.StoreNotAssigned] = ("Có điểm bán chưa được phân công cho người dùng.", "A store is not assigned to this user."),
+            [ErrorCodes.ScheduleNotFound] = ("Không tìm thấy lịch làm việc.", "Work schedule not found."),
+            [ErrorCodes.ScheduleNotEditable] = ("Lịch ở trạng thái này không thể sửa hoặc thu hồi.", "This schedule cannot be edited or withdrawn in its current state."),
+            [ErrorCodes.ScheduleDateInPast] = ("Không thể đăng ký hoặc sửa lịch cho ngày đã qua.", "Cannot register or edit a schedule for a past date."),
+            [ErrorCodes.ShiftOverlap] = ("Các ca trong cùng một ngày không được trùng giờ.", "Shifts on the same day must not overlap."),
+            [ErrorCodes.ScheduleNotPending] = ("Chỉ lịch ở trạng thái chờ mới có thể gửi duyệt.", "Only a pending schedule can be submitted."),
         };
 
     public string? Localize(string code, string culture)

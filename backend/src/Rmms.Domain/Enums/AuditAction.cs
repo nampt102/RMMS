@@ -51,5 +51,13 @@ public static class AuditAction
     public const string UserCategoryAssigned = "assignment.user_category_assigned";
     public const string UserCategoryUnassigned = "assignment.user_category_unassigned";
 
+    // ----- M07 Work Schedule -----
+    public const string ScheduleCreated = "schedule.created";
+    public const string ScheduleSubmitted = "schedule.submitted";
+    public const string ScheduleEdited = "schedule.edited";
+    public const string ScheduleWithdrawn = "schedule.withdrawn";
+    public const string ScheduleApproved = "schedule.approved";
+    public const string ScheduleRejected = "schedule.rejected";
+
     // (M04+ actions appended here as modules ship)
 }

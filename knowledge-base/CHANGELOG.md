@@ -6,6 +6,21 @@ Append-only chronological log of significant project milestones, decisions, and 
 
 ---
 
+## 2026-06-06 — M07 Work Schedule (built ahead of M05; sprint reorder)
+
+**By:** Tech lead (MotivesVN IT), AI-assisted · web + mobile UI via `ui-ux-pro-max`
+
+**Status:** ✅ BE + web done (full suite **165 unit tests green**, web type-check/lint/build green). Mobile is **code-only** (Flutter not on the Windows box — Mac verifies).
+
+- **Why before M05:** attendance AC-5 (early ≤60′) / AC-6 (late >5′) need **shift start times**, and `attendance_records.work_schedule_shift_id` FKs to `work_schedule_shifts` (M07). User chose to build M07 fully first rather than a throwaway minimal-shift model. M07 was originally Sprint 05.
+- **Domain:** `WorkSchedule` aggregate (UserId, ScheduleDate, Status, Version, PreviousVersionId, Submitted/Approved/RejectReason) + `WorkScheduleShift` modeled as an **EF owned collection** (clean wholesale replace on edit across providers). `WorkScheduleStatus` = pending/approved/rejected/edit_pending/superseded. Overlap + future-date invariants in the aggregate; `ReplaceShifts` reconciles in place (UPDATE, not delete+insert).
+- **Versioning (BR-307/BR-308):** editing an approved schedule creates a new `edit_pending` row (previous_version_id → old) while the **old stays approved/effective**; on approval the old is `superseded`. The "one approved per user/day" invariant is enforced in the approve handler (supersede-then-approve) — **not** a partial-unique index (which would trip mid-transition). AC-15 covered by tests.
+- **Use-cases/API (`api/v1/schedule`):** `GET me`, `POST me` (day/week/month — client expands to days, all-or-nothing), `POST :id/submit`, `PATCH :id` (edit/version), `DELETE :id` (withdraw), `GET user/:id` + `POST :id/{approve,reject}` (AdminOrLeader, **Leader-scoped** to managed PGs, BR-404 reason required). Store-assignment + past-date validation. Migration `M07_WorkSchedule` applied to dev DB.
+- **Web:** `/schedules` admin overview — pick PG/Leader + date range, view each day's shifts + status, approve / reject-with-reason modal. Nav item + i18n vi/en.
+- **Mobile:** `features/schedule` (Freezed models, Dio api, repo + `myScheduleProvider`), `MyScheduleScreen` (30-day list, status chips, submit/withdraw), `RegisterScheduleScreen` (day/week/month modes + multi-shift editor from assigned stores). Routes + home button + ARB vi/en. `initializeDateFormatting()` added in `main.dart`. **Server still owns approval routing/email (BUH link) → M09**; full month-grid calendar deferred (list view; no calendar lib without ADR).
+
+---
+
 ## 2026-06-06 — Sprint 02 deferred items cleared (store map + mobile FCM)
 
 **By:** Tech lead (MotivesVN IT), AI-assisted · UI via `ui-ux-pro-max`

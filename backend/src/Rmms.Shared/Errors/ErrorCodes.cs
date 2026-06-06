@@ -45,6 +45,13 @@ public static class ErrorCodes
     public const string EmailTokenExpired = "EMAIL_TOKEN_EXPIRED";
     public const string EmailTokenUsed = "EMAIL_TOKEN_USED";
 
+    // ---------- Work Schedule (M07) ----------
+    public const string ScheduleNotFound = "SCHEDULE_NOT_FOUND";
+    public const string ScheduleNotEditable = "SCHEDULE_NOT_EDITABLE";
+    public const string ScheduleDateInPast = "SCHEDULE_DATE_IN_PAST";
+    public const string ShiftOverlap = "SHIFT_OVERLAP";
+    public const string ScheduleNotPending = "SCHEDULE_NOT_PENDING";
+
     // ---------- Organization & Assignment (M03) ----------
     public const string CodeAlreadyExists = "CODE_ALREADY_EXISTS";
     public const string InvalidReference = "INVALID_REFERENCE";

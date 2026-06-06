@@ -12,6 +12,8 @@ import '../../features/auth/presentation/screens/reset_password_screen.dart';
 import '../../features/auth/presentation/screens/verify_email_screen.dart';
 import '../../features/home/presentation/screens/home_screen.dart';
 import '../../features/organization/presentation/screens/my_assignments_screen.dart';
+import '../../features/schedule/presentation/screens/my_schedule_screen.dart';
+import '../../features/schedule/presentation/screens/register_schedule_screen.dart';
 import '../../l10n/generated/app_localizations.dart';
 
 /// Named routes — keep all path strings here.
@@ -27,6 +29,8 @@ class AppRoutes {
   static const String devicePending = '/device-pending';
   static const String home = '/';
   static const String myAssignments = '/my-assignments';
+  static const String schedule = '/schedule';
+  static const String scheduleRegister = '/schedule/register';
   static const String checkIn = '/check-in';
   static const String checkOut = '/check-out';
 }
@@ -112,6 +116,16 @@ final appRouterProvider = Provider<GoRouter>((ref) {
       GoRoute(
         path: AppRoutes.myAssignments,
         builder: (context, state) => const MyAssignmentsScreen(),
+      ),
+      GoRoute(
+        path: AppRoutes.schedule,
+        builder: (context, state) => const MyScheduleScreen(),
+        routes: [
+          GoRoute(
+            path: 'register',
+            builder: (context, state) => const RegisterScheduleScreen(),
+          ),
+        ],
       ),
     ],
   );

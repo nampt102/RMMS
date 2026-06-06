@@ -5,6 +5,7 @@ using Rmms.Domain.Auth;
 using Rmms.Domain.Devices;
 using Rmms.Domain.Organization;
 using Rmms.Domain.Users;
+using Rmms.Domain.Scheduling;
 
 namespace Rmms.Infrastructure.Persistence;
 
@@ -34,6 +35,9 @@ public sealed class AppDbContext : DbContext, IAppDbContext
     public DbSet<UserLeaderAssignment> UserLeaderAssignments => Set<UserLeaderAssignment>();
     public DbSet<UserStoreAssignment> UserStoreAssignments => Set<UserStoreAssignment>();
     public DbSet<UserCategoryAssignment> UserCategoryAssignments => Set<UserCategoryAssignment>();
+
+    // ----- M07 Work Schedule (shifts are an owned collection of WorkSchedule) -----
+    public DbSet<WorkSchedule> WorkSchedules => Set<WorkSchedule>();
 
     // ----- Cross-cutting -----
     public DbSet<AuditLog> AuditLogs => Set<AuditLog>();

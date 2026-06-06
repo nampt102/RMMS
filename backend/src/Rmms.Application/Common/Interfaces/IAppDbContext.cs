@@ -4,6 +4,7 @@ using Rmms.Domain.Auth;
 using Rmms.Domain.Devices;
 using Rmms.Domain.Organization;
 using Rmms.Domain.Users;
+using Rmms.Domain.Scheduling;
 
 namespace Rmms.Application.Common.Interfaces;
 
@@ -31,6 +32,9 @@ public interface IAppDbContext
     DbSet<UserLeaderAssignment> UserLeaderAssignments { get; }
     DbSet<UserStoreAssignment> UserStoreAssignments { get; }
     DbSet<UserCategoryAssignment> UserCategoryAssignments { get; }
+
+    // ----- M07 Work Schedule (shifts are an owned collection of WorkSchedule) -----
+    DbSet<WorkSchedule> WorkSchedules { get; }
 
     // ----- Cross-cutting -----
     DbSet<AuditLog> AuditLogs { get; }
