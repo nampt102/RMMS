@@ -142,6 +142,10 @@ if (args.Length > 0)
     {
         return await Rmms.Api.Cli.SeedAdminCommand.RunAsync(args, app.Services);
     }
+    if (firstArg.Equals("seed-demo", StringComparison.OrdinalIgnoreCase))
+    {
+        return await Rmms.Api.Cli.SeedDemoCommand.RunAsync(args, app.Services);
+    }
 }
 
 // ===== Middleware pipeline =====
