@@ -6,6 +6,17 @@ Append-only chronological log of significant project milestones, decisions, and 
 
 ---
 
+## 2026-06-06 — Sprint 02 deferred items cleared (store map + mobile FCM)
+
+**By:** Tech lead (MotivesVN IT), AI-assisted · UI via `ui-ux-pro-max`
+
+**Status:** ✅ Both Sprint 02 deferred items delivered. Web type-check + prod build green; mobile is code-only (Flutter not on the Windows box — Mac verifies).
+
+- **Store map view (web)** — [ADR-010](./decisions/ADR-010-store-map-react-leaflet.md) accepts **react-leaflet 4 + OpenStreetMap** (Google Maps / Mapbox rejected on cost + key/over-engineering). `/stores` gains a `Segmented` table/map toggle; `StoreMap.tsx` plots status-colored `divIcon` markers (active=green, inactive=gray) with code/name/status/address/area/GPS popups, fit-bounds, and reduced-motion-aware animation; `StoreMapView.tsx` adds area/status/search filters + legend + empty/error states. Leaflet lazy-loaded via `next/dynamic` (`ssr:false`) → not in initial bundle. New deps: `leaflet`, `react-leaflet`, `@types/leaflet`. i18n keys added (vi/en). (M03, satisfies the Sprint-02 "store management with map" DoD.)
+- **Mobile device-change push (client-side)** — new `core/notifications/`: fail-safe `FcmService` (guarded `Firebase.initializeApp`, permission, `getToken`, token-refresh, foreground/opened/initial streams — all no-ops when Firebase unconfigured so the app still launches); `FcmCoordinator` wires streams → `deviceApprovalProvider` + `inAppNotificationProvider`; root `app.dart` shows a foreground `MaterialBanner` (info/success/warning) via `ScaffoldMessenger`; `device_pending_screen` reacts live to a `device_changed` push (approved → "sign in again" CTA, rejected → contact-admin state). FCM token is now actually sent on login (`auth_repository` resolves it from `FcmService` → `auth_api.login(fcmToken:)`). Background handler registered in `main.dart` (guarded). ARB keys added (vi/en). **Server-side push *delivery* stays →M14 Notification.** To emit real tokens the Mac build must run `flutterfire configure` (generates native Firebase config); until then FCM is gracefully disabled. (BR-105/BR-106.)
+
+---
+
 ## 2026-06-05 — Sprint 02 CLOSED
 
 **By:** Tech lead (MotivesVN IT), AI-assisted

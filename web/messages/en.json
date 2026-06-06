@@ -59,7 +59,13 @@
     "statusSuccess": "Store status changed.",
     "deleteSuccess": "Store deleted.",
     "status_active": "Active",
-    "status_inactive": "Inactive"
+    "status_inactive": "Inactive",
+    "viewTable": "Table",
+    "viewMap": "Map",
+    "mapLegendActive": "{count} active",
+    "mapLegendInactive": "{count} inactive",
+    "mapEmpty": "No stores to display.",
+    "mapLoadError": "Failed to load map data."
   },
   "areas": {
     "title": "Area management",

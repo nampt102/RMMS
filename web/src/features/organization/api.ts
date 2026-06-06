@@ -170,6 +170,29 @@ export function useAllStores() {
   });
 }
 
+/**
+ * Stores with coordinates for the map view (ADR-010). Reuses the same filters
+ * as the table; Phase 1 plots up to 500 matching stores in one page (no
+ * clustering yet — see ADR-010 revisit triggers).
+ */
+export function useStoresForMap(params: { areaId?: string; status?: string; search?: string }) {
+  return useQuery({
+    queryKey: [...STORES_KEY, "map", params],
+    queryFn: async () => {
+      const { data } = await apiClient.get<ApiResponse<PaginatedResponse<Store>>>("/admin/stores", {
+        params: {
+          page: 1,
+          pageSize: 500,
+          areaId: params.areaId || undefined,
+          status: params.status || undefined,
+          search: params.search || undefined,
+        },
+      });
+      return data.data.data;
+    },
+  });
+}
+
 /** A user's active assignments (leader + stores + categories). */
 export function useUserAssignments(userId: string | null) {
   return useQuery({

@@ -38,6 +38,7 @@
   "commonRetry": "Retry",
   "commonCancel": "Cancel",
   "commonOk": "OK",
+  "commonDismiss": "Dismiss",
 
   "checkInTitle": "Check in",
   "checkOutTitle": "Check out",
@@ -79,6 +80,11 @@
   "devicePendingTitle": "Device pending approval",
   "devicePendingBody": "This device is not yet authorized for your account. A request was sent to your Leader/Admin. Please try again once it is approved.",
   "devicePendingBackToLogin": "Back to sign in",
+  "devicePendingApprovedTitle": "Device approved",
+  "devicePendingApprovedBody": "This device has been approved for your account. Please sign in again to continue.",
+  "devicePendingRejectedTitle": "Device rejected",
+  "devicePendingRejectedBody": "Your request to use this device was rejected. Please contact your Leader/Admin.",
+  "devicePendingLoginAgain": "Sign in again",
 
   "homeLogout": "Sign out",
   "homeWelcome": "Welcome, {name}",

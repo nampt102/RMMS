@@ -39,6 +39,7 @@
   "commonRetry": "Thử lại",
   "commonCancel": "Huỷ",
   "commonOk": "OK",
+  "commonDismiss": "Đóng",
 
   "checkInTitle": "Chấm công vào ca",
   "checkOutTitle": "Chấm công ra ca",
@@ -80,6 +81,11 @@
   "devicePendingTitle": "Thiết bị chờ phê duyệt",
   "devicePendingBody": "Thiết bị này chưa được phê duyệt cho tài khoản của bạn. Yêu cầu đã được gửi tới Leader/Admin. Vui lòng thử lại sau khi được phê duyệt.",
   "devicePendingBackToLogin": "Quay lại đăng nhập",
+  "devicePendingApprovedTitle": "Thiết bị đã được phê duyệt",
+  "devicePendingApprovedBody": "Thiết bị này đã được phê duyệt cho tài khoản của bạn. Vui lòng đăng nhập lại để tiếp tục.",
+  "devicePendingRejectedTitle": "Thiết bị bị từ chối",
+  "devicePendingRejectedBody": "Yêu cầu sử dụng thiết bị này đã bị từ chối. Vui lòng liên hệ Leader/Admin của bạn.",
+  "devicePendingLoginAgain": "Đăng nhập lại",
 
   "homeLogout": "Đăng xuất",
   "homeWelcome": "Xin chào, {name}",

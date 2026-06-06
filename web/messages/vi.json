@@ -59,7 +59,13 @@
     "statusSuccess": "Đã đổi trạng thái điểm bán.",
     "deleteSuccess": "Đã xoá điểm bán.",
     "status_active": "Đang hoạt động",
-    "status_inactive": "Ngừng hoạt động"
+    "status_inactive": "Ngừng hoạt động",
+    "viewTable": "Bảng",
+    "viewMap": "Bản đồ",
+    "mapLegendActive": "{count} đang hoạt động",
+    "mapLegendInactive": "{count} ngừng hoạt động",
+    "mapEmpty": "Không có điểm bán nào để hiển thị.",
+    "mapLoadError": "Không tải được dữ liệu bản đồ."
   },
   "areas": {
     "title": "Quản lý khu vực",

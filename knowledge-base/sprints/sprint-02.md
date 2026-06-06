@@ -1,6 +1,6 @@
 # Sprint 2 — Phase 1A (W5-W6)
 
-> **STATUS: ✅ CLOSED (2026-06-05).** Core goal + AC-2 + AC-3 delivered (M02 + M03, BE/web/mobile, 149 unit tests green). Two items deferred with owners (see "Deferred" below) — not blocking.
+> **STATUS: ✅ CLOSED (2026-06-05).** Core goal + AC-2 + AC-3 delivered (M02 + M03, BE/web/mobile, 149 unit tests green). The two deferred items were cleared on **2026-06-06** (store map view + mobile FCM client-side) — see "Deferred" below.
 
 **Goal:** Org structure & assignment + Device management
 
@@ -17,9 +17,9 @@
 
 ## Deferred (tracked, non-blocking)
 
-- **Store map view (web)** — list + CRUD + lat/lon shipped; interactive map view needs a map library (react-leaflet / Google Maps) → **requires a new ADR** (no new UI lib without ADR per CLAUDE.md). Deferred until that ADR.
-- **Mobile device-change push notification handling** — pending-approval screen shipped; FCM **push delivery** deferred to **M14 Notification** (FCM infra). FCM token is already captured/updated on login (`device.fcmToken`).
-- **CSV bulk assignment** — spec-marked Phase 2.
+- **Store map view (web)** — ✅ **DONE 2026-06-06.** [ADR-010](../decisions/ADR-010-store-map-react-leaflet.md) accepts **react-leaflet + OpenStreetMap**. `/stores` now has a `Segmented` table/map toggle; map plots status-colored markers (active=green, inactive=gray) with code/name/status/address popups, fit-bounds, area/status/search filters, reduced-motion, and lazy-loaded Leaflet (`StoreMap.tsx` / `StoreMapView.tsx`). Web type-check + prod build green.
+- **Mobile device-change push notification handling** — ✅ **DONE 2026-06-06 (client-side).** `core/notifications/` adds a fail-safe `FcmService` (guarded `Firebase.initializeApp`, permission, token, refresh, fg/opened/initial streams), `FcmCoordinator` (wires streams → state), foreground in-app `MaterialBanner` (`app.dart`), and `device_pending_screen` now reacts live to a `device_changed` push (approved → "sign in again" CTA; rejected → contact-admin state). FCM token is now actually sent on login (`auth_repository` → `auth_api.login(fcmToken:)`). **Server-side push delivery remains →M14 Notification.** Build needs `flutterfire configure` (Firebase config files) on the Mac to emit real tokens; without it the guarded init keeps the app running with FCM disabled.
+- **CSV bulk assignment** — spec-marked Phase 2 (still deferred).
 
 ## User Stories / Key outcomes
 
@@ -29,22 +29,22 @@
 ## Tasks by Discipline
 
 ### BE
-- [ ] Entities: stores, areas, categories, assignments
-- [ ] CRUD endpoints for each
-- [ ] Device fingerprint detection on login
-- [ ] Device change request flow
-- [ ] FCM token registration
+- [x] Entities: stores, areas, categories, assignments
+- [x] CRUD endpoints for each
+- [x] Device fingerprint detection on login
+- [x] Device change request flow
+- [x] FCM token registration (login accepts `device.fcmToken`; mobile now sends it, 2026-06-06)
 
 ### Web
-- [ ] User management screens
-- [ ] Store management with map
-- [ ] Areas + categories CRUD
-- [ ] Assignment matrix UI
-- [ ] Device requests list
+- [x] User management screens
+- [x] Store management with map (ADR-010: react-leaflet + OSM, 2026-06-06)
+- [x] Areas + categories CRUD
+- [x] Assignment matrix UI
+- [x] Device requests list
 
 ### Mobile
-- [ ] Device-change notification handling
-- [ ] Pending approval screen
+- [x] Device-change notification handling (client-side FCM, 2026-06-06; server push →M14)
+- [x] Pending approval screen
 
 ### QA
 - [ ] Assignment edge cases

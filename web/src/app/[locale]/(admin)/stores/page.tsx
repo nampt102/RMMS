@@ -12,9 +12,10 @@ import {
   type ActionType,
   type ProColumns,
 } from "@ant-design/pro-components";
-import { App, Button, Popconfirm, Tag } from "antd";
+import { App, Button, Popconfirm, Segmented, Tag } from "antd";
+import { EnvironmentOutlined, TableOutlined } from "@ant-design/icons";
 import { useLocale, useTranslations } from "next-intl";
-import { useRef } from "react";
+import { useRef, useState } from "react";
 import {
   fetchStores,
   useAreas,
@@ -25,8 +26,29 @@ import {
 } from "@/features/organization/api";
 import type { Store } from "@/features/organization/types";
 import { errorCodeFromUnknown } from "@/features/auth/lib/auth-error";
+import StoreMapView from "@/features/organization/StoreMapView";
 
 export default function StoresPage() {
+  const t = useTranslations("stores");
+  const [view, setView] = useState<"table" | "map">("table");
+
+  return (
+    <div>
+      <Segmented
+        value={view}
+        onChange={(v) => setView(v as "table" | "map")}
+        style={{ marginBottom: 16 }}
+        options={[
+          { value: "table", label: t("viewTable"), icon: <TableOutlined /> },
+          { value: "map", label: t("viewMap"), icon: <EnvironmentOutlined /> },
+        ]}
+      />
+      {view === "table" ? <StoresTable /> : <StoreMapView />}
+    </div>
+  );
+}
+
+function StoresTable() {
   const t = useTranslations("stores");
   const tErrors = useTranslations("errors");
   const tc = useTranslations("common");

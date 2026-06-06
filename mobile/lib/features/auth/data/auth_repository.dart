@@ -4,6 +4,7 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 import '../../../core/device/device_info_service.dart';
 import '../../../core/network/api_client.dart';
 import '../../../core/network/api_exception.dart';
+import '../../../core/notifications/fcm_service.dart';
 import '../../../core/storage/secure_storage.dart';
 import '../domain/auth_user.dart';
 import 'auth_api.dart';
@@ -18,6 +19,7 @@ final authRepositoryProvider = Provider<AuthRepository>((ref) {
     api: ref.watch(authApiProvider),
     storage: ref.watch(secureStorageProvider),
     deviceInfo: ref.watch(deviceInfoServiceProvider),
+    fcmService: ref.watch(fcmServiceProvider),
   );
 });
 
@@ -29,13 +31,16 @@ class AuthRepository {
     required AuthApi api,
     required SecureStorage storage,
     required DeviceInfoService deviceInfo,
+    required FcmService fcmService,
   })  : _api = api,
         _storage = storage,
-        _deviceInfo = deviceInfo;
+        _deviceInfo = deviceInfo,
+        _fcmService = fcmService;
 
   final AuthApi _api;
   final SecureStorage _storage;
   final DeviceInfoService _deviceInfo;
+  final FcmService _fcmService;
 
   Future<bool> hasSession() => _storage.hasTokens();
 
@@ -71,10 +76,14 @@ class AuthRepository {
   }) async {
     return _guard(() async {
       final device = await _deviceInfo.resolve();
+      // Best-effort: a null token (Firebase unconfigured / permission denied)
+      // just omits it — the server treats it as optional (BR-105 device flow).
+      final fcmToken = await _fcmService.token();
       final res = await _api.login(
         email: email,
         password: password,
         device: device,
+        fcmToken: fcmToken,
       );
       await _storage.writeTokens(
         access: res.accessToken,
