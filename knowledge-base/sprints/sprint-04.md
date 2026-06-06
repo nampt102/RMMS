@@ -40,7 +40,8 @@
 
 ### Web
 - [x] Face status column on Users admin (PG/Leader) + status detail in Drawer
-- [x] Admin actions — force re-enroll (`POST /admin/face/re-enroll/:id`) + remove template (`DELETE /admin/face/template/:id`)
+- [x] Admin actions — **enroll on behalf** (`POST /admin/face/enroll/:id`, multipart 1..5 photos via Upload), force re-enroll (`POST /admin/face/re-enroll/:id`) + remove template (`DELETE /admin/face/template/:id`)
+- [x] **CompreFace stack live** — `infra/compreface` brought up (core pinned to `1.1.0` to dodge the 1.2.0 numpy crash; fe `PROXY_CONNECT_TIMEOUT` set); gateway healthy on :8000. Real engine activates once `CompreFace__ApiKey` is set
 - [~] Review detail (compare selfie vs enrolled) — selfie shown in M05 attendance review modal; enrolled-photo side-by-side deferred (CompreFace owns the embedding, no stored reference image)
 - [~] Approve/reject actions — handled by M05 status-driven review queue (Admin attendance review)
 

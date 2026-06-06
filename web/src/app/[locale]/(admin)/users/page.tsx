@@ -1,6 +1,6 @@
 "use client";
 
-import { CheckCircleFilled, MinusCircleOutlined, PlusOutlined } from "@ant-design/icons";
+import { CheckCircleFilled, MinusCircleOutlined, PlusOutlined, UploadOutlined } from "@ant-design/icons";
 import {
   ModalForm,
   ProForm,
@@ -10,11 +10,26 @@ import {
   type ActionType,
   type ProColumns,
 } from "@ant-design/pro-components";
-import { App, Button, Descriptions, Divider, Drawer, Popconfirm, Space, Switch, Tag, Tooltip, Typography } from "antd";
+import {
+  App,
+  Button,
+  Descriptions,
+  Divider,
+  Drawer,
+  Popconfirm,
+  Space,
+  Switch,
+  Tag,
+  Tooltip,
+  Typography,
+  Upload,
+  type UploadFile,
+} from "antd";
 import { useLocale, useTranslations } from "next-intl";
 import { useRef, useState } from "react";
 import {
   fetchUsers,
+  useAdminEnrollFace,
   useCreateUser,
   useReEnrollFace,
   useRemoveFace,
@@ -344,6 +359,15 @@ export default function UsersPage() {
                     </Typography.Text>
                   )}
                 </Space>
+                <FaceEnrollUpload
+                  userId={detail.id}
+                  onDone={() => {
+                    setDetail({ ...detail, faceEnrolled: true });
+                    actionRef.current?.reload();
+                  }}
+                  onError={showError}
+                  t={t}
+                />
                 <Space>
                   <Popconfirm title={t("face_reEnrollConfirm")} onConfirm={reEnrollForDetail}>
                     <Button loading={reEnrollFace.isPending}>{t("face_reEnroll")}</Button>
@@ -429,5 +453,61 @@ function EditUserButton({ user, onDone, onError, update, t }: EditProps) {
         ]}
       />
     </ModalForm>
+  );
+}
+
+type FaceEnrollProps = {
+  userId: string;
+  onDone: () => void;
+  onError: (e: unknown) => void;
+  t: ReturnType<typeof useTranslations>;
+};
+
+/** Admin-side face enrollment: pick 1..5 face photos and push them to the engine. */
+function FaceEnrollUpload({ userId, onDone, onError, t }: FaceEnrollProps) {
+  const { message } = App.useApp();
+  const enroll = useAdminEnrollFace();
+  const [fileList, setFileList] = useState<UploadFile[]>([]);
+
+  const submit = async () => {
+    const files = fileList
+      .map((f) => f.originFileObj)
+      .filter((f): f is NonNullable<typeof f> => Boolean(f));
+    if (files.length === 0) return;
+    try {
+      await enroll.mutateAsync({ id: userId, files });
+      message.success(t("face_enrollSuccess"));
+      setFileList([]);
+      onDone();
+    } catch (error) {
+      onError(error);
+    }
+  };
+
+  return (
+    <Space direction="vertical" size="small" style={{ width: "100%" }}>
+      <Upload
+        listType="picture"
+        accept="image/*"
+        multiple
+        maxCount={5}
+        beforeUpload={() => false}
+        fileList={fileList}
+        onChange={({ fileList: list }) => setFileList(list.slice(0, 5))}
+      >
+        <Button icon={<UploadOutlined />}>{t("face_pickPhotos")}</Button>
+      </Upload>
+      <Typography.Text type="secondary" style={{ fontSize: 12 }}>
+        {t("face_enrollHint")}
+      </Typography.Text>
+      <Button
+        type="primary"
+        disabled={fileList.length === 0}
+        loading={enroll.isPending}
+        onClick={submit}
+      >
+        {t("face_enroll")}
+      </Button>
+    </Space>
   );
 }

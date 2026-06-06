@@ -73,6 +73,24 @@ export function useReEnrollFace() {
   });
 }
 
+/**
+ * Enroll a user's face on their behalf (M06) — POST /api/v1/admin/face/enroll/:id (multipart).
+ * Sends 1..5 face photos; replaces any prior enrollment server-side.
+ */
+export function useAdminEnrollFace() {
+  const qc = useQueryClient();
+  return useMutation({
+    mutationFn: async ({ id, files }: { id: string; files: File[] }) => {
+      const form = new FormData();
+      for (const file of files) form.append("photos", file);
+      await apiClient.post(`/admin/face/enroll/${id}`, form, {
+        headers: { "Content-Type": "multipart/form-data" },
+      });
+    },
+    onSuccess: () => qc.invalidateQueries({ queryKey: USERS_KEY }),
+  });
+}
+
 /** Remove a user's face template entirely — DELETE /api/v1/admin/face/template/:id (204). */
 export function useRemoveFace() {
   const qc = useQueryClient();

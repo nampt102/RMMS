@@ -6,6 +6,16 @@ Append-only chronological log of significant project milestones, decisions, and 
 
 ---
 
+## 2026-06-06 — M06 CompreFace stack live + admin-side face enrollment (Sprint 04)
+
+**By:** Tech lead (MotivesVN IT), AI-assisted
+
+**Status:** ✅ CompreFace stack up (5 containers healthy, gateway 200 on :8000); backend API build + web typecheck/lint green.
+
+- **CompreFace dựng thật:** `docker compose -f infra/compreface up -d` on the dev box. Two image fixes baked into the compose: **core pinned `1.2.0 → 1.1.0`** (the 1.2.0 core ships a broken numpy → `cannot import name 'git_revision'` crash-loop; 1.1.0 is wire-compatible with the 1.2.0 api/admin/fe), and **`PROXY_CONNECT_TIMEOUT=10s`** added to the fe service (its nginx template references the var; unset → `invalid directive` crash). Real engine activates when `CompreFace__ApiKey` is set (host-run backend → `BaseUrl=http://localhost:8000`); until then `DevFaceClient` stays active.
+- **Admin-side enrollment:** `POST /api/v1/admin/face/enroll/:userId` (multipart 1..5 photos, AdminOnly) reuses `EnrollFaceCommand`; web Users drawer gains a photo **Upload** + Enroll button (`useAdminEnrollFace`) so an admin can enroll a user's face without the mobile app. Audit `face.enrolled` (actor = admin).
+- **One manual step remains:** create a CompreFace account + Application + Recognition service in the :8000 UI and copy the API key into `appsettings.Development.json` (the public signup REST requires internal auth, so this stays a UI step).
+
 ## 2026-06-06 — M06 Face Verification Web + Mobile + new mobile theme (Sprint 04)
 
 **By:** Tech lead (MotivesVN IT), AI-assisted

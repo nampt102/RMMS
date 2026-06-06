@@ -60,7 +60,10 @@ services:
     networks: [rmms-net]
 
   compreface-core:
-    image: exadel/compreface-core:1.2.0
+    # NOTE: core 1.2.0 ships a broken numpy ("cannot import name 'git_revision'
+    # from numpy.version") and crash-loops; 1.1.0 core is stable and wire-compatible
+    # with the 1.2.0 api/admin/fe services.
+    image: exadel/compreface-core:1.1.0
     container_name: compreface-core
     restart: unless-stopped
     environment:
@@ -77,9 +80,11 @@ services:
     environment:
       CLIENT_MAX_BODY_SIZE: 10M
       PROXY_READ_TIMEOUT: 60000ms
+      PROXY_CONNECT_TIMEOUT: 10s   # required by the fe nginx template (was unset → invalid directive)
       ADMIN_API_JAVA_OPTS: -Xmx512m
     ports:
-      - "8000:80"   # CompreFace UI / gateway (UI only — backend reaches it as compreface-fe:8080 internally)
+      # Gateway/UI on :8000. In-network the API base is http://compreface-fe (port 80).
+      - "8000:80"
     depends_on:
       - compreface-api
       - compreface-admin

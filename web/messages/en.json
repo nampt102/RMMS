@@ -238,7 +238,11 @@
     "face_reEnrollSuccess": "User asked to re-enroll their face.",
     "face_remove": "Remove face",
     "face_removeConfirm": "Completely remove this user's face data?",
-    "face_removeSuccess": "Face data removed."
+    "face_removeSuccess": "Face data removed.",
+    "face_enroll": "Enroll face",
+    "face_pickPhotos": "Pick photos (1–5)",
+    "face_enrollHint": "Pick 1–5 clear face photos (front/left/right). New photos replace the previous enrollment.",
+    "face_enrollSuccess": "Face enrolled for the user."
   },
   "errors": {
     "INVALID_CREDENTIALS": "Wrong email or password.",
