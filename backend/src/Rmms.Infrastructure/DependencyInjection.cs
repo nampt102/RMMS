@@ -83,9 +83,27 @@ public static class DependencyInjection
         // ----- Audit (CR-1) -----
         services.AddScoped<IAuditLogger, DbAuditLogger>();
 
-        // ----- M05 Attendance (anti-fraud) -----
-        // Face Verification still ships as a stub (M06 / FPT.AI swaps in later).
-        services.AddScoped<IFaceVerificationService, Attendance.StubFaceVerificationService>();
+        // ----- M06 Face Verification (ADR-011: self-hosted CompreFace) -----
+        // Real CompreFace client when an API key is configured, else a deterministic dev client.
+        services.Configure<Rmms.Application.Common.Options.CompreFaceOptions>(
+            config.GetSection(Rmms.Application.Common.Options.CompreFaceOptions.SectionName));
+        var compreFace = config.GetSection(Rmms.Application.Common.Options.CompreFaceOptions.SectionName);
+        var compreFaceKey = compreFace["ApiKey"];
+        if (!string.IsNullOrWhiteSpace(compreFaceKey))
+        {
+            var baseUrl = (compreFace["BaseUrl"] ?? "http://compreface-fe:8080").TrimEnd('/') + "/";
+            services.AddHttpClient<IFaceClient, Face.CompreFaceClient>(c =>
+            {
+                c.BaseAddress = new Uri(baseUrl);
+                c.DefaultRequestHeaders.Add("x-api-key", compreFaceKey);
+                c.Timeout = TimeSpan.FromSeconds(10);
+            });
+        }
+        else
+        {
+            services.AddScoped<IFaceClient, Face.DevFaceClient>();
+        }
+        services.AddScoped<IFaceVerificationService, Face.FaceVerificationService>();
 
         // Photo storage: MinIO when an endpoint is configured, else a no-op local fallback.
         services.Configure<Rmms.Application.Common.Options.MinioOptions>(

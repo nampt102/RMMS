@@ -67,5 +67,9 @@ public static class AuditAction
     public const string AttendanceFakeGpsBlocked = "attendance.fake_gps_blocked";
     public const string AttendanceReviewed = "attendance.reviewed";
 
+    // ----- M06 Face Verification (CR-1) -----
+    public const string FaceEnrolled = "face.enrolled";
+    public const string FaceRemoved = "face.removed"; // admin remove / re-enroll trigger
+
     // (M04+ actions appended here as modules ship)
 }

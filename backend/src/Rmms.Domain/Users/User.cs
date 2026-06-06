@@ -160,13 +160,23 @@ public sealed class User : AggregateRoot
         }
     }
 
-    /// <summary>M06 hook — call when face enrollment succeeds at FPT.AI.</summary>
+    /// <summary>M06 hook — call when face enrollment succeeds (stores the engine subject id).</summary>
     public void RecordFaceEnrollment(string templateExternalId, DateTimeOffset at)
     {
         ArgumentException.ThrowIfNullOrWhiteSpace(templateExternalId);
         FaceTemplateExternalId = templateExternalId;
         FaceEnrolledAt = at;
     }
+
+    /// <summary>M06 hook — clear enrollment (Admin remove / re-enroll trigger). User must enroll again.</summary>
+    public void ClearFaceEnrollment()
+    {
+        FaceTemplateExternalId = null;
+        FaceEnrolledAt = null;
+    }
+
+    /// <summary>True when the user has an active face enrollment.</summary>
+    public bool IsFaceEnrolled => FaceTemplateExternalId is not null;
 
     // ----- Helpers -----
 

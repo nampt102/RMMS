@@ -24,11 +24,13 @@
 ## Tasks by Discipline
 
 ### BE
-- [ ] FPT.AI Face client (with Polly retry)
-- [ ] Enrollment endpoint
-- [ ] Verify endpoint
-- [ ] Integrate into check-in/out
-- [ ] admin_reviews entity + queue endpoints
+- [x] Face client — **CompreFace** (ADR-011, self-hosted) via `IFaceClient`; `DevFaceClient` fallback when no API key (config-gated like SendGrid/FCM)
+- [x] Enrollment endpoint — `POST /api/v1/face/enroll` (multipart, replaces prior subject) + `GET /face/status`
+- [x] Verify endpoint — `POST /api/v1/face/verify`; check-in/out verification automatic via `FaceVerificationService`
+- [x] Integrate into check-in/out — unenrolled → `FaceFailPendingReview` (BR-206); engine down → pending review (BR-207)
+- [x] Admin — `POST /admin/face/re-enroll/:userId`, `DELETE /admin/face/template/:userId`
+- [~] admin_reviews entity + queue endpoints — **using M05 status-driven review queue** (no new table; consistent with M05)
+- [x] 7 unit tests (enroll / upstream-fail / admin-remove + FaceVerificationService not-enrolled/match/no-match/engine-down) → suite **191 green**
 
 ### Mobile
 - [ ] Face enrollment wizard

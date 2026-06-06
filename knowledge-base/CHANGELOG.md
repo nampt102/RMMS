@@ -6,6 +6,18 @@ Append-only chronological log of significant project milestones, decisions, and 
 
 ---
 
+## 2026-06-06 — M06 Face Verification BE (Sprint 04) — CompreFace (ADR-011)
+
+**By:** Tech lead (MotivesVN IT), AI-assisted
+
+**Status:** ✅ BE done — full suite **191 unit tests green** (+7 face). Web + mobile pending.
+
+- **Engine:** `IFaceClient` port (Enroll/Verify/Delete, subject model) with `CompreFaceClient` (real, typed HttpClient → CompreFace Recognition REST: `faces?subject=`, `recognize`, `subjects/{id}`) gated by `CompreFace:ApiKey`; `DevFaceClient` deterministic fallback (no service needed for local/CI/tests). `CompreFaceOptions` (threshold 0.85).
+- **M05 integration:** `FaceVerificationService` replaces the always-pass stub — resolves the user's enrolled subject + verifies the selfie; **unenrolled → PendingReview** (BR-206), engine unreachable → PendingReview (BR-207). M05 check-in unit tests unaffected (inject a fake port).
+- **Use-cases/API:** `GET /api/v1/face/status`, `POST /face/enroll` (multipart, re-enroll replaces subject), `POST /face/verify`; admin `POST /admin/face/re-enroll/:userId` + `DELETE /admin/face/template/:userId`. `User.ClearFaceEnrollment()` + audit `face.enrolled` / `face.removed` (CR-1). No schema change (reuses `users.face_template_external_id` + `face_enrolled_at`).
+- **Admin review:** continues to use the M05 status-driven queue (no `admin_reviews` table).
+- **Deferred:** web face-status UI + admin re-enroll/remove actions; mobile 3-angle enrollment wizard + capture in check-in (code-only). Enrolled-photo-vs-selfie side-by-side compare deferred (CompreFace owns the embedding; would need a stored reference image column).
+
 ## 2026-06-06 — M05 Sprint 03 follow-up: real MinIO storage + photo-retention job
 
 **By:** Tech lead (MotivesVN IT), AI-assisted
