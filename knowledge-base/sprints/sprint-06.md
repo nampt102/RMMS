@@ -22,12 +22,14 @@
 ## Tasks by Discipline
 
 ### BE
-- [ ] approvals + approval_email_tokens entities
-- [ ] Approval endpoints (approve/reject/override)
-- [ ] HMAC-signed token generation
-- [ ] Public email-link action endpoint
-- [ ] Wire Schedule into Approval
-- [ ] Audit log integration
+- [x] approvals + approval_email_tokens entities (migration `M09_Approvals`, applied to server DB)
+- [x] Approval endpoints — `GET /approvals/pending`, `GET /approvals/:id`, `POST /approvals/:id/{approve,reject}`, `POST /admin/approvals/:id/override`
+- [x] HMAC-signed token generation — `IApprovalTokenService` (HS256, 24h TTL, nonce); SHA-256 hash persisted for one-time use
+- [x] Public email-link action endpoint — `GET /approvals/email-action` (preview) + `POST /approvals/email-action/confirm` (consume, logs IP/UA), both `[AllowAnonymous]`
+- [x] `IApprovalService` producer — creates approval + (BUH) issues token + sends bilingual email
+- [~] Wire Schedule into Approval — **deferred** (M07 has its own approve/reject; retrofitting risks regressions — next step)
+- [x] Audit log integration — `approval.{requested,approved,rejected,overridden}` (CR-1)
+- [x] 17 unit tests (state machine + token round-trip/tamper/expiry + email one-time/expired/preview + producer email) → suite **208 green**
 
 ### Mobile
 - [ ] Approval list (Leader)

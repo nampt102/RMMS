@@ -6,6 +6,19 @@ Append-only chronological log of significant project milestones, decisions, and 
 
 ---
 
+## 2026-06-07 — Sprint 06: M09 Approval Workflow Engine BE (CompreFace unaffected)
+
+**By:** Tech lead (MotivesVN IT), AI-assisted
+
+**Status:** ✅ BE engine done — full solution builds, **208 unit tests green** (+17). Migration `M09_Approvals` applied to the server DB. Web + mobile + schedule-producer wiring pending.
+
+- **Generic engine:** `Approval` aggregate (entity_type / entity_id / requester / approver+role / status pending→approved|rejected|overridden) + `ApprovalEmailToken`; EF configs + migration `M09_Approvals` (`approvals` + `approval_email_tokens`, unique token-hash index). DbSets on `IAppDbContext`/`AppDbContext`.
+- **Decisions:** `GET /api/v1/approvals/pending` (approver queue, AC-17) + `GET /approvals/:id` (requester/approver/admin) + `POST /approvals/:id/{approve,reject}` (reason required, BR-404). Admin `POST /admin/approvals/:id/override` (reason + audit, BR-408/AC-19; second override → 409, first wins).
+- **BUH email-link (BR-407 / AC-18):** `IApprovalTokenService` issues HMAC-SHA256 signed JWT-like tokens (24h TTL, nonce); only the SHA-256 hash is persisted. Public `[AllowAnonymous]` `GET /approvals/email-action` (friendly preview: expired/used/already-decided) + `POST /approvals/email-action/confirm` (one-time consume, records decision via `email_link`, logs IP/UA). `Approval:SigningKey` from env/user-secrets (dev fallback key).
+- **Producer:** `IApprovalService.CreateAsync` enqueues an approval and, for a BUH approver, issues the token + sends a bilingual (vi/en) email with the `{webBase}/approve?token=` link.
+- **Audit:** `approval.{requested,approved,rejected,overridden}` (CR-1).
+- **Deferred:** wiring M07 schedule submit → approval (M07 has its own approve/reject; avoid regressions), web BUH/Admin UI + public landing page, mobile Leader queue. **Note:** the local dev API (PID 24656) was stopped to generate the migration — restart with `dotnet run` (CompreFace user-secrets persist).
+
 ## 2026-06-06 — Sprint 05 closed: M07 Work Schedule — mobile edit + themed status
 
 **By:** Tech lead (MotivesVN IT), AI-assisted

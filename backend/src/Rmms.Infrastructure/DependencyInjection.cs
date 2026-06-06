@@ -80,6 +80,12 @@ public static class DependencyInjection
                 break;
         }
 
+        // ----- M09 Approval Workflow -----
+        services.Configure<Rmms.Application.Common.Options.ApprovalOptions>(
+            config.GetSection(Rmms.Application.Common.Options.ApprovalOptions.SectionName));
+        services.AddSingleton<IApprovalTokenService, Approvals.ApprovalTokenService>();
+        services.AddScoped<IApprovalService, Approvals.ApprovalService>();
+
         // ----- Audit (CR-1) -----
         services.AddScoped<IAuditLogger, DbAuditLogger>();
 

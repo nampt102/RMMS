@@ -1,4 +1,5 @@
 using Microsoft.EntityFrameworkCore;
+using Rmms.Domain.Approvals;
 using Rmms.Domain.Audit;
 using Rmms.Domain.Auth;
 using Rmms.Domain.Devices;
@@ -36,6 +37,10 @@ public interface IAppDbContext
 
     // ----- M07 Work Schedule (shifts are an owned collection of WorkSchedule) -----
     DbSet<WorkSchedule> WorkSchedules { get; }
+
+    // ----- M09 Approval Workflow -----
+    DbSet<Approval> Approvals { get; }
+    DbSet<ApprovalEmailToken> ApprovalEmailTokens { get; }
 
     // ----- M05 Attendance -----
     DbSet<AttendanceRecord> AttendanceRecords { get; }
