@@ -6,6 +6,17 @@ Append-only chronological log of significant project milestones, decisions, and 
 
 ---
 
+## 2026-06-07 — Sprint 06: M09 Approval web + mobile clients
+
+**By:** Tech lead (MotivesVN IT), AI-assisted
+
+**Status:** ✅ Web typecheck + lint clean; backend build green. Mobile code-only (Mac runs build_runner + flutter analyze).
+
+- **Web — public BUH email-link landing (AC-18):** `/[locale]/approve?token=` (no login, outside the admin/auth layouts; next-intl middleware doesn't gate it). Previews the signed link via the public `email-action` endpoint (friendly expired/used/already-decided states) and approves/rejects (reason) via `email-action/confirm` — uses bare axios, never the auth client.
+- **Web — approvals queue (AC-17/19):** `/[locale]/(admin)/approvals`, role-aware: Leader/BUH see their pending queue with approve / reject-reason; Admin sees all approvals (status filter, paginated) with override-reason. Backed by new BE `GET /api/v1/admin/approvals`. Admin nav "Approvals"; messages vi/en (`approvals` + `approveLink`).
+- **Mobile (AC-17):** `features/approvals` (Freezed `Approval`, api/repo/`pendingApprovalsProvider`) + `ApprovalsScreen` — Leader pending queue, inline approve + reject-with-reason dialog (`POST /approvals/:id/{approve,reject}`), themed `SoftCard`/`StatusPill`, pull-to-refresh. Home "Approvals" tile gated to Leader role. ARB vi/en.
+- **Still deferred:** schedule→approval producer wiring (M07 keeps its own approve/reject), SendGrid (ConsoleEmailSender logs the link in dev).
+
 ## 2026-06-07 — Sprint 06: M09 Approval Workflow Engine BE (CompreFace unaffected)
 
 **By:** Tech lead (MotivesVN IT), AI-assisted

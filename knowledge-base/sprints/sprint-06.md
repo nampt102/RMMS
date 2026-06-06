@@ -32,8 +32,8 @@
 - [x] 17 unit tests (state machine + token round-trip/tamper/expiry + email one-time/expired/preview + producer email) → suite **208 green**
 
 ### Mobile
-- [ ] Approval list (Leader)
-- [ ] Approval detail with inline approve
+- [x] Approval list (Leader) — `features/approvals` (Freezed `Approval`, api/repo/`pendingApprovalsProvider`), `ApprovalsScreen` with pull-to-refresh + empty/error states (themed `SoftCard`/`StatusPill`)
+- [x] Inline approve + reject-with-reason dialog → `POST /approvals/:id/{approve,reject}`; home "Approvals" tile gated to Leader role; ARB vi/en
 
 ### Web
 - [x] BUH/Leader approval queue — `/approvals` (role-aware ProTable: Leader/BUH pending + approve/reject; Admin all-approvals + override) — needs BE `GET /admin/approvals` (added)

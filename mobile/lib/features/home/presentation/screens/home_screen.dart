@@ -8,6 +8,7 @@ import '../../../../core/widgets/brand_widgets.dart';
 import '../../../../l10n/generated/app_localizations.dart';
 import '../../../auth/application/auth_controller.dart';
 import '../../../auth/application/auth_state.dart';
+import '../../../auth/domain/auth_user.dart';
 import '../../../face/data/face_repository.dart';
 
 /// Home dashboard. Anchors the brand with a gradient hero, surfaces the primary
@@ -128,6 +129,15 @@ class HomeScreen extends ConsumerWidget {
                         ref.invalidate(faceStatusProvider);
                       },
                     ),
+                    // Approval queue is a Leader responsibility (M09, AC-17).
+                    if (user?.role == UserRole.leader)
+                      FeatureTile(
+                        icon: Icons.fact_check_outlined,
+                        title: l.homeFeatureApprovals,
+                        subtitle: l.homeFeatureApprovalsSub,
+                        tone: BrandTone.brand,
+                        onTap: () => context.push(AppRoutes.approvals),
+                      ),
                   ],
                 ),
               ],
