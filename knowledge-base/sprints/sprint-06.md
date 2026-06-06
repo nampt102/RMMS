@@ -36,9 +36,9 @@
 - [ ] Approval detail with inline approve
 
 ### Web
-- [ ] BUH approval list + detail
-- [ ] Email-link landing page
-- [ ] Admin override UI
+- [x] BUH/Leader approval queue — `/approvals` (role-aware ProTable: Leader/BUH pending + approve/reject; Admin all-approvals + override) — needs BE `GET /admin/approvals` (added)
+- [x] Email-link landing page — public `/[locale]/approve?token=` (no login; friendly expired/used/already-decided states; approve/reject + reason) — AC-18
+- [x] Admin override UI — reason modal → `POST /admin/approvals/:id/override` (AC-19)
 
 ### DevOps
 - [ ] SendGrid integration + email templates

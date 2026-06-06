@@ -25,6 +25,14 @@ public sealed class AdminApprovalsController : ControllerBase
         _currentUser = currentUser;
     }
 
+    /// <summary>All approvals (optional status filter), paginated — admin override surface.</summary>
+    [HttpGet]
+    public async Task<IActionResult> List([FromQuery] string? status, [FromQuery] int page, [FromQuery] int pageSize, CancellationToken ct)
+    {
+        var result = await _mediator.Send(new GetAllApprovalsQuery(status, page <= 0 ? 1 : page, pageSize <= 0 ? 20 : pageSize), ct);
+        return result.IsSuccess ? ResultMapping.Ok(result.Value) : ResultMapping.Failure(result.Error, HttpContext.TraceIdentifier);
+    }
+
     [HttpPost("{id:guid}/override")]
     public async Task<IActionResult> Override([FromRoute] Guid id, [FromBody] OverrideApprovalRequest request, CancellationToken ct)
     {

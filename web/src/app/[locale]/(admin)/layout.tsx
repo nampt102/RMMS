@@ -4,6 +4,7 @@ import { Button, Layout, Menu, Space, Typography } from "antd";
 import {
   AppstoreOutlined,
   ApartmentOutlined,
+  AuditOutlined,
   CalendarOutlined,
   CheckSquareOutlined,
   LaptopOutlined,
@@ -67,6 +68,7 @@ export default function AdminLayout({
     { key: `/${locale}/categories`, icon: <AppstoreOutlined />, label: <Link href={`/${locale}/categories`}>{t("navCategories")}</Link> },
     { key: `/${locale}/schedules`, icon: <CalendarOutlined />, label: <Link href={`/${locale}/schedules`}>{t("navSchedules")}</Link> },
     { key: `/${locale}/attendance`, icon: <CheckSquareOutlined />, label: <Link href={`/${locale}/attendance`}>{t("navAttendance")}</Link> },
+    { key: `/${locale}/approvals`, icon: <AuditOutlined />, label: <Link href={`/${locale}/approvals`}>{t("navApprovals")}</Link> },
     { key: `/${locale}/devices`, icon: <LaptopOutlined />, label: <Link href={`/${locale}/devices`}>{t("navDevices")}</Link> },
   ];
   const selectedKey = navItems.find((i) => pathname.startsWith(i.key))?.key;
