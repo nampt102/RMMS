@@ -1,6 +1,7 @@
 using FluentValidation;
 using Mediator;
 using Microsoft.EntityFrameworkCore;
+using Rmms.Application.Approvals;
 using Rmms.Application.Common.Abstractions;
 using Rmms.Application.Common.Interfaces;
 using Rmms.Domain.Common;
@@ -50,7 +51,10 @@ internal sealed class ApproveScheduleCommandHandler : IRequestHandler<ApproveSch
             previous?.Supersede();
         }
 
-        schedule.Approve(command.ApproverUserId, _clock.UtcNow);
+        var now = _clock.UtcNow;
+        schedule.Approve(command.ApproverUserId, now);
+        // Keep the linked M09 approval (if any) in sync so its queue clears.
+        await ScheduleApprovalSync.SyncApprovalAsync(_db, schedule.Id, approve: true, null, command.ApproverUserId, ApprovalDecisionVia.Web, now, ct);
 
         await _audit.RecordAsync(
             AuditAction.ScheduleApproved, "work_schedule", schedule.Id,
@@ -117,7 +121,9 @@ internal sealed class RejectScheduleCommandHandler : IRequestHandler<RejectSched
         if (scope is not null) return scope;
 
         // BR-308: rejecting an edit leaves the old approved version effective (unchanged).
-        schedule.Reject(command.ApproverUserId, command.Reason, _clock.UtcNow);
+        var now = _clock.UtcNow;
+        schedule.Reject(command.ApproverUserId, command.Reason, now);
+        await ScheduleApprovalSync.SyncApprovalAsync(_db, schedule.Id, approve: false, command.Reason, command.ApproverUserId, ApprovalDecisionVia.Web, now, ct);
 
         await _audit.RecordAsync(
             AuditAction.ScheduleRejected, "work_schedule", schedule.Id,

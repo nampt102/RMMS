@@ -133,7 +133,7 @@ public sealed class WorkScheduleHandlerTests
             .Handle(new CreateScheduleCommand(pg.Id, new[] { Day(Future(clock), store.Id) }), default);
         var id = create.Value[0];
 
-        var result = await new SubmitScheduleCommandHandler(db, new InMemoryAuditLogger(), clock)
+        var result = await new SubmitScheduleCommandHandler(db, new InMemoryAuditLogger(), clock, new FakeApprovalService())
             .Handle(new SubmitScheduleCommand(id, pg.Id), default);
 
         result.IsSuccess.Should().BeTrue();

@@ -4,6 +4,7 @@ using Rmms.Application.Approvals;
 using Rmms.Application.Common.Options;
 using Rmms.Domain.Approvals;
 using Rmms.Domain.Enums;
+using Rmms.Domain.Scheduling;
 using Rmms.Infrastructure.Approvals;
 using Rmms.Infrastructure.Email;
 using Rmms.Infrastructure.Persistence;
@@ -295,6 +296,59 @@ public sealed class ApprovalHandlerTests
         result.Value.Valid.Should().BeTrue();
         result.Value.Used.Should().BeFalse();
         result.Value.EntityType.Should().Be("work_schedule");
+    }
+
+    // ---------- Schedule wiring (M09 ↔ M07) ----------
+
+    private static WorkSchedule SeedPendingSchedule(AppDbContext db, Guid pgId)
+    {
+        var schedule = WorkSchedule.Create(
+            pgId,
+            new DateOnly(2026, 7, 1),
+            new[] { new ScheduleShiftInput(Guid.NewGuid(), new TimeOnly(8, 0), new TimeOnly(17, 0)) });
+        db.WorkSchedules.Add(schedule);
+        return schedule;
+    }
+
+    [Fact]
+    public async Task ApproveApproval_ForWorkSchedule_ActuatesSchedule()
+    {
+        await using var db = TestDbContextFactory.Create();
+        var clock = new TestClock();
+        var leaderId = Guid.NewGuid();
+        var pgId = Guid.NewGuid();
+        var schedule = SeedPendingSchedule(db, pgId);
+        var approval = Approval.Create(ApprovalEntityType.WorkSchedule, schedule.Id, pgId, leaderId, UserRole.Leader);
+        db.Approvals.Add(approval);
+        await db.SaveChangesAsync();
+
+        var result = await new ApproveApprovalCommandHandler(db, new InMemoryAuditLogger(), clock)
+            .Handle(new ApproveApprovalCommand(approval.Id, leaderId, ApprovalDecisionVia.App), default);
+
+        result.IsSuccess.Should().BeTrue();
+        db.Approvals.Single(a => a.Id == approval.Id).Status.Should().Be(ApprovalStatus.Approved);
+        db.WorkSchedules.Single(s => s.Id == schedule.Id).Status.Should().Be(WorkScheduleStatus.Approved);
+    }
+
+    [Fact]
+    public async Task RejectApproval_ForWorkSchedule_ActuatesSchedule()
+    {
+        await using var db = TestDbContextFactory.Create();
+        var clock = new TestClock();
+        var leaderId = Guid.NewGuid();
+        var pgId = Guid.NewGuid();
+        var schedule = SeedPendingSchedule(db, pgId);
+        var approval = Approval.Create(ApprovalEntityType.WorkSchedule, schedule.Id, pgId, leaderId, UserRole.Leader);
+        db.Approvals.Add(approval);
+        await db.SaveChangesAsync();
+
+        var result = await new RejectApprovalCommandHandler(db, new InMemoryAuditLogger(), clock)
+            .Handle(new RejectApprovalCommand(approval.Id, leaderId, "Trùng ca", ApprovalDecisionVia.App), default);
+
+        result.IsSuccess.Should().BeTrue();
+        var s = db.WorkSchedules.Single(x => x.Id == schedule.Id);
+        s.Status.Should().Be(WorkScheduleStatus.Rejected);
+        s.RejectReason.Should().Be("Trùng ca");
     }
 
     // ---------- Producer (IApprovalService) ----------

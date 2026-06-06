@@ -17,12 +17,14 @@ internal sealed class SubmitScheduleCommandHandler : IRequestHandler<SubmitSched
     private readonly IAppDbContext _db;
     private readonly IAuditLogger _audit;
     private readonly IDateTimeProvider _clock;
+    private readonly IApprovalService _approvals;
 
-    public SubmitScheduleCommandHandler(IAppDbContext db, IAuditLogger audit, IDateTimeProvider clock)
+    public SubmitScheduleCommandHandler(IAppDbContext db, IAuditLogger audit, IDateTimeProvider clock, IApprovalService approvals)
     {
         _db = db;
         _audit = audit;
         _clock = clock;
+        _approvals = approvals;
     }
 
     public async ValueTask<Result> Handle(SubmitScheduleCommand command, CancellationToken ct)
@@ -45,8 +47,33 @@ internal sealed class SubmitScheduleCommandHandler : IRequestHandler<SubmitSched
             AuditAction.ScheduleSubmitted, "work_schedule", schedule.Id,
             new { user_id = schedule.UserId, schedule_date = schedule.ScheduleDate }, ct);
 
+        // M09: route to the PG's active Leader (BR-405). Leader→BUH (BR-406) is skipped
+        // until a Leader↔BUH assignment exists. Idempotent — no duplicate pending row.
+        await CreateApprovalIfRoutableAsync(schedule.Id, schedule.UserId, ct);
+
         await _db.SaveChangesAsync(ct);
         return Result.Success();
+    }
+
+    private async Task CreateApprovalIfRoutableAsync(Guid scheduleId, Guid ownerId, CancellationToken ct)
+    {
+        var alreadyQueued = await _db.Approvals.AnyAsync(
+            a => a.EntityType == ApprovalEntityType.WorkSchedule
+              && a.EntityId == scheduleId
+              && a.Status == ApprovalStatus.Pending, ct);
+        if (alreadyQueued) return;
+
+        var owner = await _db.Users.FirstOrDefaultAsync(u => u.Id == ownerId, ct);
+        if (owner is null || owner.Role != UserRole.Pg) return; // only PG→Leader wired in Phase 1
+
+        var leaderId = await _db.UserLeaderAssignments
+            .Where(a => a.PgUserId == ownerId && a.EffectiveTo == null)
+            .Select(a => a.LeaderUserId)
+            .FirstOrDefaultAsync(ct);
+        if (leaderId == Guid.Empty) return; // no active leader → nothing to route to
+
+        await _approvals.CreateAsync(
+            ApprovalEntityType.WorkSchedule, scheduleId, ownerId, leaderId, UserRole.Leader, ct);
     }
 }
 

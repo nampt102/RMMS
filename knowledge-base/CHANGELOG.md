@@ -6,6 +6,17 @@ Append-only chronological log of significant project milestones, decisions, and 
 
 ---
 
+## 2026-06-07 — Sprint 06: M09 ↔ M07 schedule wiring (AC-17 end-to-end)
+
+**By:** Tech lead (MotivesVN IT), AI-assisted
+
+**Status:** ✅ Solution builds; **210 unit tests green** (+2 actuator). Closes the producer/actuator gap so a PG schedule flows through the M09 queue end-to-end.
+
+- **Producer:** `SubmitScheduleCommand` now creates an M09 approval routed to the PG's active Leader (BR-405) via `IApprovalService` — idempotent (no duplicate pending row), skipped when there's no active leader. Leader→BUH (BR-406) deferred until a Leader↔BUH assignment exists.
+- **Two-way sync (`ScheduleApprovalSync`):** deciding on the **M09** surface (queue / mobile / BUH email-link) actuates the underlying `work_schedule` (approve incl. BR-308 supersede of the prior approved version; reject with reason). Deciding on the **M07** surface (web `/schedules` approve/reject) clears the linked M09 approval. Each side only mutates the other while still pending → no loops, consistent regardless of path.
+- Tests: M09 approve/reject of a `work_schedule` approval actuates the schedule; M07 submit test now passes the producer (FakeApprovalService).
+- Remaining M09: Leader→BUH routing (needs assignment data) + SendGrid (ConsoleEmailSender logs the link in dev).
+
 ## 2026-06-07 — Sprint 06: M09 Approval web + mobile clients
 
 **By:** Tech lead (MotivesVN IT), AI-assisted

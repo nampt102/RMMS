@@ -27,7 +27,7 @@
 - [x] HMAC-signed token generation — `IApprovalTokenService` (HS256, 24h TTL, nonce); SHA-256 hash persisted for one-time use
 - [x] Public email-link action endpoint — `GET /approvals/email-action` (preview) + `POST /approvals/email-action/confirm` (consume, logs IP/UA), both `[AllowAnonymous]`
 - [x] `IApprovalService` producer — creates approval + (BUH) issues token + sends bilingual email
-- [~] Wire Schedule into Approval — **deferred** (M07 has its own approve/reject; retrofitting risks regressions — next step)
+- [x] Wire Schedule into Approval — PG schedule **submit** creates an M09 approval routed to the active Leader (BR-405, idempotent); decisions sync **both ways** via `ScheduleApprovalSync` (M09 queue/email-link actuates the schedule incl. BR-308 supersede; M07 `/schedules` approve/reject clears the M09 queue). Leader→BUH (BR-406) skipped until a Leader↔BUH assignment exists
 - [x] Audit log integration — `approval.{requested,approved,rejected,overridden}` (CR-1)
 - [x] 17 unit tests (state machine + token round-trip/tamper/expiry + email one-time/expired/preview + producer email) → suite **208 green**
 
