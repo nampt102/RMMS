@@ -97,6 +97,47 @@
   },
   "homeViewAssignments": "View my assignments",
   "homeViewSchedule": "Work schedule",
+  "homeGreetingSub": "Have a productive day",
+  "homeSectionQuick": "Quick access",
+  "homeCheckInCardSub": "Check in / out at the store",
+  "homeFeatureAssignmentsSub": "Leader & stores",
+  "homeFeatureScheduleSub": "Shifts in next 30 days",
+  "homeFeatureAttendanceSub": "Attendance history",
+  "homeFeatureFace": "Face",
+  "homeFeatureFaceSub": "Enroll & manage",
+
+  "faceTitle": "Face Verification",
+  "faceStatusEnrolled": "Face enrolled",
+  "faceStatusNotEnrolled": "Face not enrolled",
+  "faceEnrolledOn": "Enrolled at {date}",
+  "@faceEnrolledOn": {
+    "placeholders": { "date": { "type": "String" } }
+  },
+  "faceEnrollTitle": "Enroll face",
+  "faceEnrollIntro": "Capture 3 angles of your face so the system can recognise you at check-in.",
+  "faceEnrollNow": "Enroll now",
+  "faceReEnroll": "Re-enroll",
+  "faceEnrollSubmit": "Finish enrollment",
+  "faceEnrollSuccess": "Face enrolled successfully.",
+  "faceProgress": "{done}/{total} angles captured",
+  "@faceProgress": {
+    "placeholders": {
+      "done": { "type": "int" },
+      "total": { "type": "int" }
+    }
+  },
+  "faceAngleFront": "Look straight",
+  "faceAngleLeft": "Turn left",
+  "faceAngleRight": "Turn right",
+  "faceCaptured": "Captured",
+  "faceTapToCapture": "Tap to capture",
+  "faceRetake": "Retake",
+  "faceGuidelinesTitle": "Capture tips",
+  "faceGuideline1": "Good lighting, avoid backlight",
+  "faceGuideline2": "Face clearly visible, unobstructed",
+  "faceGuideline3": "Remove mask / dark glasses if any",
+  "faceEnrollPromptTitle": "Enroll your face",
+  "faceEnrollPromptBody": "You need to enroll your face before checking in.",
 
   "assignmentsTitle": "My assignments",
   "assignmentsLeader": "My Leader",

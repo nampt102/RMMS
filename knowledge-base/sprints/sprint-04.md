@@ -33,14 +33,16 @@
 - [x] 7 unit tests (enroll / upstream-fail / admin-remove + FaceVerificationService not-enrolled/match/no-match/engine-down) → suite **191 green**
 
 ### Mobile
-- [ ] Face enrollment wizard
-- [ ] Face capture during check-in/out
-- [ ] Error handling for face fail
+- [x] Face enrollment wizard — 3-angle capture (`face_enrollment_screen.dart`), `POST /face/enroll`; reused for re-enroll
+- [x] Face capture during check-in/out — selfie already captured in M05 check-in; verified server-side automatically
+- [x] Error handling for face fail — home enroll-nudge banner when not enrolled; upstream errors normalised to `ApiException`
+- [x] **New modern theme** (ui-ux-pro-max): indigo + emerald flat-modern system — `app_palette.dart` (tokens + `AppSemantics` ThemeExtension), rewritten `app_theme.dart`, reusable `brand_widgets.dart` (GradientHero / FeatureTile / SoftCard / StatusPill), redesigned home dashboard
 
 ### Web
-- [ ] Admin Review queue
-- [ ] Review detail (compare selfie vs enrolled)
-- [ ] Approve/reject actions
+- [x] Face status column on Users admin (PG/Leader) + status detail in Drawer
+- [x] Admin actions — force re-enroll (`POST /admin/face/re-enroll/:id`) + remove template (`DELETE /admin/face/template/:id`)
+- [~] Review detail (compare selfie vs enrolled) — selfie shown in M05 attendance review modal; enrolled-photo side-by-side deferred (CompreFace owns the embedding, no stored reference image)
+- [~] Approve/reject actions — handled by M05 status-driven review queue (Admin attendance review)
 
 ### QA
 - [ ] Face accuracy testing on real devices in various lighting

@@ -17,6 +17,7 @@ import '../../features/schedule/presentation/screens/register_schedule_screen.da
 import '../../features/attendance/presentation/screens/attendance_history_screen.dart';
 import '../../features/attendance/presentation/screens/attendance_today_screen.dart';
 import '../../features/attendance/presentation/screens/check_in_screen.dart';
+import '../../features/face/presentation/screens/face_enrollment_screen.dart';
 import '../../l10n/generated/app_localizations.dart';
 
 /// Named routes — keep all path strings here.
@@ -37,6 +38,7 @@ class AppRoutes {
   static const String attendance = '/attendance';
   static const String attendanceHistory = '/attendance/history';
   static const String attendanceCapture = '/attendance/capture';
+  static const String faceEnroll = '/face/enroll';
 }
 
 /// Screens reachable while signed out.
@@ -145,6 +147,10 @@ final appRouterProvider = Provider<GoRouter>((ref) {
                 CheckInScreen(args: state.extra as CheckCaptureArgs),
           ),
         ],
+      ),
+      GoRoute(
+        path: AppRoutes.faceEnroll,
+        builder: (context, state) => const FaceEnrollmentScreen(),
       ),
     ],
   );

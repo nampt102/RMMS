@@ -13,6 +13,9 @@ export type AdminUser = {
   lastLoginAt: string | null;
   createdAt: string;
   updatedAt: string | null;
+  /** Face Verification enrollment (M06, ADR-011 CompreFace). */
+  faceEnrolled: boolean;
+  faceEnrolledAt: string | null;
 };
 
 export type CreateUserPayload = {

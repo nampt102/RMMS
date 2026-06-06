@@ -1,6 +1,6 @@
 "use client";
 
-import { PlusOutlined } from "@ant-design/icons";
+import { CheckCircleFilled, MinusCircleOutlined, PlusOutlined } from "@ant-design/icons";
 import {
   ModalForm,
   ProForm,
@@ -10,12 +10,14 @@ import {
   type ActionType,
   type ProColumns,
 } from "@ant-design/pro-components";
-import { App, Button, Descriptions, Divider, Drawer, Popconfirm, Space, Switch, Tag, Typography } from "antd";
+import { App, Button, Descriptions, Divider, Drawer, Popconfirm, Space, Switch, Tag, Tooltip, Typography } from "antd";
 import { useLocale, useTranslations } from "next-intl";
 import { useRef, useState } from "react";
 import {
   fetchUsers,
   useCreateUser,
+  useReEnrollFace,
+  useRemoveFace,
   useResetUserPassword,
   useUpdateUser,
 } from "@/features/users/api";
@@ -41,6 +43,8 @@ export default function UsersPage() {
   const createUser = useCreateUser();
   const updateUser = useUpdateUser();
   const resetPassword = useResetUserPassword();
+  const reEnrollFace = useReEnrollFace();
+  const removeFace = useRemoveFace();
 
   const showError = (error: unknown) => {
     const code = errorCodeFromUnknown(error);
@@ -67,6 +71,24 @@ export default function UsersPage() {
     <Tag color={ROLE_COLORS[role] ?? "default"}>{roleEnum[role]?.text ?? role}</Tag>
   );
 
+  // Face Verification only applies to field users (PG/Leader) who check in.
+  const usesFace = (role: AdminUser["role"]) => role === "pg" || role === "leader";
+
+  const faceTag = (row: AdminUser) => {
+    if (!usesFace(row.role)) return <Typography.Text type="secondary">—</Typography.Text>;
+    return row.faceEnrolled ? (
+      <Tooltip title={row.faceEnrolledAt ? fmtDate(row.faceEnrolledAt) : undefined}>
+        <Tag icon={<CheckCircleFilled />} color="success">
+          {t("face_enrolled")}
+        </Tag>
+      </Tooltip>
+    ) : (
+      <Tag icon={<MinusCircleOutlined />} color="default">
+        {t("face_notEnrolled")}
+      </Tag>
+    );
+  };
+
   const columns: ProColumns<AdminUser>[] = [
     {
       title: t("search"),
@@ -88,6 +110,12 @@ export default function UsersPage() {
       dataIndex: "status",
       valueType: "select",
       valueEnum: statusEnum,
+    },
+    {
+      title: t("face"),
+      dataIndex: "faceEnrolled",
+      search: false,
+      render: (_, row) => faceTag(row),
     },
     {
       title: t("lastLogin"),
@@ -140,6 +168,30 @@ export default function UsersPage() {
     try {
       await resetPassword.mutateAsync(detail.id);
       message.success(t("resetSuccess"));
+    } catch (error) {
+      showError(error);
+    }
+  };
+
+  const reEnrollForDetail = async () => {
+    if (!detail) return;
+    try {
+      await reEnrollFace.mutateAsync(detail.id);
+      setDetail({ ...detail, faceEnrolled: false, faceEnrolledAt: null });
+      message.success(t("face_reEnrollSuccess"));
+      actionRef.current?.reload();
+    } catch (error) {
+      showError(error);
+    }
+  };
+
+  const removeFaceForDetail = async () => {
+    if (!detail) return;
+    try {
+      await removeFace.mutateAsync(detail.id);
+      setDetail({ ...detail, faceEnrolled: false, faceEnrolledAt: null });
+      message.success(t("face_removeSuccess"));
+      actionRef.current?.reload();
     } catch (error) {
       showError(error);
     }
@@ -276,6 +328,35 @@ export default function UsersPage() {
               {t("resetPassword")}
             </Button>
           </Popconfirm>
+
+          {usesFace(detail.role) && (
+            <>
+              <Divider />
+              <Typography.Title level={5} style={{ marginTop: 0 }}>
+                {t("face")}
+              </Typography.Title>
+              <Space direction="vertical" size="middle" style={{ width: "100%" }}>
+                <Space align="center">
+                  {faceTag(detail)}
+                  {detail.faceEnrolled && detail.faceEnrolledAt && (
+                    <Typography.Text type="secondary">
+                      {t("face_enrolledAt", { date: fmtDate(detail.faceEnrolledAt) })}
+                    </Typography.Text>
+                  )}
+                </Space>
+                <Space>
+                  <Popconfirm title={t("face_reEnrollConfirm")} onConfirm={reEnrollForDetail}>
+                    <Button loading={reEnrollFace.isPending}>{t("face_reEnroll")}</Button>
+                  </Popconfirm>
+                  <Popconfirm title={t("face_removeConfirm")} onConfirm={removeFaceForDetail}>
+                    <Button danger disabled={!detail.faceEnrolled} loading={removeFace.isPending}>
+                      {t("face_remove")}
+                    </Button>
+                  </Popconfirm>
+                </Space>
+              </Space>
+            </>
+          )}
 
           <UserAssignmentsPanel userId={detail.id} isPg={detail.role === "pg"} />
         </>

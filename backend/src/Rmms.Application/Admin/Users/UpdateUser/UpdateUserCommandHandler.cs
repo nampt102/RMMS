@@ -108,7 +108,9 @@ internal sealed class UpdateUserCommandHandler : IRequestHandler<UpdateUserComma
             EmailVerifiedAt: user.EmailVerifiedAt,
             LastLoginAt: user.LastLoginAt,
             CreatedAt: user.CreatedAt,
-            UpdatedAt: user.UpdatedAt);
+            UpdatedAt: user.UpdatedAt,
+            FaceEnrolled: user.FaceTemplateExternalId != null,
+            FaceEnrolledAt: user.FaceEnrolledAt);
     }
 
     private static string[] WhichFields(UpdateUserCommand c)

@@ -58,3 +58,28 @@ export function useResetUserPassword() {
     },
   });
 }
+
+/**
+ * Force a user to re-enroll their face (M06) — POST /api/v1/admin/face/re-enroll/:id (204).
+ * Clears the current enrollment so the user must re-capture on next login.
+ */
+export function useReEnrollFace() {
+  const qc = useQueryClient();
+  return useMutation({
+    mutationFn: async (id: string) => {
+      await apiClient.post(`/admin/face/re-enroll/${id}`);
+    },
+    onSuccess: () => qc.invalidateQueries({ queryKey: USERS_KEY }),
+  });
+}
+
+/** Remove a user's face template entirely — DELETE /api/v1/admin/face/template/:id (204). */
+export function useRemoveFace() {
+  const qc = useQueryClient();
+  return useMutation({
+    mutationFn: async (id: string) => {
+      await apiClient.delete(`/admin/face/template/${id}`);
+    },
+    onSuccess: () => qc.invalidateQueries({ queryKey: USERS_KEY }),
+  });
+}

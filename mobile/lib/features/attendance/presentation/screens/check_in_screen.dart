@@ -5,6 +5,7 @@ import 'package:go_router/go_router.dart';
 import 'package:image_picker/image_picker.dart';
 
 import '../../../../core/network/api_exception.dart';
+import '../../../../core/theme/app_palette.dart';
 import '../../../../l10n/generated/app_localizations.dart';
 import '../../data/attendance_api.dart';
 import '../../data/attendance_repository.dart';
@@ -297,7 +298,7 @@ class _PhotoTile extends StatelessWidget {
             ? Text(AppLocalizations.of(context).attendancePhotoCaptured)
             : Text(AppLocalizations.of(context).attendanceTapToCapture),
         trailing: Icon(done ? Icons.check_circle : Icons.photo_camera_outlined,
-            color: done ? Colors.green : scheme.outline),
+            color: done ? context.semantics.success : scheme.outline),
       ),
     );
   }

@@ -6,6 +6,17 @@ Append-only chronological log of significant project milestones, decisions, and 
 
 ---
 
+## 2026-06-06 — M06 Face Verification Web + Mobile + new mobile theme (Sprint 04)
+
+**By:** Tech lead (MotivesVN IT), AI-assisted
+
+**Status:** ✅ Web typecheck green, backend build green (0 errors). Mobile code-only (Flutter not on the Windows box → Mac runs `build_runner` + `flutter analyze`).
+
+- **New mobile theme (ui-ux-pro-max guided):** replaced the basic seed-only theme with a modern **flat + soft-depth** system — vibrant **indigo** brand + **emerald** success accent. `core/theme/app_palette.dart` (design tokens + `AppSemantics` ThemeExtension for success/warning/info + brand gradient, light & dark), rewritten `app_theme.dart` (explicit `ColorScheme`, rounded 14–20 components, filled inputs, 52pt controls, navbar/sheet/snackbar themes, tuned `TextTheme`), and a reusable kit `core/widgets/brand_widgets.dart` (`GradientHero`, `IconBadge`, `StatusPill`, `SoftCard`, `FeatureTile`, `SectionLabel`). Home redesigned into a gradient-hero dashboard with a primary check-in card, face-enroll nudge, and a quick-access grid.
+- **M06 mobile:** new `features/face/` (Freezed `FaceStatus`, `FaceApi`/`FaceRepository` + `faceStatusProvider`), 3-angle **face enrollment wizard** (`face_enrollment_screen.dart`, front-camera capture → `POST /face/enroll`, reused for re-enroll), home banner when not enrolled. Check-in selfie already feeds server-side verification (M05). ARB keys (vi default + en).
+- **M06 web:** Users admin gains a **Face** status column (PG/Leader) + a Face section in the detail Drawer with **force re-enroll** and **remove template** actions (`useReEnrollFace` / `useRemoveFace` → admin endpoints). `AdminUserDto` extended with `faceEnrolled` + `faceEnrolledAt` (projected in `GetUsersQueryHandler`). next-intl messages (vi + en).
+- **Deferred (unchanged):** enrolled-photo-vs-selfie side-by-side compare (CompreFace owns the embedding; no stored reference image).
+
 ## 2026-06-06 — M06 Face Verification BE (Sprint 04) — CompreFace (ADR-011)
 
 **By:** Tech lead (MotivesVN IT), AI-assisted

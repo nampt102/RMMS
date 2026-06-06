@@ -228,7 +228,17 @@
     "role_admin": "Admin",
     "status_active": "Đang hoạt động",
     "status_inactive": "Vô hiệu hoá",
-    "status_pending": "Chờ xác minh email"
+    "status_pending": "Chờ xác minh email",
+    "face": "Khuôn mặt",
+    "face_enrolled": "Đã đăng ký",
+    "face_notEnrolled": "Chưa đăng ký",
+    "face_enrolledAt": "Đăng ký lúc {date}",
+    "face_reEnroll": "Yêu cầu đăng ký lại",
+    "face_reEnrollConfirm": "Xoá đăng ký hiện tại để người dùng đăng ký lại khuôn mặt?",
+    "face_reEnrollSuccess": "Đã yêu cầu người dùng đăng ký lại khuôn mặt.",
+    "face_remove": "Xoá khuôn mặt",
+    "face_removeConfirm": "Xoá hoàn toàn dữ liệu khuôn mặt của người dùng này?",
+    "face_removeSuccess": "Đã xoá dữ liệu khuôn mặt."
   },
   "errors": {
     "INVALID_CREDENTIALS": "Email hoặc mật khẩu không đúng.",

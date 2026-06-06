@@ -228,7 +228,17 @@
     "role_admin": "Admin",
     "status_active": "Active",
     "status_inactive": "Inactive",
-    "status_pending": "Pending email verify"
+    "status_pending": "Pending email verify",
+    "face": "Face",
+    "face_enrolled": "Enrolled",
+    "face_notEnrolled": "Not enrolled",
+    "face_enrolledAt": "Enrolled at {date}",
+    "face_reEnroll": "Force re-enroll",
+    "face_reEnrollConfirm": "Clear the current enrollment so the user must re-enroll their face?",
+    "face_reEnrollSuccess": "User asked to re-enroll their face.",
+    "face_remove": "Remove face",
+    "face_removeConfirm": "Completely remove this user's face data?",
+    "face_removeSuccess": "Face data removed."
   },
   "errors": {
     "INVALID_CREDENTIALS": "Wrong email or password.",

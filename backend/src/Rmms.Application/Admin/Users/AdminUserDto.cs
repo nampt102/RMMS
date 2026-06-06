@@ -12,4 +12,6 @@ public sealed record AdminUserDto(
     DateTimeOffset? EmailVerifiedAt,
     DateTimeOffset? LastLoginAt,
     DateTimeOffset CreatedAt,
-    DateTimeOffset? UpdatedAt);
+    DateTimeOffset? UpdatedAt,
+    bool FaceEnrolled = false,
+    DateTimeOffset? FaceEnrolledAt = null);

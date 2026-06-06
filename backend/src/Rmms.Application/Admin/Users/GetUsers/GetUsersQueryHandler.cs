@@ -65,7 +65,9 @@ internal sealed class GetUsersQueryHandler : IRequestHandler<GetUsersQuery, Resu
                 u.EmailVerifiedAt,
                 u.LastLoginAt,
                 u.CreatedAt,
-                u.UpdatedAt))
+                u.UpdatedAt,
+                u.FaceTemplateExternalId != null,
+                u.FaceEnrolledAt))
             .ToListAsync(ct);
 
         return new PaginatedResponse<AdminUserDto>(items, PaginationMeta.Build(page, pageSize, total));

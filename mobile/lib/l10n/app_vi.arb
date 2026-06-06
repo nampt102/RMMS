@@ -98,6 +98,47 @@
   },
   "homeViewAssignments": "Xem phân công của tôi",
   "homeViewSchedule": "Lịch làm việc",
+  "homeGreetingSub": "Chúc bạn một ngày làm việc hiệu quả",
+  "homeSectionQuick": "Truy cập nhanh",
+  "homeCheckInCardSub": "Check-in / check-out tại điểm bán",
+  "homeFeatureAssignmentsSub": "Leader & điểm bán",
+  "homeFeatureScheduleSub": "Ca làm 30 ngày tới",
+  "homeFeatureAttendanceSub": "Lịch sử chấm công",
+  "homeFeatureFace": "Khuôn mặt",
+  "homeFeatureFaceSub": "Đăng ký & quản lý",
+
+  "faceTitle": "Xác thực khuôn mặt",
+  "faceStatusEnrolled": "Đã đăng ký khuôn mặt",
+  "faceStatusNotEnrolled": "Chưa đăng ký khuôn mặt",
+  "faceEnrolledOn": "Đăng ký lúc {date}",
+  "@faceEnrolledOn": {
+    "placeholders": { "date": { "type": "String" } }
+  },
+  "faceEnrollTitle": "Đăng ký khuôn mặt",
+  "faceEnrollIntro": "Chụp 3 góc khuôn mặt để hệ thống nhận diện bạn khi chấm công.",
+  "faceEnrollNow": "Đăng ký ngay",
+  "faceReEnroll": "Đăng ký lại",
+  "faceEnrollSubmit": "Hoàn tất đăng ký",
+  "faceEnrollSuccess": "Đăng ký khuôn mặt thành công.",
+  "faceProgress": "{done}/{total} góc đã chụp",
+  "@faceProgress": {
+    "placeholders": {
+      "done": { "type": "int" },
+      "total": { "type": "int" }
+    }
+  },
+  "faceAngleFront": "Nhìn thẳng",
+  "faceAngleLeft": "Quay sang trái",
+  "faceAngleRight": "Quay sang phải",
+  "faceCaptured": "Đã chụp",
+  "faceTapToCapture": "Chạm để chụp",
+  "faceRetake": "Chụp lại",
+  "faceGuidelinesTitle": "Lưu ý khi chụp",
+  "faceGuideline1": "Đủ ánh sáng, tránh ngược sáng",
+  "faceGuideline2": "Khuôn mặt rõ nét, không bị che",
+  "faceGuideline3": "Bỏ khẩu trang/kính tối màu nếu có",
+  "faceEnrollPromptTitle": "Hãy đăng ký khuôn mặt",
+  "faceEnrollPromptBody": "Bạn cần đăng ký khuôn mặt trước khi chấm công.",
 
   "assignmentsTitle": "Phân công của tôi",
   "assignmentsLeader": "Leader quản lý",
