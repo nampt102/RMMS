@@ -185,6 +185,18 @@ public sealed class AttendanceRecord : AuditableEntity, IAggregateRoot
         StampReview(reviewerId, note, now);
     }
 
+    /// <summary>
+    /// Clear photo references after the object-storage copies are deleted (CR-4 — selfies/store
+    /// photos retained 90 days). Keeps the attendance/audit record itself for compliance.
+    /// </summary>
+    public void PurgePhotos()
+    {
+        CheckInSelfieUrl = null;
+        CheckInStorePhotoUrl = null;
+        CheckOutSelfieUrl = null;
+        CheckOutStorePhotoUrl = null;
+    }
+
     private void StampReview(Guid reviewerId, string? note, DateTimeOffset now)
     {
         ReviewedBy = reviewerId;

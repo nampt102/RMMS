@@ -10,6 +10,7 @@ using Rmms.Infrastructure.Identity;
 using Rmms.Infrastructure.Persistence;
 using Rmms.Infrastructure.Persistence.Interceptors;
 using Rmms.Infrastructure.Services;
+using Minio;
 using StackExchange.Redis;
 
 namespace Rmms.Infrastructure;
@@ -83,15 +84,31 @@ public static class DependencyInjection
         services.AddScoped<IAuditLogger, DbAuditLogger>();
 
         // ----- M05 Attendance (anti-fraud) -----
-        // Face Verification + photo storage ship as stubs in Phase 1A; the real providers
-        // (FPT.AI Face / MinIO) swap in at M06 / M13 without touching the attendance handlers.
+        // Face Verification still ships as a stub (M06 / FPT.AI swaps in later).
         services.AddScoped<IFaceVerificationService, Attendance.StubFaceVerificationService>();
-        services.AddScoped<IAttendancePhotoStorage, Attendance.LocalAttendancePhotoStorage>();
+
+        // Photo storage: MinIO when an endpoint is configured, else a no-op local fallback.
+        services.Configure<Rmms.Application.Common.Options.MinioOptions>(
+            config.GetSection(Rmms.Application.Common.Options.MinioOptions.SectionName));
+        var minioEndpoint = config.GetSection(Rmms.Application.Common.Options.MinioOptions.SectionName)["Endpoint"];
+        if (!string.IsNullOrWhiteSpace(minioEndpoint))
+        {
+            var minio = config.GetSection(Rmms.Application.Common.Options.MinioOptions.SectionName);
+            services.AddSingleton<Minio.IMinioClient>(_ => new Minio.MinioClient()
+                .WithEndpoint(minioEndpoint)
+                .WithCredentials(minio["AccessKey"], minio["SecretKey"])
+                .WithSSL(bool.TryParse(minio["UseSsl"], out var ssl) && ssl)
+                .Build());
+            services.AddScoped<IAttendancePhotoStorage, Attendance.MinioAttendancePhotoStorage>();
+        }
+        else
+        {
+            services.AddScoped<IAttendancePhotoStorage, Attendance.LocalAttendancePhotoStorage>();
+        }
 
         // ----- External integrations (deferred) -----
         // TODO(M06): replace StubFaceVerificationService with FPT.AI Face client (Refit + Polly).
         // TODO(M14): wire Firebase Admin SDK for FCM push.
-        // TODO(M13): replace LocalAttendancePhotoStorage with MinIO client for object storage.
 
         return services;
     }

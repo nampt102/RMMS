@@ -107,6 +107,7 @@ internal sealed class CheckOutCommandHandler : IRequestHandler<CheckOutCommand, 
             new { record.UserId, record.StoreId, status = record.Status.ToString() }, ct);
 
         await _db.SaveChangesAsync(ct);
-        return Result.Success(AttendanceMapper.ToDto(record, store.Code, store.Name));
+        var dto = await AttendanceQueries.PresignAsync(_photos, AttendanceMapper.ToDto(record, store.Code, store.Name), ct);
+        return Result.Success(dto);
     }
 }

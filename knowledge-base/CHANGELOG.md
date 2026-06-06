@@ -6,6 +6,17 @@ Append-only chronological log of significant project milestones, decisions, and 
 
 ---
 
+## 2026-06-06 — M05 Sprint 03 follow-up: real MinIO storage + photo-retention job
+
+**By:** Tech lead (MotivesVN IT), AI-assisted
+
+**Status:** ✅ BE done — full suite **184 unit tests green** (+1 retention). MinIO container smoke-checked (healthy on :9000).
+
+- **Real photo storage:** `MinioAttendancePhotoStorage` replaces the stub when `MinIO:Endpoint` is configured (DI picks MinIO vs local no-op fallback). `SaveAsync` ensures the bucket + `PutObject` and returns a stable **object key**; `IAttendancePhotoStorage` gained `GetUrlAsync` (short-lived presigned GET, default 1h) + `DeleteAsync`. Records persist keys; read paths (history, admin list, check-in/out responses) mint presigned preview URLs via `AttendanceQueries.PresignAsync`. `MinioOptions` bound from `MinIO` config section.
+- **Retention (CR-4):** `IAttendancePhotoRetentionService` + `AttendancePhotoRetentionService` — daily Hangfire job `attendance-photo-retention` purges selfies/store photos older than 90 days (deletes MinIO objects + `AttendanceRecord.PurgePhotos()` clears URL columns; record kept for compliance). Registered in `Rmms.Worker`.
+- **EXIF deferred to M13:** server-side EXIF GPS/timestamp verification + mobile EXIF write deferred to the photo-integrity pipeline (M13) — non-blocking audit value, and the mobile `image`-pkg EXIF writer is fragile to ship untested on the Windows box. Face Verification remains a stub → M06.
+- Also added `seed-demo` CLI earlier same day (1 admin + 2 leaders + 5 PGs + 3 stores + assignments) and initialized the `rmms` DB on the new server `103.216.116.206` (PostGIS installed, all migrations applied, demo data seeded).
+
 ## 2026-06-06 — M05 Attendance core (Sprint 03; Face/MinIO deferred)
 
 **By:** Tech lead (MotivesVN IT), AI-assisted · web + mobile UI via `ui-ux-pro-max`

@@ -29,10 +29,11 @@
 - [x] GPS validation logic (Haversine) — via `GpsCoordinate.DistanceMetersTo`, 300 m geofence
 - [x] Fake GPS detection logic — block + audit (BR-205), no valid record
 - [x] Status state machine — `DetermineCheckInStatus` + check-out escalation + admin review
-- [~] MinIO file upload for selfies — **stubbed** (`IAttendancePhotoStorage` + `LocalAttendancePhotoStorage`) → real MinIO at M13
-- [~] Hangfire job placeholders — deferred (Face retry job lands with M06)
-- [x] Face Verification abstraction — **stubbed** (`IFaceVerificationService`) → FPT.AI at M06
-- [x] 18 unit tests (status matrix, early/late, gps, fake-gps, double check-in, check-out, review, queries)
+- [x] MinIO file upload for selfies — **real** (`MinioAttendancePhotoStorage`: ensure-bucket + PutObject; records store object keys; read paths mint short-lived presigned GET URLs). Local no-op fallback kept when no endpoint configured.
+- [x] Hangfire job placeholders — `attendance-photo-retention` daily job (CR-4: purge selfies/store photos > 90 days from MinIO + clear URL columns) wired in `Rmms.Worker`
+- [x] Face Verification abstraction — **stubbed** (`IFaceVerificationService`) → FPT.AI at M06 (sprint goal: "without Face yet")
+- [x] 19 unit tests (status matrix, early/late, gps, fake-gps, double check-in, check-out, review, queries, photo-retention)
+- [~] **EXIF verify (server) + EXIF write (mobile)** — **deferred to M13** (photo-integrity pipeline): non-blocking audit value + the mobile EXIF writer (`image` pkg) is fragile to ship untested on Windows. Pairs naturally with the full MinIO/EXIF work at M13.
 
 ### Mobile (code-only — Flutter on Mac)
 - [x] Check-in screen with camera — `CheckInScreen` (image_picker)
@@ -40,7 +41,7 @@
 - [x] geolocator integration — GPS + accuracy
 - [x] fake GPS — geolocator `Position.isMocked` (replaces planned trust_location)
 - [x] Camera capture + compress photos — image_picker `imageQuality`/`maxWidth`
-- [~] EXIF write for store photo — deferred to M13 (server reads EXIF on real upload)
+- [~] EXIF write for store photo — **deferred to M13** (paired with server-side EXIF verify; see BE note)
 - [x] Attendance history list — `AttendanceHistoryScreen` (ListView.builder)
 
 ### Web

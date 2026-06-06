@@ -54,6 +54,13 @@ using (var scope = host.Services.CreateScope())
         "low",
         svc => svc.RunAsync(CancellationToken.None),
         Cron.Hourly());
+
+    // Attendance photo retention (M05, CR-4): daily purge of selfies/store photos > 90 days.
+    recurringJobs.AddOrUpdate<IAttendancePhotoRetentionService>(
+        "attendance-photo-retention",
+        "low",
+        svc => svc.RunAsync(CancellationToken.None),
+        Cron.Daily());
 }
 
 await host.RunAsync();

@@ -152,7 +152,8 @@ internal sealed class CheckInCommandHandler : IRequestHandler<CheckInCommand, Re
         }
 
         await _db.SaveChangesAsync(ct);
-        return Result.Success(AttendanceMapper.ToDto(record, store.Code, store.Name));
+        var dto = await AttendanceQueries.PresignAsync(_photos, AttendanceMapper.ToDto(record, store.Code, store.Name), ct);
+        return Result.Success(dto);
     }
 
     private async Task<ShiftResolution> ResolveShiftAsync(

@@ -1,5 +1,6 @@
 using Mediator;
 using Microsoft.EntityFrameworkCore;
+using Rmms.Application.Common.Abstractions;
 using Rmms.Application.Common.Interfaces;
 using Rmms.Domain.Attendance;
 using Rmms.Domain.Common;
@@ -26,8 +27,13 @@ internal sealed class AdminListAttendanceQueryHandler
 {
     private const int MaxPageSize = 100;
     private readonly IAppDbContext _db;
+    private readonly IAttendancePhotoStorage _photos;
 
-    public AdminListAttendanceQueryHandler(IAppDbContext db) => _db = db;
+    public AdminListAttendanceQueryHandler(IAppDbContext db, IAttendancePhotoStorage photos)
+    {
+        _db = db;
+        _photos = photos;
+    }
 
     public async ValueTask<Result<PaginatedResponse<AttendanceDto>>> Handle(AdminListAttendanceQuery query, CancellationToken ct)
     {
@@ -53,6 +59,7 @@ internal sealed class AdminListAttendanceQueryHandler
             .ToListAsync(ct);
 
         var items = await AttendanceQueries.MapWithStoresAsync(_db, records, ct);
+        items = await AttendanceQueries.PresignAllAsync(_photos, items, ct);
         return new PaginatedResponse<AttendanceDto>(items, PaginationMeta.Build(page, pageSize, total));
     }
 

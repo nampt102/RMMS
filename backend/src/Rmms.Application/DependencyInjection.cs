@@ -32,6 +32,7 @@ public static class DependencyInjection
 
         // Maintenance jobs (invoked by the Hangfire worker).
         services.AddScoped<ITokenCleanupService, TokenCleanupService>();
+        services.AddScoped<IAttendancePhotoRetentionService, AttendancePhotoRetentionService>();
 
         return services;
     }

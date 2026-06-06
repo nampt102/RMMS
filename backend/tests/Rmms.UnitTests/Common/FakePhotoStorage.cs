@@ -7,4 +7,9 @@ internal sealed class FakePhotoStorage : IAttendancePhotoStorage
 {
     public Task<string> SaveAsync(Guid userId, string kind, PhotoUpload photo, CancellationToken ct = default) =>
         Task.FromResult($"test://{kind}/{userId:N}");
+
+    public Task<string?> GetUrlAsync(string? storedKey, CancellationToken ct = default) =>
+        Task.FromResult(storedKey);
+
+    public Task DeleteAsync(string? storedKey, CancellationToken ct = default) => Task.CompletedTask;
 }

@@ -2,6 +2,7 @@ using System.Globalization;
 using Mediator;
 using Microsoft.EntityFrameworkCore;
 using Rmms.Application.Common;
+using Rmms.Application.Common.Abstractions;
 using Rmms.Application.Common.Interfaces;
 using Rmms.Domain.Attendance;
 using Rmms.Domain.Common;
@@ -19,8 +20,13 @@ internal sealed class GetHistoryQueryHandler : IRequestHandler<GetHistoryQuery, 
 {
     private const int MaxPageSize = 100;
     private readonly IAppDbContext _db;
+    private readonly IAttendancePhotoStorage _photos;
 
-    public GetHistoryQueryHandler(IAppDbContext db) => _db = db;
+    public GetHistoryQueryHandler(IAppDbContext db, IAttendancePhotoStorage photos)
+    {
+        _db = db;
+        _photos = photos;
+    }
 
     public async ValueTask<Result<PaginatedResponse<AttendanceDto>>> Handle(GetHistoryQuery query, CancellationToken ct)
     {
@@ -39,6 +45,7 @@ internal sealed class GetHistoryQueryHandler : IRequestHandler<GetHistoryQuery, 
             .ToListAsync(ct);
 
         var items = await AttendanceQueries.MapWithStoresAsync(_db, records, ct);
+        items = await AttendanceQueries.PresignAllAsync(_photos, items, ct);
         return new PaginatedResponse<AttendanceDto>(items, PaginationMeta.Build(page, pageSize, total));
     }
 }
@@ -113,6 +120,26 @@ internal sealed class GetCheckInInfoQueryHandler : IRequestHandler<GetCheckInInf
 
 internal static class AttendanceQueries
 {
+    /// <summary>Replace stored photo keys on a DTO with short-lived presigned preview URLs.</summary>
+    public static async Task<AttendanceDto> PresignAsync(
+        IAttendancePhotoStorage storage, AttendanceDto dto, CancellationToken ct) =>
+        dto with
+        {
+            CheckInSelfieUrl = await storage.GetUrlAsync(dto.CheckInSelfieUrl, ct),
+            CheckInStorePhotoUrl = await storage.GetUrlAsync(dto.CheckInStorePhotoUrl, ct),
+            CheckOutSelfieUrl = await storage.GetUrlAsync(dto.CheckOutSelfieUrl, ct),
+            CheckOutStorePhotoUrl = await storage.GetUrlAsync(dto.CheckOutStorePhotoUrl, ct),
+        };
+
+    /// <summary>Presign a whole page of DTOs.</summary>
+    public static async Task<IReadOnlyList<AttendanceDto>> PresignAllAsync(
+        IAttendancePhotoStorage storage, IReadOnlyList<AttendanceDto> dtos, CancellationToken ct)
+    {
+        var list = new List<AttendanceDto>(dtos.Count);
+        foreach (var d in dtos) list.Add(await PresignAsync(storage, d, ct));
+        return list;
+    }
+
     /// <summary>Resolve a store-label lookup for a set of records, then map them to DTOs.</summary>
     public static async Task<IReadOnlyList<AttendanceDto>> MapWithStoresAsync(
         IAppDbContext db, IReadOnlyList<AttendanceRecord> records, CancellationToken ct)

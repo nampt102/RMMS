@@ -374,7 +374,8 @@ public sealed class AttendanceHandlerTests
         await SeedApprovedShiftAsync(db, clock, pg.Id, store.Id, OnTimeStart, OnTimeEnd);
         await CheckInOnceAsync(db, clock, pg.Id, store.Id);
 
-        var result = await new GetHistoryQueryHandler(db).Handle(new GetHistoryQuery(pg.Id, null, null), default);
+        var result = await new GetHistoryQueryHandler(db, new FakePhotoStorage())
+            .Handle(new GetHistoryQuery(pg.Id, null, null), default);
 
         result.IsSuccess.Should().BeTrue();
         result.Value.Data.Should().ContainSingle();
