@@ -14,7 +14,7 @@ enum _Mode { day, week, month }
 
 /// Draft of one shift while composing a registration.
 class _ShiftDraft {
-  _ShiftDraft({this.storeId, required this.start, required this.end});
+  _ShiftDraft({required this.start, required this.end});
   String? storeId;
   TimeOfDay start;
   TimeOfDay end;
