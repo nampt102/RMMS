@@ -3,6 +3,7 @@ using Rmms.Application.Common.Interfaces;
 using Rmms.Domain.Audit;
 using Rmms.Domain.Auth;
 using Rmms.Domain.Devices;
+using Rmms.Domain.Attendance;
 using Rmms.Domain.Organization;
 using Rmms.Domain.Users;
 using Rmms.Domain.Scheduling;
@@ -38,6 +39,9 @@ public sealed class AppDbContext : DbContext, IAppDbContext
 
     // ----- M07 Work Schedule (shifts are an owned collection of WorkSchedule) -----
     public DbSet<WorkSchedule> WorkSchedules => Set<WorkSchedule>();
+
+    // ----- M05 Attendance -----
+    public DbSet<AttendanceRecord> AttendanceRecords => Set<AttendanceRecord>();
 
     // ----- Cross-cutting -----
     public DbSet<AuditLog> AuditLogs => Set<AuditLog>();

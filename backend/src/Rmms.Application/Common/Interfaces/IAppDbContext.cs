@@ -2,6 +2,7 @@ using Microsoft.EntityFrameworkCore;
 using Rmms.Domain.Audit;
 using Rmms.Domain.Auth;
 using Rmms.Domain.Devices;
+using Rmms.Domain.Attendance;
 using Rmms.Domain.Organization;
 using Rmms.Domain.Users;
 using Rmms.Domain.Scheduling;
@@ -35,6 +36,9 @@ public interface IAppDbContext
 
     // ----- M07 Work Schedule (shifts are an owned collection of WorkSchedule) -----
     DbSet<WorkSchedule> WorkSchedules { get; }
+
+    // ----- M05 Attendance -----
+    DbSet<AttendanceRecord> AttendanceRecords { get; }
 
     // ----- Cross-cutting -----
     DbSet<AuditLog> AuditLogs { get; }

@@ -59,5 +59,13 @@ public static class AuditAction
     public const string ScheduleApproved = "schedule.approved";
     public const string ScheduleRejected = "schedule.rejected";
 
+    // ----- M05 Attendance (CR-1) -----
+    public const string AttendanceCheckedIn = "attendance.checked_in";
+    public const string AttendanceCheckedOut = "attendance.checked_out";
+    public const string AttendanceFaceFailed = "attendance.face_failed";
+    public const string AttendanceGpsViolation = "attendance.gps_violation";
+    public const string AttendanceFakeGpsBlocked = "attendance.fake_gps_blocked";
+    public const string AttendanceReviewed = "attendance.reviewed";
+
     // (M04+ actions appended here as modules ship)
 }

@@ -37,6 +37,9 @@ public static class ErrorCodes
     public const string NoOpenAttendance = "NO_OPEN_ATTENDANCE";
     public const string CheckInTooEarly = "CHECK_IN_TOO_EARLY";
     public const string ShiftNotFound = "SHIFT_NOT_FOUND";
+    public const string AttendanceNotFound = "ATTENDANCE_NOT_FOUND";
+    public const string AttendanceNotReviewable = "ATTENDANCE_NOT_REVIEWABLE";
+    public const string OfflineNotSupported = "OFFLINE_NOT_SUPPORTED";
 
     // ---------- Approval ----------
     public const string ApprovalNotPending = "APPROVAL_NOT_PENDING";

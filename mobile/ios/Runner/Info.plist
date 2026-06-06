@@ -2,6 +2,12 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
+	<key>NSCameraUsageDescription</key>
+	<string>RMMS dùng camera để chụp selfie và ảnh cửa hàng khi chấm công.</string>
+	<key>NSPhotoLibraryUsageDescription</key>
+	<string>RMMS cần truy cập thư viện ảnh để đính kèm ảnh chấm công.</string>
+	<key>NSLocationWhenInUseUsageDescription</key>
+	<string>RMMS dùng vị trí GPS để xác thực khoảng cách khi check-in/check-out.</string>
 	<key>CADisableMinimumFrameDurationOnPhone</key>
 	<true/>
 	<key>CFBundleDevelopmentRegion</key>

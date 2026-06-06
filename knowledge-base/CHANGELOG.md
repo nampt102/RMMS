@@ -6,6 +6,20 @@ Append-only chronological log of significant project milestones, decisions, and 
 
 ---
 
+## 2026-06-06 — M05 Attendance core (Sprint 03; Face/MinIO deferred)
+
+**By:** Tech lead (MotivesVN IT), AI-assisted · web + mobile UI via `ui-ux-pro-max`
+
+**Status:** ✅ BE + web done (full suite **183 unit tests green** — +18 attendance; web type-check/lint/build green). Mobile is **code-only** (Flutter not on the Windows box — Mac verifies).
+
+- **Scope:** check-in / check-out with GPS geofence (BR-204), fake-GPS block (BR-205), early-window (BR-202/AC-5) + late marking (BR-203/AC-6), the status state machine (§3.2), history, and the Admin list + review queue (AC-9). **Bound to M07 shifts** via `work_schedule_shift_id`. **Face Verification (M06) and photo storage (M13/MinIO) ship as stubs** this sprint per the Sprint 03 goal ("without Face Recognition yet").
+- **Domain:** `AttendanceRecord` aggregate owns the `AttendanceStatus` state machine (valid / late / gps_violation_pending_review / face_fail_pending_review / fake_gps_blocked / admin_approved / admin_rejected). `CheckIn` factory derives status from validated facts (GPS distance wins over face fail); `CheckOut` (BR-206 face at both ends) escalates a clean record to review on a check-out anomaly; `ApproveReview`/`RejectReview` (BR-208/209, reason required). Geofence radius const = 300 m. `FaceVerificationResult` enum.
+- **Abstractions (deferred providers):** `IFaceVerificationService` (+ `StubFaceVerificationService` → always Success 0.99, swap at M06) and `IAttendancePhotoStorage` (+ `LocalAttendancePhotoStorage` → deterministic `local://` placeholder URL, swap at M13). Wired in Infrastructure DI.
+- **Use-cases/API (`api/v1/attendance`):** `GET today`, `GET check-in/info` (assigned stores + thresholds + today's shifts), `POST check-in` (multipart), `POST :id/check-out` (multipart), `GET history` (paginated). Admin `api/v1/admin/attendance`: `GET` (filter user/store/status/date) + `POST :id/review`. Validation order per M05 spec; VN-local (UTC+7, CR-5) shift-window math; fake-GPS audited and blocked without creating a valid record. Migration `M05_Attendance` applied to dev DB. Audit actions `attendance.*` (CR-1).
+- **Web:** `/attendance` admin page (ProTable + filters + status Tag with **icon+text** not color-alone, late badge, tabular distance) + detail/review modal (approve/reject-with-reason) + photo slots (placeholder until M13). Nav item + i18n vi/en.
+- **Mobile:** `features/attendance` (Freezed models, Dio multipart api, repo + `todayShiftsProvider`/`attendanceHistoryProvider`), `AttendanceTodayScreen` (today's shifts + check-in/out actions), `CheckInScreen` (geolocator GPS + `isMocked` fake-GPS flag, image_picker selfie + store photo, note), `AttendanceHistoryScreen`. Status chip widget (icon+label). Routes + home button + ARB vi/en. iOS `Info.plist` camera/photo/location usage strings + Android camera/location permissions added. **Awaiting Mac:** `pub get` → `build_runner` (gen `attendance.{freezed,g}.dart`) → `gen-l10n` → `analyze`.
+- **Deferred within M05:** real Face match (M06), MinIO photo upload + EXIF GPS/timestamp verification (M13), SignalR team-monitoring push (M16), `admin_reviews` table (status-driven queue used instead).
+
 ## 2026-06-06 — M07 Work Schedule (built ahead of M05; sprint reorder)
 
 **By:** Tech lead (MotivesVN IT), AI-assisted · web + mobile UI via `ui-ux-pro-max`

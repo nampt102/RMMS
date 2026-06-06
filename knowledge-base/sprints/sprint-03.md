@@ -8,10 +8,10 @@
 
 ## Deliverables (Definition of Done)
 
-- [ ] Check-in/out flow with GPS + selfie + store photo
-- [ ] Fake GPS detection
-- [ ] Attendance status state machine
-- [ ] History view
+- [x] Check-in/out flow with GPS + selfie + store photo — BE + web + mobile (photos stubbed → M13/MinIO)
+- [x] Fake GPS detection — `isMocked` flag (mobile) → BR-205 block + audit (BE)
+- [x] Attendance status state machine — `AttendanceStatus` (§3.2), owned by `AttendanceRecord`
+- [x] History view — mobile `AttendanceHistoryScreen` + web admin list/review queue (AC-9)
 
 ## User Stories / Key outcomes
 
@@ -24,25 +24,27 @@
 ## Tasks by Discipline
 
 ### BE
-- [ ] attendance_records entity
-- [ ] Check-in/out endpoints (multipart)
-- [ ] GPS validation logic (Haversine)
-- [ ] Fake GPS detection logic
-- [ ] Status state machine
-- [ ] MinIO file upload for selfies
-- [ ] Hangfire job placeholders
+- [x] attendance_records entity (`AttendanceRecord` aggregate + enums)
+- [x] Check-in/out endpoints (multipart) — `AttendanceController`
+- [x] GPS validation logic (Haversine) — via `GpsCoordinate.DistanceMetersTo`, 300 m geofence
+- [x] Fake GPS detection logic — block + audit (BR-205), no valid record
+- [x] Status state machine — `DetermineCheckInStatus` + check-out escalation + admin review
+- [~] MinIO file upload for selfies — **stubbed** (`IAttendancePhotoStorage` + `LocalAttendancePhotoStorage`) → real MinIO at M13
+- [~] Hangfire job placeholders — deferred (Face retry job lands with M06)
+- [x] Face Verification abstraction — **stubbed** (`IFaceVerificationService`) → FPT.AI at M06
+- [x] 18 unit tests (status matrix, early/late, gps, fake-gps, double check-in, check-out, review, queries)
 
-### Mobile
-- [ ] Check-in screen with camera
-- [ ] Check-out screen
-- [ ] geolocator integration
-- [ ] trust_location for fake GPS
-- [ ] Camera capture + compress photos
-- [ ] EXIF write for store photo
-- [ ] Attendance history list
+### Mobile (code-only — Flutter on Mac)
+- [x] Check-in screen with camera — `CheckInScreen` (image_picker)
+- [x] Check-out screen — same screen, `CheckMode.checkOut`
+- [x] geolocator integration — GPS + accuracy
+- [x] fake GPS — geolocator `Position.isMocked` (replaces planned trust_location)
+- [x] Camera capture + compress photos — image_picker `imageQuality`/`maxWidth`
+- [~] EXIF write for store photo — deferred to M13 (server reads EXIF on real upload)
+- [x] Attendance history list — `AttendanceHistoryScreen` (ListView.builder)
 
 ### Web
-- [ ] Attendance list (Admin read-only first)
+- [x] Attendance list (Admin) — `/attendance` ProTable + filters + status Tag (icon+text) + review modal
 
 ### QA
 - [ ] GPS edge cases

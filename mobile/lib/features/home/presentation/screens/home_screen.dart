@@ -55,6 +55,12 @@ class HomeScreen extends ConsumerWidget {
                 label: Text(l.homeViewSchedule),
                 onPressed: () => context.push(AppRoutes.schedule),
               ),
+              const SizedBox(height: 12),
+              FilledButton.icon(
+                icon: const Icon(Icons.how_to_reg_outlined),
+                label: Text(l.homeViewAttendance),
+                onPressed: () => context.push(AppRoutes.attendance),
+              ),
             ],
           ),
         ),

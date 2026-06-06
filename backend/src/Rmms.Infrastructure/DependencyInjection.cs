@@ -82,10 +82,16 @@ public static class DependencyInjection
         // ----- Audit (CR-1) -----
         services.AddScoped<IAuditLogger, DbAuditLogger>();
 
+        // ----- M05 Attendance (anti-fraud) -----
+        // Face Verification + photo storage ship as stubs in Phase 1A; the real providers
+        // (FPT.AI Face / MinIO) swap in at M06 / M13 without touching the attendance handlers.
+        services.AddScoped<IFaceVerificationService, Attendance.StubFaceVerificationService>();
+        services.AddScoped<IAttendancePhotoStorage, Attendance.LocalAttendancePhotoStorage>();
+
         // ----- External integrations (deferred) -----
-        // TODO(M06): wire FPT.AI Face client via Refit + Polly circuit breaker.
+        // TODO(M06): replace StubFaceVerificationService with FPT.AI Face client (Refit + Polly).
         // TODO(M14): wire Firebase Admin SDK for FCM push.
-        // TODO(M13): wire MinIO client for document storage.
+        // TODO(M13): replace LocalAttendancePhotoStorage with MinIO client for object storage.
 
         return services;
     }

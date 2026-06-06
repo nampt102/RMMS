@@ -14,6 +14,9 @@ import '../../features/home/presentation/screens/home_screen.dart';
 import '../../features/organization/presentation/screens/my_assignments_screen.dart';
 import '../../features/schedule/presentation/screens/my_schedule_screen.dart';
 import '../../features/schedule/presentation/screens/register_schedule_screen.dart';
+import '../../features/attendance/presentation/screens/attendance_history_screen.dart';
+import '../../features/attendance/presentation/screens/attendance_today_screen.dart';
+import '../../features/attendance/presentation/screens/check_in_screen.dart';
 import '../../l10n/generated/app_localizations.dart';
 
 /// Named routes — keep all path strings here.
@@ -31,8 +34,9 @@ class AppRoutes {
   static const String myAssignments = '/my-assignments';
   static const String schedule = '/schedule';
   static const String scheduleRegister = '/schedule/register';
-  static const String checkIn = '/check-in';
-  static const String checkOut = '/check-out';
+  static const String attendance = '/attendance';
+  static const String attendanceHistory = '/attendance/history';
+  static const String attendanceCapture = '/attendance/capture';
 }
 
 /// Screens reachable while signed out.
@@ -124,6 +128,21 @@ final appRouterProvider = Provider<GoRouter>((ref) {
           GoRoute(
             path: 'register',
             builder: (context, state) => const RegisterScheduleScreen(),
+          ),
+        ],
+      ),
+      GoRoute(
+        path: AppRoutes.attendance,
+        builder: (context, state) => const AttendanceTodayScreen(),
+        routes: [
+          GoRoute(
+            path: 'history',
+            builder: (context, state) => const AttendanceHistoryScreen(),
+          ),
+          GoRoute(
+            path: 'capture',
+            builder: (context, state) =>
+                CheckInScreen(args: state.extra as CheckCaptureArgs),
           ),
         ],
       ),

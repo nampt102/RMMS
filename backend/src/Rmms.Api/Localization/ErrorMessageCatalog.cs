@@ -55,6 +55,16 @@ public sealed class ErrorMessageCatalog : IErrorMessageLocalizer
             [ErrorCodes.ScheduleDateInPast] = ("Không thể đăng ký hoặc sửa lịch cho ngày đã qua.", "Cannot register or edit a schedule for a past date."),
             [ErrorCodes.ShiftOverlap] = ("Các ca trong cùng một ngày không được trùng giờ.", "Shifts on the same day must not overlap."),
             [ErrorCodes.ScheduleNotPending] = ("Chỉ lịch ở trạng thái chờ mới có thể gửi duyệt.", "Only a pending schedule can be submitted."),
+            // ----- M05 Attendance -----
+            [ErrorCodes.FakeGpsDetected] = ("Phát hiện GPS giả lập — không thể chấm công.", "Mock/fake GPS detected — check-in is blocked."),
+            [ErrorCodes.AlreadyCheckedIn] = ("Bạn đang có ca chấm công chưa check-out.", "You have an open attendance that must be checked out first."),
+            [ErrorCodes.NoOpenAttendance] = ("Lượt chấm công này không ở trạng thái có thể check-out.", "This attendance cannot be checked out."),
+            [ErrorCodes.CheckInTooEarly] = ("Chưa đến giờ được phép check-in (sớm tối đa 60 phút).", "Too early to check in (up to 60 minutes before shift start)."),
+            [ErrorCodes.ShiftNotFound] = ("Không có ca làm đã duyệt phù hợp để chấm công.", "No approved shift available to check in against."),
+            [ErrorCodes.AttendanceNotFound] = ("Không tìm thấy lượt chấm công.", "Attendance record not found."),
+            [ErrorCodes.AttendanceNotReviewable] = ("Lượt chấm công này không ở trạng thái chờ duyệt.", "This attendance is not pending review."),
+            [ErrorCodes.FaceVerificationFailed] = ("Xác thực khuôn mặt thất bại.", "Face verification failed."),
+            [ErrorCodes.OfflineNotSupported] = ("Không hỗ trợ chấm công offline.", "Offline check-in/out is not supported."),
         };
 
     public string? Localize(string code, string culture)
