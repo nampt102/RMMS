@@ -10,7 +10,9 @@ import {
   FileTextOutlined,
   CheckSquareOutlined,
   LaptopOutlined,
+  MenuFoldOutlined,
   MenuOutlined,
+  MenuUnfoldOutlined,
   SafetyCertificateOutlined,
   LogoutOutlined,
   ShopOutlined,
@@ -106,15 +108,27 @@ export default function AdminLayout({
   const selectedKey = navItems.find((i) => fullPath.startsWith(i.key))?.key;
   const canViewCurrent = navItems.some((i) => fullPath.startsWith(i.key));
 
-  const brand = (collapsedBrand: boolean) => (
-    <div className="flex h-16 items-center gap-2 px-4">
-      <div className="flex h-8 w-8 shrink-0 items-center justify-center rounded-lg bg-[#1677ff] font-bold text-white">
-        R
-      </div>
-      {!collapsedBrand && (
-        <Text strong className="truncate text-base">
-          {t("appTitle")}
-        </Text>
+  // forSider: show the collapse toggle (top, next to the brand). When collapsed, only the toggle.
+  const brand = (forSider: boolean) => (
+    <div className="flex h-16 items-center gap-2 px-3">
+      {!(forSider && collapsed) && (
+        <>
+          <div className="flex h-8 w-8 shrink-0 items-center justify-center rounded-lg bg-[#1677ff] font-bold text-white">
+            R
+          </div>
+          <Text strong className="flex-1 truncate text-base">
+            {t("appTitle")}
+          </Text>
+        </>
+      )}
+      {forSider && (
+        <Button
+          type="text"
+          aria-label="toggle menu"
+          icon={collapsed ? <MenuUnfoldOutlined /> : <MenuFoldOutlined />}
+          onClick={() => setCollapsed((c) => !c)}
+          className={collapsed ? "mx-auto" : ""}
+        />
       )}
     </div>
   );
@@ -138,6 +152,7 @@ export default function AdminLayout({
           collapsible
           collapsed={collapsed}
           onCollapse={setCollapsed}
+          trigger={null}
           className="border-r border-neutral-200"
           style={{ position: "sticky", top: 0, height: "100vh", overflow: "auto" }}
         >
