@@ -6,6 +6,17 @@ Append-only chronological log of significant project milestones, decisions, and 
 
 ---
 
+## 2026-06-07 — Sprint 08: M12 Team Monitoring + M16 Audit viewer BE
+
+**By:** Tech lead (MotivesVN IT), AI-assisted
+
+**Status:** ✅ Solution builds; **220 unit tests green** (+5). No new entity/migration. Web + mobile pending.
+
+- **M12 Team Monitoring (AC-26/27):** `GET /api/v1/team-monitoring/today` — per-member today status computed from attendance + approved schedule + approved leave: `working` / `checked_out` / `not_checked_in` / `on_leave` / `no_schedule_today` / `pending_review`, plus summary counts + `asOf`. Scope: Leader → managed PGs (BR-405); Admin/BUH → all active PG+Leader (BUH area-scope deferred). PG forbidden.
+- **M16 Audit viewer (AC-35):** `GET /api/v1/admin/audit-logs` — filter by action / target-entity / actor / date range, paginated, actor-name join. The audit **capture** (append-only `AuditLog` + `DbAuditLogger`, `REVOKE UPDATE/DELETE`) already shipped in M01 and is emitted by every module (CR-1) — this sprint adds the read surface.
+- Tests: team status (no-schedule / not-checked-in / on-leave / leader-scope) + audit filter/order.
+- **Deferred:** web Team Monitoring dashboard + Audit explorer; mobile Leader PG-online list; SignalR real-time (optional).
+
 ## 2026-06-07 — Sprint 07 closed: M08 Leave & OT web + mobile
 
 **By:** Tech lead (MotivesVN IT), AI-assisted

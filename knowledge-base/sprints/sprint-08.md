@@ -21,11 +21,12 @@
 ## Tasks by Discipline
 
 ### BE
-- [ ] Team Monitoring query/view
-- [ ] audit_logs entity + service
-- [ ] EF Core interceptor or explicit logging
-- [ ] Audit log query endpoints
-- [ ] DB role with INSERT/SELECT only on audit
+- [x] Team Monitoring query — `GET /api/v1/team-monitoring/today` (status per member + summary counts; scope Admin/BUH=all, Leader=managed PGs); status from attendance+schedule+leave (working/checked_out/not_checked_in/on_leave/no_schedule_today/pending_review)
+- [x] audit_logs entity + service — **already shipped in M01** (`AuditLog` append-only + `DbAuditLogger`, used across all modules per CR-1)
+- [x] EF logging — explicit `IAuditLogger.RecordAsync` per handler (atomic with the business change)
+- [x] Audit log query endpoint — `GET /api/v1/admin/audit-logs` (filter action/entity/actor/date, paginated, actor-name join)
+- [x] DB append-only — `REVOKE UPDATE, DELETE ON audit_log` applied in the initial migration (M01)
+- [x] 5 unit tests (team status + audit filter/order) → suite **220 green**
 
 ### Mobile
 - [ ] PG Online list (Leader)
