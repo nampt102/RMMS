@@ -119,8 +119,10 @@ class _ScheduleCard extends ConsumerWidget {
             ],
             if (schedule.isEditable || schedule.isWithdrawable) ...[
               const SizedBox(height: 8),
-              Row(
-                mainAxisAlignment: MainAxisAlignment.end,
+              Wrap(
+                alignment: WrapAlignment.end,
+                spacing: 8,
+                runSpacing: 8,
                 children: [
                   if (schedule.isEditable)
                     TextButton.icon(
@@ -129,8 +131,6 @@ class _ScheduleCard extends ConsumerWidget {
                       icon: const Icon(Icons.edit_outlined, size: 18),
                       label: Text(l.scheduleEdit),
                     ),
-                  if (schedule.isEditable && (schedule.isDraft || schedule.isWithdrawable))
-                    const SizedBox(width: 8),
                   if (schedule.isDraft)
                     FilledButton.tonal(
                       onPressed: () => run(
@@ -139,8 +139,7 @@ class _ScheduleCard extends ConsumerWidget {
                       ),
                       child: Text(l.scheduleSubmit),
                     ),
-                  if (schedule.isWithdrawable) ...[
-                    const SizedBox(width: 8),
+                  if (schedule.isWithdrawable)
                     TextButton(
                       onPressed: () async {
                         final ok = await _confirm(context, l.scheduleWithdrawConfirm, l.scheduleWithdraw, l.commonCancel);
@@ -153,7 +152,6 @@ class _ScheduleCard extends ConsumerWidget {
                       },
                       child: Text(l.scheduleWithdraw),
                     ),
-                  ],
                 ],
               ),
             ],

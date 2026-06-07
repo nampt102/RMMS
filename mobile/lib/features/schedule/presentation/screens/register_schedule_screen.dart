@@ -242,7 +242,7 @@ class _RegisterScheduleScreenState extends ConsumerState<RegisterScheduleScreen>
         child: Padding(
           padding: const EdgeInsets.all(16),
           child: FilledButton(
-            style: FilledButton.styleFrom(minimumSize: const Size.fromHeight(48)),
+            style: FilledButton.styleFrom(minimumSize: const Size(0, 48)),
             onPressed: _saving ? null : _save,
             child: _saving
                 ? const SizedBox(height: 20, width: 20, child: CircularProgressIndicator(strokeWidth: 2))
@@ -304,7 +304,7 @@ class _ShiftEditor extends StatelessWidget {
               children: [
                 Expanded(
                   child: OutlinedButton.icon(
-                    style: OutlinedButton.styleFrom(minimumSize: const Size.fromHeight(48)),
+                    style: OutlinedButton.styleFrom(minimumSize: const Size(0, 48)),
                     icon: const Icon(Icons.schedule),
                     label: Text('${l.registerStart}: ${hhmm(draft.start)}'),
                     onPressed: () async {
@@ -319,7 +319,7 @@ class _ShiftEditor extends StatelessWidget {
                 const SizedBox(width: 8),
                 Expanded(
                   child: OutlinedButton.icon(
-                    style: OutlinedButton.styleFrom(minimumSize: const Size.fromHeight(48)),
+                    style: OutlinedButton.styleFrom(minimumSize: const Size(0, 48)),
                     icon: const Icon(Icons.schedule),
                     label: Text('${l.registerEnd}: ${hhmm(draft.end)}'),
                     onPressed: () async {

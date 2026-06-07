@@ -81,7 +81,8 @@ class AppTheme {
       ),
       filledButtonTheme: FilledButtonThemeData(
         style: FilledButton.styleFrom(
-          minimumSize: const Size.fromHeight(_controlHeight),
+          // Size(0, h) — not Size.fromHeight (minWidth ∞ breaks buttons inside Row).
+          minimumSize: const Size(0, _controlHeight),
           textStyle: const TextStyle(fontSize: 16, fontWeight: FontWeight.w600),
           shape: RoundedRectangleBorder(
             borderRadius: BorderRadius.circular(14),
@@ -90,7 +91,7 @@ class AppTheme {
       ),
       elevatedButtonTheme: ElevatedButtonThemeData(
         style: ElevatedButton.styleFrom(
-          minimumSize: const Size.fromHeight(_controlHeight),
+          minimumSize: const Size(0, _controlHeight),
           elevation: 0,
           textStyle: const TextStyle(fontSize: 16, fontWeight: FontWeight.w600),
           shape: RoundedRectangleBorder(
@@ -100,7 +101,7 @@ class AppTheme {
       ),
       outlinedButtonTheme: OutlinedButtonThemeData(
         style: OutlinedButton.styleFrom(
-          minimumSize: const Size.fromHeight(_controlHeight),
+          minimumSize: const Size(0, _controlHeight),
           side: BorderSide(color: scheme.outline),
           textStyle: const TextStyle(fontSize: 16, fontWeight: FontWeight.w600),
           shape: RoundedRectangleBorder(
