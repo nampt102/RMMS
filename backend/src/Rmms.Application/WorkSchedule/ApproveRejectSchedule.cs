@@ -54,7 +54,7 @@ internal sealed class ApproveScheduleCommandHandler : IRequestHandler<ApproveSch
         var now = _clock.UtcNow;
         schedule.Approve(command.ApproverUserId, now);
         // Keep the linked M09 approval (if any) in sync so its queue clears.
-        await ScheduleApprovalSync.SyncApprovalAsync(_db, schedule.Id, approve: true, null, command.ApproverUserId, ApprovalDecisionVia.Web, now, ct);
+        await ApprovalActuation.SyncScheduleApprovalAsync(_db, schedule.Id, approve: true, null, command.ApproverUserId, ApprovalDecisionVia.Web, now, ct);
 
         await _audit.RecordAsync(
             AuditAction.ScheduleApproved, "work_schedule", schedule.Id,
@@ -123,7 +123,7 @@ internal sealed class RejectScheduleCommandHandler : IRequestHandler<RejectSched
         // BR-308: rejecting an edit leaves the old approved version effective (unchanged).
         var now = _clock.UtcNow;
         schedule.Reject(command.ApproverUserId, command.Reason, now);
-        await ScheduleApprovalSync.SyncApprovalAsync(_db, schedule.Id, approve: false, command.Reason, command.ApproverUserId, ApprovalDecisionVia.Web, now, ct);
+        await ApprovalActuation.SyncScheduleApprovalAsync(_db, schedule.Id, approve: false, command.Reason, command.ApproverUserId, ApprovalDecisionVia.Web, now, ct);
 
         await _audit.RecordAsync(
             AuditAction.ScheduleRejected, "work_schedule", schedule.Id,

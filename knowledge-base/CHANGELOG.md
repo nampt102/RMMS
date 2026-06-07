@@ -6,6 +6,19 @@ Append-only chronological log of significant project milestones, decisions, and 
 
 ---
 
+## 2026-06-07 — Sprint 07: M08 Leave & OT BE (wired into M09 approval)
+
+**By:** Tech lead (MotivesVN IT), AI-assisted
+
+**Status:** ✅ Solution builds; **215 unit tests green** (+5). Migration `M08_LeaveOt` applied to the server DB. Web + mobile pending.
+
+- **Entities:** `LeaveRequest` (regular / emergency, date range + optional partial-day times, `linked_attendance_id`, `approval_id`) + `OtRequest` (date + start/end + reason); enums `LeaveType`, `RequestStatus`. EF configs + migration `M08_LeaveOt` (`leave_requests` + `ot_requests`).
+- **Endpoints:** `POST /api/v1/leave-requests`, `POST /leave-requests/emergency`, `GET /leave-requests/me`, `DELETE /leave-requests/:id`; `POST /api/v1/ot-requests`, `GET /ot-requests/me`. AnyAuthenticated.
+- **Approval wiring (AC-16 → M09):** on create, `RequestRouting` resolves the PG's active Leader (BR-405) and `IApprovalService` enqueues an approval (links `approval_id`). The M09 actuator was generalized (`ScheduleApprovalSync` → `ApprovalActuation`) to drive **work_schedule / leave_request / ot_request** status when the approval is decided via any surface (queue / mobile / BUH email-link). Withdraw soft-deletes the pending approval so it leaves the queue.
+- **Emergency leave:** requires an open check-in (`CheckOutAt == null`) else 409 `NO_OPEN_ATTENDANCE`; links the attendance; dated to VN-local today (CR-5).
+- **Audit:** `leave.requested` / `leave.withdrawn` / `ot.requested` (CR-1).
+- **Deferred:** mobile leave/OT forms + emergency action from check-out + history; web admin all-requests view. Leader→BUH routing pending a Leader↔BUH assignment.
+
 ## 2026-06-07 — Gmail SMTP email sender (dev) + SendGrid (prod)
 
 **By:** Tech lead (MotivesVN IT), AI-assisted

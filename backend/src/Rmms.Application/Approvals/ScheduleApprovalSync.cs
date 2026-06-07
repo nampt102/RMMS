@@ -2,31 +2,57 @@ using Microsoft.EntityFrameworkCore;
 using Rmms.Application.Common.Interfaces;
 using Rmms.Domain.Approvals;
 using Rmms.Domain.Enums;
+using Rmms.Domain.LeaveOt;
 using Rmms.Domain.Scheduling;
 
 namespace Rmms.Application.Approvals;
 
 /// <summary>
-/// Keeps the generic M09 <c>approvals</c> row and its underlying <c>work_schedule</c>
-/// consistent regardless of which surface made the decision — the M07 schedule
-/// endpoints (web <c>/schedules</c>) or the M09 queue / BUH email-link. Each direction
-/// only mutates the other side when it is still pending, so the two never loop and a
-/// decision made on either surface clears the other.
+/// Bridges a generic M09 approval decision to the underlying domain entity (work schedule,
+/// leave request, OT request) and keeps the two consistent regardless of which surface made
+/// the decision. Each direction only mutates the other while it is still pending, so a
+/// decision on either side clears the other and there are no loops.
 /// </summary>
-internal static class ScheduleApprovalSync
+internal static class ApprovalActuation
 {
-    /// <summary>M09 → M07: apply an approval decision to the linked work schedule (BR-308 supersede on approve).</summary>
-    public static async Task ApplyToScheduleAsync(
+    /// <summary>M09 → entity: apply an approval decision to the linked request/schedule.</summary>
+    public static async Task ApplyDecisionAsync(
         IAppDbContext db, Approval approval, bool approve, string? reason, Guid actorId, DateTimeOffset now, CancellationToken ct)
     {
-        if (approval.EntityType != ApprovalEntityType.WorkSchedule) return;
+        switch (approval.EntityType)
+        {
+            case ApprovalEntityType.WorkSchedule:
+                await ApplyToScheduleAsync(db, approval.EntityId, approve, reason, actorId, now, ct);
+                break;
 
-        var schedule = await db.WorkSchedules.FirstOrDefaultAsync(s => s.Id == approval.EntityId, ct);
+            case ApprovalEntityType.LeaveRequest:
+                var leave = await db.LeaveRequests.FirstOrDefaultAsync(x => x.Id == approval.EntityId, ct);
+                if (leave is { IsPending: true })
+                {
+                    if (approve) leave.Approve(now); else leave.Reject(now);
+                }
+                break;
+
+            case ApprovalEntityType.OtRequest:
+                var ot = await db.OtRequests.FirstOrDefaultAsync(x => x.Id == approval.EntityId, ct);
+                if (ot is { IsPending: true })
+                {
+                    if (approve) ot.Approve(now); else ot.Reject(now);
+                }
+                break;
+        }
+    }
+
+    private static async Task ApplyToScheduleAsync(
+        IAppDbContext db, Guid scheduleId, bool approve, string? reason, Guid actorId, DateTimeOffset now, CancellationToken ct)
+    {
+        var schedule = await db.WorkSchedules.FirstOrDefaultAsync(s => s.Id == scheduleId, ct);
         if (schedule is null) return;
         if (schedule.Status is not (WorkScheduleStatus.Pending or WorkScheduleStatus.EditPending)) return;
 
         if (approve)
         {
+            // BR-308: approving an edit supersedes the still-effective old approved version.
             if (schedule.Status == WorkScheduleStatus.EditPending && schedule.PreviousVersionId is { } prevId)
             {
                 var previous = await db.WorkSchedules
@@ -42,7 +68,7 @@ internal static class ScheduleApprovalSync
     }
 
     /// <summary>M07 → M09: mark the schedule's pending approval decided so the queue clears.</summary>
-    public static async Task SyncApprovalAsync(
+    public static async Task SyncScheduleApprovalAsync(
         IAppDbContext db, Guid scheduleId, bool approve, string? reason, Guid actorId, ApprovalDecisionVia via, DateTimeOffset now, CancellationToken ct)
     {
         var approval = await db.Approvals.FirstOrDefaultAsync(

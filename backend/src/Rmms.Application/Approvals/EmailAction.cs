@@ -113,12 +113,12 @@ internal sealed class EmailActionConfirmCommandHandler
             if (string.IsNullOrWhiteSpace(command.Reason))
                 return Fail(Error.Validation(ErrorCodes.RejectReasonRequired, "Vui lòng nhập lý do từ chối."));
             approval.Reject(approval.ApproverId, command.Reason, ApprovalDecisionVia.EmailLink, now);
-            await ScheduleApprovalSync.ApplyToScheduleAsync(_db, approval, approve: false, command.Reason, approval.ApproverId, now, ct);
+            await ApprovalActuation.ApplyDecisionAsync(_db, approval, approve: false, command.Reason, approval.ApproverId, now, ct);
         }
         else
         {
             approval.Approve(approval.ApproverId, ApprovalDecisionVia.EmailLink, now);
-            await ScheduleApprovalSync.ApplyToScheduleAsync(_db, approval, approve: true, reason: null, approval.ApproverId, now, ct);
+            await ApprovalActuation.ApplyDecisionAsync(_db, approval, approve: true, reason: null, approval.ApproverId, now, ct);
         }
 
         row.MarkUsed(now, command.Ip, command.UserAgent);

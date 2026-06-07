@@ -1,6 +1,7 @@
 using Microsoft.EntityFrameworkCore;
 using Rmms.Domain.Approvals;
 using Rmms.Domain.Audit;
+using Rmms.Domain.LeaveOt;
 using Rmms.Domain.Auth;
 using Rmms.Domain.Devices;
 using Rmms.Domain.Attendance;
@@ -41,6 +42,10 @@ public interface IAppDbContext
     // ----- M09 Approval Workflow -----
     DbSet<Approval> Approvals { get; }
     DbSet<ApprovalEmailToken> ApprovalEmailTokens { get; }
+
+    // ----- M08 Leave & OT -----
+    DbSet<LeaveRequest> LeaveRequests { get; }
+    DbSet<OtRequest> OtRequests { get; }
 
     // ----- M05 Attendance -----
     DbSet<AttendanceRecord> AttendanceRecords { get; }

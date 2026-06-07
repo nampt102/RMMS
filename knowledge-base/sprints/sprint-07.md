@@ -19,9 +19,11 @@
 ## Tasks by Discipline
 
 ### BE
-- [ ] leave_requests, ot_requests entities
-- [ ] Request endpoints
-- [ ] Emergency leave wired to attendance check-out
+- [x] leave_requests, ot_requests entities (migration `M08_LeaveOt`, applied to server DB) + enums `LeaveType` / `RequestStatus`
+- [x] Request endpoints — `POST /leave-requests`, `POST /leave-requests/emergency`, `GET /leave-requests/me`, `DELETE /leave-requests/:id`; `POST /ot-requests`, `GET /ot-requests/me`
+- [x] Emergency leave wired to attendance — requires an open check-in (else 409 `NO_OPEN_ATTENDANCE`); links `linked_attendance_id`
+- [x] **Wired into M09 approval** — create routes to the PG's Leader via `IApprovalService` (links `approval_id`); the generalized `ApprovalActuation` drives leave/ot status when the approval is decided (queue/mobile/email-link); withdraw clears the pending approval
+- [x] 5 unit tests (route+link / no-leader / emergency-409 / approve→leave / reject→ot) → suite **215 green**
 
 ### Mobile
 - [ ] Leave/OT request forms

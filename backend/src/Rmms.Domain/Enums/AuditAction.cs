@@ -71,6 +71,11 @@ public static class AuditAction
     public const string FaceEnrolled = "face.enrolled";
     public const string FaceRemoved = "face.removed"; // admin remove / re-enroll trigger
 
+    // ----- M08 Leave & OT -----
+    public const string LeaveRequested = "leave.requested";
+    public const string LeaveWithdrawn = "leave.withdrawn";
+    public const string OtRequested = "ot.requested";
+
     // ----- M09 Approval Workflow (CR-1) -----
     public const string ApprovalRequested = "approval.requested";
     public const string ApprovalApproved = "approval.approved";

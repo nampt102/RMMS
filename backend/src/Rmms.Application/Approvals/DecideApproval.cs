@@ -39,7 +39,7 @@ internal sealed class ApproveApprovalCommandHandler : IRequestHandler<ApproveApp
 
         var now = _clock.UtcNow;
         approval!.Approve(command.ApproverId, command.Via, now);
-        await ScheduleApprovalSync.ApplyToScheduleAsync(_db, approval, approve: true, reason: null, command.ApproverId, now, ct);
+        await ApprovalActuation.ApplyDecisionAsync(_db, approval, approve: true, reason: null, command.ApproverId, now, ct);
         await _audit.RecordAsync(AuditAction.ApprovalApproved, "approval", approval.Id,
             new { approval.EntityType, approval.EntityId, via = command.Via.ToSnakeCase() }, ct);
         await _db.SaveChangesAsync(ct);
@@ -82,7 +82,7 @@ internal sealed class RejectApprovalCommandHandler : IRequestHandler<RejectAppro
 
         var now = _clock.UtcNow;
         approval!.Reject(command.ApproverId, command.Reason, command.Via, now);
-        await ScheduleApprovalSync.ApplyToScheduleAsync(_db, approval, approve: false, command.Reason, command.ApproverId, now, ct);
+        await ApprovalActuation.ApplyDecisionAsync(_db, approval, approve: false, command.Reason, command.ApproverId, now, ct);
         await _audit.RecordAsync(AuditAction.ApprovalRejected, "approval", approval.Id,
             new { approval.EntityType, approval.EntityId, reason = command.Reason.Trim(), via = command.Via.ToSnakeCase() }, ct);
         await _db.SaveChangesAsync(ct);
