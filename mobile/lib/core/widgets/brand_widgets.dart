@@ -190,18 +190,20 @@ class FeatureTile extends StatelessWidget {
           onTap: onTap,
           borderRadius: radius,
           child: Padding(
-            padding: const EdgeInsets.all(16),
+            padding: const EdgeInsets.all(14),
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                IconBadge(icon, tone: tone),
-                const Spacer(),
-                const SizedBox(height: 12),
+                IconBadge(icon, tone: tone, size: 40),
+                const SizedBox(height: 10),
                 Text(
                   title,
+                  maxLines: 2,
+                  overflow: TextOverflow.ellipsis,
                   style: const TextStyle(
-                    fontSize: 15,
+                    fontSize: 14,
                     fontWeight: FontWeight.w700,
+                    height: 1.25,
                   ),
                 ),
                 const SizedBox(height: 2),
@@ -210,8 +212,8 @@ class FeatureTile extends StatelessWidget {
                   maxLines: 2,
                   overflow: TextOverflow.ellipsis,
                   style: TextStyle(
-                    fontSize: 12.5,
-                    height: 1.3,
+                    fontSize: 12,
+                    height: 1.25,
                     color: scheme.onSurfaceVariant,
                   ),
                 ),
