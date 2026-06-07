@@ -103,6 +103,7 @@ class AppSemantics extends ThemeExtension<AppSemantics> {
     required this.onBrand,
     required this.cardShadow,
     required this.shadowSm,
+    required this.shadow,
     required this.shadowLg,
     required this.shadowBrand,
   });
@@ -134,9 +135,10 @@ class AppSemantics extends ThemeExtension<AppSemantics> {
   /// Foreground colour on top of brand gradients.
   final Color onBrand;
 
-  /// Default soft elevation for surface cards (alias of shadowSm).
+  /// Default soft elevation for surface cards (alias of [shadow]).
   final List<BoxShadow> cardShadow;
   final List<BoxShadow> shadowSm;
+  final List<BoxShadow> shadow;
   final List<BoxShadow> shadowLg;
 
   /// Glow under gradient buttons / FAB.
@@ -235,9 +237,10 @@ class AppSemantics extends ThemeExtension<AppSemantics> {
     meshGradient: _meshGradient,
     emeraldGradient: _emeraldGradient,
     onBrand: AppPalette.white,
-    cardShadow: _shadowSmLight,
+    cardShadow: _shadowLight,
     shadowSm: _shadowSmLight,
-    shadowLg: _shadowLight,
+    shadow: _shadowLight,
+    shadowLg: _shadowLgLight,
     shadowBrand: _shadowBrandLight,
   );
 
@@ -264,6 +267,9 @@ class AppSemantics extends ThemeExtension<AppSemantics> {
     ],
     shadowSm: [
       BoxShadow(color: Color(0x33000000), blurRadius: 12, offset: Offset(0, 4)),
+    ],
+    shadow: [
+      BoxShadow(color: Color(0x33000000), blurRadius: 18, offset: Offset(0, 8)),
     ],
     shadowLg: [
       BoxShadow(color: Color(0x66000000), blurRadius: 36, offset: Offset(0, 14)),
@@ -298,6 +304,7 @@ class AppSemantics extends ThemeExtension<AppSemantics> {
     Color? onBrand,
     List<BoxShadow>? cardShadow,
     List<BoxShadow>? shadowSm,
+    List<BoxShadow>? shadow,
     List<BoxShadow>? shadowLg,
     List<BoxShadow>? shadowBrand,
   }) {
@@ -321,6 +328,7 @@ class AppSemantics extends ThemeExtension<AppSemantics> {
       onBrand: onBrand ?? this.onBrand,
       cardShadow: cardShadow ?? this.cardShadow,
       shadowSm: shadowSm ?? this.shadowSm,
+      shadow: shadow ?? this.shadow,
       shadowLg: shadowLg ?? this.shadowLg,
       shadowBrand: shadowBrand ?? this.shadowBrand,
     );
@@ -355,6 +363,7 @@ class AppSemantics extends ThemeExtension<AppSemantics> {
       onBrand: Color.lerp(onBrand, other.onBrand, t)!,
       cardShadow: t < 0.5 ? cardShadow : other.cardShadow,
       shadowSm: t < 0.5 ? shadowSm : other.shadowSm,
+      shadow: t < 0.5 ? shadow : other.shadow,
       shadowLg: t < 0.5 ? shadowLg : other.shadowLg,
       shadowBrand: t < 0.5 ? shadowBrand : other.shadowBrand,
     );
