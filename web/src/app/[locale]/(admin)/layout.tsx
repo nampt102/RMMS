@@ -47,6 +47,11 @@ export default function AdminLayout({
   const [hydrated, setHydrated] = useState(false);
   useEffect(() => setHydrated(true), []);
 
+  // next-intl uses `localePrefix: "as-needed"`, so the default locale (vi) has NO `/vi`
+  // prefix in the URL. Normalise so route matching always compares against `/${locale}/...`.
+  const fullPath =
+    pathname === `/${locale}` || pathname.startsWith(`/${locale}/`) ? pathname : `/${locale}${pathname}`;
+
   useEffect(() => {
     if (hydrated && !token) {
       router.replace(`/${locale}/login`);
@@ -57,10 +62,10 @@ export default function AdminLayout({
   // AdminOnly pages (which would 403) and land them on /approvals.
   useEffect(() => {
     if (!hydrated || !token || !user || user.role === "admin") return;
-    if (!pathname.startsWith(`/${locale}/approvals`)) {
+    if (!fullPath.startsWith(`/${locale}/approvals`)) {
       router.replace(`/${locale}/approvals`);
     }
-  }, [hydrated, token, user, pathname, locale, router]);
+  }, [hydrated, token, user, fullPath, locale, router]);
 
   if (!hydrated || !token) {
     return null;
@@ -87,8 +92,8 @@ export default function AdminLayout({
     { key: `/${locale}/devices`, icon: <LaptopOutlined />, label: <Link href={`/${locale}/devices`}>{t("navDevices")}</Link>, roles: ["admin"] },
   ];
   const navItems = allItems.filter((i) => i.roles.includes(role));
-  const selectedKey = navItems.find((i) => pathname.startsWith(i.key))?.key;
-  const canViewCurrent = navItems.some((i) => pathname.startsWith(i.key));
+  const selectedKey = navItems.find((i) => fullPath.startsWith(i.key))?.key;
+  const canViewCurrent = navItems.some((i) => fullPath.startsWith(i.key));
 
   return (
     <Layout className="min-h-screen">
