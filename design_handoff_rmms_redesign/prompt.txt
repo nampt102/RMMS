@@ -1,0 +1,51 @@
+You are implementing a UI/UX redesign of the RMMS Flutter app (field-workforce
+attendance for PG/merchandising staff). A complete design handoff is in the
+folder `design_handoff_rmms_redesign/`.
+
+START HERE
+1. Read `design_handoff_rmms_redesign/README.md` in full — it is the source of
+   truth (design tokens, every screen's layout/components/copy, navigation/IA,
+   interactions, state). 
+2. Look at every image in `design_handoff_rmms_redesign/screenshots/` to see the
+   exact target look (01-login … 11-profile).
+3. The `.html` / `.jsx` files in that folder are DESIGN REFERENCES ONLY (an
+   HTML/React prototype). Do NOT copy them or add web tech. Recreate the designs
+   natively in this Flutter app using its existing patterns: Material 3, the
+   `AppPalette` / `AppTheme` / `AppSemantics` token system in
+   `lib/core/theme/`, the per-feature structure under `lib/features/*/presentation/`,
+   and the current routing in `lib/core/router/app_router.dart`.
+
+GROUND RULES
+- This is a high-fidelity redesign: match the screenshots closely (colors, type,
+  spacing, radii, shadows, copy). All Vietnamese copy in the README is final.
+- Use the codebase's existing state management, networking, and routing — only
+  change presentation/theme. Do not invent backend calls.
+- Add Space Grotesk (display) + Plus Jakarta Sans (body) via `google_fonts`
+  (or bundle them). Remove Inter/Roboto.
+- Honor reduced-motion (`MediaQuery.disableAnimations`). For entrance
+  animations use transform-only (no opacity-from-0 on critical content).
+- Keep accessibility: 44dp+ touch targets, sufficient contrast.
+
+DO IT IN THIS ORDER (open a PR-sized change per step; pause after each so I can review)
+1. THEME TOKENS — update `lib/core/theme/app_palette.dart` and
+   `lib/core/theme/app_theme.dart` to the README's Design Tokens: new brand
+   indigo→violet, neutrals, semantic accents, the brand/mesh/emerald gradients
+   on `AppSemantics`, radii (button 17, cards 26–28), shadows, and the new fonts.
+   Build the app and show me before/after of one existing screen.
+2. SHARED WIDGETS — add to `lib/core/widgets/` the reusable pieces described in
+   "Shared Components": Chip, IconTile, Card (pressable, scale 0.965 on tap),
+   Button variants (primary/emerald/soft/destructive-soft), TopBar, bottom Sheet,
+   Toast, and the glass BottomNav with the raised center "Chấm công" FAB.
+3. NAVIGATION / IA — restructure to the README's "Navigation & Information
+   Architecture": 5-tab bottom bar (Trang chủ, Lịch, Chấm công[center], Đơn từ,
+   Hồ sơ); Home shows only Phân công / Lịch sử / Khuôn mặt shortcuts; Hồ sơ is
+   account-only. Remove the duplicated menu entries called out in the README.
+4. SCREENS — rebuild each screen to match its spec + screenshot, one at a time:
+   Login → Home → Schedule → Register schedule → Requests (+ create sheet) →
+   Leave/OT → Assignment → Attendance → Face → History → Profile.
+   Wire the interactions listed (check-in/out shared state, draft→pending→thu hồi,
+   segmented controls, form validation/char counter, live clock, pulsing/scanning
+   rings).
+
+After each step: run `flutter analyze`, fix issues, and summarize what changed.
+Ask me before introducing any new package beyond google_fonts.
