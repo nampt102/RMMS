@@ -1,6 +1,6 @@
 "use client";
 
-import { Button, Layout, Menu, Space, Typography } from "antd";
+import { Avatar, Button, Drawer, Grid, Layout, Menu, Typography } from "antd";
 import {
   AppstoreOutlined,
   ApartmentOutlined,
@@ -10,6 +10,7 @@ import {
   FileTextOutlined,
   CheckSquareOutlined,
   LaptopOutlined,
+  MenuOutlined,
   SafetyCertificateOutlined,
   LogoutOutlined,
   ShopOutlined,
@@ -21,7 +22,7 @@ import { usePathname, useRouter } from "next/navigation";
 import { useEffect, useState } from "react";
 import { useAuthStore } from "@/lib/stores/auth-store";
 
-const { Header, Content } = Layout;
+const { Header, Content, Sider } = Layout;
 const { Text } = Typography;
 
 /**
@@ -48,6 +49,11 @@ export default function AdminLayout({
 
   const [hydrated, setHydrated] = useState(false);
   useEffect(() => setHydrated(true), []);
+
+  const screens = Grid.useBreakpoint();
+  const isDesktop = screens.lg ?? false; // sidebar ≥992px, drawer below (adaptive-navigation)
+  const [collapsed, setCollapsed] = useState(false);
+  const [drawerOpen, setDrawerOpen] = useState(false);
 
   // next-intl uses `localePrefix: "as-needed"`, so the default locale (vi) has NO `/vi`
   // prefix in the URL. Normalise so route matching always compares against `/${locale}/...`.
@@ -100,30 +106,84 @@ export default function AdminLayout({
   const selectedKey = navItems.find((i) => fullPath.startsWith(i.key))?.key;
   const canViewCurrent = navItems.some((i) => fullPath.startsWith(i.key));
 
+  const brand = (collapsedBrand: boolean) => (
+    <div className="flex h-16 items-center gap-2 px-4">
+      <div className="flex h-8 w-8 shrink-0 items-center justify-center rounded-lg bg-[#1677ff] font-bold text-white">
+        R
+      </div>
+      {!collapsedBrand && (
+        <Text strong className="truncate text-base">
+          {t("appTitle")}
+        </Text>
+      )}
+    </div>
+  );
+
+  const nav = (
+    <Menu
+      mode="inline"
+      selectedKeys={selectedKey ? [selectedKey] : []}
+      items={navItems.map((i) => ({ key: i.key, icon: i.icon, label: i.label }))}
+      style={{ borderInlineEnd: "none" }}
+      onClick={() => setDrawerOpen(false)}
+    />
+  );
+
   return (
     <Layout className="min-h-screen">
-      <Header className="flex items-center justify-between gap-6">
-        <div className="flex min-w-0 items-center gap-6">
-          <Text strong className="whitespace-nowrap !text-white">
-            {t("appTitle")}
-          </Text>
-          <Menu
-            theme="dark"
-            mode="horizontal"
-            selectedKeys={selectedKey ? [selectedKey] : []}
-            items={navItems}
-            className="min-w-0 flex-1"
-            disabledOverflow
-          />
-        </div>
-        <Space>
-          {user?.email && <Text className="whitespace-nowrap !text-white/80">{user.email}</Text>}
-          <Button type="text" icon={<LogoutOutlined />} className="!text-white" onClick={onLogout}>
-            {t("logout")}
-          </Button>
-        </Space>
-      </Header>
-      <Content className="p-6">{canViewCurrent ? children : null}</Content>
+      {isDesktop ? (
+        <Sider
+          theme="light"
+          width={236}
+          collapsible
+          collapsed={collapsed}
+          onCollapse={setCollapsed}
+          className="border-r border-neutral-200"
+          style={{ position: "sticky", top: 0, height: "100vh", overflow: "auto" }}
+        >
+          {brand(collapsed)}
+          {nav}
+        </Sider>
+      ) : (
+        <Drawer
+          open={drawerOpen}
+          onClose={() => setDrawerOpen(false)}
+          placement="left"
+          width={260}
+          styles={{ body: { padding: 0 }, header: { display: "none" } }}
+        >
+          {brand(false)}
+          {nav}
+        </Drawer>
+      )}
+
+      <Layout>
+        <Header
+          className="sticky top-0 z-10 flex items-center justify-between border-b border-neutral-200 px-4"
+          style={{ background: "#fff", paddingInline: 16 }}
+        >
+          <div className="flex min-w-0 items-center gap-3">
+            {!isDesktop && (
+              <>
+                <Button type="text" icon={<MenuOutlined />} onClick={() => setDrawerOpen(true)} aria-label="menu" />
+                <Text strong className="truncate">
+                  {t("appTitle")}
+                </Text>
+              </>
+            )}
+          </div>
+          <div className="flex items-center gap-2">
+            <Avatar size="small" className="!bg-[#1677ff]">
+              {(user?.email?.[0] ?? "?").toUpperCase()}
+            </Avatar>
+            {user?.email && <Text className="hidden whitespace-nowrap text-neutral-500 sm:inline">{user.email}</Text>}
+            <Button type="text" icon={<LogoutOutlined />} onClick={onLogout}>
+              <span className="hidden sm:inline">{t("logout")}</span>
+            </Button>
+          </div>
+        </Header>
+        <Content className="p-4 md:p-6">{canViewCurrent ? children : null}</Content>
+      </Layout>
     </Layout>
   );
 }
