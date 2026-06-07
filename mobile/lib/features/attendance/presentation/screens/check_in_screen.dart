@@ -7,6 +7,7 @@ import 'package:image_picker/image_picker.dart';
 import '../../../../core/network/api_exception.dart';
 import '../../../../core/theme/app_palette.dart';
 import '../../../../l10n/generated/app_localizations.dart';
+import '../../../requests/data/requests_repository.dart';
 import '../../data/attendance_api.dart';
 import '../../data/attendance_repository.dart';
 
@@ -153,6 +154,46 @@ class _CheckInScreenState extends ConsumerState<CheckInScreen> {
     }
   }
 
+  Future<void> _emergencyLeave() async {
+    final l = AppLocalizations.of(context);
+    final controller = TextEditingController();
+    final reason = await showDialog<String>(
+      context: context,
+      builder: (ctx) => AlertDialog(
+        title: Text(l.requestEmergencyLeave),
+        content: TextField(
+          controller: controller,
+          maxLength: 500,
+          maxLines: 3,
+          autofocus: true,
+          decoration: InputDecoration(hintText: l.requestEmergencyHint),
+        ),
+        actions: [
+          TextButton(onPressed: () => Navigator.pop(ctx), child: Text(l.commonCancel)),
+          FilledButton(
+            onPressed: () {
+              final v = controller.text.trim();
+              if (v.isNotEmpty) Navigator.pop(ctx, v);
+            },
+            child: Text(l.requestSubmit),
+          ),
+        ],
+      ),
+    );
+    controller.dispose();
+    if (reason == null || !mounted) return;
+    try {
+      await ref.read(requestsRepositoryProvider).createEmergency(reason);
+      if (mounted) {
+        ScaffoldMessenger.of(context).showSnackBar(SnackBar(content: Text(l.requestCreated)));
+      }
+    } on ApiException catch (e) {
+      if (mounted) {
+        ScaffoldMessenger.of(context).showSnackBar(SnackBar(content: Text(e.message)));
+      }
+    }
+  }
+
   @override
   Widget build(BuildContext context) {
     final l = AppLocalizations.of(context);
@@ -198,6 +239,15 @@ class _CheckInScreenState extends ConsumerState<CheckInScreen> {
                 border: const OutlineInputBorder(),
               ),
             ),
+            // Emergency leave is only meaningful while there is an open check-in (M08).
+            if (!isCheckIn) ...[
+              const SizedBox(height: 8),
+              OutlinedButton.icon(
+                onPressed: _emergencyLeave,
+                icon: const Icon(Icons.healing_outlined),
+                label: Text(l.requestEmergencyLeave),
+              ),
+            ],
           ],
         ),
       ),

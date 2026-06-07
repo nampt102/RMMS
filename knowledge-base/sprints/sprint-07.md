@@ -26,9 +26,9 @@
 - [x] 5 unit tests (route+link / no-leader / emergency-409 / approve→leave / reject→ot) → suite **215 green**
 
 ### Mobile
-- [ ] Leave/OT request forms
-- [ ] Emergency leave action from check-out flow
-- [ ] Request history
+- [x] Leave/OT request forms — `LeaveRequestScreen` (date range + reason), `OtRequestScreen` (date + start/end + reason)
+- [x] Emergency leave action from check-out flow — button in the check-out screen → reason dialog → `POST /leave-requests/emergency`
+- [x] Request history — `RequestsHistoryScreen` (tabs Leave / OT, themed status pills, withdraw pending leave); home "Đơn nghỉ / OT" tile; `features/requests` (Freezed + api/repo/providers); ARB vi/en
 
 ### Web
 - [x] Admin view of all requests — `/requests` (tabs Leave / OT, status filter, requester name). BE `GET /admin/leave-requests` + `/admin/ot-requests` (paginated). Override via the `/approvals` queue (admin)

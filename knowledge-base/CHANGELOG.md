@@ -6,6 +6,16 @@ Append-only chronological log of significant project milestones, decisions, and 
 
 ---
 
+## 2026-06-07 — Sprint 07 closed: M08 Leave & OT web + mobile
+
+**By:** Tech lead (MotivesVN IT), AI-assisted
+
+**Status:** ✅ Web typecheck + lint clean; backend build green. Mobile code-only (Mac runs build_runner + flutter analyze). Closes Sprint 07.
+
+- **Web admin:** `/requests` page — tabs **Leave / OT** (ProTable, status filter, requester name) backed by `GET /admin/leave-requests` + `/admin/ot-requests`. Override remains on `/approvals`. Nav "Leave / OT"; messages vi/en.
+- **Mobile (`features/requests`):** Freezed `LeaveRequest`/`OtRequest` + api/repo/providers. `RequestsHistoryScreen` (tabs, themed status pills, withdraw pending leave), `LeaveRequestScreen` (date range + reason), `OtRequestScreen` (date + start/end + reason). **Emergency leave** action wired into the check-out screen (reason dialog → `POST /leave-requests/emergency`). Home "Leave / OT" tile; ARB vi/en.
+- **AC-16** now end-to-end: create leave/OT/emergency → routed to Leader queue (M09) → approve/reject → request status updates.
+
 ## 2026-06-07 — Sprint 07: M08 Leave & OT BE (wired into M09 approval)
 
 **By:** Tech lead (MotivesVN IT), AI-assisted

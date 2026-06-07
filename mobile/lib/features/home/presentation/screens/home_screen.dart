@@ -129,6 +129,13 @@ class HomeScreen extends ConsumerWidget {
                         ref.invalidate(faceStatusProvider);
                       },
                     ),
+                    FeatureTile(
+                      icon: Icons.event_note_outlined,
+                      title: l.homeFeatureRequests,
+                      subtitle: l.homeFeatureRequestsSub,
+                      tone: BrandTone.info,
+                      onTap: () => context.push(AppRoutes.requests),
+                    ),
                     // Approval queue is a Leader responsibility (M09, AC-17).
                     if (user?.role == UserRole.leader)
                       FeatureTile(

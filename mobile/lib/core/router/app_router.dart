@@ -20,6 +20,9 @@ import '../../features/attendance/presentation/screens/attendance_today_screen.d
 import '../../features/attendance/presentation/screens/check_in_screen.dart';
 import '../../features/approvals/presentation/screens/approvals_screen.dart';
 import '../../features/face/presentation/screens/face_enrollment_screen.dart';
+import '../../features/requests/presentation/screens/leave_request_screen.dart';
+import '../../features/requests/presentation/screens/ot_request_screen.dart';
+import '../../features/requests/presentation/screens/requests_history_screen.dart';
 import '../../l10n/generated/app_localizations.dart';
 
 /// Named routes — keep all path strings here.
@@ -42,6 +45,9 @@ class AppRoutes {
   static const String attendanceCapture = '/attendance/capture';
   static const String faceEnroll = '/face/enroll';
   static const String approvals = '/approvals';
+  static const String requests = '/requests';
+  static const String leaveRequest = '/requests/leave';
+  static const String otRequest = '/requests/ot';
 }
 
 /// Screens reachable while signed out.
@@ -159,6 +165,14 @@ final appRouterProvider = Provider<GoRouter>((ref) {
       GoRoute(
         path: AppRoutes.approvals,
         builder: (context, state) => const ApprovalsScreen(),
+      ),
+      GoRoute(
+        path: AppRoutes.requests,
+        builder: (context, state) => const RequestsHistoryScreen(),
+        routes: [
+          GoRoute(path: 'leave', builder: (context, state) => const LeaveRequestScreen()),
+          GoRoute(path: 'ot', builder: (context, state) => const OtRequestScreen()),
+        ],
       ),
     ],
   );
