@@ -108,26 +108,25 @@ export default function AdminLayout({
   const selectedKey = navItems.find((i) => fullPath.startsWith(i.key))?.key;
   const canViewCurrent = navItems.some((i) => fullPath.startsWith(i.key));
 
-  // forSider: show the collapse toggle (top, next to the brand). When collapsed, only the toggle.
+  // forSider: logo + collapse toggle always share one row. When collapsed the wordmark
+  // hides and padding tightens so both still fit in the narrow rail.
   const brand = (forSider: boolean) => (
-    <div className="flex h-16 items-center gap-2 px-3">
+    <div className={`flex h-16 items-center gap-1 ${forSider && collapsed ? "px-1" : "gap-2 px-3"}`}>
+      <div className="flex h-8 w-8 shrink-0 items-center justify-center rounded-lg bg-[#1677ff] font-bold text-white">
+        R
+      </div>
       {!(forSider && collapsed) && (
-        <>
-          <div className="flex h-8 w-8 shrink-0 items-center justify-center rounded-lg bg-[#1677ff] font-bold text-white">
-            R
-          </div>
-          <Text strong className="flex-1 truncate text-base">
-            {t("appTitle")}
-          </Text>
-        </>
+        <Text strong className="flex-1 truncate text-base">
+          {t("appTitle")}
+        </Text>
       )}
       {forSider && (
         <Button
           type="text"
+          size="small"
           aria-label="toggle menu"
           icon={collapsed ? <MenuUnfoldOutlined /> : <MenuFoldOutlined />}
           onClick={() => setCollapsed((c) => !c)}
-          className={collapsed ? "mx-auto" : ""}
         />
       )}
     </div>
@@ -156,7 +155,7 @@ export default function AdminLayout({
           className="border-r border-neutral-200"
           style={{ position: "sticky", top: 0, height: "100vh", overflow: "auto" }}
         >
-          {brand(collapsed)}
+          {brand(true)}
           {nav}
         </Sider>
       ) : (
