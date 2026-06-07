@@ -168,7 +168,7 @@ class _Row extends StatelessWidget {
                 ),
               ),
             ),
-            Icon(Icons.chevron_right_rounded,
+            const Icon(Icons.chevron_right_rounded,
                 color: AppPalette.faint, size: 22),
           ],
         ),
