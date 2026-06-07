@@ -268,5 +268,14 @@
   "attendanceStatusFaceReview": "Face fail · review",
   "attendanceStatusFakeGps": "Fake GPS · blocked",
   "attendanceStatusAdminApproved": "Admin approved",
-  "attendanceStatusAdminRejected": "Admin rejected"
+  "attendanceStatusAdminRejected": "Admin rejected",
+  "navHome": "Home",
+  "navSchedule": "Schedule",
+  "navAttendance": "Check-in",
+  "navRequests": "Requests",
+  "navProfile": "Profile",
+  "profileNotifications": "Notifications",
+  "profileChangePassword": "Change password",
+  "profileHelp": "Help & support",
+  "profileLogout": "Sign out"
 }

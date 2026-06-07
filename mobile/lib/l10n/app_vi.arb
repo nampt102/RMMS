@@ -269,5 +269,14 @@
   "attendanceStatusFaceReview": "Lỗi khuôn mặt · chờ duyệt",
   "attendanceStatusFakeGps": "GPS giả · bị chặn",
   "attendanceStatusAdminApproved": "Admin đã duyệt",
-  "attendanceStatusAdminRejected": "Admin từ chối"
+  "attendanceStatusAdminRejected": "Admin từ chối",
+  "navHome": "Trang chủ",
+  "navSchedule": "Lịch",
+  "navAttendance": "Chấm công",
+  "navRequests": "Đơn từ",
+  "navProfile": "Hồ sơ",
+  "profileNotifications": "Thông báo",
+  "profileChangePassword": "Đổi mật khẩu",
+  "profileHelp": "Trợ giúp & hỗ trợ",
+  "profileLogout": "Đăng xuất"
 }

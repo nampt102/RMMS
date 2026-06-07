@@ -11,7 +11,9 @@ import '../../features/auth/presentation/screens/register_screen.dart';
 import '../../features/auth/presentation/screens/reset_password_screen.dart';
 import '../../features/auth/presentation/screens/verify_email_screen.dart';
 import '../../features/home/presentation/screens/home_screen.dart';
+import '../../features/main_shell/presentation/main_shell.dart';
 import '../../features/organization/presentation/screens/my_assignments_screen.dart';
+import '../../features/profile/presentation/screens/profile_screen.dart';
 import '../../features/schedule/domain/work_schedule.dart';
 import '../../features/schedule/presentation/screens/my_schedule_screen.dart';
 import '../../features/schedule/presentation/screens/register_schedule_screen.dart';
@@ -50,6 +52,7 @@ class AppRoutes {
   static const String leaveRequest = '/requests/leave';
   static const String otRequest = '/requests/ot';
   static const String teamMonitoring = '/monitoring';
+  static const String profile = '/profile';
 }
 
 /// Screens reachable while signed out.
@@ -60,6 +63,12 @@ const _publicRoutes = {
   AppRoutes.forgotPassword,
   AppRoutes.resetPassword,
 };
+
+final _rootKey = GlobalKey<NavigatorState>();
+final _homeKey = GlobalKey<NavigatorState>();
+final _scheduleKey = GlobalKey<NavigatorState>();
+final _requestsKey = GlobalKey<NavigatorState>();
+final _profileKey = GlobalKey<NavigatorState>();
 
 final appRouterProvider = Provider<GoRouter>((ref) {
   // Bridge the Riverpod auth state into a Listenable so GoRouter re-evaluates
@@ -73,6 +82,7 @@ final appRouterProvider = Provider<GoRouter>((ref) {
   );
 
   return GoRouter(
+    navigatorKey: _rootKey,
     initialLocation: AppRoutes.splash,
     refreshListenable: refresh,
     redirect: (context, state) {
@@ -126,59 +136,104 @@ final appRouterProvider = Provider<GoRouter>((ref) {
         path: AppRoutes.devicePending,
         builder: (context, state) => const DevicePendingScreen(),
       ),
-      GoRoute(
-        path: AppRoutes.home,
-        builder: (context, state) => const HomeScreen(),
+
+      // ── Main PG shell (4 indexed branches + glass bottom nav). ───────────
+      StatefulShellRoute.indexedStack(
+        builder: (context, state, shell) => MainShell(navigationShell: shell),
+        branches: [
+          StatefulShellBranch(
+            navigatorKey: _homeKey,
+            routes: [
+              GoRoute(
+                path: AppRoutes.home,
+                builder: (context, state) => const HomeScreen(),
+              ),
+            ],
+          ),
+          StatefulShellBranch(
+            navigatorKey: _scheduleKey,
+            routes: [
+              GoRoute(
+                path: AppRoutes.schedule,
+                builder: (context, state) => const MyScheduleScreen(),
+              ),
+            ],
+          ),
+          StatefulShellBranch(
+            navigatorKey: _requestsKey,
+            routes: [
+              GoRoute(
+                path: AppRoutes.requests,
+                builder: (context, state) => const RequestsHistoryScreen(),
+              ),
+            ],
+          ),
+          StatefulShellBranch(
+            navigatorKey: _profileKey,
+            routes: [
+              GoRoute(
+                path: AppRoutes.profile,
+                builder: (context, state) => const ProfileScreen(),
+              ),
+            ],
+          ),
+        ],
       ),
+
+      // ── Pushed (root-level) screens — appear above the shell, no nav. ────
       GoRoute(
+        parentNavigatorKey: _rootKey,
         path: AppRoutes.myAssignments,
         builder: (context, state) => const MyAssignmentsScreen(),
       ),
       GoRoute(
-        path: AppRoutes.schedule,
-        builder: (context, state) => const MyScheduleScreen(),
-        routes: [
-          GoRoute(
-            path: 'register',
-            builder: (context, state) =>
-                RegisterScheduleScreen(editSchedule: state.extra as WorkSchedule?),
-          ),
-        ],
+        parentNavigatorKey: _rootKey,
+        path: AppRoutes.scheduleRegister,
+        builder: (context, state) =>
+            RegisterScheduleScreen(editSchedule: state.extra as WorkSchedule?),
       ),
       GoRoute(
+        parentNavigatorKey: _rootKey,
         path: AppRoutes.attendance,
         builder: (context, state) => const AttendanceTodayScreen(),
-        routes: [
-          GoRoute(
-            path: 'history',
-            builder: (context, state) => const AttendanceHistoryScreen(),
-          ),
-          GoRoute(
-            path: 'capture',
-            builder: (context, state) =>
-                CheckInScreen(args: state.extra as CheckCaptureArgs),
-          ),
-        ],
       ),
       GoRoute(
+        parentNavigatorKey: _rootKey,
+        path: AppRoutes.attendanceHistory,
+        builder: (context, state) => const AttendanceHistoryScreen(),
+      ),
+      GoRoute(
+        parentNavigatorKey: _rootKey,
+        path: AppRoutes.attendanceCapture,
+        builder: (context, state) =>
+            CheckInScreen(args: state.extra as CheckCaptureArgs),
+      ),
+      GoRoute(
+        parentNavigatorKey: _rootKey,
         path: AppRoutes.faceEnroll,
         builder: (context, state) => const FaceEnrollmentScreen(),
       ),
       GoRoute(
+        parentNavigatorKey: _rootKey,
+        path: AppRoutes.leaveRequest,
+        builder: (context, state) => const LeaveRequestScreen(),
+      ),
+      GoRoute(
+        parentNavigatorKey: _rootKey,
+        path: AppRoutes.otRequest,
+        builder: (context, state) => const OtRequestScreen(),
+      ),
+
+      // ── Leader-only / out-of-IA routes (kept for backwards compat). ──────
+      GoRoute(
+        parentNavigatorKey: _rootKey,
         path: AppRoutes.approvals,
         builder: (context, state) => const ApprovalsScreen(),
       ),
       GoRoute(
+        parentNavigatorKey: _rootKey,
         path: AppRoutes.teamMonitoring,
         builder: (context, state) => const TeamMonitoringScreen(),
-      ),
-      GoRoute(
-        path: AppRoutes.requests,
-        builder: (context, state) => const RequestsHistoryScreen(),
-        routes: [
-          GoRoute(path: 'leave', builder: (context, state) => const LeaveRequestScreen()),
-          GoRoute(path: 'ot', builder: (context, state) => const OtRequestScreen()),
-        ],
       ),
     ],
   );

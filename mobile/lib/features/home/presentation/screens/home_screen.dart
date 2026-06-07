@@ -98,19 +98,16 @@ class HomeScreen extends ConsumerWidget {
                   crossAxisSpacing: 12,
                   childAspectRatio: 1.12,
                   children: [
+                    // Redesign 2026 IA (README §Navigation): Home shows only
+                    // shortcuts to non-tab screens. "Lịch làm việc" và
+                    // "Đơn từ" đã chuyển thành tab — bỏ khỏi grid để không
+                    // duplicate.
                     FeatureTile(
                       icon: Icons.assignment_outlined,
                       title: l.homeViewAssignments,
                       subtitle: l.homeFeatureAssignmentsSub,
                       tone: BrandTone.brand,
                       onTap: () => context.push(AppRoutes.myAssignments),
-                    ),
-                    FeatureTile(
-                      icon: Icons.calendar_month_outlined,
-                      title: l.homeViewSchedule,
-                      subtitle: l.homeFeatureScheduleSub,
-                      tone: BrandTone.info,
-                      onTap: () => context.push(AppRoutes.schedule),
                     ),
                     FeatureTile(
                       icon: Icons.history,
@@ -128,13 +125,6 @@ class HomeScreen extends ConsumerWidget {
                         await context.push(AppRoutes.faceEnroll);
                         ref.invalidate(faceStatusProvider);
                       },
-                    ),
-                    FeatureTile(
-                      icon: Icons.event_note_outlined,
-                      title: l.homeFeatureRequests,
-                      subtitle: l.homeFeatureRequestsSub,
-                      tone: BrandTone.info,
-                      onTap: () => context.push(AppRoutes.requests),
                     ),
                     // Leader responsibilities (M09 approvals, M12 monitoring).
                     if (user?.role == UserRole.leader) ...[
