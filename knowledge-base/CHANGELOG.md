@@ -6,6 +6,15 @@ Append-only chronological log of significant project milestones, decisions, and 
 
 ---
 
+## 2026-06-07 — SendGrid email sender wired (real provider)
+
+**By:** Tech lead (MotivesVN IT), AI-assisted
+
+**Status:** ✅ Builds; 210 unit tests green. Console remains the default; SendGrid activates by config.
+
+- `SendGridEmailSender : IEmailSender` (Twilio SendGrid SDK, already in Directory.Packages.props) — sends text + HTML; logs + no-throw if the API key is missing so email never breaks the calling flow. DI now resolves it when `Email:Provider=SendGrid`.
+- `EmailOptions.ApiKey` added; `appsettings.json` `Email` gains an empty `ApiKey` placeholder. **Set the real key + flip `Provider` to `SendGrid` temporarily in appsettings for now; move `Email:ApiKey` to env/user-secrets before any shared/prod deploy.** Used by all transactional mail incl. the M09 BUH approval link.
+
 ## 2026-06-07 — Sprint 06: M09 ↔ M07 schedule wiring (AC-17 end-to-end)
 
 **By:** Tech lead (MotivesVN IT), AI-assisted

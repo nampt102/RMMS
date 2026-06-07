@@ -18,4 +18,9 @@ public sealed class EmailOptions
 
     /// <summary>SendGrid-only: sender display name.</summary>
     public string FromName { get; init; } = "RMMS";
+
+    /// <summary>SendGrid API key. Put in env / user-secrets in real environments — never commit.</summary>
+    public string ApiKey { get; init; } = string.Empty;
+
+    public bool IsSendGrid => string.Equals(Provider, "SendGrid", StringComparison.OrdinalIgnoreCase);
 }

@@ -71,8 +71,7 @@ public static class DependencyInjection
         switch (emailProvider)
         {
             case "sendgrid":
-                // TODO(Sprint01-Day8): wire SendGridEmailSender once API key + template IDs ready.
-                services.AddScoped<IEmailSender, ConsoleEmailSender>();
+                services.AddScoped<IEmailSender, SendGridEmailSender>();
                 break;
             case "console":
             default:
