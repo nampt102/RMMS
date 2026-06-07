@@ -243,12 +243,12 @@ class AppButton extends StatelessWidget {
   const AppButton._({
     super.key,
     required this.label,
-    required this.variant,
+    required _AppBtnVariant variant,
     this.icon,
     this.onPressed,
     this.loading = false,
     this.expand = true,
-  });
+  }) : _variant = variant;
 
   factory AppButton.primary({
     Key? key,
@@ -323,7 +323,7 @@ class AppButton extends StatelessWidget {
       );
 
   final String label;
-  final _AppBtnVariant variant;
+  final _AppBtnVariant _variant;
   final IconData? icon;
   final VoidCallback? onPressed;
   final bool loading;
@@ -340,7 +340,7 @@ class AppButton extends StatelessWidget {
     Color fg;
     List<BoxShadow>? shadow;
 
-    switch (variant) {
+    switch (_variant) {
       case _AppBtnVariant.primary:
         gradient = s.brandGradient;
         fg = Colors.white;
