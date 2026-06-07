@@ -108,6 +108,18 @@
   "homeFeatureFaceSub": "Đăng ký & quản lý",
   "homeFeatureApprovals": "Phê duyệt",
   "homeFeatureApprovalsSub": "Yêu cầu chờ duyệt",
+  "homeFeatureMonitoring": "Giám sát",
+  "homeFeatureMonitoringSub": "PG online hôm nay",
+
+  "monTitle": "Giám sát đội nhóm",
+  "monEmpty": "Không có nhân sự nào.",
+  "monAsOf": "Cập nhật lúc",
+  "monStatusWorking": "Đang làm",
+  "monStatusCheckedOut": "Đã check-out",
+  "monStatusNotCheckedIn": "Chưa check-in",
+  "monStatusOnLeave": "Nghỉ phép",
+  "monStatusNoSchedule": "Không có ca",
+  "monStatusPendingReview": "Chờ duyệt",
   "homeFeatureRequests": "Đơn nghỉ / OT",
   "homeFeatureRequestsSub": "Xin nghỉ & làm thêm",
 

@@ -6,6 +6,17 @@ Append-only chronological log of significant project milestones, decisions, and 
 
 ---
 
+## 2026-06-07 — Sprint 08 closed: M12/M16 web + mobile
+
+**By:** Tech lead (MotivesVN IT), AI-assisted
+
+**Status:** ✅ Web typecheck + lint clean. Mobile code-only (Mac runs build_runner + analyze). Closes Sprint 08.
+
+- **Web:** `/monitoring` (Admin/Leader/BUH) — status summary cards + member table (status tag / check-in / store) + manual refresh + as-of. `/audit-logs` (Admin) — ProTable over the audit log with action/entity filters, actor name, metadata tooltip. Role-scoped nav + redirect now allow non-admins on `/approvals` + `/monitoring`.
+- **Mobile:** `features/monitoring` (Freezed `TeamToday`/`TeamMember` + repo/provider) + `TeamMonitoringScreen` (summary pills + member cards, pull-to-refresh) — home "Giám sát" tile gated to Leader. ARB vi/en.
+- **AC-26/27** (Leader/Admin/BUH see today's team status) + **AC-35** (audit explorer) covered.
+- **Deferred:** SignalR real-time monitoring (optional); BUH area/category scoping (currently sees all).
+
 ## 2026-06-07 — Sprint 08: M12 Team Monitoring + M16 Audit viewer BE
 
 **By:** Tech lead (MotivesVN IT), AI-assisted

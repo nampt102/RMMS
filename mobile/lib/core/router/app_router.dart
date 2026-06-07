@@ -20,6 +20,7 @@ import '../../features/attendance/presentation/screens/attendance_today_screen.d
 import '../../features/attendance/presentation/screens/check_in_screen.dart';
 import '../../features/approvals/presentation/screens/approvals_screen.dart';
 import '../../features/face/presentation/screens/face_enrollment_screen.dart';
+import '../../features/monitoring/presentation/screens/team_monitoring_screen.dart';
 import '../../features/requests/presentation/screens/leave_request_screen.dart';
 import '../../features/requests/presentation/screens/ot_request_screen.dart';
 import '../../features/requests/presentation/screens/requests_history_screen.dart';
@@ -48,6 +49,7 @@ class AppRoutes {
   static const String requests = '/requests';
   static const String leaveRequest = '/requests/leave';
   static const String otRequest = '/requests/ot';
+  static const String teamMonitoring = '/monitoring';
 }
 
 /// Screens reachable while signed out.
@@ -165,6 +167,10 @@ final appRouterProvider = Provider<GoRouter>((ref) {
       GoRoute(
         path: AppRoutes.approvals,
         builder: (context, state) => const ApprovalsScreen(),
+      ),
+      GoRoute(
+        path: AppRoutes.teamMonitoring,
+        builder: (context, state) => const TeamMonitoringScreen(),
       ),
       GoRoute(
         path: AppRoutes.requests,

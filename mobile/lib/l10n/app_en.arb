@@ -107,6 +107,18 @@
   "homeFeatureFaceSub": "Enroll & manage",
   "homeFeatureApprovals": "Approvals",
   "homeFeatureApprovalsSub": "Requests to review",
+  "homeFeatureMonitoring": "Monitoring",
+  "homeFeatureMonitoringSub": "PG online today",
+
+  "monTitle": "Team monitoring",
+  "monEmpty": "No team members.",
+  "monAsOf": "As of",
+  "monStatusWorking": "Working",
+  "monStatusCheckedOut": "Checked out",
+  "monStatusNotCheckedIn": "Not checked in",
+  "monStatusOnLeave": "On leave",
+  "monStatusNoSchedule": "No schedule",
+  "monStatusPendingReview": "Pending review",
   "homeFeatureRequests": "Leave / OT",
   "homeFeatureRequestsSub": "Leave & overtime",
 

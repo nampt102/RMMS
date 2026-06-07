@@ -136,8 +136,8 @@ class HomeScreen extends ConsumerWidget {
                       tone: BrandTone.info,
                       onTap: () => context.push(AppRoutes.requests),
                     ),
-                    // Approval queue is a Leader responsibility (M09, AC-17).
-                    if (user?.role == UserRole.leader)
+                    // Leader responsibilities (M09 approvals, M12 monitoring).
+                    if (user?.role == UserRole.leader) ...[
                       FeatureTile(
                         icon: Icons.fact_check_outlined,
                         title: l.homeFeatureApprovals,
@@ -145,6 +145,14 @@ class HomeScreen extends ConsumerWidget {
                         tone: BrandTone.brand,
                         onTap: () => context.push(AppRoutes.approvals),
                       ),
+                      FeatureTile(
+                        icon: Icons.groups_outlined,
+                        title: l.homeFeatureMonitoring,
+                        subtitle: l.homeFeatureMonitoringSub,
+                        tone: BrandTone.success,
+                        onTap: () => context.push(AppRoutes.teamMonitoring),
+                      ),
+                    ],
                   ],
                 ),
               ],

@@ -29,7 +29,7 @@
 - [x] 5 unit tests (team status + audit filter/order) → suite **220 green**
 
 ### Mobile
-- [ ] PG Online list (Leader)
+- [x] PG Online list (Leader) — `TeamMonitoringScreen` (summary pills + member cards with status/check-in/store, pull-to-refresh, as-of); `features/monitoring` (Freezed + repo/provider); home "Giám sát" tile (leader); ARB vi/en
 
 ### Web
 - [x] Team Monitoring dashboard — `/monitoring` (summary cards + member table + manual refresh + as-of; visible to Admin/Leader/BUH)
