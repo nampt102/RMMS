@@ -6,6 +6,16 @@ Append-only chronological log of significant project milestones, decisions, and 
 
 ---
 
+## 2026-06-07 — Gmail SMTP email sender (dev) + SendGrid (prod)
+
+**By:** Tech lead (MotivesVN IT), AI-assisted
+
+**Status:** ✅ Builds; 210 unit tests green. Provider-selectable: Console (default) / Smtp / SendGrid.
+
+- `SmtpEmailSender : IEmailSender` (System.Net.Mail, no extra package) — STARTTLS:587, HTML + plain-text alternate, logs + no-throw on missing creds; strips spaces from the Gmail App Password. DI resolves it when `Email:Provider=Smtp`.
+- `EmailOptions` gains `SmtpHost`/`SmtpPort`/`SmtpUser`/`SmtpPassword`. `appsettings.json` ships safe empty defaults (host `smtp.gmail.com`, port 587). **Real Gmail creds live in `appsettings.Development.json` (not committed): `Provider=Smtp`, `SmtpUser`/`SmtpPassword` = Gmail address + App Password.**
+- Chosen for dev because the team already has a Gmail App Password; **SendGrid stays wired for staging/prod** (verified domain + `SG.` key) — flip `Email:Provider` to switch.
+
 ## 2026-06-07 — SendGrid email sender wired (real provider)
 
 **By:** Tech lead (MotivesVN IT), AI-assisted

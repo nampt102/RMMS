@@ -22,5 +22,14 @@ public sealed class EmailOptions
     /// <summary>SendGrid API key. Put in env / user-secrets in real environments — never commit.</summary>
     public string ApiKey { get; init; } = string.Empty;
 
+    // ----- SMTP (e.g. Gmail) -----
+    public string SmtpHost { get; init; } = "smtp.gmail.com";
+    public int SmtpPort { get; init; } = 587;
+    public string SmtpUser { get; init; } = string.Empty;
+
+    /// <summary>SMTP password (Gmail App Password). Keep in env/user-secrets — never commit.</summary>
+    public string SmtpPassword { get; init; } = string.Empty;
+
     public bool IsSendGrid => string.Equals(Provider, "SendGrid", StringComparison.OrdinalIgnoreCase);
+    public bool IsSmtp => string.Equals(Provider, "Smtp", StringComparison.OrdinalIgnoreCase);
 }

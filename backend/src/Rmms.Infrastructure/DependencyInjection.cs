@@ -73,6 +73,9 @@ public static class DependencyInjection
             case "sendgrid":
                 services.AddScoped<IEmailSender, SendGridEmailSender>();
                 break;
+            case "smtp":
+                services.AddScoped<IEmailSender, SmtpEmailSender>();
+                break;
             case "console":
             default:
                 services.AddScoped<IEmailSender, ConsoleEmailSender>();
