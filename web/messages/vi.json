@@ -34,7 +34,35 @@
     "navDevices": "Thiết bị",
     "navApprovals": "Phê duyệt",
     "navRequests": "Đơn nghỉ / OT",
+    "navMonitoring": "Giám sát",
+    "navAudit": "Nhật ký",
     "logout": "Đăng xuất"
+  },
+  "monitoring": {
+    "title": "Giám sát đội nhóm hôm nay",
+    "refresh": "Làm mới",
+    "asOf": "Cập nhật lúc",
+    "empty": "Không có nhân sự nào.",
+    "name": "Họ tên",
+    "role": "Vai trò",
+    "status": "Trạng thái",
+    "checkInAt": "Giờ check-in",
+    "store": "Điểm bán",
+    "status_working": "Đang làm",
+    "status_checked_out": "Đã check-out",
+    "status_not_checked_in": "Chưa check-in",
+    "status_on_leave": "Nghỉ phép",
+    "status_no_schedule_today": "Không có ca",
+    "status_pending_review": "Chờ duyệt"
+  },
+  "audit": {
+    "title": "Nhật ký hệ thống",
+    "time": "Thời gian",
+    "actor": "Người thực hiện",
+    "action": "Hành động",
+    "entity": "Đối tượng",
+    "ip": "IP",
+    "metadata": "Chi tiết"
   },
   "requests": {
     "tabLeave": "Nghỉ phép",

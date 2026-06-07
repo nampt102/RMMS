@@ -34,7 +34,35 @@
     "navDevices": "Devices",
     "navApprovals": "Approvals",
     "navRequests": "Leave / OT",
+    "navMonitoring": "Monitoring",
+    "navAudit": "Audit log",
     "logout": "Sign out"
+  },
+  "monitoring": {
+    "title": "Team monitoring — today",
+    "refresh": "Refresh",
+    "asOf": "As of",
+    "empty": "No team members.",
+    "name": "Name",
+    "role": "Role",
+    "status": "Status",
+    "checkInAt": "Check-in",
+    "store": "Store",
+    "status_working": "Working",
+    "status_checked_out": "Checked out",
+    "status_not_checked_in": "Not checked in",
+    "status_on_leave": "On leave",
+    "status_no_schedule_today": "No schedule",
+    "status_pending_review": "Pending review"
+  },
+  "audit": {
+    "title": "Audit log",
+    "time": "Time",
+    "actor": "Actor",
+    "action": "Action",
+    "entity": "Entity",
+    "ip": "IP",
+    "metadata": "Details"
   },
   "requests": {
     "tabLeave": "Leave",

@@ -6,9 +6,11 @@ import {
   ApartmentOutlined,
   AuditOutlined,
   CalendarOutlined,
+  DashboardOutlined,
   FileTextOutlined,
   CheckSquareOutlined,
   LaptopOutlined,
+  SafetyCertificateOutlined,
   LogoutOutlined,
   ShopOutlined,
   TeamOutlined,
@@ -58,11 +60,12 @@ export default function AdminLayout({
     }
   }, [hydrated, token, locale, router]);
 
-  // Non-admins (Leader/BUH) can only use the approval queue on web — keep them off
-  // AdminOnly pages (which would 403) and land them on /approvals.
+  // Non-admins (Leader/BUH) can only use the approval queue + team monitoring on web —
+  // keep them off AdminOnly pages (which would 403) and land them on /approvals.
   useEffect(() => {
     if (!hydrated || !token || !user || user.role === "admin") return;
-    if (!fullPath.startsWith(`/${locale}/approvals`)) {
+    const allowed = [`/${locale}/approvals`, `/${locale}/monitoring`];
+    if (!allowed.some((p) => fullPath.startsWith(p))) {
       router.replace(`/${locale}/approvals`);
     }
   }, [hydrated, token, user, fullPath, locale, router]);
@@ -87,8 +90,10 @@ export default function AdminLayout({
     { key: `/${locale}/categories`, icon: <AppstoreOutlined />, label: <Link href={`/${locale}/categories`}>{t("navCategories")}</Link>, roles: ["admin"] },
     { key: `/${locale}/schedules`, icon: <CalendarOutlined />, label: <Link href={`/${locale}/schedules`}>{t("navSchedules")}</Link>, roles: ["admin"] },
     { key: `/${locale}/attendance`, icon: <CheckSquareOutlined />, label: <Link href={`/${locale}/attendance`}>{t("navAttendance")}</Link>, roles: ["admin"] },
+    { key: `/${locale}/monitoring`, icon: <DashboardOutlined />, label: <Link href={`/${locale}/monitoring`}>{t("navMonitoring")}</Link>, roles: ["admin", "leader", "buh"] },
     { key: `/${locale}/approvals`, icon: <AuditOutlined />, label: <Link href={`/${locale}/approvals`}>{t("navApprovals")}</Link>, roles: ["admin", "leader", "buh"] },
     { key: `/${locale}/requests`, icon: <FileTextOutlined />, label: <Link href={`/${locale}/requests`}>{t("navRequests")}</Link>, roles: ["admin"] },
+    { key: `/${locale}/audit-logs`, icon: <SafetyCertificateOutlined />, label: <Link href={`/${locale}/audit-logs`}>{t("navAudit")}</Link>, roles: ["admin"] },
     { key: `/${locale}/devices`, icon: <LaptopOutlined />, label: <Link href={`/${locale}/devices`}>{t("navDevices")}</Link>, roles: ["admin"] },
   ];
   const navItems = allItems.filter((i) => i.roles.includes(role));

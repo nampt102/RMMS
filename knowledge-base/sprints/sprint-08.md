@@ -32,8 +32,9 @@
 - [ ] PG Online list (Leader)
 
 ### Web
-- [ ] Team Monitoring dashboard
-- [ ] Audit Log explorer
+- [x] Team Monitoring dashboard — `/monitoring` (summary cards + member table + manual refresh + as-of; visible to Admin/Leader/BUH)
+- [x] Audit Log explorer — `/audit-logs` (Admin-only ProTable: filter action/entity, actor name, metadata tooltip)
+- [x] Role-scoped nav + redirect updated (Leader/BUH can reach /approvals + /monitoring)
 
 ### QA
 - [ ] Status accuracy across edge cases
