@@ -33,7 +33,28 @@
     "navAttendance": "Chấm công",
     "navDevices": "Thiết bị",
     "navApprovals": "Phê duyệt",
+    "navRequests": "Đơn nghỉ / OT",
     "logout": "Đăng xuất"
+  },
+  "requests": {
+    "tabLeave": "Nghỉ phép",
+    "tabOt": "Làm thêm (OT)",
+    "titleLeave": "Đơn nghỉ phép",
+    "titleOt": "Đơn OT",
+    "requester": "Người yêu cầu",
+    "leaveType": "Loại nghỉ",
+    "leaveType_regular": "Nghỉ phép",
+    "leaveType_emergency": "Nghỉ đột xuất",
+    "startDate": "Từ ngày",
+    "endDate": "Đến ngày",
+    "otDate": "Ngày OT",
+    "time": "Thời gian",
+    "reason": "Lý do",
+    "status": "Trạng thái",
+    "status_pending": "Chờ duyệt",
+    "status_approved": "Đã duyệt",
+    "status_rejected": "Bị từ chối",
+    "createdAt": "Ngày tạo"
   },
   "approvals": {
     "title": "Phê duyệt chờ xử lý",

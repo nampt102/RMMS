@@ -31,7 +31,7 @@
 - [ ] Request history
 
 ### Web
-- [ ] Admin view of all requests
+- [x] Admin view of all requests — `/requests` (tabs Leave / OT, status filter, requester name). BE `GET /admin/leave-requests` + `/admin/ot-requests` (paginated). Override via the `/approvals` queue (admin)
 
 ### QA
 - [ ] End-to-end approval flow tests

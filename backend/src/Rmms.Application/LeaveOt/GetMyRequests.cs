@@ -21,7 +21,7 @@ internal sealed class GetMyLeaveRequestsQueryHandler
             .Where(r => r.UserId == query.UserId)
             .OrderByDescending(r => r.StartDate)
             .ToListAsync(ct);
-        IReadOnlyList<LeaveRequestDto> dtos = rows.Select(LeaveOtMapper.ToDto).ToList();
+        IReadOnlyList<LeaveRequestDto> dtos = rows.Select(r => LeaveOtMapper.ToDto(r)).ToList();
         return Result.Success(dtos);
     }
 }
@@ -38,7 +38,7 @@ internal sealed class GetMyOtRequestsQueryHandler
             .Where(r => r.UserId == query.UserId)
             .OrderByDescending(r => r.OtDate)
             .ToListAsync(ct);
-        IReadOnlyList<OtRequestDto> dtos = rows.Select(LeaveOtMapper.ToDto).ToList();
+        IReadOnlyList<OtRequestDto> dtos = rows.Select(r => LeaveOtMapper.ToDto(r)).ToList();
         return Result.Success(dtos);
     }
 }

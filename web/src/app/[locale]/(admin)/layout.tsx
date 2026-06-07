@@ -6,6 +6,7 @@ import {
   ApartmentOutlined,
   AuditOutlined,
   CalendarOutlined,
+  FileTextOutlined,
   CheckSquareOutlined,
   LaptopOutlined,
   LogoutOutlined,
@@ -69,6 +70,7 @@ export default function AdminLayout({
     { key: `/${locale}/schedules`, icon: <CalendarOutlined />, label: <Link href={`/${locale}/schedules`}>{t("navSchedules")}</Link> },
     { key: `/${locale}/attendance`, icon: <CheckSquareOutlined />, label: <Link href={`/${locale}/attendance`}>{t("navAttendance")}</Link> },
     { key: `/${locale}/approvals`, icon: <AuditOutlined />, label: <Link href={`/${locale}/approvals`}>{t("navApprovals")}</Link> },
+    { key: `/${locale}/requests`, icon: <FileTextOutlined />, label: <Link href={`/${locale}/requests`}>{t("navRequests")}</Link> },
     { key: `/${locale}/devices`, icon: <LaptopOutlined />, label: <Link href={`/${locale}/devices`}>{t("navDevices")}</Link> },
   ];
   const selectedKey = navItems.find((i) => pathname.startsWith(i.key))?.key;

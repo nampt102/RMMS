@@ -33,7 +33,28 @@
     "navAttendance": "Attendance",
     "navDevices": "Devices",
     "navApprovals": "Approvals",
+    "navRequests": "Leave / OT",
     "logout": "Sign out"
+  },
+  "requests": {
+    "tabLeave": "Leave",
+    "tabOt": "Overtime",
+    "titleLeave": "Leave requests",
+    "titleOt": "OT requests",
+    "requester": "Requester",
+    "leaveType": "Type",
+    "leaveType_regular": "Regular",
+    "leaveType_emergency": "Emergency",
+    "startDate": "From",
+    "endDate": "To",
+    "otDate": "OT date",
+    "time": "Time",
+    "reason": "Reason",
+    "status": "Status",
+    "status_pending": "Pending",
+    "status_approved": "Approved",
+    "status_rejected": "Rejected",
+    "createdAt": "Created"
   },
   "approvals": {
     "title": "Pending approvals",

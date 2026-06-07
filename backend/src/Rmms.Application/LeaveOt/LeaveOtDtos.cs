@@ -16,7 +16,8 @@ public sealed record LeaveRequestDto(
     string Status,
     Guid? ApprovalId,
     Guid? LinkedAttendanceId,
-    DateTimeOffset CreatedAt);
+    DateTimeOffset CreatedAt,
+    string? RequesterName = null);
 
 /// <summary>OT request projected for list/detail (M08).</summary>
 public sealed record OtRequestDto(
@@ -28,14 +29,15 @@ public sealed record OtRequestDto(
     string Reason,
     string Status,
     Guid? ApprovalId,
-    DateTimeOffset CreatedAt);
+    DateTimeOffset CreatedAt,
+    string? RequesterName = null);
 
 internal static class LeaveOtMapper
 {
-    public static LeaveRequestDto ToDto(LeaveRequest r) => new(
+    public static LeaveRequestDto ToDto(LeaveRequest r, string? requesterName = null) => new(
         r.Id, r.UserId, r.LeaveType.ToSnakeCase(), r.StartDate, r.EndDate, r.StartTime, r.EndTime,
-        r.Reason, r.Status.ToSnakeCase(), r.ApprovalId, r.LinkedAttendanceId, r.CreatedAt);
+        r.Reason, r.Status.ToSnakeCase(), r.ApprovalId, r.LinkedAttendanceId, r.CreatedAt, requesterName);
 
-    public static OtRequestDto ToDto(OtRequest r) => new(
-        r.Id, r.UserId, r.OtDate, r.StartTime, r.EndTime, r.Reason, r.Status.ToSnakeCase(), r.ApprovalId, r.CreatedAt);
+    public static OtRequestDto ToDto(OtRequest r, string? requesterName = null) => new(
+        r.Id, r.UserId, r.OtDate, r.StartTime, r.EndTime, r.Reason, r.Status.ToSnakeCase(), r.ApprovalId, r.CreatedAt, requesterName);
 }
