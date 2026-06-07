@@ -53,6 +53,15 @@ export default function AdminLayout({
     }
   }, [hydrated, token, locale, router]);
 
+  // Non-admins (Leader/BUH) can only use the approval queue on web — keep them off
+  // AdminOnly pages (which would 403) and land them on /approvals.
+  useEffect(() => {
+    if (!hydrated || !token || !user || user.role === "admin") return;
+    if (!pathname.startsWith(`/${locale}/approvals`)) {
+      router.replace(`/${locale}/approvals`);
+    }
+  }, [hydrated, token, user, pathname, locale, router]);
+
   if (!hydrated || !token) {
     return null;
   }
@@ -62,18 +71,24 @@ export default function AdminLayout({
     router.replace(`/${locale}/login`);
   };
 
-  const navItems = [
-    { key: `/${locale}/users`, icon: <TeamOutlined />, label: <Link href={`/${locale}/users`}>{t("navUsers")}</Link> },
-    { key: `/${locale}/stores`, icon: <ShopOutlined />, label: <Link href={`/${locale}/stores`}>{t("navStores")}</Link> },
-    { key: `/${locale}/areas`, icon: <ApartmentOutlined />, label: <Link href={`/${locale}/areas`}>{t("navAreas")}</Link> },
-    { key: `/${locale}/categories`, icon: <AppstoreOutlined />, label: <Link href={`/${locale}/categories`}>{t("navCategories")}</Link> },
-    { key: `/${locale}/schedules`, icon: <CalendarOutlined />, label: <Link href={`/${locale}/schedules`}>{t("navSchedules")}</Link> },
-    { key: `/${locale}/attendance`, icon: <CheckSquareOutlined />, label: <Link href={`/${locale}/attendance`}>{t("navAttendance")}</Link> },
-    { key: `/${locale}/approvals`, icon: <AuditOutlined />, label: <Link href={`/${locale}/approvals`}>{t("navApprovals")}</Link> },
-    { key: `/${locale}/requests`, icon: <FileTextOutlined />, label: <Link href={`/${locale}/requests`}>{t("navRequests")}</Link> },
-    { key: `/${locale}/devices`, icon: <LaptopOutlined />, label: <Link href={`/${locale}/devices`}>{t("navDevices")}</Link> },
+  // Role-scoped navigation. Most admin pages call AdminOnly endpoints, so a Leader/BUH
+  // only sees what they can actually use (the approval queue). `approvals` is the shared
+  // landing for non-admins.
+  const role = user?.role ?? "";
+  const allItems = [
+    { key: `/${locale}/users`, icon: <TeamOutlined />, label: <Link href={`/${locale}/users`}>{t("navUsers")}</Link>, roles: ["admin"] },
+    { key: `/${locale}/stores`, icon: <ShopOutlined />, label: <Link href={`/${locale}/stores`}>{t("navStores")}</Link>, roles: ["admin"] },
+    { key: `/${locale}/areas`, icon: <ApartmentOutlined />, label: <Link href={`/${locale}/areas`}>{t("navAreas")}</Link>, roles: ["admin"] },
+    { key: `/${locale}/categories`, icon: <AppstoreOutlined />, label: <Link href={`/${locale}/categories`}>{t("navCategories")}</Link>, roles: ["admin"] },
+    { key: `/${locale}/schedules`, icon: <CalendarOutlined />, label: <Link href={`/${locale}/schedules`}>{t("navSchedules")}</Link>, roles: ["admin"] },
+    { key: `/${locale}/attendance`, icon: <CheckSquareOutlined />, label: <Link href={`/${locale}/attendance`}>{t("navAttendance")}</Link>, roles: ["admin"] },
+    { key: `/${locale}/approvals`, icon: <AuditOutlined />, label: <Link href={`/${locale}/approvals`}>{t("navApprovals")}</Link>, roles: ["admin", "leader", "buh"] },
+    { key: `/${locale}/requests`, icon: <FileTextOutlined />, label: <Link href={`/${locale}/requests`}>{t("navRequests")}</Link>, roles: ["admin"] },
+    { key: `/${locale}/devices`, icon: <LaptopOutlined />, label: <Link href={`/${locale}/devices`}>{t("navDevices")}</Link>, roles: ["admin"] },
   ];
+  const navItems = allItems.filter((i) => i.roles.includes(role));
   const selectedKey = navItems.find((i) => pathname.startsWith(i.key))?.key;
+  const canViewCurrent = navItems.some((i) => pathname.startsWith(i.key));
 
   return (
     <Layout className="min-h-screen">
@@ -98,7 +113,7 @@ export default function AdminLayout({
           </Button>
         </Space>
       </Header>
-      <Content className="p-6">{children}</Content>
+      <Content className="p-6">{canViewCurrent ? children : null}</Content>
     </Layout>
   );
 }
