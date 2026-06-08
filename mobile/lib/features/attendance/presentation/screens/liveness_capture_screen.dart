@@ -147,7 +147,7 @@ class _LivenessCaptureScreenState extends State<LivenessCaptureScreen> with Widg
   /// Converts a [CameraImage] to an ML Kit [InputImage] (single-plane nv21 / bgra8888).
   InputImage? _toInputImage(CameraImage image, CameraDescription camera) {
     final rotation = InputImageRotationValue.fromRawValue(camera.sensorOrientation);
-    final format = InputImageFormatValue.fromRawValue(image.format.raw);
+    final format = InputImageFormatValue.fromRawValue(image.format.raw as int);
     if (rotation == null || format == null || image.planes.isEmpty) return null;
 
     return InputImage.fromBytes(
