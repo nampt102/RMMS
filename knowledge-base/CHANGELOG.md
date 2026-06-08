@@ -6,6 +6,22 @@ Append-only chronological log of significant project milestones, decisions, and 
 
 ---
 
+## 2026-06-08 — Sprint 09 ✅ CLOSED (M14 Notification + M16 Admin Review) + attendance fixes
+
+**By:** Tech lead (MotivesVN IT), AI-assisted
+
+**Status:** ✅ Backend builds; **229 unit tests green**. Web typecheck + lint clean. Mobile `flutter analyze` clean on Mac.
+
+Closes **Sprint 09** — M14 Notification (in-app + FCM + SignalR realtime) and M16 Admin Review actions, plus the anti-spoof / infra / push backlog (see the four 2026-06-08 entries below). Remaining small fixes this session:
+
+- **Attendance timer (mobile):** the running clock now counts **elapsed time since check-in of the current shift** (UTC-safe `end.difference(checkInAt.toUtc())`, frozen at check-out, wall-clock before check-in) instead of showing wall-clock time.
+- **GPS invariant-culture parse (BE):** `InvariantFormParsing.TryParseGps` parses check-in/out `latitude`/`longitude`/`accuracyMeters` multipart fields with `CultureInfo.InvariantCulture` — under `vi-VN` the server treated `.` as a thousands separator and corrupted coordinates. Dead `Latitude/Longitude/AccuracyMeters` DTO fields dropped; both endpoints share the helper.
+- **Web attendance "Chi tiết" modal:** the detail/review `<Modal>` was a `<ProTable>` child (ProTable does not render arbitrary children) so it never mounted → button did nothing. Moved the Modal to a sibling inside a fragment.
+- **AntD Modal deprecation:** replaced 11 `destroyOnClose` → `destroyOnHidden` across approvals/areas/categories/devices/stores/users pages.
+- **ML Kit InputImage (mobile):** cast `CameraImage.format.raw` (`dynamic`) to `int` for `InputImageFormatValue.fromRawValue` — fixed the lone `flutter analyze` error.
+
+**Next:** Sprint 10.
+
 ## 2026-06-08 — Anti-spoof: active liveness on check-in selfie (ADR-013) + MinIO/CompreFace host volumes
 
 **By:** Tech lead (MotivesVN IT), AI-assisted
