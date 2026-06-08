@@ -301,5 +301,14 @@
   "@registerDaysHint": { "placeholders": { "count": { "type": "int" } } },
   "registerRemoveShift": "Xóa ca này",
   "registerShiftLabel": "Ca {n}",
-  "@registerShiftLabel": { "placeholders": { "n": { "type": "int" } } }
+  "@registerShiftLabel": { "placeholders": { "n": { "type": "int" } } },
+  "requestsEndOfList": "— Hết danh sách —",
+  "requestsCreateTitle": "Tạo đơn mới",
+  "requestLeavePlaceholder": "Nhập lý do xin nghỉ…",
+  "requestOtPlaceholder": "Mô tả công việc làm thêm…",
+  "requestOtHours": "Số giờ OT",
+  "requestOtHoursValue": "{hours} giờ",
+  "@requestOtHoursValue": { "placeholders": { "hours": { "type": "String" } } },
+  "requestCounter": "{count}/{max}",
+  "@requestCounter": { "placeholders": { "count": { "type": "int" }, "max": { "type": "int" } } }
 }

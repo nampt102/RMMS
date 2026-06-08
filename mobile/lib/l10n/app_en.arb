@@ -300,5 +300,14 @@
   "@registerDaysHint": { "placeholders": { "count": { "type": "int" } } },
   "registerRemoveShift": "Remove shift",
   "registerShiftLabel": "Shift {n}",
-  "@registerShiftLabel": { "placeholders": { "n": { "type": "int" } } }
+  "@registerShiftLabel": { "placeholders": { "n": { "type": "int" } } },
+  "requestsEndOfList": "— End of list —",
+  "requestsCreateTitle": "New request",
+  "requestLeavePlaceholder": "Enter leave reason…",
+  "requestOtPlaceholder": "Describe the OT work…",
+  "requestOtHours": "OT hours",
+  "requestOtHoursValue": "{hours} hours",
+  "@requestOtHoursValue": { "placeholders": { "hours": { "type": "String" } } },
+  "requestCounter": "{count}/{max}",
+  "@requestCounter": { "placeholders": { "count": { "type": "int" }, "max": { "type": "int" } } }
 }

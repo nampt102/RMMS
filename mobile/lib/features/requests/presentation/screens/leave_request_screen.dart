@@ -1,18 +1,23 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:go_router/go_router.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:intl/intl.dart';
 
 import '../../../../core/network/api_exception.dart';
+import '../../../../core/theme/app_palette.dart';
+import '../../../../core/widgets/app_widgets.dart';
 import '../../../../l10n/generated/app_localizations.dart';
 import '../../data/requests_repository.dart';
+import '../widgets/request_form_widgets.dart';
 
-/// Create a regular leave request (M08): date range + reason.
+/// Redesign 2026 — Xin nghỉ phép (pushed).
 class LeaveRequestScreen extends ConsumerStatefulWidget {
   const LeaveRequestScreen({super.key});
 
   @override
-  ConsumerState<LeaveRequestScreen> createState() => _LeaveRequestScreenState();
+  ConsumerState<LeaveRequestScreen> createState() =>
+      _LeaveRequestScreenState();
 }
 
 class _LeaveRequestScreenState extends ConsumerState<LeaveRequestScreen> {
@@ -20,6 +25,12 @@ class _LeaveRequestScreenState extends ConsumerState<LeaveRequestScreen> {
   DateTime _end = DateTime.now();
   final _reason = TextEditingController();
   bool _saving = false;
+
+  @override
+  void initState() {
+    super.initState();
+    _reason.addListener(() => setState(() {}));
+  }
 
   @override
   void dispose() {
@@ -51,21 +62,27 @@ class _LeaveRequestScreenState extends ConsumerState<LeaveRequestScreen> {
 
   Future<void> _submit() async {
     final l = AppLocalizations.of(context);
-    final messenger = ScaffoldMessenger.of(context);
     if (_reason.text.trim().isEmpty) {
-      messenger.showSnackBar(SnackBar(content: Text(l.requestReasonRequired)));
+      showAppToast(context,
+          message: l.requestReasonRequired, kind: AppToastKind.warning);
       return;
     }
     setState(() => _saving = true);
     try {
       await ref.read(requestsRepositoryProvider).createLeave(
-            startDate: _ymd(_start), endDate: _ymd(_end), reason: _reason.text.trim());
+            startDate: _ymd(_start),
+            endDate: _ymd(_end),
+            reason: _reason.text.trim(),
+          );
       ref.invalidate(myLeaveProvider);
       if (!mounted) return;
-      messenger.showSnackBar(SnackBar(content: Text(l.requestCreated)));
+      showAppToast(context,
+          message: l.requestCreated, kind: AppToastKind.success);
       context.pop();
     } on ApiException catch (e) {
-      if (mounted) messenger.showSnackBar(SnackBar(content: Text(e.message)));
+      if (mounted) {
+        showAppToast(context, message: e.message, kind: AppToastKind.error);
+      }
     } finally {
       if (mounted) setState(() => _saving = false);
     }
@@ -78,44 +95,61 @@ class _LeaveRequestScreenState extends ConsumerState<LeaveRequestScreen> {
     final fmt = DateFormat.yMMMEd(lang);
 
     return Scaffold(
-      appBar: AppBar(title: Text(l.requestsAddLeave)),
+      backgroundColor: AppPalette.bg,
       body: SafeArea(
-        child: ListView(
-          padding: const EdgeInsets.fromLTRB(16, 16, 16, 96),
+        bottom: false,
+        child: Column(
           children: [
-            ListTile(
-              contentPadding: EdgeInsets.zero,
-              leading: const Icon(Icons.event_outlined),
-              title: Text(l.requestFieldStartDate),
-              subtitle: Text(fmt.format(_start)),
-              trailing: const Icon(Icons.chevron_right),
-              onTap: () => _pick(true),
-            ),
-            ListTile(
-              contentPadding: EdgeInsets.zero,
-              leading: const Icon(Icons.event_outlined),
-              title: Text(l.requestFieldEndDate),
-              subtitle: Text(fmt.format(_end)),
-              trailing: const Icon(Icons.chevron_right),
-              onTap: () => _pick(false),
-            ),
-            const SizedBox(height: 12),
-            TextField(
-              controller: _reason,
-              maxLength: 1000,
-              maxLines: 3,
-              decoration: InputDecoration(labelText: l.requestFieldReason),
+            AppTopBar(title: l.requestsAddLeave),
+            Expanded(
+              child: ListView(
+                padding: const EdgeInsets.fromLTRB(16, 8, 16, 24),
+                children: [
+                  DateFieldCard(
+                    label: l.requestFieldStartDate,
+                    value: fmt.format(_start),
+                    tone: AppTone.indigo,
+                    onTap: () => _pick(true),
+                  ),
+                  const SizedBox(height: 12),
+                  DateFieldCard(
+                    label: l.requestFieldEndDate,
+                    value: fmt.format(_end),
+                    tone: AppTone.violet,
+                    onTap: () => _pick(false),
+                  ),
+                  const SizedBox(height: 22),
+                  Text(
+                    l.requestFieldReason,
+                    style: GoogleFonts.spaceGrotesk(
+                      color: AppPalette.ink,
+                      fontSize: 17,
+                      fontWeight: FontWeight.w800,
+                      letterSpacing: -0.3,
+                    ),
+                  ),
+                  const SizedBox(height: 10),
+                  ReasonField(
+                    controller: _reason,
+                    hint: l.requestLeavePlaceholder,
+                    maxLength: 1000,
+                  ),
+                ],
+              ),
             ),
           ],
         ),
       ),
       bottomNavigationBar: SafeArea(
-        minimum: const EdgeInsets.all(16),
-        child: FilledButton(
-          onPressed: _saving ? null : _submit,
-          child: _saving
-              ? const SizedBox(width: 18, height: 18, child: CircularProgressIndicator(strokeWidth: 2))
-              : Text(l.requestSubmit),
+        top: false,
+        child: Padding(
+          padding: const EdgeInsets.fromLTRB(16, 8, 16, 16),
+          child: AppButton.primary(
+            label: l.requestSubmit,
+            icon: Icons.send_rounded,
+            loading: _saving,
+            onPressed: _submit,
+          ),
         ),
       ),
     );
