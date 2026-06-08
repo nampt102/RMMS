@@ -317,7 +317,7 @@ class _DiagonalStripePainter extends CustomPainter {
       ..style = PaintingStyle.fill;
     const stripe = 14.0;
     const gap = 24.0;
-    final step = stripe + gap;
+    const step = stripe + gap;
     // Draw parallel slanted stripes covering the rect.
     for (var x = -size.height; x < size.width + size.height; x += step) {
       final p = Path()

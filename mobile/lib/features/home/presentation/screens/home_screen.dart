@@ -141,120 +141,122 @@ class _Hero extends StatelessWidget {
     final initial =
         name.trim().isEmpty ? '?' : name.trim().substring(0, 1).toUpperCase();
 
-    return ClipRRect(
-      borderRadius: BorderRadius.circular(30),
-      child: Stack(
-        children: [
-          Container(
-            decoration: BoxDecoration(
-              gradient: s.meshGradient,
-              borderRadius: BorderRadius.circular(30),
-              boxShadow: s.shadowLg,
-            ),
-          ),
-          // Decorative circles.
-          Positioned(
-            top: -30,
-            right: -20,
-            child: _circle(120, Colors.white.withValues(alpha: 0.10)),
-          ),
-          Positioned(
-            top: 20,
-            right: 60,
-            child: _circle(60, Colors.white.withValues(alpha: 0.08)),
-          ),
-          Padding(
-            padding: const EdgeInsets.fromLTRB(18, 18, 14, 18),
-            child: Column(
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: [
-                Row(
+    return DecoratedBox(
+      decoration: BoxDecoration(
+        borderRadius: BorderRadius.circular(30),
+        boxShadow: s.shadowLg,
+      ),
+      child: ClipRRect(
+        borderRadius: BorderRadius.circular(30),
+        child: DecoratedBox(
+          decoration: BoxDecoration(gradient: s.meshGradient),
+          child: Stack(
+            children: [
+              // Decorative circles.
+              Positioned(
+                top: -30,
+                right: -20,
+                child: _circle(120, Colors.white.withValues(alpha: 0.10)),
+              ),
+              Positioned(
+                top: 20,
+                right: 60,
+                child: _circle(60, Colors.white.withValues(alpha: 0.08)),
+              ),
+              Padding(
+                padding: const EdgeInsets.fromLTRB(18, 18, 14, 18),
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
-                    // Avatar tile.
-                    Container(
-                      width: 56,
-                      height: 56,
-                      decoration: BoxDecoration(
-                        color: Colors.white.withValues(alpha: 0.22),
-                        borderRadius: BorderRadius.circular(18),
-                      ),
-                      alignment: Alignment.center,
-                      child: Text(
-                        initial,
-                        style: GoogleFonts.spaceGrotesk(
-                          color: Colors.white,
-                          fontSize: 24,
-                          fontWeight: FontWeight.w800,
-                        ),
-                      ),
-                    ),
-                    const SizedBox(width: 14),
-                    Expanded(
-                      child: Column(
-                        crossAxisAlignment: CrossAxisAlignment.start,
-                        children: [
-                          Text(
-                            _greetingKey(l),
-                            style: GoogleFonts.plusJakartaSans(
-                              color: Colors.white.withValues(alpha: 0.88),
-                              fontSize: 13.5,
-                              fontWeight: FontWeight.w600,
-                            ),
+                    Row(
+                      children: [
+                        // Avatar tile.
+                        Container(
+                          width: 56,
+                          height: 56,
+                          decoration: BoxDecoration(
+                            color: Colors.white.withValues(alpha: 0.22),
+                            borderRadius: BorderRadius.circular(18),
                           ),
-                          const SizedBox(height: 4),
-                          Text(
-                            name,
-                            maxLines: 1,
-                            overflow: TextOverflow.ellipsis,
+                          alignment: Alignment.center,
+                          child: Text(
+                            initial,
                             style: GoogleFonts.spaceGrotesk(
                               color: Colors.white,
-                              fontSize: 22,
+                              fontSize: 24,
                               fontWeight: FontWeight.w800,
-                              letterSpacing: -0.5,
                             ),
                           ),
-                        ],
-                      ),
-                    ),
-                    _HeroBell(count: unreadCount, onTap: onBell),
-                    const SizedBox(width: 8),
-                    PressScale(
-                      onTap: onLogout,
-                      child: Container(
-                        width: 40,
-                        height: 40,
-                        decoration: BoxDecoration(
-                          color: Colors.white.withValues(alpha: 0.22),
-                          borderRadius: BorderRadius.circular(13),
                         ),
-                        alignment: Alignment.center,
-                        child: const Icon(Icons.logout_rounded,
-                            color: Colors.white, size: 20),
-                      ),
+                        const SizedBox(width: 14),
+                        Expanded(
+                          child: Column(
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            children: [
+                              Text(
+                                _greetingKey(l),
+                                style: GoogleFonts.plusJakartaSans(
+                                  color: Colors.white.withValues(alpha: 0.88),
+                                  fontSize: 13.5,
+                                  fontWeight: FontWeight.w600,
+                                ),
+                              ),
+                              const SizedBox(height: 4),
+                              Text(
+                                name,
+                                maxLines: 1,
+                                overflow: TextOverflow.ellipsis,
+                                style: GoogleFonts.spaceGrotesk(
+                                  color: Colors.white,
+                                  fontSize: 22,
+                                  fontWeight: FontWeight.w800,
+                                  letterSpacing: -0.5,
+                                ),
+                              ),
+                            ],
+                          ),
+                        ),
+                        _HeroBell(count: unreadCount, onTap: onBell),
+                        const SizedBox(width: 8),
+                        PressScale(
+                          onTap: onLogout,
+                          child: Container(
+                            width: 40,
+                            height: 40,
+                            decoration: BoxDecoration(
+                              color: Colors.white.withValues(alpha: 0.22),
+                              borderRadius: BorderRadius.circular(13),
+                            ),
+                            alignment: Alignment.center,
+                            child: const Icon(Icons.logout_rounded,
+                                color: Colors.white, size: 20),
+                          ),
+                        ),
+                      ],
+                    ),
+                    const SizedBox(height: 16),
+                    Wrap(
+                      spacing: 8,
+                      runSpacing: 8,
+                      children: [
+                        if (role != null)
+                          _glassChip(
+                            icon: Icons.store_rounded,
+                            text: 'Vai trò · $role',
+                          ),
+                        if (storeCode != null)
+                          _glassChip(
+                            icon: Icons.place_rounded,
+                            text: storeCode!,
+                          ),
+                      ],
                     ),
                   ],
                 ),
-                const SizedBox(height: 16),
-                Wrap(
-                  spacing: 8,
-                  runSpacing: 8,
-                  children: [
-                    if (role != null)
-                      _glassChip(
-                        icon: Icons.workspace_premium_rounded,
-                        text: 'Vai trò · $role',
-                      ),
-                    if (storeCode != null)
-                      _glassChip(
-                        icon: Icons.place_rounded,
-                        text: storeCode!,
-                      ),
-                  ],
-                ),
-              ],
-            ),
+              ),
+            ],
           ),
-        ],
+        ),
       ),
     );
   }

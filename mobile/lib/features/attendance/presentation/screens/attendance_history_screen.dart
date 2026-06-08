@@ -119,32 +119,27 @@ class _SummaryCard extends StatelessWidget {
     final s = context.semantics;
     return ClipRRect(
       borderRadius: BorderRadius.circular(28),
-      child: Stack(
-        children: [
-          Container(
-            decoration: BoxDecoration(
-              gradient: s.meshGradient,
-              borderRadius: BorderRadius.circular(28),
-              boxShadow: s.shadowLg,
-            ),
-          ),
-          Positioned(
-            top: -24,
-            right: -16,
-            child: Container(
-              width: 110,
-              height: 110,
-              decoration: BoxDecoration(
-                shape: BoxShape.circle,
-                color: Colors.white.withValues(alpha: 0.10),
+      child: DecoratedBox(
+        decoration: BoxDecoration(gradient: s.meshGradient),
+        child: Stack(
+          children: [
+            Positioned(
+              top: -24,
+              right: -16,
+              child: Container(
+                width: 110,
+                height: 110,
+                decoration: BoxDecoration(
+                  shape: BoxShape.circle,
+                  color: Colors.white.withValues(alpha: 0.10),
+                ),
               ),
             ),
-          ),
-          Padding(
-            padding: const EdgeInsets.fromLTRB(20, 20, 20, 22),
-            child: Column(
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: [
+            Padding(
+              padding: const EdgeInsets.fromLTRB(20, 20, 20, 22),
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
                 Text(
                   l.historyMonthSummary(summary.month, summary.hoursText),
                   style: GoogleFonts.plusJakartaSans(
@@ -193,6 +188,7 @@ class _SummaryCard extends StatelessWidget {
             ),
           ),
         ],
+        ),
       ),
     );
   }

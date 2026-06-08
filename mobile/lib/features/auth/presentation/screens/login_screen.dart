@@ -79,17 +79,21 @@ class _LoginScreenState extends ConsumerState<LoginScreen> {
               children: [
                 const SizedBox(height: 8),
                 // Brand tile (64×64 grad-brand, radius 22).
-                Container(
-                  width: 64,
-                  height: 64,
-                  decoration: BoxDecoration(
-                    gradient: s.brandGradient,
-                    borderRadius: BorderRadius.circular(22),
-                    boxShadow: s.shadowBrand,
+                Align(
+                  alignment: Alignment.centerLeft,
+                  child: SizedBox(
+                    width: 64,
+                    height: 64,
+                    child: DecoratedBox(
+                      decoration: BoxDecoration(
+                        gradient: s.brandGradient,
+                        borderRadius: BorderRadius.circular(22),
+                        boxShadow: s.shadowBrand,
+                      ),
+                      child: const Icon(Icons.store_rounded,
+                          color: Colors.white, size: 30),
+                    ),
                   ),
-                  alignment: Alignment.center,
-                  child: const Icon(Icons.store_rounded,
-                      color: Colors.white, size: 30),
                 ),
                 const SizedBox(height: 22),
                 // Display title — two lines, 34/800, negative tracking.
