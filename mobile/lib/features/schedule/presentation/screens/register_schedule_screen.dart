@@ -417,7 +417,7 @@ class _DateCard extends StatelessWidget {
       padding: const EdgeInsets.fromLTRB(14, 14, 14, 14),
       child: Row(
         children: [
-          AppIconTile(
+          const AppIconTile(
             icon: Icons.calendar_today_rounded,
             tone: AppTone.indigo,
             size: 46,

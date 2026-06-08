@@ -455,7 +455,7 @@ class _EmptyState extends StatelessWidget {
       padding: const EdgeInsets.only(top: 80),
       child: Column(
         children: [
-          AppIconTile(
+          const AppIconTile(
             icon: Icons.event_busy_rounded,
             tone: AppTone.indigo,
             size: 64,
@@ -489,7 +489,7 @@ class _ErrorView extends StatelessWidget {
     return ListView(
       children: [
         const SizedBox(height: 80),
-        AppIconTile(
+        const AppIconTile(
           icon: Icons.error_outline_rounded,
           tone: AppTone.rose,
           size: 64,
