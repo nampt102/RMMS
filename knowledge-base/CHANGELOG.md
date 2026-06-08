@@ -6,6 +6,17 @@ Append-only chronological log of significant project milestones, decisions, and 
 
 ---
 
+## 2026-06-08 — Sprint 09: M14 notification UX (mobile) + attendance-review notify
+
+**By:** Tech lead (MotivesVN IT), AI-assisted
+
+**Status:** ✅ Backend builds; **228 unit tests green**. Mobile code-only (Mac runs build_runner + analyze).
+
+- **Mobile (M14):** `features/notifications` — Freezed `AppNotification`/`NotificationPage`, repository (inbox page / mark-read / mark-all / FCM-token rotation) + `unreadCountProvider`. `NotificationsScreen` (new `app_widgets` kit): inbox cards with tone icon per type, unread dot, mark-all, tap → mark-read + deep-link nav. Home hero bell with unread badge; `/notifications` route. FCM coordinator now re-registers rotated tokens (`PUT /users/me/fcm-token`) and follows `deepLink` payloads on notification tap (warm + cold start). ARB vi/en (`notif*`).
+- **Web (M16):** Admin Review detail + actions confirmed already shipped (M05 `/attendance` queue: filter + detail modal + approve/reject + photos) — no new UI needed.
+- **BE:** `ReviewAttendanceCommand` now notifies the PG of the review decision (in-app + push, CR-2) with an `rmms://attendance/{id}` deep link.
+- **Deferred:** "attendance sent to review" notify at check-in (touches hot path + many tests) — follow-up; real FCM sender (1B).
+
 ## 2026-06-08 — Mobile Redesign 2026 + design-system docs
 
 **By:** Mobile lead (MotivesVN IT), AI-assisted

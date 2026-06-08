@@ -13,6 +13,7 @@ import '../../../attendance/data/attendance_repository.dart';
 import '../../../attendance/domain/attendance.dart';
 import '../../../auth/application/auth_controller.dart';
 import '../../../auth/application/auth_state.dart';
+import '../../../notifications/data/notifications_repository.dart';
 
 /// Redesign 2026 — Home (Trang chủ tab).
 ///
@@ -35,6 +36,7 @@ class HomeScreen extends ConsumerWidget {
       orElse: () => null,
     );
     final checkedIn = activeShift?.isCheckedIn ?? false;
+    final unread = ref.watch(unreadCountProvider);
 
     return SafeArea(
       bottom: false,
@@ -49,6 +51,8 @@ class HomeScreen extends ConsumerWidget {
                 name: user?.fullName ?? 'PG',
                 role: user?.role.name,
                 storeCode: activeShift?.storeCode,
+                unreadCount: unread,
+                onBell: () => context.push(AppRoutes.notifications),
                 onLogout: () =>
                     ref.read(authControllerProvider.notifier).logout(),
               ),
@@ -118,12 +122,16 @@ class _Hero extends StatelessWidget {
     required this.name,
     required this.role,
     required this.storeCode,
+    required this.unreadCount,
+    required this.onBell,
     required this.onLogout,
   });
 
   final String name;
   final String? role;
   final String? storeCode;
+  final int unreadCount;
+  final VoidCallback onBell;
   final VoidCallback onLogout;
 
   @override
@@ -208,6 +216,8 @@ class _Hero extends StatelessWidget {
                         ],
                       ),
                     ),
+                    _HeroBell(count: unreadCount, onTap: onBell),
+                    const SizedBox(width: 8),
                     PressScale(
                       onTap: onLogout,
                       child: Container(
@@ -278,6 +288,65 @@ class _Hero extends StatelessWidget {
           ],
         ),
       );
+}
+
+// ─── Hero notification bell (with unread badge) ───────────────────────────
+
+class _HeroBell extends StatelessWidget {
+  const _HeroBell({required this.count, required this.onTap});
+  final int count;
+  final VoidCallback onTap;
+
+  @override
+  Widget build(BuildContext context) {
+    return PressScale(
+      onTap: onTap,
+      child: SizedBox(
+        width: 40,
+        height: 40,
+        child: Stack(
+          clipBehavior: Clip.none,
+          children: [
+            Container(
+              width: 40,
+              height: 40,
+              decoration: BoxDecoration(
+                color: Colors.white.withValues(alpha: 0.22),
+                borderRadius: BorderRadius.circular(13),
+              ),
+              alignment: Alignment.center,
+              child: const Icon(Icons.notifications_rounded,
+                  color: Colors.white, size: 20),
+            ),
+            if (count > 0)
+              Positioned(
+                top: -4,
+                right: -4,
+                child: Container(
+                  constraints: const BoxConstraints(minWidth: 18, minHeight: 18),
+                  padding: const EdgeInsets.symmetric(horizontal: 4),
+                  decoration: BoxDecoration(
+                    color: AppPalette.rose,
+                    borderRadius: BorderRadius.circular(999),
+                    border: Border.all(color: Colors.white, width: 1.5),
+                  ),
+                  alignment: Alignment.center,
+                  child: Text(
+                    count > 99 ? '99+' : '$count',
+                    style: GoogleFonts.plusJakartaSans(
+                      color: Colors.white,
+                      fontSize: 10,
+                      fontWeight: FontWeight.w800,
+                      height: 1.0,
+                    ),
+                  ),
+                ),
+              ),
+          ],
+        ),
+      ),
+    );
+  }
 }
 
 // ─── Ca hôm nay card ──────────────────────────────────────────────────────

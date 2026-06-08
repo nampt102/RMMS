@@ -307,7 +307,7 @@ public sealed class AttendanceHandlerTests
         var (pg, store) = await SeedAsync(db, clock);
         var id = await SeedGpsViolationAsync(db, clock, pg.Id, store.Id);
 
-        var result = await new ReviewAttendanceCommandHandler(db, audit, clock)
+        var result = await new ReviewAttendanceCommandHandler(db, audit, clock, new FakeNotificationService())
             .Handle(new ReviewAttendanceCommand(id, Guid.NewGuid(), Approve: true, "OK on review"), default);
 
         result.IsSuccess.Should().BeTrue();
@@ -323,7 +323,7 @@ public sealed class AttendanceHandlerTests
         var (pg, store) = await SeedAsync(db, clock);
         var id = await SeedGpsViolationAsync(db, clock, pg.Id, store.Id);
 
-        var result = await new ReviewAttendanceCommandHandler(db, new InMemoryAuditLogger(), clock)
+        var result = await new ReviewAttendanceCommandHandler(db, new InMemoryAuditLogger(), clock, new FakeNotificationService())
             .Handle(new ReviewAttendanceCommand(id, Guid.NewGuid(), Approve: false, "Not the right place"), default);
 
         result.IsSuccess.Should().BeTrue();
@@ -339,7 +339,7 @@ public sealed class AttendanceHandlerTests
         await SeedApprovedShiftAsync(db, clock, pg.Id, store.Id, OnTimeStart, OnTimeEnd);
         var id = await CheckInOnceAsync(db, clock, pg.Id, store.Id); // status Valid → not reviewable
 
-        var result = await new ReviewAttendanceCommandHandler(db, new InMemoryAuditLogger(), clock)
+        var result = await new ReviewAttendanceCommandHandler(db, new InMemoryAuditLogger(), clock, new FakeNotificationService())
             .Handle(new ReviewAttendanceCommand(id, Guid.NewGuid(), Approve: true, null), default);
 
         result.IsFailure.Should().BeTrue();

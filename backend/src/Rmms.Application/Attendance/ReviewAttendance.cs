@@ -35,12 +35,14 @@ internal sealed class ReviewAttendanceCommandHandler : IRequestHandler<ReviewAtt
     private readonly IAppDbContext _db;
     private readonly IAuditLogger _audit;
     private readonly IDateTimeProvider _clock;
+    private readonly INotificationService _notifier;
 
-    public ReviewAttendanceCommandHandler(IAppDbContext db, IAuditLogger audit, IDateTimeProvider clock)
+    public ReviewAttendanceCommandHandler(IAppDbContext db, IAuditLogger audit, IDateTimeProvider clock, INotificationService notifier)
     {
         _db = db;
         _audit = audit;
         _clock = clock;
+        _notifier = notifier;
     }
 
     public async ValueTask<Result> Handle(ReviewAttendanceCommand command, CancellationToken ct)
@@ -68,6 +70,34 @@ internal sealed class ReviewAttendanceCommandHandler : IRequestHandler<ReviewAtt
         await _audit.RecordAsync(
             AuditAction.AttendanceReviewed, "attendance", record.Id,
             new { reviewer = command.ReviewerUserId, decision = command.Approve ? "approved" : "rejected", note = command.Note }, ct);
+
+        // CR-2: notify the PG of the review decision (in-app + push).
+        var data = new Dictionary<string, string>
+        {
+            ["deepLink"] = $"rmms://attendance/{record.Id}",
+            ["entityType"] = "attendance",
+            ["entityId"] = record.Id.ToString(),
+        };
+        var spec = command.Approve
+            ? new NotificationSpec(
+                NotificationType.RequestApproved,
+                TitleVi: "Chấm công đã được duyệt",
+                TitleEn: "Attendance approved",
+                BodyVi: "Lượt chấm công chờ duyệt của bạn đã được chấp nhận.",
+                BodyEn: "Your attendance under review has been approved.",
+                Data: data, Push: true, Email: false)
+            : new NotificationSpec(
+                NotificationType.RequestRejected,
+                TitleVi: "Chấm công bị từ chối",
+                TitleEn: "Attendance rejected",
+                BodyVi: string.IsNullOrWhiteSpace(command.Note)
+                    ? "Lượt chấm công chờ duyệt của bạn đã bị từ chối."
+                    : $"Lượt chấm công của bạn bị từ chối. Lý do: {command.Note!.Trim()}",
+                BodyEn: string.IsNullOrWhiteSpace(command.Note)
+                    ? "Your attendance under review was rejected."
+                    : $"Your attendance was rejected. Reason: {command.Note!.Trim()}",
+                Data: data, Push: true, Email: false);
+        await _notifier.NotifyAsync(record.UserId, spec, ct);
 
         await _db.SaveChangesAsync(ct);
         return Result.Success();

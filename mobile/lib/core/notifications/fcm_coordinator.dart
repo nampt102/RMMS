@@ -4,6 +4,8 @@ import 'package:firebase_messaging/firebase_messaging.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
+import '../../features/notifications/data/notifications_repository.dart';
+import '../router/app_router.dart';
 import 'fcm_service.dart';
 import 'in_app_notification.dart';
 
@@ -18,6 +20,9 @@ class FcmMessageKeys {
   static const String typeDeviceChanged = 'device_changed';
   static const String statusApproved = 'approved';
   static const String statusRejected = 'rejected';
+
+  /// M14 push payloads carry a deep link (e.g. rmms://approvals/123).
+  static const String deepLink = 'deepLink';
 }
 
 /// Wires [FcmService] streams into app state:
@@ -42,17 +47,18 @@ class FcmCoordinator {
     await _service.initialize();
     await _service.requestPermission();
 
+    // Foreground: show an in-app banner, do not auto-navigate (no user tap).
     _subs.add(_service.onForegroundMessage
-        .listen((m) => _handle(m, showBanner: true)));
+        .listen((m) => _handle(m, showBanner: true, navigate: false)));
+    // Tapped from tray (warm start): follow the deep link.
     _subs.add(_service.onMessageOpenedApp
-        .listen((m) => _handle(m, showBanner: true)));
-    _subs.add(_service.onTokenRefresh.listen(
-      (t) => debugPrint('FcmCoordinator: token refreshed (re-register in M14)'),
-    ));
+        .listen((m) => _handle(m, showBanner: false, navigate: true)));
+    // M14: re-register a rotated FCM token with the active device (best-effort).
+    _subs.add(_service.onTokenRefresh.listen(_registerToken));
 
-    // A notification tap that cold-started the app.
+    // A notification tap that cold-started the app: follow the deep link.
     final initial = await _service.initialMessage();
-    if (initial != null) _handle(initial, showBanner: false);
+    if (initial != null) _handle(initial, showBanner: false, navigate: true);
 
     _ref.onDispose(() {
       for (final s in _subs) {
@@ -61,7 +67,31 @@ class FcmCoordinator {
     });
   }
 
-  void _handle(RemoteMessage message, {required bool showBanner}) {
+  Future<void> _registerToken(String token) async {
+    if (token.isEmpty) return;
+    try {
+      await _ref.read(notificationsRepositoryProvider).registerFcmToken(token);
+    } catch (e) {
+      // Not signed in / no active device yet — ignore; login re-sends the token.
+      debugPrint('FcmCoordinator: fcm-token register skipped ($e)');
+    }
+  }
+
+  /// Map a server deep link (rmms://host/id) to an in-app route. Unknown → null.
+  static String? _routeForDeepLink(String? deepLink) {
+    if (deepLink == null || deepLink.isEmpty) return null;
+    final uri = Uri.tryParse(deepLink);
+    if (uri == null) return null;
+    return switch (uri.host) {
+      'approvals' => AppRoutes.approvals,
+      'requests' => AppRoutes.requests,
+      'schedules' => AppRoutes.schedule,
+      'attendance' => AppRoutes.attendance,
+      _ => null,
+    };
+  }
+
+  void _handle(RemoteMessage message, {required bool showBanner, required bool navigate}) {
     final data = message.data;
 
     if (data[FcmMessageKeys.type] == FcmMessageKeys.typeDeviceChanged) {
@@ -71,6 +101,14 @@ class FcmCoordinator {
         approval.set(DeviceApprovalOutcome.approved);
       } else if (status == FcmMessageKeys.statusRejected) {
         approval.set(DeviceApprovalOutcome.rejected);
+      }
+    }
+
+    // A notification tap (opened/initial) with a deep link → navigate.
+    if (navigate) {
+      final route = _routeForDeepLink(data[FcmMessageKeys.deepLink] as String?);
+      if (route != null) {
+        _ref.read(appRouterProvider).push(route);
       }
     }
 

@@ -338,5 +338,8 @@
   "storeStatusActive": "Active",
   "storeStatusInactive": "Inactive",
   "storeCodeLabel": "Code {code}",
-  "@storeCodeLabel": { "placeholders": { "code": { "type": "String" } } }
+  "@storeCodeLabel": { "placeholders": { "code": { "type": "String" } } },
+  "notifTitle": "Notifications",
+  "notifMarkAll": "Mark all read",
+  "notifEmpty": "No notifications yet."
 }

@@ -339,5 +339,8 @@
   "storeStatusActive": "Đang hoạt động",
   "storeStatusInactive": "Ngưng hoạt động",
   "storeCodeLabel": "Mã {code}",
-  "@storeCodeLabel": { "placeholders": { "code": { "type": "String" } } }
+  "@storeCodeLabel": { "placeholders": { "code": { "type": "String" } } },
+  "notifTitle": "Thông báo",
+  "notifMarkAll": "Đọc tất cả",
+  "notifEmpty": "Chưa có thông báo nào."
 }
