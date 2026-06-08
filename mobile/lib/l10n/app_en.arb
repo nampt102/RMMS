@@ -277,5 +277,18 @@
   "profileNotifications": "Notifications",
   "profileChangePassword": "Change password",
   "profileHelp": "Help & support",
-  "profileLogout": "Sign out"
+  "profileLogout": "Sign out",
+  "loginWelcomeLine1": "Welcome",
+  "loginWelcomeLine2": "back 👋",
+  "loginSubtitle": "Sign in to start your shift.",
+  "homeGreetingMorning": "Good morning 👋",
+  "homeGreetingAfternoon": "Good afternoon 👋",
+  "homeGreetingEvening": "Good evening 👋",
+  "homeShiftEyebrow": "TODAY'S SHIFT · {time}",
+  "@homeShiftEyebrow": { "placeholders": { "time": { "type": "String" } } },
+  "homeShiftNotChecked": "Not checked in",
+  "homeShiftActive": "On shift",
+  "homeQuickAssignment": "Assignment",
+  "homeQuickHistory": "History",
+  "homeQuickFace": "Face"
 }

@@ -278,5 +278,18 @@
   "profileNotifications": "Thông báo",
   "profileChangePassword": "Đổi mật khẩu",
   "profileHelp": "Trợ giúp & hỗ trợ",
-  "profileLogout": "Đăng xuất"
+  "profileLogout": "Đăng xuất",
+  "loginWelcomeLine1": "Chào mừng",
+  "loginWelcomeLine2": "trở lại 👋",
+  "loginSubtitle": "Đăng nhập để bắt đầu ca làm việc của bạn.",
+  "homeGreetingMorning": "Chào buổi sáng 👋",
+  "homeGreetingAfternoon": "Chào buổi chiều 👋",
+  "homeGreetingEvening": "Chào buổi tối 👋",
+  "homeShiftEyebrow": "CA HÔM NAY · {time}",
+  "@homeShiftEyebrow": { "placeholders": { "time": { "type": "String" } } },
+  "homeShiftNotChecked": "Chưa chấm công",
+  "homeShiftActive": "Đang trong ca",
+  "homeQuickAssignment": "Phân công",
+  "homeQuickHistory": "Lịch sử",
+  "homeQuickFace": "Khuôn mặt"
 }
