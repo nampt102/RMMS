@@ -140,7 +140,7 @@ class _NotificationCard extends ConsumerWidget {
           }
         }
         final route = _routeForDeepLink(item.data?['deepLink']);
-        if (route != null && context.mounted) context.push(route);
+        if (route != null && context.mounted) await context.push(route);
       },
       child: Row(
         crossAxisAlignment: CrossAxisAlignment.start,
