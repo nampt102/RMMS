@@ -1,8 +1,11 @@
 using Microsoft.EntityFrameworkCore;
+using Rmms.Application.Common;
+using Rmms.Application.Common.Abstractions;
 using Rmms.Application.Common.Interfaces;
 using Rmms.Domain.Approvals;
 using Rmms.Domain.Enums;
 using Rmms.Domain.LeaveOt;
+using Rmms.Domain.Notifications;
 using Rmms.Domain.Scheduling;
 
 namespace Rmms.Application.Approvals;
@@ -15,9 +18,13 @@ namespace Rmms.Application.Approvals;
 /// </summary>
 internal static class ApprovalActuation
 {
-    /// <summary>M09 → entity: apply an approval decision to the linked request/schedule.</summary>
+    /// <summary>
+    /// M09 → entity: apply an approval decision to the linked request/schedule, then notify
+    /// the requester (CR-2: schedule/leave/OT approved or rejected → in-app + push + email, CR-3).
+    /// The in-app row is added to the same unit of work; push/email are best-effort.
+    /// </summary>
     public static async Task ApplyDecisionAsync(
-        IAppDbContext db, Approval approval, bool approve, string? reason, Guid actorId, DateTimeOffset now, CancellationToken ct)
+        IAppDbContext db, INotificationService notifier, Approval approval, bool approve, string? reason, Guid actorId, DateTimeOffset now, CancellationToken ct)
     {
         switch (approval.EntityType)
         {
@@ -41,6 +48,53 @@ internal static class ApprovalActuation
                 }
                 break;
         }
+
+        await notifier.NotifyAsync(approval.RequesterId, BuildDecisionSpec(approval.EntityType, approval.EntityId, approve, reason), ct);
+    }
+
+    /// <summary>
+    /// Bilingual "your request was approved/rejected" notification (CR-2/CR-3). Public so the
+    /// M07 schedule-decision surface can reuse it when a decision is made there directly.
+    /// </summary>
+    public static NotificationSpec BuildDecisionSpec(ApprovalEntityType entityType, Guid entityId, bool approve, string? reason)
+    {
+        var (kindVi, kindEn) = entityType switch
+        {
+            ApprovalEntityType.WorkSchedule => ("Lịch làm việc", "Work schedule"),
+            ApprovalEntityType.LeaveRequest => ("Đơn nghỉ phép", "Leave request"),
+            ApprovalEntityType.OtRequest => ("Đơn tăng ca", "OT request"),
+            _ => ("Yêu cầu", "Request"),
+        };
+        var deepLink = entityType == ApprovalEntityType.WorkSchedule
+            ? $"rmms://schedules/{entityId}"
+            : $"rmms://requests/{entityId}";
+
+        var data = new Dictionary<string, string>
+        {
+            ["deepLink"] = deepLink,
+            ["entityType"] = entityType.ToSnakeCase(),
+            ["entityId"] = entityId.ToString(),
+        };
+
+        if (approve)
+        {
+            return new NotificationSpec(
+                NotificationType.RequestApproved,
+                TitleVi: $"{kindVi} đã được duyệt",
+                TitleEn: $"{kindEn} approved",
+                BodyVi: $"{kindVi} của bạn đã được phê duyệt.",
+                BodyEn: $"Your {kindEn.ToLowerInvariant()} has been approved.",
+                Data: data, Push: true, Email: true);
+        }
+
+        var why = string.IsNullOrWhiteSpace(reason) ? null : reason.Trim();
+        return new NotificationSpec(
+            NotificationType.RequestRejected,
+            TitleVi: $"{kindVi} bị từ chối",
+            TitleEn: $"{kindEn} rejected",
+            BodyVi: why is null ? $"{kindVi} của bạn đã bị từ chối." : $"{kindVi} của bạn đã bị từ chối. Lý do: {why}",
+            BodyEn: why is null ? $"Your {kindEn.ToLowerInvariant()} was rejected." : $"Your {kindEn.ToLowerInvariant()} was rejected. Reason: {why}",
+            Data: data, Push: true, Email: true);
     }
 
     private static async Task ApplyToScheduleAsync(

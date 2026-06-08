@@ -71,13 +71,15 @@ internal sealed class EmailActionConfirmCommandHandler
     private readonly IApprovalTokenService _tokens;
     private readonly IAuditLogger _audit;
     private readonly IDateTimeProvider _clock;
+    private readonly INotificationService _notifier;
 
-    public EmailActionConfirmCommandHandler(IAppDbContext db, IApprovalTokenService tokens, IAuditLogger audit, IDateTimeProvider clock)
+    public EmailActionConfirmCommandHandler(IAppDbContext db, IApprovalTokenService tokens, IAuditLogger audit, IDateTimeProvider clock, INotificationService notifier)
     {
         _db = db;
         _tokens = tokens;
         _audit = audit;
         _clock = clock;
+        _notifier = notifier;
     }
 
     public async ValueTask<Result<EmailActionResultDto>> Handle(EmailActionConfirmCommand command, CancellationToken ct)
@@ -113,12 +115,12 @@ internal sealed class EmailActionConfirmCommandHandler
             if (string.IsNullOrWhiteSpace(command.Reason))
                 return Fail(Error.Validation(ErrorCodes.RejectReasonRequired, "Vui lòng nhập lý do từ chối."));
             approval.Reject(approval.ApproverId, command.Reason, ApprovalDecisionVia.EmailLink, now);
-            await ApprovalActuation.ApplyDecisionAsync(_db, approval, approve: false, command.Reason, approval.ApproverId, now, ct);
+            await ApprovalActuation.ApplyDecisionAsync(_db, _notifier, approval, approve: false, command.Reason, approval.ApproverId, now, ct);
         }
         else
         {
             approval.Approve(approval.ApproverId, ApprovalDecisionVia.EmailLink, now);
-            await ApprovalActuation.ApplyDecisionAsync(_db, approval, approve: true, reason: null, approval.ApproverId, now, ct);
+            await ApprovalActuation.ApplyDecisionAsync(_db, _notifier, approval, approve: true, reason: null, approval.ApproverId, now, ct);
         }
 
         row.MarkUsed(now, command.Ip, command.UserAgent);

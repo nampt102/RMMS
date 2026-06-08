@@ -1,5 +1,6 @@
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Options;
+using Rmms.Application.Common;
 using Rmms.Application.Common.Abstractions;
 using Rmms.Application.Common.Interfaces;
 using Rmms.Application.Common.Options;
@@ -19,6 +20,7 @@ internal sealed class ApprovalService : IApprovalService
     private readonly IAppDbContext _db;
     private readonly IApprovalTokenService _tokens;
     private readonly IEmailSender _email;
+    private readonly INotificationService _notifier;
     private readonly IDateTimeProvider _clock;
     private readonly ApprovalOptions _approvalOptions;
     private readonly AppUrlOptions _appUrl;
@@ -27,6 +29,7 @@ internal sealed class ApprovalService : IApprovalService
         IAppDbContext db,
         IApprovalTokenService tokens,
         IEmailSender email,
+        INotificationService notifier,
         IDateTimeProvider clock,
         IOptions<ApprovalOptions> approvalOptions,
         IOptions<AppUrlOptions> appUrl)
@@ -34,6 +37,7 @@ internal sealed class ApprovalService : IApprovalService
         _db = db;
         _tokens = tokens;
         _email = email;
+        _notifier = notifier;
         _clock = clock;
         _approvalOptions = approvalOptions.Value;
         _appUrl = appUrl.Value;
@@ -65,6 +69,31 @@ internal sealed class ApprovalService : IApprovalService
                 await _email.SendAsync(BuildEmail(approver.Email, approver.FullName, approver.PreferredLanguage, link), ct);
             }
         }
+
+        // CR-2/CR-3: notify the approver a request is awaiting their decision (in-app + push).
+        // BUH additionally got the actionable email link above, so we don't re-send email here.
+        var (kindVi, kindEn) = entityType switch
+        {
+            ApprovalEntityType.WorkSchedule => ("lịch làm việc", "work schedule"),
+            ApprovalEntityType.LeaveRequest => ("đơn nghỉ phép", "leave request"),
+            ApprovalEntityType.OtRequest => ("đơn tăng ca", "OT request"),
+            _ => ("yêu cầu", "request"),
+        };
+        await _notifier.NotifyAsync(approverId, new NotificationSpec(
+            NotificationType.ApprovalNeeded,
+            TitleVi: "Yêu cầu cần phê duyệt",
+            TitleEn: "Approval needed",
+            BodyVi: $"Bạn có một {kindVi} đang chờ bạn phê duyệt.",
+            BodyEn: $"You have a {kindEn} awaiting your approval.",
+            Data: new Dictionary<string, string>
+            {
+                ["deepLink"] = $"rmms://approvals/{approval.Id}",
+                ["entityType"] = entityType.ToSnakeCase(),
+                ["entityId"] = entityId.ToString(),
+                ["approvalId"] = approval.Id.ToString(),
+            },
+            Push: true,
+            Email: false), ct);
 
         return approval.Id;
     }

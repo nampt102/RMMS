@@ -38,7 +38,7 @@ public sealed class ApprovalHandlerTests
         var a = SeedPending(db, Guid.NewGuid(), approverId);
         await db.SaveChangesAsync();
 
-        var result = await new ApproveApprovalCommandHandler(db, audit, clock)
+        var result = await new ApproveApprovalCommandHandler(db, audit, clock, new FakeNotificationService())
             .Handle(new ApproveApprovalCommand(a.Id, approverId, ApprovalDecisionVia.App), default);
 
         result.IsSuccess.Should().BeTrue();
@@ -53,7 +53,7 @@ public sealed class ApprovalHandlerTests
         var a = SeedPending(db, Guid.NewGuid(), Guid.NewGuid());
         await db.SaveChangesAsync();
 
-        var result = await new ApproveApprovalCommandHandler(db, new InMemoryAuditLogger(), new TestClock())
+        var result = await new ApproveApprovalCommandHandler(db, new InMemoryAuditLogger(), new TestClock(), new FakeNotificationService())
             .Handle(new ApproveApprovalCommand(a.Id, Guid.NewGuid(), ApprovalDecisionVia.App), default);
 
         result.IsFailure.Should().BeTrue();
@@ -70,7 +70,7 @@ public sealed class ApprovalHandlerTests
         a.Approve(approverId, ApprovalDecisionVia.App, clock.UtcNow);
         await db.SaveChangesAsync();
 
-        var result = await new ApproveApprovalCommandHandler(db, new InMemoryAuditLogger(), clock)
+        var result = await new ApproveApprovalCommandHandler(db, new InMemoryAuditLogger(), clock, new FakeNotificationService())
             .Handle(new ApproveApprovalCommand(a.Id, approverId, ApprovalDecisionVia.App), default);
 
         result.IsFailure.Should().BeTrue();
@@ -85,7 +85,7 @@ public sealed class ApprovalHandlerTests
         var a = SeedPending(db, Guid.NewGuid(), approverId);
         await db.SaveChangesAsync();
 
-        var result = await new RejectApprovalCommandHandler(db, new InMemoryAuditLogger(), new TestClock())
+        var result = await new RejectApprovalCommandHandler(db, new InMemoryAuditLogger(), new TestClock(), new FakeNotificationService())
             .Handle(new RejectApprovalCommand(a.Id, approverId, "  ", ApprovalDecisionVia.App), default);
 
         result.IsFailure.Should().BeTrue();
@@ -100,7 +100,7 @@ public sealed class ApprovalHandlerTests
         var a = SeedPending(db, Guid.NewGuid(), approverId);
         await db.SaveChangesAsync();
 
-        var result = await new RejectApprovalCommandHandler(db, new InMemoryAuditLogger(), new TestClock())
+        var result = await new RejectApprovalCommandHandler(db, new InMemoryAuditLogger(), new TestClock(), new FakeNotificationService())
             .Handle(new RejectApprovalCommand(a.Id, approverId, "Sai ca", ApprovalDecisionVia.App), default);
 
         result.IsSuccess.Should().BeTrue();
@@ -241,7 +241,7 @@ public sealed class ApprovalHandlerTests
         var tokens = Tokens();
         var (approvalId, token) = await SeedBuhTokenAsync(db, tokens, clock, TimeSpan.FromHours(24));
 
-        var handler = new EmailActionConfirmCommandHandler(db, tokens, new InMemoryAuditLogger(), clock);
+        var handler = new EmailActionConfirmCommandHandler(db, tokens, new InMemoryAuditLogger(), clock, new FakeNotificationService());
         var result = await handler.Handle(new EmailActionConfirmCommand(token, "approve", null, "1.2.3.4", "UA"), default);
 
         result.IsSuccess.Should().BeTrue();
@@ -257,7 +257,7 @@ public sealed class ApprovalHandlerTests
         var clock = new TestClock();
         var tokens = Tokens();
         var (_, token) = await SeedBuhTokenAsync(db, tokens, clock, TimeSpan.FromHours(24));
-        var handler = new EmailActionConfirmCommandHandler(db, tokens, new InMemoryAuditLogger(), clock);
+        var handler = new EmailActionConfirmCommandHandler(db, tokens, new InMemoryAuditLogger(), clock, new FakeNotificationService());
 
         await handler.Handle(new EmailActionConfirmCommand(token, "approve", null, null, null), default);
         var second = await handler.Handle(new EmailActionConfirmCommand(token, "approve", null, null, null), default);
@@ -273,7 +273,7 @@ public sealed class ApprovalHandlerTests
         var clock = new TestClock();
         var tokens = Tokens();
         var (_, token) = await SeedBuhTokenAsync(db, tokens, clock, TimeSpan.FromHours(-1)); // already expired row
-        var handler = new EmailActionConfirmCommandHandler(db, tokens, new InMemoryAuditLogger(), clock);
+        var handler = new EmailActionConfirmCommandHandler(db, tokens, new InMemoryAuditLogger(), clock, new FakeNotificationService());
 
         var result = await handler.Handle(new EmailActionConfirmCommand(token, "approve", null, null, null), default);
 
@@ -322,7 +322,7 @@ public sealed class ApprovalHandlerTests
         db.Approvals.Add(approval);
         await db.SaveChangesAsync();
 
-        var result = await new ApproveApprovalCommandHandler(db, new InMemoryAuditLogger(), clock)
+        var result = await new ApproveApprovalCommandHandler(db, new InMemoryAuditLogger(), clock, new FakeNotificationService())
             .Handle(new ApproveApprovalCommand(approval.Id, leaderId, ApprovalDecisionVia.App), default);
 
         result.IsSuccess.Should().BeTrue();
@@ -342,7 +342,7 @@ public sealed class ApprovalHandlerTests
         db.Approvals.Add(approval);
         await db.SaveChangesAsync();
 
-        var result = await new RejectApprovalCommandHandler(db, new InMemoryAuditLogger(), clock)
+        var result = await new RejectApprovalCommandHandler(db, new InMemoryAuditLogger(), clock, new FakeNotificationService())
             .Handle(new RejectApprovalCommand(approval.Id, leaderId, "Trùng ca", ApprovalDecisionVia.App), default);
 
         result.IsSuccess.Should().BeTrue();
@@ -365,7 +365,7 @@ public sealed class ApprovalHandlerTests
         await db.SaveChangesAsync();
 
         var svc = new ApprovalService(
-            db, tokens, emailSender, clock,
+            db, tokens, emailSender, new FakeNotificationService(), clock,
             Options.Create(new ApprovalOptions { SigningKey = "k", WebApprovalPath = "/approve" }),
             Options.Create(new AppUrlOptions { AppBaseUrl = "http://localhost:3000" }));
 

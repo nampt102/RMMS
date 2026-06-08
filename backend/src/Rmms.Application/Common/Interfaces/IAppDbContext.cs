@@ -2,6 +2,7 @@ using Microsoft.EntityFrameworkCore;
 using Rmms.Domain.Approvals;
 using Rmms.Domain.Audit;
 using Rmms.Domain.LeaveOt;
+using Rmms.Domain.Notifications;
 using Rmms.Domain.Auth;
 using Rmms.Domain.Devices;
 using Rmms.Domain.Attendance;
@@ -49,6 +50,9 @@ public interface IAppDbContext
 
     // ----- M05 Attendance -----
     DbSet<AttendanceRecord> AttendanceRecords { get; }
+
+    // ----- M14 Notification -----
+    DbSet<Notification> Notifications { get; }
 
     // ----- Cross-cutting -----
     DbSet<AuditLog> AuditLogs { get; }

@@ -19,12 +19,14 @@ internal sealed class ApproveScheduleCommandHandler : IRequestHandler<ApproveSch
     private readonly IAppDbContext _db;
     private readonly IAuditLogger _audit;
     private readonly IDateTimeProvider _clock;
+    private readonly INotificationService _notifier;
 
-    public ApproveScheduleCommandHandler(IAppDbContext db, IAuditLogger audit, IDateTimeProvider clock)
+    public ApproveScheduleCommandHandler(IAppDbContext db, IAuditLogger audit, IDateTimeProvider clock, INotificationService notifier)
     {
         _db = db;
         _audit = audit;
         _clock = clock;
+        _notifier = notifier;
     }
 
     public async ValueTask<Result> Handle(ApproveScheduleCommand command, CancellationToken ct)
@@ -55,6 +57,9 @@ internal sealed class ApproveScheduleCommandHandler : IRequestHandler<ApproveSch
         schedule.Approve(command.ApproverUserId, now);
         // Keep the linked M09 approval (if any) in sync so its queue clears.
         await ApprovalActuation.SyncScheduleApprovalAsync(_db, schedule.Id, approve: true, null, command.ApproverUserId, ApprovalDecisionVia.Web, now, ct);
+        // CR-2/CR-3: notify the PG their schedule was approved.
+        await _notifier.NotifyAsync(schedule.UserId,
+            ApprovalActuation.BuildDecisionSpec(ApprovalEntityType.WorkSchedule, schedule.Id, approve: true, null), ct);
 
         await _audit.RecordAsync(
             AuditAction.ScheduleApproved, "work_schedule", schedule.Id,
@@ -95,12 +100,14 @@ internal sealed class RejectScheduleCommandHandler : IRequestHandler<RejectSched
     private readonly IAppDbContext _db;
     private readonly IAuditLogger _audit;
     private readonly IDateTimeProvider _clock;
+    private readonly INotificationService _notifier;
 
-    public RejectScheduleCommandHandler(IAppDbContext db, IAuditLogger audit, IDateTimeProvider clock)
+    public RejectScheduleCommandHandler(IAppDbContext db, IAuditLogger audit, IDateTimeProvider clock, INotificationService notifier)
     {
         _db = db;
         _audit = audit;
         _clock = clock;
+        _notifier = notifier;
     }
 
     public async ValueTask<Result> Handle(RejectScheduleCommand command, CancellationToken ct)
@@ -124,6 +131,9 @@ internal sealed class RejectScheduleCommandHandler : IRequestHandler<RejectSched
         var now = _clock.UtcNow;
         schedule.Reject(command.ApproverUserId, command.Reason, now);
         await ApprovalActuation.SyncScheduleApprovalAsync(_db, schedule.Id, approve: false, command.Reason, command.ApproverUserId, ApprovalDecisionVia.Web, now, ct);
+        // CR-2/CR-3: notify the PG their schedule was rejected (with reason).
+        await _notifier.NotifyAsync(schedule.UserId,
+            ApprovalActuation.BuildDecisionSpec(ApprovalEntityType.WorkSchedule, schedule.Id, approve: false, command.Reason), ct);
 
         await _audit.RecordAsync(
             AuditAction.ScheduleRejected, "work_schedule", schedule.Id,

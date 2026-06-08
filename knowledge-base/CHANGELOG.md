@@ -6,6 +6,17 @@ Append-only chronological log of significant project milestones, decisions, and 
 
 ---
 
+## 2026-06-08 — Mobile Redesign 2026 + design-system docs
+
+**By:** Mobile lead (MotivesVN IT), AI-assisted
+
+**Status:** ✅ Documented. Mobile code-only (Mac verifies); web untouched.
+
+- **Redesign 2026** rolled out across mobile screens (Login, Home, Schedule, Register, Requests/Leave-OT, Attendance, Face, History, Assignment): indigo→violet brand, mesh-gradient heroes, bento cards (r26–28), Space Grotesk (display) + Plus Jakarta Sans (body), soft layered shadows, transform-only micro-motion.
+- New canonical design-system kit `lib/core/widgets/app_widgets.dart` (AppChip / AppIconTile / AppCard / AppButton / AppTopBar / AppSheet / AppToast / AppBottomNav + FAB / AppRiseIn / SectionEyebrow / PressScale); tokens in `lib/core/theme/{app_palette,app_theme}.dart` (`AppSemantics` ThemeExtension, light+dark).
+- **Docs:** added `09-mobile-design-system.md` (source of truth for mobile UI) + **ADR-012** (visual language + `google_fonts ^6.2.1`, the only UI package added).
+- **Deferred:** migrate `approvals_screen.dart` + `team_monitoring_screen.dart` off legacy `brand_widgets.dart` onto the new kit when next touched.
+
 ## 2026-06-07 — Sprint 08 closed: M12/M16 web + mobile
 
 **By:** Tech lead (MotivesVN IT), AI-assisted

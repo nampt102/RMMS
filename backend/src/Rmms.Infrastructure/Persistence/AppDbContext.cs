@@ -3,6 +3,7 @@ using Rmms.Application.Common.Interfaces;
 using Rmms.Domain.Approvals;
 using Rmms.Domain.Audit;
 using Rmms.Domain.LeaveOt;
+using Rmms.Domain.Notifications;
 using Rmms.Domain.Auth;
 using Rmms.Domain.Devices;
 using Rmms.Domain.Attendance;
@@ -52,6 +53,9 @@ public sealed class AppDbContext : DbContext, IAppDbContext
 
     // ----- M05 Attendance -----
     public DbSet<AttendanceRecord> AttendanceRecords => Set<AttendanceRecord>();
+
+    // ----- M14 Notification -----
+    public DbSet<Notification> Notifications => Set<Notification>();
 
     // ----- Cross-cutting -----
     public DbSet<AuditLog> AuditLogs => Set<AuditLog>();

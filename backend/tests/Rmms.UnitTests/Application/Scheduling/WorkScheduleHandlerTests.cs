@@ -188,7 +188,7 @@ public sealed class WorkScheduleHandlerTests
         var create = await new CreateScheduleCommandHandler(db, new InMemoryAuditLogger(), clock)
             .Handle(new CreateScheduleCommand(pg.Id, new[] { Day(Future(clock), store.Id) }), default);
         var oldId = create.Value[0];
-        await new ApproveScheduleCommandHandler(db, new InMemoryAuditLogger(), clock)
+        await new ApproveScheduleCommandHandler(db, new InMemoryAuditLogger(), clock, new FakeNotificationService())
             .Handle(new ApproveScheduleCommand(oldId, Guid.NewGuid(), true), default);
 
         var newShifts = new[] { new ScheduleShiftRequest(store.Id, new TimeOnly(9, 0), new TimeOnly(18, 0)) };
@@ -214,14 +214,14 @@ public sealed class WorkScheduleHandlerTests
         var create = await new CreateScheduleCommandHandler(db, new InMemoryAuditLogger(), clock)
             .Handle(new CreateScheduleCommand(pg.Id, new[] { Day(Future(clock), store.Id) }), default);
         var oldId = create.Value[0];
-        await new ApproveScheduleCommandHandler(db, new InMemoryAuditLogger(), clock)
+        await new ApproveScheduleCommandHandler(db, new InMemoryAuditLogger(), clock, new FakeNotificationService())
             .Handle(new ApproveScheduleCommand(oldId, Guid.NewGuid(), true), default);
         var edit = await new EditScheduleCommandHandler(db, new InMemoryAuditLogger(), clock)
             .Handle(new EditScheduleCommand(oldId, pg.Id,
                 new[] { new ScheduleShiftRequest(store.Id, new TimeOnly(9, 0), new TimeOnly(18, 0)) }), default);
         var newId = edit.Value;
 
-        var result = await new ApproveScheduleCommandHandler(db, new InMemoryAuditLogger(), clock)
+        var result = await new ApproveScheduleCommandHandler(db, new InMemoryAuditLogger(), clock, new FakeNotificationService())
             .Handle(new ApproveScheduleCommand(newId, Guid.NewGuid(), true), default);
 
         result.IsSuccess.Should().BeTrue();
@@ -264,7 +264,7 @@ public sealed class WorkScheduleHandlerTests
             .Handle(new CreateScheduleCommand(pg.Id, new[] { Day(Future(clock), store.Id) }), default);
         var id = create.Value[0];
 
-        var result = await new ApproveScheduleCommandHandler(db, new InMemoryAuditLogger(), clock)
+        var result = await new ApproveScheduleCommandHandler(db, new InMemoryAuditLogger(), clock, new FakeNotificationService())
             .Handle(new ApproveScheduleCommand(id, otherLeader.Id, false), default);
 
         result.IsFailure.Should().BeTrue();
@@ -286,7 +286,7 @@ public sealed class WorkScheduleHandlerTests
             .Handle(new CreateScheduleCommand(pg.Id, new[] { Day(Future(clock), store.Id) }), default);
         var id = create.Value[0];
 
-        var result = await new ApproveScheduleCommandHandler(db, new InMemoryAuditLogger(), clock)
+        var result = await new ApproveScheduleCommandHandler(db, new InMemoryAuditLogger(), clock, new FakeNotificationService())
             .Handle(new ApproveScheduleCommand(id, leader.Id, false), default);
 
         result.IsSuccess.Should().BeTrue();
@@ -303,7 +303,7 @@ public sealed class WorkScheduleHandlerTests
             .Handle(new CreateScheduleCommand(pg.Id, new[] { Day(Future(clock), store.Id) }), default);
         var id = create.Value[0];
 
-        var result = await new RejectScheduleCommandHandler(db, new InMemoryAuditLogger(), clock)
+        var result = await new RejectScheduleCommandHandler(db, new InMemoryAuditLogger(), clock, new FakeNotificationService())
             .Handle(new RejectScheduleCommand(id, Guid.NewGuid(), true, "Sai ca"), default);
 
         result.IsSuccess.Should().BeTrue();

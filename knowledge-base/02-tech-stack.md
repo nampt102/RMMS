@@ -150,6 +150,11 @@ web-admin/
 
 ## Mobile Stack — Detailed
 
+> **Mobile UI/design system:** Material 3 + custom **Redesign 2026** kit & tokens
+> (`google_fonts` for Space Grotesk + Plus Jakarta Sans). See
+> [`09-mobile-design-system.md`](09-mobile-design-system.md) and **ADR-012** —
+> the source of truth for mobile visual language. No other UI packages without an ADR.
+
 ### Why Flutter?
 - Single codebase iOS + Android
 - Performance close to native

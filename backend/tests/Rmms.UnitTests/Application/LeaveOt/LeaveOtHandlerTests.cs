@@ -80,7 +80,7 @@ public sealed class LeaveOtHandlerTests
         db.Approvals.Add(approval);
         await db.SaveChangesAsync();
 
-        var result = await new ApproveApprovalCommandHandler(db, new InMemoryAuditLogger(), clock)
+        var result = await new ApproveApprovalCommandHandler(db, new InMemoryAuditLogger(), clock, new FakeNotificationService())
             .Handle(new ApproveApprovalCommand(approval.Id, leaderId, ApprovalDecisionVia.App), default);
 
         result.IsSuccess.Should().BeTrue();
@@ -100,7 +100,7 @@ public sealed class LeaveOtHandlerTests
         db.Approvals.Add(approval);
         await db.SaveChangesAsync();
 
-        var result = await new RejectApprovalCommandHandler(db, new InMemoryAuditLogger(), clock)
+        var result = await new RejectApprovalCommandHandler(db, new InMemoryAuditLogger(), clock, new FakeNotificationService())
             .Handle(new RejectApprovalCommand(approval.Id, leaderId, "Không cần OT", ApprovalDecisionVia.App), default);
 
         result.IsSuccess.Should().BeTrue();

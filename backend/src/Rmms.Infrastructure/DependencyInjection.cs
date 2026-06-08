@@ -88,6 +88,19 @@ public static class DependencyInjection
         services.AddSingleton<IApprovalTokenService, Approvals.ApprovalTokenService>();
         services.AddScoped<IApprovalService, Approvals.ApprovalService>();
 
+        // ----- M14 Notification (basic: in-app + push + email) -----
+        // Push provider: logging by default (Phase 1A, no Firebase credential needed);
+        // swap to a real FCM HTTP v1 sender in Phase 1B via Push:Provider=fcm.
+        var pushProvider = config.GetSection("Push")["Provider"]?.ToLowerInvariant() ?? "console";
+        switch (pushProvider)
+        {
+            // case "fcm": services.AddScoped<IPushSender, Notifications.FcmPushSender>(); break; // 1B
+            default:
+                services.AddScoped<IPushSender, Notifications.LoggingPushSender>();
+                break;
+        }
+        services.AddScoped<INotificationService, Notifications.NotificationService>();
+
         // ----- Audit (CR-1) -----
         services.AddScoped<IAuditLogger, DbAuditLogger>();
 
