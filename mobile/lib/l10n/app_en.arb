@@ -290,5 +290,15 @@
   "homeShiftActive": "On shift",
   "homeQuickAssignment": "Assignment",
   "homeQuickHistory": "History",
-  "homeQuickFace": "Face"
+  "homeQuickFace": "Face",
+  "scheduleStatWeek": "Shifts this week",
+  "scheduleStatHours": "Total hours",
+  "scheduleStatPending": "Pending",
+  "scheduleStatusDraft": "Draft",
+  "scheduleRegisterCompact": "Register",
+  "registerDaysHint": "{count} days will be created",
+  "@registerDaysHint": { "placeholders": { "count": { "type": "int" } } },
+  "registerRemoveShift": "Remove shift",
+  "registerShiftLabel": "Shift {n}",
+  "@registerShiftLabel": { "placeholders": { "n": { "type": "int" } } }
 }

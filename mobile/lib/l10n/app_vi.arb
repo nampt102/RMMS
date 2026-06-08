@@ -291,5 +291,15 @@
   "homeShiftActive": "Đang trong ca",
   "homeQuickAssignment": "Phân công",
   "homeQuickHistory": "Lịch sử",
-  "homeQuickFace": "Khuôn mặt"
+  "homeQuickFace": "Khuôn mặt",
+  "scheduleStatWeek": "Ca tuần này",
+  "scheduleStatHours": "Tổng giờ",
+  "scheduleStatPending": "Chờ duyệt",
+  "scheduleStatusDraft": "Nháp",
+  "scheduleRegisterCompact": "Đăng ký",
+  "registerDaysHint": "{count} ngày sẽ được tạo",
+  "@registerDaysHint": { "placeholders": { "count": { "type": "int" } } },
+  "registerRemoveShift": "Xóa ca này",
+  "registerShiftLabel": "Ca {n}",
+  "@registerShiftLabel": { "placeholders": { "n": { "type": "int" } } }
 }
