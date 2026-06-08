@@ -60,9 +60,31 @@ builder.Services
             RoleClaimType = "role",
             NameClaimType = System.IdentityModel.Tokens.Jwt.JwtRegisteredClaimNames.Sub,
         };
+
+        // SignalR websockets can't send an Authorization header — accept the JWT from the
+        // access_token query string on the hub path so the connection authenticates.
+        options.Events = new Microsoft.AspNetCore.Authentication.JwtBearer.JwtBearerEvents
+        {
+            OnMessageReceived = context =>
+            {
+                var accessToken = context.Request.Query["access_token"];
+                var path = context.HttpContext.Request.Path;
+                if (!string.IsNullOrEmpty(accessToken) && path.StartsWithSegments("/hubs"))
+                {
+                    context.Token = accessToken;
+                }
+                return Task.CompletedTask;
+            },
+        };
     });
 
 builder.Services.AddRmmsAuthorization();
+
+// ----- SignalR realtime (M14) — per-user notification channel -----
+builder.Services.AddSignalR();
+builder.Services.AddSingleton<Microsoft.AspNetCore.SignalR.IUserIdProvider, Rmms.Api.Hubs.HubUserIdProvider>();
+// Override the Infrastructure no-op realtime notifier with the SignalR-backed one.
+builder.Services.AddScoped<Rmms.Application.Common.Abstractions.IRealtimeNotifier, Rmms.Api.Hubs.SignalRRealtimeNotifier>();
 
 // ----- CORS -----
 const string CorsPolicy = "RmmsDefault";
@@ -192,6 +214,7 @@ app.UseMiddleware<Rmms.Api.Logging.RequestEnrichmentMiddleware>();
 app.UseMiddleware<IdempotencyMiddleware>();
 
 app.MapControllers();
+app.MapHub<Rmms.Api.Hubs.NotificationsHub>("/hubs/notifications").RequireCors(CorsPolicy);
 app.MapHealthChecks("/health/live");
 app.MapHealthChecks("/health/ready");
 

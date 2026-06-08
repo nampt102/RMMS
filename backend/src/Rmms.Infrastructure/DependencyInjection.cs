@@ -113,6 +113,9 @@ public static class DependencyInjection
         {
             services.AddScoped<IPushSender, Notifications.LoggingPushSender>();
         }
+        // Default realtime notifier is a no-op (Worker / tests). The API host overrides it
+        // with a SignalR-backed implementation after AddInfrastructure (last registration wins).
+        services.AddScoped<IRealtimeNotifier, Notifications.NoOpRealtimeNotifier>();
         services.AddScoped<INotificationService, Notifications.NotificationService>();
 
         // ----- Audit (CR-1) -----

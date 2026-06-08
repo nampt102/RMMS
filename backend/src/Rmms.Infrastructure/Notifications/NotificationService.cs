@@ -1,6 +1,7 @@
 using System.Text.Json;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Logging;
+using Rmms.Application.Common;
 using Rmms.Application.Common.Abstractions;
 using Rmms.Application.Common.Interfaces;
 using Rmms.Domain.Enums;
@@ -21,6 +22,7 @@ internal sealed class NotificationService : INotificationService
     private readonly IAppDbContext _db;
     private readonly IPushSender _push;
     private readonly IEmailSender _email;
+    private readonly IRealtimeNotifier _realtime;
     private readonly IDateTimeProvider _clock;
     private readonly ILogger<NotificationService> _log;
 
@@ -28,12 +30,14 @@ internal sealed class NotificationService : INotificationService
         IAppDbContext db,
         IPushSender push,
         IEmailSender email,
+        IRealtimeNotifier realtime,
         IDateTimeProvider clock,
         ILogger<NotificationService> log)
     {
         _db = db;
         _push = push;
         _email = email;
+        _realtime = realtime;
         _clock = clock;
         _log = log;
     }
@@ -97,6 +101,17 @@ internal sealed class NotificationService : INotificationService
             {
                 _log.LogWarning(ex, "Email notification failed for user {UserId} (type {Type}).", userId, spec.Type);
             }
+        }
+
+        // 4) Best-effort realtime signal (SignalR) — web clients bump the badge + refetch.
+        try
+        {
+            await _realtime.PushNotificationAsync(
+                userId, new RealtimeNotification(spec.Type.ToSnakeCase(), title, body), ct);
+        }
+        catch (Exception ex)
+        {
+            _log.LogWarning(ex, "Realtime notification failed for user {UserId} (type {Type}).", userId, spec.Type);
         }
     }
 }

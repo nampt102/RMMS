@@ -23,7 +23,7 @@ public sealed class NotificationHandlerTests
         Push: push, Email: email);
 
     private static NotificationService Service(AppDbContext db, TestClock clock, FakePushSender push, CapturingEmailSender email) =>
-        new(db, push, email, clock, NullLogger<NotificationService>.Instance);
+        new(db, push, email, new FakeRealtimeNotifier(), clock, NullLogger<NotificationService>.Instance);
 
     // ---------- NotificationService (fan-out) ----------
 

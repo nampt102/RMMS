@@ -6,6 +6,16 @@ Append-only chronological log of significant project milestones, decisions, and 
 
 ---
 
+## 2026-06-08 — M14 backlog: in-review notify + real FCM + SignalR realtime
+
+**By:** Tech lead (MotivesVN IT), AI-assisted
+
+**Status:** ✅ Backend builds; **229 unit tests green**. Web typecheck + lint clean.
+
+- **AttendanceInReview notify (CR-2):** CheckIn/CheckOut notify the PG (in-app only, CR-3) with an `rmms://attendance/{id}` deep link when a record trips anti-fraud into `*_pending_review`. Shared `AttendanceNotifications.InReview` spec. +1 test.
+- **Real FCM push:** `FcmPushSender` (Firebase Admin SDK, HTTP v1) behind `Push:Provider=fcm` (`PushOptions`: `CredentialsPath` or ambient `GOOGLE_APPLICATION_CREDENTIALS`); FirebaseApp initialised once in DI. Default stays `LoggingPushSender` (no creds for Dev/CI). `appsettings.json` documents the `Push` section.
+- **SignalR realtime:** `IRealtimeNotifier` abstraction → `NotificationService` pushes a `"notification"` signal after persisting (best-effort). API host adds `NotificationsHub` (`/hubs/notifications`, JWT via `access_token` query for websockets, per-user routing via `HubUserIdProvider`) + `SignalRRealtimeNotifier`; Worker/tests use a `NoOpRealtimeNotifier`. Web: `@microsoft/signalr` client hook in the admin shell — toast + invalidates approvals/monitoring queries live (web has no FCM). Mobile stays on FCM push.
+
 ## 2026-06-08 — Mobile: offline-bundled fonts + physical-device dev fixes
 
 **By:** Mobile dev (MotivesVN IT)

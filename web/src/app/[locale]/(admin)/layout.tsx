@@ -23,6 +23,7 @@ import Link from "next/link";
 import { usePathname, useRouter } from "next/navigation";
 import { useEffect, useState } from "react";
 import { useAuthStore } from "@/lib/stores/auth-store";
+import { useRealtimeNotifications } from "@/lib/realtime/useRealtimeNotifications";
 
 const { Header, Content, Sider } = Layout;
 const { Text } = Typography;
@@ -51,6 +52,9 @@ export default function AdminLayout({
 
   const [hydrated, setHydrated] = useState(false);
   useEffect(() => setHydrated(true), []);
+
+  // Live notifications (SignalR) — toast + refetch approvals/monitoring on push.
+  useRealtimeNotifications();
 
   const screens = Grid.useBreakpoint();
   const isDesktop = screens.lg ?? false; // sidebar ≥992px, drawer below (adaptive-navigation)
