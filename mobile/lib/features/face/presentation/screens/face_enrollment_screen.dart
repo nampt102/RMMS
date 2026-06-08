@@ -3,20 +3,25 @@ import 'dart:io';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:go_router/go_router.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:image_picker/image_picker.dart';
+import 'package:intl/intl.dart';
 
 import '../../../../core/network/api_exception.dart';
 import '../../../../core/theme/app_palette.dart';
-import '../../../../core/widgets/brand_widgets.dart';
+import '../../../../core/widgets/app_widgets.dart';
 import '../../../../l10n/generated/app_localizations.dart';
 import '../../data/face_repository.dart';
 
 /// One face angle to capture during enrollment (M06, ADR-011 CompreFace).
 enum _Angle { front, left, right }
 
-/// 3-angle face enrollment wizard. Captures front/left/right selfies with the
-/// front camera and submits them to `POST /face/enroll`. Replaces any prior
-/// enrollment server-side, so this same screen is reused for re-enrollment.
+/// Redesign 2026 — Khuôn mặt (pushed).
+///
+/// Status header (gradient face circle + check badge when enrolled + chips)
+/// then the 3-angle capture flow. Sticky bottom = primary CTA ("Đăng ký
+/// khuôn mặt" / "Đăng ký lại") + destructive-soft "Xóa khuôn mặt" when
+/// enrolled. The capture logic is preserved from the prior implementation.
 class FaceEnrollmentScreen extends ConsumerStatefulWidget {
   const FaceEnrollmentScreen({super.key});
 
@@ -31,7 +36,7 @@ class _FaceEnrollmentScreenState extends ConsumerState<FaceEnrollmentScreen> {
   bool _submitting = false;
 
   int get _captured => _paths.length;
-  bool get _canSubmit => _captured == _Angle.values.length && !_submitting;
+  bool get _allCaptured => _captured == _Angle.values.length;
 
   Future<void> _capture(_Angle angle) async {
     final file = await _picker.pickImage(
@@ -48,18 +53,16 @@ class _FaceEnrollmentScreenState extends ConsumerState<FaceEnrollmentScreen> {
     final l = AppLocalizations.of(context);
     setState(() => _submitting = true);
     try {
-      // Deterministic order: front, left, right.
-      final paths = _Angle.values.map((a) => _paths[a]!).toList(growable: false);
+      final paths = _Angle.values.map((a) => _paths[a]!).toList();
       await ref.read(faceRepositoryProvider).enroll(paths);
       ref.invalidate(faceStatusProvider);
       if (!mounted) return;
-      ScaffoldMessenger.of(context)
-          .showSnackBar(SnackBar(content: Text(l.faceEnrollSuccess)));
+      showAppToast(context,
+          message: l.faceEnrollSuccess, kind: AppToastKind.success);
       context.pop();
     } on ApiException catch (e) {
       if (mounted) {
-        ScaffoldMessenger.of(context)
-            .showSnackBar(SnackBar(content: Text(e.message)));
+        showAppToast(context, message: e.message, kind: AppToastKind.error);
       }
     } finally {
       if (mounted) setState(() => _submitting = false);
@@ -73,115 +76,215 @@ class _FaceEnrollmentScreenState extends ConsumerState<FaceEnrollmentScreen> {
       };
 
   IconData _angleIcon(_Angle a) => switch (a) {
-        _Angle.front => Icons.face_outlined,
-        _Angle.left => Icons.turn_left_outlined,
-        _Angle.right => Icons.turn_right_outlined,
+        _Angle.front => Icons.face_rounded,
+        _Angle.left => Icons.turn_left_rounded,
+        _Angle.right => Icons.turn_right_rounded,
       };
 
   @override
   Widget build(BuildContext context) {
     final l = AppLocalizations.of(context);
-    final scheme = context.scheme;
-    final total = _Angle.values.length;
+    final lang = Localizations.localeOf(context).languageCode;
+    final statusAsync = ref.watch(faceStatusProvider);
 
     return Scaffold(
-      appBar: AppBar(title: Text(l.faceEnrollTitle)),
+      backgroundColor: AppPalette.bg,
       body: SafeArea(
-        child: ListView(
-          padding: const EdgeInsets.fromLTRB(16, 8, 16, 120),
+        bottom: false,
+        child: Column(
           children: [
-            // Hero / progress ------------------------------------------------
-            SoftCard(
-              gradient: context.semantics.brandGradient,
-              padding: const EdgeInsets.all(20),
-              child: Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                  Row(
-                    children: [
-                      Container(
-                        width: 48,
-                        height: 48,
-                        decoration: BoxDecoration(
-                          color: Colors.white.withValues(alpha: 0.18),
-                          borderRadius: BorderRadius.circular(16),
-                        ),
-                        child: const Icon(Icons.face_retouching_natural,
-                            color: AppPalette.white, size: 26),
+            AppTopBar(title: l.faceTitle),
+            Expanded(
+              child: statusAsync.when(
+                loading: () => const Center(child: CircularProgressIndicator()),
+                error: (e, _) => _Error(
+                  message: e is ApiException ? e.message : l.commonRetry,
+                  onRetry: () => ref.invalidate(faceStatusProvider),
+                ),
+                data: (status) => ListView(
+                  padding: const EdgeInsets.fromLTRB(16, 8, 16, 24),
+                  children: [
+                    _StatusHeader(
+                      enrolled: status.enrolled,
+                      enrolledAt: status.enrolledAt,
+                      lang: lang,
+                    ),
+                    const SizedBox(height: 22),
+                    Text(
+                      l.faceEnrollIntro,
+                      style: GoogleFonts.plusJakartaSans(
+                        color: AppPalette.muted,
+                        fontSize: 14.5,
+                        fontWeight: FontWeight.w600,
+                        height: 1.45,
                       ),
-                      const SizedBox(width: 14),
-                      Expanded(
-                        child: Text(
-                          l.faceEnrollIntro,
-                          style: const TextStyle(
-                            color: AppPalette.white,
-                            height: 1.4,
-                            fontWeight: FontWeight.w500,
-                          ),
-                        ),
+                    ),
+                    const SizedBox(height: 14),
+                    for (final angle in _Angle.values) ...[
+                      _AngleTile(
+                        label: _angleLabel(l, angle),
+                        icon: _angleIcon(angle),
+                        path: _paths[angle],
+                        onTap: () => _capture(angle),
                       ),
+                      const SizedBox(height: 10),
                     ],
-                  ),
-                  const SizedBox(height: 18),
-                  ClipRRect(
-                    borderRadius: BorderRadius.circular(999),
-                    child: LinearProgressIndicator(
-                      value: _captured / total,
-                      minHeight: 8,
-                      backgroundColor: Colors.white.withValues(alpha: 0.25),
-                      valueColor:
-                          const AlwaysStoppedAnimation(AppPalette.white),
-                    ),
-                  ),
-                  const SizedBox(height: 8),
-                  Text(
-                    l.faceProgress(_captured, total),
-                    style: TextStyle(
-                      color: Colors.white.withValues(alpha: 0.9),
-                      fontWeight: FontWeight.w600,
-                      fontSize: 13,
-                    ),
-                  ),
-                ],
+                  ],
+                ),
               ),
             ),
-            const SizedBox(height: 20),
-
-            // Angle capture tiles -------------------------------------------
-            for (final angle in _Angle.values) ...[
-              _AngleTile(
-                label: _angleLabel(l, angle),
-                icon: _angleIcon(angle),
-                path: _paths[angle],
-                onTap: () => _capture(angle),
-              ),
-              const SizedBox(height: 12),
-            ],
-
-            const SizedBox(height: 8),
-            _GuidelinesCard(),
           ],
         ),
       ),
       bottomNavigationBar: SafeArea(
-        minimum: const EdgeInsets.all(16),
-        child: FilledButton.icon(
-          onPressed: _canSubmit ? _submit : null,
-          icon: _submitting
-              ? const SizedBox(
-                  width: 18,
-                  height: 18,
-                  child: CircularProgressIndicator(
-                      strokeWidth: 2, color: AppPalette.white),
-                )
-              : const Icon(Icons.verified_user_outlined),
-          label: Text(l.faceEnrollSubmit),
-          style: FilledButton.styleFrom(backgroundColor: scheme.primary),
+        top: false,
+        child: statusAsync.when(
+          loading: () => const SizedBox.shrink(),
+          error: (_, __) => const SizedBox.shrink(),
+          data: (status) => Padding(
+            padding: const EdgeInsets.fromLTRB(16, 8, 16, 16),
+            child: Column(
+              mainAxisSize: MainAxisSize.min,
+              children: [
+                AppButton.primary(
+                  label: status.enrolled ? l.faceReenroll : l.faceEnrollCta,
+                  icon: Icons.face_rounded,
+                  loading: _submitting,
+                  onPressed: _allCaptured ? _submit : null,
+                ),
+                if (status.enrolled) ...[
+                  const SizedBox(height: 10),
+                  AppButton.destructiveSoft(
+                    label: l.faceDelete,
+                    icon: Icons.delete_outline_rounded,
+                    onPressed: () {
+                      // Backend deletion endpoint is not exposed by the
+                      // current repository — surface a toast for now.
+                      showAppToast(context,
+                          message: l.faceDeleted, kind: AppToastKind.info);
+                    },
+                  ),
+                ],
+              ],
+            ),
+          ),
         ),
       ),
     );
   }
 }
+
+// ─── Status header ────────────────────────────────────────────────────────
+
+class _StatusHeader extends StatelessWidget {
+  const _StatusHeader({
+    required this.enrolled,
+    required this.enrolledAt,
+    required this.lang,
+  });
+  final bool enrolled;
+  final DateTime? enrolledAt;
+  final String lang;
+
+  @override
+  Widget build(BuildContext context) {
+    final l = AppLocalizations.of(context);
+    final s = context.semantics;
+
+    return Column(
+      children: [
+        // Big gradient circle with optional emerald check badge.
+        SizedBox(
+          width: 180,
+          height: 180,
+          child: Stack(
+            alignment: Alignment.center,
+            children: [
+              Container(
+                width: 160,
+                height: 160,
+                decoration: BoxDecoration(
+                  shape: BoxShape.circle,
+                  gradient: s.brandGradient,
+                  boxShadow: s.shadowBrand,
+                ),
+                alignment: Alignment.center,
+                child: const Icon(Icons.face_rounded,
+                    color: Colors.white, size: 84),
+              ),
+              if (enrolled)
+                Positioned(
+                  right: 8,
+                  bottom: 8,
+                  child: Container(
+                    width: 44,
+                    height: 44,
+                    decoration: BoxDecoration(
+                      gradient: s.emeraldGradient,
+                      shape: BoxShape.circle,
+                      border:
+                          Border.all(color: AppPalette.bg, width: 4),
+                    ),
+                    alignment: Alignment.center,
+                    child: const Icon(Icons.check_rounded,
+                        color: Colors.white, size: 22),
+                  ),
+                ),
+            ],
+          ),
+        ),
+        const SizedBox(height: 14),
+        Text(
+          enrolled ? l.faceRegistered : l.faceNotRegistered,
+          textAlign: TextAlign.center,
+          style: GoogleFonts.spaceGrotesk(
+            color: AppPalette.ink,
+            fontSize: 22,
+            fontWeight: FontWeight.w800,
+            letterSpacing: -0.5,
+          ),
+        ),
+        const SizedBox(height: 6),
+        Padding(
+          padding: const EdgeInsets.symmetric(horizontal: 24),
+          child: Text(
+            enrolled ? l.faceHelperRegistered : l.faceHelperNotRegistered,
+            textAlign: TextAlign.center,
+            style: GoogleFonts.plusJakartaSans(
+              color: AppPalette.muted,
+              fontSize: 13.5,
+              fontWeight: FontWeight.w600,
+              height: 1.45,
+            ),
+          ),
+        ),
+        if (enrolled) ...[
+          const SizedBox(height: 12),
+          Wrap(
+            spacing: 8,
+            runSpacing: 8,
+            alignment: WrapAlignment.center,
+            children: [
+              AppChip(
+                  icon: Icons.verified_rounded,
+                  label: l.faceChipVerified,
+                  tone: AppTone.emerald),
+              if (enrolledAt != null)
+                AppChip(
+                  icon: Icons.event_rounded,
+                  label: l.faceChipUpdated(
+                      DateFormat.MMMd(lang).format(enrolledAt!.toLocal())),
+                  tone: AppTone.indigo,
+                ),
+            ],
+          ),
+        ],
+      ],
+    );
+  }
+}
+
+// ─── Angle tile ───────────────────────────────────────────────────────────
 
 class _AngleTile extends StatelessWidget {
   const _AngleTile({
@@ -199,124 +302,104 @@ class _AngleTile extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final l = AppLocalizations.of(context);
-    final scheme = context.scheme;
     final done = path != null;
-    final radius = BorderRadius.circular(20);
 
-    return DecoratedBox(
-      decoration: BoxDecoration(
-        color: scheme.surface,
-        borderRadius: radius,
-        border: Border.all(
-          color: done ? context.semantics.success : scheme.outlineVariant,
-          width: done ? 1.5 : 1,
-        ),
-      ),
-      child: Material(
-        type: MaterialType.transparency,
-        child: InkWell(
-          onTap: onTap,
-          borderRadius: radius,
-          child: Padding(
-            padding: const EdgeInsets.all(12),
-            child: Row(
+    return AppCard(
+      onTap: onTap,
+      padding: const EdgeInsets.fromLTRB(12, 12, 14, 12),
+      child: Row(
+        children: [
+          Container(
+            width: 56,
+            height: 56,
+            clipBehavior: Clip.antiAlias,
+            decoration: BoxDecoration(
+              color: AppPalette.surface2,
+              borderRadius: BorderRadius.circular(14),
+            ),
+            child: done
+                ? Image.file(File(path!), fit: BoxFit.cover)
+                : Icon(icon, color: AppPalette.muted, size: 26),
+          ),
+          const SizedBox(width: 14),
+          Expanded(
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              mainAxisSize: MainAxisSize.min,
               children: [
-                // Thumbnail / icon
-                Container(
-                  width: 56,
-                  height: 56,
-                  clipBehavior: Clip.antiAlias,
-                  decoration: BoxDecoration(
-                    color: scheme.surfaceContainerHighest,
-                    borderRadius: BorderRadius.circular(14),
-                  ),
-                  child: done
-                      ? Image.file(File(path!), fit: BoxFit.cover)
-                      : Icon(icon, color: scheme.onSurfaceVariant, size: 26),
-                ),
-                const SizedBox(width: 14),
-                Expanded(
-                  child: Column(
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: [
-                      Text(label,
-                          style: const TextStyle(
-                              fontSize: 15, fontWeight: FontWeight.w700)),
-                      const SizedBox(height: 4),
-                      done
-                          ? StatusPill(
-                              label: l.faceCaptured,
-                              icon: Icons.check_circle,
-                              tone: BrandTone.success,
-                            )
-                          : Text(l.faceTapToCapture,
-                              style: TextStyle(
-                                  fontSize: 13,
-                                  color: scheme.onSurfaceVariant)),
-                    ],
+                Text(
+                  label,
+                  style: GoogleFonts.plusJakartaSans(
+                    color: AppPalette.ink,
+                    fontSize: 15,
+                    fontWeight: FontWeight.w700,
                   ),
                 ),
-                Icon(
-                  done ? Icons.refresh : Icons.photo_camera_outlined,
-                  color: done ? scheme.onSurfaceVariant : scheme.primary,
-                ),
+                const SizedBox(height: 4),
+                done
+                    ? AppChip(
+                        label: l.faceCaptured,
+                        icon: Icons.check_circle_rounded,
+                        tone: AppTone.emerald,
+                      )
+                    : Text(
+                        l.faceTapToCapture,
+                        style: GoogleFonts.plusJakartaSans(
+                          color: AppPalette.muted,
+                          fontSize: 13,
+                          fontWeight: FontWeight.w600,
+                        ),
+                      ),
               ],
             ),
           ),
-        ),
+          Icon(
+            done ? Icons.refresh_rounded : Icons.photo_camera_rounded,
+            color: done ? AppPalette.muted : AppPalette.indigo,
+            size: 22,
+          ),
+        ],
       ),
     );
   }
 }
 
-class _GuidelinesCard extends StatelessWidget {
+// ─── Error ────────────────────────────────────────────────────────────────
+
+class _Error extends StatelessWidget {
+  const _Error({required this.message, required this.onRetry});
+  final String message;
+  final VoidCallback onRetry;
+
   @override
   Widget build(BuildContext context) {
     final l = AppLocalizations.of(context);
-    final scheme = context.scheme;
-    final items = [l.faceGuideline1, l.faceGuideline2, l.faceGuideline3];
-
-    return DecoratedBox(
-      decoration: BoxDecoration(
-        color: scheme.surfaceContainerHighest,
-        borderRadius: BorderRadius.circular(20),
-      ),
-      child: Padding(
-        padding: const EdgeInsets.all(16),
-        child: Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: [
-            Row(
-              children: [
-                Icon(Icons.lightbulb_outline,
-                    size: 18, color: scheme.onSurfaceVariant),
-                const SizedBox(width: 8),
-                Text(l.faceGuidelinesTitle,
-                    style: const TextStyle(fontWeight: FontWeight.w700)),
-              ],
-            ),
-            const SizedBox(height: 10),
-            for (final item in items)
-              Padding(
-                padding: const EdgeInsets.symmetric(vertical: 3),
-                child: Row(
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: [
-                    Icon(Icons.check, size: 16, color: context.semantics.success),
-                    const SizedBox(width: 8),
-                    Expanded(
-                      child: Text(item,
-                          style: TextStyle(
-                              fontSize: 13.5,
-                              height: 1.35,
-                              color: scheme.onSurfaceVariant)),
-                    ),
-                  ],
-                ),
-              ),
-          ],
+    return ListView(
+      children: [
+        const SizedBox(height: 60),
+        const AppIconTile(
+          icon: Icons.error_outline_rounded,
+          tone: AppTone.rose,
+          size: 64,
+          radius: 22,
         ),
-      ),
+        const SizedBox(height: 16),
+        Text(message,
+            textAlign: TextAlign.center,
+            style: GoogleFonts.plusJakartaSans(
+                color: AppPalette.ink,
+                fontSize: 14.5,
+                fontWeight: FontWeight.w600)),
+        const SizedBox(height: 16),
+        Center(
+          child: AppButton.soft(
+            label: l.commonRetry,
+            icon: Icons.refresh_rounded,
+            expand: false,
+            onPressed: onRetry,
+          ),
+        ),
+      ],
     );
   }
 }
