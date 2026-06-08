@@ -22,12 +22,28 @@ internal sealed class MinioAttendancePhotoStorage : IAttendancePhotoStorage, IDi
     private readonly SemaphoreSlim _bucketGate = new(1, 1);
     private bool _bucketReady;
 
+    /// <summary>
+    /// Dedicated client bound to <see cref="MinioOptions.PublicEndpoint"/> used ONLY to mint
+    /// presigned GET URLs the browser can reach. Null when no public endpoint is configured
+    /// (then the upload client's endpoint is used, which is correct for same-host dev).
+    /// </summary>
+    private readonly IMinioClient? _presignClient;
+
     public MinioAttendancePhotoStorage(
         IMinioClient client, IOptions<MinioOptions> options, ILogger<MinioAttendancePhotoStorage> logger)
     {
         _client = client;
         _options = options.Value;
         _logger = logger;
+
+        if (!string.IsNullOrWhiteSpace(_options.PublicEndpoint))
+        {
+            _presignClient = new MinioClient()
+                .WithEndpoint(_options.PublicEndpoint)
+                .WithCredentials(_options.AccessKey, _options.SecretKey)
+                .WithSSL(_options.PublicUseSsl ?? _options.UseSsl)
+                .Build();
+        }
     }
 
     public async Task<string> SaveAsync(Guid userId, string kind, PhotoUpload photo, CancellationToken ct = default)
@@ -60,7 +76,8 @@ internal sealed class MinioAttendancePhotoStorage : IAttendancePhotoStorage, IDi
             return storedKey;
         }
 
-        return await _client.PresignedGetObjectAsync(new PresignedGetObjectArgs()
+        // Sign with the public-facing client when configured so the URL host is browser-reachable.
+        return await (_presignClient ?? _client).PresignedGetObjectAsync(new PresignedGetObjectArgs()
             .WithBucket(_options.BucketName)
             .WithObject(storedKey)
             .WithExpiry(_options.PresignedUrlTtlSeconds));
@@ -110,7 +127,11 @@ internal sealed class MinioAttendancePhotoStorage : IAttendancePhotoStorage, IDi
         }
     }
 
-    public void Dispose() => _bucketGate.Dispose();
+    public void Dispose()
+    {
+        _bucketGate.Dispose();
+        _presignClient?.Dispose();
+    }
 
     private static string ExtensionFor(string? contentType, string? fileName)
     {

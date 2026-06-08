@@ -24,7 +24,9 @@ services:
       POSTGRES_PASSWORD: ${COMPREFACE_POSTGRES_PASSWORD:-compreface_dev_pw}
       POSTGRES_DB: ${COMPREFACE_POSTGRES_DB:-frs}
     volumes:
-      - compreface-pgdata:/var/lib/postgresql/data
+      # Host bind mount for easy backup. CompreFace keeps enrolled face images +
+      # embeddings in this DB (SAVE_IMAGES_TO_DB=true), so this dir is the face data.
+      - ${COMPREFACE_DATA_DIR:-../../data/compreface-pgdata}:/var/lib/postgresql/data
     networks: [rmms-net]
 
   compreface-admin:
@@ -89,9 +91,6 @@ services:
       - compreface-api
       - compreface-admin
     networks: [rmms-net]
-
-volumes:
-  compreface-pgdata:
 
 networks:
   rmms-net:

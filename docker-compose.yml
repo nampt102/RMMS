@@ -62,7 +62,8 @@ services:
       - "9000:9000"   # S3 API
       - "9001:9001"   # MinIO console
     volumes:
-      - minio-data:/data
+      # Host bind mount for easy backup (selfie / store photos live here).
+      - ${MINIO_DATA_DIR:-./data/minio}:/data
     healthcheck:
       test: ["CMD", "curl", "-f", "http://localhost:9000/minio/health/live"]
       interval: 30s
@@ -103,6 +104,8 @@ services:
       Jwt__Issuer: ${JWT_ISSUER:-rmms.local}
       Jwt__Audience: ${JWT_AUDIENCE:-rmms.clients}
       MinIO__Endpoint: "minio:9000"
+      # Browser-reachable host for presigned image URLs (web admin). Set to your host/domain.
+      MinIO__PublicEndpoint: ${MINIO_PUBLIC_ENDPOINT:-localhost:9000}
       MinIO__AccessKey: ${MINIO_ROOT_USER:-rmms}
       MinIO__SecretKey: ${MINIO_ROOT_PASSWORD:-rmms_dev_pw}
     ports:
@@ -146,7 +149,6 @@ services:
 volumes:
   postgres-data:
   redis-data:
-  minio-data:
   seq-data:
   caddy-data:
   caddy-config:

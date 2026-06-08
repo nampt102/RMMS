@@ -116,3 +116,6 @@ mobile/coverage/
 *.tmp
 tmp/
 temp/
+
+# Docker bind-mount data (MinIO objects, CompreFace DB) — backup target, never commit
+data/
