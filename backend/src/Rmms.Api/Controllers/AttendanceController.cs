@@ -8,6 +8,8 @@ using Rmms.Api.Dtos.Attendance;
 using Rmms.Application.Attendance;
 using Rmms.Application.Common.Abstractions;
 using Rmms.Application.Common.Interfaces;
+using Rmms.Domain.Common;
+using Rmms.Shared.Errors;
 
 namespace Rmms.Api.Controllers;
 
@@ -55,8 +57,17 @@ public sealed class AttendanceController : ControllerBase
     {
         if (_currentUser.UserId is not { } userId) return Unauthorized();
 
+        if (!InvariantFormParsing.TryParseDouble(Request.Form, "latitude", out var latitude)
+            || !InvariantFormParsing.TryParseDouble(Request.Form, "longitude", out var longitude)
+            || !InvariantFormParsing.TryParseNullableDouble(Request.Form, "accuracyMeters", out var accuracyMeters))
+        {
+            return ResultMapping.Failure(
+                Error.Validation(ErrorCodes.ValidationFailed, "Dữ liệu không hợp lệ."),
+                HttpContext.TraceIdentifier);
+        }
+
         var command = new CheckInCommand(
-            userId, form.StoreId, form.Latitude, form.Longitude, form.AccuracyMeters, form.FakeGpsDetected,
+            userId, form.StoreId, latitude, longitude, accuracyMeters, form.FakeGpsDetected,
             await ToUploadAsync(form.Selfie, ct), await ToUploadAsync(form.StorePhoto, ct), form.Note);
 
         var result = await _mediator.Send(command, ct);
@@ -72,8 +83,17 @@ public sealed class AttendanceController : ControllerBase
     {
         if (_currentUser.UserId is not { } userId) return Unauthorized();
 
+        if (!InvariantFormParsing.TryParseDouble(Request.Form, "latitude", out var latitude)
+            || !InvariantFormParsing.TryParseDouble(Request.Form, "longitude", out var longitude)
+            || !InvariantFormParsing.TryParseNullableDouble(Request.Form, "accuracyMeters", out var accuracyMeters))
+        {
+            return ResultMapping.Failure(
+                Error.Validation(ErrorCodes.ValidationFailed, "Dữ liệu không hợp lệ."),
+                HttpContext.TraceIdentifier);
+        }
+
         var command = new CheckOutCommand(
-            userId, id, form.Latitude, form.Longitude, form.AccuracyMeters, form.FakeGpsDetected,
+            userId, id, latitude, longitude, accuracyMeters, form.FakeGpsDetected,
             await ToUploadAsync(form.Selfie, ct), await ToUploadAsync(form.StorePhoto, ct), form.Note);
 
         var result = await _mediator.Send(command, ct);
