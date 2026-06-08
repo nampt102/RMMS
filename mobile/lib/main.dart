@@ -2,6 +2,7 @@ import 'package:firebase_messaging/firebase_messaging.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:hive_flutter/hive_flutter.dart';
 import 'package:intl/date_symbol_data_local.dart';
 
@@ -10,6 +11,10 @@ import 'core/notifications/fcm_service.dart';
 
 Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
+
+  // Use bundled fonts in google_fonts/ — avoids runtime HTTPS fetch (fails on
+  // corp/VPN networks with SSL inspection when testing on physical devices).
+  GoogleFonts.config.allowRuntimeFetching = false;
 
   // Portrait only for PG/Leader screens (camera + check-in flow is portrait).
   await SystemChrome.setPreferredOrientations([DeviceOrientation.portraitUp]);

@@ -2,12 +2,6 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
-	<key>NSCameraUsageDescription</key>
-	<string>RMMS dùng camera để chụp selfie và ảnh cửa hàng khi chấm công.</string>
-	<key>NSPhotoLibraryUsageDescription</key>
-	<string>RMMS cần truy cập thư viện ảnh để đính kèm ảnh chấm công.</string>
-	<key>NSLocationWhenInUseUsageDescription</key>
-	<string>RMMS dùng vị trí GPS để xác thực khoảng cách khi check-in/check-out.</string>
 	<key>CADisableMinimumFrameDurationOnPhone</key>
 	<true/>
 	<key>CFBundleDevelopmentRegion</key>
@@ -28,11 +22,6 @@
 	<string>$(FLUTTER_BUILD_NAME)</string>
 	<key>CFBundleSignature</key>
 	<string>????</string>
-	<key>CFBundleVersion</key>
-	<string>$(FLUTTER_BUILD_NUMBER)</string>
-	<!-- Custom-scheme deep links: rmms://verify-email?token=… and
-	     rmms://reset-password?token=… (M01, sprint-01 Day 4/6).
-	     Universal Links over https are deferred to Sprint 02 (R-4). -->
 	<key>CFBundleURLTypes</key>
 	<array>
 		<dict>
@@ -46,8 +35,23 @@
 			</array>
 		</dict>
 	</array>
+	<key>CFBundleVersion</key>
+	<string>$(FLUTTER_BUILD_NUMBER)</string>
 	<key>LSRequiresIPhoneOS</key>
 	<true/>
+	<key>NSCameraUsageDescription</key>
+	<string>RMMS dùng camera để chụp selfie và ảnh cửa hàng khi chấm công.</string>
+	<key>NSLocationWhenInUseUsageDescription</key>
+	<string>RMMS dùng vị trí GPS để xác thực khoảng cách khi check-in/check-out.</string>
+	<key>NSPhotoLibraryUsageDescription</key>
+	<string>RMMS cần truy cập thư viện ảnh để đính kèm ảnh chấm công.</string>
+	<key>NSLocalNetworkUsageDescription</key>
+	<string>RMMS cần kết nối máy chủ phát triển trên mạng nội bộ.</string>
+	<key>NSAppTransportSecurity</key>
+	<dict>
+		<key>NSAllowsLocalNetworking</key>
+		<true/>
+	</dict>
 	<key>UIApplicationSceneManifest</key>
 	<dict>
 		<key>UIApplicationSupportsMultipleScenes</key>

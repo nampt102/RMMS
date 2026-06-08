@@ -314,15 +314,16 @@ class _ScheduleCard extends ConsumerWidget {
         boxShadow: context.semantics.shadowSm,
       ),
       clipBehavior: Clip.antiAlias,
-      child: Row(
-        crossAxisAlignment: CrossAxisAlignment.stretch,
-        children: [
-          // 5px left accent bar.
-          Container(width: 5, color: c.fg),
-          Expanded(
-            child: Padding(
-              padding: const EdgeInsets.fromLTRB(16, 14, 16, 14),
-              child: Column(
+      child: IntrinsicHeight(
+        child: Row(
+          crossAxisAlignment: CrossAxisAlignment.stretch,
+          children: [
+            // 5px left accent bar.
+            Container(width: 5, color: c.fg),
+            Expanded(
+              child: Padding(
+                padding: const EdgeInsets.fromLTRB(16, 14, 16, 14),
+                child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   Row(
@@ -430,6 +431,7 @@ class _ScheduleCard extends ConsumerWidget {
             ),
           ),
         ],
+        ),
       ),
     );
   }
