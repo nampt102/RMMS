@@ -184,6 +184,7 @@ export default function AttendancePage() {
   const storeOptions = (stores ?? []).map((s) => ({ value: s.id, label: `${s.code} — ${s.name}` }));
 
   return (
+    <>
     <ProTable<AttendanceRecord>
       headerTitle={t("title")}
       actionRef={actionRef}
@@ -247,8 +248,8 @@ export default function AttendancePage() {
           return { data: [], total: 0, success: false };
         }
       }}
-    >
-      {/* Detail / review modal rendered as ProTable child so App context is available. */}
+    />
+      {/* Detail / review modal — sibling of ProTable (ProTable does NOT render children). */}
       <Modal
         title={detail ? `${t("detailTitle")} · ${fmt(detail.checkInAt)}` : t("detailTitle")}
         open={detail !== null}
@@ -299,7 +300,7 @@ export default function AttendancePage() {
           </div>
         )}
       </Modal>
-    </ProTable>
+    </>
   );
 
   function AttendanceDetail({ record }: { record: AttendanceRecord }) {
