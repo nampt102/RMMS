@@ -10,6 +10,20 @@ namespace Rmms.Api.Common;
 /// </summary>
 internal static class InvariantFormParsing
 {
+    /// <summary>
+    /// Reads the check-in/out GPS triplet from the form: <c>latitude</c> + <c>longitude</c>
+    /// (required) and <c>accuracyMeters</c> (optional). Returns <c>false</c> only when a
+    /// required coordinate is missing/garbage or an present accuracy is unparseable.
+    /// </summary>
+    public static bool TryParseGps(
+        IFormCollection form, out double latitude, out double longitude, out double? accuracyMeters)
+    {
+        accuracyMeters = null;
+        return TryParseDouble(form, "latitude", out latitude)
+            & TryParseDouble(form, "longitude", out longitude)
+            && TryParseNullableDouble(form, "accuracyMeters", out accuracyMeters);
+    }
+
     public static bool TryParseDouble(IFormCollection form, string field, out double value)
     {
         value = 0;

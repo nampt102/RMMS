@@ -57,9 +57,7 @@ public sealed class AttendanceController : ControllerBase
     {
         if (_currentUser.UserId is not { } userId) return Unauthorized();
 
-        if (!InvariantFormParsing.TryParseDouble(Request.Form, "latitude", out var latitude)
-            || !InvariantFormParsing.TryParseDouble(Request.Form, "longitude", out var longitude)
-            || !InvariantFormParsing.TryParseNullableDouble(Request.Form, "accuracyMeters", out var accuracyMeters))
+        if (!InvariantFormParsing.TryParseGps(Request.Form, out var latitude, out var longitude, out var accuracyMeters))
         {
             return ResultMapping.Failure(
                 Error.Validation(ErrorCodes.ValidationFailed, "Dữ liệu không hợp lệ."),
@@ -83,9 +81,7 @@ public sealed class AttendanceController : ControllerBase
     {
         if (_currentUser.UserId is not { } userId) return Unauthorized();
 
-        if (!InvariantFormParsing.TryParseDouble(Request.Form, "latitude", out var latitude)
-            || !InvariantFormParsing.TryParseDouble(Request.Form, "longitude", out var longitude)
-            || !InvariantFormParsing.TryParseNullableDouble(Request.Form, "accuracyMeters", out var accuracyMeters))
+        if (!InvariantFormParsing.TryParseGps(Request.Form, out var latitude, out var longitude, out var accuracyMeters))
         {
             return ResultMapping.Failure(
                 Error.Validation(ErrorCodes.ValidationFailed, "Dữ liệu không hợp lệ."),
