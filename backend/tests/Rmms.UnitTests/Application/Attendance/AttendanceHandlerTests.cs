@@ -49,7 +49,7 @@ public sealed class AttendanceHandlerTests
     private static CheckInCommandHandler CheckInHandler(
         AppDbContext db, TestClock clock, InMemoryAuditLogger audit,
         FaceVerificationResult face = FaceVerificationResult.Success) =>
-        new(db, new FakeFaceVerificationService(face), new FakePhotoStorage(), audit, clock);
+        new(db, new FakeFaceVerificationService(face), new FakePhotoStorage(), audit, clock, new FakeNotificationService());
 
     private static CheckInCommand Cmd(Guid userId, Guid storeId, double lat = 1, double lng = 1, bool fakeGps = false) =>
         new(userId, storeId, lat, lng, 10, fakeGps, null, null, null);
@@ -173,6 +173,27 @@ public sealed class AttendanceHandlerTests
     }
 
     [Fact]
+    public async Task CheckIn_PendingReview_NotifiesUserInApp()
+    {
+        await using var db = TestDbContextFactory.Create();
+        var clock = new TestClock();
+        var notifier = new FakeNotificationService();
+        var (pg, store) = await SeedAsync(db, clock);
+        await SeedApprovedShiftAsync(db, clock, pg.Id, store.Id, OnTimeStart, OnTimeEnd);
+
+        await new CheckInCommandHandler(
+                db, new FakeFaceVerificationService(FaceVerificationResult.Fail), new FakePhotoStorage(),
+                new InMemoryAuditLogger(), clock, notifier)
+            .Handle(Cmd(pg.Id, store.Id), default);
+
+        notifier.Sent.Should().ContainSingle();
+        var sent = notifier.Sent.Single();
+        sent.UserId.Should().Be(pg.Id);
+        sent.Spec.Type.Should().Be(NotificationType.AttendanceInReview);
+        sent.Spec.Push.Should().BeFalse(); // CR-3: in-app only
+    }
+
+    [Fact]
     public async Task CheckIn_FakeGps_Blocked_NoRecord_AndAudits()
     {
         await using var db = TestDbContextFactory.Create();
@@ -212,7 +233,7 @@ public sealed class AttendanceHandlerTests
     private static CheckOutCommandHandler CheckOutHandler(
         AppDbContext db, TestClock clock, InMemoryAuditLogger audit,
         FaceVerificationResult face = FaceVerificationResult.Success) =>
-        new(db, new FakeFaceVerificationService(face), new FakePhotoStorage(), audit, clock);
+        new(db, new FakeFaceVerificationService(face), new FakePhotoStorage(), audit, clock, new FakeNotificationService());
 
     private static async Task<Guid> CheckInOnceAsync(AppDbContext db, TestClock clock, Guid pgId, Guid storeId)
     {

@@ -44,19 +44,22 @@ internal sealed class CheckOutCommandHandler : IRequestHandler<CheckOutCommand, 
     private readonly IAttendancePhotoStorage _photos;
     private readonly IAuditLogger _audit;
     private readonly IDateTimeProvider _clock;
+    private readonly INotificationService _notifier;
 
     public CheckOutCommandHandler(
         IAppDbContext db,
         IFaceVerificationService face,
         IAttendancePhotoStorage photos,
         IAuditLogger audit,
-        IDateTimeProvider clock)
+        IDateTimeProvider clock,
+        INotificationService notifier)
     {
         _db = db;
         _face = face;
         _photos = photos;
         _audit = audit;
         _clock = clock;
+        _notifier = notifier;
     }
 
     public async ValueTask<Result<AttendanceDto>> Handle(CheckOutCommand command, CancellationToken ct)
@@ -105,6 +108,12 @@ internal sealed class CheckOutCommandHandler : IRequestHandler<CheckOutCommand, 
         await _audit.RecordAsync(
             AuditAction.AttendanceCheckedOut, "attendance", record.Id,
             new { record.UserId, record.StoreId, status = record.Status.ToString() }, ct);
+
+        // CR-2: a check-out that trips anti-fraud lands in Admin Review — tell the PG (in-app only).
+        if (record.RequiresReview)
+        {
+            await _notifier.NotifyAsync(record.UserId, AttendanceNotifications.InReview(record), ct);
+        }
 
         await _db.SaveChangesAsync(ct);
         var dto = await AttendanceQueries.PresignAsync(_photos, AttendanceMapper.ToDto(record, store.Code, store.Name), ct);

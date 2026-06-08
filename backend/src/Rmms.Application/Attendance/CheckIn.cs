@@ -46,19 +46,22 @@ internal sealed class CheckInCommandHandler : IRequestHandler<CheckInCommand, Re
     private readonly IAttendancePhotoStorage _photos;
     private readonly IAuditLogger _audit;
     private readonly IDateTimeProvider _clock;
+    private readonly INotificationService _notifier;
 
     public CheckInCommandHandler(
         IAppDbContext db,
         IFaceVerificationService face,
         IAttendancePhotoStorage photos,
         IAuditLogger audit,
-        IDateTimeProvider clock)
+        IDateTimeProvider clock,
+        INotificationService notifier)
     {
         _db = db;
         _face = face;
         _photos = photos;
         _audit = audit;
         _clock = clock;
+        _notifier = notifier;
     }
 
     public async ValueTask<Result<AttendanceDto>> Handle(CheckInCommand command, CancellationToken ct)
@@ -149,6 +152,12 @@ internal sealed class CheckInCommandHandler : IRequestHandler<CheckInCommand, Re
         {
             await _audit.RecordAsync(AuditAction.AttendanceFaceFailed, "attendance", record.Id,
                 new { face.Confidence }, ct);
+        }
+
+        // CR-2: tell the PG their check-in is awaiting Admin Review (in-app only, CR-3).
+        if (record.RequiresReview)
+        {
+            await _notifier.NotifyAsync(record.UserId, AttendanceNotifications.InReview(record), ct);
         }
 
         await _db.SaveChangesAsync(ct);
