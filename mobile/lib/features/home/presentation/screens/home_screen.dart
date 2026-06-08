@@ -63,9 +63,9 @@ class HomeScreen extends ConsumerWidget {
               ),
             ),
             const SizedBox(height: 22),
-            AppRiseIn(
-              delay: const Duration(milliseconds: 120),
-              child: const SectionEyebrow(
+            const AppRiseIn(
+              delay: Duration(milliseconds: 120),
+              child: SectionEyebrow(
                 'Truy cập nhanh',
                 trailing: Icon(Icons.auto_awesome_rounded,
                     color: AppPalette.violet, size: 16),
