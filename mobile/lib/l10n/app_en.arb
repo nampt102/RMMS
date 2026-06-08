@@ -334,5 +334,9 @@
   "faceReenroll": "Re-enroll",
   "faceEnrollCta": "Register face",
   "faceDelete": "Delete face",
-  "faceDeleted": "Face removed."
+  "faceDeleted": "Face removed.",
+  "storeStatusActive": "Active",
+  "storeStatusInactive": "Inactive",
+  "storeCodeLabel": "Code {code}",
+  "@storeCodeLabel": { "placeholders": { "code": { "type": "String" } } }
 }

@@ -335,5 +335,9 @@
   "faceReenroll": "Đăng ký lại",
   "faceEnrollCta": "Đăng ký khuôn mặt",
   "faceDelete": "Xóa khuôn mặt",
-  "faceDeleted": "Đã xóa khuôn mặt."
+  "faceDeleted": "Đã xóa khuôn mặt.",
+  "storeStatusActive": "Đang hoạt động",
+  "storeStatusInactive": "Ngưng hoạt động",
+  "storeCodeLabel": "Mã {code}",
+  "@storeCodeLabel": { "placeholders": { "code": { "type": "String" } } }
 }
