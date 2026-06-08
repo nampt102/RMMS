@@ -109,7 +109,19 @@ class _BodyState extends State<_Body> with TickerProviderStateMixin {
     super.dispose();
   }
 
+  /// Once checked in, the big timer counts elapsed time since this shift's check-in
+  /// (ticking up; frozen at the worked total after check-out). Before check-in it shows
+  /// the live wall clock.
   String _clockText() {
+    final shift = widget.shift;
+    if (shift.checkInAt != null) {
+      final end = (shift.checkOutAt ?? DateTime.now()).toUtc();
+      final d = end.difference(shift.checkInAt!.toUtc());
+      final secs = d.isNegative ? 0 : d.inSeconds;
+      return '${(secs ~/ 3600).toString().padLeft(2, '0')}:'
+          '${(secs ~/ 60 % 60).toString().padLeft(2, '0')}:'
+          '${(secs % 60).toString().padLeft(2, '0')}';
+    }
     final n = DateTime.now();
     return '${n.hour.toString().padLeft(2, '0')}:'
         '${n.minute.toString().padLeft(2, '0')}:'
