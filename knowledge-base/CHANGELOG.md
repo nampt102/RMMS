@@ -6,6 +6,16 @@ Append-only chronological log of significant project milestones, decisions, and 
 
 ---
 
+## 2026-06-08 — Mobile: offline-bundled fonts + physical-device dev fixes
+
+**By:** Mobile dev (MotivesVN IT)
+
+**Status:** ✅ Verified on physical device. Mobile + dev config only.
+
+- **Fonts bundled offline** (ADR-012 updated): `.ttf` assets under `mobile/google_fonts/` + `GoogleFonts.config.allowRuntimeFetching = false` in `main.dart` — fixes fallback fonts on corp/VPN (SSL-inspecting) networks and physical devices. No call-site change.
+- **Physical-device dev:** API binds `0.0.0.0:5080` (LAN access from iPhone); iOS `Info.plist` local-network + ATS dev allowances; fixed zero-height mesh-gradient stacks (Home, attendance history), schedule-card infinite-height crash, login brand tile 64×64.
+- Docs synced: `09-mobile-design-system.md` (typography) + `ADR-012`.
+
 ## 2026-06-08 — Sprint 09: M14 notification UX (mobile) + attendance-review notify
 
 **By:** Tech lead (MotivesVN IT), AI-assisted

@@ -69,6 +69,13 @@ use the `AppTone` enum + `chipColors()`/`tileColors()` helpers, not the raw pair
 - **Plus Jakarta Sans** — all body / UI / labels / buttons. Use `AppTheme.body(...)`
   or the `TextTheme` roles.
 
+**Fonts are bundled offline** (no runtime fetch): the `.ttf` files live under
+`mobile/google_fonts/` (declared as an asset in `pubspec.yaml`) and `main.dart`
+sets `GoogleFonts.config.allowRuntimeFetching = false`. This avoids the HTTPS
+fetch that fails on corp/VPN networks with SSL inspection and on some physical
+devices. When changing weights, add the matching `.ttf` (google_fonts variant
+naming, e.g. `PlusJakartaSans-Regular.ttf`) and keep the asset list in sync.
+
 Material 3 text roles are remapped in `AppTheme._textTheme`: display/headline →
 Space Grotesk; title/body/label → Plus Jakarta Sans with weight hierarchy
 (headings 700–800, body 500, labels 700–800). Body line-height 1.45.

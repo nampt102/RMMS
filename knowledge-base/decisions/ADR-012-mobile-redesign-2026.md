@@ -27,23 +27,32 @@ Two needs drove a decision:
      shadows, transform-only micro-motion.
    - Tokens in `lib/core/theme/{app_palette,app_theme}.dart`; component kit in
      `lib/core/widgets/app_widgets.dart`; semantic extension `AppSemantics`.
-2. Add **one** UI dependency: **`google_fonts ^6.2.1`** — to load Space Grotesk
+2. Add **one** UI dependency: **`google_fonts ^6.2.1`** — to provide Space Grotesk
    (display) + Plus Jakarta Sans (body). This is the only UI package added; no
    other design/UI libraries are introduced.
+3. **Bundle the fonts offline** (no runtime fetch): the `.ttf` files live under
+   `mobile/google_fonts/` (declared as an asset in `pubspec.yaml`) and
+   `main.dart` sets `GoogleFonts.config.allowRuntimeFetching = false`. Same
+   `google_fonts` API at call sites — it just resolves from bundled assets.
 
 ## Consequences
 
 - **+** Consistent, modern UI; feature code composes from a typed kit instead of
   ad-hoc styling; light/dark + reduced-motion handled centrally.
 - **+** Stays within Flutter/Material 3; web (AntD Pro, ADR-008) untouched.
-- **−** `google_fonts` fetches fonts at runtime on first use (cached). Acceptable;
-  if offline-first font loading becomes a requirement, bundle the `.ttf` assets and
-  drop the network path (no API change to call sites).
+- **+** Fonts render with **no network dependency** — works on corp/VPN networks
+  with SSL inspection and on physical devices where the runtime HTTPS fetch failed.
+  No first-paint font flash, fully offline.
+- **−** App bundle grows by ~10 `.ttf` files (~0.6 MB). Acceptable; the asset list
+  must be kept in sync if weights change (filenames must match google_fonts'
+  expected variant naming, e.g. `PlusJakartaSans-Regular.ttf`).
 - **Follow-up:** legacy `brand_widgets.dart` (used by Approvals + Team Monitoring)
   is deprecated — migrate those screens to `app_widgets.dart` when next touched.
 
 ## Alternatives considered
 
-- **Bundle fonts as assets instead of `google_fonts`** — more setup/maintenance for
-  weight variants now; revisit only if offline font loading is required.
+- **Runtime font fetching (`google_fonts` default)** — initially chosen, then
+  reversed: the HTTPS fetch fails behind SSL-inspecting corp networks and on some
+  physical devices, causing fallback fonts. Bundling the `.ttf` assets fixed it
+  with no call-site change.
 - **Stay on platform/Material default fonts** — rejected: no distinct brand identity.
