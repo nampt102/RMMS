@@ -342,5 +342,11 @@
   "@storeCodeLabel": { "placeholders": { "code": { "type": "String" } } },
   "notifTitle": "Thông báo",
   "notifMarkAll": "Đọc tất cả",
-  "notifEmpty": "Chưa có thông báo nào."
+  "notifEmpty": "Chưa có thông báo nào.",
+  "livenessTitle": "Xác thực khuôn mặt thật",
+  "livenessBlink": "Hãy chớp mắt",
+  "livenessSmile": "Hãy mỉm cười",
+  "livenessTurn": "Quay đầu nhẹ sang một bên",
+  "livenessTimeout": "Không nhận diện được. Vui lòng thử lại.",
+  "livenessCameraError": "Không truy cập được camera. Kiểm tra quyền camera và thử lại."
 }

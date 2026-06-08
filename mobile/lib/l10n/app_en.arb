@@ -341,5 +341,11 @@
   "@storeCodeLabel": { "placeholders": { "code": { "type": "String" } } },
   "notifTitle": "Notifications",
   "notifMarkAll": "Mark all read",
-  "notifEmpty": "No notifications yet."
+  "notifEmpty": "No notifications yet.",
+  "livenessTitle": "Verify you're a real person",
+  "livenessBlink": "Please blink",
+  "livenessSmile": "Please smile",
+  "livenessTurn": "Turn your head slightly to one side",
+  "livenessTimeout": "Couldn't detect a live face. Please try again.",
+  "livenessCameraError": "Can't access the camera. Check camera permission and try again."
 }

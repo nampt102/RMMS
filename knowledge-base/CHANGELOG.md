@@ -6,6 +6,16 @@ Append-only chronological log of significant project milestones, decisions, and 
 
 ---
 
+## 2026-06-08 — Anti-spoof: active liveness on check-in selfie (ADR-013) + MinIO/CompreFace host volumes
+
+**By:** Tech lead (MotivesVN IT), AI-assisted
+
+**Status:** ✅ Backend builds; 229 tests green. Mobile code-only (Mac runs pub get + gen-l10n + device test).
+
+- **Liveness (ADR-013):** check-in **selfie** now goes through `LivenessCaptureScreen` — front camera + `google_mlkit_face_detection` on-device, with a randomised challenge (blink / smile / turn head). A still is captured only after the live action, then continues to the existing CompreFace identity match. Rejects photo-of-photo / screen replay (which `ImageSource.camera` alone did not). Store photo keeps the plain rear-camera picker. ARB vi/en `liveness*`.
+- **Infra volumes → host:** MinIO data and CompreFace pgdata bind-mounted under `./data` (backup target; `.gitignore`d). Named volumes dropped.
+- **MinIO browser-reachable presign:** `MinioOptions.PublicEndpoint/PublicUseSsl` — presigned GET URLs are signed for a browser-reachable host (default `localhost:9000`) so the web admin loads check-in/out selfie + store photos even when the API uploads via the internal `minio:9000`. Web review UI + MinIO storage were already in place (M05).
+
 ## 2026-06-08 — M14 backlog: in-review notify + real FCM + SignalR realtime
 
 **By:** Tech lead (MotivesVN IT), AI-assisted

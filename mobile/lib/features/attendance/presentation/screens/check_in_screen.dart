@@ -10,6 +10,7 @@ import '../../../../l10n/generated/app_localizations.dart';
 import '../../../requests/data/requests_repository.dart';
 import '../../data/attendance_api.dart';
 import '../../data/attendance_repository.dart';
+import 'liveness_capture_screen.dart';
 
 enum CheckMode { checkIn, checkOut }
 
@@ -93,21 +94,26 @@ class _CheckInScreenState extends ConsumerState<CheckInScreen> {
     }
   }
 
-  Future<void> _capture({required bool selfie}) async {
+  /// Selfie goes through the liveness gate (ADR-013) — a live blink/smile/turn is required,
+  /// which rejects photo-of-photo / screen replays.
+  Future<void> _captureSelfie() async {
+    final path = await Navigator.of(context).push<String>(
+      MaterialPageRoute(builder: (_) => const LivenessCaptureScreen()),
+    );
+    if (path == null || !mounted) return;
+    setState(() => _selfiePath = path);
+  }
+
+  /// Store photo is a plain rear-camera capture (no liveness needed).
+  Future<void> _captureStorePhoto() async {
     final file = await _picker.pickImage(
       source: ImageSource.camera,
-      preferredCameraDevice: selfie ? CameraDevice.front : CameraDevice.rear,
+      preferredCameraDevice: CameraDevice.rear,
       imageQuality: 70,
       maxWidth: 1280,
     );
     if (file == null || !mounted) return;
-    setState(() {
-      if (selfie) {
-        _selfiePath = file.path;
-      } else {
-        _storePhotoPath = file.path;
-      }
-    });
+    setState(() => _storePhotoPath = file.path);
   }
 
   bool get _canSubmit =>
@@ -220,14 +226,14 @@ class _CheckInScreenState extends ConsumerState<CheckInScreen> {
               label: l.attendanceSelfie,
               path: _selfiePath,
               icon: Icons.face_outlined,
-              onTap: () => _capture(selfie: true),
+              onTap: _captureSelfie,
             ),
             const SizedBox(height: 12),
             _PhotoTile(
               label: l.attendanceStorePhoto,
               path: _storePhotoPath,
               icon: Icons.storefront_outlined,
-              onTap: () => _capture(selfie: false),
+              onTap: _captureStorePhoto,
             ),
             const SizedBox(height: 16),
             TextField(

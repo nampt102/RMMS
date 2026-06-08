@@ -27,6 +27,7 @@ dependencies:
   geolocator: ^13.0.2 # GPS for check-in (BR-204)
   go_router: ^14.6.1
   google_fonts: ^6.2.1 # Space Grotesk (display) + Plus Jakarta Sans (body) — Redesign 2026
+  google_mlkit_face_detection: ^0.13.1 # on-device active liveness for check-in selfie (ADR-013)
   hive: ^2.2.3
   hive_flutter: ^1.1.0
   image: ^4.3.0 # EXIF preservation
