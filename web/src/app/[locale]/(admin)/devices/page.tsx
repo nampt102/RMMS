@@ -78,7 +78,7 @@ export default function DeviceRequestsPage() {
             </Button>
           }
           width={420}
-          modalProps={{ destroyOnClose: true }}
+          modalProps={{ destroyOnHidden: true }}
           onFinish={async (values) => {
             try {
               await reject.mutateAsync({ deviceId: row.deviceId, reason: values.reason as string });

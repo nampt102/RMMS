@@ -189,7 +189,7 @@ function StoresTable() {
               {t("create")}
             </Button>
           }
-          modalProps={{ destroyOnClose: true }}
+          modalProps={{ destroyOnHidden: true }}
           onFinish={async (values) => {
             try {
               await createStore.mutateAsync({
@@ -254,7 +254,7 @@ function EditStoreButton({ store, areaOptions, update, onDone, onError, t }: Edi
     <ModalForm
       title={t("editTitle")}
       trigger={<a>{t("edit")}</a>}
-      modalProps={{ destroyOnClose: true }}
+      modalProps={{ destroyOnHidden: true }}
       initialValues={{
         name: store.name,
         address: store.address ?? "",

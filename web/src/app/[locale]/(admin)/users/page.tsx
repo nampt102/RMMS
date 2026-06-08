@@ -245,7 +245,7 @@ export default function UsersPage() {
               {t("create")}
             </Button>
           }
-          modalProps={{ destroyOnClose: true }}
+          modalProps={{ destroyOnHidden: true }}
           onFinish={async (values) => {
             try {
               await createUser.mutateAsync({
@@ -299,7 +299,7 @@ export default function UsersPage() {
       width={520}
       open={detail !== null}
       onClose={() => setDetail(null)}
-      destroyOnClose
+      destroyOnHidden
     >
       {detail && (
         <>
@@ -404,7 +404,7 @@ function EditUserButton({ user, onDone, onError, update, t }: EditProps) {
     <ModalForm
       title={t("editTitle")}
       trigger={<a>{t("edit")}</a>}
-      modalProps={{ destroyOnClose: true }}
+      modalProps={{ destroyOnHidden: true }}
       initialValues={{
         fullName: user.fullName,
         phone: user.phone ?? "",

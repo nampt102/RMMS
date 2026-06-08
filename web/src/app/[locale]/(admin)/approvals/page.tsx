@@ -187,7 +187,7 @@ export default function ApprovalsPage() {
           setReasonModal({ open: false, id: null, mode: "reject" });
           form.resetFields();
         }}
-        destroyOnClose
+        destroyOnHidden
       >
         <Form form={form} layout="vertical">
           <Form.Item

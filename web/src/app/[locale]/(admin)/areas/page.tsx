@@ -90,7 +90,7 @@ export default function AreasPage() {
               {t("create")}
             </Button>
           }
-          modalProps={{ destroyOnClose: true }}
+          modalProps={{ destroyOnHidden: true }}
           onFinish={async (values) => {
             try {
               await createArea.mutateAsync({
@@ -129,7 +129,7 @@ function EditAreaButton({ area, parentOptions, update, onError, t }: EditProps) 
     <ModalForm
       title={t("editTitle")}
       trigger={<a>{t("edit")}</a>}
-      modalProps={{ destroyOnClose: true }}
+      modalProps={{ destroyOnHidden: true }}
       initialValues={{ name: area.name, parentAreaId: area.parentAreaId ?? undefined }}
       onFinish={async (values) => {
         try {

@@ -76,7 +76,7 @@ export default function CategoriesPage() {
               {t("create")}
             </Button>
           }
-          modalProps={{ destroyOnClose: true }}
+          modalProps={{ destroyOnHidden: true }}
           onFinish={async (values) => {
             try {
               await createCategory.mutateAsync({ code: values.code as string, name: values.name as string });
@@ -109,7 +109,7 @@ function EditCategoryButton({ category, update, onError, t }: EditProps) {
     <ModalForm
       title={t("editTitle")}
       trigger={<a>{t("edit")}</a>}
-      modalProps={{ destroyOnClose: true }}
+      modalProps={{ destroyOnHidden: true }}
       initialValues={{ name: category.name }}
       onFinish={async (values) => {
         try {
