@@ -451,7 +451,7 @@ class _Empty extends StatelessWidget {
     return ListView(
       children: [
         const SizedBox(height: 80),
-        Center(
+        const Center(
           child: AppIconTile(
             icon: Icons.event_available_rounded,
             tone: AppTone.indigo,
