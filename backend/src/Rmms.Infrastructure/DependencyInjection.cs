@@ -88,16 +88,30 @@ public static class DependencyInjection
         services.AddSingleton<IApprovalTokenService, Approvals.ApprovalTokenService>();
         services.AddScoped<IApprovalService, Approvals.ApprovalService>();
 
-        // ----- M14 Notification (basic: in-app + push + email) -----
-        // Push provider: logging by default (Phase 1A, no Firebase credential needed);
-        // swap to a real FCM HTTP v1 sender in Phase 1B via Push:Provider=fcm.
-        var pushProvider = config.GetSection("Push")["Provider"]?.ToLowerInvariant() ?? "console";
-        switch (pushProvider)
+        // ----- M14 Notification (in-app + push + email) -----
+        // Push provider: logging by default (Dev/CI, no Firebase credential needed);
+        // real FCM HTTP v1 (Firebase Admin SDK) via Push:Provider=fcm.
+        services.Configure<Notifications.PushOptions>(config.GetSection(Notifications.PushOptions.SectionName));
+        var pushProvider = config.GetSection(Notifications.PushOptions.SectionName)["Provider"]?.ToLowerInvariant() ?? "console";
+        if (pushProvider == "fcm")
         {
-            // case "fcm": services.AddScoped<IPushSender, Notifications.FcmPushSender>(); break; // 1B
-            default:
-                services.AddScoped<IPushSender, Notifications.LoggingPushSender>();
-                break;
+            // Initialise the default FirebaseApp once. Empty CredentialsPath falls back to the
+            // ambient GOOGLE_APPLICATION_CREDENTIALS env var (Application Default Credentials).
+            if (FirebaseAdmin.FirebaseApp.DefaultInstance is null)
+            {
+                var credPath = config.GetSection(Notifications.PushOptions.SectionName)["CredentialsPath"];
+                FirebaseAdmin.FirebaseApp.Create(new FirebaseAdmin.AppOptions
+                {
+                    Credential = string.IsNullOrWhiteSpace(credPath)
+                        ? Google.Apis.Auth.OAuth2.GoogleCredential.GetApplicationDefault()
+                        : Google.Apis.Auth.OAuth2.GoogleCredential.FromFile(credPath),
+                });
+            }
+            services.AddScoped<IPushSender, Notifications.FcmPushSender>();
+        }
+        else
+        {
+            services.AddScoped<IPushSender, Notifications.LoggingPushSender>();
         }
         services.AddScoped<INotificationService, Notifications.NotificationService>();
 
