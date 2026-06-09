@@ -59,6 +59,9 @@ dev_dependencies:
   riverpod_lint: ^2.6.3
 
 flutter:
+  config:
+    # google_mlkit_* uses CocoaPods; Firebase SPM duplicates GoogleDataTransport (linker error).
+    enable-swift-package-manager: false
   uses-material-design: true
   generate: true # required for ARB-based l10n
   assets:
