@@ -1,4 +1,5 @@
 import 'package:dio/dio.dart';
+import 'package:flutter/foundation.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
 import '../../../core/device/device_info_service.dart';
@@ -6,6 +7,7 @@ import '../../../core/network/api_client.dart';
 import '../../../core/network/api_exception.dart';
 import '../../../core/notifications/fcm_service.dart';
 import '../../../core/storage/secure_storage.dart';
+import '../../notifications/data/notifications_repository.dart';
 import '../domain/auth_user.dart';
 import 'auth_api.dart';
 import 'dtos/auth_dtos.dart';
@@ -20,6 +22,7 @@ final authRepositoryProvider = Provider<AuthRepository>((ref) {
     storage: ref.watch(secureStorageProvider),
     deviceInfo: ref.watch(deviceInfoServiceProvider),
     fcmService: ref.watch(fcmServiceProvider),
+    notifications: ref.watch(notificationsRepositoryProvider),
   );
 });
 
@@ -32,15 +35,18 @@ class AuthRepository {
     required SecureStorage storage,
     required DeviceInfoService deviceInfo,
     required FcmService fcmService,
+    required NotificationsRepository notifications,
   })  : _api = api,
         _storage = storage,
         _deviceInfo = deviceInfo,
-        _fcmService = fcmService;
+        _fcmService = fcmService,
+        _notifications = notifications;
 
   final AuthApi _api;
   final SecureStorage _storage;
   final DeviceInfoService _deviceInfo;
   final FcmService _fcmService;
+  final NotificationsRepository _notifications;
 
   Future<bool> hasSession() => _storage.hasTokens();
 
@@ -79,6 +85,9 @@ class AuthRepository {
       // Best-effort: a null token (Firebase unconfigured / permission denied)
       // just omits it — the server treats it as optional (BR-105 device flow).
       final fcmToken = await _fcmService.token();
+      debugPrint(
+        'AuthRepository.login: fcmToken ${fcmToken == null ? 'NULL (không gửi lên server)' : 'present (${fcmToken.length} chars)'}',
+      );
       final res = await _api.login(
         email: email,
         password: password,
@@ -89,6 +98,18 @@ class AuthRepository {
         access: res.accessToken,
         refresh: res.refreshToken,
       );
+      // Login body may omit fcmToken if permission/APNs were not ready yet.
+      final refreshedToken = await _fcmService.token();
+      if (refreshedToken != null && refreshedToken.isNotEmpty) {
+        try {
+          await _notifications.registerFcmToken(refreshedToken);
+          debugPrint('AuthRepository.login: PUT /users/me/fcm-token OK');
+        } catch (e) {
+          debugPrint('AuthRepository.login: PUT /users/me/fcm-token failed ($e)');
+        }
+      } else {
+        debugPrint('AuthRepository.login: skip PUT /users/me/fcm-token (no token)');
+      }
       return _fromLoginUser(res.user);
     });
   }

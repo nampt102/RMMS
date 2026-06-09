@@ -12,6 +12,9 @@ import 'core/notifications/fcm_service.dart';
 Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
 
+  // Init Firebase before login/session restore so /auth/login can send fcmToken.
+  await FcmService().initialize();
+
   // Use bundled fonts in google_fonts/ — avoids runtime HTTPS fetch (fails on
   // corp/VPN networks with SSL inspection when testing on physical devices).
   GoogleFonts.config.allowRuntimeFetching = false;

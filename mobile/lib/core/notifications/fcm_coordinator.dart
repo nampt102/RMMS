@@ -56,6 +56,9 @@ class FcmCoordinator {
     // M14: re-register a rotated FCM token with the active device (best-effort).
     _subs.add(_service.onTokenRefresh.listen(_registerToken));
 
+    // Initial token (login may have run before Firebase was ready).
+    await syncTokenWithServer();
+
     // A notification tap that cold-started the app: follow the deep link.
     final initial = await _service.initialMessage();
     if (initial != null) _handle(initial, showBanner: false, navigate: true);
@@ -67,13 +70,30 @@ class FcmCoordinator {
     });
   }
 
+  /// Push the current FCM token to the server for the active device (M14).
+  /// Safe to call after login or session restore; no-op when unavailable.
+  Future<void> syncTokenWithServer() async {
+    for (var attempt = 0; attempt < 3; attempt++) {
+      final token = await _service.token();
+      if (token != null && token.isNotEmpty) {
+        await _registerToken(token);
+        debugPrint('FcmCoordinator: fcm-token registered with server');
+        return;
+      }
+      if (attempt < 2) {
+        await Future<void>.delayed(const Duration(seconds: 2));
+      }
+    }
+    debugPrint('FcmCoordinator: no FCM token to register after retries');
+  }
+
   Future<void> _registerToken(String token) async {
     if (token.isEmpty) return;
     try {
       await _ref.read(notificationsRepositoryProvider).registerFcmToken(token);
     } catch (e) {
       // Not signed in / no active device yet — ignore; login re-sends the token.
-      debugPrint('FcmCoordinator: fcm-token register skipped ($e)');
+      debugPrint('FcmCoordinator: PUT /users/me/fcm-token failed ($e)');
     }
   }
 

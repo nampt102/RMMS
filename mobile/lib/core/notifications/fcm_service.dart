@@ -1,7 +1,11 @@
+import 'dart:io';
+
 import 'package:firebase_core/firebase_core.dart';
 import 'package:firebase_messaging/firebase_messaging.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
+
+import '../config/app_config.dart';
 
 /// Background isolate handler for FCM. Must be a top-level (or static) function
 /// annotated `@pragma('vm:entry-point')` so it survives tree-shaking and can be
@@ -31,18 +35,66 @@ Future<void> firebaseMessagingBackgroundHandler(RemoteMessage message) async {
 /// acquires the token (sent on login per BR-105 device flow) and reacts to
 /// incoming messages.
 class FcmService {
+  static Future<void>? _initFuture;
+  static bool _firebaseReady = false;
+
   bool _available = false;
+  bool _permissionRequested = false;
   bool get isAvailable => _available;
 
-  /// Guarded Firebase init. Safe to call once at startup.
+  /// Guarded Firebase init. Safe to call multiple times / from multiple instances.
   Future<void> initialize() async {
-    try {
-      await Firebase.initializeApp();
+    if (_firebaseReady) {
       _available = true;
+      return;
+    }
+    _initFuture ??= _doInitialize();
+    await _initFuture;
+    _available = _firebaseReady;
+  }
+
+  Future<void> _doInitialize() async {
+    try {
+      if (Firebase.apps.isEmpty) {
+        await Firebase.initializeApp();
+      }
+      _firebaseReady = true;
+      debugPrint('FcmService: Firebase initialized');
     } catch (e) {
-      _available = false;
+      _firebaseReady = false;
       debugPrint('FcmService: Firebase unavailable, FCM disabled ($e)');
     }
+  }
+
+  /// iOS needs notification permission + APNs token before FCM returns a token.
+  Future<void> ensureReadyForToken() async {
+    await initialize();
+    if (!_available) return;
+
+    if (!_permissionRequested) {
+      await requestPermission();
+      _permissionRequested = true;
+    }
+
+    if (Platform.isIOS) {
+      await _waitForApnsToken();
+    }
+  }
+
+  Future<void> _waitForApnsToken() async {
+    for (var i = 0; i < 10; i++) {
+      try {
+        final apns = await FirebaseMessaging.instance.getAPNSToken();
+        if (apns != null) {
+          debugPrint('FcmService: APNs token ready');
+          return;
+        }
+      } catch (e) {
+        debugPrint('FcmService: getAPNSToken attempt ${i + 1} ($e)');
+      }
+      await Future<void>.delayed(const Duration(milliseconds: 500));
+    }
+    debugPrint('FcmService: APNs token not available (check Push capability + entitlements)');
   }
 
   /// Prompts the user for notification permission (iOS + Android 13+).
@@ -50,7 +102,8 @@ class FcmService {
   Future<void> requestPermission() async {
     if (!_available) return;
     try {
-      await FirebaseMessaging.instance.requestPermission();
+      final settings = await FirebaseMessaging.instance.requestPermission();
+      debugPrint('FcmService: permission=${settings.authorizationStatus}');
     } catch (e) {
       debugPrint('FcmService: requestPermission failed ($e)');
     }
@@ -60,11 +113,28 @@ class FcmService {
   /// Sent in the `/auth/login` device payload so the server can later push
   /// device-change outcomes to this install.
   Future<String?> token() async {
+    await ensureReadyForToken();
     if (!_available) return null;
     try {
-      return await FirebaseMessaging.instance.getToken();
+      final t = await FirebaseMessaging.instance.getToken();
+      if (t == null || t.isEmpty) {
+        debugPrint('FcmService: getToken returned empty');
+      } else {
+        debugPrint('FcmService: getToken ok (${t.length} chars)');
+      }
+      return t;
     } catch (e) {
+      final msg = e.toString();
       debugPrint('FcmService: getToken failed ($e)');
+      if (msg.contains('TLS') ||
+          msg.contains('SSL') ||
+          msg.contains('certificate')) {
+        debugPrint(
+          'FcmService: iPhone không kết nối được Firebase (Google). '
+          'Tắt VPN/proxy, thử 4G, hoặc mở firewall cho *.googleapis.com. '
+          'API LAN (${AppConfig.apiBaseUrl}) vẫn chạy nhưng FCM token sẽ null.',
+        );
+      }
       return null;
     }
   }

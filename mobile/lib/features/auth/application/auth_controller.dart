@@ -1,6 +1,7 @@
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
 import '../../../core/network/api_exception.dart';
+import '../../../core/notifications/fcm_coordinator.dart';
 import '../data/auth_repository.dart';
 import 'auth_state.dart';
 
@@ -26,6 +27,7 @@ class AuthController extends Notifier<AuthState> {
     }
     try {
       state = AuthState.authenticated(await _repo.me());
+      await _syncFcmToken();
     } on ApiException {
       // Tokens are stale/invalid and refresh failed — force a fresh login.
       await _repo.clearSession();
@@ -43,6 +45,7 @@ class AuthController extends Notifier<AuthState> {
     try {
       final user = await _repo.login(email: email, password: password);
       state = AuthState.authenticated(user);
+      await _syncFcmToken();
     } on ApiException catch (e) {
       if (e.code == ApiErrorCodes.deviceNotAuthorized) {
         state = const AuthState.deviceNotAuthorized();
@@ -55,6 +58,14 @@ class AuthController extends Notifier<AuthState> {
   Future<void> logout() async {
     await _repo.logout();
     state = const AuthState.unauthenticated();
+  }
+
+  Future<void> _syncFcmToken() async {
+    try {
+      await ref.read(fcmCoordinatorProvider).syncTokenWithServer();
+    } catch (_) {
+      // Best-effort — token refresh / next app open will retry.
+    }
   }
 
   /// Returns to the login screen from the device-pending screen.
