@@ -1,0 +1,194 @@
+# ============================================================
+# RMMS 2026 — Production stack (Vultr VPS, Ubuntu 22.04)
+# Runs prebuilt images from GHCR (pushed by .github/workflows/{backend,web}.yml).
+#
+# One-time server setup:
+#   1. Copy this file + .env (from .env.example) + infra/ to the server
+#      (or `git clone` the repo — only this file, .env and infra/ are used).
+#   2. Login to GHCR (use a PAT with read:packages if images are private):
+#        docker login ghcr.io -u <github-user>
+#   3. Set IMAGE_TAG / domains / secrets in .env (see .env.example).
+#
+# Deploy / update:
+#   docker compose -f docker-compose.prod.yml pull
+#   docker compose -f docker-compose.prod.yml up -d
+#
+# Rollback: set IMAGE_TAG=sha-<old-commit> in .env, then pull + up -d again.
+# ============================================================
+
+name: rmms-prod
+
+x-image-base: &restart-policy
+  restart: unless-stopped
+
+services:
+  # ---------- PostgreSQL 16 + PostGIS ----------
+  postgres:
+    image: postgis/postgis:16-3.4
+    container_name: rmms-postgres
+    <<: *restart-policy
+    environment:
+      POSTGRES_DB: ${POSTGRES_DB:-rmms}
+      POSTGRES_USER: ${POSTGRES_USER:-rmms}
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:?set POSTGRES_PASSWORD in .env}
+      TZ: Asia/Ho_Chi_Minh
+    volumes:
+      # Host bind mount for easy backup (RMMS app database lives here).
+      - ${POSTGRES_DATA_DIR:-./data/postgres}:/var/lib/postgresql/data
+      - ./infra/postgres/init:/docker-entrypoint-initdb.d:ro
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U ${POSTGRES_USER:-rmms} -d ${POSTGRES_DB:-rmms}"]
+      interval: 10s
+      timeout: 5s
+      retries: 10
+    networks: [rmms-net]
+
+  # ---------- Redis 7 ----------
+  redis:
+    image: redis:7-alpine
+    container_name: rmms-redis
+    <<: *restart-policy
+    command: ["redis-server", "--appendonly", "yes", "--maxmemory", "256mb", "--maxmemory-policy", "allkeys-lru"]
+    volumes:
+      - redis-data:/data
+    healthcheck:
+      test: ["CMD", "redis-cli", "ping"]
+      interval: 10s
+      timeout: 3s
+      retries: 10
+    networks: [rmms-net]
+
+  # ---------- MinIO (S3-compatible object storage) ----------
+  minio:
+    image: minio/minio:latest
+    container_name: rmms-minio
+    <<: *restart-policy
+    command: server /data --console-address ":9001"
+    environment:
+      MINIO_ROOT_USER: ${MINIO_ROOT_USER:-rmms}
+      MINIO_ROOT_PASSWORD: ${MINIO_ROOT_PASSWORD:?set MINIO_ROOT_PASSWORD in .env}
+    ports:
+      # TEMPORARY: direct ip:9000 access for presigned URLs until FILES_DOMAIN
+      # DNS is live. Once switched to the Caddy route, remove this mapping.
+      - "9000:9000"
+    volumes:
+      # Host bind mount for easy backup (selfie / store photos live here).
+      - ${MINIO_DATA_DIR:-./data/minio}:/data
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:9000/minio/health/live"]
+      interval: 30s
+      timeout: 5s
+      retries: 5
+    networks: [rmms-net]
+
+  # ---------- API (image from GHCR, built by backend.yml) ----------
+  api:
+    image: ${REGISTRY:-ghcr.io/nampt102}/rmms-api:${IMAGE_TAG:-latest}
+    container_name: rmms-api
+    <<: *restart-policy
+    depends_on:
+      postgres: { condition: service_healthy }
+      redis:    { condition: service_healthy }
+      minio:    { condition: service_started }
+    environment:
+      ASPNETCORE_ENVIRONMENT: Production
+      ConnectionStrings__Postgres: "Host=postgres;Port=5432;Database=${POSTGRES_DB:-rmms};Username=${POSTGRES_USER:-rmms};Password=${POSTGRES_PASSWORD}"
+      ConnectionStrings__Redis: "redis:6379,abortConnect=false"
+      Jwt__SigningKey: ${JWT_SIGNING_KEY:?set JWT_SIGNING_KEY in .env}
+      Jwt__Issuer: ${JWT_ISSUER:-rmms.local}
+      Jwt__Audience: ${JWT_AUDIENCE:-rmms.clients}
+      MinIO__Endpoint: "minio:9000"
+      # Browser-reachable host for presigned image URLs (web admin).
+      # Temporary: <server-ip>:9000 with MINIO_PUBLIC_USE_SSL=false.
+      # Final: files.<domain> with MINIO_PUBLIC_USE_SSL=true (Caddy terminates TLS).
+      MinIO__PublicEndpoint: ${MINIO_PUBLIC_ENDPOINT:?set MINIO_PUBLIC_ENDPOINT in .env}
+      MinIO__PublicUseSsl: ${MINIO_PUBLIC_USE_SSL:-false}
+      MinIO__AccessKey: ${MINIO_ROOT_USER:-rmms}
+      MinIO__SecretKey: ${MINIO_ROOT_PASSWORD}
+      CompreFace__BaseUrl: ${CompreFace__BaseUrl:-http://compreface-fe:8080}
+      CompreFace__ApiKey: ${CompreFace__ApiKey:-}
+      CompreFace__ConfidenceThreshold: ${CompreFace__ConfidenceThreshold:-0.85}
+      # CORS + base URL for links in BUH approval emails (BR-407) → web admin
+      Cors__AllowedOrigins__0: "https://${ADMIN_DOMAIN}"
+      App__AppBaseUrl: "https://${ADMIN_DOMAIN}"
+      # HMAC secret for BUH email-link tokens (BR-407) — blank falls back to a
+      # publicly-known dev key, so it MUST be set in prod.
+      Approval__SigningKey: ${APPROVAL_SIGNING_KEY:?set APPROVAL_SIGNING_KEY in .env}
+      # Email (approval links, notifications). Provider: Smtp | SendGrid | Console (log only)
+      Email__Provider: ${EMAIL_PROVIDER:-Smtp}
+      Email__FromEmail: ${EMAIL_FROM_EMAIL:?set EMAIL_FROM_EMAIL in .env}
+      Email__FromName: ${EMAIL_FROM_NAME:-RMMS}
+      Email__ApiKey: ${SENDGRID_API_KEY:-}
+      Email__SmtpHost: ${SMTP_HOST:-smtp.gmail.com}
+      Email__SmtpPort: ${SMTP_PORT:-587}
+      Email__SmtpUser: ${SMTP_USER:-}
+      Email__SmtpPassword: ${SMTP_PASSWORD:-}
+      # Push notifications — fcm needs the Firebase service-account file (mounted below)
+      Push__Provider: ${PUSH_PROVIDER:-fcm}
+      Push__CredentialsPath: "secrets/firebase-service-account.json"
+      Sentry__Dsn: ${SENTRY_DSN:-}
+    volumes:
+      - ./secrets/firebase-service-account.json:/app/secrets/firebase-service-account.json:ro
+    networks: [rmms-net]
+
+  # ---------- Worker / Hangfire (image from GHCR, built by backend.yml) ----------
+  worker:
+    image: ${REGISTRY:-ghcr.io/nampt102}/rmms-worker:${IMAGE_TAG:-latest}
+    container_name: rmms-worker
+    <<: *restart-policy
+    depends_on:
+      postgres: { condition: service_healthy }
+      redis:    { condition: service_healthy }
+    environment:
+      DOTNET_ENVIRONMENT: Production
+      ConnectionStrings__Postgres: "Host=postgres;Port=5432;Database=${POSTGRES_DB:-rmms};Username=${POSTGRES_USER:-rmms};Password=${POSTGRES_PASSWORD}"
+      ConnectionStrings__Redis: "redis:6379,abortConnect=false"
+      # Attendance photo retention job (M05, CR-4) purges objects from MinIO —
+      # without an endpoint the worker silently falls back to a no-op storage.
+      MinIO__Endpoint: "minio:9000"
+      MinIO__AccessKey: ${MINIO_ROOT_USER:-rmms}
+      MinIO__SecretKey: ${MINIO_ROOT_PASSWORD}
+      Sentry__Dsn: ${SENTRY_DSN:-}
+    networks: [rmms-net]
+
+  # ---------- Web Admin/BUH (image from GHCR, built by web.yml) ----------
+  # NEXT_PUBLIC_API_BASE_URL is baked in at image build time (repo variable in
+  # GitHub Actions) — runtime env here only covers server-side values.
+  web:
+    image: ${REGISTRY:-ghcr.io/nampt102}/rmms-web:${IMAGE_TAG:-latest}
+    container_name: rmms-web
+    <<: *restart-policy
+    depends_on: [api]
+    environment:
+      NODE_ENV: production
+    networks: [rmms-net]
+
+  # ---------- Caddy reverse proxy (auto HTTPS via Let's Encrypt) ----------
+  caddy:
+    image: caddy:2-alpine
+    container_name: rmms-caddy
+    <<: *restart-policy
+    depends_on: [api, web]
+    ports:
+      - "80:80"
+      - "443:443"
+    environment:
+      API_DOMAIN: ${API_DOMAIN:?set API_DOMAIN in .env}
+      ADMIN_DOMAIN: ${ADMIN_DOMAIN:?set ADMIN_DOMAIN in .env}
+      # files.localhost = harmless placeholder (internal cert, no ACME) until DNS is ready
+      FILES_DOMAIN: ${FILES_DOMAIN:-files.localhost}
+      ACME_EMAIL: ${ACME_EMAIL:-it@motivesvn.com}
+    volumes:
+      - ./infra/caddy/Caddyfile.prod:/etc/caddy/Caddyfile:ro
+      - caddy-data:/data
+      - caddy-config:/config
+    networks: [rmms-net]
+
+volumes:
+  redis-data:
+  caddy-data:
+  caddy-config:
+
+networks:
+  rmms-net:
+    driver: bridge

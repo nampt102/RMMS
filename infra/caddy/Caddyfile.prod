@@ -1,0 +1,49 @@
+# =========================================================
+# RMMS — Caddy reverse proxy (PRODUCTION)
+# Mounted by docker-compose.prod.yml. Domains/email come from
+# environment variables (API_DOMAIN, ADMIN_DOMAIN, ACME_EMAIL).
+# Caddy auto-provisions Let's Encrypt certificates.
+# =========================================================
+
+{
+    email {$ACME_EMAIL}
+    admin off
+}
+
+# ---------- API (mobile + web admin clients) ----------
+{$API_DOMAIN} {
+    encode gzip zstd
+
+    reverse_proxy api:8080
+
+    log {
+        output stdout
+        format console
+    }
+}
+
+# ---------- MinIO presigned files (selfie / store photos) ----------
+# Until DNS is ready, FILES_DOMAIN defaults to files.localhost (internal cert,
+# no ACME attempts) and clients use <server-ip>:9000 directly instead.
+# When the real domain points here: set FILES_DOMAIN, MINIO_PUBLIC_ENDPOINT and
+# MINIO_PUBLIC_USE_SSL=true in .env, then close port 9000 on the minio service.
+{$FILES_DOMAIN} {
+    reverse_proxy minio:9000
+
+    log {
+        output stdout
+        format console
+    }
+}
+
+# ---------- Web Admin/BUH (Next.js) ----------
+{$ADMIN_DOMAIN} {
+    encode gzip zstd
+
+    reverse_proxy web:3000
+
+    log {
+        output stdout
+        format console
+    }
+}
