@@ -33,6 +33,10 @@ services:
       POSTGRES_USER: ${POSTGRES_USER:-rmms}
       POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:?set POSTGRES_PASSWORD in .env}
       TZ: Asia/Ho_Chi_Minh
+    ports:
+      # Published for external DB clients (DBeaver/psql). Restrict via firewall,
+      # or remove this mapping if only containers need the DB.
+      - "${POSTGRES_PORT:-5432}:5432"
     volumes:
       # Host bind mount for easy backup (RMMS app database lives here).
       - ${POSTGRES_DATA_DIR:-./data/postgres}:/var/lib/postgresql/data
