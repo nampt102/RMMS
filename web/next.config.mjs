@@ -19,11 +19,18 @@ const nextConfig = {
     ],
   },
   async rewrites() {
+    // Dev convenience: proxy /api/proxy/* → backend to avoid CORS. Next requires an
+    // absolute (http/https) destination, so only emit the rewrite when a valid base
+    // URL is configured. In prod the web image is built with NEXT_PUBLIC_API_BASE_URL
+    // empty (browser calls relative /api/* and Caddy path-routes it) → no rewrite.
+    const apiBase = process.env.NEXT_PUBLIC_API_BASE_URL?.trim();
+    if (!apiBase || !/^https?:\/\//.test(apiBase)) {
+      return [];
+    }
     return [
-      // Proxy API calls in dev so we don't fight CORS
       {
         source: "/api/proxy/:path*",
-        destination: `${process.env.NEXT_PUBLIC_API_BASE_URL ?? "http://localhost:5080"}/api/:path*`,
+        destination: `${apiBase}/api/:path*`,
       },
     ];
   },

@@ -3,7 +3,7 @@
 import { Button, Card, Input, Result, Spin } from "antd";
 import { useTranslations } from "next-intl";
 import { useSearchParams } from "next/navigation";
-import { useEffect, useState } from "react";
+import { Suspense, useEffect, useState } from "react";
 import {
   confirmEmailAction,
   previewEmailAction,
@@ -17,7 +17,7 @@ type Phase = "loading" | "preview" | "rejecting" | "submitting" | "done" | "erro
  * Renders a friendly state for expired / used / already-decided links and lets the
  * BUH approve or reject (reason) in one click. Uses the public, no-auth endpoints.
  */
-export default function ApproveLandingPage() {
+function ApproveLandingContent() {
   const t = useTranslations("approveLink");
   const token = useSearchParams().get("token") ?? "";
 
@@ -152,5 +152,28 @@ export default function ApproveLandingPage() {
       </div>
       <p className="text-center text-xs text-neutral-400">{t("note")}</p>
     </div>,
+  );
+}
+
+/**
+ * useSearchParams() forces client-side rendering, so Next.js requires a Suspense
+ * boundary around it (otherwise static prerender of this page fails). The fallback
+ * mirrors the in-component "loading" state.
+ */
+export default function ApproveLandingPage() {
+  return (
+    <Suspense
+      fallback={
+        <main className="flex min-h-dvh items-center justify-center bg-neutral-50 p-4">
+          <Card className="w-full max-w-md shadow-sm">
+            <div className="flex flex-col items-center gap-3 py-8">
+              <Spin size="large" />
+            </div>
+          </Card>
+        </main>
+      }
+    >
+      <ApproveLandingContent />
+    </Suspense>
   );
 }
