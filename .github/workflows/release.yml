@@ -1,0 +1,107 @@
+# Release — build + push Docker images to GHCR
+#
+# Triggers ONLY on version tags (v*), e.g. `git tag v1.2.0 && git push origin v1.2.0`.
+# Path filters are intentionally absent: a tag points at an already-merged commit
+# whose diff may not touch backend/ or web/, so a `paths:` filter would silently
+# skip the release. CI (build/test) already ran on that commit via backend.yml / web.yml.
+#
+# Publishes three images, each with two tags:
+#   - <tag>   (e.g. v1.2.0 — pin this in IMAGE_TAG for deploy/rollback)
+#   - latest
+#     ghcr.io/<owner>/rmms-api
+#     ghcr.io/<owner>/rmms-worker
+#     ghcr.io/<owner>/rmms-web
+#
+# Repository variable required for the web image (Settings → Variables):
+#   NEXT_PUBLIC_API_BASE_URL — public API origin baked into the bundle,
+#   e.g. https://api.rmms.example.com
+
+name: release
+
+on:
+  push:
+    tags:
+      - "v*"
+  workflow_dispatch:
+    inputs:
+      tag:
+        description: "Image tag to publish (e.g. v1.2.0)"
+        required: true
+        type: string
+
+concurrency:
+  group: release-${{ github.ref }}
+  cancel-in-progress: false
+
+jobs:
+  images:
+    name: Build + push images (GHCR)
+    runs-on: ubuntu-latest
+    timeout-minutes: 40
+    permissions:
+      contents: read
+      packages: write
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      # GHCR requires a lowercase image namespace; resolve the version tag once.
+      - name: Compute image namespace + version
+        id: meta
+        run: |
+          echo "owner=${GITHUB_REPOSITORY_OWNER,,}" >> "$GITHUB_OUTPUT"
+          if [ "${{ github.event_name }}" = "workflow_dispatch" ]; then
+            echo "version=${{ inputs.tag }}" >> "$GITHUB_OUTPUT"
+          else
+            echo "version=${GITHUB_REF_NAME}" >> "$GITHUB_OUTPUT"
+          fi
+
+      - name: Set up Docker Buildx
+        uses: docker/setup-buildx-action@v3
+
+      - name: Login to GHCR
+        uses: docker/login-action@v3
+        with:
+          registry: ghcr.io
+          username: ${{ github.actor }}
+          password: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Build + push rmms-api
+        uses: docker/build-push-action@v6
+        with:
+          context: backend
+          file: backend/src/Rmms.Api/Dockerfile
+          push: true
+          tags: |
+            ghcr.io/${{ steps.meta.outputs.owner }}/rmms-api:${{ steps.meta.outputs.version }}
+            ghcr.io/${{ steps.meta.outputs.owner }}/rmms-api:latest
+          cache-from: type=gha,scope=rmms-api
+          cache-to: type=gha,scope=rmms-api,mode=max
+
+      - name: Build + push rmms-worker
+        uses: docker/build-push-action@v6
+        with:
+          context: backend
+          file: backend/src/Rmms.Worker/Dockerfile
+          push: true
+          tags: |
+            ghcr.io/${{ steps.meta.outputs.owner }}/rmms-worker:${{ steps.meta.outputs.version }}
+            ghcr.io/${{ steps.meta.outputs.owner }}/rmms-worker:latest
+          cache-from: type=gha,scope=rmms-worker
+          cache-to: type=gha,scope=rmms-worker,mode=max
+
+      - name: Build + push rmms-web
+        uses: docker/build-push-action@v6
+        with:
+          context: web
+          file: web/Dockerfile
+          push: true
+          build-args: |
+            NEXT_PUBLIC_API_BASE_URL=${{ vars.NEXT_PUBLIC_API_BASE_URL }}
+            NEXT_PUBLIC_APP_VERSION=${{ steps.meta.outputs.version }}
+          tags: |
+            ghcr.io/${{ steps.meta.outputs.owner }}/rmms-web:${{ steps.meta.outputs.version }}
+            ghcr.io/${{ steps.meta.outputs.owner }}/rmms-web:latest
+          cache-from: type=gha,scope=rmms-web
+          cache-to: type=gha,scope=rmms-web,mode=max

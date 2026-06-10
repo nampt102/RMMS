@@ -13,7 +13,8 @@
 #   docker compose -f docker-compose.prod.yml pull
 #   docker compose -f docker-compose.prod.yml up -d
 #
-# Rollback: set IMAGE_TAG=sha-<old-commit> in .env, then pull + up -d again.
+# Images are published by .github/workflows/release.yml when a v* tag is pushed.
+# Rollback: set IMAGE_TAG=<old-version> (e.g. v1.1.0) in .env, then pull + up -d again.
 # ============================================================
 
 name: rmms-prod
