@@ -195,7 +195,9 @@ app.UseSerilogRequestLogging(opts =>
 app.UseMiddleware<ExceptionHandlingMiddleware>();
 app.UseRequestLocalization();
 
-if (app.Environment.IsDevelopment())
+// Swagger: always on in Development; in Production opt-in via Swagger__Enabled
+// (docker-compose.prod.yml) — endpoints still require JWT.
+if (app.Environment.IsDevelopment() || app.Configuration.GetValue<bool>("Swagger:Enabled"))
 {
     app.UseSwagger();
     app.UseSwaggerUI();

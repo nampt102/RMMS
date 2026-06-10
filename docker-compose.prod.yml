@@ -129,6 +129,8 @@ services:
       # Push notifications — fcm needs the Firebase service-account file (mounted below)
       Push__Provider: ${PUSH_PROVIDER:-fcm}
       Push__CredentialsPath: "secrets/firebase-service-account.json"
+      # Swagger UI at /swagger (Caddy already routes it). Set SWAGGER_ENABLED=false to hide.
+      Swagger__Enabled: ${SWAGGER_ENABLED:-true}
       Sentry__Dsn: ${SENTRY_DSN:-}
     volumes:
       - ./secrets/firebase-service-account.json:/app/secrets/firebase-service-account.json:ro
