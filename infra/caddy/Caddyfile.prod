@@ -1,20 +1,31 @@
 # =========================================================
-# RMMS — Caddy reverse proxy (PRODUCTION)
-# Mounted by docker-compose.prod.yml. Domains/email come from
-# environment variables (API_DOMAIN, ADMIN_DOMAIN, ACME_EMAIL).
-# Caddy auto-provisions Let's Encrypt certificates.
+# RMMS — Caddy reverse proxy (PRODUCTION, IP:port, no domain yet)
+# Mounted by docker-compose.prod.yml. Caddy listens on :80 inside the
+# container, published on HTTP_PORT (host 80/443 are used by another app).
+# Path-based routing on a single origin → no CORS, no domain needed.
+#   http://<server-ip>:<HTTP_PORT>/        → web (Next.js)
+#   http://<server-ip>:<HTTP_PORT>/api/*   → api (.NET)
 # =========================================================
 
 {
-    email {$ACME_EMAIL}
     admin off
+    # No domain → serve plain HTTP only, never attempt Let's Encrypt.
+    auto_https off
 }
 
-# ---------- API (mobile + web admin clients) ----------
-{$API_DOMAIN} {
+:80 {
     encode gzip zstd
 
-    reverse_proxy api:8080
+    # Backend routes
+    @api path /api/* /health/* /hangfire* /swagger*
+    handle @api {
+        reverse_proxy api:8080
+    }
+
+    # Everything else → web admin/BUH (Next.js)
+    handle {
+        reverse_proxy web:3000
+    }
 
     log {
         output stdout
@@ -22,28 +33,16 @@
     }
 }
 
-# ---------- MinIO presigned files (selfie / store photos) ----------
-# Until DNS is ready, FILES_DOMAIN defaults to files.localhost (internal cert,
-# no ACME attempts) and clients use <server-ip>:9000 directly instead.
-# When the real domain points here: set FILES_DOMAIN, MINIO_PUBLIC_ENDPOINT and
-# MINIO_PUBLIC_USE_SSL=true in .env, then close port 9000 on the minio service.
-{$FILES_DOMAIN} {
-    reverse_proxy minio:9000
-
-    log {
-        output stdout
-        format console
-    }
-}
-
-# ---------- Web Admin/BUH (Next.js) ----------
-{$ADMIN_DOMAIN} {
-    encode gzip zstd
-
-    reverse_proxy web:3000
-
-    log {
-        output stdout
-        format console
-    }
-}
+# ---------- Future: real domains + auto HTTPS ----------
+# Once DNS points at this server AND host 80/443 are free, map "80:80" + "443:443"
+# in docker-compose.prod.yml and replace the :80 block above with:
+#
+# {$API_DOMAIN} {
+#     reverse_proxy api:8080
+# }
+# {$ADMIN_DOMAIN} {
+#     reverse_proxy web:3000
+# }
+# {$FILES_DOMAIN} {
+#     reverse_proxy minio:9000
+# }

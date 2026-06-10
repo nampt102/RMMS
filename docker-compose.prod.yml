@@ -109,9 +109,11 @@ services:
       CompreFace__BaseUrl: ${CompreFace__BaseUrl:-http://compreface-fe:8080}
       CompreFace__ApiKey: ${CompreFace__ApiKey:-}
       CompreFace__ConfidenceThreshold: ${CompreFace__ConfidenceThreshold:-0.85}
-      # CORS + base URL for links in BUH approval emails (BR-407) → web admin
-      Cors__AllowedOrigins__0: "https://${ADMIN_DOMAIN}"
-      App__AppBaseUrl: "https://${ADMIN_DOMAIN}"
+      # Public origin users reach the app at, e.g. http://<server-ip>:8088
+      # Used for BUH approval-email links (BR-407) + CORS. Web & API share this
+      # origin (Caddy path-routing) so CORS is same-origin anyway.
+      Cors__AllowedOrigins__0: ${PUBLIC_BASE_URL:?set PUBLIC_BASE_URL in .env}
+      App__AppBaseUrl: ${PUBLIC_BASE_URL}
       # HMAC secret for BUH email-link tokens (BR-407) — blank falls back to a
       # publicly-known dev key, so it MUST be set in prod.
       Approval__SigningKey: ${APPROVAL_SIGNING_KEY:?set APPROVAL_SIGNING_KEY in .env}
@@ -164,21 +166,18 @@ services:
       NODE_ENV: production
     networks: [rmms-net]
 
-  # ---------- Caddy reverse proxy (auto HTTPS via Let's Encrypt) ----------
+  # ---------- Caddy reverse proxy ----------
+  # HTTP only on a single published port (HTTP_PORT) — host 80/443 are taken by
+  # another app. Routes by path: /api,/health,/hangfire,/swagger → api; rest → web.
+  # When a domain is ready: map 80:80 + 443:443 and switch to the domain block
+  # commented in infra/caddy/Caddyfile.prod for auto-HTTPS.
   caddy:
     image: caddy:2-alpine
     container_name: rmms-caddy
     <<: *restart-policy
     depends_on: [api, web]
     ports:
-      - "80:80"
-      - "443:443"
-    environment:
-      API_DOMAIN: ${API_DOMAIN:?set API_DOMAIN in .env}
-      ADMIN_DOMAIN: ${ADMIN_DOMAIN:?set ADMIN_DOMAIN in .env}
-      # files.localhost = harmless placeholder (internal cert, no ACME) until DNS is ready
-      FILES_DOMAIN: ${FILES_DOMAIN:-files.localhost}
-      ACME_EMAIL: ${ACME_EMAIL:-it@motivesvn.com}
+      - "${HTTP_PORT:-5010}:80"
     volumes:
       - ./infra/caddy/Caddyfile.prod:/etc/caddy/Caddyfile:ro
       - caddy-data:/data
