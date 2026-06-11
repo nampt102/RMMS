@@ -555,6 +555,188 @@ class AppSheet extends StatelessWidget {
 }
 
 // ─────────────────────────────────────────────────────────────────────────────
+// AppPushBanner — foreground push / in-app alert card (top, bento style).
+// Surface card r22, shadow-sm, tone [AppIconTile], slide from top, auto-dismiss.
+// ─────────────────────────────────────────────────────────────────────────────
+
+enum AppPushBannerKind { info, success, warning }
+
+/// Foreground push banner — place inside a [Stack] (e.g. [MaterialApp.builder]).
+/// Slides in from the top; auto-dismisses after [duration].
+class AppPushBanner extends StatefulWidget {
+  const AppPushBanner({
+    super.key,
+    required this.title,
+    required this.body,
+    required this.onDismiss,
+    this.kind = AppPushBannerKind.info,
+    this.dismissLabel,
+    this.duration = const Duration(seconds: 5),
+  });
+
+  final String title;
+  final String body;
+  final AppPushBannerKind kind;
+  final String? dismissLabel;
+  final Duration duration;
+  final VoidCallback onDismiss;
+
+  @override
+  State<AppPushBanner> createState() => _AppPushBannerState();
+}
+
+class _AppPushBannerState extends State<AppPushBanner>
+    with SingleTickerProviderStateMixin {
+  late final AnimationController _ctrl = AnimationController(
+    vsync: this,
+    duration: const Duration(milliseconds: 280),
+  );
+
+  @override
+  void initState() {
+    super.initState();
+    _ctrl.forward();
+    Future.delayed(widget.duration, () async {
+      if (!mounted) return;
+      await _close();
+    });
+  }
+
+  @override
+  void dispose() {
+    _ctrl.dispose();
+    super.dispose();
+  }
+
+  Future<void> _close() async {
+    if (!mounted) return;
+    final reduce = MediaQuery.disableAnimationsOf(context);
+    if (!reduce) await _ctrl.reverse();
+    if (mounted) widget.onDismiss();
+  }
+
+  AppTone get _tone => switch (widget.kind) {
+        AppPushBannerKind.success => AppTone.emerald,
+        AppPushBannerKind.warning => AppTone.amber,
+        AppPushBannerKind.info => AppTone.indigo,
+      };
+
+  IconData get _icon => switch (widget.kind) {
+        AppPushBannerKind.success => Icons.check_circle_rounded,
+        AppPushBannerKind.warning => Icons.warning_amber_rounded,
+        AppPushBannerKind.info => Icons.notifications_active_rounded,
+      };
+
+  @override
+  Widget build(BuildContext context) {
+    final scheme = context.scheme;
+    final semantics = context.semantics;
+    final reduce = MediaQuery.disableAnimationsOf(context);
+    final top = MediaQuery.of(context).padding.top + 10;
+
+    return Positioned(
+      left: 14,
+      right: 14,
+      top: top,
+      child: AnimatedBuilder(
+        animation: _ctrl,
+        builder: (_, child) {
+          final t = reduce ? 1.0 : Curves.easeOutCubic.transform(_ctrl.value);
+          return Transform.translate(
+            offset: Offset(0, (1 - t) * -20),
+            child: Opacity(opacity: t, child: child),
+          );
+        },
+        child: Material(
+          color: Colors.transparent,
+          elevation: 8,
+          shadowColor: Colors.black26,
+          borderRadius: BorderRadius.circular(AppTheme.radiusLg),
+          child: DecoratedBox(
+            decoration: BoxDecoration(
+              color: scheme.surface,
+              borderRadius: BorderRadius.circular(AppTheme.radiusLg),
+              border: Border.all(color: scheme.outline.withValues(alpha: 0.55)),
+              boxShadow: semantics.shadowSm,
+            ),
+            child: Padding(
+              padding: const EdgeInsets.fromLTRB(14, 14, 10, 14),
+              child: Row(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  AppIconTile(
+                    icon: _icon,
+                    tone: _tone,
+                    size: 44,
+                    radius: 14,
+                  ),
+                  const SizedBox(width: 12),
+                  Expanded(
+                    child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      mainAxisSize: MainAxisSize.min,
+                      children: [
+                        if (widget.title.isNotEmpty)
+                          Text(
+                            widget.title,
+                            maxLines: 1,
+                            overflow: TextOverflow.ellipsis,
+                            style: AppTheme.body(
+                              size: 15,
+                              weight: FontWeight.w700,
+                              color: scheme.onSurface,
+                              height: 1.25,
+                            ),
+                          ),
+                        if (widget.title.isNotEmpty && widget.body.isNotEmpty)
+                          const SizedBox(height: 3),
+                        if (widget.body.isNotEmpty)
+                          Text(
+                            widget.body,
+                            maxLines: 2,
+                            overflow: TextOverflow.ellipsis,
+                            style: AppTheme.body(
+                              size: 13.5,
+                              weight: FontWeight.w500,
+                              color: scheme.onSurfaceVariant,
+                              height: 1.35,
+                            ),
+                          ),
+                      ],
+                    ),
+                  ),
+                  const SizedBox(width: 4),
+                  Semantics(
+                    button: true,
+                    label: widget.dismissLabel,
+                    child: PressScale(
+                      onTap: _close,
+                      child: Container(
+                        width: 36,
+                        height: 36,
+                        decoration: BoxDecoration(
+                          color: scheme.surfaceContainerHighest,
+                          shape: BoxShape.circle,
+                        ),
+                        child: Icon(
+                          Icons.close_rounded,
+                          size: 20,
+                          color: scheme.onSurfaceVariant,
+                        ),
+                      ),
+                    ),
+                  ),
+                ],
+              ),
+            ),
+          ),
+        ),
+      ),
+    );
+  }
+}
+
+// ─────────────────────────────────────────────────────────────────────────────
 // AppToast — floating dark pill (#161528), white text, leading status icon,
 // auto-dismiss ~1.9s, rises from bottom (transform-only).
 // ─────────────────────────────────────────────────────────────────────────────

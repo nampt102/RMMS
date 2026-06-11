@@ -14,8 +14,8 @@ dependencies:
   collection: ^1.18.0
   device_info_plus: ^11.2.0
   dio: ^5.7.0
-  firebase_core: ^3.8.0
-  firebase_messaging: ^15.1.5 # FCM push
+  firebase_core: ^4.10.0
+  firebase_messaging: ^16.3.0 # FCM push
   flutter:
     sdk: flutter
   flutter_localizations:

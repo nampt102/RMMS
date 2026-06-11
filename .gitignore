@@ -2,6 +2,9 @@
 # RMMS 2026 — .gitignore (root)
 # ==============================
 
+# Deploy bundle (contains real .env + secrets — copy to server, never commit)
+deploy/
+
 # OS
 .DS_Store
 Thumbs.db

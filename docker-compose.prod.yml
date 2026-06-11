@@ -197,4 +197,7 @@ volumes:
 
 networks:
   rmms-net:
+    # Fixed name (no project prefix) so infra/compreface/docker-compose.yml can
+    # join it as an external network — api reaches CompreFace by container name.
+    name: rmms-net
     driver: bridge

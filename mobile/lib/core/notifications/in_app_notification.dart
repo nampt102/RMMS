@@ -18,8 +18,8 @@ class InAppNotification {
   final InAppNotificationLevel level;
 }
 
-/// Holds the currently visible in-app banner (or `null`). The root widget
-/// watches this and renders a [MaterialBanner].
+/// Holds the currently visible in-app banner (or `null`). [RmmsApp] renders
+/// [AppPushBanner] in [MaterialApp.builder] when non-null.
 class InAppNotificationController extends Notifier<InAppNotification?> {
   @override
   InAppNotification? build() => null;

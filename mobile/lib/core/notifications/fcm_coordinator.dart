@@ -48,8 +48,12 @@ class FcmCoordinator {
     await _service.requestPermission();
 
     // Foreground: show an in-app banner, do not auto-navigate (no user tap).
-    _subs.add(_service.onForegroundMessage
-        .listen((m) => _handle(m, showBanner: true, navigate: false)));
+    _subs.add(_service.onForegroundMessage.listen((m) {
+      debugPrint('FcmCoordinator: onMessage id=${m.messageId} '
+          'title="${m.notification?.title}" data=${m.data}');
+      _handle(m, showBanner: true, navigate: false);
+    }));
+    debugPrint('FcmCoordinator: foreground/openedApp listeners attached');
     // Tapped from tray (warm start): follow the deep link.
     _subs.add(_service.onMessageOpenedApp
         .listen((m) => _handle(m, showBanner: false, navigate: true)));
@@ -136,6 +140,7 @@ class FcmCoordinator {
     // using the server-localized notification copy (M14 sends vi/en per user).
     if (showBanner) {
       final n = message.notification;
+      debugPrint('FcmCoordinator: showBanner notification=${n == null ? 'NULL' : 'title="${n.title}"'}');
       if (n != null && (n.title != null || n.body != null)) {
         final rejected = data[FcmMessageKeys.type] == FcmMessageKeys.typeDeviceChanged &&
             data[FcmMessageKeys.status] == FcmMessageKeys.statusRejected;
