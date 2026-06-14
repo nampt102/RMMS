@@ -6,6 +6,16 @@ Append-only chronological log of significant project milestones, decisions, and 
 
 ---
 
+## 2026-06-14 — Mobile Redesign 2026 follow-ups: self-service face delete + layered mesh + brand_widgets retired
+
+**By:** Mobile lead (MotivesVN IT), AI-assisted
+
+**Status:** ✅ Backend builds (`Rmms.Application` + `Rmms.Api`, 0 errors). Mobile code-only — **Mac runs `flutter pub get` + `flutter analyze`**.
+
+- **Self-service face removal (M06):** new `DELETE /api/v1/face` → `RemoveMyFaceCommand` (scoped to the caller, mirrors `AdminRemoveFaceCommand`): deletes the CompreFace subject, clears the user's enrollment, audit-logs `FaceRemoved` (`self=true`). User must re-enroll before their next check-in passes face (BR-206). Mobile: `FaceApi.remove` / `FaceRepository.remove` wired to the **"Xóa khuôn mặt"** button (loading + toast + `faceStatusProvider` invalidate → screen flips to "Chưa có khuôn mặt"). Previously the button was a placeholder toast.
+- **Layered mesh gradient:** `MeshRadialOverlay` added to `app_widgets.dart` (the ADR-012 grad-mesh radial layers — violet top-left + indigo upper-right blooms) and layered over the base linear `meshGradient` on the Home hero, History summary card, and Assignment store header (was a single linear approximation).
+- **`brand_widgets.dart` retired** (closes the 2026-06-08 deferred item): the last two consumers — `approvals_screen.dart` + `team_monitoring_screen.dart` (Leader screens) — migrated onto the canonical kit (`AppCard` / `AppChip` / `AppTone`); legacy `lib/core/widgets/brand_widgets.dart` deleted. No remaining references.
+
 ## 2026-06-08 — Sprint 09 ✅ CLOSED (M14 Notification + M16 Admin Review) + attendance fixes
 
 **By:** Tech lead (MotivesVN IT), AI-assisted
