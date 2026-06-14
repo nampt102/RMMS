@@ -41,7 +41,7 @@ Append-only chronological log of significant project milestones, decisions, and 
 - **`/forms` list:** ProTable of forms (code, name, type tag, status badge, version + "draft pending", created); create modal (code/name vi-en/type → empty schema → opens Builder).
 - **`/forms/[id]` Form Builder:** meta card (name/desc vi+en) + **drag-drop field list** (@dnd-kit sortable, 44px drag handle, keyboard sensor) + add-field dropdown (13 registry types) + field editor modal (id/label vi-en/required + options editor via `Form.List` for choice types) + rules panel (target users + 6 rule flags) + **Save draft** (assembles `{fields,rules}` JSON → PATCH) / **Publish** (save then POST publish) + **version-history drawer**. Schema round-trips losslessly (passthrough keys preserved).
 - **i18n:** `forms.*` (form/field/type/rule labels) + `admin.navForms` (vi/en, parity 438=438); new admin nav item (admin-only). ui-ux-pro-max: AntD Pro + Tailwind, data-dense, touch ≥44px, accessible DnD.
-- Next: S13 mobile dynamic renderer + offline draft (Hive) + submit + scoring; form assignment endpoints.
+- **Builder follow-up (assignment UI + preview):** added an **Assign drawer** (Segmented role/category/store target → `POST /admin/forms/:id/assignments`, one OR-rule per submit, optional expiry) and a **read-only Preview drawer** rendering the schema with disabled AntD widgets per field type. i18n parity 451=451; type-check + lint + `next build` green. _(Migrations M04/M10/M10_FormFill applied to the dev DB via `dotnet ef database update` — fixes the "relation forms does not exist" 500.)_
 
 ## 2026-06-14 — Sprint 11/12: M10 Form Engine backend skeleton (AC-20/21)
 

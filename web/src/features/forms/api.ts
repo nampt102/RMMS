@@ -64,6 +64,25 @@ export function useUpdateForm() {
   });
 }
 
+export type AssignFormPayload = {
+  role?: string;
+  userId?: string;
+  storeId?: string;
+  categoryId?: string;
+  validFrom?: string;
+  validTo?: string;
+};
+
+export function useAssignForm() {
+  const qc = useQueryClient();
+  return useMutation({
+    mutationFn: async ({ id, payload }: { id: string; payload: AssignFormPayload }) => {
+      await apiClient.post(`/admin/forms/${id}/assignments`, payload);
+    },
+    onSuccess: () => qc.invalidateQueries({ queryKey: FORMS_KEY }),
+  });
+}
+
 export function usePublishForm() {
   const qc = useQueryClient();
   return useMutation({

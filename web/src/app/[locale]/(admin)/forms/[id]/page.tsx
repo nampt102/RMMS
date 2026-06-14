@@ -4,9 +4,11 @@ import {
   ArrowLeftOutlined,
   DeleteOutlined,
   EditOutlined,
+  EyeOutlined,
   HolderOutlined,
   HistoryOutlined,
   PlusOutlined,
+  UsergroupAddOutlined,
 } from "@ant-design/icons";
 import { DndContext, KeyboardSensor, PointerSensor, closestCenter, useSensor, useSensors } from "@dnd-kit/core";
 import type { DragEndEvent } from "@dnd-kit/core";
@@ -23,13 +25,17 @@ import {
   Button,
   Card,
   Checkbox,
+  DatePicker,
   Drawer,
   Dropdown,
   Empty,
   Form,
   Input,
+  InputNumber,
   List,
   Modal,
+  Radio,
+  Segmented,
   Select,
   Space,
   Spin,
@@ -40,7 +46,8 @@ import {
 import { useLocale, useTranslations } from "next-intl";
 import { useParams, useRouter } from "next/navigation";
 import { useEffect, useMemo, useState } from "react";
-import { useForm, useFormVersions, usePublishForm, useUpdateForm } from "@/features/forms/api";
+import { useAssignForm, useForm, useFormVersions, usePublishForm, useUpdateForm } from "@/features/forms/api";
+import { useAllStores, useCategories } from "@/features/organization/api";
 import {
   CHOICE_TYPES,
   FIELD_TYPES,
@@ -74,12 +81,15 @@ export default function FormBuilderPage() {
   const { data: form, isLoading, refetch } = useForm(id);
   const updateForm = useUpdateForm();
   const publishForm = usePublishForm();
+  const assignForm = useAssignForm();
 
   const [meta] = Form.useForm();
   const [fields, setFields] = useState<FieldDef[]>([]);
   const [rules, setRules] = useState<FormRules>({});
   const [editing, setEditing] = useState<FieldDef | null>(null);
   const [historyOpen, setHistoryOpen] = useState(false);
+  const [assignOpen, setAssignOpen] = useState(false);
+  const [previewOpen, setPreviewOpen] = useState(false);
 
   // Hydrate local builder state once the form loads.
   useEffect(() => {
@@ -205,7 +215,13 @@ export default function FormBuilderPage() {
             </Text>
           </div>
         </Space>
-        <Space>
+        <Space wrap>
+          <Button icon={<EyeOutlined />} onClick={() => setPreviewOpen(true)}>
+            {t("preview")}
+          </Button>
+          <Button icon={<UsergroupAddOutlined />} onClick={() => setAssignOpen(true)}>
+            {t("assign")}
+          </Button>
           <Button icon={<HistoryOutlined />} onClick={() => setHistoryOpen(true)}>
             {t("versions")}
           </Button>
@@ -313,6 +329,172 @@ export default function FormBuilderPage() {
       <Drawer title={t("versions")} open={historyOpen} onClose={() => setHistoryOpen(false)} width={360}>
         <VersionList id={id} locale={locale} />
       </Drawer>
+
+      <Drawer title={t("assign")} open={assignOpen} onClose={() => setAssignOpen(false)} width={400}>
+        <AssignDrawer formId={id} assign={assignForm} onDone={() => setAssignOpen(false)} onError={showError} t={t} />
+      </Drawer>
+
+      <Drawer title={t("preview")} open={previewOpen} onClose={() => setPreviewOpen(false)} width={440}>
+        <FormPreview fields={fields} lang={locale} t={t} />
+      </Drawer>
+    </div>
+  );
+}
+
+function AssignDrawer({
+  formId,
+  assign,
+  onDone,
+  onError,
+  t,
+}: {
+  formId: string;
+  assign: ReturnType<typeof useAssignForm>;
+  onDone: () => void;
+  onError: (e: unknown) => void;
+  t: ReturnType<typeof useTranslations>;
+}) {
+  const { message } = App.useApp();
+  const { data: categories } = useCategories();
+  const { data: stores } = useAllStores();
+  const [target, setTarget] = useState<"role" | "category" | "store">("role");
+  const [value, setValue] = useState<string | undefined>("pg");
+  const [validTo, setValidTo] = useState<string | undefined>();
+
+  const onTargetChange = (v: "role" | "category" | "store") => {
+    setTarget(v);
+    setValue(v === "role" ? "pg" : undefined);
+  };
+
+  const submit = async () => {
+    if (!value) {
+      message.warning(t("assignPickTarget"));
+      return;
+    }
+    try {
+      await assign.mutateAsync({
+        id: formId,
+        payload: {
+          role: target === "role" ? value : undefined,
+          categoryId: target === "category" ? value : undefined,
+          storeId: target === "store" ? value : undefined,
+          validTo,
+        },
+      });
+      message.success(t("assignSuccess"));
+      setValidTo(undefined);
+      onDone();
+    } catch (error) {
+      onError(error);
+    }
+  };
+
+  return (
+    <div className="flex flex-col gap-4">
+      <div>
+        <Text type="secondary">{t("assignTargetType")}</Text>
+        <Segmented
+          block
+          className="mt-1"
+          value={target}
+          onChange={(v) => onTargetChange(v as "role" | "category" | "store")}
+          options={[
+            { value: "role", label: t("assignByRole") },
+            { value: "category", label: t("assignByCategory") },
+            { value: "store", label: t("assignByStore") },
+          ]}
+        />
+      </div>
+
+      <div>
+        <Text type="secondary">{t("assignTarget")}</Text>
+        {target === "role" ? (
+          <Radio.Group
+            className="mt-1 block"
+            value={value}
+            onChange={(e) => setValue(e.target.value)}
+            options={[
+              { value: "pg", label: "PG" },
+              { value: "leader", label: "Leader" },
+            ]}
+          />
+        ) : (
+          <Select
+            className="mt-1 w-full"
+            showSearch
+            optionFilterProp="label"
+            placeholder={t("assignSelect")}
+            value={value}
+            onChange={setValue}
+            options={(target === "category" ? categories ?? [] : stores ?? []).map((o) => ({
+              value: o.id,
+              label: `${o.code} — ${o.name}`,
+            }))}
+          />
+        )}
+      </div>
+
+      <div>
+        <Text type="secondary">{t("assignValidTo")}</Text>
+        <DatePicker
+          className="mt-1 w-full"
+          onChange={(d) => setValidTo(d ? d.toISOString() : undefined)}
+        />
+      </div>
+
+      <Button type="primary" loading={assign.isPending} onClick={submit}>
+        {t("assignAdd")}
+      </Button>
+      <Text type="secondary" className="text-xs">
+        {t("assignHint")}
+      </Text>
+    </div>
+  );
+}
+
+function FormPreview({
+  fields,
+  lang,
+  t,
+}: {
+  fields: FieldDef[];
+  lang: string;
+  t: ReturnType<typeof useTranslations>;
+}) {
+  if (fields.length === 0) return <Empty description={t("noFields")} />;
+  const label = (f: FieldDef) => (lang === "en" ? f.label_en : f.label_vi) || f.id;
+  return (
+    <div className="flex flex-col gap-4">
+      {fields.map((f) => {
+        if (f.type === "section") {
+          return (
+            <Title key={f.id} level={5} className="!mb-0 !mt-2">
+              {label(f)}
+            </Title>
+          );
+        }
+        const opts = (f.options ?? []).map((o) => ({
+          value: o.value,
+          label: lang === "en" ? o.label_en : o.label_vi,
+        }));
+        return (
+          <div key={f.id}>
+            <div className="mb-1 font-medium">
+              {label(f)}
+              {f.required && <span className="ml-1 text-red-500">*</span>}
+            </div>
+            {f.type === "text" && <Input disabled placeholder={t("field_text")} />}
+            {f.type === "number" && <InputNumber disabled className="w-full" />}
+            {f.type === "datetime" && <DatePicker disabled className="w-full" />}
+            {f.type === "single_choice" && <Radio.Group disabled options={opts} />}
+            {f.type === "multi_choice" && <Checkbox.Group disabled options={opts} />}
+            {f.type === "dropdown" && <Select disabled className="w-full" options={opts} placeholder="—" />}
+            {["image_upload", "camera", "file", "product_selector", "store_selector", "brand_sku_selector"].includes(
+              f.type,
+            ) && <Tag>{t(`field_${f.type}`)}</Tag>}
+          </div>
+        );
+      })}
     </div>
   );
 }
