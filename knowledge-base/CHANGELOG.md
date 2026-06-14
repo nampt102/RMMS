@@ -6,6 +6,19 @@ Append-only chronological log of significant project milestones, decisions, and 
 
 ---
 
+## 2026-06-15 — Sprint 15: M13/M14 mobile (Documents + News) — S15 complete
+
+**By:** Mobile lead (MotivesVN IT), AI-assisted
+
+**Status:** ⏳ Mobile **code-only** — Mac runs `flutter pub get` (new dep) + `flutter gen-l10n` + `flutter analyze`. ARB JSON valid; vi/en parity 360=360.
+
+- **ADR-017:** added `url_launcher ^6.3.1` to open document signed URLs in the system viewer (M13 spec "others via system viewer"). Platform utility, not a UI lib.
+- **`features/documents`:** plain `DocumentItem` model; `DocumentsApi` (`GET /documents/me?search`, `GET /:id/download`) + repository (`myDocumentsProvider.family(search)`); list screen with name search + public/private icon, tap → mint signed URL → `launchUrl(externalApplication)`.
+- **`features/news`:** plain `NewsItem` (with read/confirm state); `NewsApi` (`GET /news/me`, `POST /:id/read`, `POST /:id/confirm`) + repository (`myNewsProvider`, `unreadNewsCountProvider`); list (unread dot + important/category chips) + detail (marks read on open; **Confirm** action for important news until acknowledged — AC-34).
+- **Routing:** `/documents`, `/news`, `/news/:id`. Home quick tiles **Documents** + **News** (all authenticated). i18n `documents*`/`news*`/`homeQuick*` (vi/en).
+- **🎯 Sprint 15 is feature-complete** (M13 Documents + M14 News) across BE + Web + Mobile (AC-31/32/33/34).
+- ⚠️ Mac: `flutter pub get` required (url_launcher). Restart the dev API for the M13/M14 endpoints.
+
 ## 2026-06-15 — Sprint 15: M13/M14 web admin (Documents + News editor)
 
 **By:** Tech lead (MotivesVN IT), AI-assisted

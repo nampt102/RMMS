@@ -406,5 +406,18 @@
   "visitPlanEdit": "Sửa kế hoạch",
   "visitPlanEditTitle": "Sửa kế hoạch viếng thăm",
   "visitPlanSave": "Lưu thay đổi",
-  "visitPlanUpdated": "Đã cập nhật kế hoạch."
+  "visitPlanUpdated": "Đã cập nhật kế hoạch.",
+  "homeQuickDocuments": "Tài liệu",
+  "homeQuickNews": "Tin tức",
+  "documentsTitle": "Tài liệu",
+  "documentsSearchHint": "Tìm theo tên…",
+  "documentsEmpty": "Chưa có tài liệu nào.",
+  "docOpenFailed": "Không mở được tài liệu. Vui lòng thử lại.",
+  "newsTitle": "Tin tức",
+  "newsEmpty": "Chưa có tin tức nào.",
+  "newsImportant": "Quan trọng",
+  "newsDetailTitle": "Chi tiết tin",
+  "newsConfirm": "Xác nhận đã đọc",
+  "newsConfirmed": "Đã xác nhận.",
+  "newsConfirmedLabel": "Bạn đã xác nhận tin này"
 }

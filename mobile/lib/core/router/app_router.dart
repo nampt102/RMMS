@@ -33,6 +33,9 @@ import '../../features/visit_plans/domain/visit_plan_models.dart';
 import '../../features/visit_plans/presentation/screens/visit_plans_list_screen.dart';
 import '../../features/visit_plans/presentation/screens/visit_plan_create_screen.dart';
 import '../../features/visit_plans/presentation/screens/visit_plan_detail_screen.dart';
+import '../../features/documents/presentation/screens/documents_list_screen.dart';
+import '../../features/news/presentation/screens/news_list_screen.dart';
+import '../../features/news/presentation/screens/news_detail_screen.dart';
 import '../../l10n/generated/app_localizations.dart';
 
 /// Named routes — keep all path strings here.
@@ -62,6 +65,8 @@ class AppRoutes {
   static const String forms = '/forms';
   static const String visitPlans = '/visit-plans';
   static const String visitPlanNew = '/visit-plans/new';
+  static const String documents = '/documents';
+  static const String news = '/news';
   static const String notifications = '/notifications';
   static const String profile = '/profile';
 }
@@ -284,6 +289,23 @@ final appRouterProvider = Provider<GoRouter>((ref) {
         parentNavigatorKey: _rootKey,
         path: '${AppRoutes.visitPlans}/:id',
         builder: (context, state) => VisitPlanDetailScreen(id: state.pathParameters['id']!),
+      ),
+
+      // ── M13 Documents + M14 News (PG/Leader). ────────────────────────────
+      GoRoute(
+        parentNavigatorKey: _rootKey,
+        path: AppRoutes.documents,
+        builder: (context, state) => const DocumentsListScreen(),
+      ),
+      GoRoute(
+        parentNavigatorKey: _rootKey,
+        path: AppRoutes.news,
+        builder: (context, state) => const NewsListScreen(),
+      ),
+      GoRoute(
+        parentNavigatorKey: _rootKey,
+        path: '${AppRoutes.news}/:id',
+        builder: (context, state) => NewsDetailScreen(id: state.pathParameters['id']!),
       ),
     ],
   );

@@ -42,6 +42,7 @@ dependencies:
   retrofit: 4.9.1
   riverpod_annotation: ^2.3.5
   sentry_flutter: ^9.21.0
+  url_launcher: ^6.3.1 # open document signed URLs in the system viewer (M13, ADR-017)
 
 dev_dependencies:
   build_runner: ^2.4.13

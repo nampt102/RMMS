@@ -403,5 +403,18 @@
   "visitPlanEdit": "Edit plan",
   "visitPlanEditTitle": "Edit visit plan",
   "visitPlanSave": "Save changes",
-  "visitPlanUpdated": "Visit plan updated."
+  "visitPlanUpdated": "Visit plan updated.",
+  "homeQuickDocuments": "Documents",
+  "homeQuickNews": "News",
+  "documentsTitle": "Documents",
+  "documentsSearchHint": "Search by name…",
+  "documentsEmpty": "No documents yet.",
+  "docOpenFailed": "Couldn't open the document. Please try again.",
+  "newsTitle": "News",
+  "newsEmpty": "No news yet.",
+  "newsImportant": "Important",
+  "newsDetailTitle": "News detail",
+  "newsConfirm": "Confirm read",
+  "newsConfirmed": "Confirmed.",
+  "newsConfirmedLabel": "You have confirmed this news"
 }

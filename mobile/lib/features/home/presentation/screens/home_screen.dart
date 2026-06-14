@@ -111,6 +111,18 @@ class HomeScreen extends ConsumerWidget {
                       tone: AppTone.sky,
                       onTap: () => context.push(AppRoutes.visitPlans),
                     ),
+                  _QuickItem(
+                    icon: Icons.folder_open_rounded,
+                    label: l.homeQuickDocuments,
+                    tone: AppTone.indigo,
+                    onTap: () => context.push(AppRoutes.documents),
+                  ),
+                  _QuickItem(
+                    icon: Icons.campaign_rounded,
+                    label: l.homeQuickNews,
+                    tone: AppTone.rose,
+                    onTap: () => context.push(AppRoutes.news),
+                  ),
                 ],
               ),
             ),
