@@ -301,6 +301,8 @@
   "formFillSubmit": "Submit",
   "formSaved": "Draft saved.",
   "formSubmitted": "Form submitted.",
+  "formSelectHint": "Select...",
+  "formSearchHint": "Search...",
   "formRequiredMissing": "Please enter: {field}",
 
   "scheduleStatWeek": "Shifts this week",

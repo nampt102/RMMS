@@ -43,6 +43,17 @@ class FormsApi {
     return _data(res)['id'] as String;
   }
 
+  /// Active products for product/SKU selector fields (GET /products, paginated).
+  Future<List<ProductLite>> products() async {
+    final res = await _dio.get<Map<String, dynamic>>('/products', queryParameters: {'pageSize': 200});
+    final page = res.data?['data'];
+    final items = (page is Map<String, dynamic> ? page['data'] : null);
+    if (items is! List) {
+      throw DioException(requestOptions: res.requestOptions, response: res, message: 'Malformed envelope.');
+    }
+    return items.whereType<Map<String, dynamic>>().map(ProductLite.fromJson).toList(growable: false);
+  }
+
   Map<String, dynamic> _data(Response<Map<String, dynamic>> res) {
     final data = res.data?['data'];
     if (data is! Map<String, dynamic>) {

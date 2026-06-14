@@ -22,6 +22,8 @@ class FormsRepository {
 
   Future<FormFill> getForm(String id) => _guard(() => _api.getForm(id));
 
+  Future<List<ProductLite>> products() => _guard(_api.products);
+
   Future<String> submit({
     required String formId,
     required Map<String, dynamic> answers,
@@ -54,4 +56,9 @@ final myFormsProvider = FutureProvider.autoDispose<List<AssignedForm>>((ref) {
 /// A single form's schema to render.
 final formFillProvider = FutureProvider.autoDispose.family<FormFill, String>((ref, id) {
   return ref.watch(formsRepositoryProvider).getForm(id);
+});
+
+/// Products for product/SKU selector fields (cached while a fill screen is open).
+final formProductsProvider = FutureProvider.autoDispose<List<ProductLite>>((ref) {
+  return ref.watch(formsRepositoryProvider).products();
 });

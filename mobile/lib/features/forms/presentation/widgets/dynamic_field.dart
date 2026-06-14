@@ -1,9 +1,14 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:intl/intl.dart';
 
 import '../../../../core/theme/app_palette.dart';
+import '../../../../core/widgets/app_widgets.dart';
+import '../../../../l10n/generated/app_localizations.dart';
+import '../../../organization/data/organization_repository.dart';
+import '../../data/forms_repository.dart';
 import '../../domain/form_models.dart';
 
 /// Renders ONE schema field as the right input widget (factory pattern, M10
@@ -130,8 +135,13 @@ class _DynamicFieldState extends State<DynamicField> {
             child: Text(current ?? '—'),
           ),
         );
+      case 'product_selector':
+      case 'brand_sku_selector':
+        return _entityField(productMode: true);
+      case 'store_selector':
+        return _entityField(productMode: false);
       default:
-        // image_upload / camera / file / product_selector / store_selector / brand_sku_selector
+        // image_upload / camera / file (need attachment upload — deferred)
         return Container(
           width: double.infinity,
           padding: const EdgeInsets.all(12),
@@ -196,6 +206,112 @@ class _DynamicFieldState extends State<DynamicField> {
           ),
         );
       }).toList(growable: false),
+    );
+  }
+
+  // Product / SKU / store pickers — async data via Riverpod, single-select via bottom sheet.
+  Widget _entityField({required bool productMode}) {
+    return Consumer(builder: (context, ref, _) {
+      Widget loading() => const Padding(
+            padding: EdgeInsets.symmetric(vertical: 10),
+            child: LinearProgressIndicator(minHeight: 3),
+          );
+      Widget error() => Text(AppLocalizations.of(context).commonError, style: const TextStyle(color: AppPalette.muted));
+
+      if (productMode) {
+        return ref.watch(formProductsProvider).when(
+              loading: loading,
+              error: (_, __) => error(),
+              data: (list) => _entityTile(context, [for (final p in list) (id: p.id, label: p.pickerLabel)]),
+            );
+      }
+      return ref.watch(myStoresProvider).when(
+            loading: loading,
+            error: (_, __) => error(),
+            data: (list) => _entityTile(context, [for (final s in list) (id: s.id, label: '${s.code} · ${s.name}')]),
+          );
+    });
+  }
+
+  Widget _entityTile(BuildContext context, List<({String id, String label})> items) {
+    final current = widget.value as String?;
+    String? selectedLabel;
+    for (final e in items) {
+      if (e.id == current) {
+        selectedLabel = e.label;
+        break;
+      }
+    }
+    selectedLabel ??= current; // fall back to the raw id if not in the list
+    return InkWell(
+      onTap: () => _openEntitySheet(context, items),
+      child: InputDecorator(
+        decoration: _decoration(),
+        child: Row(
+          children: [
+            Expanded(
+              child: Text(
+                selectedLabel ?? AppLocalizations.of(context).formSelectHint,
+                style: TextStyle(color: selectedLabel == null ? AppPalette.muted : AppPalette.ink),
+              ),
+            ),
+            const Icon(Icons.arrow_drop_down_rounded, color: AppPalette.faint),
+          ],
+        ),
+      ),
+    );
+  }
+
+  void _openEntitySheet(BuildContext context, List<({String id, String label})> items) {
+    final l = AppLocalizations.of(context);
+    showAppSheet<void>(
+      context: context,
+      builder: (ctx) {
+        var query = '';
+        return StatefulBuilder(
+          builder: (ctx, setSheet) {
+            final q = query.trim().toLowerCase();
+            final filtered = q.isEmpty ? items : items.where((e) => e.label.toLowerCase().contains(q)).toList();
+            return Padding(
+              padding: EdgeInsets.only(bottom: MediaQuery.of(ctx).viewInsets.bottom),
+              child: Column(
+                mainAxisSize: MainAxisSize.min,
+                children: [
+                  Padding(
+                    padding: const EdgeInsets.fromLTRB(16, 16, 16, 8),
+                    child: TextField(
+                      decoration: InputDecoration(
+                        prefixIcon: const Icon(Icons.search_rounded),
+                        hintText: l.formSearchHint,
+                        border: const OutlineInputBorder(),
+                      ),
+                      onChanged: (v) => setSheet(() => query = v),
+                    ),
+                  ),
+                  Flexible(
+                    child: ListView.builder(
+                      shrinkWrap: true,
+                      itemCount: filtered.length,
+                      itemBuilder: (_, i) {
+                        final e = filtered[i];
+                        return ListTile(
+                          title: Text(e.label),
+                          trailing: e.id == widget.value ? const Icon(Icons.check_rounded, color: AppPalette.violet) : null,
+                          onTap: () {
+                            widget.onChanged(e.id);
+                            Navigator.of(ctx).pop();
+                          },
+                        );
+                      },
+                    ),
+                  ),
+                  const SizedBox(height: 8),
+                ],
+              ),
+            );
+          },
+        );
+      },
     );
   }
 

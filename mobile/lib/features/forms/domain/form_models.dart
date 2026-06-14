@@ -93,6 +93,25 @@ class FormFill {
   }
 }
 
+/// Lightweight product for the product/SKU selector field (GET /products).
+class ProductLite {
+  const ProductLite({required this.id, required this.sku, required this.name, this.brand});
+
+  final String id;
+  final String sku;
+  final String name;
+  final String? brand;
+
+  String get pickerLabel => brand == null || brand!.isEmpty ? '$sku · $name' : '$sku · $name ($brand)';
+
+  factory ProductLite.fromJson(Map<String, dynamic> j) => ProductLite(
+        id: j['id'] as String,
+        sku: j['sku'] as String? ?? '',
+        name: j['name'] as String? ?? '',
+        brand: j['brand'] as String?,
+      );
+}
+
 class FieldOption {
   const FieldOption({required this.value, required this.labelVi, required this.labelEn});
 

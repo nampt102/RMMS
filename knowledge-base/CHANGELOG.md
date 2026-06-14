@@ -6,6 +6,15 @@ Append-only chronological log of significant project milestones, decisions, and 
 
 ---
 
+## 2026-06-14 — Sprint 13: M10 mobile entity-selector field widgets (product/SKU/store)
+
+**By:** Mobile lead (MotivesVN IT), AI-assisted
+
+**Status:** ⏳ Mobile code-only — Mac runs `gen-l10n` + `analyze`. ARB parity 311=311.
+
+- Filled 3 of the 6 deferred field types in `DynamicField`: `product_selector` + `brand_sku_selector` (fetch `GET /products` → `ProductLite`, `formProductsProvider`) and `store_selector` (reuses `myStoresProvider`, `GET /users/me/stores`). Single-select via a searchable bottom sheet (`showAppSheet`), value = entity id, shows selected label.
+- i18n `formSelectHint` / `formSearchHint` (vi/en). Remaining deferred: `image_upload` / `camera` / `file` (need attachment upload).
+
 ## 2026-06-14 — Sprint 13: M10 Form Engine Flutter dynamic renderer (AC-22/23)
 
 **By:** Mobile lead (MotivesVN IT), AI-assisted

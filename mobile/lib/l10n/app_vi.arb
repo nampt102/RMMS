@@ -302,6 +302,8 @@
   "formFillSubmit": "Gửi",
   "formSaved": "Đã lưu nháp.",
   "formSubmitted": "Đã gửi biểu mẫu.",
+  "formSelectHint": "Chọn...",
+  "formSearchHint": "Tìm kiếm...",
   "formRequiredMissing": "Vui lòng nhập: {field}",
   "@formRequiredMissing": {
     "placeholders": { "field": { "type": "String" } }
