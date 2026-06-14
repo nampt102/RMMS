@@ -24,6 +24,9 @@ class FormsRepository {
 
   Future<List<ProductLite>> products() => _guard(_api.products);
 
+  Future<({String objectKey, String? url})> uploadAttachment(String formId, String filePath) =>
+      _guard(() => _api.uploadAttachment(formId, filePath));
+
   Future<String> submit({
     required String formId,
     required Map<String, dynamic> answers,

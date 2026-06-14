@@ -44,6 +44,23 @@ public sealed class FormsController : ControllerBase
         return result.IsSuccess ? ResultMapping.Ok(result.Value) : ResultMapping.Failure(result.Error, HttpContext.TraceIdentifier);
     }
 
+    [HttpPost("{id:guid}/attachments")]
+    public async Task<IActionResult> UploadAttachment([FromRoute] Guid id, IFormFile file, CancellationToken ct)
+    {
+        if (_currentUser.UserId is not { } userId) return Unauthorized();
+        if (file is null || file.Length == 0)
+        {
+            return ResultMapping.Failure(
+                Rmms.Domain.Common.Error.Validation(Rmms.Shared.Errors.ErrorCodes.ValidationFailed, "Tệp rỗng."),
+                HttpContext.TraceIdentifier);
+        }
+        using var ms = new MemoryStream();
+        await file.CopyToAsync(ms, ct);
+        var result = await _mediator.Send(new UploadFormAttachmentCommand(
+            id, userId, new Rmms.Application.Common.Abstractions.PhotoUpload(file.FileName, file.ContentType, ms.ToArray())), ct);
+        return result.IsSuccess ? ResultMapping.Created(result.Value) : ResultMapping.Failure(result.Error, HttpContext.TraceIdentifier);
+    }
+
     [HttpPost("{id:guid}/submit")]
     public async Task<IActionResult> Submit([FromRoute] Guid id, [FromBody] SubmitFormRequest request, CancellationToken ct)
     {

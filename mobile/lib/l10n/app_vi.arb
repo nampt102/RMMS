@@ -304,6 +304,10 @@
   "formSubmitted": "Đã gửi biểu mẫu.",
   "formSelectHint": "Chọn...",
   "formSearchHint": "Tìm kiếm...",
+  "formPickImage": "Chọn ảnh",
+  "formTakePhoto": "Chụp ảnh",
+  "formAttached": "Đã đính kèm",
+  "formReplaceImage": "Đổi",
   "formRequiredMissing": "Vui lòng nhập: {field}",
   "@formRequiredMissing": {
     "placeholders": { "field": { "type": "String" } }

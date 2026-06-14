@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:image_picker/image_picker.dart';
 import 'package:intl/intl.dart';
 
 import '../../../../core/theme/app_palette.dart';
@@ -18,12 +19,14 @@ class DynamicField extends StatefulWidget {
   const DynamicField({
     super.key,
     required this.field,
+    required this.formId,
     required this.lang,
     required this.value,
     required this.onChanged,
   });
 
   final FieldDef field;
+  final String formId;
   final String lang;
   final Object? value;
   final ValueChanged<Object?> onChanged;
@@ -140,8 +143,16 @@ class _DynamicFieldState extends State<DynamicField> {
         return _entityField(productMode: true);
       case 'store_selector':
         return _entityField(productMode: false);
+      case 'image_upload':
+      case 'camera':
+        return _ImageField(
+          formId: widget.formId,
+          value: widget.value as String?,
+          fromCamera: f.type == 'camera',
+          onChanged: widget.onChanged,
+        );
       default:
-        // image_upload / camera / file (need attachment upload — deferred)
+        // file (arbitrary files) — needs a file picker package; deferred.
         return Container(
           width: double.infinity,
           padding: const EdgeInsets.all(12),
@@ -327,5 +338,95 @@ class _DynamicFieldState extends State<DynamicField> {
           borderRadius: BorderRadius.circular(12),
           borderSide: const BorderSide(color: AppPalette.line),
         ),
+      );
+}
+
+/// Image field (image_upload / camera): pick or capture → multipart upload →
+/// store the returned object key in the answer. Preview url is session-local.
+class _ImageField extends ConsumerStatefulWidget {
+  const _ImageField({
+    required this.formId,
+    required this.value,
+    required this.fromCamera,
+    required this.onChanged,
+  });
+
+  final String formId;
+  final String? value; // stored object key
+  final bool fromCamera;
+  final ValueChanged<Object?> onChanged;
+
+  @override
+  ConsumerState<_ImageField> createState() => _ImageFieldState();
+}
+
+class _ImageFieldState extends ConsumerState<_ImageField> {
+  bool _busy = false;
+  String? _url; // session-local preview
+
+  Future<void> _pick() async {
+    final l = AppLocalizations.of(context);
+    final picker = ImagePicker();
+    final XFile? x = await picker.pickImage(
+      source: widget.fromCamera ? ImageSource.camera : ImageSource.gallery,
+      imageQuality: 70,
+      maxWidth: 1600,
+    );
+    if (x == null) return;
+    setState(() => _busy = true);
+    try {
+      final r = await ref.read(formsRepositoryProvider).uploadAttachment(widget.formId, x.path);
+      widget.onChanged(r.objectKey);
+      if (mounted) setState(() => _url = r.url);
+    } catch (_) {
+      if (mounted) showAppToast(context, message: l.commonError, kind: AppToastKind.error);
+    } finally {
+      if (mounted) setState(() => _busy = false);
+    }
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    final l = AppLocalizations.of(context);
+    final hasValue = widget.value != null && widget.value!.isNotEmpty;
+
+    if (hasValue) {
+      return Row(
+        children: [
+          ClipRRect(
+            borderRadius: BorderRadius.circular(10),
+            child: _url != null
+                ? Image.network(_url!, width: 56, height: 56, fit: BoxFit.cover,
+                    errorBuilder: (_, __, ___) => _attachedBox())
+                : _attachedBox(),
+          ),
+          const SizedBox(width: 10),
+          Expanded(child: Text(l.formAttached, style: const TextStyle(color: AppPalette.muted))),
+          TextButton(onPressed: _busy ? null : _pick, child: Text(l.formReplaceImage)),
+          IconButton(
+            onPressed: () {
+              widget.onChanged(null);
+              setState(() => _url = null);
+            },
+            icon: const Icon(Icons.delete_outline_rounded, color: AppPalette.rose),
+          ),
+        ],
+      );
+    }
+
+    return AppButton.soft(
+      label: widget.fromCamera ? l.formTakePhoto : l.formPickImage,
+      icon: widget.fromCamera ? Icons.photo_camera_rounded : Icons.image_rounded,
+      loading: _busy,
+      expand: false,
+      onPressed: _pick,
+    );
+  }
+
+  Widget _attachedBox() => Container(
+        width: 56,
+        height: 56,
+        color: AppPalette.bg,
+        child: const Icon(Icons.attach_file_rounded, color: AppPalette.muted),
       );
 }

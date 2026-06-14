@@ -54,6 +54,14 @@ class FormsApi {
     return items.whereType<Map<String, dynamic>>().map(ProductLite.fromJson).toList(growable: false);
   }
 
+  /// Upload an image/file attachment (multipart). Returns the stored object key + preview url.
+  Future<({String objectKey, String? url})> uploadAttachment(String formId, String filePath) async {
+    final form = FormData.fromMap({'file': await MultipartFile.fromFile(filePath)});
+    final res = await _dio.post<Map<String, dynamic>>('/forms/$formId/attachments', data: form);
+    final d = _data(res);
+    return (objectKey: d['objectKey'] as String, url: d['url'] as String?);
+  }
+
   Map<String, dynamic> _data(Response<Map<String, dynamic>> res) {
     final data = res.data?['data'];
     if (data is! Map<String, dynamic>) {

@@ -6,6 +6,17 @@ Append-only chronological log of significant project milestones, decisions, and 
 
 ---
 
+## 2026-06-14 — Sprint 13: M10 image/camera attachment fields + upload endpoint
+
+**By:** Tech lead + Mobile lead (MotivesVN IT), AI-assisted
+
+**Status:** ✅ Backend builds (Application 0 errors; API compile clean — copy-lock only because the dev API was running). Mobile code-only — Mac runs `gen-l10n` + `analyze`. ARB parity 315=315.
+
+- **BE:** `POST /api/v1/forms/{id}/attachments` (multipart, AnyAuthenticated) → `UploadFormAttachmentCommand` stores the file via the existing MinIO object store (`IAttendancePhotoStorage`, form-scoped key) → returns `{objectKey, url}`. Reuses M05/M13 storage — no new infra.
+- **Mobile:** `image_upload` + `camera` field widgets (`_ImageField`) via `image_picker` (gallery vs camera) → multipart upload (`FormsApi.uploadAttachment`) → stores the object key in the answer + session-local preview thumbnail + replace/remove. `DynamicField` now takes `formId`.
+- **Field-type coverage now 12/13** — only `file` (arbitrary files) deferred (needs a file-picker package). i18n `formPickImage`/`formTakePhoto`/`formAttached`/`formReplaceImage` (vi/en).
+- ⚠️ Restart the dev API to pick up the new attachments endpoint.
+
 ## 2026-06-14 — Sprint 13: M10 mobile entity-selector field widgets (product/SKU/store)
 
 **By:** Mobile lead (MotivesVN IT), AI-assisted

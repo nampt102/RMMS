@@ -303,6 +303,10 @@
   "formSubmitted": "Form submitted.",
   "formSelectHint": "Select...",
   "formSearchHint": "Search...",
+  "formPickImage": "Pick image",
+  "formTakePhoto": "Take photo",
+  "formAttached": "Attached",
+  "formReplaceImage": "Replace",
   "formRequiredMissing": "Please enter: {field}",
 
   "scheduleStatWeek": "Shifts this week",

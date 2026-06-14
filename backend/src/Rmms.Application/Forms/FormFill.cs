@@ -60,6 +60,43 @@ internal sealed class AssignFormCommandHandler : IRequestHandler<AssignFormComma
     }
 }
 
+// ===== Attachment upload (mobile, image/file fields) =====
+
+public sealed record FormAttachmentDto(string ObjectKey, string? Url);
+
+public sealed record UploadFormAttachmentCommand(Guid FormId, Guid UserId, PhotoUpload File)
+    : IRequest<Result<FormAttachmentDto>>;
+
+internal sealed class UploadFormAttachmentCommandHandler
+    : IRequestHandler<UploadFormAttachmentCommand, Result<FormAttachmentDto>>
+{
+    private readonly IAppDbContext _db;
+    private readonly IAttendancePhotoStorage _storage;
+
+    public UploadFormAttachmentCommandHandler(IAppDbContext db, IAttendancePhotoStorage storage)
+    {
+        _db = db;
+        _storage = storage;
+    }
+
+    public async ValueTask<Result<FormAttachmentDto>> Handle(UploadFormAttachmentCommand command, CancellationToken ct)
+    {
+        if (!await _db.Forms.AnyAsync(f => f.Id == command.FormId, ct))
+        {
+            return Result.Failure<FormAttachmentDto>(Error.NotFound(ErrorCodes.NotFound, "Không tìm thấy form."));
+        }
+        if (command.File.Content.Length == 0)
+        {
+            return Result.Failure<FormAttachmentDto>(Error.Validation(ErrorCodes.ValidationFailed, "Tệp rỗng."));
+        }
+
+        // Reuse the object store (MinIO); attachments live under a form-scoped key.
+        var key = await _storage.SaveAsync(command.UserId, $"form-{command.FormId:N}", command.File, ct);
+        var url = await _storage.GetUrlAsync(key, ct);
+        return Result.Success(new FormAttachmentDto(key, url));
+    }
+}
+
 // ===== My forms (mobile) =====
 
 public sealed record AssignedFormDto(
