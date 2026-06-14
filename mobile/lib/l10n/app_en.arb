@@ -365,5 +365,39 @@
   "livenessSmile": "Please smile",
   "livenessTurn": "Turn your head slightly to one side",
   "livenessTimeout": "Couldn't detect a live face. Please try again.",
-  "livenessCameraError": "Can't access the camera. Check camera permission and try again."
+  "livenessCameraError": "Can't access the camera. Check camera permission and try again.",
+  "homeQuickVisitPlans": "Visit plans",
+  "visitPlansTitle": "Visit plans",
+  "visitPlansEmpty": "No visit plans yet.",
+  "visitPlanStatusPending": "Pending",
+  "visitPlanStatusApproved": "Approved",
+  "visitPlanStatusRejected": "Rejected",
+  "visitPlanStatusExecuted": "Completed",
+  "visitPlanStoresProgress": "{done}/{total} stores reported",
+  "@visitPlanStoresProgress": {
+    "placeholders": {
+      "done": { "type": "int" },
+      "total": { "type": "int" }
+    }
+  },
+  "visitPlanNewTitle": "New visit plan",
+  "visitPlanVisitDate": "Visit date",
+  "visitPlanNotes": "Notes",
+  "visitPlanNotesHint": "Notes (optional)",
+  "visitPlanItems": "Stores to visit",
+  "visitPlanAddItem": "Add store",
+  "visitPlanNoItems": "No stores yet. Tap \"Add store\".",
+  "visitPlanPickStore": "Select a store",
+  "visitPlanPickForm": "Select a report form",
+  "visitPlanNoForms": "No forms are assigned to you yet.",
+  "visitPlanItemsRequired": "Add at least one store to visit.",
+  "visitPlanCreate": "Create plan",
+  "visitPlanCreated": "Visit plan created.",
+  "visitPlanRemove": "Remove",
+  "visitPlanDetailTitle": "Visit plan detail",
+  "visitPlanAwaitingApproval": "Awaiting BUH approval. You can submit reports once it's approved.",
+  "visitPlanRejectedBanner": "This visit plan was rejected.",
+  "visitPlanReport": "Fill report",
+  "visitPlanReported": "Submitted",
+  "visitPlanExecuted": "Report linked."
 }

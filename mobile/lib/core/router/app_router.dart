@@ -29,6 +29,9 @@ import '../../features/requests/presentation/screens/ot_request_screen.dart';
 import '../../features/requests/presentation/screens/requests_history_screen.dart';
 import '../../features/forms/presentation/screens/forms_list_screen.dart';
 import '../../features/forms/presentation/screens/form_fill_screen.dart';
+import '../../features/visit_plans/presentation/screens/visit_plans_list_screen.dart';
+import '../../features/visit_plans/presentation/screens/visit_plan_create_screen.dart';
+import '../../features/visit_plans/presentation/screens/visit_plan_detail_screen.dart';
 import '../../l10n/generated/app_localizations.dart';
 
 /// Named routes — keep all path strings here.
@@ -56,6 +59,8 @@ class AppRoutes {
   static const String otRequest = '/requests/ot';
   static const String teamMonitoring = '/monitoring';
   static const String forms = '/forms';
+  static const String visitPlans = '/visit-plans';
+  static const String visitPlanNew = '/visit-plans/new';
   static const String notifications = '/notifications';
   static const String profile = '/profile';
 }
@@ -256,6 +261,23 @@ final appRouterProvider = Provider<GoRouter>((ref) {
         parentNavigatorKey: _rootKey,
         path: '${AppRoutes.forms}/:id',
         builder: (context, state) => FormFillScreen(formId: state.pathParameters['id']!),
+      ),
+
+      // ── M11 Visit Plan (Leader). Declare /new before /:id so it isn't captured. ──
+      GoRoute(
+        parentNavigatorKey: _rootKey,
+        path: AppRoutes.visitPlans,
+        builder: (context, state) => const VisitPlansListScreen(),
+      ),
+      GoRoute(
+        parentNavigatorKey: _rootKey,
+        path: AppRoutes.visitPlanNew,
+        builder: (context, state) => const VisitPlanCreateScreen(),
+      ),
+      GoRoute(
+        parentNavigatorKey: _rootKey,
+        path: '${AppRoutes.visitPlans}/:id',
+        builder: (context, state) => VisitPlanDetailScreen(id: state.pathParameters['id']!),
       ),
     ],
   );

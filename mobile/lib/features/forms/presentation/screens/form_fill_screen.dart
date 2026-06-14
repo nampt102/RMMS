@@ -79,7 +79,7 @@ class _FormFillScreenState extends ConsumerState<FormFillScreen> {
     // Persist before the network attempt so an offline failure keeps the data.
     await _saveDraft(form, silent: true);
     try {
-      await ref.read(formsRepositoryProvider).submit(
+      final submissionId = await ref.read(formsRepositoryProvider).submit(
             formId: form.formId,
             answers: _answers,
             timeSpentSeconds: DateTime.now().difference(_started).inSeconds,
@@ -89,7 +89,8 @@ class _FormFillScreenState extends ConsumerState<FormFillScreen> {
       ref.invalidate(myFormsProvider);
       if (!mounted) return;
       showAppToast(context, message: l.formSubmitted, kind: AppToastKind.success);
-      context.pop();
+      // Return the submission id so callers (e.g. a Visit Plan item) can link it.
+      context.pop(submissionId);
     } on ApiException catch (e) {
       if (mounted) showAppToast(context, message: e.message, kind: AppToastKind.error);
     } finally {

@@ -368,5 +368,39 @@
   "livenessSmile": "Hãy mỉm cười",
   "livenessTurn": "Quay đầu nhẹ sang một bên",
   "livenessTimeout": "Không nhận diện được. Vui lòng thử lại.",
-  "livenessCameraError": "Không truy cập được camera. Kiểm tra quyền camera và thử lại."
+  "livenessCameraError": "Không truy cập được camera. Kiểm tra quyền camera và thử lại.",
+  "homeQuickVisitPlans": "Kế hoạch viếng thăm",
+  "visitPlansTitle": "Kế hoạch viếng thăm",
+  "visitPlansEmpty": "Chưa có kế hoạch viếng thăm nào.",
+  "visitPlanStatusPending": "Chờ duyệt",
+  "visitPlanStatusApproved": "Đã duyệt",
+  "visitPlanStatusRejected": "Bị từ chối",
+  "visitPlanStatusExecuted": "Hoàn thành",
+  "visitPlanStoresProgress": "{done}/{total} điểm đã nộp",
+  "@visitPlanStoresProgress": {
+    "placeholders": {
+      "done": { "type": "int" },
+      "total": { "type": "int" }
+    }
+  },
+  "visitPlanNewTitle": "Tạo kế hoạch viếng thăm",
+  "visitPlanVisitDate": "Ngày viếng thăm",
+  "visitPlanNotes": "Ghi chú",
+  "visitPlanNotesHint": "Ghi chú (không bắt buộc)",
+  "visitPlanItems": "Điểm viếng thăm",
+  "visitPlanAddItem": "Thêm điểm",
+  "visitPlanNoItems": "Chưa có điểm nào. Bấm \"Thêm điểm\".",
+  "visitPlanPickStore": "Chọn điểm bán",
+  "visitPlanPickForm": "Chọn form báo cáo",
+  "visitPlanNoForms": "Chưa có form nào được giao cho bạn.",
+  "visitPlanItemsRequired": "Thêm ít nhất một điểm viếng thăm.",
+  "visitPlanCreate": "Tạo kế hoạch",
+  "visitPlanCreated": "Đã tạo kế hoạch viếng thăm.",
+  "visitPlanRemove": "Xóa",
+  "visitPlanDetailTitle": "Chi tiết kế hoạch",
+  "visitPlanAwaitingApproval": "Đang chờ BUH duyệt. Sau khi duyệt bạn có thể nộp báo cáo.",
+  "visitPlanRejectedBanner": "Kế hoạch đã bị từ chối.",
+  "visitPlanReport": "Điền báo cáo",
+  "visitPlanReported": "Đã nộp",
+  "visitPlanExecuted": "Đã liên kết báo cáo."
 }

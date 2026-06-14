@@ -104,6 +104,13 @@ class HomeScreen extends ConsumerWidget {
                     tone: AppTone.violet,
                     onTap: () => context.push(AppRoutes.forms),
                   ),
+                  if (user?.role.name == 'leader')
+                    _QuickItem(
+                      icon: Icons.pin_drop_rounded,
+                      label: l.homeQuickVisitPlans,
+                      tone: AppTone.sky,
+                      onTap: () => context.push(AppRoutes.visitPlans),
+                    ),
                 ],
               ),
             ),

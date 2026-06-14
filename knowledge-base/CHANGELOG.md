@@ -6,6 +6,18 @@ Append-only chronological log of significant project milestones, decisions, and 
 
 ---
 
+## 2026-06-14 — Sprint 14: M11 Visit Plan mobile (Leader) screens (AC-28/30)
+
+**By:** Mobile lead (MotivesVN IT), AI-assisted
+
+**Status:** ⏳ Mobile **code-only** — Mac runs `flutter gen-l10n` + `flutter analyze` (no `build_runner`: plain models). ARB JSON valid; vi/en parity 343=343.
+
+- **`features/visit_plans`:** plain models (`VisitPlan` / `VisitPlanItem` / `VisitItemDraft`); `VisitPlansApi` (`GET /visit-plans/me`, `GET /:id`, `POST`, `POST /:id/items/:itemId/execute`) + `VisitPlansRepository` (+ `myVisitPlansProvider`, `visitPlanProvider.family`).
+- **Screens:** list (status chip + done/total progress), create (date picker + notes + store/form item rows via bottom-sheet pickers — stores from `myStoresProvider`, forms from `myFormsProvider`), detail (per-store report: approved plans push the M10 fill screen and link the returned submission → AC-30; banners for pending/rejected).
+- **Form Engine integration:** `FormFillScreen` now pops with the new submission id so the Visit Plan detail can link it via the execute endpoint (back-compat — existing `/forms/:id` callers ignore the result).
+- **Routing:** `/visit-plans`, `/visit-plans/new`, `/visit-plans/:id` (`new` declared before `:id`). Home quick tile **Leader-gated** (`user.role == leader`). i18n `visitPlan*` + `homeQuickVisitPlans` (vi/en).
+- Web admin view (read-only) + BUH approval labels shipped in `031df4c`. BUH decision flows through the existing M09 approval queue (web + email link).
+
 ## 2026-06-14 — Sprint 14: M11 Visit Plan backend (AC-28/29/30)
 
 **By:** Tech lead (MotivesVN IT), AI-assisted
