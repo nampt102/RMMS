@@ -6,6 +6,18 @@ Append-only chronological log of significant project milestones, decisions, and 
 
 ---
 
+## 2026-06-15 — Sprint 16: M15 web — dashboard chart (Recharts) + reports screen + export
+
+**By:** Tech lead (MotivesVN IT), AI-assisted
+
+**Status:** ⚠️ `recharts ^2.15.0` added to `package.json` (ADR-015) — **`npm install` required on the dev/CI env** (the sandbox npm hit an internal `reading 'matches'` resolver bug, unrelated to the code). Lint/typecheck otherwise clean.
+
+- **Dashboard chart:** `AttendanceTrendChart` (Recharts stacked `BarChart` valid/late/anomaly, 14 days, WCAG-safe colors) — dynamic `ssr:false` like the leaflet map. Added under a "trend" section on `/dashboard`.
+- **Reports screen** (`/reports`, AdminOnly): Segmented attendance/anomalies + AntD `RangePicker` + store filter; table with status tags; **Export Excel** button → `GET /admin/reports/{kind}/export` blob download.
+- **`features/reports`:** `fetchAttendanceReport`, `useAttendanceTrend`, `downloadReportExcel` (blob → anchor download).
+- Nav: admin-only **Báo cáo / Reports** (LineChart icon). i18n `reports` namespace + `navReports` + `dashboard.sectionTrend` (vi/en).
+- Remaining S16 (optional): wire export buttons on existing admin lists (schedule/leave/OT/approvals/forms/visit-plan) reusing the export foundation.
+
 ## 2026-06-15 — Sprint 16: M15 Reports backend — attendance/anomaly + trend + Excel export
 
 **By:** Tech lead (MotivesVN IT), AI-assisted

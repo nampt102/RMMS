@@ -14,11 +14,18 @@ import {
 } from "@ant-design/icons";
 import { Button, Card, Col, Empty, Row, Spin, Statistic, Table, Tag, Typography } from "antd";
 import type { ColumnsType } from "antd/es/table";
+import dynamic from "next/dynamic";
 import Link from "next/link";
 import { useLocale, useTranslations } from "next-intl";
 import type { ReactNode } from "react";
 import { useDashboardSummary } from "@/features/dashboard/api";
 import { useTeamToday, type TeamMemberStatus } from "@/features/monitoring/api";
+
+// Recharts touches the DOM (ResponsiveContainer) → client-only, mirroring the leaflet pattern.
+const AttendanceTrendChart = dynamic(() => import("@/features/reports/AttendanceTrendChart"), {
+  ssr: false,
+  loading: () => <Card size="small" loading style={{ minHeight: 320 }} />,
+});
 
 const STATUS_COLOR: Record<string, string> = {
   working: "green",
@@ -118,6 +125,12 @@ export default function DashboardPage() {
           loading={isFetching}
         />
       </Row>
+
+      {/* ── Attendance trend (chart) ───────────────────────────────── */}
+      <Typography.Text type="secondary" className="text-xs font-medium uppercase tracking-wide">
+        {t("sectionTrend")}
+      </Typography.Text>
+      <AttendanceTrendChart days={14} />
 
       {/* ── Present today (quick glance) ───────────────────────────── */}
       <div className="mt-2 flex items-center justify-between">
