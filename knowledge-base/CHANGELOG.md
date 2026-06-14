@@ -6,6 +6,18 @@ Append-only chronological log of significant project milestones, decisions, and 
 
 ---
 
+## 2026-06-14 — Sprint 12: M10 Form Engine web Form Builder (AC-20/21)
+
+**By:** Tech lead (MotivesVN IT), AI-assisted
+
+**Status:** ✅ Web type-check + lint clean; `next build` green. `@dnd-kit` installed (ADR-014).
+
+- **Dep:** added `@dnd-kit/core` 6.3.1 + `@dnd-kit/sortable` 10 + `@dnd-kit/utilities` (ADR-014, stakeholder-approved). Headless — no AntD/Tailwind conflict.
+- **`/forms` list:** ProTable of forms (code, name, type tag, status badge, version + "draft pending", created); create modal (code/name vi-en/type → empty schema → opens Builder).
+- **`/forms/[id]` Form Builder:** meta card (name/desc vi+en) + **drag-drop field list** (@dnd-kit sortable, 44px drag handle, keyboard sensor) + add-field dropdown (13 registry types) + field editor modal (id/label vi-en/required + options editor via `Form.List` for choice types) + rules panel (target users + 6 rule flags) + **Save draft** (assembles `{fields,rules}` JSON → PATCH) / **Publish** (save then POST publish) + **version-history drawer**. Schema round-trips losslessly (passthrough keys preserved).
+- **i18n:** `forms.*` (form/field/type/rule labels) + `admin.navForms` (vi/en, parity 438=438); new admin nav item (admin-only). ui-ux-pro-max: AntD Pro + Tailwind, data-dense, touch ≥44px, accessible DnD.
+- Next: S13 mobile dynamic renderer + offline draft (Hive) + submit + scoring; form assignment endpoints.
+
 ## 2026-06-14 — Sprint 11/12: M10 Form Engine backend skeleton (AC-20/21)
 
 **By:** Tech lead (MotivesVN IT), AI-assisted
