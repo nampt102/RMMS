@@ -13,6 +13,11 @@ public sealed record UpdateAreaRequest(string Name, Guid? ParentAreaId);
 public sealed record CreateCategoryRequest(string Code, string Name);
 public sealed record UpdateCategoryRequest(string Name);
 
+// ----- Products (M04) -----
+public sealed record CreateProductRequest(string Sku, string Name, string? Brand, Guid? CategoryId, string? Attributes);
+public sealed record UpdateProductRequest(string Name, string? Brand, Guid? CategoryId, string? Attributes);
+public sealed record ChangeProductStatusRequest(string Status);
+
 // ----- Assignments -----
 public sealed record AssignPgLeaderRequest(Guid PgUserId, Guid LeaderUserId);
 public sealed record AssignUserStoreRequest(Guid UserId, Guid StoreId);

@@ -36,6 +36,7 @@ public sealed class AppDbContext : DbContext, IAppDbContext
     public DbSet<Area> Areas => Set<Area>();
     public DbSet<Store> Stores => Set<Store>();
     public DbSet<Category> Categories => Set<Category>();
+    public DbSet<Product> Products => Set<Product>();
     public DbSet<UserLeaderAssignment> UserLeaderAssignments => Set<UserLeaderAssignment>();
     public DbSet<UserStoreAssignment> UserStoreAssignments => Set<UserStoreAssignment>();
     public DbSet<UserCategoryAssignment> UserCategoryAssignments => Set<UserCategoryAssignment>();

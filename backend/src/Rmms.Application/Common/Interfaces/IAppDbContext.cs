@@ -33,6 +33,7 @@ public interface IAppDbContext
     DbSet<Area> Areas { get; }
     DbSet<Store> Stores { get; }
     DbSet<Category> Categories { get; }
+    DbSet<Product> Products { get; }
     DbSet<UserLeaderAssignment> UserLeaderAssignments { get; }
     DbSet<UserStoreAssignment> UserStoreAssignments { get; }
     DbSet<UserCategoryAssignment> UserCategoryAssignments { get; }

@@ -45,6 +45,12 @@ public static class AuditAction
     public const string CategoryUpdated = "category.updated";
     public const string CategoryDeleted = "category.deleted";
 
+    // ----- M04 Product Master -----
+    public const string ProductCreated = "product.created";
+    public const string ProductUpdated = "product.updated";
+    public const string ProductStatusChanged = "product.status_changed";
+    public const string ProductDeleted = "product.deleted";
+
     public const string PgLeaderAssigned = "assignment.pg_leader_assigned";
     public const string UserStoreAssigned = "assignment.user_store_assigned";
     public const string UserStoreUnassigned = "assignment.user_store_unassigned";
