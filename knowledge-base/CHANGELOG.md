@@ -14,6 +14,7 @@ Append-only chronological log of significant project milestones, decisions, and 
 
 - **i18n full pass (Sprint 10 hạng mục B):** verified key parity — web `messages/{vi,en}.json` 336=336, mobile ARB `app_{vi,en}.arb` 299=299, **no missing keys** either side. Fixed 3 hardcoded user-visible strings: mobile home quick-access heading (`'Truy cập nhanh'` → existing `l.homeSectionQuick`) and role chip (`'Vai trò · $role'` → `l.homeRoleLabel(role!)`); removed leftover dev scaffold note on web root `[locale]/page.tsx`. Language-picker labels (`"Tiếng Việt"` / `"English"`) intentionally left untranslated (shown in their own language, standard UX).
 - **Release notes Phase 1A** drafted: [RELEASE-NOTES-Phase-1A.md](./RELEASE-NOTES-Phase-1A.md) — what shipped (AC-1..AC-19, AC-26, AC-27 basic, AC-35 = 23/35), what defers to 1B (Form Engine, Product Master, Visit Plan, Documents, News content, full reports = 12/35), known limitations, and the remaining ops checklist (bug bash, UAT sign-off, perf baseline, prod smoke, backup verify, FCM e2e, user guide).
+- **User guide Phase 1A** drafted (vi): [USER-GUIDE-Phase-1A.md](./USER-GUIDE-Phase-1A.md) — per-role walkthrough (PG/Leader/Admin/BUH) of shipped features + troubleshooting + **5 embedded Mermaid flows** (PG onboarding, check-in/out, schedule approval, BUH email-link approval, Admin review).
 
 ## 2026-06-14 — Mobile Redesign 2026 follow-ups: self-service face delete + layered mesh + brand_widgets retired
 
