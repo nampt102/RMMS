@@ -6,6 +6,18 @@ Append-only chronological log of significant project milestones, decisions, and 
 
 ---
 
+## 2026-06-14 — Phase 1B kickoff: M10 Form Engine design + ADR-014/015/016
+
+**By:** Tech lead (MotivesVN IT), AI-assisted
+
+**Status:** ✅ Design + decisions only (no code yet). Light reference research (SurveyJS / JSON-Schema conventions) — no external form lib adopted.
+
+- **M10 Form Engine engineering design** → [modules/M10-form-engine-design.md](./modules/M10-form-engine-design.md): input-type registry (12+ types, shared contract for Builder/renderer/validator), `visible_if` conditional logic (SurveyJS-style, safe evaluator), versioning mechanics (BR-505/AC-21), assignment OR-resolution, **server-side validation by registry (not generic JSON-Schema)**, MinIO presigned attachments, mobile factory renderer + Hive offline draft + idempotency reconcile, scoring engine, API↔design map, S11–S14 breakdown.
+- **ADR-016** — Form Engine architecture: schema-driven JSONB + registry Strategy validator + factory renderer; borrow SurveyJS/JSON-Schema *conventions* only, no JS form lib (Flutter/AntD fixed).
+- **ADR-014** — `@dnd-kit` for the web Form Builder drag-drop (headless, no AntD/Tailwind conflict; list-based reorder stays the fallback).
+- **ADR-015** — Recharts as the single web charting lib for Reports + dashboard widgets (Sprint 16); chosen over AntV/G2 + ECharts for weight/simplicity.
+- ADR index now 001–016. Next: **M04 Product Master** (unblocks `product_selector`), then Sprint 11 Form CRUD skeleton.
+
 ## 2026-06-14 — Sprint 10: i18n full pass + Phase 1A release notes
 
 **By:** Tech lead (MotivesVN IT), AI-assisted
