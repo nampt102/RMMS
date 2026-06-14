@@ -25,6 +25,7 @@
   },
   "admin": {
     "appTitle": "RMMS Quản trị",
+    "navDashboard": "Tổng quan",
     "navUsers": "Người dùng",
     "navStores": "Điểm bán",
     "navAreas": "Khu vực",
@@ -37,6 +38,24 @@
     "navMonitoring": "Giám sát",
     "navAudit": "Nhật ký",
     "logout": "Đăng xuất"
+  },
+  "dashboard": {
+    "title": "Tổng quan",
+    "asOf": "Cập nhật",
+    "refresh": "Làm mới",
+    "sectionPresence": "Hiện diện hôm nay",
+    "sectionActionable": "Cần xử lý",
+    "sectionPresentList": "Đang có mặt hôm nay",
+    "viewAll": "Xem tất cả",
+    "totalMembers": "Tổng nhân sự",
+    "online": "Đang làm việc",
+    "checkedOut": "Đã tan ca",
+    "notCheckedIn": "Chưa check-in",
+    "onLeave": "Đang nghỉ",
+    "pendingReview": "Chấm công chờ duyệt",
+    "pendingApprovals": "Đơn/lịch chờ duyệt",
+    "anomaliesToday": "Bất thường hôm nay",
+    "emptyPresent": "Chưa có ai check-in hôm nay"
   },
   "monitoring": {
     "title": "Giám sát đội nhóm hôm nay",

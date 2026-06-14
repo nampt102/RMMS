@@ -16,6 +16,16 @@ Append-only chronological log of significant project milestones, decisions, and 
 - **Layered mesh gradient:** `MeshRadialOverlay` added to `app_widgets.dart` (the ADR-012 grad-mesh radial layers — violet top-left + indigo upper-right blooms) and layered over the base linear `meshGradient` on the Home hero, History summary card, and Assignment store header (was a single linear approximation).
 - **`brand_widgets.dart` retired** (closes the 2026-06-08 deferred item): the last two consumers — `approvals_screen.dart` + `team_monitoring_screen.dart` (Leader screens) — migrated onto the canonical kit (`AppCard` / `AppChip` / `AppTone`); legacy `lib/core/widgets/brand_widgets.dart` deleted. No remaining references.
 
+## 2026-06-14 — Sprint 10: M15 basic Dashboard (AC-27)
+
+**By:** Tech lead (MotivesVN IT), AI-assisted
+
+**Status:** ✅ Backend builds; **231 unit tests green** (+2). Web typecheck + lint clean.
+
+- **BE:** `GET /api/v1/admin/dashboard/summary` (`GetDashboardSummaryQuery`) — KPI summary scoped like M12 team monitoring (Admin/BUH → all active PG+Leader, Leader → managed PGs). Returns presence today (total / online / checked-out / not-checked-in / on-leave) computed from the same attendance+schedule+leave signals as `/monitoring`, plus three actionable backlogs: attendance pending review (all dates, scoped), pending approvals (Admin = all, Leader/BUH = own queue), and today's anomalies (face fail / GPS violation / fake GPS). PG is forbidden.
+- **Web:** `/dashboard` landing — StatisticCard KPI rows (presence + actionable, semantic green/amber/red, tabular numbers) over a "present today" quick list (links to `/monitoring` for the full roster); backlog cards link to `/attendance` and `/approvals`. New `navDashboard` nav item (admin/leader/buh); **login now lands on `/dashboard`** (was `/users`) and the non-admin fallback redirect points there too. i18n `dashboard.*` vi/en.
+- Phase 1 full reports + Excel/CSV export remain deferred to 1B (Sprint 16). Designed via ui-ux-pro-max (Data-Dense Dashboard).
+
 ## 2026-06-08 — Sprint 09 ✅ CLOSED (M14 Notification + M16 Admin Review) + attendance fixes
 
 **By:** Tech lead (MotivesVN IT), AI-assisted

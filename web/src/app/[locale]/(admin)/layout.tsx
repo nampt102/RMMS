@@ -5,6 +5,7 @@ import {
   AppstoreOutlined,
   ApartmentOutlined,
   AuditOutlined,
+  BarChartOutlined,
   CalendarOutlined,
   DashboardOutlined,
   FileTextOutlined,
@@ -76,9 +77,9 @@ export default function AdminLayout({
   // keep them off AdminOnly pages (which would 403) and land them on /approvals.
   useEffect(() => {
     if (!hydrated || !token || !user || user.role === "admin") return;
-    const allowed = [`/${locale}/approvals`, `/${locale}/monitoring`];
+    const allowed = [`/${locale}/dashboard`, `/${locale}/approvals`, `/${locale}/monitoring`];
     if (!allowed.some((p) => fullPath.startsWith(p))) {
-      router.replace(`/${locale}/approvals`);
+      router.replace(`/${locale}/dashboard`);
     }
   }, [hydrated, token, user, fullPath, locale, router]);
 
@@ -96,6 +97,7 @@ export default function AdminLayout({
   // landing for non-admins.
   const role = user?.role ?? "";
   const allItems = [
+    { key: `/${locale}/dashboard`, icon: <BarChartOutlined />, label: <Link href={`/${locale}/dashboard`}>{t("navDashboard")}</Link>, roles: ["admin", "leader", "buh"] },
     { key: `/${locale}/users`, icon: <TeamOutlined />, label: <Link href={`/${locale}/users`}>{t("navUsers")}</Link>, roles: ["admin"] },
     { key: `/${locale}/stores`, icon: <ShopOutlined />, label: <Link href={`/${locale}/stores`}>{t("navStores")}</Link>, roles: ["admin"] },
     { key: `/${locale}/areas`, icon: <ApartmentOutlined />, label: <Link href={`/${locale}/areas`}>{t("navAreas")}</Link>, roles: ["admin"] },

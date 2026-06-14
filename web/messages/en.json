@@ -25,6 +25,7 @@
   },
   "admin": {
     "appTitle": "RMMS Admin",
+    "navDashboard": "Overview",
     "navUsers": "Users",
     "navStores": "Stores",
     "navAreas": "Areas",
@@ -37,6 +38,24 @@
     "navMonitoring": "Monitoring",
     "navAudit": "Audit log",
     "logout": "Sign out"
+  },
+  "dashboard": {
+    "title": "Overview",
+    "asOf": "As of",
+    "refresh": "Refresh",
+    "sectionPresence": "Presence today",
+    "sectionActionable": "Needs action",
+    "sectionPresentList": "Present today",
+    "viewAll": "View all",
+    "totalMembers": "Total members",
+    "online": "Working now",
+    "checkedOut": "Checked out",
+    "notCheckedIn": "Not checked in",
+    "onLeave": "On leave",
+    "pendingReview": "Attendance to review",
+    "pendingApprovals": "Approvals pending",
+    "anomaliesToday": "Anomalies today",
+    "emptyPresent": "No one has checked in today"
   },
   "monitoring": {
     "title": "Team monitoring — today",
