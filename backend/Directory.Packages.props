@@ -46,6 +46,12 @@
     <PackageVersion Include="Microsoft.Extensions.Caching.StackExchangeRedis" Version="10.0.4" />
   </ItemGroup>
 
+  <ItemGroup Label="Security transitive pins">
+    <!-- Pin transitive MessagePack off the vulnerable 2.5.187 pulled by SignalR.StackExchangeRedis
+         (NU1903 / GHSA-hv8m-jj95-wg3x, high). Transitive pinning is enabled above. -->
+    <PackageVersion Include="MessagePack" Version="2.5.302" />
+  </ItemGroup>
+
   <ItemGroup Label="CQRS / Mediator (free MediatR alternative)">
     <!-- MediatR went commercial v12. We use Mediator (Martin Othamar) — free MIT, source-generator, faster -->
     <PackageVersion Include="Mediator.SourceGenerator" Version="2.1.7" />
