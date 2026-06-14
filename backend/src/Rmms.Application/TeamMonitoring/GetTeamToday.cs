@@ -54,7 +54,9 @@ internal sealed class GetTeamTodayQueryHandler : IRequestHandler<GetTeamTodayQue
         var now = _clock.UtcNow;
         var vnOffset = TimeSpan.FromHours(7); // CR-5
         var today = DateOnly.FromDateTime((now.ToOffset(vnOffset)).DateTime);
-        var dayStart = new DateTimeOffset(today.Year, today.Month, today.Day, 0, 0, 0, vnOffset);
+        // Midnight VN as an instant, expressed in UTC — Npgsql only writes offset-0
+        // DateTimeOffset to `timestamptz`. Instant comparison semantics are unchanged.
+        var dayStart = new DateTimeOffset(today.Year, today.Month, today.Day, 0, 0, 0, vnOffset).ToUniversalTime();
         var dayEnd = dayStart.AddDays(1);
 
         // ----- Scope the team members -----
