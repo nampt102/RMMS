@@ -11,6 +11,7 @@ using Rmms.Domain.Forms;
 using Rmms.Domain.Organization;
 using Rmms.Domain.Users;
 using Rmms.Domain.Scheduling;
+using Rmms.Domain.VisitPlan;
 
 namespace Rmms.Infrastructure.Persistence;
 
@@ -61,6 +62,9 @@ public sealed class AppDbContext : DbContext, IAppDbContext
     public DbSet<FormVersion> FormVersions => Set<FormVersion>();
     public DbSet<FormAssignment> FormAssignments => Set<FormAssignment>();
     public DbSet<FormSubmission> FormSubmissions => Set<FormSubmission>();
+
+    // ----- M11 Visit Plan (items are an owned collection of VisitPlan) -----
+    public DbSet<VisitPlan> VisitPlans => Set<VisitPlan>();
 
     // ----- M14 Notification -----
     public DbSet<Notification> Notifications => Set<Notification>();

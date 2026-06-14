@@ -95,5 +95,10 @@ public static class AuditAction
     public const string FormAssigned = "form.assigned";
     public const string FormSubmitted = "form_submission.submitted";
 
+    // ----- M11 Visit Plan -----
+    public const string VisitPlanCreated = "visit_plan.created";
+    public const string VisitPlanEdited = "visit_plan.edited";
+    public const string VisitPlanItemExecuted = "visit_plan.item_executed";
+
     // (M04+ actions appended here as modules ship)
 }

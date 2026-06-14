@@ -10,6 +10,7 @@ using Rmms.Domain.Forms;
 using Rmms.Domain.Organization;
 using Rmms.Domain.Users;
 using Rmms.Domain.Scheduling;
+using Rmms.Domain.VisitPlan;
 
 namespace Rmms.Application.Common.Interfaces;
 
@@ -58,6 +59,9 @@ public interface IAppDbContext
     DbSet<FormVersion> FormVersions { get; }
     DbSet<FormAssignment> FormAssignments { get; }
     DbSet<FormSubmission> FormSubmissions { get; }
+
+    // ----- M11 Visit Plan (items are an owned collection of VisitPlan) -----
+    DbSet<VisitPlan> VisitPlans { get; }
 
     // ----- M14 Notification -----
     DbSet<Notification> Notifications { get; }

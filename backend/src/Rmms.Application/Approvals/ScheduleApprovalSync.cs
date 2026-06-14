@@ -7,6 +7,7 @@ using Rmms.Domain.Enums;
 using Rmms.Domain.LeaveOt;
 using Rmms.Domain.Notifications;
 using Rmms.Domain.Scheduling;
+using Rmms.Domain.VisitPlan;
 
 namespace Rmms.Application.Approvals;
 
@@ -47,6 +48,14 @@ internal static class ApprovalActuation
                     if (approve) ot.Approve(now); else ot.Reject(now);
                 }
                 break;
+
+            case ApprovalEntityType.VisitPlan:
+                var plan = await db.VisitPlans.FirstOrDefaultAsync(x => x.Id == approval.EntityId, ct);
+                if (plan is { IsPending: true })
+                {
+                    if (approve) plan.Approve(now); else plan.Reject(now);
+                }
+                break;
         }
 
         await notifier.NotifyAsync(approval.RequesterId, BuildDecisionSpec(approval.EntityType, approval.EntityId, approve, reason), ct);
@@ -63,11 +72,15 @@ internal static class ApprovalActuation
             ApprovalEntityType.WorkSchedule => ("Lịch làm việc", "Work schedule"),
             ApprovalEntityType.LeaveRequest => ("Đơn nghỉ phép", "Leave request"),
             ApprovalEntityType.OtRequest => ("Đơn tăng ca", "OT request"),
+            ApprovalEntityType.VisitPlan => ("Kế hoạch viếng thăm", "Visit plan"),
             _ => ("Yêu cầu", "Request"),
         };
-        var deepLink = entityType == ApprovalEntityType.WorkSchedule
-            ? $"rmms://schedules/{entityId}"
-            : $"rmms://requests/{entityId}";
+        var deepLink = entityType switch
+        {
+            ApprovalEntityType.WorkSchedule => $"rmms://schedules/{entityId}",
+            ApprovalEntityType.VisitPlan => $"rmms://visit-plans/{entityId}",
+            _ => $"rmms://requests/{entityId}",
+        };
 
         var data = new Dictionary<string, string>
         {

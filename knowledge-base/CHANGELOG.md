@@ -6,6 +6,20 @@ Append-only chronological log of significant project milestones, decisions, and 
 
 ---
 
+## 2026-06-14 — Sprint 14: M11 Visit Plan backend (AC-28/29/30)
+
+**By:** Tech lead (MotivesVN IT), AI-assisted
+
+**Status:** ✅ Backend builds (0 errors). **265 unit tests pass** (+14). Migration `M11_VisitPlan` generated **and applied to the dev DB**.
+
+- **Domain:** `VisitPlan` aggregate (owns `VisitPlanItem` collection) + `VisitPlanStatus` (`pending`/`approved`/`rejected`/`executed`). Create→Pending; edit-in-place while pending; BUH decision flips approved/rejected; linking a post-visit submission per item → `executed` once all items linked.
+- **Approval wiring (M09 reuse):** `ApprovalEntityType.VisitPlan` actuated in `ApprovalActuation` (approve/reject flips the plan); decision notification + `rmms://visit-plans/{id}` deep link. Leader→BUH routing (`VisitPlanRouting`/`VisitPlanProducer`) resolves "the" active BUH (single-customer; earliest-created if >1). BUH approves via web **or** email link (BR-407, inherited). No routable BUH → plan stays pending for Admin override.
+  - ⚠️ **Phase-2 refinement:** explicit Leader↔BUH assignment table (mirroring `user_leader_assignments`) instead of the single-BUH default.
+- **Application:** `Create`/`Edit` (owner + pending guards, store-exists + form-published validation, no duplicate store), `GetMyVisitPlans`/`GetVisitPlan` (owner-or-admin)/`AdminGetVisitPlans` (status + leader filters), `ExecuteVisitItem` (links a Form Engine submission — must be the Leader's own + match the item's form).
+- **API:** `VisitPlansController` (LeaderOnly): `GET /visit-plans/me`, `GET /visit-plans/:id`, `POST /visit-plans`, `PATCH /visit-plans/:id`, `POST /visit-plans/:id/items/:itemId/execute`. `AdminVisitPlansController` (AdminOnly): `GET /admin/visit-plans`.
+- **Tables:** `visit_plans` + `visit_plan_items` (owned collection, cascade FK). Audit: `visit_plan.created` / `.edited` / `.item_executed`.
+- ⚠️ Restart the dev API to pick up the new Visit Plan endpoints. Web BUH approval view + mobile Leader screens are the follow-up (S14 UI).
+
 ## 2026-06-14 — Sprint 13: M10 image/camera attachment fields + upload endpoint
 
 **By:** Tech lead + Mobile lead (MotivesVN IT), AI-assisted
