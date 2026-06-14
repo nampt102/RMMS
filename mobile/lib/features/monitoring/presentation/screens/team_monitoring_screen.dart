@@ -4,7 +4,7 @@ import 'package:intl/intl.dart';
 
 import '../../../../core/network/api_exception.dart';
 import '../../../../core/theme/app_palette.dart';
-import '../../../../core/widgets/brand_widgets.dart';
+import '../../../../core/widgets/app_widgets.dart';
 import '../../../../l10n/generated/app_localizations.dart';
 import '../../data/monitoring_repository.dart';
 import '../../domain/team_today.dart';
@@ -13,13 +13,13 @@ import '../../domain/team_today.dart';
 class TeamMonitoringScreen extends ConsumerWidget {
   const TeamMonitoringScreen({super.key});
 
-  static ({BrandTone tone, String label}) meta(AppLocalizations l, String status) => switch (status) {
-        'working' => (tone: BrandTone.success, label: l.monStatusWorking),
-        'checked_out' => (tone: BrandTone.info, label: l.monStatusCheckedOut),
-        'not_checked_in' => (tone: BrandTone.warning, label: l.monStatusNotCheckedIn),
-        'on_leave' => (tone: BrandTone.brand, label: l.monStatusOnLeave),
-        'pending_review' => (tone: BrandTone.danger, label: l.monStatusPendingReview),
-        _ => (tone: BrandTone.neutral, label: l.monStatusNoSchedule),
+  static ({AppTone tone, String label}) meta(AppLocalizations l, String status) => switch (status) {
+        'working' => (tone: AppTone.emerald, label: l.monStatusWorking),
+        'checked_out' => (tone: AppTone.sky, label: l.monStatusCheckedOut),
+        'not_checked_in' => (tone: AppTone.amber, label: l.monStatusNotCheckedIn),
+        'on_leave' => (tone: AppTone.indigo, label: l.monStatusOnLeave),
+        'pending_review' => (tone: AppTone.rose, label: l.monStatusPendingReview),
+        _ => (tone: AppTone.neutral, label: l.monStatusNoSchedule),
       };
 
   @override
@@ -62,7 +62,7 @@ class _Body extends StatelessWidget {
           children: [
             for (final s in order)
               if ((data.summary[s] ?? 0) > 0)
-                StatusPill(
+                AppChip(
                   label: '${TeamMonitoringScreen.meta(l, s).label}: ${data.summary[s]}',
                   tone: TeamMonitoringScreen.meta(l, s).tone,
                 ),
@@ -106,7 +106,7 @@ class _MemberCard extends StatelessWidget {
       if ((member.storeName ?? '').isNotEmpty) member.storeName!,
     ].join(' · ');
 
-    return SoftCard(
+    return AppCard(
       child: Row(
         children: [
           Expanded(
@@ -121,7 +121,7 @@ class _MemberCard extends StatelessWidget {
               ],
             ),
           ),
-          StatusPill(label: m.label, tone: m.tone),
+          AppChip(label: m.label, tone: m.tone),
         ],
       ),
     );

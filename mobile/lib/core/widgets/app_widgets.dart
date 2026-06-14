@@ -96,6 +96,64 @@ class _PressScaleState extends State<PressScale> {
 }
 
 // ─────────────────────────────────────────────────────────────────────────────
+// MeshRadialOverlay — the README "grad-mesh" radial layers.
+//
+// Drop as a Positioned.fill child inside a Stack sitting on top of a base
+// `AppSemantics.meshGradient` (linear) container to add the layered violet/
+// indigo radial depth specified in the design tokens:
+//   radial(120% 120% at 0% 0%,   #8B5CF6 → transparent 55%)
+//   radial(120% 120% at 100% 30%, #5B5BF0 → transparent 60%)
+// Purely decorative, so it ignores pointers.
+// ─────────────────────────────────────────────────────────────────────────────
+
+class MeshRadialOverlay extends StatelessWidget {
+  const MeshRadialOverlay({super.key, this.borderRadius});
+
+  final BorderRadius? borderRadius;
+
+  @override
+  Widget build(BuildContext context) {
+    return Positioned.fill(
+      child: IgnorePointer(
+        child: ClipRRect(
+          borderRadius: borderRadius ?? BorderRadius.zero,
+          child: const Stack(
+            children: [
+              // Top-left violet bloom.
+              Positioned.fill(
+                child: DecoratedBox(
+                  decoration: BoxDecoration(
+                    gradient: RadialGradient(
+                      center: Alignment.topLeft,
+                      radius: 1.2,
+                      colors: [AppPalette.violet, Color(0x008B5CF6)],
+                      stops: [0.0, 0.55],
+                    ),
+                  ),
+                ),
+              ),
+              // Upper-right indigo bloom.
+              Positioned.fill(
+                child: DecoratedBox(
+                  decoration: BoxDecoration(
+                    gradient: RadialGradient(
+                      center: Alignment(0.95, -0.4),
+                      radius: 1.2,
+                      colors: [AppPalette.indigo, Color(0x005B5BF0)],
+                      stops: [0.0, 0.6],
+                    ),
+                  ),
+                ),
+              ),
+            ],
+          ),
+        ),
+      ),
+    );
+  }
+}
+
+// ─────────────────────────────────────────────────────────────────────────────
 // AppChip — pill, height 28, padding 0/11, 12.5/700.
 // Variants: tonal (default) and `solid` (fg-colored fill + white text).
 // ─────────────────────────────────────────────────────────────────────────────

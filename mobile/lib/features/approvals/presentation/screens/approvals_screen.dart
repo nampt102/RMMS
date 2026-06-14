@@ -4,7 +4,7 @@ import 'package:intl/intl.dart';
 
 import '../../../../core/network/api_exception.dart';
 import '../../../../core/theme/app_palette.dart';
-import '../../../../core/widgets/brand_widgets.dart';
+import '../../../../core/widgets/app_widgets.dart';
 import '../../../../l10n/generated/app_localizations.dart';
 import '../../data/approval_repository.dart';
 import '../../domain/approval.dart';
@@ -129,7 +129,7 @@ class _ApprovalCardState extends ConsumerState<_ApprovalCard> {
 
     return Padding(
       padding: const EdgeInsets.only(bottom: 12),
-      child: SoftCard(
+      child: AppCard(
         padding: const EdgeInsets.all(16),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
@@ -140,7 +140,7 @@ class _ApprovalCardState extends ConsumerState<_ApprovalCard> {
                   child: Text(a.requesterName,
                       style: const TextStyle(fontSize: 16, fontWeight: FontWeight.w700)),
                 ),
-                StatusPill(label: l.approvalStatusPending, icon: Icons.hourglass_empty, tone: BrandTone.info),
+                AppChip(label: l.approvalStatusPending, icon: Icons.hourglass_empty, tone: AppTone.sky),
               ],
             ),
             const SizedBox(height: 6),

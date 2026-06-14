@@ -152,6 +152,7 @@ class _Hero extends StatelessWidget {
           decoration: BoxDecoration(gradient: s.meshGradient),
           child: Stack(
             children: [
+              const MeshRadialOverlay(),
               // Decorative circles.
               Positioned(
                 top: -30,

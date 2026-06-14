@@ -35,6 +35,11 @@ class FaceApi {
     return FaceStatus.fromJson(_data(response));
   }
 
+  /// Remove the caller's enrollment — `DELETE /face`. Returns 204 No Content.
+  Future<void> remove() async {
+    await _dio.delete<void>('/face');
+  }
+
   Map<String, dynamic> _data(Response<Map<String, dynamic>> response) {
     final data = response.data?['data'];
     if (data is! Map<String, dynamic>) {

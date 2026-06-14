@@ -26,6 +26,8 @@ class FaceRepository {
   Future<FaceStatus> enroll(List<String> photoPaths) =>
       _guard(() => _api.enroll(photoPaths));
 
+  Future<void> remove() => _guard(_api.remove);
+
   Future<T> _guard<T>(Future<T> Function() action) async {
     try {
       return await action();

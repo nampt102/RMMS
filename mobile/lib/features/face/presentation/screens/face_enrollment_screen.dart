@@ -34,6 +34,7 @@ class _FaceEnrollmentScreenState extends ConsumerState<FaceEnrollmentScreen> {
   final _picker = ImagePicker();
   final Map<_Angle, String> _paths = {};
   bool _submitting = false;
+  bool _deleting = false;
 
   int get _captured => _paths.length;
   bool get _allCaptured => _captured == _Angle.values.length;
@@ -66,6 +67,23 @@ class _FaceEnrollmentScreenState extends ConsumerState<FaceEnrollmentScreen> {
       }
     } finally {
       if (mounted) setState(() => _submitting = false);
+    }
+  }
+
+  Future<void> _delete() async {
+    final l = AppLocalizations.of(context);
+    setState(() => _deleting = true);
+    try {
+      await ref.read(faceRepositoryProvider).remove();
+      ref.invalidate(faceStatusProvider);
+      if (!mounted) return;
+      showAppToast(context, message: l.faceDeleted, kind: AppToastKind.success);
+    } on ApiException catch (e) {
+      if (mounted) {
+        showAppToast(context, message: e.message, kind: AppToastKind.error);
+      }
+    } finally {
+      if (mounted) setState(() => _deleting = false);
     }
   }
 
@@ -150,19 +168,15 @@ class _FaceEnrollmentScreenState extends ConsumerState<FaceEnrollmentScreen> {
                   label: status.enrolled ? l.faceReenroll : l.faceEnrollCta,
                   icon: Icons.face_rounded,
                   loading: _submitting,
-                  onPressed: _allCaptured ? _submit : null,
+                  onPressed: _allCaptured && !_deleting ? _submit : null,
                 ),
                 if (status.enrolled) ...[
                   const SizedBox(height: 10),
                   AppButton.destructiveSoft(
                     label: l.faceDelete,
                     icon: Icons.delete_outline_rounded,
-                    onPressed: () {
-                      // Backend deletion endpoint is not exposed by the
-                      // current repository — surface a toast for now.
-                      showAppToast(context,
-                          message: l.faceDeleted, kind: AppToastKind.info);
-                    },
+                    loading: _deleting,
+                    onPressed: _submitting ? null : _delete,
                   ),
                 ],
               ],

@@ -123,6 +123,7 @@ class _SummaryCard extends StatelessWidget {
         decoration: BoxDecoration(gradient: s.meshGradient),
         child: Stack(
           children: [
+            const MeshRadialOverlay(),
             Positioned(
               top: -24,
               right: -16,

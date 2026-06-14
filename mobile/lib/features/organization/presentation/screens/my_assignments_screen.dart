@@ -231,6 +231,7 @@ class _StoreCard extends StatelessWidget {
                     decoration: BoxDecoration(gradient: s.meshGradient),
                   ),
                 ),
+                const MeshRadialOverlay(),
                 Positioned.fill(
                   child: CustomPaint(painter: _DiagonalStripePainter()),
                 ),
