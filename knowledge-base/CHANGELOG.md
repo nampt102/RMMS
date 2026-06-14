@@ -6,6 +6,18 @@ Append-only chronological log of significant project milestones, decisions, and 
 
 ---
 
+## 2026-06-15 — Sprint 15: M13/M14 web admin (Documents + News editor)
+
+**By:** Tech lead (MotivesVN IT), AI-assisted
+
+**Status:** ✅ Web typecheck + lint clean. BE 0 errors (AdminNewsDto +content). Backend tests still green.
+
+- **Documents page** (`/documents`, AdminOnly): ProTable + folder filter; **upload** ModalForm (name/description/folder + AntD `Upload`, multipart `FormData`); **assign** modal (by role pg/leader **or** by user — searchable `ProFormSelect` backed by `fetchUsers`, for payslip); delete. Folder tag color+text.
+- **News editor** (`/news`, AdminOnly): ProTable; **create/edit** bilingual ModalForm (title/content vi+en, category, `important` switch); **assign** (role/user); **publish** (Popconfirm → notifies recipients); delete. Draft/published + important tags.
+- **BE:** `AdminNewsDto` now carries `contentVi`/`contentEn` so the editor prefills on edit (no migration).
+- Nav: admin-only **Tài liệu / Documents** + **Tin tức / News** (FolderOpen + Notification icons). i18n vi/en (`documents`, `news` namespaces + `navDocuments`/`navNews`).
+- Remaining S15: mobile — Documents list + viewer, News list + confirm, unread badge.
+
 ## 2026-06-14 — Sprint 15: M14 News backend (AC-33/34)
 
 **By:** Tech lead (MotivesVN IT), AI-assisted
