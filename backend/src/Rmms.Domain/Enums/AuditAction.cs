@@ -92,6 +92,8 @@ public static class AuditAction
     public const string FormCreated = "form.created";
     public const string FormUpdated = "form.updated";
     public const string FormPublished = "form.published";
+    public const string FormAssigned = "form.assigned";
+    public const string FormSubmitted = "form_submission.submitted";
 
     // (M04+ actions appended here as modules ship)
 }

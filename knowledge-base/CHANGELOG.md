@@ -6,6 +6,19 @@ Append-only chronological log of significant project milestones, decisions, and 
 
 ---
 
+## 2026-06-14 — Sprint 13: M10 Form Engine fill/submit + assignment backend (AC-22/23)
+
+**By:** Tech lead (MotivesVN IT), AI-assisted
+
+**Status:** ✅ Backend builds (0 errors); **251 unit tests green** (+6). Migration `M10_FormFill` generated (not yet applied to prod). Mobile renderer (Flutter) pending — code-only/Mac-verified.
+
+- **Domain:** `FormAssignment` (form_id + role/user/store/area/category/product targets + valid_from/to; OR logic) + `FormSubmission` (form_version_id snapshot, answers/attachments jsonb, score, `FormSubmissionStatus`, `client_idempotency_key`).
+- **EF + migration `M10_FormFill`:** `form_assignments` (indexed by form/role/user/store/category) + `form_submissions` (jsonb answers/attachments, **unique (user, client_idempotency_key)** for offline-retry dedup).
+- **CQRS (`FormFill.cs`):** `AssignForm` (admin, requires ≥1 target, role pg/leader); `GetMyForms` (resolution by role/user/store/category, published-only — area/product deferred); `GetFormForFill` (assigned + published → current version schema); `SubmitForm` (**idempotent dedup on client key**, assignment + published checks, **required-field validation** against schema; visible_if/scoring deferred). Audit `form.assigned` / `form_submission.submitted`.
+- **API:** `AdminFormsController` +`POST /:id/assignments`; new `FormsController` (mobile, AnyAuthenticated): `GET /forms/me`, `GET /forms/:id`, `POST /forms/:id/submit` (answers as JSON object).
+- **Tests:** 6 `FormFillHandlerTests` (assign-no-target / resolve-by-role+published-only / draft-not-returned / not-assigned / missing-required / **submit + idempotent-retry-returns-same**).
+- Next: S13 Flutter dynamic renderer (factory) + offline draft (Hive) + submit/idempotency + scoring; visible_if + scoring on the server.
+
 ## 2026-06-14 — Sprint 12: M10 Form Engine web Form Builder (AC-20/21)
 
 **By:** Tech lead (MotivesVN IT), AI-assisted

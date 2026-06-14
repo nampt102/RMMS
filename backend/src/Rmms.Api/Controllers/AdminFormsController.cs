@@ -65,4 +65,13 @@ public sealed class AdminFormsController : ControllerBase
         var result = await _mediator.Send(new PublishFormCommand(id), ct);
         return result.IsSuccess ? ResultMapping.Ok(new { version = result.Value }) : ResultMapping.Failure(result.Error, HttpContext.TraceIdentifier);
     }
+
+    [HttpPost("{id:guid}/assignments")]
+    public async Task<IActionResult> Assign([FromRoute] Guid id, [FromBody] AssignFormRequest request, CancellationToken ct)
+    {
+        var result = await _mediator.Send(new AssignFormCommand(
+            id, request.Role, request.UserId, request.StoreId, request.AreaId, request.CategoryId, request.ProductId,
+            request.ValidFrom, request.ValidTo), ct);
+        return result.IsSuccess ? ResultMapping.Created(new { id = result.Value }) : ResultMapping.Failure(result.Error, HttpContext.TraceIdentifier);
+    }
 }

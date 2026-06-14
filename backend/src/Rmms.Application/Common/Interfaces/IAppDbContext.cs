@@ -56,6 +56,8 @@ public interface IAppDbContext
     // ----- M10 Form Engine -----
     DbSet<Form> Forms { get; }
     DbSet<FormVersion> FormVersions { get; }
+    DbSet<FormAssignment> FormAssignments { get; }
+    DbSet<FormSubmission> FormSubmissions { get; }
 
     // ----- M14 Notification -----
     DbSet<Notification> Notifications { get; }

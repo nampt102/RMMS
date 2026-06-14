@@ -59,6 +59,8 @@ public sealed class AppDbContext : DbContext, IAppDbContext
     // ----- M10 Form Engine -----
     public DbSet<Form> Forms => Set<Form>();
     public DbSet<FormVersion> FormVersions => Set<FormVersion>();
+    public DbSet<FormAssignment> FormAssignments => Set<FormAssignment>();
+    public DbSet<FormSubmission> FormSubmissions => Set<FormSubmission>();
 
     // ----- M14 Notification -----
     public DbSet<Notification> Notifications => Set<Notification>();
