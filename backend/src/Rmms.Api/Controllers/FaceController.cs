@@ -56,6 +56,15 @@ public sealed class FaceController : ControllerBase
         return result.IsSuccess ? ResultMapping.Ok(result.Value) : ResultMapping.Failure(result.Error, HttpContext.TraceIdentifier);
     }
 
+    /// <summary>Remove the caller's own face enrollment (M06). Forces re-enroll before next check-in.</summary>
+    [HttpDelete]
+    public async Task<IActionResult> Remove(CancellationToken ct)
+    {
+        if (_currentUser.UserId is not { } userId) return Unauthorized();
+        var result = await _mediator.Send(new RemoveMyFaceCommand(userId), ct);
+        return result.IsSuccess ? NoContent() : ResultMapping.Failure(result.Error, HttpContext.TraceIdentifier);
+    }
+
     /// <summary>Verify the caller's live selfie against their enrolled face (multipart).</summary>
     [HttpPost("verify")]
     [RequestSizeLimit(15 * 1024 * 1024)]
