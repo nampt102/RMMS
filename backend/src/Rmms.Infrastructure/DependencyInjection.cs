@@ -61,6 +61,9 @@ public static class DependencyInjection
         services.AddSingleton<IJwtTokenService, JwtTokenService>();
         services.AddSingleton<IRefreshTokenGenerator, RefreshTokenGenerator>();
 
+        // ----- M15 Reports (Excel export) -----
+        services.AddSingleton<IReportExporter, Reports.ClosedXmlReportExporter>();
+
         // ----- Email -----
         // Sprint 01: console-only. Sprint 01 Day 8 will branch to SendGrid based on Email:Provider config.
         services.Configure<EmailOptions>(config.GetSection(EmailOptions.SectionName));

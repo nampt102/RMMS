@@ -6,6 +6,19 @@ Append-only chronological log of significant project milestones, decisions, and 
 
 ---
 
+## 2026-06-15 — Sprint 16: M15 Reports backend — attendance/anomaly + trend + Excel export
+
+**By:** Tech lead (MotivesVN IT), AI-assisted
+
+**Status:** ✅ Backend 0 errors. **289 unit tests** (+5). No migration (reports read existing tables).
+
+- **Excel export foundation:** `IReportExporter` + `ReportSheet`/`ReportFile` (Application) → `ClosedXmlReportExporter` (Infrastructure, ClosedXML — bold header, auto-fit, frozen header row). DI singleton.
+- **Attendance report** (`GetAttendanceReportQuery`): date-range (≤1yr) + store/user filters, resolves user/store names, flags anomalies; 20k-row cap (async export = Phase 2). **Anomaly report** = same query with `AnomaliesOnly` (gps/face/fake-gps).
+- **Attendance trend** (`GetAttendanceTrendQuery`, ≤90 days): per-VN-day valid/late/anomaly counts for the dashboard chart.
+- **Export** (`ExportAttendanceReportCommand`): builds the sheet + ClosedXML → `.xlsx` download.
+- **API** `ReportsController` (AdminOnly): `GET /admin/reports/attendance|anomalies` (+`/export`), `GET /admin/reports/attendance-trend`. (BUH area-scoping = Phase-2; live dashboard summary already scopes per role.)
+- Next S16: web — dashboard charts (Recharts, ADR-015) + report screens with filters + export buttons; then remaining report types (most reuse existing admin list endpoints + the export foundation).
+
 ## 2026-06-15 — Sprint 15: M13/M14 mobile (Documents + News) — S15 complete
 
 **By:** Mobile lead (MotivesVN IT), AI-assisted
