@@ -98,6 +98,12 @@ class HomeScreen extends ConsumerWidget {
                     tone: AppTone.amber,
                     onTap: () => context.push(AppRoutes.faceEnroll),
                   ),
+                  _QuickItem(
+                    icon: Icons.description_rounded,
+                    label: l.homeQuickForms,
+                    tone: AppTone.violet,
+                    onTap: () => context.push(AppRoutes.forms),
+                  ),
                 ],
               ),
             ),

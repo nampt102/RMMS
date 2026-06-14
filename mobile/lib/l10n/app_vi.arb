@@ -36,6 +36,7 @@
   "verifyGoToLogin": "Đăng nhập",
 
   "commonLoading": "Đang tải...",
+  "commonError": "Đã có lỗi xảy ra. Vui lòng thử lại.",
   "commonRetry": "Thử lại",
   "commonCancel": "Huỷ",
   "commonOk": "OK",
@@ -292,6 +293,19 @@
   "homeQuickAssignment": "Phân công",
   "homeQuickHistory": "Lịch sử",
   "homeQuickFace": "Khuôn mặt",
+  "homeQuickForms": "Biểu mẫu",
+
+  "formsTitle": "Biểu mẫu của tôi",
+  "formsEmpty": "Chưa có biểu mẫu nào được giao.",
+  "formNoFields": "Biểu mẫu chưa có trường nào.",
+  "formSaveDraft": "Lưu nháp",
+  "formFillSubmit": "Gửi",
+  "formSaved": "Đã lưu nháp.",
+  "formSubmitted": "Đã gửi biểu mẫu.",
+  "formRequiredMissing": "Vui lòng nhập: {field}",
+  "@formRequiredMissing": {
+    "placeholders": { "field": { "type": "String" } }
+  },
   "scheduleStatWeek": "Ca tuần này",
   "scheduleStatHours": "Tổng giờ",
   "scheduleStatPending": "Chờ duyệt",

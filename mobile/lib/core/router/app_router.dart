@@ -27,6 +27,8 @@ import '../../features/notifications/presentation/screens/notifications_screen.d
 import '../../features/requests/presentation/screens/leave_request_screen.dart';
 import '../../features/requests/presentation/screens/ot_request_screen.dart';
 import '../../features/requests/presentation/screens/requests_history_screen.dart';
+import '../../features/forms/presentation/screens/forms_list_screen.dart';
+import '../../features/forms/presentation/screens/form_fill_screen.dart';
 import '../../l10n/generated/app_localizations.dart';
 
 /// Named routes — keep all path strings here.
@@ -53,6 +55,7 @@ class AppRoutes {
   static const String leaveRequest = '/requests/leave';
   static const String otRequest = '/requests/ot';
   static const String teamMonitoring = '/monitoring';
+  static const String forms = '/forms';
   static const String notifications = '/notifications';
   static const String profile = '/profile';
 }
@@ -241,6 +244,18 @@ final appRouterProvider = Provider<GoRouter>((ref) {
         parentNavigatorKey: _rootKey,
         path: AppRoutes.notifications,
         builder: (context, state) => const NotificationsScreen(),
+      ),
+
+      // ── M10 Form Engine (fill surface). ──────────────────────────────────
+      GoRoute(
+        parentNavigatorKey: _rootKey,
+        path: AppRoutes.forms,
+        builder: (context, state) => const FormsListScreen(),
+      ),
+      GoRoute(
+        parentNavigatorKey: _rootKey,
+        path: '${AppRoutes.forms}/:id',
+        builder: (context, state) => FormFillScreen(formId: state.pathParameters['id']!),
       ),
     ],
   );

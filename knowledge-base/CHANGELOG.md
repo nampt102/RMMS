@@ -6,6 +6,18 @@ Append-only chronological log of significant project milestones, decisions, and 
 
 ---
 
+## 2026-06-14 — Sprint 13: M10 Form Engine Flutter dynamic renderer (AC-22/23)
+
+**By:** Mobile lead (MotivesVN IT), AI-assisted
+
+**Status:** ⏳ Mobile **code-only** — Mac runs `flutter gen-l10n` + `flutter analyze` (no `build_runner` needed: forms use plain models, not Freezed). ARB JSON valid; vi/en parity 309=309.
+
+- **`features/forms`:** plain (non-Freezed) models for the dynamic schema (`AssignedForm` / `FormFill` / `FieldDef` / `FieldOption`, manual `fromJson`, schema-string decode); `FormsApi` (`GET /forms/me`, `GET /forms/:id`, `POST /forms/:id/submit`) + `FormsRepository` (+ `myFormsProvider`, `formFillProvider.family`).
+- **Dynamic renderer (`DynamicField`, factory §7):** text / number / single_choice / dropdown / multi_choice / datetime / section supported; media + product/store/sku pickers show a safe "unsupported in this version" placeholder (deferred — need camera/MinIO + entity fetch). Choice inputs built from stable primitives (no Radio/Checkbox/Dropdown deprecation surface for `--fatal-infos`).
+- **Offline draft (AC-23, BR-504):** `FormDraftStore` (Hive box `form_drafts`, JSON-string values, no adapter) — restores answers + a stable `clientKey`; submit persists draft first then posts with the same `X`-key so the server dedups offline retries; draft deleted on success.
+- **Screens:** `FormsListScreen` (assigned forms) + `FormFillScreen` (render + save-draft + submit, client-side required check). Routes `/forms` + `/forms/:id`; home "Biểu mẫu" quick tile. i18n `forms*` + `commonError` (vi/en).
+- Deferred to follow-up: media/entity field widgets, scoring display, reconnect auto-retry, server visible_if/scoring.
+
 ## 2026-06-14 — Sprint 13: M10 Form Engine fill/submit + assignment backend (AC-22/23)
 
 **By:** Tech lead (MotivesVN IT), AI-assisted

@@ -120,5 +120,7 @@ mobile/coverage/
 tmp/
 temp/
 
-# Docker bind-mount data (MinIO objects, CompreFace DB) — backup target, never commit
-data/
+# Docker bind-mount data (MinIO objects, CompreFace DB) — backup target, never commit.
+# Anchored to repo root so it does NOT swallow source folders named `data/`
+# (e.g. mobile feature `lib/features/*/data/`).
+/data/
