@@ -115,13 +115,17 @@ internal static class VisitPlanNames
         var storeIds = plans.SelectMany(p => p.Items).Select(i => i.StoreId).Distinct().ToList();
         var formIds = plans.SelectMany(p => p.Items).Select(i => i.FormId).Distinct().ToList();
 
-        var stores = await db.Stores.AsNoTracking()
+        var storeRows = await db.Stores.AsNoTracking()
             .Where(s => storeIds.Contains(s.Id))
-            .ToDictionaryAsync(s => s.Id, s => s.Name, ct);
+            .Select(s => new { s.Id, s.Name, s.Latitude, s.Longitude })
+            .ToListAsync(ct);
+        var stores = storeRows.ToDictionary(s => s.Id, s => s.Name);
+        var coords = storeRows.ToDictionary(s => s.Id, s => ((double)s.Latitude, (double)s.Longitude));
+
         var forms = await db.Forms.AsNoTracking()
             .Where(f => formIds.Contains(f.Id))
             .ToDictionaryAsync(f => f.Id, f => f.NameVi, ct);
 
-        return new VisitPlanLookups(stores, forms);
+        return new VisitPlanLookups(stores, coords, forms);
     }
 }

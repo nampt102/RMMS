@@ -399,5 +399,9 @@
   "visitPlanRejectedBanner": "This visit plan was rejected.",
   "visitPlanReport": "Fill report",
   "visitPlanReported": "Submitted",
-  "visitPlanExecuted": "Report linked."
+  "visitPlanExecuted": "Report linked.",
+  "visitPlanEdit": "Edit plan",
+  "visitPlanEditTitle": "Edit visit plan",
+  "visitPlanSave": "Save changes",
+  "visitPlanUpdated": "Visit plan updated."
 }

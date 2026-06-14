@@ -12,10 +12,13 @@ import '../../data/visit_plans_repository.dart';
 import '../../domain/visit_plan_models.dart';
 import 'visit_plans_list_screen.dart' show formatVisitDate;
 
-/// Leader creates a visit plan (M11, AC-28): pick a date, optional notes, and a
-/// list of stores each with a report form. Routed to the BUH for approval.
+/// Leader creates (or edits a still-pending) visit plan (M11, AC-28): pick a date,
+/// optional notes, and a list of stores each with a report form. Routed to the BUH.
 class VisitPlanCreateScreen extends ConsumerStatefulWidget {
-  const VisitPlanCreateScreen({super.key});
+  const VisitPlanCreateScreen({super.key, this.editing});
+
+  /// When non-null the screen edits this pending plan (PATCH) instead of creating.
+  final VisitPlan? editing;
 
   @override
   ConsumerState<VisitPlanCreateScreen> createState() => _VisitPlanCreateScreenState();
@@ -23,9 +26,22 @@ class VisitPlanCreateScreen extends ConsumerStatefulWidget {
 
 class _VisitPlanCreateScreenState extends ConsumerState<VisitPlanCreateScreen> {
   final _notesCtl = TextEditingController();
-  DateTime _date = DateTime.now().add(const Duration(days: 1));
+  late DateTime _date = DateTime.now().add(const Duration(days: 1));
   final List<VisitItemDraft> _items = [];
   bool _saving = false;
+
+  bool get _isEdit => widget.editing != null;
+
+  @override
+  void initState() {
+    super.initState();
+    final e = widget.editing;
+    if (e != null) {
+      _date = e.visitDate;
+      _notesCtl.text = e.notes ?? '';
+      _items.addAll(e.items.map((i) => VisitItemDraft(storeId: i.storeId, formId: i.formId)));
+    }
+  }
 
   @override
   void dispose() {
@@ -108,15 +124,18 @@ class _VisitPlanCreateScreenState extends ConsumerState<VisitPlanCreateScreen> {
       return;
     }
     setState(() => _saving = true);
+    final notes = _notesCtl.text.trim().isEmpty ? null : _notesCtl.text.trim();
     try {
-      await ref.read(visitPlansRepositoryProvider).create(
-            visitDate: _date,
-            notes: _notesCtl.text.trim().isEmpty ? null : _notesCtl.text.trim(),
-            items: _items,
-          );
+      final repo = ref.read(visitPlansRepositoryProvider);
+      if (_isEdit) {
+        await repo.edit(id: widget.editing!.id, visitDate: _date, notes: notes, items: _items);
+        ref.invalidate(visitPlanProvider(widget.editing!.id));
+      } else {
+        await repo.create(visitDate: _date, notes: notes, items: _items);
+      }
       ref.invalidate(myVisitPlansProvider);
       if (!mounted) return;
-      showAppToast(context, message: l.visitPlanCreated, kind: AppToastKind.success);
+      showAppToast(context, message: _isEdit ? l.visitPlanUpdated : l.visitPlanCreated, kind: AppToastKind.success);
       context.pop();
     } on ApiException catch (e) {
       if (mounted) showAppToast(context, message: e.message, kind: AppToastKind.error);
@@ -149,7 +168,7 @@ class _VisitPlanCreateScreenState extends ConsumerState<VisitPlanCreateScreen> {
         bottom: false,
         child: Column(
           children: [
-            AppTopBar(title: l.visitPlanNewTitle),
+            AppTopBar(title: _isEdit ? l.visitPlanEditTitle : l.visitPlanNewTitle),
             Expanded(
               child: ListView(
                 padding: const EdgeInsets.fromLTRB(16, 8, 16, 24),
@@ -247,7 +266,7 @@ class _VisitPlanCreateScreenState extends ConsumerState<VisitPlanCreateScreen> {
               child: Padding(
                 padding: const EdgeInsets.fromLTRB(16, 8, 16, 16),
                 child: AppButton.primary(
-                  label: l.visitPlanCreate,
+                  label: _isEdit ? l.visitPlanSave : l.visitPlanCreate,
                   icon: Icons.send_rounded,
                   loading: _saving,
                   onPressed: _submit,

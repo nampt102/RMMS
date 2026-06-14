@@ -1,13 +1,21 @@
 "use client";
 
 import { ProTable, type ActionType, type ProColumns } from "@ant-design/pro-components";
-import { App, Descriptions, Drawer, Empty, Table, Tag } from "antd";
+import { App, Descriptions, Drawer, Empty, Skeleton, Table, Tag } from "antd";
 import type { ColumnsType } from "antd/es/table";
+import dynamic from "next/dynamic";
 import { useLocale, useTranslations } from "next-intl";
 import { useRef, useState } from "react";
 import { fetchAdminVisitPlans } from "@/features/visit-plans/api";
 import type { VisitPlan, VisitPlanItem, VisitPlanStatus } from "@/features/visit-plans/types";
+import type { Store } from "@/features/organization/types";
 import { errorCodeFromUnknown } from "@/features/auth/lib/auth-error";
+
+// Leaflet touches the DOM directly → load client-side only (ADR-010), mirroring StoreMapView.
+const StoreMap = dynamic(() => import("@/features/organization/StoreMap"), {
+  ssr: false,
+  loading: () => <Skeleton.Node active style={{ width: "100%", height: 260 }} />,
+});
 
 const STATUS_PRESENT: Record<VisitPlanStatus, "Default" | "Processing" | "Success" | "Error"> = {
   pending: "Processing",
@@ -162,6 +170,30 @@ export default function VisitPlansPage() {
               <Descriptions.Item label={t("progress")}>{progress(selected)}</Descriptions.Item>
               <Descriptions.Item label={t("notes")}>{selected.notes || "—"}</Descriptions.Item>
             </Descriptions>
+
+            {(() => {
+              const mapStores: Store[] = selected.items
+                .filter((i) => i.storeLat != null && i.storeLng != null)
+                .map((i) => ({
+                  id: i.storeId,
+                  code: i.storeName ?? i.storeId,
+                  name: i.storeName ?? i.storeId,
+                  address: null,
+                  latitude: i.storeLat as number,
+                  longitude: i.storeLng as number,
+                  areaId: null,
+                  areaName: null,
+                  status: "active",
+                  createdAt: "",
+                  updatedAt: null,
+                }));
+              if (mapStores.length === 0) return null;
+              return (
+                <div style={{ height: 260, marginBottom: 16 }}>
+                  <StoreMap stores={mapStores} statusLabel={() => t("itemStore")} />
+                </div>
+              );
+            })()}
 
             <Table<VisitPlanItem>
               rowKey="id"

@@ -9,6 +9,8 @@ public sealed record VisitPlanItemDto(
     Guid Id,
     Guid StoreId,
     string? StoreName,
+    double? StoreLat,
+    double? StoreLng,
     Guid FormId,
     string? FormName,
     int Ordering,
@@ -27,9 +29,10 @@ public sealed record VisitPlanDto(
     IReadOnlyList<VisitPlanItemDto> Items,
     string? LeaderName = null);
 
-/// <summary>Name lookups for projecting a plan (store id → name, form id → name).</summary>
+/// <summary>Lookups for projecting a plan (store name + GPS, form name).</summary>
 internal sealed record VisitPlanLookups(
     IReadOnlyDictionary<Guid, string>? Stores = null,
+    IReadOnlyDictionary<Guid, (double Lat, double Lng)>? StoreCoords = null,
     IReadOnlyDictionary<Guid, string>? Forms = null);
 
 internal static class VisitPlanMapper
@@ -38,6 +41,8 @@ internal static class VisitPlanMapper
     {
         string? StoreName(Guid id) => lookups?.Stores is { } s && s.TryGetValue(id, out var n) ? n : null;
         string? FormName(Guid id) => lookups?.Forms is { } f && f.TryGetValue(id, out var n) ? n : null;
+        (double?, double?) Coords(Guid id) =>
+            lookups?.StoreCoords is { } c && c.TryGetValue(id, out var p) ? (p.Lat, p.Lng) : (null, null);
 
         return new VisitPlanDto(
             p.Id,
@@ -49,9 +54,13 @@ internal static class VisitPlanMapper
             p.CreatedAt,
             p.Items
                 .OrderBy(i => i.Ordering)
-                .Select(i => new VisitPlanItemDto(
-                    i.Id, i.StoreId, StoreName(i.StoreId), i.FormId, FormName(i.FormId),
-                    i.Ordering, i.ExecutedAt, i.FormSubmissionId))
+                .Select(i =>
+                {
+                    var (lat, lng) = Coords(i.StoreId);
+                    return new VisitPlanItemDto(
+                        i.Id, i.StoreId, StoreName(i.StoreId), lat, lng, i.FormId, FormName(i.FormId),
+                        i.Ordering, i.ExecutedAt, i.FormSubmissionId);
+                })
                 .ToList(),
             leaderName);
     }

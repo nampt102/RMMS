@@ -402,5 +402,9 @@
   "visitPlanRejectedBanner": "Kế hoạch đã bị từ chối.",
   "visitPlanReport": "Điền báo cáo",
   "visitPlanReported": "Đã nộp",
-  "visitPlanExecuted": "Đã liên kết báo cáo."
+  "visitPlanExecuted": "Đã liên kết báo cáo.",
+  "visitPlanEdit": "Sửa kế hoạch",
+  "visitPlanEditTitle": "Sửa kế hoạch viếng thăm",
+  "visitPlanSave": "Lưu thay đổi",
+  "visitPlanUpdated": "Đã cập nhật kế hoạch."
 }

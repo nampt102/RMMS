@@ -126,6 +126,12 @@ class _Header extends StatelessWidget {
           if (plan.status == 'pending') ...[
             const SizedBox(height: 10),
             _Banner(text: l.visitPlanAwaitingApproval, tone: AppTone.amber),
+            const SizedBox(height: 10),
+            AppButton.soft(
+              label: l.visitPlanEdit,
+              icon: Icons.edit_rounded,
+              onPressed: () => context.push('${AppRoutes.visitPlans}/${plan.id}/edit', extra: plan),
+            ),
           ] else if (plan.status == 'rejected') ...[
             const SizedBox(height: 10),
             _Banner(text: l.visitPlanRejectedBanner, tone: AppTone.rose),

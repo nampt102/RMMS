@@ -6,6 +6,8 @@ export type VisitPlanItem = {
   id: string;
   storeId: string;
   storeName: string | null;
+  storeLat: number | null;
+  storeLng: number | null;
   formId: string;
   formName: string | null;
   ordering: number;

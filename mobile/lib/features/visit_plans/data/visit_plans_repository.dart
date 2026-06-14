@@ -28,6 +28,14 @@ class VisitPlansRepository {
   }) =>
       _guard(() => _api.create(visitDate: visitDate, notes: notes, items: items));
 
+  Future<VisitPlan> edit({
+    required String id,
+    required DateTime visitDate,
+    String? notes,
+    required List<VisitItemDraft> items,
+  }) =>
+      _guard(() => _api.edit(id: id, visitDate: visitDate, notes: notes, items: items));
+
   Future<VisitPlan> executeItem({
     required String planId,
     required String itemId,

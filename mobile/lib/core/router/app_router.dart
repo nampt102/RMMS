@@ -29,6 +29,7 @@ import '../../features/requests/presentation/screens/ot_request_screen.dart';
 import '../../features/requests/presentation/screens/requests_history_screen.dart';
 import '../../features/forms/presentation/screens/forms_list_screen.dart';
 import '../../features/forms/presentation/screens/form_fill_screen.dart';
+import '../../features/visit_plans/domain/visit_plan_models.dart';
 import '../../features/visit_plans/presentation/screens/visit_plans_list_screen.dart';
 import '../../features/visit_plans/presentation/screens/visit_plan_create_screen.dart';
 import '../../features/visit_plans/presentation/screens/visit_plan_detail_screen.dart';
@@ -273,6 +274,11 @@ final appRouterProvider = Provider<GoRouter>((ref) {
         parentNavigatorKey: _rootKey,
         path: AppRoutes.visitPlanNew,
         builder: (context, state) => const VisitPlanCreateScreen(),
+      ),
+      GoRoute(
+        parentNavigatorKey: _rootKey,
+        path: '${AppRoutes.visitPlans}/:id/edit',
+        builder: (context, state) => VisitPlanCreateScreen(editing: state.extra as VisitPlan?),
       ),
       GoRoute(
         parentNavigatorKey: _rootKey,

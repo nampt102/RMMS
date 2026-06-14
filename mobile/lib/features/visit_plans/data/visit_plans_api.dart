@@ -35,6 +35,21 @@ class VisitPlansApi {
     return VisitPlan.fromJson(_data(res));
   }
 
+  /// PATCH /visit-plans/:id — edit a still-pending plan (same payload as create).
+  Future<VisitPlan> edit({
+    required String id,
+    required DateTime visitDate,
+    String? notes,
+    required List<VisitItemDraft> items,
+  }) async {
+    final res = await _dio.patch<Map<String, dynamic>>('/visit-plans/$id', data: {
+      'visitDate': visitDate.toIso8601String().split('T').first,
+      if (notes != null && notes.isNotEmpty) 'notes': notes,
+      'items': items.map((i) => i.toJson()).toList(),
+    });
+    return VisitPlan.fromJson(_data(res));
+  }
+
   /// POST /visit-plans/:id/items/:itemId/execute — link a form submission.
   Future<VisitPlan> executeItem({
     required String planId,

@@ -6,6 +6,17 @@ Append-only chronological log of significant project milestones, decisions, and 
 
 ---
 
+## 2026-06-14 — Sprint 14: M11 completion — mobile edit + web detail map
+
+**By:** Tech lead + Mobile lead (MotivesVN IT), AI-assisted
+
+**Status:** ✅ Backend 0 errors, **265 tests**. Web typecheck + lint clean. Mobile code-only (Mac `gen-l10n` + `analyze`); ARB vi/en parity 347=347.
+
+- **BE:** `VisitPlanItemDto` now carries `storeLat`/`storeLng` (resolved alongside store name in the query lookups) — no schema change/migration.
+- **Web:** Visit Plan detail drawer renders an OpenStreetMap map of the plan's stores, reusing the existing `StoreMap` (react-leaflet, ADR-010 — dynamic `ssr:false`). No new dependency.
+- **Mobile:** edit a **pending** plan — `VisitPlansApi.edit` (PATCH /visit-plans/:id), `VisitPlanCreateScreen` doubles as edit (prefilled date/notes/items, PATCH on save), route `/visit-plans/:id/edit` (plan passed via `extra`), "Sửa kế hoạch" button on the detail header (pending only). i18n `visitPlanEdit*` / `visitPlanSave` / `visitPlanUpdated` (vi/en).
+- **M11 / Sprint 14 is now feature-complete** across BE + Web + Mobile (AC-28/29/30).
+
 ## 2026-06-14 — Sprint 14: M11 Visit Plan mobile (Leader) screens (AC-28/30)
 
 **By:** Mobile lead (MotivesVN IT), AI-assisted
