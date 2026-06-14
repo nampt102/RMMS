@@ -25,7 +25,8 @@ internal sealed class GetMyVisitPlansQueryHandler
             .OrderByDescending(p => p.VisitDate).ThenByDescending(p => p.CreatedAt)
             .ToListAsync(ct);
 
-        var items = plans.Select(p => VisitPlanMapper.ToDto(p)).ToList();
+        var lookups = await VisitPlanNames.BuildAsync(_db, plans, ct);
+        var items = plans.Select(p => VisitPlanMapper.ToDto(p, lookups: lookups)).ToList();
         return Result.Success<IReadOnlyList<VisitPlanDto>>(items);
     }
 }
@@ -57,8 +58,9 @@ internal sealed class GetVisitPlanQueryHandler : IRequestHandler<GetVisitPlanQue
 
         var leaderName = await _db.Users.AsNoTracking()
             .Where(u => u.Id == plan.LeaderUserId).Select(u => u.FullName).FirstOrDefaultAsync(ct);
+        var lookups = await VisitPlanNames.BuildAsync(_db, new[] { plan }, ct);
 
-        return Result.Success(VisitPlanMapper.ToDto(plan, leaderName));
+        return Result.Success(VisitPlanMapper.ToDto(plan, leaderName, lookups));
     }
 }
 
@@ -96,9 +98,30 @@ internal sealed class AdminGetVisitPlansQueryHandler
         var names = await _db.Users.AsNoTracking()
             .Where(u => leaderIds.Contains(u.Id))
             .ToDictionaryAsync(u => u.Id, u => u.FullName, ct);
+        var lookups = await VisitPlanNames.BuildAsync(_db, plans, ct);
 
         var items = plans.Select(p => VisitPlanMapper.ToDto(
-            p, names.TryGetValue(p.LeaderUserId, out var n) ? n : null)).ToList();
+            p, names.TryGetValue(p.LeaderUserId, out var n) ? n : null, lookups)).ToList();
         return Result.Success<IReadOnlyList<VisitPlanDto>>(items);
+    }
+}
+
+/// <summary>Resolves store + form display names for a set of plans (one query each).</summary>
+internal static class VisitPlanNames
+{
+    public static async Task<VisitPlanLookups> BuildAsync(
+        IAppDbContext db, IReadOnlyList<Domain.VisitPlan.VisitPlan> plans, CancellationToken ct)
+    {
+        var storeIds = plans.SelectMany(p => p.Items).Select(i => i.StoreId).Distinct().ToList();
+        var formIds = plans.SelectMany(p => p.Items).Select(i => i.FormId).Distinct().ToList();
+
+        var stores = await db.Stores.AsNoTracking()
+            .Where(s => storeIds.Contains(s.Id))
+            .ToDictionaryAsync(s => s.Id, s => s.Name, ct);
+        var forms = await db.Forms.AsNoTracking()
+            .Where(f => formIds.Contains(f.Id))
+            .ToDictionaryAsync(f => f.Id, f => f.NameVi, ct);
+
+        return new VisitPlanLookups(stores, forms);
     }
 }
