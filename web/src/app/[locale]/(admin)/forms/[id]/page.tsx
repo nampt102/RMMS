@@ -7,6 +7,7 @@ import {
   EyeOutlined,
   HolderOutlined,
   HistoryOutlined,
+  MoreOutlined,
   PlusOutlined,
   UsergroupAddOutlined,
 } from "@ant-design/icons";
@@ -202,36 +203,39 @@ export default function FormBuilderPage() {
 
   return (
     <div className="mx-auto max-w-3xl">
-      <div className="mb-4 flex items-center justify-between gap-2">
-        <Space>
-          <Button icon={<ArrowLeftOutlined />} onClick={() => router.push(`/${locale}/forms`)} />
-          <div>
-            <Title level={4} className="!mb-0">
-              {form.code}
-            </Title>
-            <Text type="secondary">
-              {t(`type_${form.formType}`)} · v{form.currentVersion}
-              {form.hasDraft && <Tag className="ml-2" color="gold">{t("draftPending")}</Tag>}
-            </Text>
-          </div>
-        </Space>
-        <Space wrap>
-          <Button icon={<EyeOutlined />} onClick={() => setPreviewOpen(true)}>
-            {t("preview")}
-          </Button>
-          <Button icon={<UsergroupAddOutlined />} onClick={() => setAssignOpen(true)}>
-            {t("assign")}
-          </Button>
-          <Button icon={<HistoryOutlined />} onClick={() => setHistoryOpen(true)}>
-            {t("versions")}
-          </Button>
-          <Button onClick={saveDraft} loading={updateForm.isPending}>
-            {t("saveDraft")}
-          </Button>
-          <Button type="primary" onClick={onPublish} loading={publishForm.isPending}>
-            {t("publish")}
-          </Button>
-        </Space>
+      <div className="mb-4 flex items-center gap-2">
+        <Button icon={<ArrowLeftOutlined />} onClick={() => router.push(`/${locale}/forms`)} />
+        <div className="min-w-0 flex-1">
+          <Title level={4} className="!mb-0 truncate">
+            {form.code}
+          </Title>
+          <Text type="secondary" className="block truncate">
+            {t(`type_${form.formType}`)} · v{form.currentVersion}
+            {form.hasDraft && <Tag className="ml-2" color="gold">{t("draftPending")}</Tag>}
+          </Text>
+        </div>
+        <Dropdown
+          menu={{
+            items: [
+              { key: "preview", icon: <EyeOutlined />, label: t("preview") },
+              { key: "assign", icon: <UsergroupAddOutlined />, label: t("assign") },
+              { key: "versions", icon: <HistoryOutlined />, label: t("versions") },
+            ],
+            onClick: ({ key }) => {
+              if (key === "preview") setPreviewOpen(true);
+              else if (key === "assign") setAssignOpen(true);
+              else if (key === "versions") setHistoryOpen(true);
+            },
+          }}
+        >
+          <Button icon={<MoreOutlined />} />
+        </Dropdown>
+        <Button onClick={saveDraft} loading={updateForm.isPending}>
+          {t("saveDraft")}
+        </Button>
+        <Button type="primary" onClick={onPublish} loading={publishForm.isPending}>
+          {t("publish")}
+        </Button>
       </div>
 
       <Card title={t("metaSection")} className="mb-4" size="small">
