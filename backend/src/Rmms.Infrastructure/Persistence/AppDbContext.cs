@@ -13,6 +13,7 @@ using Rmms.Domain.Users;
 using Rmms.Domain.Scheduling;
 using Rmms.Domain.VisitPlan;
 using Rmms.Domain.Documents;
+using Rmms.Domain.News;
 
 namespace Rmms.Infrastructure.Persistence;
 
@@ -70,6 +71,11 @@ public sealed class AppDbContext : DbContext, IAppDbContext
     // ----- M13 Document Center -----
     public DbSet<Document> Documents => Set<Document>();
     public DbSet<DocumentAssignment> DocumentAssignments => Set<DocumentAssignment>();
+
+    // ----- M14 News -----
+    public DbSet<NewsItem> News => Set<NewsItem>();
+    public DbSet<NewsAssignment> NewsAssignments => Set<NewsAssignment>();
+    public DbSet<NewsRead> NewsReads => Set<NewsRead>();
 
     // ----- M14 Notification -----
     public DbSet<Notification> Notifications => Set<Notification>();

@@ -12,6 +12,7 @@ using Rmms.Domain.Users;
 using Rmms.Domain.Scheduling;
 using Rmms.Domain.VisitPlan;
 using Rmms.Domain.Documents;
+using Rmms.Domain.News;
 
 namespace Rmms.Application.Common.Interfaces;
 
@@ -67,6 +68,11 @@ public interface IAppDbContext
     // ----- M13 Document Center -----
     DbSet<Document> Documents { get; }
     DbSet<DocumentAssignment> DocumentAssignments { get; }
+
+    // ----- M14 News -----
+    DbSet<NewsItem> News { get; }
+    DbSet<NewsAssignment> NewsAssignments { get; }
+    DbSet<NewsRead> NewsReads { get; }
 
     // ----- M14 Notification -----
     DbSet<Notification> Notifications { get; }

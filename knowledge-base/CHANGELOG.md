@@ -6,6 +6,19 @@ Append-only chronological log of significant project milestones, decisions, and 
 
 ---
 
+## 2026-06-14 — Sprint 15: M14 News backend (AC-33/34)
+
+**By:** Tech lead (MotivesVN IT), AI-assisted
+
+**Status:** ✅ Backend 0 errors. **284 unit tests** (+9). Migration `M14_News` generated **and applied to the dev DB**. (Notification fan-out infra was already shipped in Phase 1A; this adds the News content layer.)
+
+- **Domain:** `NewsItem` (bilingual title/content, category, is_important, draft→publish), `NewsAssignment` (role/user OR), `NewsRead` (per-user read + confirm, unique on news+user).
+- **Application:** `CreateNews`/`UpdateNews` (draft), `AssignNews`, `PublishNews` (stamps published_at + **notifies recipients** — `News` type, email for important, CR-2), `DeleteNews` (soft), `GetMyNews` (published + assigned, with this user's read/confirm state), `MarkNewsRead` (idempotent upsert), `ConfirmNews` (important only, AC-34), `AdminGetNews`.
+- **API:** `AdminNewsController` (AdminOnly): create/update/assign/publish/delete/list. `NewsController` (AnyAuthenticated): `GET /news/me`, `POST /:id/read`, `POST /:id/confirm`.
+- **Tables:** `news` + `news_assignments` + `news_reads`. Audit: `news.created`/`.updated`/`.assigned`/`.published`/`.deleted`.
+- **S15 backend (M13 Documents + M14 News) is complete.** Remaining S15: web admin (document upload/assign + news editor) + mobile (documents viewer, news list/confirm, badge).
+- ⚠️ Restart the dev API to pick up the new News + Document endpoints.
+
 ## 2026-06-14 — Sprint 15: M13 Document Center backend (AC-31/32)
 
 **By:** Tech lead (MotivesVN IT), AI-assisted

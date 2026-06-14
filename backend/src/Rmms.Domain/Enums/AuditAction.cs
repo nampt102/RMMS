@@ -106,5 +106,12 @@ public static class AuditAction
     public const string DocumentDeleted = "document.deleted";
     public const string DocumentDownloaded = "document.downloaded"; // private files (CR-1)
 
+    // ----- M14 News -----
+    public const string NewsCreated = "news.created";
+    public const string NewsUpdated = "news.updated";
+    public const string NewsAssigned = "news.assigned";
+    public const string NewsPublished = "news.published";
+    public const string NewsDeleted = "news.deleted";
+
     // (M04+ actions appended here as modules ship)
 }
