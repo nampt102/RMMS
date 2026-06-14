@@ -88,5 +88,10 @@ public static class AuditAction
     public const string ApprovalRejected = "approval.rejected";
     public const string ApprovalOverridden = "approval.overridden"; // Admin override (BR-408)
 
+    // ----- M10 Form Engine -----
+    public const string FormCreated = "form.created";
+    public const string FormUpdated = "form.updated";
+    public const string FormPublished = "form.published";
+
     // (M04+ actions appended here as modules ship)
 }

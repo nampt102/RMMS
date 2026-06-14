@@ -6,6 +6,7 @@ using Rmms.Domain.Notifications;
 using Rmms.Domain.Auth;
 using Rmms.Domain.Devices;
 using Rmms.Domain.Attendance;
+using Rmms.Domain.Forms;
 using Rmms.Domain.Organization;
 using Rmms.Domain.Users;
 using Rmms.Domain.Scheduling;
@@ -51,6 +52,10 @@ public interface IAppDbContext
 
     // ----- M05 Attendance -----
     DbSet<AttendanceRecord> AttendanceRecords { get; }
+
+    // ----- M10 Form Engine -----
+    DbSet<Form> Forms { get; }
+    DbSet<FormVersion> FormVersions { get; }
 
     // ----- M14 Notification -----
     DbSet<Notification> Notifications { get; }

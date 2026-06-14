@@ -7,6 +7,7 @@ using Rmms.Domain.Notifications;
 using Rmms.Domain.Auth;
 using Rmms.Domain.Devices;
 using Rmms.Domain.Attendance;
+using Rmms.Domain.Forms;
 using Rmms.Domain.Organization;
 using Rmms.Domain.Users;
 using Rmms.Domain.Scheduling;
@@ -54,6 +55,10 @@ public sealed class AppDbContext : DbContext, IAppDbContext
 
     // ----- M05 Attendance -----
     public DbSet<AttendanceRecord> AttendanceRecords => Set<AttendanceRecord>();
+
+    // ----- M10 Form Engine -----
+    public DbSet<Form> Forms => Set<Form>();
+    public DbSet<FormVersion> FormVersions => Set<FormVersion>();
 
     // ----- M14 Notification -----
     public DbSet<Notification> Notifications => Set<Notification>();

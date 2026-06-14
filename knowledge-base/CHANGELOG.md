@@ -6,6 +6,20 @@ Append-only chronological log of significant project milestones, decisions, and 
 
 ---
 
+## 2026-06-14 — Sprint 11/12: M10 Form Engine backend skeleton (AC-20/21)
+
+**By:** Tech lead (MotivesVN IT), AI-assisted
+
+**Status:** ✅ Backend builds (0 errors); **245 unit tests green** (+7). Migration `M10_Forms` generated (not yet applied to prod). Web Form Builder + mobile renderer pending (S12/S13). `@dnd-kit` + Recharts approved by stakeholder (install at S12/S16).
+
+- **Domain (`Rmms.Domain.Forms`):** `Form : AuditableEntity` (code unique, name/desc vi+en, `FormType`, `CurrentVersion` int, `FormStatus` draft/published/archived) + `FormVersion` (form_id, version, `schema` jsonb raw-JSON, published_at/by, immutable once published). Versioning per ADR-016 + design doc.
+- **Schema validator (`Application/Forms/FormSchema.cs`):** structural validation against the **input-type registry** (13 known types) — not generic JSON-Schema (ADR-016): requires `fields[]` with unique non-empty `id` + known `type`, optional `rules` object.
+- **CQRS (`Forms.cs`):** Create (form + draft v1) / UpdateDraft (edits the draft, or **creates a new draft version when the latest is published** — BR-505) / Publish (freezes draft, sets `current_version`, status=published) / GetForms (+ has-draft flag) / GetForm (latest editable schema + version state) / GetFormVersions (history). Audit `form.created/updated/published`.
+- **EF + migration `M10_Forms`:** `forms` + `form_versions` tables; unique `ix_forms_code_unique` + `ix_form_versions_form_version_unique` (filtered), soft-delete filters.
+- **API:** `AdminFormsController` (`api/v1/admin/forms`, AdminOnly): list / get / versions / create / patch (update draft) / publish.
+- **Tests:** 7 `FormHandlerTests` (create+draft-v1 / dup-code / invalid-schema / invalid-type / publish-sets-current / **edit-after-publish-creates-v2-old-immutable** / publish-no-draft-conflict).
+- Next: S12 web Form Builder (@dnd-kit) + assignment + S13 mobile renderer/offline/submit.
+
 ## 2026-06-14 — Sprint 11: M04 Product Master (AC-25) — BE + web
 
 **By:** Tech lead (MotivesVN IT), AI-assisted
