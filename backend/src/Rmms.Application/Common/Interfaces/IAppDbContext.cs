@@ -11,6 +11,7 @@ using Rmms.Domain.Organization;
 using Rmms.Domain.Users;
 using Rmms.Domain.Scheduling;
 using Rmms.Domain.VisitPlan;
+using Rmms.Domain.Documents;
 
 namespace Rmms.Application.Common.Interfaces;
 
@@ -62,6 +63,10 @@ public interface IAppDbContext
 
     // ----- M11 Visit Plan (items are an owned collection of VisitPlan) -----
     DbSet<VisitPlan> VisitPlans { get; }
+
+    // ----- M13 Document Center -----
+    DbSet<Document> Documents { get; }
+    DbSet<DocumentAssignment> DocumentAssignments { get; }
 
     // ----- M14 Notification -----
     DbSet<Notification> Notifications { get; }

@@ -100,5 +100,11 @@ public static class AuditAction
     public const string VisitPlanEdited = "visit_plan.edited";
     public const string VisitPlanItemExecuted = "visit_plan.item_executed";
 
+    // ----- M13 Document Center -----
+    public const string DocumentUploaded = "document.uploaded";
+    public const string DocumentAssigned = "document.assigned";
+    public const string DocumentDeleted = "document.deleted";
+    public const string DocumentDownloaded = "document.downloaded"; // private files (CR-1)
+
     // (M04+ actions appended here as modules ship)
 }

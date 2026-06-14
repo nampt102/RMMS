@@ -6,6 +6,19 @@ Append-only chronological log of significant project milestones, decisions, and 
 
 ---
 
+## 2026-06-14 — Sprint 15: M13 Document Center backend (AC-31/32)
+
+**By:** Tech lead (MotivesVN IT), AI-assisted
+
+**Status:** ✅ Backend 0 errors. **275 unit tests** (+10). Migration `M13_Documents` generated **and applied to the dev DB**.
+
+- **Domain:** `Document` (name/desc/folder_type/file_key/size/mime/uploaded_by) + `DocumentAssignment` (role/user OR logic) + `DocumentFolderType` (`public`/`private`).
+- **Application:** `Upload` (multipart → MinIO via `IAttendancePhotoStorage`, random key), `Assign` (role/user; **notifies recipients** — `Payslip` for private, `Document` for public, CR-2), `GetMyDocuments` (OR-resolution + in-memory name search), `GetDocumentDownloadUrl` (access check + short-lived signed URL; **private downloads audited**, CR-1), `Delete` (soft-delete), `AdminGetDocuments`.
+- **API:** `AdminDocumentsController` (AdminOnly): `GET /admin/documents`, `POST` (multipart, 50 MB cap), `POST /:id/assignments`, `DELETE /:id`. `DocumentsController` (AnyAuthenticated): `GET /documents/me?search=`, `GET /documents/:id/download`.
+- **Tables:** `documents` + `document_assignments`. Audit: `document.uploaded` / `.assigned` / `.deleted` / `.downloaded`.
+- ⚠️ Restart the dev API to pick up the new Document endpoints. (Note: regenerated the migration after a stale `--no-build` attempt; M11 migration files restored from git, no data lost.)
+- Next in S15: M14 **News** (news/assignments/reads) BE, then web admin + mobile for both M13/M14.
+
 ## 2026-06-14 — Sprint 14: M11 completion — mobile edit + web detail map
 
 **By:** Tech lead + Mobile lead (MotivesVN IT), AI-assisted

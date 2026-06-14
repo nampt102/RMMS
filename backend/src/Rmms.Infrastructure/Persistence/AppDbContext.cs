@@ -12,6 +12,7 @@ using Rmms.Domain.Organization;
 using Rmms.Domain.Users;
 using Rmms.Domain.Scheduling;
 using Rmms.Domain.VisitPlan;
+using Rmms.Domain.Documents;
 
 namespace Rmms.Infrastructure.Persistence;
 
@@ -65,6 +66,10 @@ public sealed class AppDbContext : DbContext, IAppDbContext
 
     // ----- M11 Visit Plan (items are an owned collection of VisitPlan) -----
     public DbSet<VisitPlan> VisitPlans => Set<VisitPlan>();
+
+    // ----- M13 Document Center -----
+    public DbSet<Document> Documents => Set<Document>();
+    public DbSet<DocumentAssignment> DocumentAssignments => Set<DocumentAssignment>();
 
     // ----- M14 Notification -----
     public DbSet<Notification> Notifications => Set<Notification>();
