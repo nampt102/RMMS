@@ -17,6 +17,7 @@ import {
   SafetyCertificateOutlined,
   LogoutOutlined,
   ShopOutlined,
+  TagsOutlined,
   TeamOutlined,
 } from "@ant-design/icons";
 import { useTranslations } from "next-intl";
@@ -102,6 +103,7 @@ export default function AdminLayout({
     { key: `/${locale}/stores`, icon: <ShopOutlined />, label: <Link href={`/${locale}/stores`}>{t("navStores")}</Link>, roles: ["admin"] },
     { key: `/${locale}/areas`, icon: <ApartmentOutlined />, label: <Link href={`/${locale}/areas`}>{t("navAreas")}</Link>, roles: ["admin"] },
     { key: `/${locale}/categories`, icon: <AppstoreOutlined />, label: <Link href={`/${locale}/categories`}>{t("navCategories")}</Link>, roles: ["admin"] },
+    { key: `/${locale}/products`, icon: <TagsOutlined />, label: <Link href={`/${locale}/products`}>{t("navProducts")}</Link>, roles: ["admin"] },
     { key: `/${locale}/schedules`, icon: <CalendarOutlined />, label: <Link href={`/${locale}/schedules`}>{t("navSchedules")}</Link>, roles: ["admin"] },
     { key: `/${locale}/attendance`, icon: <CheckSquareOutlined />, label: <Link href={`/${locale}/attendance`}>{t("navAttendance")}</Link>, roles: ["admin"] },
     { key: `/${locale}/monitoring`, icon: <DashboardOutlined />, label: <Link href={`/${locale}/monitoring`}>{t("navMonitoring")}</Link>, roles: ["admin", "leader", "buh"] },

@@ -6,18 +6,19 @@ Append-only chronological log of significant project milestones, decisions, and 
 
 ---
 
-## 2026-06-14 — Sprint 11: M04 Product Master backend (AC-25)
+## 2026-06-14 — Sprint 11: M04 Product Master (AC-25) — BE + web
 
 **By:** Tech lead (MotivesVN IT), AI-assisted
 
-**Status:** ✅ Backend builds (0 errors); **238 unit tests green** (+7). Migration generated (not yet applied to prod). Web/mobile UI pending.
+**Status:** ✅ Backend builds (0 errors); **238 unit tests green** (+7). Web type-check + lint clean. Migration generated (not yet applied to prod). _(Mobile = `product_selector` inside Form Engine M10/S13 — read endpoint already shipped, no standalone screen.)_
 
 - **Domain:** `Product : AuditableEntity` (sku unique, name, brand, category_id soft-ref, `attributes` jsonb raw-JSON string like `notifications.data`, `ProductStatus` Active/Inactive) + `Create`/`Update`/`Activate`/`Deactivate`.
 - **EF + migration `M04_ProductMaster`:** `products` table, unique `ix_products_sku_unique` (filtered `deleted_at IS NULL`), `ix_products_category_id`, `ix_products_status_deleted_at`, soft-delete query filter. No hard FK to categories (keeps historical form submissions resolving — M04 edge case).
 - **CQRS (`Organization/Products/Products.cs`):** Create / Update / ChangeStatus / Delete (soft) + paginated `GetProductsQuery` (search name/sku/brand, filter category, `ActiveOnly` for mobile, 50/page) returning `PaginatedResponse<ProductDto>` with resolved category name. Attributes validated as JSON; category existence checked (`INVALID_REFERENCE`); duplicate sku → `CODE_ALREADY_EXISTS`. Audit `product.created/updated/status_changed/deleted`.
 - **API:** `AdminProductsController` (`api/v1/admin/products`, AdminOnly — list/create/patch/status/delete) + read-only `ProductsController` (`api/v1/products`, AnyAuthenticated, active-only) for mobile + Form Engine product selectors (BR-507).
 - **Tests:** 7 `ProductHandlerTests` (create/dup-sku/unknown-category/invalid-json/status-toggle+active-filter/search+category-name/not-found).
-- Next: M04 web Products admin UI (ui-ux-pro-max), then Sprint 11 Form CRUD skeleton.
+- **Web:** `/products` admin page (ProTable: search SKU/name/brand + category filter + status enum; create/edit ModalForm with category select + JSON-validated `attributes` textarea; activate/deactivate + soft-delete) reusing the stores/categories pattern; new `navProducts` nav item (admin-only). i18n `products.*` + `admin.navProducts` (vi/en, parity 364=364). ui-ux-pro-max: data-dense ProTable, AntD Pro + Tailwind.
+- Next: Sprint 11/12 Form CRUD skeleton (M10).
 
 ## 2026-06-14 — Phase 1B kickoff: M10 Form Engine design + ADR-014/015/016
 
