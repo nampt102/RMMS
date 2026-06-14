@@ -67,11 +67,11 @@ class HomeScreen extends ConsumerWidget {
               ),
             ),
             const SizedBox(height: 22),
-            const AppRiseIn(
-              delay: Duration(milliseconds: 120),
+            AppRiseIn(
+              delay: const Duration(milliseconds: 120),
               child: SectionEyebrow(
-                'Truy cập nhanh',
-                trailing: Icon(Icons.auto_awesome_rounded,
+                l.homeSectionQuick,
+                trailing: const Icon(Icons.auto_awesome_rounded,
                     color: AppPalette.violet, size: 16),
               ),
             ),
@@ -243,7 +243,7 @@ class _Hero extends StatelessWidget {
                         if (role != null)
                           _glassChip(
                             icon: Icons.store_rounded,
-                            text: 'Vai trò · $role',
+                            text: l.homeRoleLabel(role!),
                           ),
                         if (storeCode != null)
                           _glassChip(
