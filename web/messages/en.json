@@ -91,6 +91,7 @@
     "metadata": "Details"
   },
   "requests": {
+    "export": "Export Excel",
     "tabLeave": "Leave",
     "tabOt": "Overtime",
     "titleLeave": "Leave requests",

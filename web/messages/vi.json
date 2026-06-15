@@ -91,6 +91,7 @@
     "metadata": "Chi tiết"
   },
   "requests": {
+    "export": "Xuất Excel",
     "tabLeave": "Nghỉ phép",
     "tabOt": "Làm thêm (OT)",
     "titleLeave": "Đơn nghỉ phép",

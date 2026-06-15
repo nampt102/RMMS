@@ -1,9 +1,10 @@
 "use client";
 
+import { DownloadOutlined } from "@ant-design/icons";
 import { ProTable, type ProColumns } from "@ant-design/pro-components";
-import { App, Tabs, Tag } from "antd";
+import { App, Button, Tabs, Tag } from "antd";
 import { useLocale, useTranslations } from "next-intl";
-import { fetchAllLeaveRequests, fetchAllOtRequests } from "@/features/requests/api";
+import { downloadRequestsExcel, fetchAllLeaveRequests, fetchAllOtRequests } from "@/features/requests/api";
 import type { LeaveRequest, OtRequest, RequestStatus } from "@/features/requests/types";
 import { errorCodeFromUnknown } from "@/features/auth/lib/auth-error";
 
@@ -23,6 +24,19 @@ export default function RequestsPage() {
     const code = errorCodeFromUnknown(error);
     message.error(tErrors.has(code) ? tErrors(code) : tErrors("INTERNAL_ERROR"));
   };
+
+  const onExport = async (kind: "leave" | "ot") => {
+    try {
+      await downloadRequestsExcel(kind);
+    } catch (error) {
+      showError(error);
+    }
+  };
+  const exportButton = (kind: "leave" | "ot") => (
+    <Button key="export" icon={<DownloadOutlined />} onClick={() => onExport(kind)}>
+      {t("export")}
+    </Button>
+  );
 
   const fmtDate = (v: string | null) => (v ? new Date(v).toLocaleDateString(locale === "en" ? "en-US" : "vi-VN") : "—");
   const statusEnum = {
@@ -70,6 +84,7 @@ export default function RequestsPage() {
               search={{ labelWidth: "auto" }}
               pagination={{ pageSize: 20, showSizeChanger: true }}
               options={{ reload: true, density: false, setting: false }}
+              toolBarRender={() => [exportButton("leave")]}
               request={async (params) => {
                 try {
                   const res = await fetchAllLeaveRequests({
@@ -97,6 +112,7 @@ export default function RequestsPage() {
               search={{ labelWidth: "auto" }}
               pagination={{ pageSize: 20, showSizeChanger: true }}
               options={{ reload: true, density: false, setting: false }}
+              toolBarRender={() => [exportButton("ot")]}
               request={async (params) => {
                 try {
                   const res = await fetchAllOtRequests({

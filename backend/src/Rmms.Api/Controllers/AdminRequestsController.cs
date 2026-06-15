@@ -5,6 +5,7 @@ using Microsoft.AspNetCore.Mvc;
 using Rmms.Api.Authentication;
 using Rmms.Api.Common;
 using Rmms.Application.LeaveOt;
+using Rmms.Application.Reports;
 
 namespace Rmms.Api.Controllers;
 
@@ -30,5 +31,21 @@ public sealed class AdminRequestsController : ControllerBase
     {
         var result = await _mediator.Send(new GetAllOtRequestsQuery(status, page <= 0 ? 1 : page, pageSize <= 0 ? 20 : pageSize), ct);
         return result.IsSuccess ? ResultMapping.Ok(result.Value) : ResultMapping.Failure(result.Error, HttpContext.TraceIdentifier);
+    }
+
+    [HttpGet("leave-requests/export")]
+    public async Task<IActionResult> ExportLeave([FromQuery] string? status, CancellationToken ct)
+    {
+        var result = await _mediator.Send(new ExportLeaveRequestsCommand(status), ct);
+        if (result.IsFailure) return ResultMapping.Failure(result.Error, HttpContext.TraceIdentifier);
+        return File(result.Value.Content, result.Value.ContentType, result.Value.FileName);
+    }
+
+    [HttpGet("ot-requests/export")]
+    public async Task<IActionResult> ExportOt([FromQuery] string? status, CancellationToken ct)
+    {
+        var result = await _mediator.Send(new ExportOtRequestsCommand(status), ct);
+        if (result.IsFailure) return ResultMapping.Failure(result.Error, HttpContext.TraceIdentifier);
+        return File(result.Value.Content, result.Value.ContentType, result.Value.FileName);
     }
 }

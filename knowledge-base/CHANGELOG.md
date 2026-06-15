@@ -6,6 +6,16 @@ Append-only chronological log of significant project milestones, decisions, and 
 
 ---
 
+## 2026-06-15 — Sprint 16: M15 — Leave/OT Excel export (close S16)
+
+**By:** Tech lead (MotivesVN IT), AI-assisted
+
+**Status:** ✅ Backend 0 errors, **291 unit tests** (+2). Web lint clean; tsc clean except the known recharts-not-installed error.
+
+- **BE:** `ExportLeaveRequestsCommand` + `ExportOtRequestsCommand` (reuse the M15 `IReportExporter`; direct queries + user-name join, 20k cap, status filter). Endpoints `GET /admin/leave-requests/export` + `/admin/ot-requests/export` on `AdminRequestsController`.
+- **Web:** Export Excel buttons on both tabs of `/requests` (`downloadRequestsExcel` blob download). i18n `requests.export` (vi/en).
+- Pattern now proven for any admin list → the remaining report exports (approvals/forms/visit-plan) are a copy of this shape if needed. **S16 core + Leave/OT export complete.**
+
 ## 2026-06-15 — Sprint 16: M15 web — dashboard chart (Recharts) + reports screen + export
 
 **By:** Tech lead (MotivesVN IT), AI-assisted
