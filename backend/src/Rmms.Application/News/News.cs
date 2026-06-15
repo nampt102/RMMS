@@ -53,6 +53,16 @@ public sealed record UpdateNewsCommand(
     Guid Id, string TitleVi, string TitleEn, string ContentVi, string ContentEn, string? Category, bool IsImportant)
     : IRequest<Result>;
 
+public sealed class UpdateNewsCommandValidator : AbstractValidator<UpdateNewsCommand>
+{
+    public UpdateNewsCommandValidator()
+    {
+        RuleFor(x => x.TitleVi).NotEmpty().WithErrorCode("REQUIRED").MaximumLength(255);
+        RuleFor(x => x.TitleEn).NotEmpty().WithErrorCode("REQUIRED").MaximumLength(255);
+        RuleFor(x => x.Category).MaximumLength(50);
+    }
+}
+
 internal sealed class UpdateNewsCommandHandler : IRequestHandler<UpdateNewsCommand, Result>
 {
     private readonly IAppDbContext _db;

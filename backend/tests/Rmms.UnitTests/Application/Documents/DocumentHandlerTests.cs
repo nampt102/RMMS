@@ -24,6 +24,14 @@ public sealed class DocumentHandlerTests
     }
 
     [Fact]
+    public void UploadValidator_RejectsEmptyName()
+    {
+        var result = new UploadDocumentCommandValidator()
+            .Validate(new UploadDocumentCommand("", null, "public", File(), Guid.NewGuid()));
+        result.IsValid.Should().BeFalse();
+    }
+
+    [Fact]
     public async Task Upload_Public_Persists()
     {
         await using var db = TestDbContextFactory.Create();

@@ -15,7 +15,8 @@ Append-only chronological log of significant project milestones, decisions, and 
 - **Authorization audit (all 34 controllers):** every `admin/*` route is `AdminOnly`; user-facing routes are `AnyAuthenticated` with in-handler scoping; `VisitPlans` = `LeaderOnly`; `[AllowAnonymous]` only on auth (login/register/…) + BUH email-link + health. No under-protected admin endpoint found.
 - **Deny-by-default (security):** added a global `FallbackPolicy = RequireAuthenticatedUser` so any endpoint missing an explicit `[Authorize]` is NOT silently public (there was no fallback before). `HealthController` marked `[AllowAnonymous]` (public probe, exposes no data). Swagger middleware is unaffected (not a routed endpoint).
 - **Performance:** added `ix_attendance_records_check_in` (standalone `check_in_at`) — the M15 attendance/anomaly report + dashboard trend scan by check-in instant across all users (no leading user filter), previously a seq scan.
-- ⚠️ Restart the dev API to pick up the fallback policy. Further S17 candidates: input-validation sweep, rate-limit coverage, more report indexes, error-envelope consistency.
+- **Input validation:** added FluentValidation validators for the newer write commands that only validated inline — `UploadDocumentCommand` (name required ≤255, folder required) and `UpdateNewsCommand` (bilingual titles required ≤255) — so they return the standard structured 400 envelope via the validation behavior. (292 tests.)
+- ⚠️ Restart the dev API to pick up the fallback policy. Further S17 candidates: rate-limit coverage, more report indexes, error-envelope consistency.
 
 ## 2026-06-15 — Sprint 16: M15 — Leave/OT Excel export (close S16)
 

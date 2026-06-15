@@ -1,3 +1,4 @@
+using FluentValidation;
 using Mediator;
 using Microsoft.EntityFrameworkCore;
 using Rmms.Application.Common;
@@ -15,6 +16,16 @@ namespace Rmms.Application.Documents;
 public sealed record UploadDocumentCommand(
     string Name, string? Description, string FolderType, PhotoUpload File, Guid UploadedBy)
     : IRequest<Result<Guid>>;
+
+public sealed class UploadDocumentCommandValidator : AbstractValidator<UploadDocumentCommand>
+{
+    public UploadDocumentCommandValidator()
+    {
+        RuleFor(x => x.Name).NotEmpty().WithErrorCode("REQUIRED").MaximumLength(255);
+        RuleFor(x => x.FolderType).NotEmpty().WithErrorCode("REQUIRED");
+        RuleFor(x => x.Description).MaximumLength(2000);
+    }
+}
 
 internal sealed class UploadDocumentCommandHandler : IRequestHandler<UploadDocumentCommand, Result<Guid>>
 {
