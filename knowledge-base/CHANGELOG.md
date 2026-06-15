@@ -6,6 +6,16 @@ Append-only chronological log of significant project milestones, decisions, and 
 
 ---
 
+## 2026-06-15 — Fix: web password-reset / verify-email pages (broken email links)
+
+**By:** Tech lead (MotivesVN IT), AI-assisted
+
+**Status:** ✅ Web tsc clean (except known uninstalled recharts), lint clean.
+
+- **Bug:** clicking the password-reset email link (`{AppBaseUrl}/auth/reset-password?token=…`) showed Next.js *"Missing required html tags … &lt;html&gt;, &lt;body&gt;"*. Root cause: the web never implemented the public reset/verify pages, and `<html>/<body>` live only in `app/[locale]/layout.tsx` — any route outside `[locale]` renders via the bare root layout. (`(auth)` is a route GROUP → invisible in the URL, so `/auth/*` matched nothing under the locale layout.)
+- **Fix:** added real pages under the locale layout at `app/[locale]/auth/reset-password/page.tsx` + `app/[locale]/auth/verify-email/page.tsx` (literal `auth` segment → matches the backend's existing email links exactly, no backend change/redeploy needed). Both are `Suspense`-wrapped for `useSearchParams`, public (anonymous), and call `POST /auth/reset-password` / `/auth/verify-email`.
+- `features/auth/api/reset-password.ts` + `verify-email.ts`; i18n `auth.resetPassword` / `auth.verifyEmail` (vi/en). Reset → set new password (+confirm) → redirect to login; verify → auto-submit token → success/expired.
+
 ## 2026-06-15 — Sprint 17: hardening — deny-by-default auth + report index
 
 **By:** Tech lead (MotivesVN IT), AI-assisted

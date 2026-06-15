@@ -21,6 +21,24 @@
       "password": "Password",
       "submit": "Sign in",
       "forgot": "Forgot password?"
+    },
+    "resetPassword": {
+      "title": "Reset password",
+      "subtitle": "Enter a new password for your account.",
+      "newPassword": "New password",
+      "confirm": "Confirm password",
+      "submit": "Reset password",
+      "success": "Password reset. Redirecting to sign in…",
+      "mismatch": "Passwords do not match.",
+      "missingToken": "Invalid or expired link.",
+      "toLogin": "Go to sign in"
+    },
+    "verifyEmail": {
+      "verifying": "Verifying your email…",
+      "success": "Your email is verified. You can sign in.",
+      "failed": "Email verification failed",
+      "failedHint": "The link is invalid or has expired.",
+      "toLogin": "Go to sign in"
     }
   },
   "admin": {

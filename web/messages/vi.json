@@ -21,6 +21,24 @@
       "password": "Mật khẩu",
       "submit": "Đăng nhập",
       "forgot": "Quên mật khẩu?"
+    },
+    "resetPassword": {
+      "title": "Đặt lại mật khẩu",
+      "subtitle": "Nhập mật khẩu mới cho tài khoản của bạn.",
+      "newPassword": "Mật khẩu mới",
+      "confirm": "Xác nhận mật khẩu",
+      "submit": "Đặt lại mật khẩu",
+      "success": "Đã đặt lại mật khẩu. Đang chuyển đến trang đăng nhập…",
+      "mismatch": "Mật khẩu xác nhận không khớp.",
+      "missingToken": "Liên kết không hợp lệ hoặc đã hết hạn.",
+      "toLogin": "Đến trang đăng nhập"
+    },
+    "verifyEmail": {
+      "verifying": "Đang xác minh email…",
+      "success": "Email đã được xác minh. Bạn có thể đăng nhập.",
+      "failed": "Xác minh email thất bại",
+      "failedHint": "Liên kết không hợp lệ hoặc đã hết hạn.",
+      "toLogin": "Đến trang đăng nhập"
     }
   },
   "admin": {
