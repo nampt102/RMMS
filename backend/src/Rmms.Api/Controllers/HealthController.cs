@@ -1,10 +1,12 @@
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
 namespace Rmms.Api.Controllers;
 
-/// <summary>Trivial endpoint to verify the scaffold builds and serves requests.</summary>
+/// <summary>Liveness/health probe — public (load balancers, uptime checks). Exposes no data.</summary>
 [ApiController]
 [Route("api/v1/[controller]")]
+[AllowAnonymous]
 public sealed class HealthController : ControllerBase
 {
     [HttpGet]

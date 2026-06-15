@@ -43,6 +43,14 @@ public static class AuthorizationPolicies
             options.AddPolicy(PgOrLeader, p => p.RequireRole(RolePg, RoleLeader));
             options.AddPolicy(AdminOrLeader, p => p.RequireRole(RoleAdmin, RoleLeader));
             options.AddPolicy(AnyAuthenticated, p => p.RequireAuthenticatedUser());
+
+            // Deny-by-default (S17 hardening): any endpoint WITHOUT an explicit [Authorize]/policy
+            // still requires an authenticated user, so a controller that forgets its attribute is
+            // not silently public. Genuinely public endpoints (health, login, BUH email-link) opt
+            // out with [AllowAnonymous].
+            options.FallbackPolicy = new AuthorizationPolicyBuilder()
+                .RequireAuthenticatedUser()
+                .Build();
         });
 
         return services;

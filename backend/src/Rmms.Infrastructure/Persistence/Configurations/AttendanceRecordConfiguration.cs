@@ -63,6 +63,9 @@ internal sealed class AttendanceRecordConfiguration : IEntityTypeConfiguration<A
         b.HasIndex(a => new { a.Status, a.CreatedAt }).HasDatabaseName("ix_attendance_records_status_created");
         b.HasIndex(a => a.StoreId).HasDatabaseName("ix_attendance_records_store");
         b.HasIndex(a => a.WorkScheduleShiftId).HasDatabaseName("ix_attendance_records_shift");
+        // M15 reports: attendance/anomaly report + dashboard trend scan by check-in instant across
+        // all users (no leading user filter), so a standalone check_in_at index avoids a seq scan.
+        b.HasIndex(a => a.CheckInAt).HasDatabaseName("ix_attendance_records_check_in");
 
         b.HasQueryFilter(a => a.DeletedAt == null);
     }
