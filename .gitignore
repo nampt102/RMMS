@@ -124,3 +124,4 @@ temp/
 # Anchored to repo root so it does NOT swallow source folders named `data/`
 # (e.g. mobile feature `lib/features/*/data/`).
 /data/
+deploy.zip
