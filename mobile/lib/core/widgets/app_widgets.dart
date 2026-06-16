@@ -570,42 +570,43 @@ class AppSheet extends StatelessWidget {
   Widget build(BuildContext context) {
     return SafeArea(
       top: false,
-      child: Container(
-        decoration: const BoxDecoration(
-          color: AppPalette.surface,
-          borderRadius: BorderRadius.vertical(top: Radius.circular(30)),
-        ),
-        padding: const EdgeInsets.fromLTRB(20, 10, 20, 22),
-        child: Column(
-          mainAxisSize: MainAxisSize.min,
-          children: [
-            // Grab handle.
-            Container(
-              width: 44,
-              height: 5,
-              margin: const EdgeInsets.only(bottom: 14),
-              decoration: BoxDecoration(
-                color: AppPalette.line,
-                borderRadius: BorderRadius.circular(999),
-              ),
-            ),
-            if (title != null) ...[
-              Align(
-                alignment: Alignment.centerLeft,
-                child: Text(
-                  title!,
-                  style: GoogleFonts.plusJakartaSans(
-                    color: AppPalette.ink,
-                    fontSize: 18,
-                    fontWeight: FontWeight.w800,
-                    letterSpacing: -0.3,
-                  ),
+      child: Material(
+        color: AppPalette.surface,
+        borderRadius: const BorderRadius.vertical(top: Radius.circular(30)),
+        clipBehavior: Clip.antiAlias,
+        child: Padding(
+          padding: const EdgeInsets.fromLTRB(20, 10, 20, 22),
+          child: Column(
+            mainAxisSize: MainAxisSize.min,
+            children: [
+              // Grab handle.
+              Container(
+                width: 44,
+                height: 5,
+                margin: const EdgeInsets.only(bottom: 14),
+                decoration: BoxDecoration(
+                  color: AppPalette.line,
+                  borderRadius: BorderRadius.circular(999),
                 ),
               ),
-              const SizedBox(height: 14),
+              if (title != null) ...[
+                Align(
+                  alignment: Alignment.centerLeft,
+                  child: Text(
+                    title!,
+                    style: GoogleFonts.plusJakartaSans(
+                      color: AppPalette.ink,
+                      fontSize: 18,
+                      fontWeight: FontWeight.w800,
+                      letterSpacing: -0.3,
+                    ),
+                  ),
+                ),
+                const SizedBox(height: 14),
+              ],
+              child,
             ],
-            child,
-          ],
+          ),
         ),
       ),
     );
@@ -883,7 +884,9 @@ class _ToastViewState extends State<_ToastView>
     return Positioned(
       left: 16,
       right: 16,
-      bottom: MediaQuery.of(context).padding.bottom + 28,
+      bottom: MediaQuery.of(context).padding.bottom +
+          MediaQuery.of(context).viewInsets.bottom +
+          28,
       child: IgnorePointer(
         child: AnimatedBuilder(
           animation: _ctrl,
@@ -995,9 +998,19 @@ class AppBottomNav extends StatelessWidget {
                   child: Row(
                     children: [
                       Expanded(child: _tab(context, tabs[0], tabIndices[0])),
-                      Expanded(child: _tab(context, tabs[1], tabIndices[1])),
-                      const SizedBox(width: 72), // FAB slot
-                      Expanded(child: _tab(context, tabs[2], tabIndices[2])),
+                      Expanded(
+                        child: Padding(
+                          padding: const EdgeInsets.only(right: 10),
+                          child: _tab(context, tabs[1], tabIndices[1]),
+                        ),
+                      ),
+                      const SizedBox(width: 88), // FAB slot — wider to avoid overlap
+                      Expanded(
+                        child: Padding(
+                          padding: const EdgeInsets.only(left: 10),
+                          child: _tab(context, tabs[2], tabIndices[2]),
+                        ),
+                      ),
                       Expanded(child: _tab(context, tabs[3], tabIndices[3])),
                     ],
                   ),
@@ -1010,11 +1023,11 @@ class AppBottomNav extends StatelessWidget {
               child: PressScale(
                 onTap: () => onTap(2),
                 child: Container(
-                  width: 58,
-                  height: 58,
+                  width: 54,
+                  height: 54,
                   decoration: BoxDecoration(
                     gradient: s.brandGradient,
-                    borderRadius: BorderRadius.circular(20),
+                    borderRadius: BorderRadius.circular(18),
                     boxShadow: s.shadowBrand,
                     border: Border.all(
                       color: Theme.of(context).scaffoldBackgroundColor,
@@ -1022,7 +1035,7 @@ class AppBottomNav extends StatelessWidget {
                     ),
                   ),
                   alignment: Alignment.center,
-                  child: Icon(fabItem.icon, color: Colors.white, size: 26),
+                  child: Icon(fabItem.icon, color: Colors.white, size: 24),
                 ),
               ),
             ),
@@ -1048,9 +1061,10 @@ class AppBottomNav extends StatelessWidget {
               item.label,
               maxLines: 1,
               overflow: TextOverflow.ellipsis,
+              textAlign: TextAlign.center,
               style: GoogleFonts.plusJakartaSans(
                 color: color,
-                fontSize: 10.5,
+                fontSize: 10,
                 fontWeight: FontWeight.w700,
                 letterSpacing: 0.1,
               ),

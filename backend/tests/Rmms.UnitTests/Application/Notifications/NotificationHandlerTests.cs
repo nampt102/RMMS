@@ -147,7 +147,7 @@ public sealed class NotificationHandlerTests
         db.UserDevices.Add(UserDevice.RegisterFirstActive(uid, "dev-1", "Pixel", "android", "14", "1.0.0", null, clock.UtcNow));
         await db.SaveChangesAsync();
 
-        var result = await new RegisterFcmTokenCommandHandler(db).Handle(new RegisterFcmTokenCommand(uid, "new-token"), default);
+        var result = await new RegisterFcmTokenCommandHandler(db).Handle(new RegisterFcmTokenCommand(uid, null, "new-token"), default);
 
         result.IsSuccess.Should().BeTrue();
         db.UserDevices.Single(d => d.UserId == uid).FcmToken.Should().Be("new-token");
@@ -158,9 +158,53 @@ public sealed class NotificationHandlerTests
     {
         await using var db = TestDbContextFactory.Create();
 
-        var result = await new RegisterFcmTokenCommandHandler(db).Handle(new RegisterFcmTokenCommand(Guid.NewGuid(), "tok"), default);
+        var result = await new RegisterFcmTokenCommandHandler(db).Handle(new RegisterFcmTokenCommand(Guid.NewGuid(), null, "tok"), default);
 
         result.IsFailure.Should().BeTrue();
         result.Error.Code.Should().Be(ErrorCodes.NotFound);
+    }
+
+    [Fact]
+    public async Task RegisterFcmToken_ByJwtDeviceRowId_UpdatesDevice()
+    {
+        await using var db = TestDbContextFactory.Create();
+        var clock = new TestClock();
+        var uid = Guid.NewGuid();
+        var device = UserDevice.RegisterFirstActive(uid, "dev-1", "iPhone", "ios", "18", "1.0.0", null, clock.UtcNow);
+        db.UserDevices.Add(device);
+        await db.SaveChangesAsync();
+
+        var result = await new RegisterFcmTokenCommandHandler(db)
+            .Handle(new RegisterFcmTokenCommand(uid, device.Id, "jwt-token"), default);
+
+        result.IsSuccess.Should().BeTrue();
+        device.FcmToken.Should().Be("jwt-token");
+    }
+
+    [Fact]
+    public async Task RegisterFcmToken_PendingDevice_UpdatesFcm()
+    {
+        await using var db = TestDbContextFactory.Create();
+        var uid = Guid.NewGuid();
+        var pending = UserDevice.RegisterPendingApproval(uid, "dev-p", "iPhone", "ios", "18", "1.0.0", null);
+        db.UserDevices.Add(pending);
+        await db.SaveChangesAsync();
+
+        var result = await new RegisterFcmTokenCommandHandler(db)
+            .Handle(new RegisterFcmTokenCommand(uid, pending.Id, "pending-token"), default);
+
+        result.IsSuccess.Should().BeTrue();
+        pending.FcmToken.Should().Be("pending-token");
+    }
+
+    [Fact]
+    public async Task RegisterFcmToken_NonDeviceBoundUser_IsNoOpSuccess()
+    {
+        await using var db = TestDbContextFactory.Create();
+
+        var result = await new RegisterFcmTokenCommandHandler(db)
+            .Handle(new RegisterFcmTokenCommand(Guid.NewGuid(), Guid.Empty, "tok"), default);
+
+        result.IsSuccess.Should().BeTrue();
     }
 }

@@ -58,7 +58,7 @@ public sealed class NotificationsController : ControllerBase
     public async Task<IActionResult> RegisterFcmToken([FromBody] RegisterFcmTokenBody body, CancellationToken ct)
     {
         if (_currentUser.UserId is not { } userId) return Unauthorized();
-        var result = await _mediator.Send(new RegisterFcmTokenCommand(userId, body.Token), ct);
+        var result = await _mediator.Send(new RegisterFcmTokenCommand(userId, _currentUser.DeviceId, body.Token), ct);
         return result.IsSuccess ? NoContent() : ResultMapping.Failure(result.Error, HttpContext.TraceIdentifier);
     }
 }

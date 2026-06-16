@@ -96,8 +96,16 @@ class FcmCoordinator {
     try {
       await _ref.read(notificationsRepositoryProvider).registerFcmToken(token);
     } catch (e) {
-      // Not signed in / no active device yet — ignore; login re-sends the token.
-      debugPrint('FcmCoordinator: PUT /users/me/fcm-token failed ($e)');
+      // No active device yet (stale session / first open) — re-login registers the device.
+      final msg = e.toString();
+      if (msg.contains('NOT_FOUND') || msg.contains('404')) {
+        debugPrint(
+          'FcmCoordinator: chưa có thiết bị Active trên server — '
+          'đăng xuất và đăng nhập lại để đăng ký FCM.',
+        );
+      } else {
+        debugPrint('FcmCoordinator: PUT /users/me/fcm-token failed ($e)');
+      }
     }
   }
 

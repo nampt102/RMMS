@@ -89,7 +89,7 @@ class FormFill {
         // fall through to empty schema
       }
     }
-    return const {'fields': []};
+    return const {'fields': <dynamic>[]};
   }
 }
 

@@ -20,7 +20,7 @@ import '../../../notifications/data/notifications_repository.dart';
 /// Layout (per `design_handoff_rmms_redesign/README.md` §Screens/Home):
 ///   - Mesh-gradient hero (avatar tile + greeting + name + chips + logout).
 ///   - "Ca hôm nay" card with pulsing ring when not checked in, live clock.
-///   - Quick-access 3-grid: Phân công · Lịch sử · Khuôn mặt.
+///   - Quick-access 3-column grid (Phân công · Lịch sử · Khuôn mặt · …).
 class HomeScreen extends ConsumerWidget {
   const HomeScreen({super.key});
 
@@ -597,15 +597,27 @@ class _QuickGrid extends StatelessWidget {
   const _QuickGrid({required this.items});
   final List<_QuickItem> items;
 
+  static const _columns = 3;
+  static const _spacing = 10.0;
+
   @override
   Widget build(BuildContext context) {
-    return Row(
-      children: [
-        for (var i = 0; i < items.length; i++) ...[
-          Expanded(child: _QuickCard(item: items[i])),
-          if (i < items.length - 1) const SizedBox(width: 12),
-        ],
-      ],
+    return LayoutBuilder(
+      builder: (context, constraints) {
+        final cellWidth =
+            (constraints.maxWidth - _spacing * (_columns - 1)) / _columns;
+        return Wrap(
+          spacing: _spacing,
+          runSpacing: _spacing,
+          children: [
+            for (final item in items)
+              SizedBox(
+                width: cellWidth,
+                child: _QuickCard(item: item),
+              ),
+          ],
+        );
+      },
     );
   }
 }
@@ -619,12 +631,12 @@ class _QuickCard extends StatelessWidget {
     return AppCard(
       onTap: item.onTap,
       borderRadius: BorderRadius.circular(22),
-      padding: const EdgeInsets.symmetric(vertical: 18, horizontal: 10),
+      padding: const EdgeInsets.symmetric(vertical: 16, horizontal: 6),
       child: Column(
         mainAxisSize: MainAxisSize.min,
         children: [
           AppIconTile(icon: item.icon, tone: item.tone, size: 44, radius: 14),
-          const SizedBox(height: 12),
+          const SizedBox(height: 10),
           Text(
             item.label,
             textAlign: TextAlign.center,
@@ -632,9 +644,9 @@ class _QuickCard extends StatelessWidget {
             overflow: TextOverflow.ellipsis,
             style: GoogleFonts.plusJakartaSans(
               color: AppPalette.ink,
-              fontSize: 13.5,
+              fontSize: 12.5,
               fontWeight: FontWeight.w700,
-              height: 1.2,
+              height: 1.25,
             ),
           ),
         ],

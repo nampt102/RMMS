@@ -1,5 +1,6 @@
 /// Plain (non-Freezed) models for Visit Plans (M11). Mirror
 /// `Rmms.Application.VisitPlans.VisitPlanDto` / `VisitPlanItemDto` (camelCase).
+library;
 
 /// One planned store visit within a plan.
 class VisitPlanItem {

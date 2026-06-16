@@ -30,6 +30,7 @@ class _FormFillScreenState extends ConsumerState<FormFillScreen> {
   bool _initStarted = false;
   bool _ready = false;
   bool _submitting = false;
+  bool _savingDraft = false;
 
   Future<void> _init(FormFill form) async {
     final store = ref.read(formDraftStoreProvider);
@@ -51,14 +52,27 @@ class _FormFillScreenState extends ConsumerState<FormFillScreen> {
   }
 
   Future<void> _saveDraft(FormFill form, {bool silent = false}) async {
-    await ref.read(formDraftStoreProvider).save(FormDraft(
-          formId: form.formId,
-          answers: _answers,
-          clientKey: _clientKey,
-          savedAt: DateTime.now(),
-        ));
-    if (!silent && mounted) {
-      showAppToast(context, message: AppLocalizations.of(context).formSaved, kind: AppToastKind.success);
+    if (_savingDraft) return;
+    if (!silent) {
+      FocusScope.of(context).unfocus();
+      setState(() => _savingDraft = true);
+    }
+    try {
+      await ref.read(formDraftStoreProvider).save(FormDraft(
+            formId: form.formId,
+            answers: _answers,
+            clientKey: _clientKey,
+            savedAt: DateTime.now(),
+          ));
+      if (!silent && mounted) {
+        showAppToast(
+          context,
+          message: AppLocalizations.of(context).formSaved,
+          kind: AppToastKind.success,
+        );
+      }
+    } finally {
+      if (!silent && mounted) setState(() => _savingDraft = false);
     }
   }
 
@@ -152,7 +166,8 @@ class _FormFillScreenState extends ConsumerState<FormFillScreen> {
                           child: AppButton.soft(
                             label: l.formSaveDraft,
                             icon: Icons.save_rounded,
-                            onPressed: () => _saveDraft(form),
+                            loading: _savingDraft,
+                            onPressed: _savingDraft ? null : () => _saveDraft(form),
                           ),
                         ),
                         const SizedBox(width: 12),

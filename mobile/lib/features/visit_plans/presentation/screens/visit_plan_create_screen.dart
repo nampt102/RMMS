@@ -230,7 +230,7 @@ class _VisitPlanCreateScreenState extends ConsumerState<VisitPlanCreateScreen> {
                         child: AppCard(
                           child: Row(
                             children: [
-                              AppIconTile(icon: Icons.store_rounded, tone: AppTone.sky, size: 40),
+                              const AppIconTile(icon: Icons.store_rounded, tone: AppTone.sky, size: 40),
                               const SizedBox(width: 12),
                               Expanded(
                                 child: Column(
