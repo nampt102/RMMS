@@ -56,35 +56,32 @@ internal sealed class NotificationService : INotificationService
         var body = isVi ? spec.BodyVi : spec.BodyEn;
         var dataJson = spec.Data is { Count: > 0 } ? JsonSerializer.Serialize(spec.Data) : null;
 
-        // Resolve the active device's FCM token (PG has exactly one active device, BR-105).
-        var fcmToken = spec.Push
-            ? await _db.UserDevices.AsNoTracking()
-                .Where(d => d.UserId == userId
-                    && d.Status == DeviceStatus.Active
-                    && d.FcmToken != null)
-                .OrderByDescending(d => d.UpdatedAt ?? d.CreatedAt)
-                .Select(d => d.FcmToken)
-                .FirstOrDefaultAsync(ct)
-            : null;
+        // Resolve every push token for the user (M14/CR-3) — from push_tokens (any role, decoupled
+        // from the PG-only device-lock) plus the legacy active-device token, so Leader/BUH and
+        // already-registered PG installs all receive push.
+        var fcmTokens = spec.Push ? await ResolvePushTokensAsync(userId, ct) : new List<string>();
 
         var channels = new List<string> { "in_app" };
-        if (spec.Push && !string.IsNullOrWhiteSpace(fcmToken)) channels.Add("push");
+        if (spec.Push && fcmTokens.Count > 0) channels.Add("push");
         if (spec.Email) channels.Add("email");
 
         // 1) Durable in-app row — committed by the caller's SaveChanges (atomic with the business change).
         var notification = Notification.Create(userId, spec.Type, title, body, dataJson, channels, _clock.UtcNow);
         _db.Notifications.Add(notification);
 
-        // 2) Best-effort push (failures logged, never thrown).
-        if (spec.Push && !string.IsNullOrWhiteSpace(fcmToken))
+        // 2) Best-effort push to each registered install (failures logged, never thrown).
+        if (spec.Push)
         {
-            try
+            foreach (var fcmToken in fcmTokens)
             {
-                await _push.SendAsync(new PushMessage(fcmToken!, title, body, spec.Data), ct);
-            }
-            catch (Exception ex)
-            {
-                _log.LogWarning(ex, "Push notification failed for user {UserId} (type {Type}).", userId, spec.Type);
+                try
+                {
+                    await _push.SendAsync(new PushMessage(fcmToken, title, body, spec.Data), ct);
+                }
+                catch (Exception ex)
+                {
+                    _log.LogWarning(ex, "Push notification failed for user {UserId} (type {Type}).", userId, spec.Type);
+                }
             }
         }
 
@@ -113,5 +110,25 @@ internal sealed class NotificationService : INotificationService
         {
             _log.LogWarning(ex, "Realtime notification failed for user {UserId} (type {Type}).", userId, spec.Type);
         }
+    }
+
+    /// <summary>All distinct FCM tokens for a user: push_tokens (every role) ∪ legacy active-device token.</summary>
+    private async Task<List<string>> ResolvePushTokensAsync(Guid userId, CancellationToken ct)
+    {
+        var fromTokens = await _db.PushTokens.AsNoTracking()
+            .Where(t => t.UserId == userId)
+            .Select(t => t.Token)
+            .ToListAsync(ct);
+
+        var fromDevice = await _db.UserDevices.AsNoTracking()
+            .Where(d => d.UserId == userId && d.Status == DeviceStatus.Active && d.FcmToken != null)
+            .Select(d => d.FcmToken!)
+            .ToListAsync(ct);
+
+        return fromTokens
+            .Concat(fromDevice)
+            .Where(t => !string.IsNullOrWhiteSpace(t))
+            .Distinct(StringComparer.Ordinal)
+            .ToList();
     }
 }

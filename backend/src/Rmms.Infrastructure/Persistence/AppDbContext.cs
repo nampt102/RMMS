@@ -79,6 +79,7 @@ public sealed class AppDbContext : DbContext, IAppDbContext
 
     // ----- M14 Notification -----
     public DbSet<Notification> Notifications => Set<Notification>();
+    public DbSet<PushToken> PushTokens => Set<PushToken>();
 
     // ----- Cross-cutting -----
     public DbSet<AuditLog> AuditLogs => Set<AuditLog>();

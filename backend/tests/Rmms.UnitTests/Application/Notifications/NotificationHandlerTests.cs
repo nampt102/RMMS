@@ -67,6 +67,25 @@ public sealed class NotificationHandlerTests
     }
 
     [Fact]
+    public async Task Notify_Pushes_ToPushTokenRow_WhenNoDevice()
+    {
+        // Leader/BUH have no active device row but do register a push token (CR-3).
+        await using var db = TestDbContextFactory.Create();
+        var clock = new TestClock();
+        var push = new FakePushSender();
+        var user = UserFactory.CreateActivePg(); // role irrelevant to push resolution
+        db.Users.Add(user);
+        db.PushTokens.Add(PushToken.Create(user.Id, "leader-fcm"));
+        await db.SaveChangesAsync();
+
+        await Service(db, clock, push, new CapturingEmailSender()).NotifyAsync(user.Id, Spec(push: true));
+        await db.SaveChangesAsync();
+
+        db.Notifications.Single(n => n.UserId == user.Id).ChannelsSent.Should().Contain("push");
+        push.Sent.Should().ContainSingle().Which.DeviceToken.Should().Be("leader-fcm");
+    }
+
+    [Fact]
     public async Task Notify_UsesEnglishTitle_WhenUserPrefersEn()
     {
         await using var db = TestDbContextFactory.Create();
@@ -154,14 +173,15 @@ public sealed class NotificationHandlerTests
     }
 
     [Fact]
-    public async Task RegisterFcmToken_NoActiveDevice_NotFound()
+    public async Task RegisterFcmToken_NoDevice_StoresPushTokenAndSucceeds()
     {
         await using var db = TestDbContextFactory.Create();
+        var uid = Guid.NewGuid();
 
-        var result = await new RegisterFcmTokenCommandHandler(db).Handle(new RegisterFcmTokenCommand(Guid.NewGuid(), null, "tok"), default);
+        var result = await new RegisterFcmTokenCommandHandler(db).Handle(new RegisterFcmTokenCommand(uid, null, "tok"), default);
 
-        result.IsFailure.Should().BeTrue();
-        result.Error.Code.Should().Be(ErrorCodes.NotFound);
+        result.IsSuccess.Should().BeTrue();
+        db.PushTokens.Single(t => t.Token == "tok").UserId.Should().Be(uid);
     }
 
     [Fact]
@@ -198,13 +218,32 @@ public sealed class NotificationHandlerTests
     }
 
     [Fact]
-    public async Task RegisterFcmToken_NonDeviceBoundUser_IsNoOpSuccess()
+    public async Task RegisterFcmToken_NonDeviceBoundUser_StoresPushToken()
     {
+        // Leader/BUH carry an empty device_id claim (device-lock is PG-only) — token still stored.
         await using var db = TestDbContextFactory.Create();
+        var uid = Guid.NewGuid();
 
         var result = await new RegisterFcmTokenCommandHandler(db)
-            .Handle(new RegisterFcmTokenCommand(Guid.NewGuid(), Guid.Empty, "tok"), default);
+            .Handle(new RegisterFcmTokenCommand(uid, Guid.Empty, "leader-tok"), default);
 
         result.IsSuccess.Should().BeTrue();
+        db.PushTokens.Single(t => t.Token == "leader-tok").UserId.Should().Be(uid);
+    }
+
+    [Fact]
+    public async Task RegisterFcmToken_SharedInstall_RepointsTokenToCurrentUser()
+    {
+        // Same phone: PG logs out, Leader logs in → the install's token re-points to the Leader,
+        // so only the signed-in account receives push (fixes the one-phone-many-accounts case).
+        await using var db = TestDbContextFactory.Create();
+        var pg = Guid.NewGuid();
+        var leader = Guid.NewGuid();
+
+        await new RegisterFcmTokenCommandHandler(db).Handle(new RegisterFcmTokenCommand(pg, Guid.Empty, "shared-tok"), default);
+        await new RegisterFcmTokenCommandHandler(db).Handle(new RegisterFcmTokenCommand(leader, Guid.Empty, "shared-tok"), default);
+
+        var row = db.PushTokens.Single(t => t.Token == "shared-tok");
+        row.UserId.Should().Be(leader);
     }
 }

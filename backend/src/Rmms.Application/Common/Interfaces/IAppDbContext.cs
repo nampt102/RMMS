@@ -76,6 +76,7 @@ public interface IAppDbContext
 
     // ----- M14 Notification -----
     DbSet<Notification> Notifications { get; }
+    DbSet<PushToken> PushTokens { get; }
 
     // ----- Cross-cutting -----
     DbSet<AuditLog> AuditLogs { get; }

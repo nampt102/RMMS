@@ -2,6 +2,7 @@ using Mediator;
 using Microsoft.EntityFrameworkCore;
 using Rmms.Application.Common.Abstractions;
 using Rmms.Application.Common.Interfaces;
+using Rmms.Application.LeaveOt; // shared RequestRouting (PG→Leader, Leader→BUH)
 using Rmms.Domain.Common;
 using Rmms.Domain.Enums;
 using Rmms.Shared.Errors;
@@ -47,8 +48,8 @@ internal sealed class SubmitScheduleCommandHandler : IRequestHandler<SubmitSched
             AuditAction.ScheduleSubmitted, "work_schedule", schedule.Id,
             new { user_id = schedule.UserId, schedule_date = schedule.ScheduleDate }, ct);
 
-        // M09: route to the PG's active Leader (BR-405). Leader→BUH (BR-406) is skipped
-        // until a Leader↔BUH assignment exists. Idempotent — no duplicate pending row.
+        // M09: route to the owner's approver — PG→Leader (BR-405), Leader→BUH (BR-406) — via the
+        // shared RequestRouting policy. Idempotent: no duplicate pending row.
         await CreateApprovalIfRoutableAsync(schedule.Id, schedule.UserId, ct);
 
         await _db.SaveChangesAsync(ct);
@@ -63,17 +64,11 @@ internal sealed class SubmitScheduleCommandHandler : IRequestHandler<SubmitSched
               && a.Status == ApprovalStatus.Pending, ct);
         if (alreadyQueued) return;
 
-        var owner = await _db.Users.FirstOrDefaultAsync(u => u.Id == ownerId, ct);
-        if (owner is null || owner.Role != UserRole.Pg) return; // only PG→Leader wired in Phase 1
-
-        var leaderId = await _db.UserLeaderAssignments
-            .Where(a => a.PgUserId == ownerId && a.EffectiveTo == null)
-            .Select(a => a.LeaderUserId)
-            .FirstOrDefaultAsync(ct);
-        if (leaderId == Guid.Empty) return; // no active leader → nothing to route to
+        var route = await RequestRouting.ResolveApproverAsync(_db, ownerId, ct);
+        if (route is null) return; // no routable approver → schedule stays pending, no approval row
 
         await _approvals.CreateAsync(
-            ApprovalEntityType.WorkSchedule, scheduleId, ownerId, leaderId, UserRole.Leader, ct);
+            ApprovalEntityType.WorkSchedule, scheduleId, ownerId, route.Value.ApproverId, route.Value.Role, ct);
     }
 }
 

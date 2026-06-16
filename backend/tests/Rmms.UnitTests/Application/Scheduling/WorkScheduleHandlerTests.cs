@@ -140,6 +140,39 @@ public sealed class WorkScheduleHandlerTests
         db.WorkSchedules.Single(s => s.Id == id).SubmittedAt.Should().NotBeNull();
     }
 
+    [Fact]
+    public async Task Submit_AsLeader_RoutesToBuh()
+    {
+        // BR-406 / M07: a Leader's own schedule routes to the (domain-wide) BUH, not to a Leader.
+        await using var db = TestDbContextFactory.Create();
+        var clock = new TestClock();
+
+        var leader = Leader();
+        var buh = User.CreateByAdmin("buh@example.com", "plain:Pwd12345", "BUH X", UserRole.Buh, null, "vi");
+        var store = Store.Create("ST-1", "Store 1", null, 1m, 1m, null);
+        db.Users.AddRange(leader, buh);
+        db.Stores.Add(store);
+        db.UserStoreAssignments.Add(
+            UserStoreAssignment.Create(leader.Id, store.Id, DateOnly.FromDateTime(clock.UtcNow.UtcDateTime)));
+        await db.SaveChangesAsync();
+
+        var create = await new CreateScheduleCommandHandler(db, new InMemoryAuditLogger(), clock)
+            .Handle(new CreateScheduleCommand(leader.Id, new[] { Day(Future(clock), store.Id) }), default);
+        var id = create.Value[0];
+
+        var approvals = new FakeApprovalService();
+        var result = await new SubmitScheduleCommandHandler(db, new InMemoryAuditLogger(), clock, approvals)
+            .Handle(new SubmitScheduleCommand(id, leader.Id), default);
+
+        result.IsSuccess.Should().BeTrue();
+        approvals.Calls.Should().ContainSingle()
+            .Which.Should().Match<FakeApprovalService.Call>(c =>
+                c.EntityType == ApprovalEntityType.WorkSchedule
+                && c.RequesterId == leader.Id
+                && c.ApproverId == buh.Id
+                && c.ApproverRole == UserRole.Buh);
+    }
+
     // ----- Edit + versioning (BR-308 / AC-15) -----
 
     [Fact]
