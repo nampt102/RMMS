@@ -69,7 +69,8 @@ public sealed class FormsController : ControllerBase
             id, userId, role,
             request.Answers.GetRawText(),
             request.Attachments?.GetRawText(),
-            request.StoreId, request.TimeSpentSeconds, request.ClientIdempotencyKey), ct);
+            request.StoreId, request.TimeSpentSeconds, request.ClientIdempotencyKey,
+            request.Lat, request.Lng), ct);
         return result.IsSuccess ? ResultMapping.Created(new { id = result.Value }) : ResultMapping.Failure(result.Error, HttpContext.TraceIdentifier);
     }
 }

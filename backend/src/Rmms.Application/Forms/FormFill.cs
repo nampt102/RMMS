@@ -184,7 +184,8 @@ internal sealed class GetFormForFillQueryHandler : IRequestHandler<GetFormForFil
 
 public sealed record SubmitFormCommand(
     Guid FormId, Guid ViewerId, UserRole ViewerRole, string Answers, string? Attachments,
-    Guid? StoreId, int TimeSpentSeconds, string ClientIdempotencyKey) : IRequest<Result<Guid>>;
+    Guid? StoreId, int TimeSpentSeconds, string ClientIdempotencyKey,
+    decimal? Lat = null, decimal? Lng = null) : IRequest<Result<Guid>>;
 
 public sealed class SubmitFormCommandValidator : AbstractValidator<SubmitFormCommand>
 {
@@ -252,14 +253,45 @@ internal sealed class SubmitFormCommandHandler : IRequestHandler<SubmitFormComma
             return Result.Failure<Guid>(Error.Validation(ErrorCodes.ValidationFailed, $"Thiếu trường bắt buộc: {missing}."));
         }
 
+        // Form-level rules (schema.rules) — enforced server-side regardless of the client (M10).
+        var rules = FormAnswers.ParseRules(version.Schema);
+        if (rules.GpsRequired && (command.Lat is null || command.Lng is null))
+        {
+            return Result.Failure<Guid>(Error.Validation(ErrorCodes.ValidationFailed, "Form yêu cầu vị trí GPS khi nộp."));
+        }
+        if (rules.PhotoRequired && !FormAnswers.HasAnyAttachment(command.Attachments))
+        {
+            return Result.Failure<Guid>(Error.Validation(ErrorCodes.ValidationFailed, "Form yêu cầu đính kèm ảnh khi nộp."));
+        }
+        if (rules.RequireCheckIn)
+        {
+            var (dayStart, dayEnd) = VnDayBounds(_clock.UtcNow);
+            var checkedInToday = await _db.AttendanceRecords.AsNoTracking()
+                .AnyAsync(a => a.UserId == command.ViewerId && a.CheckInAt >= dayStart && a.CheckInAt < dayEnd, ct);
+            if (!checkedInToday)
+            {
+                return Result.Failure<Guid>(Error.Validation(ErrorCodes.ValidationFailed, "Form yêu cầu đã check-in hôm nay trước khi nộp."));
+            }
+        }
+
         var submission = FormSubmission.Create(
             form.Id, version.Id, command.ViewerId, command.StoreId, command.Answers, command.Attachments,
-            score: null, command.TimeSpentSeconds, command.ClientIdempotencyKey, _clock.UtcNow);
+            score: null, command.TimeSpentSeconds, command.ClientIdempotencyKey, _clock.UtcNow,
+            gpsLatitude: command.Lat, gpsLongitude: command.Lng);
         _db.FormSubmissions.Add(submission);
 
         await _audit.RecordAsync(AuditAction.FormSubmitted, "form_submission", submission.Id, new { form.Code, Version = version.Version }, ct);
         await _db.SaveChangesAsync(ct);
         return Result.Success(submission.Id);
+    }
+
+    /// <summary>VN-local day [start, end) as UTC instants (CR-5) for the require_check_in rule.</summary>
+    private static (DateTimeOffset start, DateTimeOffset end) VnDayBounds(DateTimeOffset nowUtc)
+    {
+        var vn = TimeSpan.FromHours(7);
+        var today = DateOnly.FromDateTime(nowUtc.ToOffset(vn).DateTime);
+        var start = new DateTimeOffset(today.Year, today.Month, today.Day, 0, 0, 0, vn).ToUniversalTime();
+        return (start, start.AddDays(1));
     }
 }
 
@@ -364,4 +396,45 @@ internal static class FormAnswers
         JsonValueKind.Array => v.GetArrayLength() == 0,
         _ => false,
     };
+
+    /// <summary>Form-level submission rules (schema.rules) enforced on submit (M10).</summary>
+    public readonly record struct FormRuleSet(bool RequireCheckIn, bool GpsRequired, bool PhotoRequired);
+
+    public static FormRuleSet ParseRules(string schema)
+    {
+        try
+        {
+            using var doc = JsonDocument.Parse(schema);
+            if (!doc.RootElement.TryGetProperty("rules", out var rules) || rules.ValueKind != JsonValueKind.Object)
+            {
+                return default;
+            }
+            bool Flag(string name) => rules.TryGetProperty(name, out var v) && v.ValueKind == JsonValueKind.True;
+            return new FormRuleSet(Flag("require_check_in"), Flag("gps_required"), Flag("photo_required"));
+        }
+        catch (JsonException)
+        {
+            return default;
+        }
+    }
+
+    /// <summary>True when the attachments payload (field id → object key, jsonb) carries ≥1 non-empty value.</summary>
+    public static bool HasAnyAttachment(string? attachments)
+    {
+        if (string.IsNullOrWhiteSpace(attachments)) return false;
+        try
+        {
+            using var doc = JsonDocument.Parse(attachments);
+            return doc.RootElement.ValueKind switch
+            {
+                JsonValueKind.Object => doc.RootElement.EnumerateObject().Any(p => !IsEmpty(p.Value)),
+                JsonValueKind.Array => doc.RootElement.GetArrayLength() > 0,
+                _ => false,
+            };
+        }
+        catch (JsonException)
+        {
+            return false;
+        }
+    }
 }

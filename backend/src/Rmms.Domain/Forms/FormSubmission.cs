@@ -23,6 +23,11 @@ public sealed class FormSubmission : AuditableEntity, IAggregateRoot
 
     public decimal? Score { get; private set; }
     public int TimeSpentSeconds { get; private set; }
+
+    /// <summary>Capture location when the form's <c>gps_required</c> rule is on (M10). Null otherwise.</summary>
+    public decimal? GpsLatitude { get; private set; }
+    public decimal? GpsLongitude { get; private set; }
+
     public DateTimeOffset SubmittedAt { get; private set; }
     public DateTimeOffset? EditedAt { get; private set; }
     public FormSubmissionStatus Status { get; private set; }
@@ -33,7 +38,8 @@ public sealed class FormSubmission : AuditableEntity, IAggregateRoot
     public static FormSubmission Create(
         Guid formId, Guid formVersionId, Guid userId, Guid? storeId,
         string answers, string? attachments, decimal? score, int timeSpentSeconds,
-        string clientIdempotencyKey, DateTimeOffset now)
+        string clientIdempotencyKey, DateTimeOffset now,
+        decimal? gpsLatitude = null, decimal? gpsLongitude = null)
     {
         if (formId == Guid.Empty) throw new ArgumentException("Form id is required.", nameof(formId));
         if (formVersionId == Guid.Empty) throw new ArgumentException("Form version id is required.", nameof(formVersionId));
@@ -50,6 +56,8 @@ public sealed class FormSubmission : AuditableEntity, IAggregateRoot
             Attachments = string.IsNullOrWhiteSpace(attachments) ? null : attachments,
             Score = score,
             TimeSpentSeconds = timeSpentSeconds < 0 ? 0 : timeSpentSeconds,
+            GpsLatitude = gpsLatitude,
+            GpsLongitude = gpsLongitude,
             SubmittedAt = now,
             Status = FormSubmissionStatus.Submitted,
             ClientIdempotencyKey = clientIdempotencyKey.Trim(),

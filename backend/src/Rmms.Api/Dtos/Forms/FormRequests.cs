@@ -36,4 +36,6 @@ public sealed record SubmitFormRequest(
     JsonElement? Attachments,
     Guid? StoreId,
     int TimeSpentSeconds,
-    string ClientIdempotencyKey);
+    string ClientIdempotencyKey,
+    decimal? Lat = null,
+    decimal? Lng = null);

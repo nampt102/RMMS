@@ -18,6 +18,8 @@ internal sealed class FormSubmissionConfiguration : IEntityTypeConfiguration<For
         b.Property(s => s.Answers).HasColumnType("jsonb").IsRequired();
         b.Property(s => s.Attachments).HasColumnType("jsonb");
         b.Property(s => s.Score).HasColumnType("numeric(5,2)");
+        b.Property(s => s.GpsLatitude).HasColumnType("numeric(9,6)");
+        b.Property(s => s.GpsLongitude).HasColumnType("numeric(9,6)");
         b.Property(s => s.TimeSpentSeconds).IsRequired();
         b.Property(s => s.ClientIdempotencyKey).HasMaxLength(100).IsRequired();
 

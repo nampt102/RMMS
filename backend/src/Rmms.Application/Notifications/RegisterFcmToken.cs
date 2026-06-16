@@ -32,7 +32,7 @@ internal sealed class RegisterFcmTokenCommandHandler : IRequestHandler<RegisterF
         if (device is null)
         {
             // Leader / web sessions carry an empty device_id claim — nothing to update.
-            if (command.CallerDeviceRowId is Guid.Empty)
+            if (command.CallerDeviceRowId == Guid.Empty)
                 return Result.Success();
 
             return Result.Failure(Error.NotFound(ErrorCodes.NotFound, "Không tìm thấy thiết bị đang hoạt động."));

@@ -6,6 +6,18 @@ Append-only chronological log of significant project milestones, decisions, and 
 
 ---
 
+## 2026-06-16 — Fix(M10): enforce form-level rules on submit (gps/photo/check-in)
+
+**By:** Tech lead (MotivesVN IT), AI-assisted
+
+**Status:** ✅ Backend 0 errors, **299 unit tests** (+ form-rules suite). Migration `M10_FormSubmissionGps` applied to dev DB.
+
+- **Bug (confirmed via DB):** the Form Builder saves `schema.rules` (`require_check_in` / `gps_required` / `photo_required`) — verified in form code `1` v2 — but `SubmitFormCommandHandler` only ran `FindMissingRequired` and **ignored `rules`** entirely, so they were never enforced.
+- **Fix:** `SubmitFormCommandHandler` now parses `schema.rules` and enforces (server-side, regardless of client): `gps_required` → submission must carry lat/lng; `photo_required` → ≥1 attachment; `require_check_in` → the user must have a check-in today (VN). `SubmitFormCommand` + `SubmitFormRequest` gained `Lat`/`Lng`; `FormSubmission` persists `gps_latitude`/`gps_longitude` (new columns). `FormAnswers.ParseRules` + `HasAnyAttachment` helpers.
+- Field-level `required` (e.g. q1) was already enforced — unchanged.
+- Also fixed a latent **CS9135** (`is Guid.Empty` constant-pattern) in `RegisterFcmToken` surfaced on full recompile → `== Guid.Empty` (behavior preserved).
+- ⚠️ **Mobile must send lat/lng + an attachment for rule-bearing forms** (next commit) — until then a PG submitting form `1` will be (correctly) rejected by the server. Restart the dev API.
+
 ## 2026-06-15 — Fix: web password-reset / verify-email pages (broken email links)
 
 **By:** Tech lead (MotivesVN IT), AI-assisted
