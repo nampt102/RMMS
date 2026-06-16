@@ -25,6 +25,10 @@ class FormFillScreen extends ConsumerStatefulWidget {
 }
 
 class _FormFillScreenState extends ConsumerState<FormFillScreen> {
+  /// Reserved answer key for the implicit `photo_required` capture shown when a
+  /// form enables the rule but has no image/camera field of its own.
+  static const _rulePhotoKey = '__rule_photo__';
+
   final Map<String, dynamic> _answers = {};
   final DateTime _started = DateTime.now();
   String _clientKey = '';
@@ -32,6 +36,12 @@ class _FormFillScreenState extends ConsumerState<FormFillScreen> {
   bool _ready = false;
   bool _submitting = false;
   bool _savingDraft = false;
+
+  bool _hasImageField(FormFill form) =>
+      form.fields.any((f) => f.type == 'image_upload' || f.type == 'camera');
+
+  /// True when we must render the standalone photo capture (rule on, no image field).
+  bool _needsImplicitPhoto(FormFill form) => form.rules.photoRequired && !_hasImageField(form);
 
   Future<void> _init(FormFill form) async {
     final store = ref.read(formDraftStoreProvider);
@@ -86,6 +96,9 @@ class _FormFillScreenState extends ConsumerState<FormFillScreen> {
       final v = _answers[f.id];
       if (v is String && v.trim().isNotEmpty) out[f.id] = v;
     }
+    // Implicit photo (photo_required with no image field) lives under a reserved key.
+    final rulePhoto = _answers[_rulePhotoKey];
+    if (rulePhoto is String && rulePhoto.trim().isNotEmpty) out[_rulePhotoKey] = rulePhoto;
     return out;
   }
 
@@ -164,6 +177,39 @@ class _FormFillScreenState extends ConsumerState<FormFillScreen> {
     }
   }
 
+  /// Standalone "photo required" capture for forms that enable `photo_required`
+  /// but declare no image/camera field. Stored under [_rulePhotoKey].
+  Widget _implicitPhotoSection(FormFill form, AppLocalizations l) {
+    return Container(
+      margin: const EdgeInsets.fromLTRB(16, 0, 16, 4),
+      padding: const EdgeInsets.all(14),
+      decoration: BoxDecoration(
+        color: Colors.white,
+        borderRadius: BorderRadius.circular(14),
+        border: Border.all(color: AppPalette.line),
+      ),
+      child: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          RichText(
+            text: TextSpan(
+              text: l.formRulePhotoLabel,
+              style: const TextStyle(color: AppPalette.ink, fontSize: 15, fontWeight: FontWeight.w700),
+              children: const [TextSpan(text: ' *', style: TextStyle(color: AppPalette.rose))],
+            ),
+          ),
+          const SizedBox(height: 10),
+          FormImageField(
+            formId: form.formId,
+            value: _answers[_rulePhotoKey] as String?,
+            fromCamera: true,
+            onChanged: (v) => setState(() => _answers[_rulePhotoKey] = v),
+          ),
+        ],
+      ),
+    );
+  }
+
   @override
   Widget build(BuildContext context) {
     final l = AppLocalizations.of(context);
@@ -208,6 +254,7 @@ class _FormFillScreenState extends ConsumerState<FormFillScreen> {
                           },
                         ),
                 ),
+                if (_needsImplicitPhoto(form)) _implicitPhotoSection(form, l),
                 SafeArea(
                   top: false,
                   child: Padding(

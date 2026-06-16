@@ -145,7 +145,7 @@ class _DynamicFieldState extends State<DynamicField> {
         return _entityField(productMode: false);
       case 'image_upload':
       case 'camera':
-        return _ImageField(
+        return FormImageField(
           formId: widget.formId,
           value: widget.value as String?,
           fromCamera: f.type == 'camera',
@@ -343,8 +343,11 @@ class _DynamicFieldState extends State<DynamicField> {
 
 /// Image field (image_upload / camera): pick or capture → multipart upload →
 /// store the returned object key in the answer. Preview url is session-local.
-class _ImageField extends ConsumerStatefulWidget {
-  const _ImageField({
+/// Public so the fill screen can reuse it for the implicit `photo_required`
+/// capture when a form has no image field of its own.
+class FormImageField extends ConsumerStatefulWidget {
+  const FormImageField({
+    super.key,
     required this.formId,
     required this.value,
     required this.fromCamera,
@@ -357,10 +360,10 @@ class _ImageField extends ConsumerStatefulWidget {
   final ValueChanged<Object?> onChanged;
 
   @override
-  ConsumerState<_ImageField> createState() => _ImageFieldState();
+  ConsumerState<FormImageField> createState() => _FormImageFieldState();
 }
 
-class _ImageFieldState extends ConsumerState<_ImageField> {
+class _FormImageFieldState extends ConsumerState<FormImageField> {
   bool _busy = false;
   String? _url; // session-local preview
 

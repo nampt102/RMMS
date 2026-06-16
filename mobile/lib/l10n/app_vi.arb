@@ -309,6 +309,7 @@
   "formAttached": "Đã đính kèm",
   "formReplaceImage": "Đổi",
   "formPhotoRequired": "Vui lòng đính kèm ít nhất một ảnh.",
+  "formRulePhotoLabel": "Ảnh bắt buộc",
   "formGpsRequired": "Cần quyền vị trí (GPS) để nộp biểu mẫu này.",
   "formRequiredMissing": "Vui lòng nhập: {field}",
   "@formRequiredMissing": {
