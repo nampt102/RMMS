@@ -29,6 +29,8 @@ class FormsApi {
     String? storeId,
     required int timeSpentSeconds,
     required String clientIdempotencyKey,
+    double? lat,
+    double? lng,
   }) async {
     final res = await _dio.post<Map<String, dynamic>>(
       '/forms/$formId/submit',
@@ -38,6 +40,8 @@ class FormsApi {
         if (storeId != null) 'storeId': storeId,
         'timeSpentSeconds': timeSpentSeconds,
         'clientIdempotencyKey': clientIdempotencyKey,
+        if (lat != null) 'lat': lat,
+        if (lng != null) 'lng': lng,
       },
     );
     return _data(res)['id'] as String;

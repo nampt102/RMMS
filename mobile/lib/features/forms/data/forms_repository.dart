@@ -30,16 +30,22 @@ class FormsRepository {
   Future<String> submit({
     required String formId,
     required Map<String, dynamic> answers,
+    Map<String, dynamic>? attachments,
     String? storeId,
     required int timeSpentSeconds,
     required String clientIdempotencyKey,
+    double? lat,
+    double? lng,
   }) =>
       _guard(() => _api.submit(
             formId: formId,
             answers: answers,
+            attachments: attachments,
             storeId: storeId,
             timeSpentSeconds: timeSpentSeconds,
             clientIdempotencyKey: clientIdempotencyKey,
+            lat: lat,
+            lng: lng,
           ));
 
   Future<T> _guard<T>(Future<T> Function() action) async {

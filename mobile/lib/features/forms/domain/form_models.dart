@@ -37,6 +37,24 @@ class AssignedForm {
       );
 }
 
+/// Form-level submission rules (schema.rules, M10) — enforced by the server, mirrored here so
+/// the client can capture GPS / require a photo before posting.
+class FormRules {
+  const FormRules({this.requireCheckIn = false, this.gpsRequired = false, this.photoRequired = false});
+
+  final bool requireCheckIn;
+  final bool gpsRequired;
+  final bool photoRequired;
+
+  factory FormRules.fromMap(Map<String, dynamic>? m) => m == null
+      ? const FormRules()
+      : FormRules(
+          requireCheckIn: m['require_check_in'] == true,
+          gpsRequired: m['gps_required'] == true,
+          photoRequired: m['photo_required'] == true,
+        );
+}
+
 /// A form ready to render (GET /forms/:id) — meta + parsed schema.
 class FormFill {
   const FormFill({
@@ -47,6 +65,7 @@ class FormFill {
     required this.formType,
     required this.version,
     required this.fields,
+    this.rules = const FormRules(),
   });
 
   final String formId;
@@ -56,6 +75,7 @@ class FormFill {
   final String formType;
   final int version;
   final List<FieldDef> fields;
+  final FormRules rules;
 
   String localizedName(String lang) => lang == 'en' ? nameEn : nameVi;
 
@@ -74,6 +94,7 @@ class FormFill {
           .whereType<Map<String, dynamic>>()
           .map(FieldDef.fromJson)
           .toList(growable: false),
+      rules: FormRules.fromMap(schema['rules'] as Map<String, dynamic>?),
     );
   }
 

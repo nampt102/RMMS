@@ -307,6 +307,8 @@
   "formTakePhoto": "Take photo",
   "formAttached": "Attached",
   "formReplaceImage": "Replace",
+  "formPhotoRequired": "Please attach at least one photo.",
+  "formGpsRequired": "Location (GPS) is required to submit this form.",
   "formRequiredMissing": "Please enter: {field}",
 
   "scheduleStatWeek": "Shifts this week",

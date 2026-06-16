@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:geolocator/geolocator.dart';
 import 'package:go_router/go_router.dart';
 
 import '../../../../core/network/api_exception.dart';
@@ -76,6 +77,34 @@ class _FormFillScreenState extends ConsumerState<FormFillScreen> {
     }
   }
 
+  /// Image/camera field answers carry the uploaded object key — surface them as `attachments`
+  /// so the server's `photo_required` rule (which inspects attachments) is satisfied.
+  Map<String, dynamic> _collectAttachments(FormFill form) {
+    final out = <String, dynamic>{};
+    for (final f in form.fields) {
+      if (f.type != 'image_upload' && f.type != 'camera') continue;
+      final v = _answers[f.id];
+      if (v is String && v.trim().isNotEmpty) out[f.id] = v;
+    }
+    return out;
+  }
+
+  /// Capture the current GPS position for the `gps_required` rule; null if unavailable/denied.
+  Future<({double lat, double lng})?> _capturePosition() async {
+    try {
+      if (!await Geolocator.isLocationServiceEnabled()) return null;
+      var perm = await Geolocator.checkPermission();
+      if (perm == LocationPermission.denied) perm = await Geolocator.requestPermission();
+      if (perm == LocationPermission.denied || perm == LocationPermission.deniedForever) return null;
+      final pos = await Geolocator.getCurrentPosition(
+        locationSettings: const LocationSettings(accuracy: LocationAccuracy.high),
+      );
+      return (lat: pos.latitude, lng: pos.longitude);
+    } catch (_) {
+      return null;
+    }
+  }
+
   Future<void> _submit(FormFill form) async {
     final l = AppLocalizations.of(context);
     final lang = Localizations.localeOf(context).languageCode;
@@ -89,15 +118,38 @@ class _FormFillScreenState extends ConsumerState<FormFillScreen> {
       }
     }
 
+    // Form-level rules (server enforces too) — surface clear messages before posting.
+    final attachments = _collectAttachments(form);
+    if (form.rules.photoRequired && attachments.isEmpty) {
+      showAppToast(context, message: l.formPhotoRequired, kind: AppToastKind.warning);
+      return;
+    }
+
     setState(() => _submitting = true);
+
+    ({double lat, double lng})? pos;
+    if (form.rules.gpsRequired) {
+      pos = await _capturePosition();
+      if (pos == null) {
+        if (mounted) {
+          showAppToast(context, message: l.formGpsRequired, kind: AppToastKind.error);
+          setState(() => _submitting = false);
+        }
+        return;
+      }
+    }
+
     // Persist before the network attempt so an offline failure keeps the data.
     await _saveDraft(form, silent: true);
     try {
       final submissionId = await ref.read(formsRepositoryProvider).submit(
             formId: form.formId,
             answers: _answers,
+            attachments: attachments.isEmpty ? null : attachments,
             timeSpentSeconds: DateTime.now().difference(_started).inSeconds,
             clientIdempotencyKey: _clientKey,
+            lat: pos?.lat,
+            lng: pos?.lng,
           );
       await ref.read(formDraftStoreProvider).delete(form.formId);
       ref.invalidate(myFormsProvider);
