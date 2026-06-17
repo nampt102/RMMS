@@ -11,6 +11,7 @@ using Rmms.Infrastructure.Persistence;
 using Rmms.Infrastructure.Persistence.Interceptors;
 using Rmms.Infrastructure.Services;
 using Minio;
+using Polly;
 using StackExchange.Redis;
 
 namespace Rmms.Infrastructure;
@@ -137,8 +138,15 @@ public static class DependencyInjection
             {
                 c.BaseAddress = new Uri(baseUrl);
                 c.DefaultRequestHeaders.Add("x-api-key", compreFaceKey);
-                c.Timeout = TimeSpan.FromSeconds(10);
-            });
+                // CompreFace's recognition core loads its model lazily — the FIRST request after a
+                // (re)start can take well over 10s. The old 10s cap made the first enroll time out
+                // (and the warmed-up retry then succeeded). Allow for cold start.
+                c.Timeout = TimeSpan.FromSeconds(30);
+            })
+            // Retry transient warm-up failures (5xx / connection drops while the core spins up) so a
+            // first enroll doesn't surface as an error to the user.
+            .AddTransientHttpErrorPolicy(p => p.WaitAndRetryAsync(
+                2, attempt => TimeSpan.FromSeconds(attempt * 2)));
         }
         else
         {
