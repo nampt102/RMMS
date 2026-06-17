@@ -45,6 +45,10 @@
     <PackageReference Include="Minio" />
   </ItemGroup>
 
+  <ItemGroup Label="Logging">
+    <PackageReference Include="Serilog.Sinks.Elasticsearch" />
+  </ItemGroup>
+
   <ItemGroup Label="Misc">
     <PackageReference Include="NetTopologySuite" />
     <PackageReference Include="ClosedXML" />

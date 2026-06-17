@@ -6,6 +6,7 @@ using Rmms.Api.Middlewares;
 using Rmms.Application;
 using Rmms.Application.Common.Interfaces;
 using Rmms.Infrastructure;
+using Rmms.Infrastructure.Logging;
 using Serilog;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -15,7 +16,8 @@ builder.Host.UseSerilog((ctx, lc) => lc
     .ReadFrom.Configuration(ctx.Configuration)
     .Enrich.FromLogContext()
     .Enrich.WithMachineName()
-    .Enrich.WithThreadId());
+    .Enrich.WithThreadId()
+    .WriteToElasticsearchIfConfigured(ctx.Configuration, "api"));
 
 // ----- Layer registrations -----
 builder.Services.AddApplication();

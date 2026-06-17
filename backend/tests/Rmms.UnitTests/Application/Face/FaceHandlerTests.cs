@@ -29,7 +29,7 @@ public sealed class FaceHandlerTests
         await db.SaveChangesAsync();
 
         var face = new FakeFaceClient();
-        var result = await new EnrollFaceCommandHandler(db, face, audit, clock)
+        var result = await new EnrollFaceCommandHandler(db, face, audit, clock, NullLogger<EnrollFaceCommandHandler>.Instance)
             .Handle(new EnrollFaceCommand(pg.Id, ThreeAngles()), default);
 
         result.IsSuccess.Should().BeTrue();
@@ -49,7 +49,7 @@ public sealed class FaceHandlerTests
         db.Users.Add(pg);
         await db.SaveChangesAsync();
 
-        var result = await new EnrollFaceCommandHandler(db, new FakeFaceClient(throwOnCall: true), new InMemoryAuditLogger(), new TestClock())
+        var result = await new EnrollFaceCommandHandler(db, new FakeFaceClient(throwOnCall: true), new InMemoryAuditLogger(), new TestClock(), NullLogger<EnrollFaceCommandHandler>.Instance)
             .Handle(new EnrollFaceCommand(pg.Id, ThreeAngles()), default);
 
         result.IsFailure.Should().BeTrue();

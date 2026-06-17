@@ -6,6 +6,7 @@ using Rmms.Application;
 using Rmms.Application.Common.Abstractions;
 using Rmms.Application.Common.Interfaces;
 using Rmms.Infrastructure;
+using Rmms.Infrastructure.Logging;
 using Rmms.Worker;
 using Serilog;
 
@@ -15,7 +16,8 @@ var builder = Host.CreateApplicationBuilder(args);
 builder.Services.AddSerilog(lc => lc
     .ReadFrom.Configuration(builder.Configuration)
     .Enrich.FromLogContext()
-    .Enrich.WithMachineName());
+    .Enrich.WithMachineName()
+    .WriteToElasticsearchIfConfigured(builder.Configuration, "worker"));
 
 // ----- Layers -----
 builder.Services.AddApplication();

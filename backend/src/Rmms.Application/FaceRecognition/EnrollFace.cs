@@ -1,6 +1,7 @@
 using FluentValidation;
 using Mediator;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.Logging;
 using Rmms.Application.Common.Abstractions;
 using Rmms.Application.Common.Interfaces;
 using Rmms.Domain.Common;
@@ -32,13 +33,15 @@ internal sealed class EnrollFaceCommandHandler : IRequestHandler<EnrollFaceComma
     private readonly IFaceClient _faceClient;
     private readonly IAuditLogger _audit;
     private readonly IDateTimeProvider _clock;
+    private readonly ILogger<EnrollFaceCommandHandler> _log;
 
-    public EnrollFaceCommandHandler(IAppDbContext db, IFaceClient faceClient, IAuditLogger audit, IDateTimeProvider clock)
+    public EnrollFaceCommandHandler(IAppDbContext db, IFaceClient faceClient, IAuditLogger audit, IDateTimeProvider clock, ILogger<EnrollFaceCommandHandler> log)
     {
         _db = db;
         _faceClient = faceClient;
         _audit = audit;
         _clock = clock;
+        _log = log;
     }
 
     public async ValueTask<Result<FaceStatusDto>> Handle(EnrollFaceCommand command, CancellationToken ct)
@@ -56,8 +59,12 @@ internal sealed class EnrollFaceCommandHandler : IRequestHandler<EnrollFaceComma
             await _faceClient.DeleteAsync(subject, ct);
             await _faceClient.EnrollAsync(subject, command.Photos, ct);
         }
-        catch (Exception)
+        catch (Exception ex)
         {
+            // Surface the real cause (CompreFace unreachable / auth / bad BaseUrl) — the user only sees
+            // a generic message, but ops needs the exception in the logs (now shipped to Elasticsearch).
+            _log.LogError(ex, "Face enroll failed for user {UserId} (subject {Subject}) — face engine unavailable.",
+                command.UserId, subject);
             return Result.Failure<FaceStatusDto>(
                 new Error(ErrorCodes.UpstreamUnavailable, "Dịch vụ nhận diện khuôn mặt không phản hồi. Vui lòng thử lại."));
         }
