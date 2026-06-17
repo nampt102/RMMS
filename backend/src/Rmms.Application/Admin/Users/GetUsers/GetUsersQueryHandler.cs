@@ -14,8 +14,13 @@ internal sealed class GetUsersQueryHandler : IRequestHandler<GetUsersQuery, Resu
     private const int MaxPageSize = 100;
 
     private readonly IAppDbContext _db;
+    private readonly ICurrentUser _currentUser;
 
-    public GetUsersQueryHandler(IAppDbContext db) => _db = db;
+    public GetUsersQueryHandler(IAppDbContext db, ICurrentUser currentUser)
+    {
+        _db = db;
+        _currentUser = currentUser;
+    }
 
     public async ValueTask<Result<PaginatedResponse<AdminUserDto>>> Handle(GetUsersQuery query, CancellationToken ct)
     {
@@ -23,6 +28,12 @@ internal sealed class GetUsersQueryHandler : IRequestHandler<GetUsersQuery, Resu
         var pageSize = Math.Clamp(query.PageSize, 1, MaxPageSize);
 
         var q = _db.Users.AsNoTracking().AsQueryable();
+
+        // Hide super-admin accounts from everyone except another super-admin (M01).
+        if (!await SuperAdminAccess.CallerIsSuperAdminAsync(_db, _currentUser.UserId, ct))
+        {
+            q = q.Where(u => !u.IsSuperAdmin);
+        }
 
         // Filters
         if (!string.IsNullOrWhiteSpace(query.Role) && TryParseRole(query.Role, out var role))

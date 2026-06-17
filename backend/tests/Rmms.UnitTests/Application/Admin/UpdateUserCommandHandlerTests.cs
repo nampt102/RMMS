@@ -18,7 +18,7 @@ public sealed class UpdateUserCommandHandlerTests
         db.Users.Add(user);
         await db.SaveChangesAsync();
 
-        var sut = new UpdateUserCommandHandler(db, new InMemoryAuditLogger(), new TestClock());
+        var sut = new UpdateUserCommandHandler(db, new InMemoryAuditLogger(), new TestClock(), new TestCurrentUser());
 
         var result = await sut.Handle(
             new UpdateUserCommand(user.Id, FullName: "Tên Mới", Phone: "0908888777", Status: null, PreferredLanguage: "en"),
@@ -43,7 +43,7 @@ public sealed class UpdateUserCommandHandlerTests
         db.RefreshTokens.Add(RefreshToken.Issue(user.Id, deviceId, "rt-hash-2", DateTimeOffset.UtcNow, TimeSpan.FromDays(30)));
         await db.SaveChangesAsync();
 
-        var sut = new UpdateUserCommandHandler(db, new InMemoryAuditLogger(), new TestClock());
+        var sut = new UpdateUserCommandHandler(db, new InMemoryAuditLogger(), new TestClock(), new TestCurrentUser());
 
         var result = await sut.Handle(
             new UpdateUserCommand(user.Id, null, null, Status: "inactive", null),
@@ -61,7 +61,7 @@ public sealed class UpdateUserCommandHandlerTests
         db.Users.Add(UserFactory.CreateInactivePg("u@example.com"));
         await db.SaveChangesAsync();
 
-        var sut = new UpdateUserCommandHandler(db, new InMemoryAuditLogger(), new TestClock());
+        var sut = new UpdateUserCommandHandler(db, new InMemoryAuditLogger(), new TestClock(), new TestCurrentUser());
         var user = db.Users.Single();
 
         var result = await sut.Handle(
@@ -80,7 +80,7 @@ public sealed class UpdateUserCommandHandlerTests
         db.Users.Add(user);
         await db.SaveChangesAsync();
 
-        var sut = new UpdateUserCommandHandler(db, new InMemoryAuditLogger(), new TestClock());
+        var sut = new UpdateUserCommandHandler(db, new InMemoryAuditLogger(), new TestClock(), new TestCurrentUser());
 
         var result = await sut.Handle(
             new UpdateUserCommand(user.Id, null, null, Status: "active", null),
@@ -95,7 +95,7 @@ public sealed class UpdateUserCommandHandlerTests
     public async Task UserNotFound_ReturnsNotFound()
     {
         await using var db = TestDbContextFactory.Create();
-        var sut = new UpdateUserCommandHandler(db, new InMemoryAuditLogger(), new TestClock());
+        var sut = new UpdateUserCommandHandler(db, new InMemoryAuditLogger(), new TestClock(), new TestCurrentUser());
 
         var result = await sut.Handle(
             new UpdateUserCommand(Guid.NewGuid(), "Anything", null, null, null),
@@ -114,7 +114,7 @@ public sealed class UpdateUserCommandHandlerTests
         await db.SaveChangesAsync();
 
         var audit = new InMemoryAuditLogger();
-        var sut = new UpdateUserCommandHandler(db, audit, new TestClock());
+        var sut = new UpdateUserCommandHandler(db, audit, new TestClock(), new TestCurrentUser());
 
         await sut.Handle(new UpdateUserCommand(user.Id, null, null, "inactive", null), default);
 
@@ -132,7 +132,7 @@ public sealed class UpdateUserCommandHandlerTests
         await db.SaveChangesAsync();
 
         var audit = new InMemoryAuditLogger();
-        var sut = new UpdateUserCommandHandler(db, audit, new TestClock());
+        var sut = new UpdateUserCommandHandler(db, audit, new TestClock(), new TestCurrentUser());
 
         await sut.Handle(new UpdateUserCommand(user.Id, "Tên Mới", null, null, null), default);
 

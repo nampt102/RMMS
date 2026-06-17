@@ -22,7 +22,7 @@ public sealed class AdminResetPasswordCommandHandlerTests
         var emailSender = new CapturingEmailSender();
 
         var sut = new AdminResetPasswordCommandHandler(
-            db, emailSender, new FakeTemplateRenderer(), audit, clock);
+            db, emailSender, new FakeTemplateRenderer(), audit, clock, new TestCurrentUser());
 
         var result = await sut.Handle(new AdminResetPasswordCommand(user.Id), default);
 
@@ -46,7 +46,8 @@ public sealed class AdminResetPasswordCommandHandlerTests
             new CapturingEmailSender(),
             new FakeTemplateRenderer(),
             new InMemoryAuditLogger(),
-            new TestClock());
+            new TestClock(),
+            new TestCurrentUser());
 
         var result = await sut.Handle(new AdminResetPasswordCommand(Guid.NewGuid()), default);
 
@@ -65,7 +66,7 @@ public sealed class AdminResetPasswordCommandHandlerTests
 
         var audit = new InMemoryAuditLogger();
         var sut = new AdminResetPasswordCommandHandler(
-            db, new CapturingEmailSender(), new FakeTemplateRenderer(), audit, new TestClock());
+            db, new CapturingEmailSender(), new FakeTemplateRenderer(), audit, new TestClock(), new TestCurrentUser());
 
         await sut.Handle(new AdminResetPasswordCommand(user.Id), default);
 
@@ -86,7 +87,7 @@ public sealed class AdminResetPasswordCommandHandlerTests
         var clock = new TestClock { UtcNow = new DateTimeOffset(2026, 06, 10, 12, 0, 0, TimeSpan.Zero) };
         var sut = new AdminResetPasswordCommandHandler(
             db, new CapturingEmailSender(), new FakeTemplateRenderer(),
-            new InMemoryAuditLogger(), clock);
+            new InMemoryAuditLogger(), clock, new TestCurrentUser());
 
         await sut.Handle(new AdminResetPasswordCommand(user.Id), default);
 

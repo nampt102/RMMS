@@ -14,18 +14,27 @@ internal sealed class UpdateUserCommandHandler : IRequestHandler<UpdateUserComma
     private readonly IAppDbContext _db;
     private readonly IAuditLogger _audit;
     private readonly IDateTimeProvider _clock;
+    private readonly ICurrentUser _currentUser;
 
-    public UpdateUserCommandHandler(IAppDbContext db, IAuditLogger audit, IDateTimeProvider clock)
+    public UpdateUserCommandHandler(IAppDbContext db, IAuditLogger audit, IDateTimeProvider clock, ICurrentUser currentUser)
     {
         _db = db;
         _audit = audit;
         _clock = clock;
+        _currentUser = currentUser;
     }
 
     public async ValueTask<Result<AdminUserDto>> Handle(UpdateUserCommand command, CancellationToken ct)
     {
         var user = await _db.Users.SingleOrDefaultAsync(u => u.Id == command.UserId, ct);
         if (user is null)
+        {
+            return Result.Failure<AdminUserDto>(
+                Error.NotFound(ErrorCodes.NotFound, "Người dùng không tồn tại."));
+        }
+
+        // A super-admin is invisible to non-super callers — 404 as if it doesn't exist (M01).
+        if (user.IsSuperAdmin && !await SuperAdminAccess.CallerIsSuperAdminAsync(_db, _currentUser.UserId, ct))
         {
             return Result.Failure<AdminUserDto>(
                 Error.NotFound(ErrorCodes.NotFound, "Người dùng không tồn tại."));

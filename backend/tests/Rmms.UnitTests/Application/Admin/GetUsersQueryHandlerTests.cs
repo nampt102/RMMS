@@ -1,5 +1,6 @@
 using FluentAssertions;
 using Rmms.Application.Admin.Users.GetUsers;
+using Rmms.Domain.Users;
 using Rmms.UnitTests.Common;
 using Xunit;
 
@@ -11,7 +12,7 @@ public sealed class GetUsersQueryHandlerTests
     public async Task EmptyDb_ReturnsEmptyPage()
     {
         await using var db = TestDbContextFactory.Create();
-        var sut = new GetUsersQueryHandler(db);
+        var sut = new GetUsersQueryHandler(db, new TestCurrentUser());
 
         var result = await sut.Handle(new GetUsersQuery(), default);
 
@@ -31,7 +32,7 @@ public sealed class GetUsersQueryHandlerTests
         }
         await db.SaveChangesAsync();
 
-        var sut = new GetUsersQueryHandler(db);
+        var sut = new GetUsersQueryHandler(db, new TestCurrentUser());
 
         var page2 = await sut.Handle(new GetUsersQuery(Page: 2, PageSize: 10), default);
 
@@ -50,7 +51,7 @@ public sealed class GetUsersQueryHandlerTests
         db.Users.Add(UserFactory.CreateAdmin("admin@example.com"));
         await db.SaveChangesAsync();
 
-        var sut = new GetUsersQueryHandler(db);
+        var sut = new GetUsersQueryHandler(db, new TestCurrentUser());
         var result = await sut.Handle(new GetUsersQuery(Role: "admin"), default);
 
         result.Value.Data.Should().ContainSingle()
@@ -66,7 +67,7 @@ public sealed class GetUsersQueryHandlerTests
         db.Users.Add(UserFactory.CreateActivePg("active2@example.com"));
         await db.SaveChangesAsync();
 
-        var sut = new GetUsersQueryHandler(db);
+        var sut = new GetUsersQueryHandler(db, new TestCurrentUser());
         var result = await sut.Handle(new GetUsersQuery(Status: "active"), default);
 
         result.Value.Data.Should().HaveCount(2);
@@ -81,7 +82,7 @@ public sealed class GetUsersQueryHandlerTests
         db.Users.Add(UserFactory.CreateActivePg("bob@example.com"));
         await db.SaveChangesAsync();
 
-        var sut = new GetUsersQueryHandler(db);
+        var sut = new GetUsersQueryHandler(db, new TestCurrentUser());
         var result = await sut.Handle(new GetUsersQuery(Search: "ALICE"), default);
 
         result.Value.Data.Should().ContainSingle()
@@ -98,7 +99,7 @@ public sealed class GetUsersQueryHandlerTests
         }
         await db.SaveChangesAsync();
 
-        var sut = new GetUsersQueryHandler(db);
+        var sut = new GetUsersQueryHandler(db, new TestCurrentUser());
         var result = await sut.Handle(new GetUsersQuery(PageSize: 9999), default);
 
         result.Value.Meta.PageSize.Should().Be(100); // capped
@@ -116,9 +117,30 @@ public sealed class GetUsersQueryHandlerTests
         db.Users.Add(fresh);
         await db.SaveChangesAsync();
 
-        var sut = new GetUsersQueryHandler(db);
+        var sut = new GetUsersQueryHandler(db, new TestCurrentUser());
         var result = await sut.Handle(new GetUsersQuery(), default);
 
         result.Value.Data[0].Email.Should().Be("fresh@example.com");
+    }
+
+    [Fact]
+    public async Task SuperAdmin_HiddenFromNonSuperCaller_ButVisibleToSuperCaller()
+    {
+        await using var db = TestDbContextFactory.Create();
+        var regular = UserFactory.CreateActivePg("pg@example.com");
+        var superA = User.CreateSuperAdmin("root@example.com", "plain:Pwd12345", "Root");
+        db.Users.AddRange(regular, superA);
+        await db.SaveChangesAsync();
+
+        // A normal admin/user must not see the super-admin row.
+        var asRegular = new GetUsersQueryHandler(db, new TestCurrentUser { UserId = regular.Id });
+        var hidden = await asRegular.Handle(new GetUsersQuery(PageSize: 100), default);
+        hidden.Value.Data.Should().Contain(u => u.Id == regular.Id);
+        hidden.Value.Data.Should().NotContain(u => u.Id == superA.Id);
+
+        // A super-admin caller sees the super-admin row.
+        var asSuper = new GetUsersQueryHandler(db, new TestCurrentUser { UserId = superA.Id });
+        var seen = await asSuper.Handle(new GetUsersQuery(PageSize: 100), default);
+        seen.Value.Data.Should().Contain(u => u.Id == superA.Id);
     }
 }

@@ -54,6 +54,9 @@ internal sealed class UserConfiguration : IEntityTypeConfiguration<User>
         b.Property(u => u.FaceTemplateExternalId)
             .HasMaxLength(255);
 
+        // Super-admin flag (M01) — hidden god account; defaults false for every existing/new user.
+        b.Property(u => u.IsSuperAdmin).HasDefaultValue(false);
+
         // Phase 2 hooks — nullable, no values populated in Phase 1.
         b.Property(u => u.ExternalProvider).HasMaxLength(50);
         b.Property(u => u.ExternalId).HasMaxLength(255);

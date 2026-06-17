@@ -34,6 +34,14 @@ public sealed class User : AggregateRoot
     public UserRole Role { get; private set; }
     public UserStatus Status { get; private set; }
 
+    /// <summary>
+    /// Super-admin flag (full Admin rights, but hidden from every user list except other
+    /// super-admins). Role stays <see cref="UserRole.Admin"/> so all admin authorization and
+    /// the web admin work unchanged; only visibility differs. Set via bootstrap only
+    /// (<see cref="CreateSuperAdmin"/> / <see cref="PromoteToSuperAdmin"/>), never over the API.
+    /// </summary>
+    public bool IsSuperAdmin { get; private set; }
+
     public DateTimeOffset? EmailVerifiedAt { get; private set; }
     public DateTimeOffset? LastLoginAt { get; private set; }
 
@@ -101,6 +109,32 @@ public sealed class User : AggregateRoot
             PreferredLanguage = NormalizeLanguage(preferredLanguage),
         };
     }
+
+    /// <summary>
+    /// Factory: bootstrap a super-admin (role = Admin, active, pre-verified, hidden). Created only
+    /// by the <c>seed-superadmin</c> CLI — never through the API.
+    /// </summary>
+    public static User CreateSuperAdmin(string email, string passwordHash, string fullName, string preferredLanguage = "vi")
+    {
+        ArgumentException.ThrowIfNullOrWhiteSpace(email);
+        ArgumentException.ThrowIfNullOrWhiteSpace(passwordHash);
+        ArgumentException.ThrowIfNullOrWhiteSpace(fullName);
+
+        return new User
+        {
+            Email = email.Trim().ToLowerInvariant(),
+            PasswordHash = passwordHash,
+            FullName = fullName.Trim(),
+            Role = UserRole.Admin,
+            Status = UserStatus.Active,
+            EmailVerifiedAt = DateTimeOffset.UtcNow,
+            IsSuperAdmin = true,
+            PreferredLanguage = NormalizeLanguage(preferredLanguage),
+        };
+    }
+
+    /// <summary>Promote an existing account to super-admin (idempotent; used by the seed CLI).</summary>
+    public void PromoteToSuperAdmin() => IsSuperAdmin = true;
 
     // ----- Domain methods -----
 
