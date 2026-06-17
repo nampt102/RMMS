@@ -45,6 +45,7 @@
     "appTitle": "RMMS Admin",
     "navDashboard": "Overview",
     "navUsers": "Users",
+    "navOrganization": "Organization",
     "navStores": "Stores",
     "navAreas": "Areas",
     "navCategories": "Categories",
@@ -62,6 +63,24 @@
     "navMonitoring": "Monitoring",
     "navAudit": "Audit log",
     "logout": "Sign out"
+  },
+  "organization": {
+    "title": "Organization",
+    "subtitle": "Staff rank hierarchy and area-based assignment",
+    "tabHierarchy": "Hierarchy",
+    "tabArea": "Areas",
+    "hierarchyHint": "BUH is the company-wide management tier. Each Leader is shown with the PGs reporting to them; PGs with no Leader are listed separately.",
+    "areaHint": "Employees belong to an area through their assigned stores. Stores with no area are listed separately.",
+    "tierManagement": "Management (BUH)",
+    "unassignedPgs": "No Leader yet",
+    "storesNoArea": "No area assigned",
+    "storeInactive": "Inactive",
+    "searchPlaceholder": "Search by name / code…",
+    "expandAll": "Expand all",
+    "collapseAll": "Collapse all",
+    "detailEmail": "Email",
+    "detailAssignments": "Assignments",
+    "detailNone": "None"
   },
   "dashboard": {
     "title": "Overview",

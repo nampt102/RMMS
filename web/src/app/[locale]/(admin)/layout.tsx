@@ -15,6 +15,7 @@ import {
   NotificationOutlined,
   CheckSquareOutlined,
   LaptopOutlined,
+  PartitionOutlined,
   MenuFoldOutlined,
   MenuOutlined,
   MenuUnfoldOutlined,
@@ -104,6 +105,7 @@ export default function AdminLayout({
   const allItems = [
     { key: `/${locale}/dashboard`, icon: <BarChartOutlined />, label: <Link href={`/${locale}/dashboard`}>{t("navDashboard")}</Link>, roles: ["admin", "leader", "buh"] },
     { key: `/${locale}/users`, icon: <TeamOutlined />, label: <Link href={`/${locale}/users`}>{t("navUsers")}</Link>, roles: ["admin"] },
+    { key: `/${locale}/organization`, icon: <PartitionOutlined />, label: <Link href={`/${locale}/organization`}>{t("navOrganization")}</Link>, roles: ["admin"] },
     { key: `/${locale}/stores`, icon: <ShopOutlined />, label: <Link href={`/${locale}/stores`}>{t("navStores")}</Link>, roles: ["admin"] },
     { key: `/${locale}/areas`, icon: <ApartmentOutlined />, label: <Link href={`/${locale}/areas`}>{t("navAreas")}</Link>, roles: ["admin"] },
     { key: `/${locale}/categories`, icon: <AppstoreOutlined />, label: <Link href={`/${locale}/categories`}>{t("navCategories")}</Link>, roles: ["admin"] },

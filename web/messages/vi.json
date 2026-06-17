@@ -45,6 +45,7 @@
     "appTitle": "RMMS Quản trị",
     "navDashboard": "Tổng quan",
     "navUsers": "Người dùng",
+    "navOrganization": "Sơ đồ tổ chức",
     "navStores": "Điểm bán",
     "navAreas": "Khu vực",
     "navCategories": "Ngành hàng",
@@ -62,6 +63,24 @@
     "navMonitoring": "Giám sát",
     "navAudit": "Nhật ký",
     "logout": "Đăng xuất"
+  },
+  "organization": {
+    "title": "Sơ đồ tổ chức",
+    "subtitle": "Cây phân cấp nhân sự và phân công theo khu vực",
+    "tabHierarchy": "Cây phân cấp",
+    "tabArea": "Khu vực",
+    "hierarchyHint": "BUH là tầng quản lý chung toàn hệ thống. Mỗi Leader hiển thị kèm các PG trực thuộc; PG chưa có Leader nằm ở mục riêng.",
+    "areaHint": "Nhân viên thuộc khu vực thông qua điểm bán được phân công. Điểm bán chưa gán khu vực nằm ở mục riêng.",
+    "tierManagement": "Ban quản lý (BUH)",
+    "unassignedPgs": "Chưa có Leader",
+    "storesNoArea": "Chưa gán khu vực",
+    "storeInactive": "Ngừng hoạt động",
+    "searchPlaceholder": "Tìm theo tên / mã…",
+    "expandAll": "Mở tất cả",
+    "collapseAll": "Thu gọn",
+    "detailEmail": "Email",
+    "detailAssignments": "Phân công",
+    "detailNone": "Chưa có"
   },
   "dashboard": {
     "title": "Tổng quan",
