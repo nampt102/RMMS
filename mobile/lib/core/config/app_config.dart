@@ -1,11 +1,11 @@
 /// Build-time configuration. Override per environment via `--dart-define`:
-///   flutter run --dart-define=API_BASE_URL=https://api-staging.rmms.example.com
+///   flutter run --dart-define=API_BASE_URL=http://127.0.0.1:5080
 class AppConfig {
   AppConfig._();
 
   static const String apiBaseUrl = String.fromEnvironment(
     'API_BASE_URL',
-    defaultValue: 'http://10.0.2.2:5080', // Android emulator → host machine
+    defaultValue: 'http://103.216.116.206:5010',
   );
 
   static const String sentryDsn = String.fromEnvironment(

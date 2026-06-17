@@ -599,6 +599,8 @@ class _QuickGrid extends StatelessWidget {
 
   static const _columns = 3;
   static const _spacing = 10.0;
+  /// Uniform cell height — fits icon + 2-line label (e.g. "Kế hoạch viếng thăm").
+  static const _cellHeight = 118.0;
 
   @override
   Widget build(BuildContext context) {
@@ -613,6 +615,7 @@ class _QuickGrid extends StatelessWidget {
             for (final item in items)
               SizedBox(
                 width: cellWidth,
+                height: _cellHeight,
                 child: _QuickCard(item: item),
               ),
           ],
@@ -628,28 +631,36 @@ class _QuickCard extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return AppCard(
-      onTap: item.onTap,
-      borderRadius: BorderRadius.circular(22),
-      padding: const EdgeInsets.symmetric(vertical: 16, horizontal: 6),
-      child: Column(
-        mainAxisSize: MainAxisSize.min,
-        children: [
-          AppIconTile(icon: item.icon, tone: item.tone, size: 44, radius: 14),
-          const SizedBox(height: 10),
-          Text(
-            item.label,
-            textAlign: TextAlign.center,
-            maxLines: 2,
-            overflow: TextOverflow.ellipsis,
-            style: GoogleFonts.plusJakartaSans(
-              color: AppPalette.ink,
-              fontSize: 12.5,
-              fontWeight: FontWeight.w700,
-              height: 1.25,
+    return SizedBox.expand(
+      child: AppCard(
+        onTap: item.onTap,
+        borderRadius: BorderRadius.circular(22),
+        padding: const EdgeInsets.symmetric(vertical: 14, horizontal: 6),
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            AppIconTile(icon: item.icon, tone: item.tone, size: 44, radius: 14),
+            const SizedBox(height: 8),
+            SizedBox(
+              height: 32,
+              child: Align(
+                alignment: Alignment.center,
+                child: Text(
+                  item.label,
+                  textAlign: TextAlign.center,
+                  maxLines: 2,
+                  overflow: TextOverflow.ellipsis,
+                  style: GoogleFonts.plusJakartaSans(
+                    color: AppPalette.ink,
+                    fontSize: 12.5,
+                    fontWeight: FontWeight.w700,
+                    height: 1.25,
+                  ),
+                ),
+              ),
             ),
-          ),
-        ],
+          ],
+        ),
       ),
     );
   }
