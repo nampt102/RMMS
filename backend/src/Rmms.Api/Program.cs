@@ -174,6 +174,14 @@ if (args.Length > 0)
     {
         return await Rmms.Api.Cli.SeedDemoCommand.RunAsync(args, app.Services);
     }
+    if (firstArg.Equals("seed-master", StringComparison.OrdinalIgnoreCase))
+    {
+        return await Rmms.Api.Cli.SeedMasterCommand.RunAsync(args, app.Services);
+    }
+    if (firstArg.Equals("reset-data", StringComparison.OrdinalIgnoreCase))
+    {
+        return await Rmms.Api.Cli.ResetDataCommand.RunAsync(args, app.Services);
+    }
 }
 
 // ===== Middleware pipeline =====
