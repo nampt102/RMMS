@@ -1,0 +1,3502 @@
+{
+  "nodes": [
+    {
+      "id": "file:Rmms.Api/Authentication/AuthorizationPolicies.cs",
+      "type": "file",
+      "name": "AuthorizationPolicies.cs",
+      "filePath": "Rmms.Api/Authentication/AuthorizationPolicies.cs",
+      "summary": "AuthorizationPolicies.cs — tệp mã nguồn C# trong backend RMMS (1 hàm, 1 class).",
+      "tags": [
+        "rmms.api",
+        "authentication",
+        "code",
+        "cs"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Rmms.Api/Authentication/AuthorizationPolicies.cs:AddRmmsAuthorization",
+      "type": "function",
+      "name": "AddRmmsAuthorization",
+      "filePath": "Rmms.Api/Authentication/AuthorizationPolicies.cs",
+      "lineRange": [
+        35,
+        57
+      ],
+      "summary": "Hàm AddRmmsAuthorization trong AuthorizationPolicies.cs.",
+      "tags": [
+        "rmms.api",
+        "authentication",
+        "code",
+        "cs",
+        "ham"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:Rmms.Api/Authentication/AuthorizationPolicies.cs:AuthorizationPolicies",
+      "type": "class",
+      "name": "AuthorizationPolicies",
+      "filePath": "Rmms.Api/Authentication/AuthorizationPolicies.cs",
+      "lineRange": [
+        15,
+        58
+      ],
+      "summary": "Class AuthorizationPolicies trong AuthorizationPolicies.cs.",
+      "tags": [
+        "rmms.api",
+        "authentication",
+        "code",
+        "cs",
+        "class"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:Rmms.Api/Authentication/HttpContextClientContext.cs",
+      "type": "file",
+      "name": "HttpContextClientContext.cs",
+      "filePath": "Rmms.Api/Authentication/HttpContextClientContext.cs",
+      "summary": "HttpContextClientContext.cs — tệp mã nguồn C# trong backend RMMS (1 hàm, 1 class).",
+      "tags": [
+        "rmms.api",
+        "authentication",
+        "code",
+        "cs"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Rmms.Api/Authentication/HttpContextClientContext.cs:HttpContextClientContext",
+      "type": "function",
+      "name": "HttpContextClientContext",
+      "filePath": "Rmms.Api/Authentication/HttpContextClientContext.cs",
+      "lineRange": [
+        15,
+        15
+      ],
+      "summary": "Hàm HttpContextClientContext trong HttpContextClientContext.cs.",
+      "tags": [
+        "rmms.api",
+        "authentication",
+        "code",
+        "cs",
+        "ham"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:Rmms.Api/Authentication/HttpContextClientContext.cs:HttpContextClientContext",
+      "type": "class",
+      "name": "HttpContextClientContext",
+      "filePath": "Rmms.Api/Authentication/HttpContextClientContext.cs",
+      "lineRange": [
+        11,
+        61
+      ],
+      "summary": "Class HttpContextClientContext trong HttpContextClientContext.cs.",
+      "tags": [
+        "rmms.api",
+        "authentication",
+        "code",
+        "cs",
+        "class"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:Rmms.Api/Authentication/HttpContextCurrentUser.cs",
+      "type": "file",
+      "name": "HttpContextCurrentUser.cs",
+      "filePath": "Rmms.Api/Authentication/HttpContextCurrentUser.cs",
+      "summary": "HttpContextCurrentUser.cs — tệp mã nguồn C# trong backend RMMS (1 hàm, 1 class).",
+      "tags": [
+        "rmms.api",
+        "authentication",
+        "code",
+        "cs"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Rmms.Api/Authentication/HttpContextCurrentUser.cs:HttpContextCurrentUser",
+      "type": "function",
+      "name": "HttpContextCurrentUser",
+      "filePath": "Rmms.Api/Authentication/HttpContextCurrentUser.cs",
+      "lineRange": [
+        15,
+        15
+      ],
+      "summary": "Hàm HttpContextCurrentUser trong HttpContextCurrentUser.cs.",
+      "tags": [
+        "rmms.api",
+        "authentication",
+        "code",
+        "cs",
+        "ham"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:Rmms.Api/Authentication/HttpContextCurrentUser.cs:HttpContextCurrentUser",
+      "type": "class",
+      "name": "HttpContextCurrentUser",
+      "filePath": "Rmms.Api/Authentication/HttpContextCurrentUser.cs",
+      "lineRange": [
+        11,
+        33
+      ],
+      "summary": "Class HttpContextCurrentUser trong HttpContextCurrentUser.cs.",
+      "tags": [
+        "rmms.api",
+        "authentication",
+        "code",
+        "cs",
+        "class"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:Rmms.Api/Cli/ResetDataCommand.cs",
+      "type": "file",
+      "name": "ResetDataCommand.cs",
+      "filePath": "Rmms.Api/Cli/ResetDataCommand.cs",
+      "summary": "ResetDataCommand.cs — tệp mã nguồn C# trong backend RMMS (1 hàm, 1 class).",
+      "tags": [
+        "rmms.api",
+        "cli",
+        "code",
+        "cs"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Rmms.Api/Cli/ResetDataCommand.cs:RunAsync",
+      "type": "function",
+      "name": "RunAsync",
+      "filePath": "Rmms.Api/Cli/ResetDataCommand.cs",
+      "lineRange": [
+        24,
+        90
+      ],
+      "summary": "Hàm RunAsync trong ResetDataCommand.cs.",
+      "tags": [
+        "rmms.api",
+        "cli",
+        "code",
+        "cs",
+        "ham"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:Rmms.Api/Cli/ResetDataCommand.cs:ResetDataCommand",
+      "type": "class",
+      "name": "ResetDataCommand",
+      "filePath": "Rmms.Api/Cli/ResetDataCommand.cs",
+      "lineRange": [
+        22,
+        91
+      ],
+      "summary": "Class ResetDataCommand trong ResetDataCommand.cs.",
+      "tags": [
+        "rmms.api",
+        "cli",
+        "code",
+        "cs",
+        "class"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:Rmms.Api/Cli/SeedAdminCommand.cs",
+      "type": "file",
+      "name": "SeedAdminCommand.cs",
+      "filePath": "Rmms.Api/Cli/SeedAdminCommand.cs",
+      "summary": "SeedAdminCommand.cs — tệp mã nguồn C# trong backend RMMS (4 hàm, 1 class).",
+      "tags": [
+        "rmms.api",
+        "cli",
+        "code",
+        "cs"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:Rmms.Api/Cli/SeedAdminCommand.cs:RunAsync",
+      "type": "function",
+      "name": "RunAsync",
+      "filePath": "Rmms.Api/Cli/SeedAdminCommand.cs",
+      "lineRange": [
+        23,
+        70
+      ],
+      "summary": "Hàm RunAsync trong SeedAdminCommand.cs.",
+      "tags": [
+        "rmms.api",
+        "cli",
+        "code",
+        "cs",
+        "ham"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Rmms.Api/Cli/SeedAdminCommand.cs:ParseArgs",
+      "type": "function",
+      "name": "ParseArgs",
+      "filePath": "Rmms.Api/Cli/SeedAdminCommand.cs",
+      "lineRange": [
+        76,
+        117
+      ],
+      "summary": "Hàm ParseArgs trong SeedAdminCommand.cs.",
+      "tags": [
+        "rmms.api",
+        "cli",
+        "code",
+        "cs",
+        "ham"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Rmms.Api/Cli/SeedAdminCommand.cs:SplitFlag",
+      "type": "function",
+      "name": "SplitFlag",
+      "filePath": "Rmms.Api/Cli/SeedAdminCommand.cs",
+      "lineRange": [
+        120,
+        126
+      ],
+      "summary": "Hàm SplitFlag trong SeedAdminCommand.cs.",
+      "tags": [
+        "rmms.api",
+        "cli",
+        "code",
+        "cs",
+        "ham"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Rmms.Api/Cli/SeedAdminCommand.cs:PrintUsage",
+      "type": "function",
+      "name": "PrintUsage",
+      "filePath": "Rmms.Api/Cli/SeedAdminCommand.cs",
+      "lineRange": [
+        128,
+        136
+      ],
+      "summary": "Hàm PrintUsage trong SeedAdminCommand.cs.",
+      "tags": [
+        "rmms.api",
+        "cli",
+        "code",
+        "cs",
+        "ham"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:Rmms.Api/Cli/SeedAdminCommand.cs:SeedAdminCommand",
+      "type": "class",
+      "name": "SeedAdminCommand",
+      "filePath": "Rmms.Api/Cli/SeedAdminCommand.cs",
+      "lineRange": [
+        21,
+        137
+      ],
+      "summary": "Class SeedAdminCommand trong SeedAdminCommand.cs.",
+      "tags": [
+        "rmms.api",
+        "cli",
+        "code",
+        "cs",
+        "class"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:Rmms.Api/Cli/SeedDemoCommand.cs",
+      "type": "file",
+      "name": "SeedDemoCommand.cs",
+      "filePath": "Rmms.Api/Cli/SeedDemoCommand.cs",
+      "summary": "SeedDemoCommand.cs — tệp mã nguồn C# trong backend RMMS (1 hàm, 1 class).",
+      "tags": [
+        "rmms.api",
+        "cli",
+        "code",
+        "cs"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:Rmms.Api/Cli/SeedDemoCommand.cs:RunAsync",
+      "type": "function",
+      "name": "RunAsync",
+      "filePath": "Rmms.Api/Cli/SeedDemoCommand.cs",
+      "lineRange": [
+        29,
+        186
+      ],
+      "summary": "Hàm RunAsync trong SeedDemoCommand.cs.",
+      "tags": [
+        "rmms.api",
+        "cli",
+        "code",
+        "cs",
+        "ham"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:Rmms.Api/Cli/SeedDemoCommand.cs:SeedDemoCommand",
+      "type": "class",
+      "name": "SeedDemoCommand",
+      "filePath": "Rmms.Api/Cli/SeedDemoCommand.cs",
+      "lineRange": [
+        22,
+        187
+      ],
+      "summary": "Class SeedDemoCommand trong SeedDemoCommand.cs.",
+      "tags": [
+        "rmms.api",
+        "cli",
+        "code",
+        "cs",
+        "class"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:Rmms.Api/Cli/SeedMasterCommand.cs",
+      "type": "file",
+      "name": "SeedMasterCommand.cs",
+      "filePath": "Rmms.Api/Cli/SeedMasterCommand.cs",
+      "summary": "SeedMasterCommand.cs — tệp mã nguồn C# trong backend RMMS (1 hàm, 1 class).",
+      "tags": [
+        "rmms.api",
+        "cli",
+        "code",
+        "cs"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:Rmms.Api/Cli/SeedMasterCommand.cs:RunAsync",
+      "type": "function",
+      "name": "RunAsync",
+      "filePath": "Rmms.Api/Cli/SeedMasterCommand.cs",
+      "lineRange": [
+        28,
+        218
+      ],
+      "summary": "Hàm RunAsync trong SeedMasterCommand.cs.",
+      "tags": [
+        "rmms.api",
+        "cli",
+        "code",
+        "cs",
+        "ham"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:Rmms.Api/Cli/SeedMasterCommand.cs:SeedMasterCommand",
+      "type": "class",
+      "name": "SeedMasterCommand",
+      "filePath": "Rmms.Api/Cli/SeedMasterCommand.cs",
+      "lineRange": [
+        23,
+        219
+      ],
+      "summary": "Class SeedMasterCommand trong SeedMasterCommand.cs.",
+      "tags": [
+        "rmms.api",
+        "cli",
+        "code",
+        "cs",
+        "class"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:Rmms.Api/Cli/SeedSuperAdminCommand.cs",
+      "type": "file",
+      "name": "SeedSuperAdminCommand.cs",
+      "filePath": "Rmms.Api/Cli/SeedSuperAdminCommand.cs",
+      "summary": "SeedSuperAdminCommand.cs — tệp mã nguồn C# trong backend RMMS (3 hàm, 1 class).",
+      "tags": [
+        "rmms.api",
+        "cli",
+        "code",
+        "cs"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:Rmms.Api/Cli/SeedSuperAdminCommand.cs:RunAsync",
+      "type": "function",
+      "name": "RunAsync",
+      "filePath": "Rmms.Api/Cli/SeedSuperAdminCommand.cs",
+      "lineRange": [
+        23,
+        68
+      ],
+      "summary": "Hàm RunAsync trong SeedSuperAdminCommand.cs.",
+      "tags": [
+        "rmms.api",
+        "cli",
+        "code",
+        "cs",
+        "ham"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Rmms.Api/Cli/SeedSuperAdminCommand.cs:ParseArgs",
+      "type": "function",
+      "name": "ParseArgs",
+      "filePath": "Rmms.Api/Cli/SeedSuperAdminCommand.cs",
+      "lineRange": [
+        72,
+        110
+      ],
+      "summary": "Hàm ParseArgs trong SeedSuperAdminCommand.cs.",
+      "tags": [
+        "rmms.api",
+        "cli",
+        "code",
+        "cs",
+        "ham"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Rmms.Api/Cli/SeedSuperAdminCommand.cs:GeneratePassword",
+      "type": "function",
+      "name": "GeneratePassword",
+      "filePath": "Rmms.Api/Cli/SeedSuperAdminCommand.cs",
+      "lineRange": [
+        113,
+        133
+      ],
+      "summary": "Hàm GeneratePassword trong SeedSuperAdminCommand.cs.",
+      "tags": [
+        "rmms.api",
+        "cli",
+        "code",
+        "cs",
+        "ham"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:Rmms.Api/Cli/SeedSuperAdminCommand.cs:SeedSuperAdminCommand",
+      "type": "class",
+      "name": "SeedSuperAdminCommand",
+      "filePath": "Rmms.Api/Cli/SeedSuperAdminCommand.cs",
+      "lineRange": [
+        21,
+        134
+      ],
+      "summary": "Class SeedSuperAdminCommand trong SeedSuperAdminCommand.cs.",
+      "tags": [
+        "rmms.api",
+        "cli",
+        "code",
+        "cs",
+        "class"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:Rmms.Api/Common/InvariantFormParsing.cs",
+      "type": "file",
+      "name": "InvariantFormParsing.cs",
+      "filePath": "Rmms.Api/Common/InvariantFormParsing.cs",
+      "summary": "InvariantFormParsing.cs — tệp mã nguồn C# trong backend RMMS (3 hàm, 1 class).",
+      "tags": [
+        "rmms.api",
+        "common",
+        "code",
+        "cs"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Rmms.Api/Common/InvariantFormParsing.cs:TryParseGps",
+      "type": "function",
+      "name": "TryParseGps",
+      "filePath": "Rmms.Api/Common/InvariantFormParsing.cs",
+      "lineRange": [
+        18,
+        25
+      ],
+      "summary": "Hàm TryParseGps trong InvariantFormParsing.cs.",
+      "tags": [
+        "rmms.api",
+        "common",
+        "code",
+        "cs",
+        "ham"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Rmms.Api/Common/InvariantFormParsing.cs:TryParseDouble",
+      "type": "function",
+      "name": "TryParseDouble",
+      "filePath": "Rmms.Api/Common/InvariantFormParsing.cs",
+      "lineRange": [
+        27,
+        38
+      ],
+      "summary": "Hàm TryParseDouble trong InvariantFormParsing.cs.",
+      "tags": [
+        "rmms.api",
+        "common",
+        "code",
+        "cs",
+        "ham"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Rmms.Api/Common/InvariantFormParsing.cs:TryParseNullableDouble",
+      "type": "function",
+      "name": "TryParseNullableDouble",
+      "filePath": "Rmms.Api/Common/InvariantFormParsing.cs",
+      "lineRange": [
+        40,
+        57
+      ],
+      "summary": "Hàm TryParseNullableDouble trong InvariantFormParsing.cs.",
+      "tags": [
+        "rmms.api",
+        "common",
+        "code",
+        "cs",
+        "ham"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:Rmms.Api/Common/InvariantFormParsing.cs:InvariantFormParsing",
+      "type": "class",
+      "name": "InvariantFormParsing",
+      "filePath": "Rmms.Api/Common/InvariantFormParsing.cs",
+      "lineRange": [
+        11,
+        58
+      ],
+      "summary": "Class InvariantFormParsing trong InvariantFormParsing.cs.",
+      "tags": [
+        "rmms.api",
+        "common",
+        "code",
+        "cs",
+        "class"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:Rmms.Api/Common/ResultMapping.cs",
+      "type": "file",
+      "name": "ResultMapping.cs",
+      "filePath": "Rmms.Api/Common/ResultMapping.cs",
+      "summary": "ResultMapping.cs — tệp mã nguồn C# trong backend RMMS (4 hàm, 1 class).",
+      "tags": [
+        "rmms.api",
+        "common",
+        "code",
+        "cs"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Rmms.Api/Common/ResultMapping.cs:Ok",
+      "type": "function",
+      "name": "Ok",
+      "filePath": "Rmms.Api/Common/ResultMapping.cs",
+      "lineRange": [
+        18,
+        19
+      ],
+      "summary": "Hàm Ok trong ResultMapping.cs.",
+      "tags": [
+        "rmms.api",
+        "common",
+        "code",
+        "cs",
+        "ham"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Rmms.Api/Common/ResultMapping.cs:Created",
+      "type": "function",
+      "name": "Created",
+      "filePath": "Rmms.Api/Common/ResultMapping.cs",
+      "lineRange": [
+        22,
+        26
+      ],
+      "summary": "Hàm Created trong ResultMapping.cs.",
+      "tags": [
+        "rmms.api",
+        "common",
+        "code",
+        "cs",
+        "ham"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Rmms.Api/Common/ResultMapping.cs:Failure",
+      "type": "function",
+      "name": "Failure",
+      "filePath": "Rmms.Api/Common/ResultMapping.cs",
+      "lineRange": [
+        29,
+        48
+      ],
+      "summary": "Hàm Failure trong ResultMapping.cs.",
+      "tags": [
+        "rmms.api",
+        "common",
+        "code",
+        "cs",
+        "ham"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Rmms.Api/Common/ResultMapping.cs:ToActionResult",
+      "type": "function",
+      "name": "ToActionResult",
+      "filePath": "Rmms.Api/Common/ResultMapping.cs",
+      "lineRange": [
+        51,
+        54
+      ],
+      "summary": "Hàm ToActionResult trong ResultMapping.cs.",
+      "tags": [
+        "rmms.api",
+        "common",
+        "code",
+        "cs",
+        "ham"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:Rmms.Api/Common/ResultMapping.cs:ResultMapping",
+      "type": "class",
+      "name": "ResultMapping",
+      "filePath": "Rmms.Api/Common/ResultMapping.cs",
+      "lineRange": [
+        15,
+        55
+      ],
+      "summary": "Class ResultMapping trong ResultMapping.cs.",
+      "tags": [
+        "rmms.api",
+        "common",
+        "code",
+        "cs",
+        "class"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:Rmms.Api/Controllers/AdminApprovalsController.cs",
+      "type": "file",
+      "name": "AdminApprovalsController.cs",
+      "filePath": "Rmms.Api/Controllers/AdminApprovalsController.cs",
+      "summary": "AdminApprovalsController.cs — tệp mã nguồn C# trong backend RMMS (3 hàm, 1 class).",
+      "tags": [
+        "rmms.api",
+        "controllers",
+        "code",
+        "cs"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Rmms.Api/Controllers/AdminApprovalsController.cs:AdminApprovalsController",
+      "type": "function",
+      "name": "AdminApprovalsController",
+      "filePath": "Rmms.Api/Controllers/AdminApprovalsController.cs",
+      "lineRange": [
+        22,
+        26
+      ],
+      "summary": "Hàm AdminApprovalsController trong AdminApprovalsController.cs.",
+      "tags": [
+        "rmms.api",
+        "controllers",
+        "code",
+        "cs",
+        "ham"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Rmms.Api/Controllers/AdminApprovalsController.cs:List",
+      "type": "function",
+      "name": "List",
+      "filePath": "Rmms.Api/Controllers/AdminApprovalsController.cs",
+      "lineRange": [
+        29,
+        34
+      ],
+      "summary": "Hàm List trong AdminApprovalsController.cs.",
+      "tags": [
+        "rmms.api",
+        "controllers",
+        "code",
+        "cs",
+        "ham"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Rmms.Api/Controllers/AdminApprovalsController.cs:Override",
+      "type": "function",
+      "name": "Override",
+      "filePath": "Rmms.Api/Controllers/AdminApprovalsController.cs",
+      "lineRange": [
+        36,
+        42
+      ],
+      "summary": "Hàm Override trong AdminApprovalsController.cs.",
+      "tags": [
+        "rmms.api",
+        "controllers",
+        "code",
+        "cs",
+        "ham"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:Rmms.Api/Controllers/AdminApprovalsController.cs:AdminApprovalsController",
+      "type": "class",
+      "name": "AdminApprovalsController",
+      "filePath": "Rmms.Api/Controllers/AdminApprovalsController.cs",
+      "lineRange": [
+        14,
+        43
+      ],
+      "summary": "Class AdminApprovalsController trong AdminApprovalsController.cs.",
+      "tags": [
+        "rmms.api",
+        "controllers",
+        "code",
+        "cs",
+        "class"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:Rmms.Api/Controllers/AdminAttendanceController.cs",
+      "type": "file",
+      "name": "AdminAttendanceController.cs",
+      "filePath": "Rmms.Api/Controllers/AdminAttendanceController.cs",
+      "summary": "AdminAttendanceController.cs — tệp mã nguồn C# trong backend RMMS (3 hàm, 1 class).",
+      "tags": [
+        "rmms.api",
+        "controllers",
+        "code",
+        "cs"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Rmms.Api/Controllers/AdminAttendanceController.cs:AdminAttendanceController",
+      "type": "function",
+      "name": "AdminAttendanceController",
+      "filePath": "Rmms.Api/Controllers/AdminAttendanceController.cs",
+      "lineRange": [
+        24,
+        28
+      ],
+      "summary": "Hàm AdminAttendanceController trong AdminAttendanceController.cs.",
+      "tags": [
+        "rmms.api",
+        "controllers",
+        "code",
+        "cs",
+        "ham"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Rmms.Api/Controllers/AdminAttendanceController.cs:List",
+      "type": "function",
+      "name": "List",
+      "filePath": "Rmms.Api/Controllers/AdminAttendanceController.cs",
+      "lineRange": [
+        31,
+        40
+      ],
+      "summary": "Hàm List trong AdminAttendanceController.cs.",
+      "tags": [
+        "rmms.api",
+        "controllers",
+        "code",
+        "cs",
+        "ham"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Rmms.Api/Controllers/AdminAttendanceController.cs:Review",
+      "type": "function",
+      "name": "Review",
+      "filePath": "Rmms.Api/Controllers/AdminAttendanceController.cs",
+      "lineRange": [
+        43,
+        49
+      ],
+      "summary": "Hàm Review trong AdminAttendanceController.cs.",
+      "tags": [
+        "rmms.api",
+        "controllers",
+        "code",
+        "cs",
+        "ham"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:Rmms.Api/Controllers/AdminAttendanceController.cs:AdminAttendanceController",
+      "type": "class",
+      "name": "AdminAttendanceController",
+      "filePath": "Rmms.Api/Controllers/AdminAttendanceController.cs",
+      "lineRange": [
+        16,
+        50
+      ],
+      "summary": "Class AdminAttendanceController trong AdminAttendanceController.cs.",
+      "tags": [
+        "rmms.api",
+        "controllers",
+        "code",
+        "cs",
+        "class"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:Rmms.Api/Controllers/AdminAuditController.cs",
+      "type": "file",
+      "name": "AdminAuditController.cs",
+      "filePath": "Rmms.Api/Controllers/AdminAuditController.cs",
+      "summary": "AdminAuditController.cs — tệp mã nguồn C# trong backend RMMS (2 hàm, 1 class).",
+      "tags": [
+        "rmms.api",
+        "controllers",
+        "code",
+        "cs"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Rmms.Api/Controllers/AdminAuditController.cs:AdminAuditController",
+      "type": "function",
+      "name": "AdminAuditController",
+      "filePath": "Rmms.Api/Controllers/AdminAuditController.cs",
+      "lineRange": [
+        19,
+        19
+      ],
+      "summary": "Hàm AdminAuditController trong AdminAuditController.cs.",
+      "tags": [
+        "rmms.api",
+        "controllers",
+        "code",
+        "cs",
+        "ham"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Rmms.Api/Controllers/AdminAuditController.cs:List",
+      "type": "function",
+      "name": "List",
+      "filePath": "Rmms.Api/Controllers/AdminAuditController.cs",
+      "lineRange": [
+        21,
+        35
+      ],
+      "summary": "Hàm List trong AdminAuditController.cs.",
+      "tags": [
+        "rmms.api",
+        "controllers",
+        "code",
+        "cs",
+        "ham"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:Rmms.Api/Controllers/AdminAuditController.cs:AdminAuditController",
+      "type": "class",
+      "name": "AdminAuditController",
+      "filePath": "Rmms.Api/Controllers/AdminAuditController.cs",
+      "lineRange": [
+        12,
+        36
+      ],
+      "summary": "Class AdminAuditController trong AdminAuditController.cs.",
+      "tags": [
+        "rmms.api",
+        "controllers",
+        "code",
+        "cs",
+        "class"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:Rmms.Api/Controllers/AdminDocumentsController.cs",
+      "type": "file",
+      "name": "AdminDocumentsController.cs",
+      "filePath": "Rmms.Api/Controllers/AdminDocumentsController.cs",
+      "summary": "AdminDocumentsController.cs — tệp mã nguồn C# trong backend RMMS (5 hàm, 1 class).",
+      "tags": [
+        "rmms.api",
+        "controllers",
+        "code",
+        "cs"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:Rmms.Api/Controllers/AdminDocumentsController.cs:AdminDocumentsController",
+      "type": "function",
+      "name": "AdminDocumentsController",
+      "filePath": "Rmms.Api/Controllers/AdminDocumentsController.cs",
+      "lineRange": [
+        26,
+        30
+      ],
+      "summary": "Hàm AdminDocumentsController trong AdminDocumentsController.cs.",
+      "tags": [
+        "rmms.api",
+        "controllers",
+        "code",
+        "cs",
+        "ham"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Rmms.Api/Controllers/AdminDocumentsController.cs:List",
+      "type": "function",
+      "name": "List",
+      "filePath": "Rmms.Api/Controllers/AdminDocumentsController.cs",
+      "lineRange": [
+        32,
+        37
+      ],
+      "summary": "Hàm List trong AdminDocumentsController.cs.",
+      "tags": [
+        "rmms.api",
+        "controllers",
+        "code",
+        "cs",
+        "ham"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Rmms.Api/Controllers/AdminDocumentsController.cs:Upload",
+      "type": "function",
+      "name": "Upload",
+      "filePath": "Rmms.Api/Controllers/AdminDocumentsController.cs",
+      "lineRange": [
+        39,
+        62
+      ],
+      "summary": "Hàm Upload trong AdminDocumentsController.cs.",
+      "tags": [
+        "rmms.api",
+        "controllers",
+        "code",
+        "cs",
+        "ham"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Rmms.Api/Controllers/AdminDocumentsController.cs:Assign",
+      "type": "function",
+      "name": "Assign",
+      "filePath": "Rmms.Api/Controllers/AdminDocumentsController.cs",
+      "lineRange": [
+        64,
+        69
+      ],
+      "summary": "Hàm Assign trong AdminDocumentsController.cs.",
+      "tags": [
+        "rmms.api",
+        "controllers",
+        "code",
+        "cs",
+        "ham"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Rmms.Api/Controllers/AdminDocumentsController.cs:Delete",
+      "type": "function",
+      "name": "Delete",
+      "filePath": "Rmms.Api/Controllers/AdminDocumentsController.cs",
+      "lineRange": [
+        71,
+        76
+      ],
+      "summary": "Hàm Delete trong AdminDocumentsController.cs.",
+      "tags": [
+        "rmms.api",
+        "controllers",
+        "code",
+        "cs",
+        "ham"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:Rmms.Api/Controllers/AdminDocumentsController.cs:AdminDocumentsController",
+      "type": "class",
+      "name": "AdminDocumentsController",
+      "filePath": "Rmms.Api/Controllers/AdminDocumentsController.cs",
+      "lineRange": [
+        18,
+        77
+      ],
+      "summary": "Class AdminDocumentsController trong AdminDocumentsController.cs.",
+      "tags": [
+        "rmms.api",
+        "controllers",
+        "code",
+        "cs",
+        "class"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:Rmms.Api/Controllers/AdminFaceController.cs",
+      "type": "file",
+      "name": "AdminFaceController.cs",
+      "filePath": "Rmms.Api/Controllers/AdminFaceController.cs",
+      "summary": "AdminFaceController.cs — tệp mã nguồn C# trong backend RMMS (4 hàm, 1 class).",
+      "tags": [
+        "rmms.api",
+        "controllers",
+        "code",
+        "cs"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Rmms.Api/Controllers/AdminFaceController.cs:AdminFaceController",
+      "type": "function",
+      "name": "AdminFaceController",
+      "filePath": "Rmms.Api/Controllers/AdminFaceController.cs",
+      "lineRange": [
+        26,
+        30
+      ],
+      "summary": "Hàm AdminFaceController trong AdminFaceController.cs.",
+      "tags": [
+        "rmms.api",
+        "controllers",
+        "code",
+        "cs",
+        "ham"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Rmms.Api/Controllers/AdminFaceController.cs:Enroll",
+      "type": "function",
+      "name": "Enroll",
+      "filePath": "Rmms.Api/Controllers/AdminFaceController.cs",
+      "lineRange": [
+        33,
+        48
+      ],
+      "summary": "Hàm Enroll trong AdminFaceController.cs.",
+      "tags": [
+        "rmms.api",
+        "controllers",
+        "code",
+        "cs",
+        "ham"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Rmms.Api/Controllers/AdminFaceController.cs:ReEnroll",
+      "type": "function",
+      "name": "ReEnroll",
+      "filePath": "Rmms.Api/Controllers/AdminFaceController.cs",
+      "lineRange": [
+        51,
+        57
+      ],
+      "summary": "Hàm ReEnroll trong AdminFaceController.cs.",
+      "tags": [
+        "rmms.api",
+        "controllers",
+        "code",
+        "cs",
+        "ham"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Rmms.Api/Controllers/AdminFaceController.cs:Delete",
+      "type": "function",
+      "name": "Delete",
+      "filePath": "Rmms.Api/Controllers/AdminFaceController.cs",
+      "lineRange": [
+        60,
+        66
+      ],
+      "summary": "Hàm Delete trong AdminFaceController.cs.",
+      "tags": [
+        "rmms.api",
+        "controllers",
+        "code",
+        "cs",
+        "ham"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:Rmms.Api/Controllers/AdminFaceController.cs:AdminFaceController",
+      "type": "class",
+      "name": "AdminFaceController",
+      "filePath": "Rmms.Api/Controllers/AdminFaceController.cs",
+      "lineRange": [
+        18,
+        67
+      ],
+      "summary": "Class AdminFaceController trong AdminFaceController.cs.",
+      "tags": [
+        "rmms.api",
+        "controllers",
+        "code",
+        "cs",
+        "class"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:Rmms.Api/Controllers/AdminFormsController.cs",
+      "type": "file",
+      "name": "AdminFormsController.cs",
+      "filePath": "Rmms.Api/Controllers/AdminFormsController.cs",
+      "summary": "AdminFormsController.cs — tệp mã nguồn C# trong backend RMMS (8 hàm, 1 class).",
+      "tags": [
+        "rmms.api",
+        "controllers",
+        "code",
+        "cs"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:Rmms.Api/Controllers/AdminFormsController.cs:AdminFormsController",
+      "type": "function",
+      "name": "AdminFormsController",
+      "filePath": "Rmms.Api/Controllers/AdminFormsController.cs",
+      "lineRange": [
+        22,
+        22
+      ],
+      "summary": "Hàm AdminFormsController trong AdminFormsController.cs.",
+      "tags": [
+        "rmms.api",
+        "controllers",
+        "code",
+        "cs",
+        "ham"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Rmms.Api/Controllers/AdminFormsController.cs:List",
+      "type": "function",
+      "name": "List",
+      "filePath": "Rmms.Api/Controllers/AdminFormsController.cs",
+      "lineRange": [
+        24,
+        29
+      ],
+      "summary": "Hàm List trong AdminFormsController.cs.",
+      "tags": [
+        "rmms.api",
+        "controllers",
+        "code",
+        "cs",
+        "ham"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Rmms.Api/Controllers/AdminFormsController.cs:Get",
+      "type": "function",
+      "name": "Get",
+      "filePath": "Rmms.Api/Controllers/AdminFormsController.cs",
+      "lineRange": [
+        31,
+        36
+      ],
+      "summary": "Hàm Get trong AdminFormsController.cs.",
+      "tags": [
+        "rmms.api",
+        "controllers",
+        "code",
+        "cs",
+        "ham"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Rmms.Api/Controllers/AdminFormsController.cs:Versions",
+      "type": "function",
+      "name": "Versions",
+      "filePath": "Rmms.Api/Controllers/AdminFormsController.cs",
+      "lineRange": [
+        38,
+        43
+      ],
+      "summary": "Hàm Versions trong AdminFormsController.cs.",
+      "tags": [
+        "rmms.api",
+        "controllers",
+        "code",
+        "cs",
+        "ham"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Rmms.Api/Controllers/AdminFormsController.cs:Create",
+      "type": "function",
+      "name": "Create",
+      "filePath": "Rmms.Api/Controllers/AdminFormsController.cs",
+      "lineRange": [
+        45,
+        52
+      ],
+      "summary": "Hàm Create trong AdminFormsController.cs.",
+      "tags": [
+        "rmms.api",
+        "controllers",
+        "code",
+        "cs",
+        "ham"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Rmms.Api/Controllers/AdminFormsController.cs:Update",
+      "type": "function",
+      "name": "Update",
+      "filePath": "Rmms.Api/Controllers/AdminFormsController.cs",
+      "lineRange": [
+        54,
+        60
+      ],
+      "summary": "Hàm Update trong AdminFormsController.cs.",
+      "tags": [
+        "rmms.api",
+        "controllers",
+        "code",
+        "cs",
+        "ham"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Rmms.Api/Controllers/AdminFormsController.cs:Publish",
+      "type": "function",
+      "name": "Publish",
+      "filePath": "Rmms.Api/Controllers/AdminFormsController.cs",
+      "lineRange": [
+        62,
+        67
+      ],
+      "summary": "Hàm Publish trong AdminFormsController.cs.",
+      "tags": [
+        "rmms.api",
+        "controllers",
+        "code",
+        "cs",
+        "ham"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Rmms.Api/Controllers/AdminFormsController.cs:Assign",
+      "type": "function",
+      "name": "Assign",
+      "filePath": "Rmms.Api/Controllers/AdminFormsController.cs",
+      "lineRange": [
+        69,
+        76
+      ],
+      "summary": "Hàm Assign trong AdminFormsController.cs.",
+      "tags": [
+        "rmms.api",
+        "controllers",
+        "code",
+        "cs",
+        "ham"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:Rmms.Api/Controllers/AdminFormsController.cs:AdminFormsController",
+      "type": "class",
+      "name": "AdminFormsController",
+      "filePath": "Rmms.Api/Controllers/AdminFormsController.cs",
+      "lineRange": [
+        15,
+        77
+      ],
+      "summary": "Class AdminFormsController trong AdminFormsController.cs.",
+      "tags": [
+        "rmms.api",
+        "controllers",
+        "code",
+        "cs",
+        "class"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:Rmms.Api/Controllers/AdminNewsController.cs",
+      "type": "file",
+      "name": "AdminNewsController.cs",
+      "filePath": "Rmms.Api/Controllers/AdminNewsController.cs",
+      "summary": "AdminNewsController.cs — tệp mã nguồn C# trong backend RMMS (7 hàm, 1 class).",
+      "tags": [
+        "rmms.api",
+        "controllers",
+        "code",
+        "cs"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:Rmms.Api/Controllers/AdminNewsController.cs:AdminNewsController",
+      "type": "function",
+      "name": "AdminNewsController",
+      "filePath": "Rmms.Api/Controllers/AdminNewsController.cs",
+      "lineRange": [
+        24,
+        28
+      ],
+      "summary": "Hàm AdminNewsController trong AdminNewsController.cs.",
+      "tags": [
+        "rmms.api",
+        "controllers",
+        "code",
+        "cs",
+        "ham"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Rmms.Api/Controllers/AdminNewsController.cs:List",
+      "type": "function",
+      "name": "List",
+      "filePath": "Rmms.Api/Controllers/AdminNewsController.cs",
+      "lineRange": [
+        30,
+        35
+      ],
+      "summary": "Hàm List trong AdminNewsController.cs.",
+      "tags": [
+        "rmms.api",
+        "controllers",
+        "code",
+        "cs",
+        "ham"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Rmms.Api/Controllers/AdminNewsController.cs:Create",
+      "type": "function",
+      "name": "Create",
+      "filePath": "Rmms.Api/Controllers/AdminNewsController.cs",
+      "lineRange": [
+        37,
+        43
+      ],
+      "summary": "Hàm Create trong AdminNewsController.cs.",
+      "tags": [
+        "rmms.api",
+        "controllers",
+        "code",
+        "cs",
+        "ham"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Rmms.Api/Controllers/AdminNewsController.cs:Update",
+      "type": "function",
+      "name": "Update",
+      "filePath": "Rmms.Api/Controllers/AdminNewsController.cs",
+      "lineRange": [
+        45,
+        51
+      ],
+      "summary": "Hàm Update trong AdminNewsController.cs.",
+      "tags": [
+        "rmms.api",
+        "controllers",
+        "code",
+        "cs",
+        "ham"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Rmms.Api/Controllers/AdminNewsController.cs:Assign",
+      "type": "function",
+      "name": "Assign",
+      "filePath": "Rmms.Api/Controllers/AdminNewsController.cs",
+      "lineRange": [
+        53,
+        58
+      ],
+      "summary": "Hàm Assign trong AdminNewsController.cs.",
+      "tags": [
+        "rmms.api",
+        "controllers",
+        "code",
+        "cs",
+        "ham"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Rmms.Api/Controllers/AdminNewsController.cs:Publish",
+      "type": "function",
+      "name": "Publish",
+      "filePath": "Rmms.Api/Controllers/AdminNewsController.cs",
+      "lineRange": [
+        60,
+        66
+      ],
+      "summary": "Hàm Publish trong AdminNewsController.cs.",
+      "tags": [
+        "rmms.api",
+        "controllers",
+        "code",
+        "cs",
+        "ham"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Rmms.Api/Controllers/AdminNewsController.cs:Delete",
+      "type": "function",
+      "name": "Delete",
+      "filePath": "Rmms.Api/Controllers/AdminNewsController.cs",
+      "lineRange": [
+        68,
+        73
+      ],
+      "summary": "Hàm Delete trong AdminNewsController.cs.",
+      "tags": [
+        "rmms.api",
+        "controllers",
+        "code",
+        "cs",
+        "ham"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:Rmms.Api/Controllers/AdminNewsController.cs:AdminNewsController",
+      "type": "class",
+      "name": "AdminNewsController",
+      "filePath": "Rmms.Api/Controllers/AdminNewsController.cs",
+      "lineRange": [
+        16,
+        74
+      ],
+      "summary": "Class AdminNewsController trong AdminNewsController.cs.",
+      "tags": [
+        "rmms.api",
+        "controllers",
+        "code",
+        "cs",
+        "class"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:Rmms.Api/Controllers/AdminProductsController.cs",
+      "type": "file",
+      "name": "AdminProductsController.cs",
+      "filePath": "Rmms.Api/Controllers/AdminProductsController.cs",
+      "summary": "AdminProductsController.cs — tệp mã nguồn C# trong backend RMMS (6 hàm, 1 class).",
+      "tags": [
+        "rmms.api",
+        "controllers",
+        "code",
+        "cs"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:Rmms.Api/Controllers/AdminProductsController.cs:AdminProductsController",
+      "type": "function",
+      "name": "AdminProductsController",
+      "filePath": "Rmms.Api/Controllers/AdminProductsController.cs",
+      "lineRange": [
+        19,
+        19
+      ],
+      "summary": "Hàm AdminProductsController trong AdminProductsController.cs.",
+      "tags": [
+        "rmms.api",
+        "controllers",
+        "code",
+        "cs",
+        "ham"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Rmms.Api/Controllers/AdminProductsController.cs:List",
+      "type": "function",
+      "name": "List",
+      "filePath": "Rmms.Api/Controllers/AdminProductsController.cs",
+      "lineRange": [
+        21,
+        31
+      ],
+      "summary": "Hàm List trong AdminProductsController.cs.",
+      "tags": [
+        "rmms.api",
+        "controllers",
+        "code",
+        "cs",
+        "ham"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Rmms.Api/Controllers/AdminProductsController.cs:Create",
+      "type": "function",
+      "name": "Create",
+      "filePath": "Rmms.Api/Controllers/AdminProductsController.cs",
+      "lineRange": [
+        33,
+        39
+      ],
+      "summary": "Hàm Create trong AdminProductsController.cs.",
+      "tags": [
+        "rmms.api",
+        "controllers",
+        "code",
+        "cs",
+        "ham"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Rmms.Api/Controllers/AdminProductsController.cs:Update",
+      "type": "function",
+      "name": "Update",
+      "filePath": "Rmms.Api/Controllers/AdminProductsController.cs",
+      "lineRange": [
+        41,
+        47
+      ],
+      "summary": "Hàm Update trong AdminProductsController.cs.",
+      "tags": [
+        "rmms.api",
+        "controllers",
+        "code",
+        "cs",
+        "ham"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Rmms.Api/Controllers/AdminProductsController.cs:ChangeStatus",
+      "type": "function",
+      "name": "ChangeStatus",
+      "filePath": "Rmms.Api/Controllers/AdminProductsController.cs",
+      "lineRange": [
+        49,
+        54
+      ],
+      "summary": "Hàm ChangeStatus trong AdminProductsController.cs.",
+      "tags": [
+        "rmms.api",
+        "controllers",
+        "code",
+        "cs",
+        "ham"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Rmms.Api/Controllers/AdminProductsController.cs:Delete",
+      "type": "function",
+      "name": "Delete",
+      "filePath": "Rmms.Api/Controllers/AdminProductsController.cs",
+      "lineRange": [
+        56,
+        61
+      ],
+      "summary": "Hàm Delete trong AdminProductsController.cs.",
+      "tags": [
+        "rmms.api",
+        "controllers",
+        "code",
+        "cs",
+        "ham"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:Rmms.Api/Controllers/AdminProductsController.cs:AdminProductsController",
+      "type": "class",
+      "name": "AdminProductsController",
+      "filePath": "Rmms.Api/Controllers/AdminProductsController.cs",
+      "lineRange": [
+        12,
+        62
+      ],
+      "summary": "Class AdminProductsController trong AdminProductsController.cs.",
+      "tags": [
+        "rmms.api",
+        "controllers",
+        "code",
+        "cs",
+        "class"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:Rmms.Api/Controllers/AdminRequestsController.cs",
+      "type": "file",
+      "name": "AdminRequestsController.cs",
+      "filePath": "Rmms.Api/Controllers/AdminRequestsController.cs",
+      "summary": "AdminRequestsController.cs — tệp mã nguồn C# trong backend RMMS (5 hàm, 1 class).",
+      "tags": [
+        "rmms.api",
+        "controllers",
+        "code",
+        "cs"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:Rmms.Api/Controllers/AdminRequestsController.cs:AdminRequestsController",
+      "type": "function",
+      "name": "AdminRequestsController",
+      "filePath": "Rmms.Api/Controllers/AdminRequestsController.cs",
+      "lineRange": [
+        20,
+        20
+      ],
+      "summary": "Hàm AdminRequestsController trong AdminRequestsController.cs.",
+      "tags": [
+        "rmms.api",
+        "controllers",
+        "code",
+        "cs",
+        "ham"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Rmms.Api/Controllers/AdminRequestsController.cs:Leave",
+      "type": "function",
+      "name": "Leave",
+      "filePath": "Rmms.Api/Controllers/AdminRequestsController.cs",
+      "lineRange": [
+        22,
+        27
+      ],
+      "summary": "Hàm Leave trong AdminRequestsController.cs.",
+      "tags": [
+        "rmms.api",
+        "controllers",
+        "code",
+        "cs",
+        "ham"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Rmms.Api/Controllers/AdminRequestsController.cs:Ot",
+      "type": "function",
+      "name": "Ot",
+      "filePath": "Rmms.Api/Controllers/AdminRequestsController.cs",
+      "lineRange": [
+        29,
+        34
+      ],
+      "summary": "Hàm Ot trong AdminRequestsController.cs.",
+      "tags": [
+        "rmms.api",
+        "controllers",
+        "code",
+        "cs",
+        "ham"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Rmms.Api/Controllers/AdminRequestsController.cs:ExportLeave",
+      "type": "function",
+      "name": "ExportLeave",
+      "filePath": "Rmms.Api/Controllers/AdminRequestsController.cs",
+      "lineRange": [
+        36,
+        42
+      ],
+      "summary": "Hàm ExportLeave trong AdminRequestsController.cs.",
+      "tags": [
+        "rmms.api",
+        "controllers",
+        "code",
+        "cs",
+        "ham"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Rmms.Api/Controllers/AdminRequestsController.cs:ExportOt",
+      "type": "function",
+      "name": "ExportOt",
+      "filePath": "Rmms.Api/Controllers/AdminRequestsController.cs",
+      "lineRange": [
+        44,
+        50
+      ],
+      "summary": "Hàm ExportOt trong AdminRequestsController.cs.",
+      "tags": [
+        "rmms.api",
+        "controllers",
+        "code",
+        "cs",
+        "ham"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:Rmms.Api/Controllers/AdminRequestsController.cs:AdminRequestsController",
+      "type": "class",
+      "name": "AdminRequestsController",
+      "filePath": "Rmms.Api/Controllers/AdminRequestsController.cs",
+      "lineRange": [
+        13,
+        51
+      ],
+      "summary": "Class AdminRequestsController trong AdminRequestsController.cs.",
+      "tags": [
+        "rmms.api",
+        "controllers",
+        "code",
+        "cs",
+        "class"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:Rmms.Api/Controllers/AdminUsersController.cs",
+      "type": "file",
+      "name": "AdminUsersController.cs",
+      "filePath": "Rmms.Api/Controllers/AdminUsersController.cs",
+      "summary": "AdminUsersController.cs — tệp mã nguồn C# trong backend RMMS (5 hàm, 1 class).",
+      "tags": [
+        "rmms.api",
+        "controllers",
+        "code",
+        "cs"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:Rmms.Api/Controllers/AdminUsersController.cs:AdminUsersController",
+      "type": "function",
+      "name": "AdminUsersController",
+      "filePath": "Rmms.Api/Controllers/AdminUsersController.cs",
+      "lineRange": [
+        28,
+        28
+      ],
+      "summary": "Hàm AdminUsersController trong AdminUsersController.cs.",
+      "tags": [
+        "rmms.api",
+        "controllers",
+        "code",
+        "cs",
+        "ham"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Rmms.Api/Controllers/AdminUsersController.cs:List",
+      "type": "function",
+      "name": "List",
+      "filePath": "Rmms.Api/Controllers/AdminUsersController.cs",
+      "lineRange": [
+        31,
+        47
+      ],
+      "summary": "Hàm List trong AdminUsersController.cs.",
+      "tags": [
+        "rmms.api",
+        "controllers",
+        "code",
+        "cs",
+        "ham"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Rmms.Api/Controllers/AdminUsersController.cs:Create",
+      "type": "function",
+      "name": "Create",
+      "filePath": "Rmms.Api/Controllers/AdminUsersController.cs",
+      "lineRange": [
+        50,
+        67
+      ],
+      "summary": "Hàm Create trong AdminUsersController.cs.",
+      "tags": [
+        "rmms.api",
+        "controllers",
+        "code",
+        "cs",
+        "ham"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Rmms.Api/Controllers/AdminUsersController.cs:Update",
+      "type": "function",
+      "name": "Update",
+      "filePath": "Rmms.Api/Controllers/AdminUsersController.cs",
+      "lineRange": [
+        70,
+        87
+      ],
+      "summary": "Hàm Update trong AdminUsersController.cs.",
+      "tags": [
+        "rmms.api",
+        "controllers",
+        "code",
+        "cs",
+        "ham"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Rmms.Api/Controllers/AdminUsersController.cs:ResetPassword",
+      "type": "function",
+      "name": "ResetPassword",
+      "filePath": "Rmms.Api/Controllers/AdminUsersController.cs",
+      "lineRange": [
+        90,
+        99
+      ],
+      "summary": "Hàm ResetPassword trong AdminUsersController.cs.",
+      "tags": [
+        "rmms.api",
+        "controllers",
+        "code",
+        "cs",
+        "ham"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:Rmms.Api/Controllers/AdminUsersController.cs:AdminUsersController",
+      "type": "class",
+      "name": "AdminUsersController",
+      "filePath": "Rmms.Api/Controllers/AdminUsersController.cs",
+      "lineRange": [
+        21,
+        100
+      ],
+      "summary": "Class AdminUsersController trong AdminUsersController.cs.",
+      "tags": [
+        "rmms.api",
+        "controllers",
+        "code",
+        "cs",
+        "class"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:Rmms.Api/Controllers/AdminVisitPlansController.cs",
+      "type": "file",
+      "name": "AdminVisitPlansController.cs",
+      "filePath": "Rmms.Api/Controllers/AdminVisitPlansController.cs",
+      "summary": "AdminVisitPlansController.cs — tệp mã nguồn C# trong backend RMMS (2 hàm, 1 class).",
+      "tags": [
+        "rmms.api",
+        "controllers",
+        "code",
+        "cs"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Rmms.Api/Controllers/AdminVisitPlansController.cs:AdminVisitPlansController",
+      "type": "function",
+      "name": "AdminVisitPlansController",
+      "filePath": "Rmms.Api/Controllers/AdminVisitPlansController.cs",
+      "lineRange": [
+        21,
+        21
+      ],
+      "summary": "Hàm AdminVisitPlansController trong AdminVisitPlansController.cs.",
+      "tags": [
+        "rmms.api",
+        "controllers",
+        "code",
+        "cs",
+        "ham"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Rmms.Api/Controllers/AdminVisitPlansController.cs:List",
+      "type": "function",
+      "name": "List",
+      "filePath": "Rmms.Api/Controllers/AdminVisitPlansController.cs",
+      "lineRange": [
+        23,
+        28
+      ],
+      "summary": "Hàm List trong AdminVisitPlansController.cs.",
+      "tags": [
+        "rmms.api",
+        "controllers",
+        "code",
+        "cs",
+        "ham"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:Rmms.Api/Controllers/AdminVisitPlansController.cs:AdminVisitPlansController",
+      "type": "class",
+      "name": "AdminVisitPlansController",
+      "filePath": "Rmms.Api/Controllers/AdminVisitPlansController.cs",
+      "lineRange": [
+        14,
+        29
+      ],
+      "summary": "Class AdminVisitPlansController trong AdminVisitPlansController.cs.",
+      "tags": [
+        "rmms.api",
+        "controllers",
+        "code",
+        "cs",
+        "class"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:Rmms.Api/Controllers/ApprovalsController.cs",
+      "type": "file",
+      "name": "ApprovalsController.cs",
+      "filePath": "Rmms.Api/Controllers/ApprovalsController.cs",
+      "summary": "ApprovalsController.cs — tệp mã nguồn C# trong backend RMMS (7 hàm, 1 class).",
+      "tags": [
+        "rmms.api",
+        "controllers",
+        "code",
+        "cs"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:Rmms.Api/Controllers/ApprovalsController.cs:ApprovalsController",
+      "type": "function",
+      "name": "ApprovalsController",
+      "filePath": "Rmms.Api/Controllers/ApprovalsController.cs",
+      "lineRange": [
+        26,
+        30
+      ],
+      "summary": "Hàm ApprovalsController trong ApprovalsController.cs.",
+      "tags": [
+        "rmms.api",
+        "controllers",
+        "code",
+        "cs",
+        "ham"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Rmms.Api/Controllers/ApprovalsController.cs:Pending",
+      "type": "function",
+      "name": "Pending",
+      "filePath": "Rmms.Api/Controllers/ApprovalsController.cs",
+      "lineRange": [
+        33,
+        40
+      ],
+      "summary": "Hàm Pending trong ApprovalsController.cs.",
+      "tags": [
+        "rmms.api",
+        "controllers",
+        "code",
+        "cs",
+        "ham"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Rmms.Api/Controllers/ApprovalsController.cs:Detail",
+      "type": "function",
+      "name": "Detail",
+      "filePath": "Rmms.Api/Controllers/ApprovalsController.cs",
+      "lineRange": [
+        43,
+        50
+      ],
+      "summary": "Hàm Detail trong ApprovalsController.cs.",
+      "tags": [
+        "rmms.api",
+        "controllers",
+        "code",
+        "cs",
+        "ham"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Rmms.Api/Controllers/ApprovalsController.cs:Approve",
+      "type": "function",
+      "name": "Approve",
+      "filePath": "Rmms.Api/Controllers/ApprovalsController.cs",
+      "lineRange": [
+        53,
+        60
+      ],
+      "summary": "Hàm Approve trong ApprovalsController.cs.",
+      "tags": [
+        "rmms.api",
+        "controllers",
+        "code",
+        "cs",
+        "ham"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Rmms.Api/Controllers/ApprovalsController.cs:Reject",
+      "type": "function",
+      "name": "Reject",
+      "filePath": "Rmms.Api/Controllers/ApprovalsController.cs",
+      "lineRange": [
+        63,
+        70
+      ],
+      "summary": "Hàm Reject trong ApprovalsController.cs.",
+      "tags": [
+        "rmms.api",
+        "controllers",
+        "code",
+        "cs",
+        "ham"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Rmms.Api/Controllers/ApprovalsController.cs:EmailActionPreview",
+      "type": "function",
+      "name": "EmailActionPreview",
+      "filePath": "Rmms.Api/Controllers/ApprovalsController.cs",
+      "lineRange": [
+        73,
+        79
+      ],
+      "summary": "Hàm EmailActionPreview trong ApprovalsController.cs.",
+      "tags": [
+        "rmms.api",
+        "controllers",
+        "code",
+        "cs",
+        "ham"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Rmms.Api/Controllers/ApprovalsController.cs:EmailActionConfirm",
+      "type": "function",
+      "name": "EmailActionConfirm",
+      "filePath": "Rmms.Api/Controllers/ApprovalsController.cs",
+      "lineRange": [
+        82,
+        91
+      ],
+      "summary": "Hàm EmailActionConfirm trong ApprovalsController.cs.",
+      "tags": [
+        "rmms.api",
+        "controllers",
+        "code",
+        "cs",
+        "ham"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:Rmms.Api/Controllers/ApprovalsController.cs:ApprovalsController",
+      "type": "class",
+      "name": "ApprovalsController",
+      "filePath": "Rmms.Api/Controllers/ApprovalsController.cs",
+      "lineRange": [
+        19,
+        92
+      ],
+      "summary": "Class ApprovalsController trong ApprovalsController.cs.",
+      "tags": [
+        "rmms.api",
+        "controllers",
+        "code",
+        "cs",
+        "class"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:Rmms.Api/Controllers/AreasController.cs",
+      "type": "file",
+      "name": "AreasController.cs",
+      "filePath": "Rmms.Api/Controllers/AreasController.cs",
+      "summary": "AreasController.cs — tệp mã nguồn C# trong backend RMMS (5 hàm, 1 class).",
+      "tags": [
+        "rmms.api",
+        "controllers",
+        "code",
+        "cs"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:Rmms.Api/Controllers/AreasController.cs:AreasController",
+      "type": "function",
+      "name": "AreasController",
+      "filePath": "Rmms.Api/Controllers/AreasController.cs",
+      "lineRange": [
+        19,
+        19
+      ],
+      "summary": "Hàm AreasController trong AreasController.cs.",
+      "tags": [
+        "rmms.api",
+        "controllers",
+        "code",
+        "cs",
+        "ham"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Rmms.Api/Controllers/AreasController.cs:List",
+      "type": "function",
+      "name": "List",
+      "filePath": "Rmms.Api/Controllers/AreasController.cs",
+      "lineRange": [
+        21,
+        26
+      ],
+      "summary": "Hàm List trong AreasController.cs.",
+      "tags": [
+        "rmms.api",
+        "controllers",
+        "code",
+        "cs",
+        "ham"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Rmms.Api/Controllers/AreasController.cs:Create",
+      "type": "function",
+      "name": "Create",
+      "filePath": "Rmms.Api/Controllers/AreasController.cs",
+      "lineRange": [
+        28,
+        33
+      ],
+      "summary": "Hàm Create trong AreasController.cs.",
+      "tags": [
+        "rmms.api",
+        "controllers",
+        "code",
+        "cs",
+        "ham"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Rmms.Api/Controllers/AreasController.cs:Update",
+      "type": "function",
+      "name": "Update",
+      "filePath": "Rmms.Api/Controllers/AreasController.cs",
+      "lineRange": [
+        35,
+        40
+      ],
+      "summary": "Hàm Update trong AreasController.cs.",
+      "tags": [
+        "rmms.api",
+        "controllers",
+        "code",
+        "cs",
+        "ham"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Rmms.Api/Controllers/AreasController.cs:Delete",
+      "type": "function",
+      "name": "Delete",
+      "filePath": "Rmms.Api/Controllers/AreasController.cs",
+      "lineRange": [
+        42,
+        47
+      ],
+      "summary": "Hàm Delete trong AreasController.cs.",
+      "tags": [
+        "rmms.api",
+        "controllers",
+        "code",
+        "cs",
+        "ham"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:Rmms.Api/Controllers/AreasController.cs:AreasController",
+      "type": "class",
+      "name": "AreasController",
+      "filePath": "Rmms.Api/Controllers/AreasController.cs",
+      "lineRange": [
+        12,
+        48
+      ],
+      "summary": "Class AreasController trong AreasController.cs.",
+      "tags": [
+        "rmms.api",
+        "controllers",
+        "code",
+        "cs",
+        "class"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:Rmms.Api/Controllers/AssignmentsController.cs",
+      "type": "file",
+      "name": "AssignmentsController.cs",
+      "filePath": "Rmms.Api/Controllers/AssignmentsController.cs",
+      "summary": "AssignmentsController.cs — tệp mã nguồn C# trong backend RMMS (7 hàm, 1 class).",
+      "tags": [
+        "rmms.api",
+        "controllers",
+        "code",
+        "cs"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:Rmms.Api/Controllers/AssignmentsController.cs:AssignmentsController",
+      "type": "function",
+      "name": "AssignmentsController",
+      "filePath": "Rmms.Api/Controllers/AssignmentsController.cs",
+      "lineRange": [
+        22,
+        22
+      ],
+      "summary": "Hàm AssignmentsController trong AssignmentsController.cs.",
+      "tags": [
+        "rmms.api",
+        "controllers",
+        "code",
+        "cs",
+        "ham"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Rmms.Api/Controllers/AssignmentsController.cs:GetForUser",
+      "type": "function",
+      "name": "GetForUser",
+      "filePath": "Rmms.Api/Controllers/AssignmentsController.cs",
+      "lineRange": [
+        25,
+        30
+      ],
+      "summary": "Hàm GetForUser trong AssignmentsController.cs.",
+      "tags": [
+        "rmms.api",
+        "controllers",
+        "code",
+        "cs",
+        "ham"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Rmms.Api/Controllers/AssignmentsController.cs:AssignPgLeader",
+      "type": "function",
+      "name": "AssignPgLeader",
+      "filePath": "Rmms.Api/Controllers/AssignmentsController.cs",
+      "lineRange": [
+        32,
+        37
+      ],
+      "summary": "Hàm AssignPgLeader trong AssignmentsController.cs.",
+      "tags": [
+        "rmms.api",
+        "controllers",
+        "code",
+        "cs",
+        "ham"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Rmms.Api/Controllers/AssignmentsController.cs:AssignUserStore",
+      "type": "function",
+      "name": "AssignUserStore",
+      "filePath": "Rmms.Api/Controllers/AssignmentsController.cs",
+      "lineRange": [
+        39,
+        44
+      ],
+      "summary": "Hàm AssignUserStore trong AssignmentsController.cs.",
+      "tags": [
+        "rmms.api",
+        "controllers",
+        "code",
+        "cs",
+        "ham"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Rmms.Api/Controllers/AssignmentsController.cs:UnassignUserStore",
+      "type": "function",
+      "name": "UnassignUserStore",
+      "filePath": "Rmms.Api/Controllers/AssignmentsController.cs",
+      "lineRange": [
+        46,
+        51
+      ],
+      "summary": "Hàm UnassignUserStore trong AssignmentsController.cs.",
+      "tags": [
+        "rmms.api",
+        "controllers",
+        "code",
+        "cs",
+        "ham"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Rmms.Api/Controllers/AssignmentsController.cs:AssignUserCategory",
+      "type": "function",
+      "name": "AssignUserCategory",
+      "filePath": "Rmms.Api/Controllers/AssignmentsController.cs",
+      "lineRange": [
+        53,
+        58
+      ],
+      "summary": "Hàm AssignUserCategory trong AssignmentsController.cs.",
+      "tags": [
+        "rmms.api",
+        "controllers",
+        "code",
+        "cs",
+        "ham"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Rmms.Api/Controllers/AssignmentsController.cs:UnassignUserCategory",
+      "type": "function",
+      "name": "UnassignUserCategory",
+      "filePath": "Rmms.Api/Controllers/AssignmentsController.cs",
+      "lineRange": [
+        60,
+        65
+      ],
+      "summary": "Hàm UnassignUserCategory trong AssignmentsController.cs.",
+      "tags": [
+        "rmms.api",
+        "controllers",
+        "code",
+        "cs",
+        "ham"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:Rmms.Api/Controllers/AssignmentsController.cs:AssignmentsController",
+      "type": "class",
+      "name": "AssignmentsController",
+      "filePath": "Rmms.Api/Controllers/AssignmentsController.cs",
+      "lineRange": [
+        15,
+        66
+      ],
+      "summary": "Class AssignmentsController trong AssignmentsController.cs.",
+      "tags": [
+        "rmms.api",
+        "controllers",
+        "code",
+        "cs",
+        "class"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:Rmms.Api/Controllers/AttendanceController.cs",
+      "type": "file",
+      "name": "AttendanceController.cs",
+      "filePath": "Rmms.Api/Controllers/AttendanceController.cs",
+      "summary": "AttendanceController.cs — tệp mã nguồn C# trong backend RMMS (7 hàm, 1 class).",
+      "tags": [
+        "rmms.api",
+        "controllers",
+        "code",
+        "cs"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:Rmms.Api/Controllers/AttendanceController.cs:AttendanceController",
+      "type": "function",
+      "name": "AttendanceController",
+      "filePath": "Rmms.Api/Controllers/AttendanceController.cs",
+      "lineRange": [
+        29,
+        33
+      ],
+      "summary": "Hàm AttendanceController trong AttendanceController.cs.",
+      "tags": [
+        "rmms.api",
+        "controllers",
+        "code",
+        "cs",
+        "ham"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Rmms.Api/Controllers/AttendanceController.cs:Today",
+      "type": "function",
+      "name": "Today",
+      "filePath": "Rmms.Api/Controllers/AttendanceController.cs",
+      "lineRange": [
+        36,
+        42
+      ],
+      "summary": "Hàm Today trong AttendanceController.cs.",
+      "tags": [
+        "rmms.api",
+        "controllers",
+        "code",
+        "cs",
+        "ham"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Rmms.Api/Controllers/AttendanceController.cs:CheckInInfo",
+      "type": "function",
+      "name": "CheckInInfo",
+      "filePath": "Rmms.Api/Controllers/AttendanceController.cs",
+      "lineRange": [
+        45,
+        51
+      ],
+      "summary": "Hàm CheckInInfo trong AttendanceController.cs.",
+      "tags": [
+        "rmms.api",
+        "controllers",
+        "code",
+        "cs",
+        "ham"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Rmms.Api/Controllers/AttendanceController.cs:CheckIn",
+      "type": "function",
+      "name": "CheckIn",
+      "filePath": "Rmms.Api/Controllers/AttendanceController.cs",
+      "lineRange": [
+        54,
+        75
+      ],
+      "summary": "Hàm CheckIn trong AttendanceController.cs.",
+      "tags": [
+        "rmms.api",
+        "controllers",
+        "code",
+        "cs",
+        "ham"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Rmms.Api/Controllers/AttendanceController.cs:CheckOut",
+      "type": "function",
+      "name": "CheckOut",
+      "filePath": "Rmms.Api/Controllers/AttendanceController.cs",
+      "lineRange": [
+        78,
+        97
+      ],
+      "summary": "Hàm CheckOut trong AttendanceController.cs.",
+      "tags": [
+        "rmms.api",
+        "controllers",
+        "code",
+        "cs",
+        "ham"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Rmms.Api/Controllers/AttendanceController.cs:History",
+      "type": "function",
+      "name": "History",
+      "filePath": "Rmms.Api/Controllers/AttendanceController.cs",
+      "lineRange": [
+        100,
+        108
+      ],
+      "summary": "Hàm History trong AttendanceController.cs.",
+      "tags": [
+        "rmms.api",
+        "controllers",
+        "code",
+        "cs",
+        "ham"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Rmms.Api/Controllers/AttendanceController.cs:ToUploadAsync",
+      "type": "function",
+      "name": "ToUploadAsync",
+      "filePath": "Rmms.Api/Controllers/AttendanceController.cs",
+      "lineRange": [
+        110,
+        116
+      ],
+      "summary": "Hàm ToUploadAsync trong AttendanceController.cs.",
+      "tags": [
+        "rmms.api",
+        "controllers",
+        "code",
+        "cs",
+        "ham"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:Rmms.Api/Controllers/AttendanceController.cs:AttendanceController",
+      "type": "class",
+      "name": "AttendanceController",
+      "filePath": "Rmms.Api/Controllers/AttendanceController.cs",
+      "lineRange": [
+        21,
+        117
+      ],
+      "summary": "Class AttendanceController trong AttendanceController.cs.",
+      "tags": [
+        "rmms.api",
+        "controllers",
+        "code",
+        "cs",
+        "class"
+      ],
+      "complexity": "moderate"
+    }
+  ],
+  "edges": [
+    {
+      "source": "file:Rmms.Api/Authentication/AuthorizationPolicies.cs",
+      "target": "function:Rmms.Api/Authentication/AuthorizationPolicies.cs:AddRmmsAuthorization",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Api/Authentication/AuthorizationPolicies.cs",
+      "target": "class:Rmms.Api/Authentication/AuthorizationPolicies.cs:AuthorizationPolicies",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Api/Authentication/HttpContextClientContext.cs",
+      "target": "function:Rmms.Api/Authentication/HttpContextClientContext.cs:HttpContextClientContext",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Api/Authentication/HttpContextClientContext.cs",
+      "target": "class:Rmms.Api/Authentication/HttpContextClientContext.cs:HttpContextClientContext",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Api/Authentication/HttpContextCurrentUser.cs",
+      "target": "function:Rmms.Api/Authentication/HttpContextCurrentUser.cs:HttpContextCurrentUser",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Api/Authentication/HttpContextCurrentUser.cs",
+      "target": "class:Rmms.Api/Authentication/HttpContextCurrentUser.cs:HttpContextCurrentUser",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Api/Cli/ResetDataCommand.cs",
+      "target": "function:Rmms.Api/Cli/ResetDataCommand.cs:RunAsync",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Api/Cli/ResetDataCommand.cs",
+      "target": "class:Rmms.Api/Cli/ResetDataCommand.cs:ResetDataCommand",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Api/Cli/SeedAdminCommand.cs",
+      "target": "function:Rmms.Api/Cli/SeedAdminCommand.cs:RunAsync",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Api/Cli/SeedAdminCommand.cs",
+      "target": "function:Rmms.Api/Cli/SeedAdminCommand.cs:ParseArgs",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Api/Cli/SeedAdminCommand.cs",
+      "target": "function:Rmms.Api/Cli/SeedAdminCommand.cs:SplitFlag",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Api/Cli/SeedAdminCommand.cs",
+      "target": "function:Rmms.Api/Cli/SeedAdminCommand.cs:PrintUsage",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Api/Cli/SeedAdminCommand.cs",
+      "target": "class:Rmms.Api/Cli/SeedAdminCommand.cs:SeedAdminCommand",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Api/Cli/SeedDemoCommand.cs",
+      "target": "function:Rmms.Api/Cli/SeedDemoCommand.cs:RunAsync",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Api/Cli/SeedDemoCommand.cs",
+      "target": "class:Rmms.Api/Cli/SeedDemoCommand.cs:SeedDemoCommand",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Api/Cli/SeedMasterCommand.cs",
+      "target": "function:Rmms.Api/Cli/SeedMasterCommand.cs:RunAsync",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Api/Cli/SeedMasterCommand.cs",
+      "target": "class:Rmms.Api/Cli/SeedMasterCommand.cs:SeedMasterCommand",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Api/Cli/SeedSuperAdminCommand.cs",
+      "target": "function:Rmms.Api/Cli/SeedSuperAdminCommand.cs:RunAsync",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Api/Cli/SeedSuperAdminCommand.cs",
+      "target": "function:Rmms.Api/Cli/SeedSuperAdminCommand.cs:ParseArgs",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Api/Cli/SeedSuperAdminCommand.cs",
+      "target": "function:Rmms.Api/Cli/SeedSuperAdminCommand.cs:GeneratePassword",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Api/Cli/SeedSuperAdminCommand.cs",
+      "target": "class:Rmms.Api/Cli/SeedSuperAdminCommand.cs:SeedSuperAdminCommand",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Api/Common/InvariantFormParsing.cs",
+      "target": "function:Rmms.Api/Common/InvariantFormParsing.cs:TryParseGps",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Api/Common/InvariantFormParsing.cs",
+      "target": "function:Rmms.Api/Common/InvariantFormParsing.cs:TryParseDouble",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Api/Common/InvariantFormParsing.cs",
+      "target": "function:Rmms.Api/Common/InvariantFormParsing.cs:TryParseNullableDouble",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Api/Common/InvariantFormParsing.cs",
+      "target": "class:Rmms.Api/Common/InvariantFormParsing.cs:InvariantFormParsing",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Api/Common/ResultMapping.cs",
+      "target": "function:Rmms.Api/Common/ResultMapping.cs:Ok",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Api/Common/ResultMapping.cs",
+      "target": "function:Rmms.Api/Common/ResultMapping.cs:Created",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Api/Common/ResultMapping.cs",
+      "target": "function:Rmms.Api/Common/ResultMapping.cs:Failure",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Api/Common/ResultMapping.cs",
+      "target": "function:Rmms.Api/Common/ResultMapping.cs:ToActionResult",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Api/Common/ResultMapping.cs",
+      "target": "class:Rmms.Api/Common/ResultMapping.cs:ResultMapping",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Api/Controllers/AdminApprovalsController.cs",
+      "target": "function:Rmms.Api/Controllers/AdminApprovalsController.cs:AdminApprovalsController",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Api/Controllers/AdminApprovalsController.cs",
+      "target": "function:Rmms.Api/Controllers/AdminApprovalsController.cs:List",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Api/Controllers/AdminApprovalsController.cs",
+      "target": "function:Rmms.Api/Controllers/AdminApprovalsController.cs:Override",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Api/Controllers/AdminApprovalsController.cs",
+      "target": "class:Rmms.Api/Controllers/AdminApprovalsController.cs:AdminApprovalsController",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Api/Controllers/AdminAttendanceController.cs",
+      "target": "function:Rmms.Api/Controllers/AdminAttendanceController.cs:AdminAttendanceController",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Api/Controllers/AdminAttendanceController.cs",
+      "target": "function:Rmms.Api/Controllers/AdminAttendanceController.cs:List",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Api/Controllers/AdminAttendanceController.cs",
+      "target": "function:Rmms.Api/Controllers/AdminAttendanceController.cs:Review",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Api/Controllers/AdminAttendanceController.cs",
+      "target": "class:Rmms.Api/Controllers/AdminAttendanceController.cs:AdminAttendanceController",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Api/Controllers/AdminAuditController.cs",
+      "target": "function:Rmms.Api/Controllers/AdminAuditController.cs:AdminAuditController",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Api/Controllers/AdminAuditController.cs",
+      "target": "function:Rmms.Api/Controllers/AdminAuditController.cs:List",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Api/Controllers/AdminAuditController.cs",
+      "target": "class:Rmms.Api/Controllers/AdminAuditController.cs:AdminAuditController",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Api/Controllers/AdminDocumentsController.cs",
+      "target": "function:Rmms.Api/Controllers/AdminDocumentsController.cs:AdminDocumentsController",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Api/Controllers/AdminDocumentsController.cs",
+      "target": "function:Rmms.Api/Controllers/AdminDocumentsController.cs:List",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Api/Controllers/AdminDocumentsController.cs",
+      "target": "function:Rmms.Api/Controllers/AdminDocumentsController.cs:Upload",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Api/Controllers/AdminDocumentsController.cs",
+      "target": "function:Rmms.Api/Controllers/AdminDocumentsController.cs:Assign",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Api/Controllers/AdminDocumentsController.cs",
+      "target": "function:Rmms.Api/Controllers/AdminDocumentsController.cs:Delete",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Api/Controllers/AdminDocumentsController.cs",
+      "target": "class:Rmms.Api/Controllers/AdminDocumentsController.cs:AdminDocumentsController",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Api/Controllers/AdminFaceController.cs",
+      "target": "function:Rmms.Api/Controllers/AdminFaceController.cs:AdminFaceController",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Api/Controllers/AdminFaceController.cs",
+      "target": "function:Rmms.Api/Controllers/AdminFaceController.cs:Enroll",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Api/Controllers/AdminFaceController.cs",
+      "target": "function:Rmms.Api/Controllers/AdminFaceController.cs:ReEnroll",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Api/Controllers/AdminFaceController.cs",
+      "target": "function:Rmms.Api/Controllers/AdminFaceController.cs:Delete",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Api/Controllers/AdminFaceController.cs",
+      "target": "class:Rmms.Api/Controllers/AdminFaceController.cs:AdminFaceController",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Api/Controllers/AdminFormsController.cs",
+      "target": "function:Rmms.Api/Controllers/AdminFormsController.cs:AdminFormsController",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Api/Controllers/AdminFormsController.cs",
+      "target": "function:Rmms.Api/Controllers/AdminFormsController.cs:List",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Api/Controllers/AdminFormsController.cs",
+      "target": "function:Rmms.Api/Controllers/AdminFormsController.cs:Get",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Api/Controllers/AdminFormsController.cs",
+      "target": "function:Rmms.Api/Controllers/AdminFormsController.cs:Versions",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Api/Controllers/AdminFormsController.cs",
+      "target": "function:Rmms.Api/Controllers/AdminFormsController.cs:Create",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Api/Controllers/AdminFormsController.cs",
+      "target": "function:Rmms.Api/Controllers/AdminFormsController.cs:Update",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Api/Controllers/AdminFormsController.cs",
+      "target": "function:Rmms.Api/Controllers/AdminFormsController.cs:Publish",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Api/Controllers/AdminFormsController.cs",
+      "target": "function:Rmms.Api/Controllers/AdminFormsController.cs:Assign",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Api/Controllers/AdminFormsController.cs",
+      "target": "class:Rmms.Api/Controllers/AdminFormsController.cs:AdminFormsController",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Api/Controllers/AdminNewsController.cs",
+      "target": "function:Rmms.Api/Controllers/AdminNewsController.cs:AdminNewsController",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Api/Controllers/AdminNewsController.cs",
+      "target": "function:Rmms.Api/Controllers/AdminNewsController.cs:List",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Api/Controllers/AdminNewsController.cs",
+      "target": "function:Rmms.Api/Controllers/AdminNewsController.cs:Create",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Api/Controllers/AdminNewsController.cs",
+      "target": "function:Rmms.Api/Controllers/AdminNewsController.cs:Update",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Api/Controllers/AdminNewsController.cs",
+      "target": "function:Rmms.Api/Controllers/AdminNewsController.cs:Assign",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Api/Controllers/AdminNewsController.cs",
+      "target": "function:Rmms.Api/Controllers/AdminNewsController.cs:Publish",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Api/Controllers/AdminNewsController.cs",
+      "target": "function:Rmms.Api/Controllers/AdminNewsController.cs:Delete",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Api/Controllers/AdminNewsController.cs",
+      "target": "class:Rmms.Api/Controllers/AdminNewsController.cs:AdminNewsController",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Api/Controllers/AdminProductsController.cs",
+      "target": "function:Rmms.Api/Controllers/AdminProductsController.cs:AdminProductsController",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Api/Controllers/AdminProductsController.cs",
+      "target": "function:Rmms.Api/Controllers/AdminProductsController.cs:List",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Api/Controllers/AdminProductsController.cs",
+      "target": "function:Rmms.Api/Controllers/AdminProductsController.cs:Create",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Api/Controllers/AdminProductsController.cs",
+      "target": "function:Rmms.Api/Controllers/AdminProductsController.cs:Update",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Api/Controllers/AdminProductsController.cs",
+      "target": "function:Rmms.Api/Controllers/AdminProductsController.cs:ChangeStatus",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Api/Controllers/AdminProductsController.cs",
+      "target": "function:Rmms.Api/Controllers/AdminProductsController.cs:Delete",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Api/Controllers/AdminProductsController.cs",
+      "target": "class:Rmms.Api/Controllers/AdminProductsController.cs:AdminProductsController",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Api/Controllers/AdminRequestsController.cs",
+      "target": "function:Rmms.Api/Controllers/AdminRequestsController.cs:AdminRequestsController",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Api/Controllers/AdminRequestsController.cs",
+      "target": "function:Rmms.Api/Controllers/AdminRequestsController.cs:Leave",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Api/Controllers/AdminRequestsController.cs",
+      "target": "function:Rmms.Api/Controllers/AdminRequestsController.cs:Ot",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Api/Controllers/AdminRequestsController.cs",
+      "target": "function:Rmms.Api/Controllers/AdminRequestsController.cs:ExportLeave",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Api/Controllers/AdminRequestsController.cs",
+      "target": "function:Rmms.Api/Controllers/AdminRequestsController.cs:ExportOt",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Api/Controllers/AdminRequestsController.cs",
+      "target": "class:Rmms.Api/Controllers/AdminRequestsController.cs:AdminRequestsController",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Api/Controllers/AdminUsersController.cs",
+      "target": "function:Rmms.Api/Controllers/AdminUsersController.cs:AdminUsersController",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Api/Controllers/AdminUsersController.cs",
+      "target": "function:Rmms.Api/Controllers/AdminUsersController.cs:List",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Api/Controllers/AdminUsersController.cs",
+      "target": "function:Rmms.Api/Controllers/AdminUsersController.cs:Create",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Api/Controllers/AdminUsersController.cs",
+      "target": "function:Rmms.Api/Controllers/AdminUsersController.cs:Update",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Api/Controllers/AdminUsersController.cs",
+      "target": "function:Rmms.Api/Controllers/AdminUsersController.cs:ResetPassword",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Api/Controllers/AdminUsersController.cs",
+      "target": "class:Rmms.Api/Controllers/AdminUsersController.cs:AdminUsersController",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Api/Controllers/AdminVisitPlansController.cs",
+      "target": "function:Rmms.Api/Controllers/AdminVisitPlansController.cs:AdminVisitPlansController",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Api/Controllers/AdminVisitPlansController.cs",
+      "target": "function:Rmms.Api/Controllers/AdminVisitPlansController.cs:List",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Api/Controllers/AdminVisitPlansController.cs",
+      "target": "class:Rmms.Api/Controllers/AdminVisitPlansController.cs:AdminVisitPlansController",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Api/Controllers/ApprovalsController.cs",
+      "target": "function:Rmms.Api/Controllers/ApprovalsController.cs:ApprovalsController",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Api/Controllers/ApprovalsController.cs",
+      "target": "function:Rmms.Api/Controllers/ApprovalsController.cs:Pending",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Api/Controllers/ApprovalsController.cs",
+      "target": "function:Rmms.Api/Controllers/ApprovalsController.cs:Detail",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Api/Controllers/ApprovalsController.cs",
+      "target": "function:Rmms.Api/Controllers/ApprovalsController.cs:Approve",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Api/Controllers/ApprovalsController.cs",
+      "target": "function:Rmms.Api/Controllers/ApprovalsController.cs:Reject",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Api/Controllers/ApprovalsController.cs",
+      "target": "function:Rmms.Api/Controllers/ApprovalsController.cs:EmailActionPreview",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Api/Controllers/ApprovalsController.cs",
+      "target": "function:Rmms.Api/Controllers/ApprovalsController.cs:EmailActionConfirm",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Api/Controllers/ApprovalsController.cs",
+      "target": "class:Rmms.Api/Controllers/ApprovalsController.cs:ApprovalsController",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Api/Controllers/AreasController.cs",
+      "target": "function:Rmms.Api/Controllers/AreasController.cs:AreasController",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Api/Controllers/AreasController.cs",
+      "target": "function:Rmms.Api/Controllers/AreasController.cs:List",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Api/Controllers/AreasController.cs",
+      "target": "function:Rmms.Api/Controllers/AreasController.cs:Create",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Api/Controllers/AreasController.cs",
+      "target": "function:Rmms.Api/Controllers/AreasController.cs:Update",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Api/Controllers/AreasController.cs",
+      "target": "function:Rmms.Api/Controllers/AreasController.cs:Delete",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Api/Controllers/AreasController.cs",
+      "target": "class:Rmms.Api/Controllers/AreasController.cs:AreasController",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Api/Controllers/AssignmentsController.cs",
+      "target": "function:Rmms.Api/Controllers/AssignmentsController.cs:AssignmentsController",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Api/Controllers/AssignmentsController.cs",
+      "target": "function:Rmms.Api/Controllers/AssignmentsController.cs:GetForUser",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Api/Controllers/AssignmentsController.cs",
+      "target": "function:Rmms.Api/Controllers/AssignmentsController.cs:AssignPgLeader",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Api/Controllers/AssignmentsController.cs",
+      "target": "function:Rmms.Api/Controllers/AssignmentsController.cs:AssignUserStore",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Api/Controllers/AssignmentsController.cs",
+      "target": "function:Rmms.Api/Controllers/AssignmentsController.cs:UnassignUserStore",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Api/Controllers/AssignmentsController.cs",
+      "target": "function:Rmms.Api/Controllers/AssignmentsController.cs:AssignUserCategory",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Api/Controllers/AssignmentsController.cs",
+      "target": "function:Rmms.Api/Controllers/AssignmentsController.cs:UnassignUserCategory",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Api/Controllers/AssignmentsController.cs",
+      "target": "class:Rmms.Api/Controllers/AssignmentsController.cs:AssignmentsController",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Api/Controllers/AttendanceController.cs",
+      "target": "function:Rmms.Api/Controllers/AttendanceController.cs:AttendanceController",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Api/Controllers/AttendanceController.cs",
+      "target": "function:Rmms.Api/Controllers/AttendanceController.cs:Today",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Api/Controllers/AttendanceController.cs",
+      "target": "function:Rmms.Api/Controllers/AttendanceController.cs:CheckInInfo",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Api/Controllers/AttendanceController.cs",
+      "target": "function:Rmms.Api/Controllers/AttendanceController.cs:CheckIn",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Api/Controllers/AttendanceController.cs",
+      "target": "function:Rmms.Api/Controllers/AttendanceController.cs:CheckOut",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Api/Controllers/AttendanceController.cs",
+      "target": "function:Rmms.Api/Controllers/AttendanceController.cs:History",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Api/Controllers/AttendanceController.cs",
+      "target": "function:Rmms.Api/Controllers/AttendanceController.cs:ToUploadAsync",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Api/Controllers/AttendanceController.cs",
+      "target": "class:Rmms.Api/Controllers/AttendanceController.cs:AttendanceController",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    }
+  ]
+}

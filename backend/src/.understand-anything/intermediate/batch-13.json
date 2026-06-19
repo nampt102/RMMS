@@ -1,0 +1,4023 @@
+{
+  "nodes": [
+    {
+      "id": "file:Rmms.Application/Organization/Categories/Categories.cs",
+      "type": "file",
+      "name": "Categories.cs",
+      "filePath": "Rmms.Application/Organization/Categories/Categories.cs",
+      "summary": "Categories.cs — tệp mã nguồn C# trong backend RMMS (10 hàm, 6 class).",
+      "tags": [
+        "rmms.application",
+        "organization",
+        "code",
+        "cs"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:Rmms.Application/Organization/Categories/Categories.cs:CreateCategoryCommandValidator",
+      "type": "function",
+      "name": "CreateCategoryCommandValidator",
+      "filePath": "Rmms.Application/Organization/Categories/Categories.cs",
+      "lineRange": [
+        23,
+        27
+      ],
+      "summary": "Hàm CreateCategoryCommandValidator trong Categories.cs.",
+      "tags": [
+        "rmms.application",
+        "organization",
+        "code",
+        "cs",
+        "ham"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Rmms.Application/Organization/Categories/Categories.cs:CreateCategoryCommandHandler",
+      "type": "function",
+      "name": "CreateCategoryCommandHandler",
+      "filePath": "Rmms.Application/Organization/Categories/Categories.cs",
+      "lineRange": [
+        35,
+        39
+      ],
+      "summary": "Hàm CreateCategoryCommandHandler trong Categories.cs.",
+      "tags": [
+        "rmms.application",
+        "organization",
+        "code",
+        "cs",
+        "ham"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Rmms.Application/Organization/Categories/Categories.cs:Handle",
+      "type": "function",
+      "name": "Handle",
+      "filePath": "Rmms.Application/Organization/Categories/Categories.cs",
+      "lineRange": [
+        41,
+        55
+      ],
+      "summary": "Hàm Handle trong Categories.cs.",
+      "tags": [
+        "rmms.application",
+        "organization",
+        "code",
+        "cs",
+        "ham"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Rmms.Application/Organization/Categories/Categories.cs:UpdateCategoryCommandValidator",
+      "type": "function",
+      "name": "UpdateCategoryCommandValidator",
+      "filePath": "Rmms.Application/Organization/Categories/Categories.cs",
+      "lineRange": [
+        64,
+        65
+      ],
+      "summary": "Hàm UpdateCategoryCommandValidator trong Categories.cs.",
+      "tags": [
+        "rmms.application",
+        "organization",
+        "code",
+        "cs",
+        "ham"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Rmms.Application/Organization/Categories/Categories.cs:UpdateCategoryCommandHandler",
+      "type": "function",
+      "name": "UpdateCategoryCommandHandler",
+      "filePath": "Rmms.Application/Organization/Categories/Categories.cs",
+      "lineRange": [
+        73,
+        77
+      ],
+      "summary": "Hàm UpdateCategoryCommandHandler trong Categories.cs.",
+      "tags": [
+        "rmms.application",
+        "organization",
+        "code",
+        "cs",
+        "ham"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Rmms.Application/Organization/Categories/Categories.cs:DeleteCategoryCommandHandler",
+      "type": "function",
+      "name": "DeleteCategoryCommandHandler",
+      "filePath": "Rmms.Application/Organization/Categories/Categories.cs",
+      "lineRange": [
+        104,
+        108
+      ],
+      "summary": "Hàm DeleteCategoryCommandHandler trong Categories.cs.",
+      "tags": [
+        "rmms.application",
+        "organization",
+        "code",
+        "cs",
+        "ham"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Rmms.Application/Organization/Categories/Categories.cs:GetCategoriesQueryHandler",
+      "type": "function",
+      "name": "GetCategoriesQueryHandler",
+      "filePath": "Rmms.Application/Organization/Categories/Categories.cs",
+      "lineRange": [
+        133,
+        133
+      ],
+      "summary": "Hàm GetCategoriesQueryHandler trong Categories.cs.",
+      "tags": [
+        "rmms.application",
+        "organization",
+        "code",
+        "cs",
+        "ham"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:Rmms.Application/Organization/Categories/Categories.cs:CreateCategoryCommandValidator",
+      "type": "class",
+      "name": "CreateCategoryCommandValidator",
+      "filePath": "Rmms.Application/Organization/Categories/Categories.cs",
+      "lineRange": [
+        21,
+        28
+      ],
+      "summary": "Class CreateCategoryCommandValidator trong Categories.cs.",
+      "tags": [
+        "rmms.application",
+        "organization",
+        "code",
+        "cs",
+        "class"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "class:Rmms.Application/Organization/Categories/Categories.cs:CreateCategoryCommandHandler",
+      "type": "class",
+      "name": "CreateCategoryCommandHandler",
+      "filePath": "Rmms.Application/Organization/Categories/Categories.cs",
+      "lineRange": [
+        30,
+        56
+      ],
+      "summary": "Class CreateCategoryCommandHandler trong Categories.cs.",
+      "tags": [
+        "rmms.application",
+        "organization",
+        "code",
+        "cs",
+        "class"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "class:Rmms.Application/Organization/Categories/Categories.cs:UpdateCategoryCommandValidator",
+      "type": "class",
+      "name": "UpdateCategoryCommandValidator",
+      "filePath": "Rmms.Application/Organization/Categories/Categories.cs",
+      "lineRange": [
+        62,
+        66
+      ],
+      "summary": "Class UpdateCategoryCommandValidator trong Categories.cs.",
+      "tags": [
+        "rmms.application",
+        "organization",
+        "code",
+        "cs",
+        "class"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "class:Rmms.Application/Organization/Categories/Categories.cs:UpdateCategoryCommandHandler",
+      "type": "class",
+      "name": "UpdateCategoryCommandHandler",
+      "filePath": "Rmms.Application/Organization/Categories/Categories.cs",
+      "lineRange": [
+        68,
+        93
+      ],
+      "summary": "Class UpdateCategoryCommandHandler trong Categories.cs.",
+      "tags": [
+        "rmms.application",
+        "organization",
+        "code",
+        "cs",
+        "class"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "class:Rmms.Application/Organization/Categories/Categories.cs:DeleteCategoryCommandHandler",
+      "type": "class",
+      "name": "DeleteCategoryCommandHandler",
+      "filePath": "Rmms.Application/Organization/Categories/Categories.cs",
+      "lineRange": [
+        99,
+        123
+      ],
+      "summary": "Class DeleteCategoryCommandHandler trong Categories.cs.",
+      "tags": [
+        "rmms.application",
+        "organization",
+        "code",
+        "cs",
+        "class"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "class:Rmms.Application/Organization/Categories/Categories.cs:GetCategoriesQueryHandler",
+      "type": "class",
+      "name": "GetCategoriesQueryHandler",
+      "filePath": "Rmms.Application/Organization/Categories/Categories.cs",
+      "lineRange": [
+        129,
+        144
+      ],
+      "summary": "Class GetCategoriesQueryHandler trong Categories.cs.",
+      "tags": [
+        "rmms.application",
+        "organization",
+        "code",
+        "cs",
+        "class"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:Rmms.Application/Organization/Me/GetMyLeader.cs",
+      "type": "file",
+      "name": "GetMyLeader.cs",
+      "filePath": "Rmms.Application/Organization/Me/GetMyLeader.cs",
+      "summary": "GetMyLeader.cs — tệp mã nguồn C# trong backend RMMS (2 hàm, 1 class).",
+      "tags": [
+        "rmms.application",
+        "organization",
+        "code",
+        "cs"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Rmms.Application/Organization/Me/GetMyLeader.cs:GetMyLeaderQueryHandler",
+      "type": "function",
+      "name": "GetMyLeaderQueryHandler",
+      "filePath": "Rmms.Application/Organization/Me/GetMyLeader.cs",
+      "lineRange": [
+        21,
+        21
+      ],
+      "summary": "Hàm GetMyLeaderQueryHandler trong GetMyLeader.cs.",
+      "tags": [
+        "rmms.application",
+        "organization",
+        "code",
+        "cs",
+        "ham"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Rmms.Application/Organization/Me/GetMyLeader.cs:Handle",
+      "type": "function",
+      "name": "Handle",
+      "filePath": "Rmms.Application/Organization/Me/GetMyLeader.cs",
+      "lineRange": [
+        23,
+        32
+      ],
+      "summary": "Hàm Handle trong GetMyLeader.cs.",
+      "tags": [
+        "rmms.application",
+        "organization",
+        "code",
+        "cs",
+        "ham"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:Rmms.Application/Organization/Me/GetMyLeader.cs:GetMyLeaderQueryHandler",
+      "type": "class",
+      "name": "GetMyLeaderQueryHandler",
+      "filePath": "Rmms.Application/Organization/Me/GetMyLeader.cs",
+      "lineRange": [
+        17,
+        33
+      ],
+      "summary": "Class GetMyLeaderQueryHandler trong GetMyLeader.cs.",
+      "tags": [
+        "rmms.application",
+        "organization",
+        "code",
+        "cs",
+        "class"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:Rmms.Application/Organization/Me/GetMyStores.cs",
+      "type": "file",
+      "name": "GetMyStores.cs",
+      "filePath": "Rmms.Application/Organization/Me/GetMyStores.cs",
+      "summary": "GetMyStores.cs — tệp mã nguồn C# trong backend RMMS (2 hàm, 1 class).",
+      "tags": [
+        "rmms.application",
+        "organization",
+        "code",
+        "cs"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Rmms.Application/Organization/Me/GetMyStores.cs:GetMyStoresQueryHandler",
+      "type": "function",
+      "name": "GetMyStoresQueryHandler",
+      "filePath": "Rmms.Application/Organization/Me/GetMyStores.cs",
+      "lineRange": [
+        29,
+        29
+      ],
+      "summary": "Hàm GetMyStoresQueryHandler trong GetMyStores.cs.",
+      "tags": [
+        "rmms.application",
+        "organization",
+        "code",
+        "cs",
+        "ham"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Rmms.Application/Organization/Me/GetMyStores.cs:Handle",
+      "type": "function",
+      "name": "Handle",
+      "filePath": "Rmms.Application/Organization/Me/GetMyStores.cs",
+      "lineRange": [
+        31,
+        45
+      ],
+      "summary": "Hàm Handle trong GetMyStores.cs.",
+      "tags": [
+        "rmms.application",
+        "organization",
+        "code",
+        "cs",
+        "ham"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:Rmms.Application/Organization/Me/GetMyStores.cs:GetMyStoresQueryHandler",
+      "type": "class",
+      "name": "GetMyStoresQueryHandler",
+      "filePath": "Rmms.Application/Organization/Me/GetMyStores.cs",
+      "lineRange": [
+        25,
+        46
+      ],
+      "summary": "Class GetMyStoresQueryHandler trong GetMyStores.cs.",
+      "tags": [
+        "rmms.application",
+        "organization",
+        "code",
+        "cs",
+        "class"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:Rmms.Application/Organization/Products/Products.cs",
+      "type": "file",
+      "name": "Products.cs",
+      "filePath": "Rmms.Application/Organization/Products/Products.cs",
+      "summary": "Products.cs — tệp mã nguồn C# trong backend RMMS (14 hàm, 8 class).",
+      "tags": [
+        "rmms.application",
+        "organization",
+        "code",
+        "cs"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:Rmms.Application/Organization/Products/Products.cs:CreateProductCommandValidator",
+      "type": "function",
+      "name": "CreateProductCommandValidator",
+      "filePath": "Rmms.Application/Organization/Products/Products.cs",
+      "lineRange": [
+        35,
+        40
+      ],
+      "summary": "Hàm CreateProductCommandValidator trong Products.cs.",
+      "tags": [
+        "rmms.application",
+        "organization",
+        "code",
+        "cs",
+        "ham"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Rmms.Application/Organization/Products/Products.cs:CreateProductCommandHandler",
+      "type": "function",
+      "name": "CreateProductCommandHandler",
+      "filePath": "Rmms.Application/Organization/Products/Products.cs",
+      "lineRange": [
+        48,
+        52
+      ],
+      "summary": "Hàm CreateProductCommandHandler trong Products.cs.",
+      "tags": [
+        "rmms.application",
+        "organization",
+        "code",
+        "cs",
+        "ham"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Rmms.Application/Organization/Products/Products.cs:Handle",
+      "type": "function",
+      "name": "Handle",
+      "filePath": "Rmms.Application/Organization/Products/Products.cs",
+      "lineRange": [
+        54,
+        78
+      ],
+      "summary": "Hàm Handle trong Products.cs.",
+      "tags": [
+        "rmms.application",
+        "organization",
+        "code",
+        "cs",
+        "ham"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Rmms.Application/Organization/Products/Products.cs:UpdateProductCommandValidator",
+      "type": "function",
+      "name": "UpdateProductCommandValidator",
+      "filePath": "Rmms.Application/Organization/Products/Products.cs",
+      "lineRange": [
+        88,
+        92
+      ],
+      "summary": "Hàm UpdateProductCommandValidator trong Products.cs.",
+      "tags": [
+        "rmms.application",
+        "organization",
+        "code",
+        "cs",
+        "ham"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Rmms.Application/Organization/Products/Products.cs:UpdateProductCommandHandler",
+      "type": "function",
+      "name": "UpdateProductCommandHandler",
+      "filePath": "Rmms.Application/Organization/Products/Products.cs",
+      "lineRange": [
+        100,
+        104
+      ],
+      "summary": "Hàm UpdateProductCommandHandler trong Products.cs.",
+      "tags": [
+        "rmms.application",
+        "organization",
+        "code",
+        "cs",
+        "ham"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Rmms.Application/Organization/Products/Products.cs:ChangeProductStatusCommandHandler",
+      "type": "function",
+      "name": "ChangeProductStatusCommandHandler",
+      "filePath": "Rmms.Application/Organization/Products/Products.cs",
+      "lineRange": [
+        141,
+        145
+      ],
+      "summary": "Hàm ChangeProductStatusCommandHandler trong Products.cs.",
+      "tags": [
+        "rmms.application",
+        "organization",
+        "code",
+        "cs",
+        "ham"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Rmms.Application/Organization/Products/Products.cs:DeleteProductCommandHandler",
+      "type": "function",
+      "name": "DeleteProductCommandHandler",
+      "filePath": "Rmms.Application/Organization/Products/Products.cs",
+      "lineRange": [
+        178,
+        182
+      ],
+      "summary": "Hàm DeleteProductCommandHandler trong Products.cs.",
+      "tags": [
+        "rmms.application",
+        "organization",
+        "code",
+        "cs",
+        "ham"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Rmms.Application/Organization/Products/Products.cs:GetProductsQueryHandler",
+      "type": "function",
+      "name": "GetProductsQueryHandler",
+      "filePath": "Rmms.Application/Organization/Products/Products.cs",
+      "lineRange": [
+        218,
+        218
+      ],
+      "summary": "Hàm GetProductsQueryHandler trong Products.cs.",
+      "tags": [
+        "rmms.application",
+        "organization",
+        "code",
+        "cs",
+        "ham"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Rmms.Application/Organization/Products/Products.cs:IsValidAttributes",
+      "type": "function",
+      "name": "IsValidAttributes",
+      "filePath": "Rmms.Application/Organization/Products/Products.cs",
+      "lineRange": [
+        269,
+        274
+      ],
+      "summary": "Hàm IsValidAttributes trong Products.cs.",
+      "tags": [
+        "rmms.application",
+        "organization",
+        "code",
+        "cs",
+        "ham"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Rmms.Application/Organization/Products/Products.cs:TryParseStatus",
+      "type": "function",
+      "name": "TryParseStatus",
+      "filePath": "Rmms.Application/Organization/Products/Products.cs",
+      "lineRange": [
+        276,
+        284
+      ],
+      "summary": "Hàm TryParseStatus trong Products.cs.",
+      "tags": [
+        "rmms.application",
+        "organization",
+        "code",
+        "cs",
+        "ham"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:Rmms.Application/Organization/Products/Products.cs:CreateProductCommandValidator",
+      "type": "class",
+      "name": "CreateProductCommandValidator",
+      "filePath": "Rmms.Application/Organization/Products/Products.cs",
+      "lineRange": [
+        33,
+        41
+      ],
+      "summary": "Class CreateProductCommandValidator trong Products.cs.",
+      "tags": [
+        "rmms.application",
+        "organization",
+        "code",
+        "cs",
+        "class"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "class:Rmms.Application/Organization/Products/Products.cs:CreateProductCommandHandler",
+      "type": "class",
+      "name": "CreateProductCommandHandler",
+      "filePath": "Rmms.Application/Organization/Products/Products.cs",
+      "lineRange": [
+        43,
+        79
+      ],
+      "summary": "Class CreateProductCommandHandler trong Products.cs.",
+      "tags": [
+        "rmms.application",
+        "organization",
+        "code",
+        "cs",
+        "class"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "class:Rmms.Application/Organization/Products/Products.cs:UpdateProductCommandValidator",
+      "type": "class",
+      "name": "UpdateProductCommandValidator",
+      "filePath": "Rmms.Application/Organization/Products/Products.cs",
+      "lineRange": [
+        86,
+        93
+      ],
+      "summary": "Class UpdateProductCommandValidator trong Products.cs.",
+      "tags": [
+        "rmms.application",
+        "organization",
+        "code",
+        "cs",
+        "class"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "class:Rmms.Application/Organization/Products/Products.cs:UpdateProductCommandHandler",
+      "type": "class",
+      "name": "UpdateProductCommandHandler",
+      "filePath": "Rmms.Application/Organization/Products/Products.cs",
+      "lineRange": [
+        95,
+        130
+      ],
+      "summary": "Class UpdateProductCommandHandler trong Products.cs.",
+      "tags": [
+        "rmms.application",
+        "organization",
+        "code",
+        "cs",
+        "class"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "class:Rmms.Application/Organization/Products/Products.cs:ChangeProductStatusCommandHandler",
+      "type": "class",
+      "name": "ChangeProductStatusCommandHandler",
+      "filePath": "Rmms.Application/Organization/Products/Products.cs",
+      "lineRange": [
+        136,
+        167
+      ],
+      "summary": "Class ChangeProductStatusCommandHandler trong Products.cs.",
+      "tags": [
+        "rmms.application",
+        "organization",
+        "code",
+        "cs",
+        "class"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "class:Rmms.Application/Organization/Products/Products.cs:DeleteProductCommandHandler",
+      "type": "class",
+      "name": "DeleteProductCommandHandler",
+      "filePath": "Rmms.Application/Organization/Products/Products.cs",
+      "lineRange": [
+        173,
+        197
+      ],
+      "summary": "Class DeleteProductCommandHandler trong Products.cs.",
+      "tags": [
+        "rmms.application",
+        "organization",
+        "code",
+        "cs",
+        "class"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "class:Rmms.Application/Organization/Products/Products.cs:GetProductsQueryHandler",
+      "type": "class",
+      "name": "GetProductsQueryHandler",
+      "filePath": "Rmms.Application/Organization/Products/Products.cs",
+      "lineRange": [
+        212,
+        263
+      ],
+      "summary": "Class GetProductsQueryHandler trong Products.cs.",
+      "tags": [
+        "rmms.application",
+        "organization",
+        "code",
+        "cs",
+        "class"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "class:Rmms.Application/Organization/Products/Products.cs:ProductRules",
+      "type": "class",
+      "name": "ProductRules",
+      "filePath": "Rmms.Application/Organization/Products/Products.cs",
+      "lineRange": [
+        267,
+        285
+      ],
+      "summary": "Class ProductRules trong Products.cs.",
+      "tags": [
+        "rmms.application",
+        "organization",
+        "code",
+        "cs",
+        "class"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:Rmms.Application/Organization/Stores/ChangeStoreStatus.cs",
+      "type": "file",
+      "name": "ChangeStoreStatus.cs",
+      "filePath": "Rmms.Application/Organization/Stores/ChangeStoreStatus.cs",
+      "summary": "ChangeStoreStatus.cs — tệp mã nguồn C# trong backend RMMS (3 hàm, 2 class).",
+      "tags": [
+        "rmms.application",
+        "organization",
+        "code",
+        "cs"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:Rmms.Application/Organization/Stores/ChangeStoreStatus.cs:ChangeStoreStatusCommandValidator",
+      "type": "function",
+      "name": "ChangeStoreStatusCommandValidator",
+      "filePath": "Rmms.Application/Organization/Stores/ChangeStoreStatus.cs",
+      "lineRange": [
+        20,
+        25
+      ],
+      "summary": "Hàm ChangeStoreStatusCommandValidator trong ChangeStoreStatus.cs.",
+      "tags": [
+        "rmms.application",
+        "organization",
+        "code",
+        "cs",
+        "ham"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Rmms.Application/Organization/Stores/ChangeStoreStatus.cs:ChangeStoreStatusCommandHandler",
+      "type": "function",
+      "name": "ChangeStoreStatusCommandHandler",
+      "filePath": "Rmms.Application/Organization/Stores/ChangeStoreStatus.cs",
+      "lineRange": [
+        33,
+        37
+      ],
+      "summary": "Hàm ChangeStoreStatusCommandHandler trong ChangeStoreStatus.cs.",
+      "tags": [
+        "rmms.application",
+        "organization",
+        "code",
+        "cs",
+        "ham"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Rmms.Application/Organization/Stores/ChangeStoreStatus.cs:Handle",
+      "type": "function",
+      "name": "Handle",
+      "filePath": "Rmms.Application/Organization/Stores/ChangeStoreStatus.cs",
+      "lineRange": [
+        39,
+        59
+      ],
+      "summary": "Hàm Handle trong ChangeStoreStatus.cs.",
+      "tags": [
+        "rmms.application",
+        "organization",
+        "code",
+        "cs",
+        "ham"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:Rmms.Application/Organization/Stores/ChangeStoreStatus.cs:ChangeStoreStatusCommandValidator",
+      "type": "class",
+      "name": "ChangeStoreStatusCommandValidator",
+      "filePath": "Rmms.Application/Organization/Stores/ChangeStoreStatus.cs",
+      "lineRange": [
+        18,
+        26
+      ],
+      "summary": "Class ChangeStoreStatusCommandValidator trong ChangeStoreStatus.cs.",
+      "tags": [
+        "rmms.application",
+        "organization",
+        "code",
+        "cs",
+        "class"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "class:Rmms.Application/Organization/Stores/ChangeStoreStatus.cs:ChangeStoreStatusCommandHandler",
+      "type": "class",
+      "name": "ChangeStoreStatusCommandHandler",
+      "filePath": "Rmms.Application/Organization/Stores/ChangeStoreStatus.cs",
+      "lineRange": [
+        28,
+        60
+      ],
+      "summary": "Class ChangeStoreStatusCommandHandler trong ChangeStoreStatus.cs.",
+      "tags": [
+        "rmms.application",
+        "organization",
+        "code",
+        "cs",
+        "class"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:Rmms.Application/Organization/Stores/CreateStore.cs",
+      "type": "file",
+      "name": "CreateStore.cs",
+      "filePath": "Rmms.Application/Organization/Stores/CreateStore.cs",
+      "summary": "CreateStore.cs — tệp mã nguồn C# trong backend RMMS (3 hàm, 2 class).",
+      "tags": [
+        "rmms.application",
+        "organization",
+        "code",
+        "cs"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:Rmms.Application/Organization/Stores/CreateStore.cs:CreateStoreCommandValidator",
+      "type": "function",
+      "name": "CreateStoreCommandValidator",
+      "filePath": "Rmms.Application/Organization/Stores/CreateStore.cs",
+      "lineRange": [
+        24,
+        30
+      ],
+      "summary": "Hàm CreateStoreCommandValidator trong CreateStore.cs.",
+      "tags": [
+        "rmms.application",
+        "organization",
+        "code",
+        "cs",
+        "ham"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Rmms.Application/Organization/Stores/CreateStore.cs:CreateStoreCommandHandler",
+      "type": "function",
+      "name": "CreateStoreCommandHandler",
+      "filePath": "Rmms.Application/Organization/Stores/CreateStore.cs",
+      "lineRange": [
+        38,
+        42
+      ],
+      "summary": "Hàm CreateStoreCommandHandler trong CreateStore.cs.",
+      "tags": [
+        "rmms.application",
+        "organization",
+        "code",
+        "cs",
+        "ham"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Rmms.Application/Organization/Stores/CreateStore.cs:Handle",
+      "type": "function",
+      "name": "Handle",
+      "filePath": "Rmms.Application/Organization/Stores/CreateStore.cs",
+      "lineRange": [
+        44,
+        70
+      ],
+      "summary": "Hàm Handle trong CreateStore.cs.",
+      "tags": [
+        "rmms.application",
+        "organization",
+        "code",
+        "cs",
+        "ham"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:Rmms.Application/Organization/Stores/CreateStore.cs:CreateStoreCommandValidator",
+      "type": "class",
+      "name": "CreateStoreCommandValidator",
+      "filePath": "Rmms.Application/Organization/Stores/CreateStore.cs",
+      "lineRange": [
+        22,
+        31
+      ],
+      "summary": "Class CreateStoreCommandValidator trong CreateStore.cs.",
+      "tags": [
+        "rmms.application",
+        "organization",
+        "code",
+        "cs",
+        "class"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "class:Rmms.Application/Organization/Stores/CreateStore.cs:CreateStoreCommandHandler",
+      "type": "class",
+      "name": "CreateStoreCommandHandler",
+      "filePath": "Rmms.Application/Organization/Stores/CreateStore.cs",
+      "lineRange": [
+        33,
+        71
+      ],
+      "summary": "Class CreateStoreCommandHandler trong CreateStore.cs.",
+      "tags": [
+        "rmms.application",
+        "organization",
+        "code",
+        "cs",
+        "class"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:Rmms.Application/Organization/Stores/DeleteStore.cs",
+      "type": "file",
+      "name": "DeleteStore.cs",
+      "filePath": "Rmms.Application/Organization/Stores/DeleteStore.cs",
+      "summary": "DeleteStore.cs — tệp mã nguồn C# trong backend RMMS (2 hàm, 1 class).",
+      "tags": [
+        "rmms.application",
+        "organization",
+        "code",
+        "cs"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Rmms.Application/Organization/Stores/DeleteStore.cs:DeleteStoreCommandHandler",
+      "type": "function",
+      "name": "DeleteStoreCommandHandler",
+      "filePath": "Rmms.Application/Organization/Stores/DeleteStore.cs",
+      "lineRange": [
+        19,
+        23
+      ],
+      "summary": "Hàm DeleteStoreCommandHandler trong DeleteStore.cs.",
+      "tags": [
+        "rmms.application",
+        "organization",
+        "code",
+        "cs",
+        "ham"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Rmms.Application/Organization/Stores/DeleteStore.cs:Handle",
+      "type": "function",
+      "name": "Handle",
+      "filePath": "Rmms.Application/Organization/Stores/DeleteStore.cs",
+      "lineRange": [
+        25,
+        44
+      ],
+      "summary": "Hàm Handle trong DeleteStore.cs.",
+      "tags": [
+        "rmms.application",
+        "organization",
+        "code",
+        "cs",
+        "ham"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:Rmms.Application/Organization/Stores/DeleteStore.cs:DeleteStoreCommandHandler",
+      "type": "class",
+      "name": "DeleteStoreCommandHandler",
+      "filePath": "Rmms.Application/Organization/Stores/DeleteStore.cs",
+      "lineRange": [
+        14,
+        45
+      ],
+      "summary": "Class DeleteStoreCommandHandler trong DeleteStore.cs.",
+      "tags": [
+        "rmms.application",
+        "organization",
+        "code",
+        "cs",
+        "class"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:Rmms.Application/Organization/Stores/GetStores.cs",
+      "type": "file",
+      "name": "GetStores.cs",
+      "filePath": "Rmms.Application/Organization/Stores/GetStores.cs",
+      "summary": "GetStores.cs — tệp mã nguồn C# trong backend RMMS (2 hàm, 1 class).",
+      "tags": [
+        "rmms.application",
+        "organization",
+        "code",
+        "cs"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Rmms.Application/Organization/Stores/GetStores.cs:GetStoresQueryHandler",
+      "type": "function",
+      "name": "GetStoresQueryHandler",
+      "filePath": "Rmms.Application/Organization/Stores/GetStores.cs",
+      "lineRange": [
+        25,
+        25
+      ],
+      "summary": "Hàm GetStoresQueryHandler trong GetStores.cs.",
+      "tags": [
+        "rmms.application",
+        "organization",
+        "code",
+        "cs",
+        "ham"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Rmms.Application/Organization/Stores/GetStores.cs:Handle",
+      "type": "function",
+      "name": "Handle",
+      "filePath": "Rmms.Application/Organization/Stores/GetStores.cs",
+      "lineRange": [
+        27,
+        80
+      ],
+      "summary": "Hàm Handle trong GetStores.cs.",
+      "tags": [
+        "rmms.application",
+        "organization",
+        "code",
+        "cs",
+        "ham"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:Rmms.Application/Organization/Stores/GetStores.cs:GetStoresQueryHandler",
+      "type": "class",
+      "name": "GetStoresQueryHandler",
+      "filePath": "Rmms.Application/Organization/Stores/GetStores.cs",
+      "lineRange": [
+        19,
+        81
+      ],
+      "summary": "Class GetStoresQueryHandler trong GetStores.cs.",
+      "tags": [
+        "rmms.application",
+        "organization",
+        "code",
+        "cs",
+        "class"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:Rmms.Application/Organization/Stores/StoreDtos.cs",
+      "type": "file",
+      "name": "StoreDtos.cs",
+      "filePath": "Rmms.Application/Organization/Stores/StoreDtos.cs",
+      "summary": "StoreDtos.cs — tệp mã nguồn C# trong backend RMMS (0 hàm, 0 class).",
+      "tags": [
+        "rmms.application",
+        "organization",
+        "code",
+        "cs"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:Rmms.Application/Organization/Stores/UpdateStore.cs",
+      "type": "file",
+      "name": "UpdateStore.cs",
+      "filePath": "Rmms.Application/Organization/Stores/UpdateStore.cs",
+      "summary": "UpdateStore.cs — tệp mã nguồn C# trong backend RMMS (3 hàm, 2 class).",
+      "tags": [
+        "rmms.application",
+        "organization",
+        "code",
+        "cs"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:Rmms.Application/Organization/Stores/UpdateStore.cs:UpdateStoreCommandValidator",
+      "type": "function",
+      "name": "UpdateStoreCommandValidator",
+      "filePath": "Rmms.Application/Organization/Stores/UpdateStore.cs",
+      "lineRange": [
+        23,
+        28
+      ],
+      "summary": "Hàm UpdateStoreCommandValidator trong UpdateStore.cs.",
+      "tags": [
+        "rmms.application",
+        "organization",
+        "code",
+        "cs",
+        "ham"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Rmms.Application/Organization/Stores/UpdateStore.cs:UpdateStoreCommandHandler",
+      "type": "function",
+      "name": "UpdateStoreCommandHandler",
+      "filePath": "Rmms.Application/Organization/Stores/UpdateStore.cs",
+      "lineRange": [
+        36,
+        40
+      ],
+      "summary": "Hàm UpdateStoreCommandHandler trong UpdateStore.cs.",
+      "tags": [
+        "rmms.application",
+        "organization",
+        "code",
+        "cs",
+        "ham"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Rmms.Application/Organization/Stores/UpdateStore.cs:Handle",
+      "type": "function",
+      "name": "Handle",
+      "filePath": "Rmms.Application/Organization/Stores/UpdateStore.cs",
+      "lineRange": [
+        42,
+        66
+      ],
+      "summary": "Hàm Handle trong UpdateStore.cs.",
+      "tags": [
+        "rmms.application",
+        "organization",
+        "code",
+        "cs",
+        "ham"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:Rmms.Application/Organization/Stores/UpdateStore.cs:UpdateStoreCommandValidator",
+      "type": "class",
+      "name": "UpdateStoreCommandValidator",
+      "filePath": "Rmms.Application/Organization/Stores/UpdateStore.cs",
+      "lineRange": [
+        21,
+        29
+      ],
+      "summary": "Class UpdateStoreCommandValidator trong UpdateStore.cs.",
+      "tags": [
+        "rmms.application",
+        "organization",
+        "code",
+        "cs",
+        "class"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "class:Rmms.Application/Organization/Stores/UpdateStore.cs:UpdateStoreCommandHandler",
+      "type": "class",
+      "name": "UpdateStoreCommandHandler",
+      "filePath": "Rmms.Application/Organization/Stores/UpdateStore.cs",
+      "lineRange": [
+        31,
+        67
+      ],
+      "summary": "Class UpdateStoreCommandHandler trong UpdateStore.cs.",
+      "tags": [
+        "rmms.application",
+        "organization",
+        "code",
+        "cs",
+        "class"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:Rmms.Application/Organization/Views/OrgViews.cs",
+      "type": "file",
+      "name": "OrgViews.cs",
+      "filePath": "Rmms.Application/Organization/Views/OrgViews.cs",
+      "summary": "OrgViews.cs — tệp mã nguồn C# trong backend RMMS (4 hàm, 2 class).",
+      "tags": [
+        "rmms.application",
+        "organization",
+        "code",
+        "cs"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:Rmms.Application/Organization/Views/OrgViews.cs:GetOrgHierarchyQueryHandler",
+      "type": "function",
+      "name": "GetOrgHierarchyQueryHandler",
+      "filePath": "Rmms.Application/Organization/Views/OrgViews.cs",
+      "lineRange": [
+        56,
+        56
+      ],
+      "summary": "Hàm GetOrgHierarchyQueryHandler trong OrgViews.cs.",
+      "tags": [
+        "rmms.application",
+        "organization",
+        "code",
+        "cs",
+        "ham"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Rmms.Application/Organization/Views/OrgViews.cs:Handle",
+      "type": "function",
+      "name": "Handle",
+      "filePath": "Rmms.Application/Organization/Views/OrgViews.cs",
+      "lineRange": [
+        58,
+        94
+      ],
+      "summary": "Hàm Handle trong OrgViews.cs.",
+      "tags": [
+        "rmms.application",
+        "organization",
+        "code",
+        "cs",
+        "ham"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Rmms.Application/Organization/Views/OrgViews.cs:GetOrgAreaTreeQueryHandler",
+      "type": "function",
+      "name": "GetOrgAreaTreeQueryHandler",
+      "filePath": "Rmms.Application/Organization/Views/OrgViews.cs",
+      "lineRange": [
+        105,
+        105
+      ],
+      "summary": "Hàm GetOrgAreaTreeQueryHandler trong OrgViews.cs.",
+      "tags": [
+        "rmms.application",
+        "organization",
+        "code",
+        "cs",
+        "ham"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:Rmms.Application/Organization/Views/OrgViews.cs:GetOrgHierarchyQueryHandler",
+      "type": "class",
+      "name": "GetOrgHierarchyQueryHandler",
+      "filePath": "Rmms.Application/Organization/Views/OrgViews.cs",
+      "lineRange": [
+        52,
+        95
+      ],
+      "summary": "Class GetOrgHierarchyQueryHandler trong OrgViews.cs.",
+      "tags": [
+        "rmms.application",
+        "organization",
+        "code",
+        "cs",
+        "class"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "class:Rmms.Application/Organization/Views/OrgViews.cs:GetOrgAreaTreeQueryHandler",
+      "type": "class",
+      "name": "GetOrgAreaTreeQueryHandler",
+      "filePath": "Rmms.Application/Organization/Views/OrgViews.cs",
+      "lineRange": [
+        101,
+        158
+      ],
+      "summary": "Class GetOrgAreaTreeQueryHandler trong OrgViews.cs.",
+      "tags": [
+        "rmms.application",
+        "organization",
+        "code",
+        "cs",
+        "class"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:Rmms.Application/Reports/AttendanceReports.cs",
+      "type": "file",
+      "name": "AttendanceReports.cs",
+      "filePath": "Rmms.Application/Reports/AttendanceReports.cs",
+      "summary": "AttendanceReports.cs — tệp mã nguồn C# trong backend RMMS (9 hàm, 4 class).",
+      "tags": [
+        "rmms.application",
+        "reports",
+        "code",
+        "cs"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:Rmms.Application/Reports/AttendanceReports.cs:GetAttendanceReportQueryHandler",
+      "type": "function",
+      "name": "GetAttendanceReportQueryHandler",
+      "filePath": "Rmms.Application/Reports/AttendanceReports.cs",
+      "lineRange": [
+        37,
+        37
+      ],
+      "summary": "Hàm GetAttendanceReportQueryHandler trong AttendanceReports.cs.",
+      "tags": [
+        "rmms.application",
+        "reports",
+        "code",
+        "cs",
+        "ham"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Rmms.Application/Reports/AttendanceReports.cs:Handle",
+      "type": "function",
+      "name": "Handle",
+      "filePath": "Rmms.Application/Reports/AttendanceReports.cs",
+      "lineRange": [
+        39,
+        62
+      ],
+      "summary": "Hàm Handle trong AttendanceReports.cs.",
+      "tags": [
+        "rmms.application",
+        "reports",
+        "code",
+        "cs",
+        "ham"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Rmms.Application/Reports/AttendanceReports.cs:GetAttendanceTrendQueryHandler",
+      "type": "function",
+      "name": "GetAttendanceTrendQueryHandler",
+      "filePath": "Rmms.Application/Reports/AttendanceReports.cs",
+      "lineRange": [
+        78,
+        82
+      ],
+      "summary": "Hàm GetAttendanceTrendQueryHandler trong AttendanceReports.cs.",
+      "tags": [
+        "rmms.application",
+        "reports",
+        "code",
+        "cs",
+        "ham"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Rmms.Application/Reports/AttendanceReports.cs:ExportAttendanceReportCommandHandler",
+      "type": "function",
+      "name": "ExportAttendanceReportCommandHandler",
+      "filePath": "Rmms.Application/Reports/AttendanceReports.cs",
+      "lineRange": [
+        131,
+        135
+      ],
+      "summary": "Hàm ExportAttendanceReportCommandHandler trong AttendanceReports.cs.",
+      "tags": [
+        "rmms.application",
+        "reports",
+        "code",
+        "cs",
+        "ham"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Rmms.Application/Reports/AttendanceReports.cs:IsAnomaly",
+      "type": "function",
+      "name": "IsAnomaly",
+      "filePath": "Rmms.Application/Reports/AttendanceReports.cs",
+      "lineRange": [
+        168,
+        171
+      ],
+      "summary": "Hàm IsAnomaly trong AttendanceReports.cs.",
+      "tags": [
+        "rmms.application",
+        "reports",
+        "code",
+        "cs",
+        "ham"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Rmms.Application/Reports/AttendanceReports.cs:QueryAsync",
+      "type": "function",
+      "name": "QueryAsync",
+      "filePath": "Rmms.Application/Reports/AttendanceReports.cs",
+      "lineRange": [
+        175,
+        195
+      ],
+      "summary": "Hàm QueryAsync trong AttendanceReports.cs.",
+      "tags": [
+        "rmms.application",
+        "reports",
+        "code",
+        "cs",
+        "ham"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Rmms.Application/Reports/AttendanceReports.cs:NamesAsync",
+      "type": "function",
+      "name": "NamesAsync",
+      "filePath": "Rmms.Application/Reports/AttendanceReports.cs",
+      "lineRange": [
+        197,
+        210
+      ],
+      "summary": "Hàm NamesAsync trong AttendanceReports.cs.",
+      "tags": [
+        "rmms.application",
+        "reports",
+        "code",
+        "cs",
+        "ham"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:Rmms.Application/Reports/AttendanceReports.cs:GetAttendanceReportQueryHandler",
+      "type": "class",
+      "name": "GetAttendanceReportQueryHandler",
+      "filePath": "Rmms.Application/Reports/AttendanceReports.cs",
+      "lineRange": [
+        28,
+        63
+      ],
+      "summary": "Class GetAttendanceReportQueryHandler trong AttendanceReports.cs.",
+      "tags": [
+        "rmms.application",
+        "reports",
+        "code",
+        "cs",
+        "class"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "class:Rmms.Application/Reports/AttendanceReports.cs:GetAttendanceTrendQueryHandler",
+      "type": "class",
+      "name": "GetAttendanceTrendQueryHandler",
+      "filePath": "Rmms.Application/Reports/AttendanceReports.cs",
+      "lineRange": [
+        71,
+        118
+      ],
+      "summary": "Class GetAttendanceTrendQueryHandler trong AttendanceReports.cs.",
+      "tags": [
+        "rmms.application",
+        "reports",
+        "code",
+        "cs",
+        "class"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "class:Rmms.Application/Reports/AttendanceReports.cs:ExportAttendanceReportCommandHandler",
+      "type": "class",
+      "name": "ExportAttendanceReportCommandHandler",
+      "filePath": "Rmms.Application/Reports/AttendanceReports.cs",
+      "lineRange": [
+        126,
+        162
+      ],
+      "summary": "Class ExportAttendanceReportCommandHandler trong AttendanceReports.cs.",
+      "tags": [
+        "rmms.application",
+        "reports",
+        "code",
+        "cs",
+        "class"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "class:Rmms.Application/Reports/AttendanceReports.cs:AttendanceReportData",
+      "type": "class",
+      "name": "AttendanceReportData",
+      "filePath": "Rmms.Application/Reports/AttendanceReports.cs",
+      "lineRange": [
+        166,
+        211
+      ],
+      "summary": "Class AttendanceReportData trong AttendanceReports.cs.",
+      "tags": [
+        "rmms.application",
+        "reports",
+        "code",
+        "cs",
+        "class"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:Rmms.Application/Reports/RequestReports.cs",
+      "type": "file",
+      "name": "RequestReports.cs",
+      "filePath": "Rmms.Application/Reports/RequestReports.cs",
+      "summary": "RequestReports.cs — tệp mã nguồn C# trong backend RMMS (4 hàm, 2 class).",
+      "tags": [
+        "rmms.application",
+        "reports",
+        "code",
+        "cs"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:Rmms.Application/Reports/RequestReports.cs:ExportLeaveRequestsCommandHandler",
+      "type": "function",
+      "name": "ExportLeaveRequestsCommandHandler",
+      "filePath": "Rmms.Application/Reports/RequestReports.cs",
+      "lineRange": [
+        23,
+        27
+      ],
+      "summary": "Hàm ExportLeaveRequestsCommandHandler trong RequestReports.cs.",
+      "tags": [
+        "rmms.application",
+        "reports",
+        "code",
+        "cs",
+        "ham"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Rmms.Application/Reports/RequestReports.cs:Handle",
+      "type": "function",
+      "name": "Handle",
+      "filePath": "Rmms.Application/Reports/RequestReports.cs",
+      "lineRange": [
+        29,
+        56
+      ],
+      "summary": "Hàm Handle trong RequestReports.cs.",
+      "tags": [
+        "rmms.application",
+        "reports",
+        "code",
+        "cs",
+        "ham"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Rmms.Application/Reports/RequestReports.cs:ExportOtRequestsCommandHandler",
+      "type": "function",
+      "name": "ExportOtRequestsCommandHandler",
+      "filePath": "Rmms.Application/Reports/RequestReports.cs",
+      "lineRange": [
+        70,
+        74
+      ],
+      "summary": "Hàm ExportOtRequestsCommandHandler trong RequestReports.cs.",
+      "tags": [
+        "rmms.application",
+        "reports",
+        "code",
+        "cs",
+        "ham"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:Rmms.Application/Reports/RequestReports.cs:ExportLeaveRequestsCommandHandler",
+      "type": "class",
+      "name": "ExportLeaveRequestsCommandHandler",
+      "filePath": "Rmms.Application/Reports/RequestReports.cs",
+      "lineRange": [
+        16,
+        57
+      ],
+      "summary": "Class ExportLeaveRequestsCommandHandler trong RequestReports.cs.",
+      "tags": [
+        "rmms.application",
+        "reports",
+        "code",
+        "cs",
+        "class"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "class:Rmms.Application/Reports/RequestReports.cs:ExportOtRequestsCommandHandler",
+      "type": "class",
+      "name": "ExportOtRequestsCommandHandler",
+      "filePath": "Rmms.Application/Reports/RequestReports.cs",
+      "lineRange": [
+        63,
+        102
+      ],
+      "summary": "Class ExportOtRequestsCommandHandler trong RequestReports.cs.",
+      "tags": [
+        "rmms.application",
+        "reports",
+        "code",
+        "cs",
+        "class"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "config:Rmms.Application/Rmms.Application.csproj",
+      "type": "config",
+      "name": "Rmms.Application.csproj",
+      "filePath": "Rmms.Application/Rmms.Application.csproj",
+      "summary": "Rmms.Application.csproj — tệp cấu hình backend RMMS.",
+      "tags": [
+        "rmms.application",
+        "rmms.application.csproj",
+        "config",
+        "csproj"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:Rmms.Application/TeamMonitoring/GetTeamToday.cs",
+      "type": "file",
+      "name": "GetTeamToday.cs",
+      "filePath": "Rmms.Application/TeamMonitoring/GetTeamToday.cs",
+      "summary": "GetTeamToday.cs — tệp mã nguồn C# trong backend RMMS (3 hàm, 2 class).",
+      "tags": [
+        "rmms.application",
+        "teammonitoring",
+        "code",
+        "cs"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:Rmms.Application/TeamMonitoring/GetTeamToday.cs:GetTeamTodayQueryHandler",
+      "type": "function",
+      "name": "GetTeamTodayQueryHandler",
+      "filePath": "Rmms.Application/TeamMonitoring/GetTeamToday.cs",
+      "lineRange": [
+        46,
+        50
+      ],
+      "summary": "Hàm GetTeamTodayQueryHandler trong GetTeamToday.cs.",
+      "tags": [
+        "rmms.application",
+        "teammonitoring",
+        "code",
+        "cs",
+        "ham"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Rmms.Application/TeamMonitoring/GetTeamToday.cs:Handle",
+      "type": "function",
+      "name": "Handle",
+      "filePath": "Rmms.Application/TeamMonitoring/GetTeamToday.cs",
+      "lineRange": [
+        52,
+        147
+      ],
+      "summary": "Hàm Handle trong GetTeamToday.cs.",
+      "tags": [
+        "rmms.application",
+        "teammonitoring",
+        "code",
+        "cs",
+        "ham"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Rmms.Application/TeamMonitoring/GetTeamToday.cs:StatusRank",
+      "type": "function",
+      "name": "StatusRank",
+      "filePath": "Rmms.Application/TeamMonitoring/GetTeamToday.cs",
+      "lineRange": [
+        150,
+        158
+      ],
+      "summary": "Hàm StatusRank trong GetTeamToday.cs.",
+      "tags": [
+        "rmms.application",
+        "teammonitoring",
+        "code",
+        "cs",
+        "ham"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:Rmms.Application/TeamMonitoring/GetTeamToday.cs:TeamStatus",
+      "type": "class",
+      "name": "TeamStatus",
+      "filePath": "Rmms.Application/TeamMonitoring/GetTeamToday.cs",
+      "lineRange": [
+        31,
+        39
+      ],
+      "summary": "Class TeamStatus trong GetTeamToday.cs.",
+      "tags": [
+        "rmms.application",
+        "teammonitoring",
+        "code",
+        "cs",
+        "class"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "class:Rmms.Application/TeamMonitoring/GetTeamToday.cs:GetTeamTodayQueryHandler",
+      "type": "class",
+      "name": "GetTeamTodayQueryHandler",
+      "filePath": "Rmms.Application/TeamMonitoring/GetTeamToday.cs",
+      "lineRange": [
+        41,
+        159
+      ],
+      "summary": "Class GetTeamTodayQueryHandler trong GetTeamToday.cs.",
+      "tags": [
+        "rmms.application",
+        "teammonitoring",
+        "code",
+        "cs",
+        "class"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:Rmms.Application/VisitPlans/CreateVisitPlan.cs",
+      "type": "file",
+      "name": "CreateVisitPlan.cs",
+      "filePath": "Rmms.Application/VisitPlans/CreateVisitPlan.cs",
+      "summary": "CreateVisitPlan.cs — tệp mã nguồn C# trong backend RMMS (4 hàm, 3 class).",
+      "tags": [
+        "rmms.application",
+        "visitplans",
+        "code",
+        "cs"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:Rmms.Application/VisitPlans/CreateVisitPlan.cs:CreateVisitPlanCommandValidator",
+      "type": "function",
+      "name": "CreateVisitPlanCommandValidator",
+      "filePath": "Rmms.Application/VisitPlans/CreateVisitPlan.cs",
+      "lineRange": [
+        26,
+        30
+      ],
+      "summary": "Hàm CreateVisitPlanCommandValidator trong CreateVisitPlan.cs.",
+      "tags": [
+        "rmms.application",
+        "visitplans",
+        "code",
+        "cs",
+        "ham"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Rmms.Application/VisitPlans/CreateVisitPlan.cs:CreateVisitPlanCommandHandler",
+      "type": "function",
+      "name": "CreateVisitPlanCommandHandler",
+      "filePath": "Rmms.Application/VisitPlans/CreateVisitPlan.cs",
+      "lineRange": [
+        39,
+        44
+      ],
+      "summary": "Hàm CreateVisitPlanCommandHandler trong CreateVisitPlan.cs.",
+      "tags": [
+        "rmms.application",
+        "visitplans",
+        "code",
+        "cs",
+        "ham"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Rmms.Application/VisitPlans/CreateVisitPlan.cs:Handle",
+      "type": "function",
+      "name": "Handle",
+      "filePath": "Rmms.Application/VisitPlans/CreateVisitPlan.cs",
+      "lineRange": [
+        46,
+        71
+      ],
+      "summary": "Hàm Handle trong CreateVisitPlan.cs.",
+      "tags": [
+        "rmms.application",
+        "visitplans",
+        "code",
+        "cs",
+        "ham"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Rmms.Application/VisitPlans/CreateVisitPlan.cs:ValidateItemsAsync",
+      "type": "function",
+      "name": "ValidateItemsAsync",
+      "filePath": "Rmms.Application/VisitPlans/CreateVisitPlan.cs",
+      "lineRange": [
+        77,
+        103
+      ],
+      "summary": "Hàm ValidateItemsAsync trong CreateVisitPlan.cs.",
+      "tags": [
+        "rmms.application",
+        "visitplans",
+        "code",
+        "cs",
+        "ham"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:Rmms.Application/VisitPlans/CreateVisitPlan.cs:CreateVisitPlanCommandValidator",
+      "type": "class",
+      "name": "CreateVisitPlanCommandValidator",
+      "filePath": "Rmms.Application/VisitPlans/CreateVisitPlan.cs",
+      "lineRange": [
+        24,
+        31
+      ],
+      "summary": "Class CreateVisitPlanCommandValidator trong CreateVisitPlan.cs.",
+      "tags": [
+        "rmms.application",
+        "visitplans",
+        "code",
+        "cs",
+        "class"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "class:Rmms.Application/VisitPlans/CreateVisitPlan.cs:CreateVisitPlanCommandHandler",
+      "type": "class",
+      "name": "CreateVisitPlanCommandHandler",
+      "filePath": "Rmms.Application/VisitPlans/CreateVisitPlan.cs",
+      "lineRange": [
+        33,
+        72
+      ],
+      "summary": "Class CreateVisitPlanCommandHandler trong CreateVisitPlan.cs.",
+      "tags": [
+        "rmms.application",
+        "visitplans",
+        "code",
+        "cs",
+        "class"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "class:Rmms.Application/VisitPlans/CreateVisitPlan.cs:VisitPlanGuards",
+      "type": "class",
+      "name": "VisitPlanGuards",
+      "filePath": "Rmms.Application/VisitPlans/CreateVisitPlan.cs",
+      "lineRange": [
+        75,
+        104
+      ],
+      "summary": "Class VisitPlanGuards trong CreateVisitPlan.cs.",
+      "tags": [
+        "rmms.application",
+        "visitplans",
+        "code",
+        "cs",
+        "class"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:Rmms.Application/VisitPlans/EditVisitPlan.cs",
+      "type": "file",
+      "name": "EditVisitPlan.cs",
+      "filePath": "Rmms.Application/VisitPlans/EditVisitPlan.cs",
+      "summary": "EditVisitPlan.cs — tệp mã nguồn C# trong backend RMMS (3 hàm, 2 class).",
+      "tags": [
+        "rmms.application",
+        "visitplans",
+        "code",
+        "cs"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:Rmms.Application/VisitPlans/EditVisitPlan.cs:EditVisitPlanCommandValidator",
+      "type": "function",
+      "name": "EditVisitPlanCommandValidator",
+      "filePath": "Rmms.Application/VisitPlans/EditVisitPlan.cs",
+      "lineRange": [
+        23,
+        27
+      ],
+      "summary": "Hàm EditVisitPlanCommandValidator trong EditVisitPlan.cs.",
+      "tags": [
+        "rmms.application",
+        "visitplans",
+        "code",
+        "cs",
+        "ham"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Rmms.Application/VisitPlans/EditVisitPlan.cs:EditVisitPlanCommandHandler",
+      "type": "function",
+      "name": "EditVisitPlanCommandHandler",
+      "filePath": "Rmms.Application/VisitPlans/EditVisitPlan.cs",
+      "lineRange": [
+        35,
+        39
+      ],
+      "summary": "Hàm EditVisitPlanCommandHandler trong EditVisitPlan.cs.",
+      "tags": [
+        "rmms.application",
+        "visitplans",
+        "code",
+        "cs",
+        "ham"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Rmms.Application/VisitPlans/EditVisitPlan.cs:Handle",
+      "type": "function",
+      "name": "Handle",
+      "filePath": "Rmms.Application/VisitPlans/EditVisitPlan.cs",
+      "lineRange": [
+        41,
+        73
+      ],
+      "summary": "Hàm Handle trong EditVisitPlan.cs.",
+      "tags": [
+        "rmms.application",
+        "visitplans",
+        "code",
+        "cs",
+        "ham"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:Rmms.Application/VisitPlans/EditVisitPlan.cs:EditVisitPlanCommandValidator",
+      "type": "class",
+      "name": "EditVisitPlanCommandValidator",
+      "filePath": "Rmms.Application/VisitPlans/EditVisitPlan.cs",
+      "lineRange": [
+        21,
+        28
+      ],
+      "summary": "Class EditVisitPlanCommandValidator trong EditVisitPlan.cs.",
+      "tags": [
+        "rmms.application",
+        "visitplans",
+        "code",
+        "cs",
+        "class"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "class:Rmms.Application/VisitPlans/EditVisitPlan.cs:EditVisitPlanCommandHandler",
+      "type": "class",
+      "name": "EditVisitPlanCommandHandler",
+      "filePath": "Rmms.Application/VisitPlans/EditVisitPlan.cs",
+      "lineRange": [
+        30,
+        74
+      ],
+      "summary": "Class EditVisitPlanCommandHandler trong EditVisitPlan.cs.",
+      "tags": [
+        "rmms.application",
+        "visitplans",
+        "code",
+        "cs",
+        "class"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:Rmms.Application/VisitPlans/ExecuteVisitPlanItem.cs",
+      "type": "file",
+      "name": "ExecuteVisitPlanItem.cs",
+      "filePath": "Rmms.Application/VisitPlans/ExecuteVisitPlanItem.cs",
+      "summary": "ExecuteVisitPlanItem.cs — tệp mã nguồn C# trong backend RMMS (2 hàm, 1 class).",
+      "tags": [
+        "rmms.application",
+        "visitplans",
+        "code",
+        "cs"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Rmms.Application/VisitPlans/ExecuteVisitPlanItem.cs:ExecuteVisitItemCommandHandler",
+      "type": "function",
+      "name": "ExecuteVisitItemCommandHandler",
+      "filePath": "Rmms.Application/VisitPlans/ExecuteVisitPlanItem.cs",
+      "lineRange": [
+        25,
+        30
+      ],
+      "summary": "Hàm ExecuteVisitItemCommandHandler trong ExecuteVisitPlanItem.cs.",
+      "tags": [
+        "rmms.application",
+        "visitplans",
+        "code",
+        "cs",
+        "ham"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Rmms.Application/VisitPlans/ExecuteVisitPlanItem.cs:Handle",
+      "type": "function",
+      "name": "Handle",
+      "filePath": "Rmms.Application/VisitPlans/ExecuteVisitPlanItem.cs",
+      "lineRange": [
+        32,
+        82
+      ],
+      "summary": "Hàm Handle trong ExecuteVisitPlanItem.cs.",
+      "tags": [
+        "rmms.application",
+        "visitplans",
+        "code",
+        "cs",
+        "ham"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:Rmms.Application/VisitPlans/ExecuteVisitPlanItem.cs:ExecuteVisitItemCommandHandler",
+      "type": "class",
+      "name": "ExecuteVisitItemCommandHandler",
+      "filePath": "Rmms.Application/VisitPlans/ExecuteVisitPlanItem.cs",
+      "lineRange": [
+        19,
+        83
+      ],
+      "summary": "Class ExecuteVisitItemCommandHandler trong ExecuteVisitPlanItem.cs.",
+      "tags": [
+        "rmms.application",
+        "visitplans",
+        "code",
+        "cs",
+        "class"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:Rmms.Application/VisitPlans/GetVisitPlans.cs",
+      "type": "file",
+      "name": "GetVisitPlans.cs",
+      "filePath": "Rmms.Application/VisitPlans/GetVisitPlans.cs",
+      "summary": "GetVisitPlans.cs — tệp mã nguồn C# trong backend RMMS (7 hàm, 4 class).",
+      "tags": [
+        "rmms.application",
+        "visitplans",
+        "code",
+        "cs"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:Rmms.Application/VisitPlans/GetVisitPlans.cs:GetMyVisitPlansQueryHandler",
+      "type": "function",
+      "name": "GetMyVisitPlansQueryHandler",
+      "filePath": "Rmms.Application/VisitPlans/GetVisitPlans.cs",
+      "lineRange": [
+        19,
+        19
+      ],
+      "summary": "Hàm GetMyVisitPlansQueryHandler trong GetVisitPlans.cs.",
+      "tags": [
+        "rmms.application",
+        "visitplans",
+        "code",
+        "cs",
+        "ham"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Rmms.Application/VisitPlans/GetVisitPlans.cs:Handle",
+      "type": "function",
+      "name": "Handle",
+      "filePath": "Rmms.Application/VisitPlans/GetVisitPlans.cs",
+      "lineRange": [
+        21,
+        31
+      ],
+      "summary": "Hàm Handle trong GetVisitPlans.cs.",
+      "tags": [
+        "rmms.application",
+        "visitplans",
+        "code",
+        "cs",
+        "ham"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Rmms.Application/VisitPlans/GetVisitPlans.cs:GetVisitPlanQueryHandler",
+      "type": "function",
+      "name": "GetVisitPlanQueryHandler",
+      "filePath": "Rmms.Application/VisitPlans/GetVisitPlans.cs",
+      "lineRange": [
+        43,
+        43
+      ],
+      "summary": "Hàm GetVisitPlanQueryHandler trong GetVisitPlans.cs.",
+      "tags": [
+        "rmms.application",
+        "visitplans",
+        "code",
+        "cs",
+        "ham"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Rmms.Application/VisitPlans/GetVisitPlans.cs:AdminGetVisitPlansQueryHandler",
+      "type": "function",
+      "name": "AdminGetVisitPlansQueryHandler",
+      "filePath": "Rmms.Application/VisitPlans/GetVisitPlans.cs",
+      "lineRange": [
+        77,
+        77
+      ],
+      "summary": "Hàm AdminGetVisitPlansQueryHandler trong GetVisitPlans.cs.",
+      "tags": [
+        "rmms.application",
+        "visitplans",
+        "code",
+        "cs",
+        "ham"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Rmms.Application/VisitPlans/GetVisitPlans.cs:BuildAsync",
+      "type": "function",
+      "name": "BuildAsync",
+      "filePath": "Rmms.Application/VisitPlans/GetVisitPlans.cs",
+      "lineRange": [
+        112,
+        130
+      ],
+      "summary": "Hàm BuildAsync trong GetVisitPlans.cs.",
+      "tags": [
+        "rmms.application",
+        "visitplans",
+        "code",
+        "cs",
+        "ham"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:Rmms.Application/VisitPlans/GetVisitPlans.cs:GetMyVisitPlansQueryHandler",
+      "type": "class",
+      "name": "GetMyVisitPlansQueryHandler",
+      "filePath": "Rmms.Application/VisitPlans/GetVisitPlans.cs",
+      "lineRange": [
+        14,
+        32
+      ],
+      "summary": "Class GetMyVisitPlansQueryHandler trong GetVisitPlans.cs.",
+      "tags": [
+        "rmms.application",
+        "visitplans",
+        "code",
+        "cs",
+        "class"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "class:Rmms.Application/VisitPlans/GetVisitPlans.cs:GetVisitPlanQueryHandler",
+      "type": "class",
+      "name": "GetVisitPlanQueryHandler",
+      "filePath": "Rmms.Application/VisitPlans/GetVisitPlans.cs",
+      "lineRange": [
+        39,
+        65
+      ],
+      "summary": "Class GetVisitPlanQueryHandler trong GetVisitPlans.cs.",
+      "tags": [
+        "rmms.application",
+        "visitplans",
+        "code",
+        "cs",
+        "class"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "class:Rmms.Application/VisitPlans/GetVisitPlans.cs:AdminGetVisitPlansQueryHandler",
+      "type": "class",
+      "name": "AdminGetVisitPlansQueryHandler",
+      "filePath": "Rmms.Application/VisitPlans/GetVisitPlans.cs",
+      "lineRange": [
+        72,
+        107
+      ],
+      "summary": "Class AdminGetVisitPlansQueryHandler trong GetVisitPlans.cs.",
+      "tags": [
+        "rmms.application",
+        "visitplans",
+        "code",
+        "cs",
+        "class"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "class:Rmms.Application/VisitPlans/GetVisitPlans.cs:VisitPlanNames",
+      "type": "class",
+      "name": "VisitPlanNames",
+      "filePath": "Rmms.Application/VisitPlans/GetVisitPlans.cs",
+      "lineRange": [
+        110,
+        131
+      ],
+      "summary": "Class VisitPlanNames trong GetVisitPlans.cs.",
+      "tags": [
+        "rmms.application",
+        "visitplans",
+        "code",
+        "cs",
+        "class"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:Rmms.Application/VisitPlans/VisitPlanDtos.cs",
+      "type": "file",
+      "name": "VisitPlanDtos.cs",
+      "filePath": "Rmms.Application/VisitPlans/VisitPlanDtos.cs",
+      "summary": "VisitPlanDtos.cs — tệp mã nguồn C# trong backend RMMS (1 hàm, 1 class).",
+      "tags": [
+        "rmms.application",
+        "visitplans",
+        "code",
+        "cs"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Rmms.Application/VisitPlans/VisitPlanDtos.cs:ToDto",
+      "type": "function",
+      "name": "ToDto",
+      "filePath": "Rmms.Application/VisitPlans/VisitPlanDtos.cs",
+      "lineRange": [
+        40,
+        66
+      ],
+      "summary": "Hàm ToDto trong VisitPlanDtos.cs.",
+      "tags": [
+        "rmms.application",
+        "visitplans",
+        "code",
+        "cs",
+        "ham"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:Rmms.Application/VisitPlans/VisitPlanDtos.cs:VisitPlanMapper",
+      "type": "class",
+      "name": "VisitPlanMapper",
+      "filePath": "Rmms.Application/VisitPlans/VisitPlanDtos.cs",
+      "lineRange": [
+        38,
+        67
+      ],
+      "summary": "Class VisitPlanMapper trong VisitPlanDtos.cs.",
+      "tags": [
+        "rmms.application",
+        "visitplans",
+        "code",
+        "cs",
+        "class"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:Rmms.Application/VisitPlans/VisitPlanRouting.cs",
+      "type": "file",
+      "name": "VisitPlanRouting.cs",
+      "filePath": "Rmms.Application/VisitPlans/VisitPlanRouting.cs",
+      "summary": "VisitPlanRouting.cs — tệp mã nguồn C# trong backend RMMS (2 hàm, 2 class).",
+      "tags": [
+        "rmms.application",
+        "visitplans",
+        "code",
+        "cs"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Rmms.Application/VisitPlans/VisitPlanRouting.cs:RouteAsync",
+      "type": "function",
+      "name": "RouteAsync",
+      "filePath": "Rmms.Application/VisitPlans/VisitPlanRouting.cs",
+      "lineRange": [
+        11,
+        21
+      ],
+      "summary": "Hàm RouteAsync trong VisitPlanRouting.cs.",
+      "tags": [
+        "rmms.application",
+        "visitplans",
+        "code",
+        "cs",
+        "ham"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Rmms.Application/VisitPlans/VisitPlanRouting.cs:ResolveBuhApproverAsync",
+      "type": "function",
+      "name": "ResolveBuhApproverAsync",
+      "filePath": "Rmms.Application/VisitPlans/VisitPlanRouting.cs",
+      "lineRange": [
+        34,
+        43
+      ],
+      "summary": "Hàm ResolveBuhApproverAsync trong VisitPlanRouting.cs.",
+      "tags": [
+        "rmms.application",
+        "visitplans",
+        "code",
+        "cs",
+        "ham"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:Rmms.Application/VisitPlans/VisitPlanRouting.cs:VisitPlanProducer",
+      "type": "class",
+      "name": "VisitPlanProducer",
+      "filePath": "Rmms.Application/VisitPlans/VisitPlanRouting.cs",
+      "lineRange": [
+        9,
+        22
+      ],
+      "summary": "Class VisitPlanProducer trong VisitPlanRouting.cs.",
+      "tags": [
+        "rmms.application",
+        "visitplans",
+        "code",
+        "cs",
+        "class"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "class:Rmms.Application/VisitPlans/VisitPlanRouting.cs:VisitPlanRouting",
+      "type": "class",
+      "name": "VisitPlanRouting",
+      "filePath": "Rmms.Application/VisitPlans/VisitPlanRouting.cs",
+      "lineRange": [
+        32,
+        44
+      ],
+      "summary": "Class VisitPlanRouting trong VisitPlanRouting.cs.",
+      "tags": [
+        "rmms.application",
+        "visitplans",
+        "code",
+        "cs",
+        "class"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:Rmms.Application/WorkSchedule/ApproveRejectSchedule.cs",
+      "type": "file",
+      "name": "ApproveRejectSchedule.cs",
+      "filePath": "Rmms.Application/WorkSchedule/ApproveRejectSchedule.cs",
+      "summary": "ApproveRejectSchedule.cs — tệp mã nguồn C# trong backend RMMS (6 hàm, 3 class).",
+      "tags": [
+        "rmms.application",
+        "workschedule",
+        "code",
+        "cs"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:Rmms.Application/WorkSchedule/ApproveRejectSchedule.cs:ApproveScheduleCommandHandler",
+      "type": "function",
+      "name": "ApproveScheduleCommandHandler",
+      "filePath": "Rmms.Application/WorkSchedule/ApproveRejectSchedule.cs",
+      "lineRange": [
+        24,
+        30
+      ],
+      "summary": "Hàm ApproveScheduleCommandHandler trong ApproveRejectSchedule.cs.",
+      "tags": [
+        "rmms.application",
+        "workschedule",
+        "code",
+        "cs",
+        "ham"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Rmms.Application/WorkSchedule/ApproveRejectSchedule.cs:Handle",
+      "type": "function",
+      "name": "Handle",
+      "filePath": "Rmms.Application/WorkSchedule/ApproveRejectSchedule.cs",
+      "lineRange": [
+        32,
+        70
+      ],
+      "summary": "Hàm Handle trong ApproveRejectSchedule.cs.",
+      "tags": [
+        "rmms.application",
+        "workschedule",
+        "code",
+        "cs",
+        "ham"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Rmms.Application/WorkSchedule/ApproveRejectSchedule.cs:EnsureApproverScopeAsync",
+      "type": "function",
+      "name": "EnsureApproverScopeAsync",
+      "filePath": "Rmms.Application/WorkSchedule/ApproveRejectSchedule.cs",
+      "lineRange": [
+        72,
+        82
+      ],
+      "summary": "Hàm EnsureApproverScopeAsync trong ApproveRejectSchedule.cs.",
+      "tags": [
+        "rmms.application",
+        "workschedule",
+        "code",
+        "cs",
+        "ham"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Rmms.Application/WorkSchedule/ApproveRejectSchedule.cs:RejectScheduleCommandValidator",
+      "type": "function",
+      "name": "RejectScheduleCommandValidator",
+      "filePath": "Rmms.Application/WorkSchedule/ApproveRejectSchedule.cs",
+      "lineRange": [
+        92,
+        95
+      ],
+      "summary": "Hàm RejectScheduleCommandValidator trong ApproveRejectSchedule.cs.",
+      "tags": [
+        "rmms.application",
+        "workschedule",
+        "code",
+        "cs",
+        "ham"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Rmms.Application/WorkSchedule/ApproveRejectSchedule.cs:RejectScheduleCommandHandler",
+      "type": "function",
+      "name": "RejectScheduleCommandHandler",
+      "filePath": "Rmms.Application/WorkSchedule/ApproveRejectSchedule.cs",
+      "lineRange": [
+        105,
+        111
+      ],
+      "summary": "Hàm RejectScheduleCommandHandler trong ApproveRejectSchedule.cs.",
+      "tags": [
+        "rmms.application",
+        "workschedule",
+        "code",
+        "cs",
+        "ham"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:Rmms.Application/WorkSchedule/ApproveRejectSchedule.cs:ApproveScheduleCommandHandler",
+      "type": "class",
+      "name": "ApproveScheduleCommandHandler",
+      "filePath": "Rmms.Application/WorkSchedule/ApproveRejectSchedule.cs",
+      "lineRange": [
+        17,
+        83
+      ],
+      "summary": "Class ApproveScheduleCommandHandler trong ApproveRejectSchedule.cs.",
+      "tags": [
+        "rmms.application",
+        "workschedule",
+        "code",
+        "cs",
+        "class"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "class:Rmms.Application/WorkSchedule/ApproveRejectSchedule.cs:RejectScheduleCommandValidator",
+      "type": "class",
+      "name": "RejectScheduleCommandValidator",
+      "filePath": "Rmms.Application/WorkSchedule/ApproveRejectSchedule.cs",
+      "lineRange": [
+        90,
+        96
+      ],
+      "summary": "Class RejectScheduleCommandValidator trong ApproveRejectSchedule.cs.",
+      "tags": [
+        "rmms.application",
+        "workschedule",
+        "code",
+        "cs",
+        "class"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "class:Rmms.Application/WorkSchedule/ApproveRejectSchedule.cs:RejectScheduleCommandHandler",
+      "type": "class",
+      "name": "RejectScheduleCommandHandler",
+      "filePath": "Rmms.Application/WorkSchedule/ApproveRejectSchedule.cs",
+      "lineRange": [
+        98,
+        145
+      ],
+      "summary": "Class RejectScheduleCommandHandler trong ApproveRejectSchedule.cs.",
+      "tags": [
+        "rmms.application",
+        "workschedule",
+        "code",
+        "cs",
+        "class"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:Rmms.Application/WorkSchedule/CreateSchedule.cs",
+      "type": "file",
+      "name": "CreateSchedule.cs",
+      "filePath": "Rmms.Application/WorkSchedule/CreateSchedule.cs",
+      "summary": "CreateSchedule.cs — tệp mã nguồn C# trong backend RMMS (3 hàm, 2 class).",
+      "tags": [
+        "rmms.application",
+        "workschedule",
+        "code",
+        "cs"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:Rmms.Application/WorkSchedule/CreateSchedule.cs:CreateScheduleCommandValidator",
+      "type": "function",
+      "name": "CreateScheduleCommandValidator",
+      "filePath": "Rmms.Application/WorkSchedule/CreateSchedule.cs",
+      "lineRange": [
+        23,
+        30
+      ],
+      "summary": "Hàm CreateScheduleCommandValidator trong CreateSchedule.cs.",
+      "tags": [
+        "rmms.application",
+        "workschedule",
+        "code",
+        "cs",
+        "ham"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Rmms.Application/WorkSchedule/CreateSchedule.cs:CreateScheduleCommandHandler",
+      "type": "function",
+      "name": "CreateScheduleCommandHandler",
+      "filePath": "Rmms.Application/WorkSchedule/CreateSchedule.cs",
+      "lineRange": [
+        40,
+        45
+      ],
+      "summary": "Hàm CreateScheduleCommandHandler trong CreateSchedule.cs.",
+      "tags": [
+        "rmms.application",
+        "workschedule",
+        "code",
+        "cs",
+        "ham"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Rmms.Application/WorkSchedule/CreateSchedule.cs:Handle",
+      "type": "function",
+      "name": "Handle",
+      "filePath": "Rmms.Application/WorkSchedule/CreateSchedule.cs",
+      "lineRange": [
+        47,
+        107
+      ],
+      "summary": "Hàm Handle trong CreateSchedule.cs.",
+      "tags": [
+        "rmms.application",
+        "workschedule",
+        "code",
+        "cs",
+        "ham"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:Rmms.Application/WorkSchedule/CreateSchedule.cs:CreateScheduleCommandValidator",
+      "type": "class",
+      "name": "CreateScheduleCommandValidator",
+      "filePath": "Rmms.Application/WorkSchedule/CreateSchedule.cs",
+      "lineRange": [
+        21,
+        31
+      ],
+      "summary": "Class CreateScheduleCommandValidator trong CreateSchedule.cs.",
+      "tags": [
+        "rmms.application",
+        "workschedule",
+        "code",
+        "cs",
+        "class"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "class:Rmms.Application/WorkSchedule/CreateSchedule.cs:CreateScheduleCommandHandler",
+      "type": "class",
+      "name": "CreateScheduleCommandHandler",
+      "filePath": "Rmms.Application/WorkSchedule/CreateSchedule.cs",
+      "lineRange": [
+        33,
+        108
+      ],
+      "summary": "Class CreateScheduleCommandHandler trong CreateSchedule.cs.",
+      "tags": [
+        "rmms.application",
+        "workschedule",
+        "code",
+        "cs",
+        "class"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:Rmms.Application/WorkSchedule/EditSchedule.cs",
+      "type": "file",
+      "name": "EditSchedule.cs",
+      "filePath": "Rmms.Application/WorkSchedule/EditSchedule.cs",
+      "summary": "EditSchedule.cs — tệp mã nguồn C# trong backend RMMS (2 hàm, 1 class).",
+      "tags": [
+        "rmms.application",
+        "workschedule",
+        "code",
+        "cs"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Rmms.Application/WorkSchedule/EditSchedule.cs:EditScheduleCommandHandler",
+      "type": "function",
+      "name": "EditScheduleCommandHandler",
+      "filePath": "Rmms.Application/WorkSchedule/EditSchedule.cs",
+      "lineRange": [
+        26,
+        31
+      ],
+      "summary": "Hàm EditScheduleCommandHandler trong EditSchedule.cs.",
+      "tags": [
+        "rmms.application",
+        "workschedule",
+        "code",
+        "cs",
+        "ham"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Rmms.Application/WorkSchedule/EditSchedule.cs:Handle",
+      "type": "function",
+      "name": "Handle",
+      "filePath": "Rmms.Application/WorkSchedule/EditSchedule.cs",
+      "lineRange": [
+        33,
+        103
+      ],
+      "summary": "Hàm Handle trong EditSchedule.cs.",
+      "tags": [
+        "rmms.application",
+        "workschedule",
+        "code",
+        "cs",
+        "ham"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:Rmms.Application/WorkSchedule/EditSchedule.cs:EditScheduleCommandHandler",
+      "type": "class",
+      "name": "EditScheduleCommandHandler",
+      "filePath": "Rmms.Application/WorkSchedule/EditSchedule.cs",
+      "lineRange": [
+        20,
+        104
+      ],
+      "summary": "Class EditScheduleCommandHandler trong EditSchedule.cs.",
+      "tags": [
+        "rmms.application",
+        "workschedule",
+        "code",
+        "cs",
+        "class"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:Rmms.Application/WorkSchedule/GetSchedules.cs",
+      "type": "file",
+      "name": "GetSchedules.cs",
+      "filePath": "Rmms.Application/WorkSchedule/GetSchedules.cs",
+      "summary": "GetSchedules.cs — tệp mã nguồn C# trong backend RMMS (5 hàm, 3 class).",
+      "tags": [
+        "rmms.application",
+        "workschedule",
+        "code",
+        "cs"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:Rmms.Application/WorkSchedule/GetSchedules.cs:GetMyScheduleQueryHandler",
+      "type": "function",
+      "name": "GetMyScheduleQueryHandler",
+      "filePath": "Rmms.Application/WorkSchedule/GetSchedules.cs",
+      "lineRange": [
+        19,
+        19
+      ],
+      "summary": "Hàm GetMyScheduleQueryHandler trong GetSchedules.cs.",
+      "tags": [
+        "rmms.application",
+        "workschedule",
+        "code",
+        "cs",
+        "ham"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Rmms.Application/WorkSchedule/GetSchedules.cs:Handle",
+      "type": "function",
+      "name": "Handle",
+      "filePath": "Rmms.Application/WorkSchedule/GetSchedules.cs",
+      "lineRange": [
+        21,
+        25
+      ],
+      "summary": "Hàm Handle trong GetSchedules.cs.",
+      "tags": [
+        "rmms.application",
+        "workschedule",
+        "code",
+        "cs",
+        "ham"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Rmms.Application/WorkSchedule/GetSchedules.cs:GetUserScheduleQueryHandler",
+      "type": "function",
+      "name": "GetUserScheduleQueryHandler",
+      "filePath": "Rmms.Application/WorkSchedule/GetSchedules.cs",
+      "lineRange": [
+        38,
+        38
+      ],
+      "summary": "Hàm GetUserScheduleQueryHandler trong GetSchedules.cs.",
+      "tags": [
+        "rmms.application",
+        "workschedule",
+        "code",
+        "cs",
+        "ham"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Rmms.Application/WorkSchedule/GetSchedules.cs:LoadAsync",
+      "type": "function",
+      "name": "LoadAsync",
+      "filePath": "Rmms.Application/WorkSchedule/GetSchedules.cs",
+      "lineRange": [
+        63,
+        82
+      ],
+      "summary": "Hàm LoadAsync trong GetSchedules.cs.",
+      "tags": [
+        "rmms.application",
+        "workschedule",
+        "code",
+        "cs",
+        "ham"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:Rmms.Application/WorkSchedule/GetSchedules.cs:GetMyScheduleQueryHandler",
+      "type": "class",
+      "name": "GetMyScheduleQueryHandler",
+      "filePath": "Rmms.Application/WorkSchedule/GetSchedules.cs",
+      "lineRange": [
+        14,
+        26
+      ],
+      "summary": "Class GetMyScheduleQueryHandler trong GetSchedules.cs.",
+      "tags": [
+        "rmms.application",
+        "workschedule",
+        "code",
+        "cs",
+        "class"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "class:Rmms.Application/WorkSchedule/GetSchedules.cs:GetUserScheduleQueryHandler",
+      "type": "class",
+      "name": "GetUserScheduleQueryHandler",
+      "filePath": "Rmms.Application/WorkSchedule/GetSchedules.cs",
+      "lineRange": [
+        33,
+        57
+      ],
+      "summary": "Class GetUserScheduleQueryHandler trong GetSchedules.cs.",
+      "tags": [
+        "rmms.application",
+        "workschedule",
+        "code",
+        "cs",
+        "class"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "class:Rmms.Application/WorkSchedule/GetSchedules.cs:ScheduleLoader",
+      "type": "class",
+      "name": "ScheduleLoader",
+      "filePath": "Rmms.Application/WorkSchedule/GetSchedules.cs",
+      "lineRange": [
+        61,
+        83
+      ],
+      "summary": "Class ScheduleLoader trong GetSchedules.cs.",
+      "tags": [
+        "rmms.application",
+        "workschedule",
+        "code",
+        "cs",
+        "class"
+      ],
+      "complexity": "moderate"
+    }
+  ],
+  "edges": [
+    {
+      "source": "file:Rmms.Application/Organization/Categories/Categories.cs",
+      "target": "function:Rmms.Application/Organization/Categories/Categories.cs:CreateCategoryCommandValidator",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Application/Organization/Categories/Categories.cs",
+      "target": "function:Rmms.Application/Organization/Categories/Categories.cs:CreateCategoryCommandHandler",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Application/Organization/Categories/Categories.cs",
+      "target": "function:Rmms.Application/Organization/Categories/Categories.cs:Handle",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Application/Organization/Categories/Categories.cs",
+      "target": "function:Rmms.Application/Organization/Categories/Categories.cs:UpdateCategoryCommandValidator",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Application/Organization/Categories/Categories.cs",
+      "target": "function:Rmms.Application/Organization/Categories/Categories.cs:UpdateCategoryCommandHandler",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Application/Organization/Categories/Categories.cs",
+      "target": "function:Rmms.Application/Organization/Categories/Categories.cs:Handle",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Application/Organization/Categories/Categories.cs",
+      "target": "function:Rmms.Application/Organization/Categories/Categories.cs:DeleteCategoryCommandHandler",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Application/Organization/Categories/Categories.cs",
+      "target": "function:Rmms.Application/Organization/Categories/Categories.cs:Handle",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Application/Organization/Categories/Categories.cs",
+      "target": "function:Rmms.Application/Organization/Categories/Categories.cs:GetCategoriesQueryHandler",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Application/Organization/Categories/Categories.cs",
+      "target": "function:Rmms.Application/Organization/Categories/Categories.cs:Handle",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Application/Organization/Categories/Categories.cs",
+      "target": "class:Rmms.Application/Organization/Categories/Categories.cs:CreateCategoryCommandValidator",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Application/Organization/Categories/Categories.cs",
+      "target": "class:Rmms.Application/Organization/Categories/Categories.cs:CreateCategoryCommandHandler",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Application/Organization/Categories/Categories.cs",
+      "target": "class:Rmms.Application/Organization/Categories/Categories.cs:UpdateCategoryCommandValidator",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Application/Organization/Categories/Categories.cs",
+      "target": "class:Rmms.Application/Organization/Categories/Categories.cs:UpdateCategoryCommandHandler",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Application/Organization/Categories/Categories.cs",
+      "target": "class:Rmms.Application/Organization/Categories/Categories.cs:DeleteCategoryCommandHandler",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Application/Organization/Categories/Categories.cs",
+      "target": "class:Rmms.Application/Organization/Categories/Categories.cs:GetCategoriesQueryHandler",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Application/Organization/Me/GetMyLeader.cs",
+      "target": "function:Rmms.Application/Organization/Me/GetMyLeader.cs:GetMyLeaderQueryHandler",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Application/Organization/Me/GetMyLeader.cs",
+      "target": "function:Rmms.Application/Organization/Me/GetMyLeader.cs:Handle",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Application/Organization/Me/GetMyLeader.cs",
+      "target": "class:Rmms.Application/Organization/Me/GetMyLeader.cs:GetMyLeaderQueryHandler",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Application/Organization/Me/GetMyStores.cs",
+      "target": "function:Rmms.Application/Organization/Me/GetMyStores.cs:GetMyStoresQueryHandler",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Application/Organization/Me/GetMyStores.cs",
+      "target": "function:Rmms.Application/Organization/Me/GetMyStores.cs:Handle",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Application/Organization/Me/GetMyStores.cs",
+      "target": "class:Rmms.Application/Organization/Me/GetMyStores.cs:GetMyStoresQueryHandler",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Application/Organization/Products/Products.cs",
+      "target": "function:Rmms.Application/Organization/Products/Products.cs:CreateProductCommandValidator",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Application/Organization/Products/Products.cs",
+      "target": "function:Rmms.Application/Organization/Products/Products.cs:CreateProductCommandHandler",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Application/Organization/Products/Products.cs",
+      "target": "function:Rmms.Application/Organization/Products/Products.cs:Handle",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Application/Organization/Products/Products.cs",
+      "target": "function:Rmms.Application/Organization/Products/Products.cs:UpdateProductCommandValidator",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Application/Organization/Products/Products.cs",
+      "target": "function:Rmms.Application/Organization/Products/Products.cs:UpdateProductCommandHandler",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Application/Organization/Products/Products.cs",
+      "target": "function:Rmms.Application/Organization/Products/Products.cs:Handle",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Application/Organization/Products/Products.cs",
+      "target": "function:Rmms.Application/Organization/Products/Products.cs:ChangeProductStatusCommandHandler",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Application/Organization/Products/Products.cs",
+      "target": "function:Rmms.Application/Organization/Products/Products.cs:Handle",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Application/Organization/Products/Products.cs",
+      "target": "function:Rmms.Application/Organization/Products/Products.cs:DeleteProductCommandHandler",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Application/Organization/Products/Products.cs",
+      "target": "function:Rmms.Application/Organization/Products/Products.cs:Handle",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Application/Organization/Products/Products.cs",
+      "target": "function:Rmms.Application/Organization/Products/Products.cs:GetProductsQueryHandler",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Application/Organization/Products/Products.cs",
+      "target": "function:Rmms.Application/Organization/Products/Products.cs:Handle",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Application/Organization/Products/Products.cs",
+      "target": "function:Rmms.Application/Organization/Products/Products.cs:IsValidAttributes",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Application/Organization/Products/Products.cs",
+      "target": "function:Rmms.Application/Organization/Products/Products.cs:TryParseStatus",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Application/Organization/Products/Products.cs",
+      "target": "class:Rmms.Application/Organization/Products/Products.cs:CreateProductCommandValidator",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Application/Organization/Products/Products.cs",
+      "target": "class:Rmms.Application/Organization/Products/Products.cs:CreateProductCommandHandler",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Application/Organization/Products/Products.cs",
+      "target": "class:Rmms.Application/Organization/Products/Products.cs:UpdateProductCommandValidator",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Application/Organization/Products/Products.cs",
+      "target": "class:Rmms.Application/Organization/Products/Products.cs:UpdateProductCommandHandler",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Application/Organization/Products/Products.cs",
+      "target": "class:Rmms.Application/Organization/Products/Products.cs:ChangeProductStatusCommandHandler",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Application/Organization/Products/Products.cs",
+      "target": "class:Rmms.Application/Organization/Products/Products.cs:DeleteProductCommandHandler",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Application/Organization/Products/Products.cs",
+      "target": "class:Rmms.Application/Organization/Products/Products.cs:GetProductsQueryHandler",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Application/Organization/Products/Products.cs",
+      "target": "class:Rmms.Application/Organization/Products/Products.cs:ProductRules",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Application/Organization/Stores/ChangeStoreStatus.cs",
+      "target": "function:Rmms.Application/Organization/Stores/ChangeStoreStatus.cs:ChangeStoreStatusCommandValidator",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Application/Organization/Stores/ChangeStoreStatus.cs",
+      "target": "function:Rmms.Application/Organization/Stores/ChangeStoreStatus.cs:ChangeStoreStatusCommandHandler",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Application/Organization/Stores/ChangeStoreStatus.cs",
+      "target": "function:Rmms.Application/Organization/Stores/ChangeStoreStatus.cs:Handle",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Application/Organization/Stores/ChangeStoreStatus.cs",
+      "target": "class:Rmms.Application/Organization/Stores/ChangeStoreStatus.cs:ChangeStoreStatusCommandValidator",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Application/Organization/Stores/ChangeStoreStatus.cs",
+      "target": "class:Rmms.Application/Organization/Stores/ChangeStoreStatus.cs:ChangeStoreStatusCommandHandler",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Application/Organization/Stores/CreateStore.cs",
+      "target": "function:Rmms.Application/Organization/Stores/CreateStore.cs:CreateStoreCommandValidator",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Application/Organization/Stores/CreateStore.cs",
+      "target": "function:Rmms.Application/Organization/Stores/CreateStore.cs:CreateStoreCommandHandler",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Application/Organization/Stores/CreateStore.cs",
+      "target": "function:Rmms.Application/Organization/Stores/CreateStore.cs:Handle",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Application/Organization/Stores/CreateStore.cs",
+      "target": "class:Rmms.Application/Organization/Stores/CreateStore.cs:CreateStoreCommandValidator",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Application/Organization/Stores/CreateStore.cs",
+      "target": "class:Rmms.Application/Organization/Stores/CreateStore.cs:CreateStoreCommandHandler",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Application/Organization/Stores/DeleteStore.cs",
+      "target": "function:Rmms.Application/Organization/Stores/DeleteStore.cs:DeleteStoreCommandHandler",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Application/Organization/Stores/DeleteStore.cs",
+      "target": "function:Rmms.Application/Organization/Stores/DeleteStore.cs:Handle",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Application/Organization/Stores/DeleteStore.cs",
+      "target": "class:Rmms.Application/Organization/Stores/DeleteStore.cs:DeleteStoreCommandHandler",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Application/Organization/Stores/GetStores.cs",
+      "target": "function:Rmms.Application/Organization/Stores/GetStores.cs:GetStoresQueryHandler",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Application/Organization/Stores/GetStores.cs",
+      "target": "function:Rmms.Application/Organization/Stores/GetStores.cs:Handle",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Application/Organization/Stores/GetStores.cs",
+      "target": "class:Rmms.Application/Organization/Stores/GetStores.cs:GetStoresQueryHandler",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Application/Organization/Stores/UpdateStore.cs",
+      "target": "function:Rmms.Application/Organization/Stores/UpdateStore.cs:UpdateStoreCommandValidator",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Application/Organization/Stores/UpdateStore.cs",
+      "target": "function:Rmms.Application/Organization/Stores/UpdateStore.cs:UpdateStoreCommandHandler",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Application/Organization/Stores/UpdateStore.cs",
+      "target": "function:Rmms.Application/Organization/Stores/UpdateStore.cs:Handle",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Application/Organization/Stores/UpdateStore.cs",
+      "target": "class:Rmms.Application/Organization/Stores/UpdateStore.cs:UpdateStoreCommandValidator",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Application/Organization/Stores/UpdateStore.cs",
+      "target": "class:Rmms.Application/Organization/Stores/UpdateStore.cs:UpdateStoreCommandHandler",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Application/Organization/Views/OrgViews.cs",
+      "target": "function:Rmms.Application/Organization/Views/OrgViews.cs:GetOrgHierarchyQueryHandler",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Application/Organization/Views/OrgViews.cs",
+      "target": "function:Rmms.Application/Organization/Views/OrgViews.cs:Handle",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Application/Organization/Views/OrgViews.cs",
+      "target": "function:Rmms.Application/Organization/Views/OrgViews.cs:GetOrgAreaTreeQueryHandler",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Application/Organization/Views/OrgViews.cs",
+      "target": "function:Rmms.Application/Organization/Views/OrgViews.cs:Handle",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Application/Organization/Views/OrgViews.cs",
+      "target": "class:Rmms.Application/Organization/Views/OrgViews.cs:GetOrgHierarchyQueryHandler",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Application/Organization/Views/OrgViews.cs",
+      "target": "class:Rmms.Application/Organization/Views/OrgViews.cs:GetOrgAreaTreeQueryHandler",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Application/Reports/AttendanceReports.cs",
+      "target": "function:Rmms.Application/Reports/AttendanceReports.cs:GetAttendanceReportQueryHandler",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Application/Reports/AttendanceReports.cs",
+      "target": "function:Rmms.Application/Reports/AttendanceReports.cs:Handle",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Application/Reports/AttendanceReports.cs",
+      "target": "function:Rmms.Application/Reports/AttendanceReports.cs:GetAttendanceTrendQueryHandler",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Application/Reports/AttendanceReports.cs",
+      "target": "function:Rmms.Application/Reports/AttendanceReports.cs:Handle",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Application/Reports/AttendanceReports.cs",
+      "target": "function:Rmms.Application/Reports/AttendanceReports.cs:ExportAttendanceReportCommandHandler",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Application/Reports/AttendanceReports.cs",
+      "target": "function:Rmms.Application/Reports/AttendanceReports.cs:Handle",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Application/Reports/AttendanceReports.cs",
+      "target": "function:Rmms.Application/Reports/AttendanceReports.cs:IsAnomaly",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Application/Reports/AttendanceReports.cs",
+      "target": "function:Rmms.Application/Reports/AttendanceReports.cs:QueryAsync",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Application/Reports/AttendanceReports.cs",
+      "target": "function:Rmms.Application/Reports/AttendanceReports.cs:NamesAsync",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Application/Reports/AttendanceReports.cs",
+      "target": "class:Rmms.Application/Reports/AttendanceReports.cs:GetAttendanceReportQueryHandler",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Application/Reports/AttendanceReports.cs",
+      "target": "class:Rmms.Application/Reports/AttendanceReports.cs:GetAttendanceTrendQueryHandler",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Application/Reports/AttendanceReports.cs",
+      "target": "class:Rmms.Application/Reports/AttendanceReports.cs:ExportAttendanceReportCommandHandler",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Application/Reports/AttendanceReports.cs",
+      "target": "class:Rmms.Application/Reports/AttendanceReports.cs:AttendanceReportData",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Application/Reports/RequestReports.cs",
+      "target": "function:Rmms.Application/Reports/RequestReports.cs:ExportLeaveRequestsCommandHandler",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Application/Reports/RequestReports.cs",
+      "target": "function:Rmms.Application/Reports/RequestReports.cs:Handle",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Application/Reports/RequestReports.cs",
+      "target": "function:Rmms.Application/Reports/RequestReports.cs:ExportOtRequestsCommandHandler",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Application/Reports/RequestReports.cs",
+      "target": "function:Rmms.Application/Reports/RequestReports.cs:Handle",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Application/Reports/RequestReports.cs",
+      "target": "class:Rmms.Application/Reports/RequestReports.cs:ExportLeaveRequestsCommandHandler",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Application/Reports/RequestReports.cs",
+      "target": "class:Rmms.Application/Reports/RequestReports.cs:ExportOtRequestsCommandHandler",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Application/TeamMonitoring/GetTeamToday.cs",
+      "target": "function:Rmms.Application/TeamMonitoring/GetTeamToday.cs:GetTeamTodayQueryHandler",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Application/TeamMonitoring/GetTeamToday.cs",
+      "target": "function:Rmms.Application/TeamMonitoring/GetTeamToday.cs:Handle",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Application/TeamMonitoring/GetTeamToday.cs",
+      "target": "function:Rmms.Application/TeamMonitoring/GetTeamToday.cs:StatusRank",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Application/TeamMonitoring/GetTeamToday.cs",
+      "target": "class:Rmms.Application/TeamMonitoring/GetTeamToday.cs:TeamStatus",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Application/TeamMonitoring/GetTeamToday.cs",
+      "target": "class:Rmms.Application/TeamMonitoring/GetTeamToday.cs:GetTeamTodayQueryHandler",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Application/VisitPlans/CreateVisitPlan.cs",
+      "target": "function:Rmms.Application/VisitPlans/CreateVisitPlan.cs:CreateVisitPlanCommandValidator",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Application/VisitPlans/CreateVisitPlan.cs",
+      "target": "function:Rmms.Application/VisitPlans/CreateVisitPlan.cs:CreateVisitPlanCommandHandler",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Application/VisitPlans/CreateVisitPlan.cs",
+      "target": "function:Rmms.Application/VisitPlans/CreateVisitPlan.cs:Handle",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Application/VisitPlans/CreateVisitPlan.cs",
+      "target": "function:Rmms.Application/VisitPlans/CreateVisitPlan.cs:ValidateItemsAsync",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Application/VisitPlans/CreateVisitPlan.cs",
+      "target": "class:Rmms.Application/VisitPlans/CreateVisitPlan.cs:CreateVisitPlanCommandValidator",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Application/VisitPlans/CreateVisitPlan.cs",
+      "target": "class:Rmms.Application/VisitPlans/CreateVisitPlan.cs:CreateVisitPlanCommandHandler",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Application/VisitPlans/CreateVisitPlan.cs",
+      "target": "class:Rmms.Application/VisitPlans/CreateVisitPlan.cs:VisitPlanGuards",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Application/VisitPlans/EditVisitPlan.cs",
+      "target": "function:Rmms.Application/VisitPlans/EditVisitPlan.cs:EditVisitPlanCommandValidator",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Application/VisitPlans/EditVisitPlan.cs",
+      "target": "function:Rmms.Application/VisitPlans/EditVisitPlan.cs:EditVisitPlanCommandHandler",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Application/VisitPlans/EditVisitPlan.cs",
+      "target": "function:Rmms.Application/VisitPlans/EditVisitPlan.cs:Handle",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Application/VisitPlans/EditVisitPlan.cs",
+      "target": "class:Rmms.Application/VisitPlans/EditVisitPlan.cs:EditVisitPlanCommandValidator",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Application/VisitPlans/EditVisitPlan.cs",
+      "target": "class:Rmms.Application/VisitPlans/EditVisitPlan.cs:EditVisitPlanCommandHandler",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Application/VisitPlans/ExecuteVisitPlanItem.cs",
+      "target": "function:Rmms.Application/VisitPlans/ExecuteVisitPlanItem.cs:ExecuteVisitItemCommandHandler",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Application/VisitPlans/ExecuteVisitPlanItem.cs",
+      "target": "function:Rmms.Application/VisitPlans/ExecuteVisitPlanItem.cs:Handle",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Application/VisitPlans/ExecuteVisitPlanItem.cs",
+      "target": "class:Rmms.Application/VisitPlans/ExecuteVisitPlanItem.cs:ExecuteVisitItemCommandHandler",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Application/VisitPlans/GetVisitPlans.cs",
+      "target": "function:Rmms.Application/VisitPlans/GetVisitPlans.cs:GetMyVisitPlansQueryHandler",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Application/VisitPlans/GetVisitPlans.cs",
+      "target": "function:Rmms.Application/VisitPlans/GetVisitPlans.cs:Handle",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Application/VisitPlans/GetVisitPlans.cs",
+      "target": "function:Rmms.Application/VisitPlans/GetVisitPlans.cs:GetVisitPlanQueryHandler",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Application/VisitPlans/GetVisitPlans.cs",
+      "target": "function:Rmms.Application/VisitPlans/GetVisitPlans.cs:Handle",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Application/VisitPlans/GetVisitPlans.cs",
+      "target": "function:Rmms.Application/VisitPlans/GetVisitPlans.cs:AdminGetVisitPlansQueryHandler",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Application/VisitPlans/GetVisitPlans.cs",
+      "target": "function:Rmms.Application/VisitPlans/GetVisitPlans.cs:Handle",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Application/VisitPlans/GetVisitPlans.cs",
+      "target": "function:Rmms.Application/VisitPlans/GetVisitPlans.cs:BuildAsync",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Application/VisitPlans/GetVisitPlans.cs",
+      "target": "class:Rmms.Application/VisitPlans/GetVisitPlans.cs:GetMyVisitPlansQueryHandler",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Application/VisitPlans/GetVisitPlans.cs",
+      "target": "class:Rmms.Application/VisitPlans/GetVisitPlans.cs:GetVisitPlanQueryHandler",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Application/VisitPlans/GetVisitPlans.cs",
+      "target": "class:Rmms.Application/VisitPlans/GetVisitPlans.cs:AdminGetVisitPlansQueryHandler",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Application/VisitPlans/GetVisitPlans.cs",
+      "target": "class:Rmms.Application/VisitPlans/GetVisitPlans.cs:VisitPlanNames",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Application/VisitPlans/VisitPlanDtos.cs",
+      "target": "function:Rmms.Application/VisitPlans/VisitPlanDtos.cs:ToDto",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Application/VisitPlans/VisitPlanDtos.cs",
+      "target": "class:Rmms.Application/VisitPlans/VisitPlanDtos.cs:VisitPlanMapper",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Application/VisitPlans/VisitPlanRouting.cs",
+      "target": "function:Rmms.Application/VisitPlans/VisitPlanRouting.cs:RouteAsync",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Application/VisitPlans/VisitPlanRouting.cs",
+      "target": "function:Rmms.Application/VisitPlans/VisitPlanRouting.cs:ResolveBuhApproverAsync",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Application/VisitPlans/VisitPlanRouting.cs",
+      "target": "class:Rmms.Application/VisitPlans/VisitPlanRouting.cs:VisitPlanProducer",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Application/VisitPlans/VisitPlanRouting.cs",
+      "target": "class:Rmms.Application/VisitPlans/VisitPlanRouting.cs:VisitPlanRouting",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Application/WorkSchedule/ApproveRejectSchedule.cs",
+      "target": "function:Rmms.Application/WorkSchedule/ApproveRejectSchedule.cs:ApproveScheduleCommandHandler",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Application/WorkSchedule/ApproveRejectSchedule.cs",
+      "target": "function:Rmms.Application/WorkSchedule/ApproveRejectSchedule.cs:Handle",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Application/WorkSchedule/ApproveRejectSchedule.cs",
+      "target": "function:Rmms.Application/WorkSchedule/ApproveRejectSchedule.cs:EnsureApproverScopeAsync",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Application/WorkSchedule/ApproveRejectSchedule.cs",
+      "target": "function:Rmms.Application/WorkSchedule/ApproveRejectSchedule.cs:RejectScheduleCommandValidator",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Application/WorkSchedule/ApproveRejectSchedule.cs",
+      "target": "function:Rmms.Application/WorkSchedule/ApproveRejectSchedule.cs:RejectScheduleCommandHandler",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Application/WorkSchedule/ApproveRejectSchedule.cs",
+      "target": "function:Rmms.Application/WorkSchedule/ApproveRejectSchedule.cs:Handle",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Application/WorkSchedule/ApproveRejectSchedule.cs",
+      "target": "class:Rmms.Application/WorkSchedule/ApproveRejectSchedule.cs:ApproveScheduleCommandHandler",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Application/WorkSchedule/ApproveRejectSchedule.cs",
+      "target": "class:Rmms.Application/WorkSchedule/ApproveRejectSchedule.cs:RejectScheduleCommandValidator",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Application/WorkSchedule/ApproveRejectSchedule.cs",
+      "target": "class:Rmms.Application/WorkSchedule/ApproveRejectSchedule.cs:RejectScheduleCommandHandler",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Application/WorkSchedule/CreateSchedule.cs",
+      "target": "function:Rmms.Application/WorkSchedule/CreateSchedule.cs:CreateScheduleCommandValidator",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Application/WorkSchedule/CreateSchedule.cs",
+      "target": "function:Rmms.Application/WorkSchedule/CreateSchedule.cs:CreateScheduleCommandHandler",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Application/WorkSchedule/CreateSchedule.cs",
+      "target": "function:Rmms.Application/WorkSchedule/CreateSchedule.cs:Handle",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Application/WorkSchedule/CreateSchedule.cs",
+      "target": "class:Rmms.Application/WorkSchedule/CreateSchedule.cs:CreateScheduleCommandValidator",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Application/WorkSchedule/CreateSchedule.cs",
+      "target": "class:Rmms.Application/WorkSchedule/CreateSchedule.cs:CreateScheduleCommandHandler",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Application/WorkSchedule/EditSchedule.cs",
+      "target": "function:Rmms.Application/WorkSchedule/EditSchedule.cs:EditScheduleCommandHandler",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Application/WorkSchedule/EditSchedule.cs",
+      "target": "function:Rmms.Application/WorkSchedule/EditSchedule.cs:Handle",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Application/WorkSchedule/EditSchedule.cs",
+      "target": "class:Rmms.Application/WorkSchedule/EditSchedule.cs:EditScheduleCommandHandler",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Application/WorkSchedule/GetSchedules.cs",
+      "target": "function:Rmms.Application/WorkSchedule/GetSchedules.cs:GetMyScheduleQueryHandler",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Application/WorkSchedule/GetSchedules.cs",
+      "target": "function:Rmms.Application/WorkSchedule/GetSchedules.cs:Handle",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Application/WorkSchedule/GetSchedules.cs",
+      "target": "function:Rmms.Application/WorkSchedule/GetSchedules.cs:GetUserScheduleQueryHandler",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Application/WorkSchedule/GetSchedules.cs",
+      "target": "function:Rmms.Application/WorkSchedule/GetSchedules.cs:Handle",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Application/WorkSchedule/GetSchedules.cs",
+      "target": "function:Rmms.Application/WorkSchedule/GetSchedules.cs:LoadAsync",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Application/WorkSchedule/GetSchedules.cs",
+      "target": "class:Rmms.Application/WorkSchedule/GetSchedules.cs:GetMyScheduleQueryHandler",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Application/WorkSchedule/GetSchedules.cs",
+      "target": "class:Rmms.Application/WorkSchedule/GetSchedules.cs:GetUserScheduleQueryHandler",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Application/WorkSchedule/GetSchedules.cs",
+      "target": "class:Rmms.Application/WorkSchedule/GetSchedules.cs:ScheduleLoader",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    }
+  ]
+}

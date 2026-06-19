@@ -1,0 +1,1266 @@
+{
+  "nodes": [
+    {
+      "id": "file:Rmms.Application/Auth/ResetPassword/ResetPasswordCommandHandler.cs",
+      "type": "file",
+      "name": "ResetPasswordCommandHandler.cs",
+      "filePath": "Rmms.Application/Auth/ResetPassword/ResetPasswordCommandHandler.cs",
+      "summary": "ResetPasswordCommandHandler.cs — tệp mã nguồn C# trong backend RMMS (2 hàm, 1 class).",
+      "tags": [
+        "rmms.application",
+        "auth",
+        "code",
+        "cs"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Rmms.Application/Auth/ResetPassword/ResetPasswordCommandHandler.cs:ResetPasswordCommandHandler",
+      "type": "function",
+      "name": "ResetPasswordCommandHandler",
+      "filePath": "Rmms.Application/Auth/ResetPassword/ResetPasswordCommandHandler.cs",
+      "lineRange": [
+        29,
+        39
+      ],
+      "summary": "Hàm ResetPasswordCommandHandler trong ResetPasswordCommandHandler.cs.",
+      "tags": [
+        "rmms.application",
+        "auth",
+        "code",
+        "cs",
+        "ham"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Rmms.Application/Auth/ResetPassword/ResetPasswordCommandHandler.cs:Handle",
+      "type": "function",
+      "name": "Handle",
+      "filePath": "Rmms.Application/Auth/ResetPassword/ResetPasswordCommandHandler.cs",
+      "lineRange": [
+        41,
+        95
+      ],
+      "summary": "Hàm Handle trong ResetPasswordCommandHandler.cs.",
+      "tags": [
+        "rmms.application",
+        "auth",
+        "code",
+        "cs",
+        "ham"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:Rmms.Application/Auth/ResetPassword/ResetPasswordCommandHandler.cs:ResetPasswordCommandHandler",
+      "type": "class",
+      "name": "ResetPasswordCommandHandler",
+      "filePath": "Rmms.Application/Auth/ResetPassword/ResetPasswordCommandHandler.cs",
+      "lineRange": [
+        22,
+        96
+      ],
+      "summary": "Class ResetPasswordCommandHandler trong ResetPasswordCommandHandler.cs.",
+      "tags": [
+        "rmms.application",
+        "auth",
+        "code",
+        "cs",
+        "class"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:Rmms.Application/Auth/ResetPassword/ResetPasswordCommandValidator.cs",
+      "type": "file",
+      "name": "ResetPasswordCommandValidator.cs",
+      "filePath": "Rmms.Application/Auth/ResetPassword/ResetPasswordCommandValidator.cs",
+      "summary": "ResetPasswordCommandValidator.cs — tệp mã nguồn C# trong backend RMMS (3 hàm, 1 class).",
+      "tags": [
+        "rmms.application",
+        "auth",
+        "code",
+        "cs"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Rmms.Application/Auth/ResetPassword/ResetPasswordCommandValidator.cs:ResetPasswordCommandValidator",
+      "type": "function",
+      "name": "ResetPasswordCommandValidator",
+      "filePath": "Rmms.Application/Auth/ResetPassword/ResetPasswordCommandValidator.cs",
+      "lineRange": [
+        7,
+        18
+      ],
+      "summary": "Hàm ResetPasswordCommandValidator trong ResetPasswordCommandValidator.cs.",
+      "tags": [
+        "rmms.application",
+        "auth",
+        "code",
+        "cs",
+        "ham"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Rmms.Application/Auth/ResetPassword/ResetPasswordCommandValidator.cs:HasLetter",
+      "type": "function",
+      "name": "HasLetter",
+      "filePath": "Rmms.Application/Auth/ResetPassword/ResetPasswordCommandValidator.cs",
+      "lineRange": [
+        20,
+        20
+      ],
+      "summary": "Hàm HasLetter trong ResetPasswordCommandValidator.cs.",
+      "tags": [
+        "rmms.application",
+        "auth",
+        "code",
+        "cs",
+        "ham"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Rmms.Application/Auth/ResetPassword/ResetPasswordCommandValidator.cs:HasDigit",
+      "type": "function",
+      "name": "HasDigit",
+      "filePath": "Rmms.Application/Auth/ResetPassword/ResetPasswordCommandValidator.cs",
+      "lineRange": [
+        21,
+        21
+      ],
+      "summary": "Hàm HasDigit trong ResetPasswordCommandValidator.cs.",
+      "tags": [
+        "rmms.application",
+        "auth",
+        "code",
+        "cs",
+        "ham"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:Rmms.Application/Auth/ResetPassword/ResetPasswordCommandValidator.cs:ResetPasswordCommandValidator",
+      "type": "class",
+      "name": "ResetPasswordCommandValidator",
+      "filePath": "Rmms.Application/Auth/ResetPassword/ResetPasswordCommandValidator.cs",
+      "lineRange": [
+        5,
+        22
+      ],
+      "summary": "Class ResetPasswordCommandValidator trong ResetPasswordCommandValidator.cs.",
+      "tags": [
+        "rmms.application",
+        "auth",
+        "code",
+        "cs",
+        "class"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:Rmms.Application/Auth/VerifyEmail/VerifyEmailCommand.cs",
+      "type": "file",
+      "name": "VerifyEmailCommand.cs",
+      "filePath": "Rmms.Application/Auth/VerifyEmail/VerifyEmailCommand.cs",
+      "summary": "VerifyEmailCommand.cs — tệp mã nguồn C# trong backend RMMS (0 hàm, 0 class).",
+      "tags": [
+        "rmms.application",
+        "auth",
+        "code",
+        "cs"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:Rmms.Application/Auth/VerifyEmail/VerifyEmailCommandHandler.cs",
+      "type": "file",
+      "name": "VerifyEmailCommandHandler.cs",
+      "filePath": "Rmms.Application/Auth/VerifyEmail/VerifyEmailCommandHandler.cs",
+      "summary": "VerifyEmailCommandHandler.cs — tệp mã nguồn C# trong backend RMMS (2 hàm, 1 class).",
+      "tags": [
+        "rmms.application",
+        "auth",
+        "code",
+        "cs"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Rmms.Application/Auth/VerifyEmail/VerifyEmailCommandHandler.cs:VerifyEmailCommandHandler",
+      "type": "function",
+      "name": "VerifyEmailCommandHandler",
+      "filePath": "Rmms.Application/Auth/VerifyEmail/VerifyEmailCommandHandler.cs",
+      "lineRange": [
+        29,
+        34
+      ],
+      "summary": "Hàm VerifyEmailCommandHandler trong VerifyEmailCommandHandler.cs.",
+      "tags": [
+        "rmms.application",
+        "auth",
+        "code",
+        "cs",
+        "ham"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Rmms.Application/Auth/VerifyEmail/VerifyEmailCommandHandler.cs:Handle",
+      "type": "function",
+      "name": "Handle",
+      "filePath": "Rmms.Application/Auth/VerifyEmail/VerifyEmailCommandHandler.cs",
+      "lineRange": [
+        36,
+        95
+      ],
+      "summary": "Hàm Handle trong VerifyEmailCommandHandler.cs.",
+      "tags": [
+        "rmms.application",
+        "auth",
+        "code",
+        "cs",
+        "ham"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:Rmms.Application/Auth/VerifyEmail/VerifyEmailCommandHandler.cs:VerifyEmailCommandHandler",
+      "type": "class",
+      "name": "VerifyEmailCommandHandler",
+      "filePath": "Rmms.Application/Auth/VerifyEmail/VerifyEmailCommandHandler.cs",
+      "lineRange": [
+        23,
+        96
+      ],
+      "summary": "Class VerifyEmailCommandHandler trong VerifyEmailCommandHandler.cs.",
+      "tags": [
+        "rmms.application",
+        "auth",
+        "code",
+        "cs",
+        "class"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:Rmms.Application/Auth/VerifyEmail/VerifyEmailCommandValidator.cs",
+      "type": "file",
+      "name": "VerifyEmailCommandValidator.cs",
+      "filePath": "Rmms.Application/Auth/VerifyEmail/VerifyEmailCommandValidator.cs",
+      "summary": "VerifyEmailCommandValidator.cs — tệp mã nguồn C# trong backend RMMS (1 hàm, 1 class).",
+      "tags": [
+        "rmms.application",
+        "auth",
+        "code",
+        "cs"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Rmms.Application/Auth/VerifyEmail/VerifyEmailCommandValidator.cs:VerifyEmailCommandValidator",
+      "type": "function",
+      "name": "VerifyEmailCommandValidator",
+      "filePath": "Rmms.Application/Auth/VerifyEmail/VerifyEmailCommandValidator.cs",
+      "lineRange": [
+        7,
+        13
+      ],
+      "summary": "Hàm VerifyEmailCommandValidator trong VerifyEmailCommandValidator.cs.",
+      "tags": [
+        "rmms.application",
+        "auth",
+        "code",
+        "cs",
+        "ham"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:Rmms.Application/Auth/VerifyEmail/VerifyEmailCommandValidator.cs:VerifyEmailCommandValidator",
+      "type": "class",
+      "name": "VerifyEmailCommandValidator",
+      "filePath": "Rmms.Application/Auth/VerifyEmail/VerifyEmailCommandValidator.cs",
+      "lineRange": [
+        5,
+        14
+      ],
+      "summary": "Class VerifyEmailCommandValidator trong VerifyEmailCommandValidator.cs.",
+      "tags": [
+        "rmms.application",
+        "auth",
+        "code",
+        "cs",
+        "class"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:Rmms.Application/Auth/VerifyEmail/VerifyEmailResponse.cs",
+      "type": "file",
+      "name": "VerifyEmailResponse.cs",
+      "filePath": "Rmms.Application/Auth/VerifyEmail/VerifyEmailResponse.cs",
+      "summary": "VerifyEmailResponse.cs — tệp mã nguồn C# trong backend RMMS (0 hàm, 0 class).",
+      "tags": [
+        "rmms.application",
+        "auth",
+        "code",
+        "cs"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:Rmms.Application/Common/Abstractions/IApprovalService.cs",
+      "type": "file",
+      "name": "IApprovalService.cs",
+      "filePath": "Rmms.Application/Common/Abstractions/IApprovalService.cs",
+      "summary": "IApprovalService.cs — tệp mã nguồn C# trong backend RMMS (0 hàm, 1 class).",
+      "tags": [
+        "rmms.application",
+        "common",
+        "code",
+        "cs"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:Rmms.Application/Common/Abstractions/IApprovalService.cs:IApprovalService",
+      "type": "class",
+      "name": "IApprovalService",
+      "filePath": "Rmms.Application/Common/Abstractions/IApprovalService.cs",
+      "lineRange": [
+        11,
+        20
+      ],
+      "summary": "Class IApprovalService trong IApprovalService.cs.",
+      "tags": [
+        "rmms.application",
+        "common",
+        "code",
+        "cs",
+        "class"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:Rmms.Application/Common/Abstractions/IApprovalTokenService.cs",
+      "type": "file",
+      "name": "IApprovalTokenService.cs",
+      "filePath": "Rmms.Application/Common/Abstractions/IApprovalTokenService.cs",
+      "summary": "IApprovalTokenService.cs — tệp mã nguồn C# trong backend RMMS (0 hàm, 1 class).",
+      "tags": [
+        "rmms.application",
+        "common",
+        "code",
+        "cs"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:Rmms.Application/Common/Abstractions/IApprovalTokenService.cs:IApprovalTokenService",
+      "type": "class",
+      "name": "IApprovalTokenService",
+      "filePath": "Rmms.Application/Common/Abstractions/IApprovalTokenService.cs",
+      "lineRange": [
+        20,
+        26
+      ],
+      "summary": "Class IApprovalTokenService trong IApprovalTokenService.cs.",
+      "tags": [
+        "rmms.application",
+        "common",
+        "code",
+        "cs",
+        "class"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:Rmms.Application/Common/Abstractions/IAttendancePhotoRetentionService.cs",
+      "type": "file",
+      "name": "IAttendancePhotoRetentionService.cs",
+      "filePath": "Rmms.Application/Common/Abstractions/IAttendancePhotoRetentionService.cs",
+      "summary": "IAttendancePhotoRetentionService.cs — tệp mã nguồn C# trong backend RMMS (0 hàm, 1 class).",
+      "tags": [
+        "rmms.application",
+        "common",
+        "code",
+        "cs"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:Rmms.Application/Common/Abstractions/IAttendancePhotoRetentionService.cs:IAttendancePhotoRetentionService",
+      "type": "class",
+      "name": "IAttendancePhotoRetentionService",
+      "filePath": "Rmms.Application/Common/Abstractions/IAttendancePhotoRetentionService.cs",
+      "lineRange": [
+        9,
+        13
+      ],
+      "summary": "Class IAttendancePhotoRetentionService trong IAttendancePhotoRetentionService.cs.",
+      "tags": [
+        "rmms.application",
+        "common",
+        "code",
+        "cs",
+        "class"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:Rmms.Application/Common/Abstractions/IAttendancePhotoStorage.cs",
+      "type": "file",
+      "name": "IAttendancePhotoStorage.cs",
+      "filePath": "Rmms.Application/Common/Abstractions/IAttendancePhotoStorage.cs",
+      "summary": "IAttendancePhotoStorage.cs — tệp mã nguồn C# trong backend RMMS (0 hàm, 1 class).",
+      "tags": [
+        "rmms.application",
+        "common",
+        "code",
+        "cs"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:Rmms.Application/Common/Abstractions/IAttendancePhotoStorage.cs:IAttendancePhotoStorage",
+      "type": "class",
+      "name": "IAttendancePhotoStorage",
+      "filePath": "Rmms.Application/Common/Abstractions/IAttendancePhotoStorage.cs",
+      "lineRange": [
+        15,
+        25
+      ],
+      "summary": "Class IAttendancePhotoStorage trong IAttendancePhotoStorage.cs.",
+      "tags": [
+        "rmms.application",
+        "common",
+        "code",
+        "cs",
+        "class"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:Rmms.Application/Common/Abstractions/IAuditLogger.cs",
+      "type": "file",
+      "name": "IAuditLogger.cs",
+      "filePath": "Rmms.Application/Common/Abstractions/IAuditLogger.cs",
+      "summary": "IAuditLogger.cs — tệp mã nguồn C# trong backend RMMS (0 hàm, 1 class).",
+      "tags": [
+        "rmms.application",
+        "common",
+        "code",
+        "cs"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:Rmms.Application/Common/Abstractions/IAuditLogger.cs:IAuditLogger",
+      "type": "class",
+      "name": "IAuditLogger",
+      "filePath": "Rmms.Application/Common/Abstractions/IAuditLogger.cs",
+      "lineRange": [
+        10,
+        19
+      ],
+      "summary": "Class IAuditLogger trong IAuditLogger.cs.",
+      "tags": [
+        "rmms.application",
+        "common",
+        "code",
+        "cs",
+        "class"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:Rmms.Application/Common/Abstractions/IClientContext.cs",
+      "type": "file",
+      "name": "IClientContext.cs",
+      "filePath": "Rmms.Application/Common/Abstractions/IClientContext.cs",
+      "summary": "IClientContext.cs — tệp mã nguồn C# trong backend RMMS (0 hàm, 1 class).",
+      "tags": [
+        "rmms.application",
+        "common",
+        "code",
+        "cs"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:Rmms.Application/Common/Abstractions/IClientContext.cs:IClientContext",
+      "type": "class",
+      "name": "IClientContext",
+      "filePath": "Rmms.Application/Common/Abstractions/IClientContext.cs",
+      "lineRange": [
+        9,
+        22
+      ],
+      "summary": "Class IClientContext trong IClientContext.cs.",
+      "tags": [
+        "rmms.application",
+        "common",
+        "code",
+        "cs",
+        "class"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:Rmms.Application/Common/Abstractions/IEmailSender.cs",
+      "type": "file",
+      "name": "IEmailSender.cs",
+      "filePath": "Rmms.Application/Common/Abstractions/IEmailSender.cs",
+      "summary": "IEmailSender.cs — tệp mã nguồn C# trong backend RMMS (0 hàm, 1 class).",
+      "tags": [
+        "rmms.application",
+        "common",
+        "code",
+        "cs"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:Rmms.Application/Common/Abstractions/IEmailSender.cs:IEmailSender",
+      "type": "class",
+      "name": "IEmailSender",
+      "filePath": "Rmms.Application/Common/Abstractions/IEmailSender.cs",
+      "lineRange": [
+        13,
+        16
+      ],
+      "summary": "Class IEmailSender trong IEmailSender.cs.",
+      "tags": [
+        "rmms.application",
+        "common",
+        "code",
+        "cs",
+        "class"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:Rmms.Application/Common/Abstractions/IFaceClient.cs",
+      "type": "file",
+      "name": "IFaceClient.cs",
+      "filePath": "Rmms.Application/Common/Abstractions/IFaceClient.cs",
+      "summary": "IFaceClient.cs — tệp mã nguồn C# trong backend RMMS (0 hàm, 1 class).",
+      "tags": [
+        "rmms.application",
+        "common",
+        "code",
+        "cs"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:Rmms.Application/Common/Abstractions/IFaceClient.cs:IFaceClient",
+      "type": "class",
+      "name": "IFaceClient",
+      "filePath": "Rmms.Application/Common/Abstractions/IFaceClient.cs",
+      "lineRange": [
+        14,
+        27
+      ],
+      "summary": "Class IFaceClient trong IFaceClient.cs.",
+      "tags": [
+        "rmms.application",
+        "common",
+        "code",
+        "cs",
+        "class"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:Rmms.Application/Common/Abstractions/IFaceVerificationService.cs",
+      "type": "file",
+      "name": "IFaceVerificationService.cs",
+      "filePath": "Rmms.Application/Common/Abstractions/IFaceVerificationService.cs",
+      "summary": "IFaceVerificationService.cs — tệp mã nguồn C# trong backend RMMS (0 hàm, 1 class).",
+      "tags": [
+        "rmms.application",
+        "common",
+        "code",
+        "cs"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:Rmms.Application/Common/Abstractions/IFaceVerificationService.cs:IFaceVerificationService",
+      "type": "class",
+      "name": "IFaceVerificationService",
+      "filePath": "Rmms.Application/Common/Abstractions/IFaceVerificationService.cs",
+      "lineRange": [
+        14,
+        17
+      ],
+      "summary": "Class IFaceVerificationService trong IFaceVerificationService.cs.",
+      "tags": [
+        "rmms.application",
+        "common",
+        "code",
+        "cs",
+        "class"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:Rmms.Application/Common/Abstractions/IJwtTokenService.cs",
+      "type": "file",
+      "name": "IJwtTokenService.cs",
+      "filePath": "Rmms.Application/Common/Abstractions/IJwtTokenService.cs",
+      "summary": "IJwtTokenService.cs — tệp mã nguồn C# trong backend RMMS (0 hàm, 1 class).",
+      "tags": [
+        "rmms.application",
+        "common",
+        "code",
+        "cs"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:Rmms.Application/Common/Abstractions/IJwtTokenService.cs:IJwtTokenService",
+      "type": "class",
+      "name": "IJwtTokenService",
+      "filePath": "Rmms.Application/Common/Abstractions/IJwtTokenService.cs",
+      "lineRange": [
+        9,
+        16
+      ],
+      "summary": "Class IJwtTokenService trong IJwtTokenService.cs.",
+      "tags": [
+        "rmms.application",
+        "common",
+        "code",
+        "cs",
+        "class"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:Rmms.Application/Common/Abstractions/ILoginRateLimiter.cs",
+      "type": "file",
+      "name": "ILoginRateLimiter.cs",
+      "filePath": "Rmms.Application/Common/Abstractions/ILoginRateLimiter.cs",
+      "summary": "ILoginRateLimiter.cs — tệp mã nguồn C# trong backend RMMS (0 hàm, 1 class).",
+      "tags": [
+        "rmms.application",
+        "common",
+        "code",
+        "cs"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:Rmms.Application/Common/Abstractions/ILoginRateLimiter.cs:ILoginRateLimiter",
+      "type": "class",
+      "name": "ILoginRateLimiter",
+      "filePath": "Rmms.Application/Common/Abstractions/ILoginRateLimiter.cs",
+      "lineRange": [
+        12,
+        22
+      ],
+      "summary": "Class ILoginRateLimiter trong ILoginRateLimiter.cs.",
+      "tags": [
+        "rmms.application",
+        "common",
+        "code",
+        "cs",
+        "class"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:Rmms.Application/Common/Abstractions/INotificationService.cs",
+      "type": "file",
+      "name": "INotificationService.cs",
+      "filePath": "Rmms.Application/Common/Abstractions/INotificationService.cs",
+      "summary": "INotificationService.cs — tệp mã nguồn C# trong backend RMMS (0 hàm, 1 class).",
+      "tags": [
+        "rmms.application",
+        "common",
+        "code",
+        "cs"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:Rmms.Application/Common/Abstractions/INotificationService.cs:INotificationService",
+      "type": "class",
+      "name": "INotificationService",
+      "filePath": "Rmms.Application/Common/Abstractions/INotificationService.cs",
+      "lineRange": [
+        15,
+        18
+      ],
+      "summary": "Class INotificationService trong INotificationService.cs.",
+      "tags": [
+        "rmms.application",
+        "common",
+        "code",
+        "cs",
+        "class"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:Rmms.Application/Common/Abstractions/IPasswordHasher.cs",
+      "type": "file",
+      "name": "IPasswordHasher.cs",
+      "filePath": "Rmms.Application/Common/Abstractions/IPasswordHasher.cs",
+      "summary": "IPasswordHasher.cs — tệp mã nguồn C# trong backend RMMS (0 hàm, 1 class).",
+      "tags": [
+        "rmms.application",
+        "common",
+        "code",
+        "cs"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:Rmms.Application/Common/Abstractions/IPasswordHasher.cs:IPasswordHasher",
+      "type": "class",
+      "name": "IPasswordHasher",
+      "filePath": "Rmms.Application/Common/Abstractions/IPasswordHasher.cs",
+      "lineRange": [
+        7,
+        20
+      ],
+      "summary": "Class IPasswordHasher trong IPasswordHasher.cs.",
+      "tags": [
+        "rmms.application",
+        "common",
+        "code",
+        "cs",
+        "class"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:Rmms.Application/Common/Abstractions/IPushSender.cs",
+      "type": "file",
+      "name": "IPushSender.cs",
+      "filePath": "Rmms.Application/Common/Abstractions/IPushSender.cs",
+      "summary": "IPushSender.cs — tệp mã nguồn C# trong backend RMMS (0 hàm, 1 class).",
+      "tags": [
+        "rmms.application",
+        "common",
+        "code",
+        "cs"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:Rmms.Application/Common/Abstractions/IPushSender.cs:IPushSender",
+      "type": "class",
+      "name": "IPushSender",
+      "filePath": "Rmms.Application/Common/Abstractions/IPushSender.cs",
+      "lineRange": [
+        14,
+        17
+      ],
+      "summary": "Class IPushSender trong IPushSender.cs.",
+      "tags": [
+        "rmms.application",
+        "common",
+        "code",
+        "cs",
+        "class"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:Rmms.Application/Common/Abstractions/IRealtimeNotifier.cs",
+      "type": "file",
+      "name": "IRealtimeNotifier.cs",
+      "filePath": "Rmms.Application/Common/Abstractions/IRealtimeNotifier.cs",
+      "summary": "IRealtimeNotifier.cs — tệp mã nguồn C# trong backend RMMS (0 hàm, 1 class).",
+      "tags": [
+        "rmms.application",
+        "common",
+        "code",
+        "cs"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:Rmms.Application/Common/Abstractions/IRealtimeNotifier.cs:IRealtimeNotifier",
+      "type": "class",
+      "name": "IRealtimeNotifier",
+      "filePath": "Rmms.Application/Common/Abstractions/IRealtimeNotifier.cs",
+      "lineRange": [
+        11,
+        14
+      ],
+      "summary": "Class IRealtimeNotifier trong IRealtimeNotifier.cs.",
+      "tags": [
+        "rmms.application",
+        "common",
+        "code",
+        "cs",
+        "class"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:Rmms.Application/Common/Abstractions/IRefreshTokenGenerator.cs",
+      "type": "file",
+      "name": "IRefreshTokenGenerator.cs",
+      "filePath": "Rmms.Application/Common/Abstractions/IRefreshTokenGenerator.cs",
+      "summary": "IRefreshTokenGenerator.cs — tệp mã nguồn C# trong backend RMMS (0 hàm, 1 class).",
+      "tags": [
+        "rmms.application",
+        "common",
+        "code",
+        "cs"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:Rmms.Application/Common/Abstractions/IRefreshTokenGenerator.cs:IRefreshTokenGenerator",
+      "type": "class",
+      "name": "IRefreshTokenGenerator",
+      "filePath": "Rmms.Application/Common/Abstractions/IRefreshTokenGenerator.cs",
+      "lineRange": [
+        7,
+        14
+      ],
+      "summary": "Class IRefreshTokenGenerator trong IRefreshTokenGenerator.cs.",
+      "tags": [
+        "rmms.application",
+        "common",
+        "code",
+        "cs",
+        "class"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:Rmms.Application/Common/Abstractions/IReportExporter.cs",
+      "type": "file",
+      "name": "IReportExporter.cs",
+      "filePath": "Rmms.Application/Common/Abstractions/IReportExporter.cs",
+      "summary": "IReportExporter.cs — tệp mã nguồn C# trong backend RMMS (0 hàm, 1 class).",
+      "tags": [
+        "rmms.application",
+        "common",
+        "code",
+        "cs"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:Rmms.Application/Common/Abstractions/IReportExporter.cs:IReportExporter",
+      "type": "class",
+      "name": "IReportExporter",
+      "filePath": "Rmms.Application/Common/Abstractions/IReportExporter.cs",
+      "lineRange": [
+        16,
+        19
+      ],
+      "summary": "Class IReportExporter trong IReportExporter.cs.",
+      "tags": [
+        "rmms.application",
+        "common",
+        "code",
+        "cs",
+        "class"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:Rmms.Application/Common/Abstractions/ITokenCleanupService.cs",
+      "type": "file",
+      "name": "ITokenCleanupService.cs",
+      "filePath": "Rmms.Application/Common/Abstractions/ITokenCleanupService.cs",
+      "summary": "ITokenCleanupService.cs — tệp mã nguồn C# trong backend RMMS (0 hàm, 1 class).",
+      "tags": [
+        "rmms.application",
+        "common",
+        "code",
+        "cs"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:Rmms.Application/Common/Abstractions/ITokenCleanupService.cs:ITokenCleanupService",
+      "type": "class",
+      "name": "ITokenCleanupService",
+      "filePath": "Rmms.Application/Common/Abstractions/ITokenCleanupService.cs",
+      "lineRange": [
+        13,
+        16
+      ],
+      "summary": "Class ITokenCleanupService trong ITokenCleanupService.cs.",
+      "tags": [
+        "rmms.application",
+        "common",
+        "code",
+        "cs",
+        "class"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:Rmms.Application/Common/Behaviors/LoggingBehavior.cs",
+      "type": "file",
+      "name": "LoggingBehavior.cs",
+      "filePath": "Rmms.Application/Common/Behaviors/LoggingBehavior.cs",
+      "summary": "LoggingBehavior.cs — tệp mã nguồn C# trong backend RMMS (4 hàm, 1 class).",
+      "tags": [
+        "rmms.application",
+        "common",
+        "code",
+        "cs"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Rmms.Application/Common/Behaviors/LoggingBehavior.cs:LoggingBehavior",
+      "type": "function",
+      "name": "LoggingBehavior",
+      "filePath": "Rmms.Application/Common/Behaviors/LoggingBehavior.cs",
+      "lineRange": [
+        16,
+        16
+      ],
+      "summary": "Hàm LoggingBehavior trong LoggingBehavior.cs.",
+      "tags": [
+        "rmms.application",
+        "common",
+        "code",
+        "cs",
+        "ham"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Rmms.Application/Common/Behaviors/LoggingBehavior.cs:Handle",
+      "type": "function",
+      "name": "Handle",
+      "filePath": "Rmms.Application/Common/Behaviors/LoggingBehavior.cs",
+      "lineRange": [
+        18,
+        38
+      ],
+      "summary": "Hàm Handle trong LoggingBehavior.cs.",
+      "tags": [
+        "rmms.application",
+        "common",
+        "code",
+        "cs",
+        "ham"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Rmms.Application/Common/Behaviors/LoggingBehavior.cs:LogHandled",
+      "type": "function",
+      "name": "LogHandled",
+      "filePath": "Rmms.Application/Common/Behaviors/LoggingBehavior.cs",
+      "lineRange": [
+        40,
+        41
+      ],
+      "summary": "Hàm LogHandled trong LoggingBehavior.cs.",
+      "tags": [
+        "rmms.application",
+        "common",
+        "code",
+        "cs",
+        "ham"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Rmms.Application/Common/Behaviors/LoggingBehavior.cs:LogFailed",
+      "type": "function",
+      "name": "LogFailed",
+      "filePath": "Rmms.Application/Common/Behaviors/LoggingBehavior.cs",
+      "lineRange": [
+        43,
+        44
+      ],
+      "summary": "Hàm LogFailed trong LoggingBehavior.cs.",
+      "tags": [
+        "rmms.application",
+        "common",
+        "code",
+        "cs",
+        "ham"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:Rmms.Application/Common/Behaviors/LoggingBehavior.cs:LoggingBehavior",
+      "type": "class",
+      "name": "LoggingBehavior",
+      "filePath": "Rmms.Application/Common/Behaviors/LoggingBehavior.cs",
+      "lineRange": [
+        11,
+        45
+      ],
+      "summary": "Class LoggingBehavior trong LoggingBehavior.cs.",
+      "tags": [
+        "rmms.application",
+        "common",
+        "code",
+        "cs",
+        "class"
+      ],
+      "complexity": "moderate"
+    }
+  ],
+  "edges": [
+    {
+      "source": "file:Rmms.Application/Auth/ResetPassword/ResetPasswordCommandHandler.cs",
+      "target": "function:Rmms.Application/Auth/ResetPassword/ResetPasswordCommandHandler.cs:ResetPasswordCommandHandler",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Application/Auth/ResetPassword/ResetPasswordCommandHandler.cs",
+      "target": "function:Rmms.Application/Auth/ResetPassword/ResetPasswordCommandHandler.cs:Handle",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Application/Auth/ResetPassword/ResetPasswordCommandHandler.cs",
+      "target": "class:Rmms.Application/Auth/ResetPassword/ResetPasswordCommandHandler.cs:ResetPasswordCommandHandler",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Application/Auth/ResetPassword/ResetPasswordCommandValidator.cs",
+      "target": "function:Rmms.Application/Auth/ResetPassword/ResetPasswordCommandValidator.cs:ResetPasswordCommandValidator",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Application/Auth/ResetPassword/ResetPasswordCommandValidator.cs",
+      "target": "function:Rmms.Application/Auth/ResetPassword/ResetPasswordCommandValidator.cs:HasLetter",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Application/Auth/ResetPassword/ResetPasswordCommandValidator.cs",
+      "target": "function:Rmms.Application/Auth/ResetPassword/ResetPasswordCommandValidator.cs:HasDigit",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Application/Auth/ResetPassword/ResetPasswordCommandValidator.cs",
+      "target": "class:Rmms.Application/Auth/ResetPassword/ResetPasswordCommandValidator.cs:ResetPasswordCommandValidator",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Application/Auth/VerifyEmail/VerifyEmailCommandHandler.cs",
+      "target": "function:Rmms.Application/Auth/VerifyEmail/VerifyEmailCommandHandler.cs:VerifyEmailCommandHandler",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Application/Auth/VerifyEmail/VerifyEmailCommandHandler.cs",
+      "target": "function:Rmms.Application/Auth/VerifyEmail/VerifyEmailCommandHandler.cs:Handle",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Application/Auth/VerifyEmail/VerifyEmailCommandHandler.cs",
+      "target": "class:Rmms.Application/Auth/VerifyEmail/VerifyEmailCommandHandler.cs:VerifyEmailCommandHandler",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Application/Auth/VerifyEmail/VerifyEmailCommandValidator.cs",
+      "target": "function:Rmms.Application/Auth/VerifyEmail/VerifyEmailCommandValidator.cs:VerifyEmailCommandValidator",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Application/Auth/VerifyEmail/VerifyEmailCommandValidator.cs",
+      "target": "class:Rmms.Application/Auth/VerifyEmail/VerifyEmailCommandValidator.cs:VerifyEmailCommandValidator",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Application/Common/Abstractions/IApprovalService.cs",
+      "target": "class:Rmms.Application/Common/Abstractions/IApprovalService.cs:IApprovalService",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Application/Common/Abstractions/IApprovalTokenService.cs",
+      "target": "class:Rmms.Application/Common/Abstractions/IApprovalTokenService.cs:IApprovalTokenService",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Application/Common/Abstractions/IAttendancePhotoRetentionService.cs",
+      "target": "class:Rmms.Application/Common/Abstractions/IAttendancePhotoRetentionService.cs:IAttendancePhotoRetentionService",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Application/Common/Abstractions/IAttendancePhotoStorage.cs",
+      "target": "class:Rmms.Application/Common/Abstractions/IAttendancePhotoStorage.cs:IAttendancePhotoStorage",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Application/Common/Abstractions/IAuditLogger.cs",
+      "target": "class:Rmms.Application/Common/Abstractions/IAuditLogger.cs:IAuditLogger",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Application/Common/Abstractions/IClientContext.cs",
+      "target": "class:Rmms.Application/Common/Abstractions/IClientContext.cs:IClientContext",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Application/Common/Abstractions/IEmailSender.cs",
+      "target": "class:Rmms.Application/Common/Abstractions/IEmailSender.cs:IEmailSender",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Application/Common/Abstractions/IFaceClient.cs",
+      "target": "class:Rmms.Application/Common/Abstractions/IFaceClient.cs:IFaceClient",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Application/Common/Abstractions/IFaceVerificationService.cs",
+      "target": "class:Rmms.Application/Common/Abstractions/IFaceVerificationService.cs:IFaceVerificationService",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Application/Common/Abstractions/IJwtTokenService.cs",
+      "target": "class:Rmms.Application/Common/Abstractions/IJwtTokenService.cs:IJwtTokenService",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Application/Common/Abstractions/ILoginRateLimiter.cs",
+      "target": "class:Rmms.Application/Common/Abstractions/ILoginRateLimiter.cs:ILoginRateLimiter",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Application/Common/Abstractions/INotificationService.cs",
+      "target": "class:Rmms.Application/Common/Abstractions/INotificationService.cs:INotificationService",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Application/Common/Abstractions/IPasswordHasher.cs",
+      "target": "class:Rmms.Application/Common/Abstractions/IPasswordHasher.cs:IPasswordHasher",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Application/Common/Abstractions/IPushSender.cs",
+      "target": "class:Rmms.Application/Common/Abstractions/IPushSender.cs:IPushSender",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Application/Common/Abstractions/IRealtimeNotifier.cs",
+      "target": "class:Rmms.Application/Common/Abstractions/IRealtimeNotifier.cs:IRealtimeNotifier",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Application/Common/Abstractions/IRefreshTokenGenerator.cs",
+      "target": "class:Rmms.Application/Common/Abstractions/IRefreshTokenGenerator.cs:IRefreshTokenGenerator",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Application/Common/Abstractions/IReportExporter.cs",
+      "target": "class:Rmms.Application/Common/Abstractions/IReportExporter.cs:IReportExporter",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Application/Common/Abstractions/ITokenCleanupService.cs",
+      "target": "class:Rmms.Application/Common/Abstractions/ITokenCleanupService.cs:ITokenCleanupService",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Application/Common/Behaviors/LoggingBehavior.cs",
+      "target": "function:Rmms.Application/Common/Behaviors/LoggingBehavior.cs:LoggingBehavior",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Application/Common/Behaviors/LoggingBehavior.cs",
+      "target": "function:Rmms.Application/Common/Behaviors/LoggingBehavior.cs:Handle",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Application/Common/Behaviors/LoggingBehavior.cs",
+      "target": "function:Rmms.Application/Common/Behaviors/LoggingBehavior.cs:LogHandled",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Application/Common/Behaviors/LoggingBehavior.cs",
+      "target": "function:Rmms.Application/Common/Behaviors/LoggingBehavior.cs:LogFailed",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Application/Common/Behaviors/LoggingBehavior.cs",
+      "target": "class:Rmms.Application/Common/Behaviors/LoggingBehavior.cs:LoggingBehavior",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    }
+  ]
+}

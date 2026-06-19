@@ -1,0 +1,1214 @@
+{
+  "nodes": [
+    {
+      "id": "file:Rmms.Api/Dtos/Auth/LoginRequest.cs",
+      "type": "file",
+      "name": "LoginRequest.cs",
+      "filePath": "Rmms.Api/Dtos/Auth/LoginRequest.cs",
+      "summary": "LoginRequest.cs — tệp mã nguồn C# trong backend RMMS (0 hàm, 0 class).",
+      "tags": [
+        "rmms.api",
+        "dtos",
+        "code",
+        "cs"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:Rmms.Api/Dtos/Auth/LogoutRequest.cs",
+      "type": "file",
+      "name": "LogoutRequest.cs",
+      "filePath": "Rmms.Api/Dtos/Auth/LogoutRequest.cs",
+      "summary": "LogoutRequest.cs — tệp mã nguồn C# trong backend RMMS (0 hàm, 0 class).",
+      "tags": [
+        "rmms.api",
+        "dtos",
+        "code",
+        "cs"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:Rmms.Api/Dtos/Auth/RefreshTokenRequest.cs",
+      "type": "file",
+      "name": "RefreshTokenRequest.cs",
+      "filePath": "Rmms.Api/Dtos/Auth/RefreshTokenRequest.cs",
+      "summary": "RefreshTokenRequest.cs — tệp mã nguồn C# trong backend RMMS (0 hàm, 0 class).",
+      "tags": [
+        "rmms.api",
+        "dtos",
+        "code",
+        "cs"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:Rmms.Api/Dtos/Auth/RegisterRequest.cs",
+      "type": "file",
+      "name": "RegisterRequest.cs",
+      "filePath": "Rmms.Api/Dtos/Auth/RegisterRequest.cs",
+      "summary": "RegisterRequest.cs — tệp mã nguồn C# trong backend RMMS (0 hàm, 0 class).",
+      "tags": [
+        "rmms.api",
+        "dtos",
+        "code",
+        "cs"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:Rmms.Api/Dtos/Auth/ResetPasswordRequest.cs",
+      "type": "file",
+      "name": "ResetPasswordRequest.cs",
+      "filePath": "Rmms.Api/Dtos/Auth/ResetPasswordRequest.cs",
+      "summary": "ResetPasswordRequest.cs — tệp mã nguồn C# trong backend RMMS (0 hàm, 0 class).",
+      "tags": [
+        "rmms.api",
+        "dtos",
+        "code",
+        "cs"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:Rmms.Api/Dtos/Auth/VerifyEmailRequest.cs",
+      "type": "file",
+      "name": "VerifyEmailRequest.cs",
+      "filePath": "Rmms.Api/Dtos/Auth/VerifyEmailRequest.cs",
+      "summary": "VerifyEmailRequest.cs — tệp mã nguồn C# trong backend RMMS (0 hàm, 0 class).",
+      "tags": [
+        "rmms.api",
+        "dtos",
+        "code",
+        "cs"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:Rmms.Api/Dtos/Devices/RejectDeviceRequest.cs",
+      "type": "file",
+      "name": "RejectDeviceRequest.cs",
+      "filePath": "Rmms.Api/Dtos/Devices/RejectDeviceRequest.cs",
+      "summary": "RejectDeviceRequest.cs — tệp mã nguồn C# trong backend RMMS (0 hàm, 0 class).",
+      "tags": [
+        "rmms.api",
+        "dtos",
+        "code",
+        "cs"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:Rmms.Api/Dtos/Documents/DocumentRequests.cs",
+      "type": "file",
+      "name": "DocumentRequests.cs",
+      "filePath": "Rmms.Api/Dtos/Documents/DocumentRequests.cs",
+      "summary": "DocumentRequests.cs — tệp mã nguồn C# trong backend RMMS (0 hàm, 0 class).",
+      "tags": [
+        "rmms.api",
+        "dtos",
+        "code",
+        "cs"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:Rmms.Api/Dtos/Face/FaceRequests.cs",
+      "type": "file",
+      "name": "FaceRequests.cs",
+      "filePath": "Rmms.Api/Dtos/Face/FaceRequests.cs",
+      "summary": "FaceRequests.cs — tệp mã nguồn C# trong backend RMMS (0 hàm, 2 class).",
+      "tags": [
+        "rmms.api",
+        "dtos",
+        "code",
+        "cs"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:Rmms.Api/Dtos/Face/FaceRequests.cs:EnrollFaceForm",
+      "type": "class",
+      "name": "EnrollFaceForm",
+      "filePath": "Rmms.Api/Dtos/Face/FaceRequests.cs",
+      "lineRange": [
+        6,
+        9
+      ],
+      "summary": "Class EnrollFaceForm trong FaceRequests.cs.",
+      "tags": [
+        "rmms.api",
+        "dtos",
+        "code",
+        "cs",
+        "class"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "class:Rmms.Api/Dtos/Face/FaceRequests.cs:VerifyFaceForm",
+      "type": "class",
+      "name": "VerifyFaceForm",
+      "filePath": "Rmms.Api/Dtos/Face/FaceRequests.cs",
+      "lineRange": [
+        12,
+        15
+      ],
+      "summary": "Class VerifyFaceForm trong FaceRequests.cs.",
+      "tags": [
+        "rmms.api",
+        "dtos",
+        "code",
+        "cs",
+        "class"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:Rmms.Api/Dtos/Forms/FormRequests.cs",
+      "type": "file",
+      "name": "FormRequests.cs",
+      "filePath": "Rmms.Api/Dtos/Forms/FormRequests.cs",
+      "summary": "FormRequests.cs — tệp mã nguồn C# trong backend RMMS (0 hàm, 0 class).",
+      "tags": [
+        "rmms.api",
+        "dtos",
+        "code",
+        "cs"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:Rmms.Api/Dtos/LeaveOt/LeaveOtRequests.cs",
+      "type": "file",
+      "name": "LeaveOtRequests.cs",
+      "filePath": "Rmms.Api/Dtos/LeaveOt/LeaveOtRequests.cs",
+      "summary": "LeaveOtRequests.cs — tệp mã nguồn C# trong backend RMMS (0 hàm, 0 class).",
+      "tags": [
+        "rmms.api",
+        "dtos",
+        "code",
+        "cs"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:Rmms.Api/Dtos/News/NewsRequests.cs",
+      "type": "file",
+      "name": "NewsRequests.cs",
+      "filePath": "Rmms.Api/Dtos/News/NewsRequests.cs",
+      "summary": "NewsRequests.cs — tệp mã nguồn C# trong backend RMMS (0 hàm, 0 class).",
+      "tags": [
+        "rmms.api",
+        "dtos",
+        "code",
+        "cs"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:Rmms.Api/Dtos/Organization/OrganizationRequests.cs",
+      "type": "file",
+      "name": "OrganizationRequests.cs",
+      "filePath": "Rmms.Api/Dtos/Organization/OrganizationRequests.cs",
+      "summary": "OrganizationRequests.cs — tệp mã nguồn C# trong backend RMMS (0 hàm, 0 class).",
+      "tags": [
+        "rmms.api",
+        "dtos",
+        "code",
+        "cs"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:Rmms.Api/Dtos/Scheduling/ScheduleRequests.cs",
+      "type": "file",
+      "name": "ScheduleRequests.cs",
+      "filePath": "Rmms.Api/Dtos/Scheduling/ScheduleRequests.cs",
+      "summary": "ScheduleRequests.cs — tệp mã nguồn C# trong backend RMMS (0 hàm, 0 class).",
+      "tags": [
+        "rmms.api",
+        "dtos",
+        "code",
+        "cs"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:Rmms.Api/Dtos/VisitPlans/VisitPlanRequests.cs",
+      "type": "file",
+      "name": "VisitPlanRequests.cs",
+      "filePath": "Rmms.Api/Dtos/VisitPlans/VisitPlanRequests.cs",
+      "summary": "VisitPlanRequests.cs — tệp mã nguồn C# trong backend RMMS (0 hàm, 0 class).",
+      "tags": [
+        "rmms.api",
+        "dtos",
+        "code",
+        "cs"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:Rmms.Api/Hubs/HubUserIdProvider.cs",
+      "type": "file",
+      "name": "HubUserIdProvider.cs",
+      "filePath": "Rmms.Api/Hubs/HubUserIdProvider.cs",
+      "summary": "HubUserIdProvider.cs — tệp mã nguồn C# trong backend RMMS (1 hàm, 1 class).",
+      "tags": [
+        "rmms.api",
+        "hubs",
+        "code",
+        "cs"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Rmms.Api/Hubs/HubUserIdProvider.cs:GetUserId",
+      "type": "function",
+      "name": "GetUserId",
+      "filePath": "Rmms.Api/Hubs/HubUserIdProvider.cs",
+      "lineRange": [
+        13,
+        15
+      ],
+      "summary": "Hàm GetUserId trong HubUserIdProvider.cs.",
+      "tags": [
+        "rmms.api",
+        "hubs",
+        "code",
+        "cs",
+        "ham"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:Rmms.Api/Hubs/HubUserIdProvider.cs:HubUserIdProvider",
+      "type": "class",
+      "name": "HubUserIdProvider",
+      "filePath": "Rmms.Api/Hubs/HubUserIdProvider.cs",
+      "lineRange": [
+        11,
+        16
+      ],
+      "summary": "Class HubUserIdProvider trong HubUserIdProvider.cs.",
+      "tags": [
+        "rmms.api",
+        "hubs",
+        "code",
+        "cs",
+        "class"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:Rmms.Api/Hubs/NotificationsHub.cs",
+      "type": "file",
+      "name": "NotificationsHub.cs",
+      "filePath": "Rmms.Api/Hubs/NotificationsHub.cs",
+      "summary": "NotificationsHub.cs — tệp mã nguồn C# trong backend RMMS (0 hàm, 1 class).",
+      "tags": [
+        "rmms.api",
+        "hubs",
+        "code",
+        "cs"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:Rmms.Api/Hubs/NotificationsHub.cs:NotificationsHub",
+      "type": "class",
+      "name": "NotificationsHub",
+      "filePath": "Rmms.Api/Hubs/NotificationsHub.cs",
+      "lineRange": [
+        12,
+        15
+      ],
+      "summary": "Class NotificationsHub trong NotificationsHub.cs.",
+      "tags": [
+        "rmms.api",
+        "hubs",
+        "code",
+        "cs",
+        "class"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:Rmms.Api/Hubs/SignalRRealtimeNotifier.cs",
+      "type": "file",
+      "name": "SignalRRealtimeNotifier.cs",
+      "filePath": "Rmms.Api/Hubs/SignalRRealtimeNotifier.cs",
+      "summary": "SignalRRealtimeNotifier.cs — tệp mã nguồn C# trong backend RMMS (2 hàm, 1 class).",
+      "tags": [
+        "rmms.api",
+        "hubs",
+        "code",
+        "cs"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Rmms.Api/Hubs/SignalRRealtimeNotifier.cs:SignalRRealtimeNotifier",
+      "type": "function",
+      "name": "SignalRRealtimeNotifier",
+      "filePath": "Rmms.Api/Hubs/SignalRRealtimeNotifier.cs",
+      "lineRange": [
+        15,
+        15
+      ],
+      "summary": "Hàm SignalRRealtimeNotifier trong SignalRRealtimeNotifier.cs.",
+      "tags": [
+        "rmms.api",
+        "hubs",
+        "code",
+        "cs",
+        "ham"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Rmms.Api/Hubs/SignalRRealtimeNotifier.cs:PushNotificationAsync",
+      "type": "function",
+      "name": "PushNotificationAsync",
+      "filePath": "Rmms.Api/Hubs/SignalRRealtimeNotifier.cs",
+      "lineRange": [
+        17,
+        18
+      ],
+      "summary": "Hàm PushNotificationAsync trong SignalRRealtimeNotifier.cs.",
+      "tags": [
+        "rmms.api",
+        "hubs",
+        "code",
+        "cs",
+        "ham"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:Rmms.Api/Hubs/SignalRRealtimeNotifier.cs:SignalRRealtimeNotifier",
+      "type": "class",
+      "name": "SignalRRealtimeNotifier",
+      "filePath": "Rmms.Api/Hubs/SignalRRealtimeNotifier.cs",
+      "lineRange": [
+        11,
+        19
+      ],
+      "summary": "Class SignalRRealtimeNotifier trong SignalRRealtimeNotifier.cs.",
+      "tags": [
+        "rmms.api",
+        "hubs",
+        "code",
+        "cs",
+        "class"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:Rmms.Api/Localization/ErrorLocalizationFilter.cs",
+      "type": "file",
+      "name": "ErrorLocalizationFilter.cs",
+      "filePath": "Rmms.Api/Localization/ErrorLocalizationFilter.cs",
+      "summary": "ErrorLocalizationFilter.cs — tệp mã nguồn C# trong backend RMMS (3 hàm, 1 class).",
+      "tags": [
+        "rmms.api",
+        "localization",
+        "code",
+        "cs"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Rmms.Api/Localization/ErrorLocalizationFilter.cs:ErrorLocalizationFilter",
+      "type": "function",
+      "name": "ErrorLocalizationFilter",
+      "filePath": "Rmms.Api/Localization/ErrorLocalizationFilter.cs",
+      "lineRange": [
+        20,
+        20
+      ],
+      "summary": "Hàm ErrorLocalizationFilter trong ErrorLocalizationFilter.cs.",
+      "tags": [
+        "rmms.api",
+        "localization",
+        "code",
+        "cs",
+        "ham"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Rmms.Api/Localization/ErrorLocalizationFilter.cs:OnActionExecuting",
+      "type": "function",
+      "name": "OnActionExecuting",
+      "filePath": "Rmms.Api/Localization/ErrorLocalizationFilter.cs",
+      "lineRange": [
+        22,
+        25
+      ],
+      "summary": "Hàm OnActionExecuting trong ErrorLocalizationFilter.cs.",
+      "tags": [
+        "rmms.api",
+        "localization",
+        "code",
+        "cs",
+        "ham"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Rmms.Api/Localization/ErrorLocalizationFilter.cs:OnActionExecuted",
+      "type": "function",
+      "name": "OnActionExecuted",
+      "filePath": "Rmms.Api/Localization/ErrorLocalizationFilter.cs",
+      "lineRange": [
+        27,
+        38
+      ],
+      "summary": "Hàm OnActionExecuted trong ErrorLocalizationFilter.cs.",
+      "tags": [
+        "rmms.api",
+        "localization",
+        "code",
+        "cs",
+        "ham"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:Rmms.Api/Localization/ErrorLocalizationFilter.cs:ErrorLocalizationFilter",
+      "type": "class",
+      "name": "ErrorLocalizationFilter",
+      "filePath": "Rmms.Api/Localization/ErrorLocalizationFilter.cs",
+      "lineRange": [
+        16,
+        39
+      ],
+      "summary": "Class ErrorLocalizationFilter trong ErrorLocalizationFilter.cs.",
+      "tags": [
+        "rmms.api",
+        "localization",
+        "code",
+        "cs",
+        "class"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:Rmms.Api/Localization/ErrorMessageCatalog.cs",
+      "type": "file",
+      "name": "ErrorMessageCatalog.cs",
+      "filePath": "Rmms.Api/Localization/ErrorMessageCatalog.cs",
+      "summary": "ErrorMessageCatalog.cs — tệp mã nguồn C# trong backend RMMS (1 hàm, 2 class).",
+      "tags": [
+        "rmms.api",
+        "localization",
+        "code",
+        "cs"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Rmms.Api/Localization/ErrorMessageCatalog.cs:Localize",
+      "type": "function",
+      "name": "Localize",
+      "filePath": "Rmms.Api/Localization/ErrorMessageCatalog.cs",
+      "lineRange": [
+        70,
+        78
+      ],
+      "summary": "Hàm Localize trong ErrorMessageCatalog.cs.",
+      "tags": [
+        "rmms.api",
+        "localization",
+        "code",
+        "cs",
+        "ham"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:Rmms.Api/Localization/ErrorMessageCatalog.cs:IErrorMessageLocalizer",
+      "type": "class",
+      "name": "IErrorMessageLocalizer",
+      "filePath": "Rmms.Api/Localization/ErrorMessageCatalog.cs",
+      "lineRange": [
+        8,
+        12
+      ],
+      "summary": "Class IErrorMessageLocalizer trong ErrorMessageCatalog.cs.",
+      "tags": [
+        "rmms.api",
+        "localization",
+        "code",
+        "cs",
+        "class"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "class:Rmms.Api/Localization/ErrorMessageCatalog.cs:ErrorMessageCatalog",
+      "type": "class",
+      "name": "ErrorMessageCatalog",
+      "filePath": "Rmms.Api/Localization/ErrorMessageCatalog.cs",
+      "lineRange": [
+        20,
+        79
+      ],
+      "summary": "Class ErrorMessageCatalog trong ErrorMessageCatalog.cs.",
+      "tags": [
+        "rmms.api",
+        "localization",
+        "code",
+        "cs",
+        "class"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:Rmms.Api/Logging/RequestEnrichmentMiddleware.cs",
+      "type": "file",
+      "name": "RequestEnrichmentMiddleware.cs",
+      "filePath": "Rmms.Api/Logging/RequestEnrichmentMiddleware.cs",
+      "summary": "RequestEnrichmentMiddleware.cs — tệp mã nguồn C# trong backend RMMS (2 hàm, 1 class).",
+      "tags": [
+        "rmms.api",
+        "logging",
+        "code",
+        "cs"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Rmms.Api/Logging/RequestEnrichmentMiddleware.cs:RequestEnrichmentMiddleware",
+      "type": "function",
+      "name": "RequestEnrichmentMiddleware",
+      "filePath": "Rmms.Api/Logging/RequestEnrichmentMiddleware.cs",
+      "lineRange": [
+        17,
+        17
+      ],
+      "summary": "Hàm RequestEnrichmentMiddleware trong RequestEnrichmentMiddleware.cs.",
+      "tags": [
+        "rmms.api",
+        "logging",
+        "code",
+        "cs",
+        "ham"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Rmms.Api/Logging/RequestEnrichmentMiddleware.cs:Invoke",
+      "type": "function",
+      "name": "Invoke",
+      "filePath": "Rmms.Api/Logging/RequestEnrichmentMiddleware.cs",
+      "lineRange": [
+        19,
+        49
+      ],
+      "summary": "Hàm Invoke trong RequestEnrichmentMiddleware.cs.",
+      "tags": [
+        "rmms.api",
+        "logging",
+        "code",
+        "cs",
+        "ham"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:Rmms.Api/Logging/RequestEnrichmentMiddleware.cs:RequestEnrichmentMiddleware",
+      "type": "class",
+      "name": "RequestEnrichmentMiddleware",
+      "filePath": "Rmms.Api/Logging/RequestEnrichmentMiddleware.cs",
+      "lineRange": [
+        13,
+        50
+      ],
+      "summary": "Class RequestEnrichmentMiddleware trong RequestEnrichmentMiddleware.cs.",
+      "tags": [
+        "rmms.api",
+        "logging",
+        "code",
+        "cs",
+        "class"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:Rmms.Api/Middlewares/ExceptionHandlingMiddleware.cs",
+      "type": "file",
+      "name": "ExceptionHandlingMiddleware.cs",
+      "filePath": "Rmms.Api/Middlewares/ExceptionHandlingMiddleware.cs",
+      "summary": "ExceptionHandlingMiddleware.cs — tệp mã nguồn C# trong backend RMMS (3 hàm, 1 class).",
+      "tags": [
+        "rmms.api",
+        "middlewares",
+        "code",
+        "cs"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Rmms.Api/Middlewares/ExceptionHandlingMiddleware.cs:ExceptionHandlingMiddleware",
+      "type": "function",
+      "name": "ExceptionHandlingMiddleware",
+      "filePath": "Rmms.Api/Middlewares/ExceptionHandlingMiddleware.cs",
+      "lineRange": [
+        24,
+        32
+      ],
+      "summary": "Hàm ExceptionHandlingMiddleware trong ExceptionHandlingMiddleware.cs.",
+      "tags": [
+        "rmms.api",
+        "middlewares",
+        "code",
+        "cs",
+        "ham"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Rmms.Api/Middlewares/ExceptionHandlingMiddleware.cs:InvokeAsync",
+      "type": "function",
+      "name": "InvokeAsync",
+      "filePath": "Rmms.Api/Middlewares/ExceptionHandlingMiddleware.cs",
+      "lineRange": [
+        34,
+        74
+      ],
+      "summary": "Hàm InvokeAsync trong ExceptionHandlingMiddleware.cs.",
+      "tags": [
+        "rmms.api",
+        "middlewares",
+        "code",
+        "cs",
+        "ham"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Rmms.Api/Middlewares/ExceptionHandlingMiddleware.cs:WriteAsync",
+      "type": "function",
+      "name": "WriteAsync",
+      "filePath": "Rmms.Api/Middlewares/ExceptionHandlingMiddleware.cs",
+      "lineRange": [
+        76,
+        82
+      ],
+      "summary": "Hàm WriteAsync trong ExceptionHandlingMiddleware.cs.",
+      "tags": [
+        "rmms.api",
+        "middlewares",
+        "code",
+        "cs",
+        "ham"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:Rmms.Api/Middlewares/ExceptionHandlingMiddleware.cs:ExceptionHandlingMiddleware",
+      "type": "class",
+      "name": "ExceptionHandlingMiddleware",
+      "filePath": "Rmms.Api/Middlewares/ExceptionHandlingMiddleware.cs",
+      "lineRange": [
+        12,
+        83
+      ],
+      "summary": "Class ExceptionHandlingMiddleware trong ExceptionHandlingMiddleware.cs.",
+      "tags": [
+        "rmms.api",
+        "middlewares",
+        "code",
+        "cs",
+        "class"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:Rmms.Api/Middlewares/IdempotencyMiddleware.cs",
+      "type": "file",
+      "name": "IdempotencyMiddleware.cs",
+      "filePath": "Rmms.Api/Middlewares/IdempotencyMiddleware.cs",
+      "summary": "IdempotencyMiddleware.cs — tệp mã nguồn C# trong backend RMMS (9 hàm, 1 class).",
+      "tags": [
+        "rmms.api",
+        "middlewares",
+        "code",
+        "cs"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:Rmms.Api/Middlewares/IdempotencyMiddleware.cs:IdempotencyMiddleware",
+      "type": "function",
+      "name": "IdempotencyMiddleware",
+      "filePath": "Rmms.Api/Middlewares/IdempotencyMiddleware.cs",
+      "lineRange": [
+        40,
+        48
+      ],
+      "summary": "Hàm IdempotencyMiddleware trong IdempotencyMiddleware.cs.",
+      "tags": [
+        "rmms.api",
+        "middlewares",
+        "code",
+        "cs",
+        "ham"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Rmms.Api/Middlewares/IdempotencyMiddleware.cs:InvokeAsync",
+      "type": "function",
+      "name": "InvokeAsync",
+      "filePath": "Rmms.Api/Middlewares/IdempotencyMiddleware.cs",
+      "lineRange": [
+        50,
+        133
+      ],
+      "summary": "Hàm InvokeAsync trong IdempotencyMiddleware.cs.",
+      "tags": [
+        "rmms.api",
+        "middlewares",
+        "code",
+        "cs",
+        "ham"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Rmms.Api/Middlewares/IdempotencyMiddleware.cs:BuildScope",
+      "type": "function",
+      "name": "BuildScope",
+      "filePath": "Rmms.Api/Middlewares/IdempotencyMiddleware.cs",
+      "lineRange": [
+        135,
+        141
+      ],
+      "summary": "Hàm BuildScope trong IdempotencyMiddleware.cs.",
+      "tags": [
+        "rmms.api",
+        "middlewares",
+        "code",
+        "cs",
+        "ham"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Rmms.Api/Middlewares/IdempotencyMiddleware.cs:WriteCachedAsync",
+      "type": "function",
+      "name": "WriteCachedAsync",
+      "filePath": "Rmms.Api/Middlewares/IdempotencyMiddleware.cs",
+      "lineRange": [
+        143,
+        151
+      ],
+      "summary": "Hàm WriteCachedAsync trong IdempotencyMiddleware.cs.",
+      "tags": [
+        "rmms.api",
+        "middlewares",
+        "code",
+        "cs",
+        "ham"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Rmms.Api/Middlewares/IdempotencyMiddleware.cs:WriteReusedAsync",
+      "type": "function",
+      "name": "WriteReusedAsync",
+      "filePath": "Rmms.Api/Middlewares/IdempotencyMiddleware.cs",
+      "lineRange": [
+        153,
+        164
+      ],
+      "summary": "Hàm WriteReusedAsync trong IdempotencyMiddleware.cs.",
+      "tags": [
+        "rmms.api",
+        "middlewares",
+        "code",
+        "cs",
+        "ham"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Rmms.Api/Middlewares/IdempotencyMiddleware.cs:SafeStringGet",
+      "type": "function",
+      "name": "SafeStringGet",
+      "filePath": "Rmms.Api/Middlewares/IdempotencyMiddleware.cs",
+      "lineRange": [
+        166,
+        178
+      ],
+      "summary": "Hàm SafeStringGet trong IdempotencyMiddleware.cs.",
+      "tags": [
+        "rmms.api",
+        "middlewares",
+        "code",
+        "cs",
+        "ham"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Rmms.Api/Middlewares/IdempotencyMiddleware.cs:SafeLock",
+      "type": "function",
+      "name": "SafeLock",
+      "filePath": "Rmms.Api/Middlewares/IdempotencyMiddleware.cs",
+      "lineRange": [
+        180,
+        192
+      ],
+      "summary": "Hàm SafeLock trong IdempotencyMiddleware.cs.",
+      "tags": [
+        "rmms.api",
+        "middlewares",
+        "code",
+        "cs",
+        "ham"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Rmms.Api/Middlewares/IdempotencyMiddleware.cs:SafeStore",
+      "type": "function",
+      "name": "SafeStore",
+      "filePath": "Rmms.Api/Middlewares/IdempotencyMiddleware.cs",
+      "lineRange": [
+        194,
+        204
+      ],
+      "summary": "Hàm SafeStore trong IdempotencyMiddleware.cs.",
+      "tags": [
+        "rmms.api",
+        "middlewares",
+        "code",
+        "cs",
+        "ham"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Rmms.Api/Middlewares/IdempotencyMiddleware.cs:SafeRelease",
+      "type": "function",
+      "name": "SafeRelease",
+      "filePath": "Rmms.Api/Middlewares/IdempotencyMiddleware.cs",
+      "lineRange": [
+        206,
+        216
+      ],
+      "summary": "Hàm SafeRelease trong IdempotencyMiddleware.cs.",
+      "tags": [
+        "rmms.api",
+        "middlewares",
+        "code",
+        "cs",
+        "ham"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:Rmms.Api/Middlewares/IdempotencyMiddleware.cs:IdempotencyMiddleware",
+      "type": "class",
+      "name": "IdempotencyMiddleware",
+      "filePath": "Rmms.Api/Middlewares/IdempotencyMiddleware.cs",
+      "lineRange": [
+        20,
+        219
+      ],
+      "summary": "Class IdempotencyMiddleware trong IdempotencyMiddleware.cs.",
+      "tags": [
+        "rmms.api",
+        "middlewares",
+        "code",
+        "cs",
+        "class"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "file:Rmms.Api/Program.cs",
+      "type": "file",
+      "name": "Program.cs",
+      "filePath": "Rmms.Api/Program.cs",
+      "summary": "Program.cs — tệp mã nguồn C# trong backend RMMS (0 hàm, 1 class).",
+      "tags": [
+        "rmms.api",
+        "program.cs",
+        "code",
+        "cs"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "class:Rmms.Api/Program.cs:Program",
+      "type": "class",
+      "name": "Program",
+      "filePath": "Rmms.Api/Program.cs",
+      "lineRange": [
+        241,
+        241
+      ],
+      "summary": "Class Program trong Program.cs.",
+      "tags": [
+        "rmms.api",
+        "program.cs",
+        "code",
+        "cs",
+        "class"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "config:Rmms.Api/Properties/launchSettings.json",
+      "type": "config",
+      "name": "launchSettings.json",
+      "filePath": "Rmms.Api/Properties/launchSettings.json",
+      "summary": "launchSettings.json — tệp cấu hình backend RMMS.",
+      "tags": [
+        "rmms.api",
+        "properties",
+        "config",
+        "json"
+      ],
+      "complexity": "simple"
+    }
+  ],
+  "edges": [
+    {
+      "source": "file:Rmms.Api/Dtos/Face/FaceRequests.cs",
+      "target": "class:Rmms.Api/Dtos/Face/FaceRequests.cs:EnrollFaceForm",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Api/Dtos/Face/FaceRequests.cs",
+      "target": "class:Rmms.Api/Dtos/Face/FaceRequests.cs:VerifyFaceForm",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Api/Hubs/HubUserIdProvider.cs",
+      "target": "function:Rmms.Api/Hubs/HubUserIdProvider.cs:GetUserId",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Api/Hubs/HubUserIdProvider.cs",
+      "target": "class:Rmms.Api/Hubs/HubUserIdProvider.cs:HubUserIdProvider",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Api/Hubs/NotificationsHub.cs",
+      "target": "class:Rmms.Api/Hubs/NotificationsHub.cs:NotificationsHub",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Api/Hubs/SignalRRealtimeNotifier.cs",
+      "target": "function:Rmms.Api/Hubs/SignalRRealtimeNotifier.cs:SignalRRealtimeNotifier",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Api/Hubs/SignalRRealtimeNotifier.cs",
+      "target": "function:Rmms.Api/Hubs/SignalRRealtimeNotifier.cs:PushNotificationAsync",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Api/Hubs/SignalRRealtimeNotifier.cs",
+      "target": "class:Rmms.Api/Hubs/SignalRRealtimeNotifier.cs:SignalRRealtimeNotifier",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Api/Localization/ErrorLocalizationFilter.cs",
+      "target": "function:Rmms.Api/Localization/ErrorLocalizationFilter.cs:ErrorLocalizationFilter",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Api/Localization/ErrorLocalizationFilter.cs",
+      "target": "function:Rmms.Api/Localization/ErrorLocalizationFilter.cs:OnActionExecuting",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Api/Localization/ErrorLocalizationFilter.cs",
+      "target": "function:Rmms.Api/Localization/ErrorLocalizationFilter.cs:OnActionExecuted",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Api/Localization/ErrorLocalizationFilter.cs",
+      "target": "class:Rmms.Api/Localization/ErrorLocalizationFilter.cs:ErrorLocalizationFilter",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Api/Localization/ErrorMessageCatalog.cs",
+      "target": "function:Rmms.Api/Localization/ErrorMessageCatalog.cs:Localize",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Api/Localization/ErrorMessageCatalog.cs",
+      "target": "class:Rmms.Api/Localization/ErrorMessageCatalog.cs:IErrorMessageLocalizer",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Api/Localization/ErrorMessageCatalog.cs",
+      "target": "class:Rmms.Api/Localization/ErrorMessageCatalog.cs:ErrorMessageCatalog",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Api/Logging/RequestEnrichmentMiddleware.cs",
+      "target": "function:Rmms.Api/Logging/RequestEnrichmentMiddleware.cs:RequestEnrichmentMiddleware",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Api/Logging/RequestEnrichmentMiddleware.cs",
+      "target": "function:Rmms.Api/Logging/RequestEnrichmentMiddleware.cs:Invoke",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Api/Logging/RequestEnrichmentMiddleware.cs",
+      "target": "class:Rmms.Api/Logging/RequestEnrichmentMiddleware.cs:RequestEnrichmentMiddleware",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Api/Middlewares/ExceptionHandlingMiddleware.cs",
+      "target": "function:Rmms.Api/Middlewares/ExceptionHandlingMiddleware.cs:ExceptionHandlingMiddleware",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Api/Middlewares/ExceptionHandlingMiddleware.cs",
+      "target": "function:Rmms.Api/Middlewares/ExceptionHandlingMiddleware.cs:InvokeAsync",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Api/Middlewares/ExceptionHandlingMiddleware.cs",
+      "target": "function:Rmms.Api/Middlewares/ExceptionHandlingMiddleware.cs:WriteAsync",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Api/Middlewares/ExceptionHandlingMiddleware.cs",
+      "target": "class:Rmms.Api/Middlewares/ExceptionHandlingMiddleware.cs:ExceptionHandlingMiddleware",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Api/Middlewares/IdempotencyMiddleware.cs",
+      "target": "function:Rmms.Api/Middlewares/IdempotencyMiddleware.cs:IdempotencyMiddleware",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Api/Middlewares/IdempotencyMiddleware.cs",
+      "target": "function:Rmms.Api/Middlewares/IdempotencyMiddleware.cs:InvokeAsync",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Api/Middlewares/IdempotencyMiddleware.cs",
+      "target": "function:Rmms.Api/Middlewares/IdempotencyMiddleware.cs:BuildScope",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Api/Middlewares/IdempotencyMiddleware.cs",
+      "target": "function:Rmms.Api/Middlewares/IdempotencyMiddleware.cs:WriteCachedAsync",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Api/Middlewares/IdempotencyMiddleware.cs",
+      "target": "function:Rmms.Api/Middlewares/IdempotencyMiddleware.cs:WriteReusedAsync",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Api/Middlewares/IdempotencyMiddleware.cs",
+      "target": "function:Rmms.Api/Middlewares/IdempotencyMiddleware.cs:SafeStringGet",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Api/Middlewares/IdempotencyMiddleware.cs",
+      "target": "function:Rmms.Api/Middlewares/IdempotencyMiddleware.cs:SafeLock",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Api/Middlewares/IdempotencyMiddleware.cs",
+      "target": "function:Rmms.Api/Middlewares/IdempotencyMiddleware.cs:SafeStore",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Api/Middlewares/IdempotencyMiddleware.cs",
+      "target": "function:Rmms.Api/Middlewares/IdempotencyMiddleware.cs:SafeRelease",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Api/Middlewares/IdempotencyMiddleware.cs",
+      "target": "class:Rmms.Api/Middlewares/IdempotencyMiddleware.cs:IdempotencyMiddleware",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Api/Program.cs",
+      "target": "class:Rmms.Api/Program.cs:Program",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    }
+  ]
+}

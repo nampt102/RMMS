@@ -1,0 +1,19 @@
+{
+  "nodes": [
+    {
+      "id": "service:Rmms.Worker/Dockerfile",
+      "type": "service",
+      "name": "Dockerfile",
+      "filePath": "Rmms.Worker/Dockerfile",
+      "summary": "Dockerfile — định nghĩa hạ tầng/triển khai.",
+      "tags": [
+        "rmms.worker",
+        "dockerfile",
+        "infra",
+        "worker/dockerfile"
+      ],
+      "complexity": "simple"
+    }
+  ],
+  "edges": []
+}

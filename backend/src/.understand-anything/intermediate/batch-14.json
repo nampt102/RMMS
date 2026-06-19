@@ -1,0 +1,2705 @@
+{
+  "nodes": [
+    {
+      "id": "file:Rmms.Application/WorkSchedule/SubmitWithdrawSchedule.cs",
+      "type": "file",
+      "name": "SubmitWithdrawSchedule.cs",
+      "filePath": "Rmms.Application/WorkSchedule/SubmitWithdrawSchedule.cs",
+      "summary": "SubmitWithdrawSchedule.cs — tệp mã nguồn C# trong backend RMMS (5 hàm, 2 class).",
+      "tags": [
+        "rmms.application",
+        "workschedule",
+        "code",
+        "cs"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:Rmms.Application/WorkSchedule/SubmitWithdrawSchedule.cs:SubmitScheduleCommandHandler",
+      "type": "function",
+      "name": "SubmitScheduleCommandHandler",
+      "filePath": "Rmms.Application/WorkSchedule/SubmitWithdrawSchedule.cs",
+      "lineRange": [
+        23,
+        29
+      ],
+      "summary": "Hàm SubmitScheduleCommandHandler trong SubmitWithdrawSchedule.cs.",
+      "tags": [
+        "rmms.application",
+        "workschedule",
+        "code",
+        "cs",
+        "ham"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Rmms.Application/WorkSchedule/SubmitWithdrawSchedule.cs:Handle",
+      "type": "function",
+      "name": "Handle",
+      "filePath": "Rmms.Application/WorkSchedule/SubmitWithdrawSchedule.cs",
+      "lineRange": [
+        31,
+        57
+      ],
+      "summary": "Hàm Handle trong SubmitWithdrawSchedule.cs.",
+      "tags": [
+        "rmms.application",
+        "workschedule",
+        "code",
+        "cs",
+        "ham"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Rmms.Application/WorkSchedule/SubmitWithdrawSchedule.cs:CreateApprovalIfRoutableAsync",
+      "type": "function",
+      "name": "CreateApprovalIfRoutableAsync",
+      "filePath": "Rmms.Application/WorkSchedule/SubmitWithdrawSchedule.cs",
+      "lineRange": [
+        59,
+        72
+      ],
+      "summary": "Hàm CreateApprovalIfRoutableAsync trong SubmitWithdrawSchedule.cs.",
+      "tags": [
+        "rmms.application",
+        "workschedule",
+        "code",
+        "cs",
+        "ham"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Rmms.Application/WorkSchedule/SubmitWithdrawSchedule.cs:WithdrawScheduleCommandHandler",
+      "type": "function",
+      "name": "WithdrawScheduleCommandHandler",
+      "filePath": "Rmms.Application/WorkSchedule/SubmitWithdrawSchedule.cs",
+      "lineRange": [
+        84,
+        88
+      ],
+      "summary": "Hàm WithdrawScheduleCommandHandler trong SubmitWithdrawSchedule.cs.",
+      "tags": [
+        "rmms.application",
+        "workschedule",
+        "code",
+        "cs",
+        "ham"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:Rmms.Application/WorkSchedule/SubmitWithdrawSchedule.cs:SubmitScheduleCommandHandler",
+      "type": "class",
+      "name": "SubmitScheduleCommandHandler",
+      "filePath": "Rmms.Application/WorkSchedule/SubmitWithdrawSchedule.cs",
+      "lineRange": [
+        16,
+        73
+      ],
+      "summary": "Class SubmitScheduleCommandHandler trong SubmitWithdrawSchedule.cs.",
+      "tags": [
+        "rmms.application",
+        "workschedule",
+        "code",
+        "cs",
+        "class"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "class:Rmms.Application/WorkSchedule/SubmitWithdrawSchedule.cs:WithdrawScheduleCommandHandler",
+      "type": "class",
+      "name": "WithdrawScheduleCommandHandler",
+      "filePath": "Rmms.Application/WorkSchedule/SubmitWithdrawSchedule.cs",
+      "lineRange": [
+        79,
+        114
+      ],
+      "summary": "Class WithdrawScheduleCommandHandler trong SubmitWithdrawSchedule.cs.",
+      "tags": [
+        "rmms.application",
+        "workschedule",
+        "code",
+        "cs",
+        "class"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:Rmms.Application/WorkSchedule/WorkScheduleDtos.cs",
+      "type": "file",
+      "name": "WorkScheduleDtos.cs",
+      "filePath": "Rmms.Application/WorkSchedule/WorkScheduleDtos.cs",
+      "summary": "WorkScheduleDtos.cs — tệp mã nguồn C# trong backend RMMS (1 hàm, 1 class).",
+      "tags": [
+        "rmms.application",
+        "workschedule",
+        "code",
+        "cs"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Rmms.Application/WorkSchedule/WorkScheduleDtos.cs:ToDto",
+      "type": "function",
+      "name": "ToDto",
+      "filePath": "Rmms.Application/WorkSchedule/WorkScheduleDtos.cs",
+      "lineRange": [
+        41,
+        72
+      ],
+      "summary": "Hàm ToDto trong WorkScheduleDtos.cs.",
+      "tags": [
+        "rmms.application",
+        "workschedule",
+        "code",
+        "cs",
+        "ham"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:Rmms.Application/WorkSchedule/WorkScheduleDtos.cs:WorkScheduleMapper",
+      "type": "class",
+      "name": "WorkScheduleMapper",
+      "filePath": "Rmms.Application/WorkSchedule/WorkScheduleDtos.cs",
+      "lineRange": [
+        39,
+        73
+      ],
+      "summary": "Class WorkScheduleMapper trong WorkScheduleDtos.cs.",
+      "tags": [
+        "rmms.application",
+        "workschedule",
+        "code",
+        "cs",
+        "class"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:Rmms.Domain/Approvals/Approval.cs",
+      "type": "file",
+      "name": "Approval.cs",
+      "filePath": "Rmms.Domain/Approvals/Approval.cs",
+      "summary": "Approval.cs — tệp mã nguồn C# trong backend RMMS (7 hàm, 1 class).",
+      "tags": [
+        "rmms.domain",
+        "approvals",
+        "code",
+        "cs"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:Rmms.Domain/Approvals/Approval.cs:Approval",
+      "type": "function",
+      "name": "Approval",
+      "filePath": "Rmms.Domain/Approvals/Approval.cs",
+      "lineRange": [
+        31,
+        31
+      ],
+      "summary": "Hàm Approval trong Approval.cs.",
+      "tags": [
+        "rmms.domain",
+        "approvals",
+        "code",
+        "cs",
+        "ham"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Rmms.Domain/Approvals/Approval.cs:Create",
+      "type": "function",
+      "name": "Create",
+      "filePath": "Rmms.Domain/Approvals/Approval.cs",
+      "lineRange": [
+        33,
+        55
+      ],
+      "summary": "Hàm Create trong Approval.cs.",
+      "tags": [
+        "rmms.domain",
+        "approvals",
+        "code",
+        "cs",
+        "ham"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Rmms.Domain/Approvals/Approval.cs:Approve",
+      "type": "function",
+      "name": "Approve",
+      "filePath": "Rmms.Domain/Approvals/Approval.cs",
+      "lineRange": [
+        59,
+        67
+      ],
+      "summary": "Hàm Approve trong Approval.cs.",
+      "tags": [
+        "rmms.domain",
+        "approvals",
+        "code",
+        "cs",
+        "ham"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Rmms.Domain/Approvals/Approval.cs:Reject",
+      "type": "function",
+      "name": "Reject",
+      "filePath": "Rmms.Domain/Approvals/Approval.cs",
+      "lineRange": [
+        69,
+        79
+      ],
+      "summary": "Hàm Reject trong Approval.cs.",
+      "tags": [
+        "rmms.domain",
+        "approvals",
+        "code",
+        "cs",
+        "ham"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Rmms.Domain/Approvals/Approval.cs:Override",
+      "type": "function",
+      "name": "Override",
+      "filePath": "Rmms.Domain/Approvals/Approval.cs",
+      "lineRange": [
+        85,
+        97
+      ],
+      "summary": "Hàm Override trong Approval.cs.",
+      "tags": [
+        "rmms.domain",
+        "approvals",
+        "code",
+        "cs",
+        "ham"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Rmms.Domain/Approvals/Approval.cs:EnsurePending",
+      "type": "function",
+      "name": "EnsurePending",
+      "filePath": "Rmms.Domain/Approvals/Approval.cs",
+      "lineRange": [
+        99,
+        103
+      ],
+      "summary": "Hàm EnsurePending trong Approval.cs.",
+      "tags": [
+        "rmms.domain",
+        "approvals",
+        "code",
+        "cs",
+        "ham"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Rmms.Domain/Approvals/Approval.cs:Touch",
+      "type": "function",
+      "name": "Touch",
+      "filePath": "Rmms.Domain/Approvals/Approval.cs",
+      "lineRange": [
+        105,
+        109
+      ],
+      "summary": "Hàm Touch trong Approval.cs.",
+      "tags": [
+        "rmms.domain",
+        "approvals",
+        "code",
+        "cs",
+        "ham"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:Rmms.Domain/Approvals/Approval.cs:Approval",
+      "type": "class",
+      "name": "Approval",
+      "filePath": "Rmms.Domain/Approvals/Approval.cs",
+      "lineRange": [
+        12,
+        110
+      ],
+      "summary": "Class Approval trong Approval.cs.",
+      "tags": [
+        "rmms.domain",
+        "approvals",
+        "code",
+        "cs",
+        "class"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:Rmms.Domain/Approvals/ApprovalEmailToken.cs",
+      "type": "file",
+      "name": "ApprovalEmailToken.cs",
+      "filePath": "Rmms.Domain/Approvals/ApprovalEmailToken.cs",
+      "summary": "ApprovalEmailToken.cs — tệp mã nguồn C# trong backend RMMS (5 hàm, 1 class).",
+      "tags": [
+        "rmms.domain",
+        "approvals",
+        "code",
+        "cs"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:Rmms.Domain/Approvals/ApprovalEmailToken.cs:ApprovalEmailToken",
+      "type": "function",
+      "name": "ApprovalEmailToken",
+      "filePath": "Rmms.Domain/Approvals/ApprovalEmailToken.cs",
+      "lineRange": [
+        20,
+        20
+      ],
+      "summary": "Hàm ApprovalEmailToken trong ApprovalEmailToken.cs.",
+      "tags": [
+        "rmms.domain",
+        "approvals",
+        "code",
+        "cs",
+        "ham"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Rmms.Domain/Approvals/ApprovalEmailToken.cs:Issue",
+      "type": "function",
+      "name": "Issue",
+      "filePath": "Rmms.Domain/Approvals/ApprovalEmailToken.cs",
+      "lineRange": [
+        22,
+        33
+      ],
+      "summary": "Hàm Issue trong ApprovalEmailToken.cs.",
+      "tags": [
+        "rmms.domain",
+        "approvals",
+        "code",
+        "cs",
+        "ham"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Rmms.Domain/Approvals/ApprovalEmailToken.cs:IsExpired",
+      "type": "function",
+      "name": "IsExpired",
+      "filePath": "Rmms.Domain/Approvals/ApprovalEmailToken.cs",
+      "lineRange": [
+        35,
+        35
+      ],
+      "summary": "Hàm IsExpired trong ApprovalEmailToken.cs.",
+      "tags": [
+        "rmms.domain",
+        "approvals",
+        "code",
+        "cs",
+        "ham"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Rmms.Domain/Approvals/ApprovalEmailToken.cs:IsValid",
+      "type": "function",
+      "name": "IsValid",
+      "filePath": "Rmms.Domain/Approvals/ApprovalEmailToken.cs",
+      "lineRange": [
+        37,
+        37
+      ],
+      "summary": "Hàm IsValid trong ApprovalEmailToken.cs.",
+      "tags": [
+        "rmms.domain",
+        "approvals",
+        "code",
+        "cs",
+        "ham"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Rmms.Domain/Approvals/ApprovalEmailToken.cs:MarkUsed",
+      "type": "function",
+      "name": "MarkUsed",
+      "filePath": "Rmms.Domain/Approvals/ApprovalEmailToken.cs",
+      "lineRange": [
+        39,
+        45
+      ],
+      "summary": "Hàm MarkUsed trong ApprovalEmailToken.cs.",
+      "tags": [
+        "rmms.domain",
+        "approvals",
+        "code",
+        "cs",
+        "ham"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:Rmms.Domain/Approvals/ApprovalEmailToken.cs:ApprovalEmailToken",
+      "type": "class",
+      "name": "ApprovalEmailToken",
+      "filePath": "Rmms.Domain/Approvals/ApprovalEmailToken.cs",
+      "lineRange": [
+        10,
+        46
+      ],
+      "summary": "Class ApprovalEmailToken trong ApprovalEmailToken.cs.",
+      "tags": [
+        "rmms.domain",
+        "approvals",
+        "code",
+        "cs",
+        "class"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:Rmms.Domain/Attendance/AttendanceRecord.cs",
+      "type": "file",
+      "name": "AttendanceRecord.cs",
+      "filePath": "Rmms.Domain/Attendance/AttendanceRecord.cs",
+      "summary": "AttendanceRecord.cs — tệp mã nguồn C# trong backend RMMS (8 hàm, 1 class).",
+      "tags": [
+        "rmms.domain",
+        "attendance",
+        "code",
+        "cs"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:Rmms.Domain/Attendance/AttendanceRecord.cs:AttendanceRecord",
+      "type": "function",
+      "name": "AttendanceRecord",
+      "filePath": "Rmms.Domain/Attendance/AttendanceRecord.cs",
+      "lineRange": [
+        83,
+        83
+      ],
+      "summary": "Hàm AttendanceRecord trong AttendanceRecord.cs.",
+      "tags": [
+        "rmms.domain",
+        "attendance",
+        "code",
+        "cs",
+        "ham"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Rmms.Domain/Attendance/AttendanceRecord.cs:CheckIn",
+      "type": "function",
+      "name": "CheckIn",
+      "filePath": "Rmms.Domain/Attendance/AttendanceRecord.cs",
+      "lineRange": [
+        90,
+        114
+      ],
+      "summary": "Hàm CheckIn trong AttendanceRecord.cs.",
+      "tags": [
+        "rmms.domain",
+        "attendance",
+        "code",
+        "cs",
+        "ham"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Rmms.Domain/Attendance/AttendanceRecord.cs:DetermineCheckInStatus",
+      "type": "function",
+      "name": "DetermineCheckInStatus",
+      "filePath": "Rmms.Domain/Attendance/AttendanceRecord.cs",
+      "lineRange": [
+        116,
+        122
+      ],
+      "summary": "Hàm DetermineCheckInStatus trong AttendanceRecord.cs.",
+      "tags": [
+        "rmms.domain",
+        "attendance",
+        "code",
+        "cs",
+        "ham"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Rmms.Domain/Attendance/AttendanceRecord.cs:CheckOut",
+      "type": "function",
+      "name": "CheckOut",
+      "filePath": "Rmms.Domain/Attendance/AttendanceRecord.cs",
+      "lineRange": [
+        142,
+        169
+      ],
+      "summary": "Hàm CheckOut trong AttendanceRecord.cs.",
+      "tags": [
+        "rmms.domain",
+        "attendance",
+        "code",
+        "cs",
+        "ham"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Rmms.Domain/Attendance/AttendanceRecord.cs:ApproveReview",
+      "type": "function",
+      "name": "ApproveReview",
+      "filePath": "Rmms.Domain/Attendance/AttendanceRecord.cs",
+      "lineRange": [
+        172,
+        177
+      ],
+      "summary": "Hàm ApproveReview trong AttendanceRecord.cs.",
+      "tags": [
+        "rmms.domain",
+        "attendance",
+        "code",
+        "cs",
+        "ham"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Rmms.Domain/Attendance/AttendanceRecord.cs:RejectReview",
+      "type": "function",
+      "name": "RejectReview",
+      "filePath": "Rmms.Domain/Attendance/AttendanceRecord.cs",
+      "lineRange": [
+        180,
+        186
+      ],
+      "summary": "Hàm RejectReview trong AttendanceRecord.cs.",
+      "tags": [
+        "rmms.domain",
+        "attendance",
+        "code",
+        "cs",
+        "ham"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Rmms.Domain/Attendance/AttendanceRecord.cs:PurgePhotos",
+      "type": "function",
+      "name": "PurgePhotos",
+      "filePath": "Rmms.Domain/Attendance/AttendanceRecord.cs",
+      "lineRange": [
+        192,
+        198
+      ],
+      "summary": "Hàm PurgePhotos trong AttendanceRecord.cs.",
+      "tags": [
+        "rmms.domain",
+        "attendance",
+        "code",
+        "cs",
+        "ham"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Rmms.Domain/Attendance/AttendanceRecord.cs:StampReview",
+      "type": "function",
+      "name": "StampReview",
+      "filePath": "Rmms.Domain/Attendance/AttendanceRecord.cs",
+      "lineRange": [
+        200,
+        205
+      ],
+      "summary": "Hàm StampReview trong AttendanceRecord.cs.",
+      "tags": [
+        "rmms.domain",
+        "attendance",
+        "code",
+        "cs",
+        "ham"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:Rmms.Domain/Attendance/AttendanceRecord.cs:AttendanceRecord",
+      "type": "class",
+      "name": "AttendanceRecord",
+      "filePath": "Rmms.Domain/Attendance/AttendanceRecord.cs",
+      "lineRange": [
+        44,
+        206
+      ],
+      "summary": "Class AttendanceRecord trong AttendanceRecord.cs.",
+      "tags": [
+        "rmms.domain",
+        "attendance",
+        "code",
+        "cs",
+        "class"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:Rmms.Domain/Audit/AuditLog.cs",
+      "type": "file",
+      "name": "AuditLog.cs",
+      "filePath": "Rmms.Domain/Audit/AuditLog.cs",
+      "summary": "AuditLog.cs — tệp mã nguồn C# trong backend RMMS (2 hàm, 1 class).",
+      "tags": [
+        "rmms.domain",
+        "audit",
+        "code",
+        "cs"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Rmms.Domain/Audit/AuditLog.cs:AuditLog",
+      "type": "function",
+      "name": "AuditLog",
+      "filePath": "Rmms.Domain/Audit/AuditLog.cs",
+      "lineRange": [
+        44,
+        44
+      ],
+      "summary": "Hàm AuditLog trong AuditLog.cs.",
+      "tags": [
+        "rmms.domain",
+        "audit",
+        "code",
+        "cs",
+        "ham"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Rmms.Domain/Audit/AuditLog.cs:Record",
+      "type": "function",
+      "name": "Record",
+      "filePath": "Rmms.Domain/Audit/AuditLog.cs",
+      "lineRange": [
+        46,
+        62
+      ],
+      "summary": "Hàm Record trong AuditLog.cs.",
+      "tags": [
+        "rmms.domain",
+        "audit",
+        "code",
+        "cs",
+        "ham"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:Rmms.Domain/Audit/AuditLog.cs:AuditLog",
+      "type": "class",
+      "name": "AuditLog",
+      "filePath": "Rmms.Domain/Audit/AuditLog.cs",
+      "lineRange": [
+        19,
+        63
+      ],
+      "summary": "Class AuditLog trong AuditLog.cs.",
+      "tags": [
+        "rmms.domain",
+        "audit",
+        "code",
+        "cs",
+        "class"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:Rmms.Domain/Auth/EmailVerificationToken.cs",
+      "type": "file",
+      "name": "EmailVerificationToken.cs",
+      "filePath": "Rmms.Domain/Auth/EmailVerificationToken.cs",
+      "summary": "EmailVerificationToken.cs — tệp mã nguồn C# trong backend RMMS (4 hàm, 1 class).",
+      "tags": [
+        "rmms.domain",
+        "auth",
+        "code",
+        "cs"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Rmms.Domain/Auth/EmailVerificationToken.cs:EmailVerificationToken",
+      "type": "function",
+      "name": "EmailVerificationToken",
+      "filePath": "Rmms.Domain/Auth/EmailVerificationToken.cs",
+      "lineRange": [
+        20,
+        20
+      ],
+      "summary": "Hàm EmailVerificationToken trong EmailVerificationToken.cs.",
+      "tags": [
+        "rmms.domain",
+        "auth",
+        "code",
+        "cs",
+        "ham"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Rmms.Domain/Auth/EmailVerificationToken.cs:Issue",
+      "type": "function",
+      "name": "Issue",
+      "filePath": "Rmms.Domain/Auth/EmailVerificationToken.cs",
+      "lineRange": [
+        22,
+        32
+      ],
+      "summary": "Hàm Issue trong EmailVerificationToken.cs.",
+      "tags": [
+        "rmms.domain",
+        "auth",
+        "code",
+        "cs",
+        "ham"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Rmms.Domain/Auth/EmailVerificationToken.cs:IsValid",
+      "type": "function",
+      "name": "IsValid",
+      "filePath": "Rmms.Domain/Auth/EmailVerificationToken.cs",
+      "lineRange": [
+        34,
+        34
+      ],
+      "summary": "Hàm IsValid trong EmailVerificationToken.cs.",
+      "tags": [
+        "rmms.domain",
+        "auth",
+        "code",
+        "cs",
+        "ham"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Rmms.Domain/Auth/EmailVerificationToken.cs:MarkUsed",
+      "type": "function",
+      "name": "MarkUsed",
+      "filePath": "Rmms.Domain/Auth/EmailVerificationToken.cs",
+      "lineRange": [
+        36,
+        43
+      ],
+      "summary": "Hàm MarkUsed trong EmailVerificationToken.cs.",
+      "tags": [
+        "rmms.domain",
+        "auth",
+        "code",
+        "cs",
+        "ham"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:Rmms.Domain/Auth/EmailVerificationToken.cs:EmailVerificationToken",
+      "type": "class",
+      "name": "EmailVerificationToken",
+      "filePath": "Rmms.Domain/Auth/EmailVerificationToken.cs",
+      "lineRange": [
+        9,
+        44
+      ],
+      "summary": "Class EmailVerificationToken trong EmailVerificationToken.cs.",
+      "tags": [
+        "rmms.domain",
+        "auth",
+        "code",
+        "cs",
+        "class"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:Rmms.Domain/Auth/LoginHistory.cs",
+      "type": "file",
+      "name": "LoginHistory.cs",
+      "filePath": "Rmms.Domain/Auth/LoginHistory.cs",
+      "summary": "LoginHistory.cs — tệp mã nguồn C# trong backend RMMS (3 hàm, 1 class).",
+      "tags": [
+        "rmms.domain",
+        "auth",
+        "code",
+        "cs"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Rmms.Domain/Auth/LoginHistory.cs:LoginHistory",
+      "type": "function",
+      "name": "LoginHistory",
+      "filePath": "Rmms.Domain/Auth/LoginHistory.cs",
+      "lineRange": [
+        39,
+        39
+      ],
+      "summary": "Hàm LoginHistory trong LoginHistory.cs.",
+      "tags": [
+        "rmms.domain",
+        "auth",
+        "code",
+        "cs",
+        "ham"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Rmms.Domain/Auth/LoginHistory.cs:RecordSuccess",
+      "type": "function",
+      "name": "RecordSuccess",
+      "filePath": "Rmms.Domain/Auth/LoginHistory.cs",
+      "lineRange": [
+        41,
+        51
+      ],
+      "summary": "Hàm RecordSuccess trong LoginHistory.cs.",
+      "tags": [
+        "rmms.domain",
+        "auth",
+        "code",
+        "cs",
+        "ham"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Rmms.Domain/Auth/LoginHistory.cs:RecordFailure",
+      "type": "function",
+      "name": "RecordFailure",
+      "filePath": "Rmms.Domain/Auth/LoginHistory.cs",
+      "lineRange": [
+        53,
+        66
+      ],
+      "summary": "Hàm RecordFailure trong LoginHistory.cs.",
+      "tags": [
+        "rmms.domain",
+        "auth",
+        "code",
+        "cs",
+        "ham"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:Rmms.Domain/Auth/LoginHistory.cs:LoginHistory",
+      "type": "class",
+      "name": "LoginHistory",
+      "filePath": "Rmms.Domain/Auth/LoginHistory.cs",
+      "lineRange": [
+        18,
+        67
+      ],
+      "summary": "Class LoginHistory trong LoginHistory.cs.",
+      "tags": [
+        "rmms.domain",
+        "auth",
+        "code",
+        "cs",
+        "class"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:Rmms.Domain/Auth/PasswordResetToken.cs",
+      "type": "file",
+      "name": "PasswordResetToken.cs",
+      "filePath": "Rmms.Domain/Auth/PasswordResetToken.cs",
+      "summary": "PasswordResetToken.cs — tệp mã nguồn C# trong backend RMMS (4 hàm, 1 class).",
+      "tags": [
+        "rmms.domain",
+        "auth",
+        "code",
+        "cs"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Rmms.Domain/Auth/PasswordResetToken.cs:PasswordResetToken",
+      "type": "function",
+      "name": "PasswordResetToken",
+      "filePath": "Rmms.Domain/Auth/PasswordResetToken.cs",
+      "lineRange": [
+        19,
+        19
+      ],
+      "summary": "Hàm PasswordResetToken trong PasswordResetToken.cs.",
+      "tags": [
+        "rmms.domain",
+        "auth",
+        "code",
+        "cs",
+        "ham"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Rmms.Domain/Auth/PasswordResetToken.cs:Issue",
+      "type": "function",
+      "name": "Issue",
+      "filePath": "Rmms.Domain/Auth/PasswordResetToken.cs",
+      "lineRange": [
+        21,
+        31
+      ],
+      "summary": "Hàm Issue trong PasswordResetToken.cs.",
+      "tags": [
+        "rmms.domain",
+        "auth",
+        "code",
+        "cs",
+        "ham"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Rmms.Domain/Auth/PasswordResetToken.cs:IsValid",
+      "type": "function",
+      "name": "IsValid",
+      "filePath": "Rmms.Domain/Auth/PasswordResetToken.cs",
+      "lineRange": [
+        33,
+        33
+      ],
+      "summary": "Hàm IsValid trong PasswordResetToken.cs.",
+      "tags": [
+        "rmms.domain",
+        "auth",
+        "code",
+        "cs",
+        "ham"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Rmms.Domain/Auth/PasswordResetToken.cs:MarkUsed",
+      "type": "function",
+      "name": "MarkUsed",
+      "filePath": "Rmms.Domain/Auth/PasswordResetToken.cs",
+      "lineRange": [
+        35,
+        42
+      ],
+      "summary": "Hàm MarkUsed trong PasswordResetToken.cs.",
+      "tags": [
+        "rmms.domain",
+        "auth",
+        "code",
+        "cs",
+        "ham"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:Rmms.Domain/Auth/PasswordResetToken.cs:PasswordResetToken",
+      "type": "class",
+      "name": "PasswordResetToken",
+      "filePath": "Rmms.Domain/Auth/PasswordResetToken.cs",
+      "lineRange": [
+        10,
+        43
+      ],
+      "summary": "Class PasswordResetToken trong PasswordResetToken.cs.",
+      "tags": [
+        "rmms.domain",
+        "auth",
+        "code",
+        "cs",
+        "class"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:Rmms.Domain/Auth/RefreshToken.cs",
+      "type": "file",
+      "name": "RefreshToken.cs",
+      "filePath": "Rmms.Domain/Auth/RefreshToken.cs",
+      "summary": "RefreshToken.cs — tệp mã nguồn C# trong backend RMMS (5 hàm, 1 class).",
+      "tags": [
+        "rmms.domain",
+        "auth",
+        "code",
+        "cs"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:Rmms.Domain/Auth/RefreshToken.cs:RefreshToken",
+      "type": "function",
+      "name": "RefreshToken",
+      "filePath": "Rmms.Domain/Auth/RefreshToken.cs",
+      "lineRange": [
+        35,
+        35
+      ],
+      "summary": "Hàm RefreshToken trong RefreshToken.cs.",
+      "tags": [
+        "rmms.domain",
+        "auth",
+        "code",
+        "cs",
+        "ham"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Rmms.Domain/Auth/RefreshToken.cs:Issue",
+      "type": "function",
+      "name": "Issue",
+      "filePath": "Rmms.Domain/Auth/RefreshToken.cs",
+      "lineRange": [
+        37,
+        48
+      ],
+      "summary": "Hàm Issue trong RefreshToken.cs.",
+      "tags": [
+        "rmms.domain",
+        "auth",
+        "code",
+        "cs",
+        "ham"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Rmms.Domain/Auth/RefreshToken.cs:IsActive",
+      "type": "function",
+      "name": "IsActive",
+      "filePath": "Rmms.Domain/Auth/RefreshToken.cs",
+      "lineRange": [
+        50,
+        51
+      ],
+      "summary": "Hàm IsActive trong RefreshToken.cs.",
+      "tags": [
+        "rmms.domain",
+        "auth",
+        "code",
+        "cs",
+        "ham"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Rmms.Domain/Auth/RefreshToken.cs:Revoke",
+      "type": "function",
+      "name": "Revoke",
+      "filePath": "Rmms.Domain/Auth/RefreshToken.cs",
+      "lineRange": [
+        53,
+        56
+      ],
+      "summary": "Hàm Revoke trong RefreshToken.cs.",
+      "tags": [
+        "rmms.domain",
+        "auth",
+        "code",
+        "cs",
+        "ham"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Rmms.Domain/Auth/RefreshToken.cs:MarkRotatedBy",
+      "type": "function",
+      "name": "MarkRotatedBy",
+      "filePath": "Rmms.Domain/Auth/RefreshToken.cs",
+      "lineRange": [
+        58,
+        62
+      ],
+      "summary": "Hàm MarkRotatedBy trong RefreshToken.cs.",
+      "tags": [
+        "rmms.domain",
+        "auth",
+        "code",
+        "cs",
+        "ham"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:Rmms.Domain/Auth/RefreshToken.cs:RefreshToken",
+      "type": "class",
+      "name": "RefreshToken",
+      "filePath": "Rmms.Domain/Auth/RefreshToken.cs",
+      "lineRange": [
+        17,
+        63
+      ],
+      "summary": "Class RefreshToken trong RefreshToken.cs.",
+      "tags": [
+        "rmms.domain",
+        "auth",
+        "code",
+        "cs",
+        "class"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:Rmms.Domain/Common/AggregateRoot.cs",
+      "type": "file",
+      "name": "AggregateRoot.cs",
+      "filePath": "Rmms.Domain/Common/AggregateRoot.cs",
+      "summary": "AggregateRoot.cs — tệp mã nguồn C# trong backend RMMS (2 hàm, 1 class).",
+      "tags": [
+        "rmms.domain",
+        "common",
+        "code",
+        "cs"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Rmms.Domain/Common/AggregateRoot.cs:RaiseDomainEvent",
+      "type": "function",
+      "name": "RaiseDomainEvent",
+      "filePath": "Rmms.Domain/Common/AggregateRoot.cs",
+      "lineRange": [
+        11,
+        11
+      ],
+      "summary": "Hàm RaiseDomainEvent trong AggregateRoot.cs.",
+      "tags": [
+        "rmms.domain",
+        "common",
+        "code",
+        "cs",
+        "ham"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Rmms.Domain/Common/AggregateRoot.cs:ClearDomainEvents",
+      "type": "function",
+      "name": "ClearDomainEvents",
+      "filePath": "Rmms.Domain/Common/AggregateRoot.cs",
+      "lineRange": [
+        12,
+        12
+      ],
+      "summary": "Hàm ClearDomainEvents trong AggregateRoot.cs.",
+      "tags": [
+        "rmms.domain",
+        "common",
+        "code",
+        "cs",
+        "ham"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:Rmms.Domain/Common/AggregateRoot.cs:AggregateRoot",
+      "type": "class",
+      "name": "AggregateRoot",
+      "filePath": "Rmms.Domain/Common/AggregateRoot.cs",
+      "lineRange": [
+        6,
+        13
+      ],
+      "summary": "Class AggregateRoot trong AggregateRoot.cs.",
+      "tags": [
+        "rmms.domain",
+        "common",
+        "code",
+        "cs",
+        "class"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:Rmms.Domain/Common/AuditableEntity.cs",
+      "type": "file",
+      "name": "AuditableEntity.cs",
+      "filePath": "Rmms.Domain/Common/AuditableEntity.cs",
+      "summary": "AuditableEntity.cs — tệp mã nguồn C# trong backend RMMS (0 hàm, 1 class).",
+      "tags": [
+        "rmms.domain",
+        "common",
+        "code",
+        "cs"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:Rmms.Domain/Common/AuditableEntity.cs:AuditableEntity",
+      "type": "class",
+      "name": "AuditableEntity",
+      "filePath": "Rmms.Domain/Common/AuditableEntity.cs",
+      "lineRange": [
+        7,
+        19
+      ],
+      "summary": "Class AuditableEntity trong AuditableEntity.cs.",
+      "tags": [
+        "rmms.domain",
+        "common",
+        "code",
+        "cs",
+        "class"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:Rmms.Domain/Common/Entity.cs",
+      "type": "file",
+      "name": "Entity.cs",
+      "filePath": "Rmms.Domain/Common/Entity.cs",
+      "summary": "Entity.cs — tệp mã nguồn C# trong backend RMMS (2 hàm, 1 class).",
+      "tags": [
+        "rmms.domain",
+        "common",
+        "code",
+        "cs"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Rmms.Domain/Common/Entity.cs:Equals",
+      "type": "function",
+      "name": "Equals",
+      "filePath": "Rmms.Domain/Common/Entity.cs",
+      "lineRange": [
+        11,
+        17
+      ],
+      "summary": "Hàm Equals trong Entity.cs.",
+      "tags": [
+        "rmms.domain",
+        "common",
+        "code",
+        "cs",
+        "ham"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Rmms.Domain/Common/Entity.cs:GetHashCode",
+      "type": "function",
+      "name": "GetHashCode",
+      "filePath": "Rmms.Domain/Common/Entity.cs",
+      "lineRange": [
+        19,
+        19
+      ],
+      "summary": "Hàm GetHashCode trong Entity.cs.",
+      "tags": [
+        "rmms.domain",
+        "common",
+        "code",
+        "cs",
+        "ham"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:Rmms.Domain/Common/Entity.cs:Entity",
+      "type": "class",
+      "name": "Entity",
+      "filePath": "Rmms.Domain/Common/Entity.cs",
+      "lineRange": [
+        7,
+        23
+      ],
+      "summary": "Class Entity trong Entity.cs.",
+      "tags": [
+        "rmms.domain",
+        "common",
+        "code",
+        "cs",
+        "class"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:Rmms.Domain/Common/Error.cs",
+      "type": "file",
+      "name": "Error.cs",
+      "filePath": "Rmms.Domain/Common/Error.cs",
+      "summary": "Error.cs — tệp mã nguồn C# trong backend RMMS (0 hàm, 0 class).",
+      "tags": [
+        "rmms.domain",
+        "common",
+        "code",
+        "cs"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:Rmms.Domain/Common/IAggregateRoot.cs",
+      "type": "file",
+      "name": "IAggregateRoot.cs",
+      "filePath": "Rmms.Domain/Common/IAggregateRoot.cs",
+      "summary": "IAggregateRoot.cs — tệp mã nguồn C# trong backend RMMS (0 hàm, 1 class).",
+      "tags": [
+        "rmms.domain",
+        "common",
+        "code",
+        "cs"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:Rmms.Domain/Common/IAggregateRoot.cs:IAggregateRoot",
+      "type": "class",
+      "name": "IAggregateRoot",
+      "filePath": "Rmms.Domain/Common/IAggregateRoot.cs",
+      "lineRange": [
+        10,
+        12
+      ],
+      "summary": "Class IAggregateRoot trong IAggregateRoot.cs.",
+      "tags": [
+        "rmms.domain",
+        "common",
+        "code",
+        "cs",
+        "class"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:Rmms.Domain/Common/IDomainEvent.cs",
+      "type": "file",
+      "name": "IDomainEvent.cs",
+      "filePath": "Rmms.Domain/Common/IDomainEvent.cs",
+      "summary": "IDomainEvent.cs — tệp mã nguồn C# trong backend RMMS (0 hàm, 1 class).",
+      "tags": [
+        "rmms.domain",
+        "common",
+        "code",
+        "cs"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:Rmms.Domain/Common/IDomainEvent.cs:IDomainEvent",
+      "type": "class",
+      "name": "IDomainEvent",
+      "filePath": "Rmms.Domain/Common/IDomainEvent.cs",
+      "lineRange": [
+        7,
+        11
+      ],
+      "summary": "Class IDomainEvent trong IDomainEvent.cs.",
+      "tags": [
+        "rmms.domain",
+        "common",
+        "code",
+        "cs",
+        "class"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:Rmms.Domain/Common/Result.cs",
+      "type": "file",
+      "name": "Result.cs",
+      "filePath": "Rmms.Domain/Common/Result.cs",
+      "summary": "Result.cs — tệp mã nguồn C# trong backend RMMS (6 hàm, 2 class).",
+      "tags": [
+        "rmms.domain",
+        "common",
+        "code",
+        "cs"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:Rmms.Domain/Common/Result.cs:Result",
+      "type": "function",
+      "name": "Result",
+      "filePath": "Rmms.Domain/Common/Result.cs",
+      "lineRange": [
+        10,
+        19
+      ],
+      "summary": "Hàm Result trong Result.cs.",
+      "tags": [
+        "rmms.domain",
+        "common",
+        "code",
+        "cs",
+        "ham"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Rmms.Domain/Common/Result.cs:Success",
+      "type": "function",
+      "name": "Success",
+      "filePath": "Rmms.Domain/Common/Result.cs",
+      "lineRange": [
+        25,
+        25
+      ],
+      "summary": "Hàm Success trong Result.cs.",
+      "tags": [
+        "rmms.domain",
+        "common",
+        "code",
+        "cs",
+        "ham"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Rmms.Domain/Common/Result.cs:Failure",
+      "type": "function",
+      "name": "Failure",
+      "filePath": "Rmms.Domain/Common/Result.cs",
+      "lineRange": [
+        26,
+        26
+      ],
+      "summary": "Hàm Failure trong Result.cs.",
+      "tags": [
+        "rmms.domain",
+        "common",
+        "code",
+        "cs",
+        "ham"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:Rmms.Domain/Common/Result.cs:Result",
+      "type": "class",
+      "name": "Result",
+      "filePath": "Rmms.Domain/Common/Result.cs",
+      "lineRange": [
+        8,
+        30
+      ],
+      "summary": "Class Result trong Result.cs.",
+      "tags": [
+        "rmms.domain",
+        "common",
+        "code",
+        "cs",
+        "class"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:Rmms.Domain/Common/UuidV7.cs",
+      "type": "file",
+      "name": "UuidV7.cs",
+      "filePath": "Rmms.Domain/Common/UuidV7.cs",
+      "summary": "UuidV7.cs — tệp mã nguồn C# trong backend RMMS (1 hàm, 1 class).",
+      "tags": [
+        "rmms.domain",
+        "common",
+        "code",
+        "cs"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Rmms.Domain/Common/UuidV7.cs:NewGuid",
+      "type": "function",
+      "name": "NewGuid",
+      "filePath": "Rmms.Domain/Common/UuidV7.cs",
+      "lineRange": [
+        13,
+        39
+      ],
+      "summary": "Hàm NewGuid trong UuidV7.cs.",
+      "tags": [
+        "rmms.domain",
+        "common",
+        "code",
+        "cs",
+        "ham"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:Rmms.Domain/Common/UuidV7.cs:UuidV7",
+      "type": "class",
+      "name": "UuidV7",
+      "filePath": "Rmms.Domain/Common/UuidV7.cs",
+      "lineRange": [
+        10,
+        40
+      ],
+      "summary": "Class UuidV7 trong UuidV7.cs.",
+      "tags": [
+        "rmms.domain",
+        "common",
+        "code",
+        "cs",
+        "class"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:Rmms.Domain/Common/ValueObject.cs",
+      "type": "file",
+      "name": "ValueObject.cs",
+      "filePath": "Rmms.Domain/Common/ValueObject.cs",
+      "summary": "ValueObject.cs — tệp mã nguồn C# trong backend RMMS (3 hàm, 1 class).",
+      "tags": [
+        "rmms.domain",
+        "common",
+        "code",
+        "cs"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Rmms.Domain/Common/ValueObject.cs:GetEqualityComponents",
+      "type": "function",
+      "name": "GetEqualityComponents",
+      "filePath": "Rmms.Domain/Common/ValueObject.cs",
+      "lineRange": [
+        8,
+        8
+      ],
+      "summary": "Hàm GetEqualityComponents trong ValueObject.cs.",
+      "tags": [
+        "rmms.domain",
+        "common",
+        "code",
+        "cs",
+        "ham"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Rmms.Domain/Common/ValueObject.cs:Equals",
+      "type": "function",
+      "name": "Equals",
+      "filePath": "Rmms.Domain/Common/ValueObject.cs",
+      "lineRange": [
+        10,
+        15
+      ],
+      "summary": "Hàm Equals trong ValueObject.cs.",
+      "tags": [
+        "rmms.domain",
+        "common",
+        "code",
+        "cs",
+        "ham"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Rmms.Domain/Common/ValueObject.cs:GetHashCode",
+      "type": "function",
+      "name": "GetHashCode",
+      "filePath": "Rmms.Domain/Common/ValueObject.cs",
+      "lineRange": [
+        17,
+        20
+      ],
+      "summary": "Hàm GetHashCode trong ValueObject.cs.",
+      "tags": [
+        "rmms.domain",
+        "common",
+        "code",
+        "cs",
+        "ham"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:Rmms.Domain/Common/ValueObject.cs:ValueObject",
+      "type": "class",
+      "name": "ValueObject",
+      "filePath": "Rmms.Domain/Common/ValueObject.cs",
+      "lineRange": [
+        6,
+        24
+      ],
+      "summary": "Class ValueObject trong ValueObject.cs.",
+      "tags": [
+        "rmms.domain",
+        "common",
+        "code",
+        "cs",
+        "class"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:Rmms.Domain/Devices/UserDevice.cs",
+      "type": "file",
+      "name": "UserDevice.cs",
+      "filePath": "Rmms.Domain/Devices/UserDevice.cs",
+      "summary": "UserDevice.cs — tệp mã nguồn C# trong backend RMMS (9 hàm, 1 class).",
+      "tags": [
+        "rmms.domain",
+        "devices",
+        "code",
+        "cs"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:Rmms.Domain/Devices/UserDevice.cs:UserDevice",
+      "type": "function",
+      "name": "UserDevice",
+      "filePath": "Rmms.Domain/Devices/UserDevice.cs",
+      "lineRange": [
+        45,
+        45
+      ],
+      "summary": "Hàm UserDevice trong UserDevice.cs.",
+      "tags": [
+        "rmms.domain",
+        "devices",
+        "code",
+        "cs",
+        "ham"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Rmms.Domain/Devices/UserDevice.cs:RegisterFirstActive",
+      "type": "function",
+      "name": "RegisterFirstActive",
+      "filePath": "Rmms.Domain/Devices/UserDevice.cs",
+      "lineRange": [
+        51,
+        69
+      ],
+      "summary": "Hàm RegisterFirstActive trong UserDevice.cs.",
+      "tags": [
+        "rmms.domain",
+        "devices",
+        "code",
+        "cs",
+        "ham"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Rmms.Domain/Devices/UserDevice.cs:RegisterPendingApproval",
+      "type": "function",
+      "name": "RegisterPendingApproval",
+      "filePath": "Rmms.Domain/Devices/UserDevice.cs",
+      "lineRange": [
+        75,
+        91
+      ],
+      "summary": "Hàm RegisterPendingApproval trong UserDevice.cs.",
+      "tags": [
+        "rmms.domain",
+        "devices",
+        "code",
+        "cs",
+        "ham"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Rmms.Domain/Devices/UserDevice.cs:Approve",
+      "type": "function",
+      "name": "Approve",
+      "filePath": "Rmms.Domain/Devices/UserDevice.cs",
+      "lineRange": [
+        95,
+        106
+      ],
+      "summary": "Hàm Approve trong UserDevice.cs.",
+      "tags": [
+        "rmms.domain",
+        "devices",
+        "code",
+        "cs",
+        "ham"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Rmms.Domain/Devices/UserDevice.cs:Reject",
+      "type": "function",
+      "name": "Reject",
+      "filePath": "Rmms.Domain/Devices/UserDevice.cs",
+      "lineRange": [
+        108,
+        118
+      ],
+      "summary": "Hàm Reject trong UserDevice.cs.",
+      "tags": [
+        "rmms.domain",
+        "devices",
+        "code",
+        "cs",
+        "ham"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Rmms.Domain/Devices/UserDevice.cs:MarkReplaced",
+      "type": "function",
+      "name": "MarkReplaced",
+      "filePath": "Rmms.Domain/Devices/UserDevice.cs",
+      "lineRange": [
+        121,
+        129
+      ],
+      "summary": "Hàm MarkReplaced trong UserDevice.cs.",
+      "tags": [
+        "rmms.domain",
+        "devices",
+        "code",
+        "cs",
+        "ham"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Rmms.Domain/Devices/UserDevice.cs:Touch",
+      "type": "function",
+      "name": "Touch",
+      "filePath": "Rmms.Domain/Devices/UserDevice.cs",
+      "lineRange": [
+        131,
+        134
+      ],
+      "summary": "Hàm Touch trong UserDevice.cs.",
+      "tags": [
+        "rmms.domain",
+        "devices",
+        "code",
+        "cs",
+        "ham"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Rmms.Domain/Devices/UserDevice.cs:UpdateFcmToken",
+      "type": "function",
+      "name": "UpdateFcmToken",
+      "filePath": "Rmms.Domain/Devices/UserDevice.cs",
+      "lineRange": [
+        136,
+        139
+      ],
+      "summary": "Hàm UpdateFcmToken trong UserDevice.cs.",
+      "tags": [
+        "rmms.domain",
+        "devices",
+        "code",
+        "cs",
+        "ham"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Rmms.Domain/Devices/UserDevice.cs:NormalizeOs",
+      "type": "function",
+      "name": "NormalizeOs",
+      "filePath": "Rmms.Domain/Devices/UserDevice.cs",
+      "lineRange": [
+        143,
+        147
+      ],
+      "summary": "Hàm NormalizeOs trong UserDevice.cs.",
+      "tags": [
+        "rmms.domain",
+        "devices",
+        "code",
+        "cs",
+        "ham"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:Rmms.Domain/Devices/UserDevice.cs:UserDevice",
+      "type": "class",
+      "name": "UserDevice",
+      "filePath": "Rmms.Domain/Devices/UserDevice.cs",
+      "lineRange": [
+        21,
+        148
+      ],
+      "summary": "Class UserDevice trong UserDevice.cs.",
+      "tags": [
+        "rmms.domain",
+        "devices",
+        "code",
+        "cs",
+        "class"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "file:Rmms.Domain/Documents/Document.cs",
+      "type": "file",
+      "name": "Document.cs",
+      "filePath": "Rmms.Domain/Documents/Document.cs",
+      "summary": "Document.cs — tệp mã nguồn C# trong backend RMMS (2 hàm, 1 class).",
+      "tags": [
+        "rmms.domain",
+        "documents",
+        "code",
+        "cs"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Rmms.Domain/Documents/Document.cs:Document",
+      "type": "function",
+      "name": "Document",
+      "filePath": "Rmms.Domain/Documents/Document.cs",
+      "lineRange": [
+        24,
+        24
+      ],
+      "summary": "Hàm Document trong Document.cs.",
+      "tags": [
+        "rmms.domain",
+        "documents",
+        "code",
+        "cs",
+        "ham"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Rmms.Domain/Documents/Document.cs:Create",
+      "type": "function",
+      "name": "Create",
+      "filePath": "Rmms.Domain/Documents/Document.cs",
+      "lineRange": [
+        26,
+        45
+      ],
+      "summary": "Hàm Create trong Document.cs.",
+      "tags": [
+        "rmms.domain",
+        "documents",
+        "code",
+        "cs",
+        "ham"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:Rmms.Domain/Documents/Document.cs:Document",
+      "type": "class",
+      "name": "Document",
+      "filePath": "Rmms.Domain/Documents/Document.cs",
+      "lineRange": [
+        12,
+        48
+      ],
+      "summary": "Class Document trong Document.cs.",
+      "tags": [
+        "rmms.domain",
+        "documents",
+        "code",
+        "cs",
+        "class"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:Rmms.Domain/Documents/DocumentAssignment.cs",
+      "type": "file",
+      "name": "DocumentAssignment.cs",
+      "filePath": "Rmms.Domain/Documents/DocumentAssignment.cs",
+      "summary": "DocumentAssignment.cs — tệp mã nguồn C# trong backend RMMS (2 hàm, 1 class).",
+      "tags": [
+        "rmms.domain",
+        "documents",
+        "code",
+        "cs"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Rmms.Domain/Documents/DocumentAssignment.cs:DocumentAssignment",
+      "type": "function",
+      "name": "DocumentAssignment",
+      "filePath": "Rmms.Domain/Documents/DocumentAssignment.cs",
+      "lineRange": [
+        19,
+        19
+      ],
+      "summary": "Hàm DocumentAssignment trong DocumentAssignment.cs.",
+      "tags": [
+        "rmms.domain",
+        "documents",
+        "code",
+        "cs",
+        "ham"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Rmms.Domain/Documents/DocumentAssignment.cs:Create",
+      "type": "function",
+      "name": "Create",
+      "filePath": "Rmms.Domain/Documents/DocumentAssignment.cs",
+      "lineRange": [
+        21,
+        35
+      ],
+      "summary": "Hàm Create trong DocumentAssignment.cs.",
+      "tags": [
+        "rmms.domain",
+        "documents",
+        "code",
+        "cs",
+        "ham"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:Rmms.Domain/Documents/DocumentAssignment.cs:DocumentAssignment",
+      "type": "class",
+      "name": "DocumentAssignment",
+      "filePath": "Rmms.Domain/Documents/DocumentAssignment.cs",
+      "lineRange": [
+        11,
+        36
+      ],
+      "summary": "Class DocumentAssignment trong DocumentAssignment.cs.",
+      "tags": [
+        "rmms.domain",
+        "documents",
+        "code",
+        "cs",
+        "class"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:Rmms.Domain/Enums/ApprovalDecisionVia.cs",
+      "type": "file",
+      "name": "ApprovalDecisionVia.cs",
+      "filePath": "Rmms.Domain/Enums/ApprovalDecisionVia.cs",
+      "summary": "ApprovalDecisionVia.cs — tệp mã nguồn C# trong backend RMMS (0 hàm, 0 class).",
+      "tags": [
+        "rmms.domain",
+        "enums",
+        "code",
+        "cs"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:Rmms.Domain/Enums/ApprovalEntityType.cs",
+      "type": "file",
+      "name": "ApprovalEntityType.cs",
+      "filePath": "Rmms.Domain/Enums/ApprovalEntityType.cs",
+      "summary": "ApprovalEntityType.cs — tệp mã nguồn C# trong backend RMMS (0 hàm, 0 class).",
+      "tags": [
+        "rmms.domain",
+        "enums",
+        "code",
+        "cs"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:Rmms.Domain/Enums/ApprovalStatus.cs",
+      "type": "file",
+      "name": "ApprovalStatus.cs",
+      "filePath": "Rmms.Domain/Enums/ApprovalStatus.cs",
+      "summary": "ApprovalStatus.cs — tệp mã nguồn C# trong backend RMMS (0 hàm, 0 class).",
+      "tags": [
+        "rmms.domain",
+        "enums",
+        "code",
+        "cs"
+      ],
+      "complexity": "simple"
+    }
+  ],
+  "edges": [
+    {
+      "source": "file:Rmms.Application/WorkSchedule/SubmitWithdrawSchedule.cs",
+      "target": "function:Rmms.Application/WorkSchedule/SubmitWithdrawSchedule.cs:SubmitScheduleCommandHandler",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Application/WorkSchedule/SubmitWithdrawSchedule.cs",
+      "target": "function:Rmms.Application/WorkSchedule/SubmitWithdrawSchedule.cs:Handle",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Application/WorkSchedule/SubmitWithdrawSchedule.cs",
+      "target": "function:Rmms.Application/WorkSchedule/SubmitWithdrawSchedule.cs:CreateApprovalIfRoutableAsync",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Application/WorkSchedule/SubmitWithdrawSchedule.cs",
+      "target": "function:Rmms.Application/WorkSchedule/SubmitWithdrawSchedule.cs:WithdrawScheduleCommandHandler",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Application/WorkSchedule/SubmitWithdrawSchedule.cs",
+      "target": "function:Rmms.Application/WorkSchedule/SubmitWithdrawSchedule.cs:Handle",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Application/WorkSchedule/SubmitWithdrawSchedule.cs",
+      "target": "class:Rmms.Application/WorkSchedule/SubmitWithdrawSchedule.cs:SubmitScheduleCommandHandler",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Application/WorkSchedule/SubmitWithdrawSchedule.cs",
+      "target": "class:Rmms.Application/WorkSchedule/SubmitWithdrawSchedule.cs:WithdrawScheduleCommandHandler",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Application/WorkSchedule/WorkScheduleDtos.cs",
+      "target": "function:Rmms.Application/WorkSchedule/WorkScheduleDtos.cs:ToDto",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Application/WorkSchedule/WorkScheduleDtos.cs",
+      "target": "class:Rmms.Application/WorkSchedule/WorkScheduleDtos.cs:WorkScheduleMapper",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Domain/Approvals/Approval.cs",
+      "target": "function:Rmms.Domain/Approvals/Approval.cs:Approval",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Domain/Approvals/Approval.cs",
+      "target": "function:Rmms.Domain/Approvals/Approval.cs:Create",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Domain/Approvals/Approval.cs",
+      "target": "function:Rmms.Domain/Approvals/Approval.cs:Approve",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Domain/Approvals/Approval.cs",
+      "target": "function:Rmms.Domain/Approvals/Approval.cs:Reject",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Domain/Approvals/Approval.cs",
+      "target": "function:Rmms.Domain/Approvals/Approval.cs:Override",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Domain/Approvals/Approval.cs",
+      "target": "function:Rmms.Domain/Approvals/Approval.cs:EnsurePending",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Domain/Approvals/Approval.cs",
+      "target": "function:Rmms.Domain/Approvals/Approval.cs:Touch",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Domain/Approvals/Approval.cs",
+      "target": "class:Rmms.Domain/Approvals/Approval.cs:Approval",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Domain/Approvals/ApprovalEmailToken.cs",
+      "target": "function:Rmms.Domain/Approvals/ApprovalEmailToken.cs:ApprovalEmailToken",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Domain/Approvals/ApprovalEmailToken.cs",
+      "target": "function:Rmms.Domain/Approvals/ApprovalEmailToken.cs:Issue",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Domain/Approvals/ApprovalEmailToken.cs",
+      "target": "function:Rmms.Domain/Approvals/ApprovalEmailToken.cs:IsExpired",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Domain/Approvals/ApprovalEmailToken.cs",
+      "target": "function:Rmms.Domain/Approvals/ApprovalEmailToken.cs:IsValid",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Domain/Approvals/ApprovalEmailToken.cs",
+      "target": "function:Rmms.Domain/Approvals/ApprovalEmailToken.cs:MarkUsed",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Domain/Approvals/ApprovalEmailToken.cs",
+      "target": "class:Rmms.Domain/Approvals/ApprovalEmailToken.cs:ApprovalEmailToken",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Domain/Attendance/AttendanceRecord.cs",
+      "target": "function:Rmms.Domain/Attendance/AttendanceRecord.cs:AttendanceRecord",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Domain/Attendance/AttendanceRecord.cs",
+      "target": "function:Rmms.Domain/Attendance/AttendanceRecord.cs:CheckIn",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Domain/Attendance/AttendanceRecord.cs",
+      "target": "function:Rmms.Domain/Attendance/AttendanceRecord.cs:DetermineCheckInStatus",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Domain/Attendance/AttendanceRecord.cs",
+      "target": "function:Rmms.Domain/Attendance/AttendanceRecord.cs:CheckOut",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Domain/Attendance/AttendanceRecord.cs",
+      "target": "function:Rmms.Domain/Attendance/AttendanceRecord.cs:ApproveReview",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Domain/Attendance/AttendanceRecord.cs",
+      "target": "function:Rmms.Domain/Attendance/AttendanceRecord.cs:RejectReview",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Domain/Attendance/AttendanceRecord.cs",
+      "target": "function:Rmms.Domain/Attendance/AttendanceRecord.cs:PurgePhotos",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Domain/Attendance/AttendanceRecord.cs",
+      "target": "function:Rmms.Domain/Attendance/AttendanceRecord.cs:StampReview",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Domain/Attendance/AttendanceRecord.cs",
+      "target": "class:Rmms.Domain/Attendance/AttendanceRecord.cs:AttendanceRecord",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Domain/Audit/AuditLog.cs",
+      "target": "function:Rmms.Domain/Audit/AuditLog.cs:AuditLog",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Domain/Audit/AuditLog.cs",
+      "target": "function:Rmms.Domain/Audit/AuditLog.cs:Record",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Domain/Audit/AuditLog.cs",
+      "target": "class:Rmms.Domain/Audit/AuditLog.cs:AuditLog",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Domain/Auth/EmailVerificationToken.cs",
+      "target": "function:Rmms.Domain/Auth/EmailVerificationToken.cs:EmailVerificationToken",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Domain/Auth/EmailVerificationToken.cs",
+      "target": "function:Rmms.Domain/Auth/EmailVerificationToken.cs:Issue",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Domain/Auth/EmailVerificationToken.cs",
+      "target": "function:Rmms.Domain/Auth/EmailVerificationToken.cs:IsValid",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Domain/Auth/EmailVerificationToken.cs",
+      "target": "function:Rmms.Domain/Auth/EmailVerificationToken.cs:MarkUsed",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Domain/Auth/EmailVerificationToken.cs",
+      "target": "class:Rmms.Domain/Auth/EmailVerificationToken.cs:EmailVerificationToken",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Domain/Auth/LoginHistory.cs",
+      "target": "function:Rmms.Domain/Auth/LoginHistory.cs:LoginHistory",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Domain/Auth/LoginHistory.cs",
+      "target": "function:Rmms.Domain/Auth/LoginHistory.cs:RecordSuccess",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Domain/Auth/LoginHistory.cs",
+      "target": "function:Rmms.Domain/Auth/LoginHistory.cs:RecordFailure",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Domain/Auth/LoginHistory.cs",
+      "target": "class:Rmms.Domain/Auth/LoginHistory.cs:LoginHistory",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Domain/Auth/PasswordResetToken.cs",
+      "target": "function:Rmms.Domain/Auth/PasswordResetToken.cs:PasswordResetToken",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Domain/Auth/PasswordResetToken.cs",
+      "target": "function:Rmms.Domain/Auth/PasswordResetToken.cs:Issue",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Domain/Auth/PasswordResetToken.cs",
+      "target": "function:Rmms.Domain/Auth/PasswordResetToken.cs:IsValid",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Domain/Auth/PasswordResetToken.cs",
+      "target": "function:Rmms.Domain/Auth/PasswordResetToken.cs:MarkUsed",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Domain/Auth/PasswordResetToken.cs",
+      "target": "class:Rmms.Domain/Auth/PasswordResetToken.cs:PasswordResetToken",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Domain/Auth/RefreshToken.cs",
+      "target": "function:Rmms.Domain/Auth/RefreshToken.cs:RefreshToken",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Domain/Auth/RefreshToken.cs",
+      "target": "function:Rmms.Domain/Auth/RefreshToken.cs:Issue",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Domain/Auth/RefreshToken.cs",
+      "target": "function:Rmms.Domain/Auth/RefreshToken.cs:IsActive",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Domain/Auth/RefreshToken.cs",
+      "target": "function:Rmms.Domain/Auth/RefreshToken.cs:Revoke",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Domain/Auth/RefreshToken.cs",
+      "target": "function:Rmms.Domain/Auth/RefreshToken.cs:MarkRotatedBy",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Domain/Auth/RefreshToken.cs",
+      "target": "class:Rmms.Domain/Auth/RefreshToken.cs:RefreshToken",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Domain/Common/AggregateRoot.cs",
+      "target": "function:Rmms.Domain/Common/AggregateRoot.cs:RaiseDomainEvent",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Domain/Common/AggregateRoot.cs",
+      "target": "function:Rmms.Domain/Common/AggregateRoot.cs:ClearDomainEvents",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Domain/Common/AggregateRoot.cs",
+      "target": "class:Rmms.Domain/Common/AggregateRoot.cs:AggregateRoot",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Domain/Common/AuditableEntity.cs",
+      "target": "class:Rmms.Domain/Common/AuditableEntity.cs:AuditableEntity",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Domain/Common/Entity.cs",
+      "target": "function:Rmms.Domain/Common/Entity.cs:Equals",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Domain/Common/Entity.cs",
+      "target": "function:Rmms.Domain/Common/Entity.cs:GetHashCode",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Domain/Common/Entity.cs",
+      "target": "class:Rmms.Domain/Common/Entity.cs:Entity",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Domain/Common/IAggregateRoot.cs",
+      "target": "class:Rmms.Domain/Common/IAggregateRoot.cs:IAggregateRoot",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Domain/Common/IDomainEvent.cs",
+      "target": "class:Rmms.Domain/Common/IDomainEvent.cs:IDomainEvent",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Domain/Common/Result.cs",
+      "target": "function:Rmms.Domain/Common/Result.cs:Result",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Domain/Common/Result.cs",
+      "target": "function:Rmms.Domain/Common/Result.cs:Success",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Domain/Common/Result.cs",
+      "target": "function:Rmms.Domain/Common/Result.cs:Failure",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Domain/Common/Result.cs",
+      "target": "function:Rmms.Domain/Common/Result.cs:Success",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Domain/Common/Result.cs",
+      "target": "function:Rmms.Domain/Common/Result.cs:Failure",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Domain/Common/Result.cs",
+      "target": "function:Rmms.Domain/Common/Result.cs:Result",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Domain/Common/Result.cs",
+      "target": "class:Rmms.Domain/Common/Result.cs:Result",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Domain/Common/Result.cs",
+      "target": "class:Rmms.Domain/Common/Result.cs:Result",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Domain/Common/UuidV7.cs",
+      "target": "function:Rmms.Domain/Common/UuidV7.cs:NewGuid",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Domain/Common/UuidV7.cs",
+      "target": "class:Rmms.Domain/Common/UuidV7.cs:UuidV7",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Domain/Common/ValueObject.cs",
+      "target": "function:Rmms.Domain/Common/ValueObject.cs:GetEqualityComponents",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Domain/Common/ValueObject.cs",
+      "target": "function:Rmms.Domain/Common/ValueObject.cs:Equals",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Domain/Common/ValueObject.cs",
+      "target": "function:Rmms.Domain/Common/ValueObject.cs:GetHashCode",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Domain/Common/ValueObject.cs",
+      "target": "class:Rmms.Domain/Common/ValueObject.cs:ValueObject",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Domain/Devices/UserDevice.cs",
+      "target": "function:Rmms.Domain/Devices/UserDevice.cs:UserDevice",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Domain/Devices/UserDevice.cs",
+      "target": "function:Rmms.Domain/Devices/UserDevice.cs:RegisterFirstActive",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Domain/Devices/UserDevice.cs",
+      "target": "function:Rmms.Domain/Devices/UserDevice.cs:RegisterPendingApproval",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Domain/Devices/UserDevice.cs",
+      "target": "function:Rmms.Domain/Devices/UserDevice.cs:Approve",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Domain/Devices/UserDevice.cs",
+      "target": "function:Rmms.Domain/Devices/UserDevice.cs:Reject",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Domain/Devices/UserDevice.cs",
+      "target": "function:Rmms.Domain/Devices/UserDevice.cs:MarkReplaced",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Domain/Devices/UserDevice.cs",
+      "target": "function:Rmms.Domain/Devices/UserDevice.cs:Touch",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Domain/Devices/UserDevice.cs",
+      "target": "function:Rmms.Domain/Devices/UserDevice.cs:UpdateFcmToken",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Domain/Devices/UserDevice.cs",
+      "target": "function:Rmms.Domain/Devices/UserDevice.cs:NormalizeOs",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Domain/Devices/UserDevice.cs",
+      "target": "class:Rmms.Domain/Devices/UserDevice.cs:UserDevice",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Domain/Documents/Document.cs",
+      "target": "function:Rmms.Domain/Documents/Document.cs:Document",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Domain/Documents/Document.cs",
+      "target": "function:Rmms.Domain/Documents/Document.cs:Create",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Domain/Documents/Document.cs",
+      "target": "class:Rmms.Domain/Documents/Document.cs:Document",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Domain/Documents/DocumentAssignment.cs",
+      "target": "function:Rmms.Domain/Documents/DocumentAssignment.cs:DocumentAssignment",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Domain/Documents/DocumentAssignment.cs",
+      "target": "function:Rmms.Domain/Documents/DocumentAssignment.cs:Create",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Domain/Documents/DocumentAssignment.cs",
+      "target": "class:Rmms.Domain/Documents/DocumentAssignment.cs:DocumentAssignment",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    }
+  ]
+}

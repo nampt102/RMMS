@@ -1,0 +1,2469 @@
+{
+  "nodes": [
+    {
+      "id": "file:Rmms.Infrastructure/Email/EmailOptions.cs",
+      "type": "file",
+      "name": "EmailOptions.cs",
+      "filePath": "Rmms.Infrastructure/Email/EmailOptions.cs",
+      "summary": "EmailOptions.cs — tệp mã nguồn C# trong backend RMMS (0 hàm, 1 class).",
+      "tags": [
+        "rmms.infrastructure",
+        "email",
+        "code",
+        "cs"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:Rmms.Infrastructure/Email/EmailOptions.cs:EmailOptions",
+      "type": "class",
+      "name": "EmailOptions",
+      "filePath": "Rmms.Infrastructure/Email/EmailOptions.cs",
+      "lineRange": [
+        6,
+        35
+      ],
+      "summary": "Class EmailOptions trong EmailOptions.cs.",
+      "tags": [
+        "rmms.infrastructure",
+        "email",
+        "code",
+        "cs",
+        "class"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:Rmms.Infrastructure/Email/EmailTemplateRenderer.cs",
+      "type": "file",
+      "name": "EmailTemplateRenderer.cs",
+      "filePath": "Rmms.Infrastructure/Email/EmailTemplateRenderer.cs",
+      "summary": "EmailTemplateRenderer.cs — tệp mã nguồn C# trong backend RMMS (8 hàm, 1 class).",
+      "tags": [
+        "rmms.infrastructure",
+        "email",
+        "code",
+        "cs"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:Rmms.Infrastructure/Email/EmailTemplateRenderer.cs:EmailTemplateRenderer",
+      "type": "function",
+      "name": "EmailTemplateRenderer",
+      "filePath": "Rmms.Infrastructure/Email/EmailTemplateRenderer.cs",
+      "lineRange": [
+        19,
+        23
+      ],
+      "summary": "Hàm EmailTemplateRenderer trong EmailTemplateRenderer.cs.",
+      "tags": [
+        "rmms.infrastructure",
+        "email",
+        "code",
+        "cs",
+        "ham"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Rmms.Infrastructure/Email/EmailTemplateRenderer.cs:BuildVerifyEmail",
+      "type": "function",
+      "name": "BuildVerifyEmail",
+      "filePath": "Rmms.Infrastructure/Email/EmailTemplateRenderer.cs",
+      "lineRange": [
+        29,
+        63
+      ],
+      "summary": "Hàm BuildVerifyEmail trong EmailTemplateRenderer.cs.",
+      "tags": [
+        "rmms.infrastructure",
+        "email",
+        "code",
+        "cs",
+        "ham"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Rmms.Infrastructure/Email/EmailTemplateRenderer.cs:BuildPasswordReset",
+      "type": "function",
+      "name": "BuildPasswordReset",
+      "filePath": "Rmms.Infrastructure/Email/EmailTemplateRenderer.cs",
+      "lineRange": [
+        69,
+        87
+      ],
+      "summary": "Hàm BuildPasswordReset trong EmailTemplateRenderer.cs.",
+      "tags": [
+        "rmms.infrastructure",
+        "email",
+        "code",
+        "cs",
+        "ham"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Rmms.Infrastructure/Email/EmailTemplateRenderer.cs:BuildAdminCreatedAccount",
+      "type": "function",
+      "name": "BuildAdminCreatedAccount",
+      "filePath": "Rmms.Infrastructure/Email/EmailTemplateRenderer.cs",
+      "lineRange": [
+        93,
+        111
+      ],
+      "summary": "Hàm BuildAdminCreatedAccount trong EmailTemplateRenderer.cs.",
+      "tags": [
+        "rmms.infrastructure",
+        "email",
+        "code",
+        "cs",
+        "ham"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Rmms.Infrastructure/Email/EmailTemplateRenderer.cs:BuildVerifyEmailUrl",
+      "type": "function",
+      "name": "BuildVerifyEmailUrl",
+      "filePath": "Rmms.Infrastructure/Email/EmailTemplateRenderer.cs",
+      "lineRange": [
+        117,
+        118
+      ],
+      "summary": "Hàm BuildVerifyEmailUrl trong EmailTemplateRenderer.cs.",
+      "tags": [
+        "rmms.infrastructure",
+        "email",
+        "code",
+        "cs",
+        "ham"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Rmms.Infrastructure/Email/EmailTemplateRenderer.cs:BuildResetPasswordUrl",
+      "type": "function",
+      "name": "BuildResetPasswordUrl",
+      "filePath": "Rmms.Infrastructure/Email/EmailTemplateRenderer.cs",
+      "lineRange": [
+        120,
+        121
+      ],
+      "summary": "Hàm BuildResetPasswordUrl trong EmailTemplateRenderer.cs.",
+      "tags": [
+        "rmms.infrastructure",
+        "email",
+        "code",
+        "cs",
+        "ham"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Rmms.Infrastructure/Email/EmailTemplateRenderer.cs:Normalize",
+      "type": "function",
+      "name": "Normalize",
+      "filePath": "Rmms.Infrastructure/Email/EmailTemplateRenderer.cs",
+      "lineRange": [
+        123,
+        128
+      ],
+      "summary": "Hàm Normalize trong EmailTemplateRenderer.cs.",
+      "tags": [
+        "rmms.infrastructure",
+        "email",
+        "code",
+        "cs",
+        "ham"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Rmms.Infrastructure/Email/EmailTemplateRenderer.cs:WebEscape",
+      "type": "function",
+      "name": "WebEscape",
+      "filePath": "Rmms.Infrastructure/Email/EmailTemplateRenderer.cs",
+      "lineRange": [
+        131,
+        137
+      ],
+      "summary": "Hàm WebEscape trong EmailTemplateRenderer.cs.",
+      "tags": [
+        "rmms.infrastructure",
+        "email",
+        "code",
+        "cs",
+        "ham"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:Rmms.Infrastructure/Email/EmailTemplateRenderer.cs:EmailTemplateRenderer",
+      "type": "class",
+      "name": "EmailTemplateRenderer",
+      "filePath": "Rmms.Infrastructure/Email/EmailTemplateRenderer.cs",
+      "lineRange": [
+        14,
+        138
+      ],
+      "summary": "Class EmailTemplateRenderer trong EmailTemplateRenderer.cs.",
+      "tags": [
+        "rmms.infrastructure",
+        "email",
+        "code",
+        "cs",
+        "class"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:Rmms.Infrastructure/Email/SendGridEmailSender.cs",
+      "type": "file",
+      "name": "SendGridEmailSender.cs",
+      "filePath": "Rmms.Infrastructure/Email/SendGridEmailSender.cs",
+      "summary": "SendGridEmailSender.cs — tệp mã nguồn C# trong backend RMMS (2 hàm, 1 class).",
+      "tags": [
+        "rmms.infrastructure",
+        "email",
+        "code",
+        "cs"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Rmms.Infrastructure/Email/SendGridEmailSender.cs:SendGridEmailSender",
+      "type": "function",
+      "name": "SendGridEmailSender",
+      "filePath": "Rmms.Infrastructure/Email/SendGridEmailSender.cs",
+      "lineRange": [
+        20,
+        24
+      ],
+      "summary": "Hàm SendGridEmailSender trong SendGridEmailSender.cs.",
+      "tags": [
+        "rmms.infrastructure",
+        "email",
+        "code",
+        "cs",
+        "ham"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Rmms.Infrastructure/Email/SendGridEmailSender.cs:SendAsync",
+      "type": "function",
+      "name": "SendAsync",
+      "filePath": "Rmms.Infrastructure/Email/SendGridEmailSender.cs",
+      "lineRange": [
+        26,
+        56
+      ],
+      "summary": "Hàm SendAsync trong SendGridEmailSender.cs.",
+      "tags": [
+        "rmms.infrastructure",
+        "email",
+        "code",
+        "cs",
+        "ham"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:Rmms.Infrastructure/Email/SendGridEmailSender.cs:SendGridEmailSender",
+      "type": "class",
+      "name": "SendGridEmailSender",
+      "filePath": "Rmms.Infrastructure/Email/SendGridEmailSender.cs",
+      "lineRange": [
+        15,
+        57
+      ],
+      "summary": "Class SendGridEmailSender trong SendGridEmailSender.cs.",
+      "tags": [
+        "rmms.infrastructure",
+        "email",
+        "code",
+        "cs",
+        "class"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:Rmms.Infrastructure/Email/SmtpEmailSender.cs",
+      "type": "file",
+      "name": "SmtpEmailSender.cs",
+      "filePath": "Rmms.Infrastructure/Email/SmtpEmailSender.cs",
+      "summary": "SmtpEmailSender.cs — tệp mã nguồn C# trong backend RMMS (2 hàm, 1 class).",
+      "tags": [
+        "rmms.infrastructure",
+        "email",
+        "code",
+        "cs"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Rmms.Infrastructure/Email/SmtpEmailSender.cs:SmtpEmailSender",
+      "type": "function",
+      "name": "SmtpEmailSender",
+      "filePath": "Rmms.Infrastructure/Email/SmtpEmailSender.cs",
+      "lineRange": [
+        21,
+        25
+      ],
+      "summary": "Hàm SmtpEmailSender trong SmtpEmailSender.cs.",
+      "tags": [
+        "rmms.infrastructure",
+        "email",
+        "code",
+        "cs",
+        "ham"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Rmms.Infrastructure/Email/SmtpEmailSender.cs:SendAsync",
+      "type": "function",
+      "name": "SendAsync",
+      "filePath": "Rmms.Infrastructure/Email/SmtpEmailSender.cs",
+      "lineRange": [
+        27,
+        67
+      ],
+      "summary": "Hàm SendAsync trong SmtpEmailSender.cs.",
+      "tags": [
+        "rmms.infrastructure",
+        "email",
+        "code",
+        "cs",
+        "ham"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:Rmms.Infrastructure/Email/SmtpEmailSender.cs:SmtpEmailSender",
+      "type": "class",
+      "name": "SmtpEmailSender",
+      "filePath": "Rmms.Infrastructure/Email/SmtpEmailSender.cs",
+      "lineRange": [
+        16,
+        68
+      ],
+      "summary": "Class SmtpEmailSender trong SmtpEmailSender.cs.",
+      "tags": [
+        "rmms.infrastructure",
+        "email",
+        "code",
+        "cs",
+        "class"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:Rmms.Infrastructure/Face/CompreFaceClient.cs",
+      "type": "file",
+      "name": "CompreFaceClient.cs",
+      "filePath": "Rmms.Infrastructure/Face/CompreFaceClient.cs",
+      "summary": "CompreFaceClient.cs — tệp mã nguồn C# trong backend RMMS (5 hàm, 1 class).",
+      "tags": [
+        "rmms.infrastructure",
+        "face",
+        "code",
+        "cs"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:Rmms.Infrastructure/Face/CompreFaceClient.cs:CompreFaceClient",
+      "type": "function",
+      "name": "CompreFaceClient",
+      "filePath": "Rmms.Infrastructure/Face/CompreFaceClient.cs",
+      "lineRange": [
+        20,
+        24
+      ],
+      "summary": "Hàm CompreFaceClient trong CompreFaceClient.cs.",
+      "tags": [
+        "rmms.infrastructure",
+        "face",
+        "code",
+        "cs",
+        "ham"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Rmms.Infrastructure/Face/CompreFaceClient.cs:EnrollAsync",
+      "type": "function",
+      "name": "EnrollAsync",
+      "filePath": "Rmms.Infrastructure/Face/CompreFaceClient.cs",
+      "lineRange": [
+        28,
+        37
+      ],
+      "summary": "Hàm EnrollAsync trong CompreFaceClient.cs.",
+      "tags": [
+        "rmms.infrastructure",
+        "face",
+        "code",
+        "cs",
+        "ham"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Rmms.Infrastructure/Face/CompreFaceClient.cs:VerifyAsync",
+      "type": "function",
+      "name": "VerifyAsync",
+      "filePath": "Rmms.Infrastructure/Face/CompreFaceClient.cs",
+      "lineRange": [
+        39,
+        69
+      ],
+      "summary": "Hàm VerifyAsync trong CompreFaceClient.cs.",
+      "tags": [
+        "rmms.infrastructure",
+        "face",
+        "code",
+        "cs",
+        "ham"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Rmms.Infrastructure/Face/CompreFaceClient.cs:DeleteAsync",
+      "type": "function",
+      "name": "DeleteAsync",
+      "filePath": "Rmms.Infrastructure/Face/CompreFaceClient.cs",
+      "lineRange": [
+        71,
+        80
+      ],
+      "summary": "Hàm DeleteAsync trong CompreFaceClient.cs.",
+      "tags": [
+        "rmms.infrastructure",
+        "face",
+        "code",
+        "cs",
+        "ham"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Rmms.Infrastructure/Face/CompreFaceClient.cs:BuildFileContent",
+      "type": "function",
+      "name": "BuildFileContent",
+      "filePath": "Rmms.Infrastructure/Face/CompreFaceClient.cs",
+      "lineRange": [
+        82,
+        90
+      ],
+      "summary": "Hàm BuildFileContent trong CompreFaceClient.cs.",
+      "tags": [
+        "rmms.infrastructure",
+        "face",
+        "code",
+        "cs",
+        "ham"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:Rmms.Infrastructure/Face/CompreFaceClient.cs:CompreFaceClient",
+      "type": "class",
+      "name": "CompreFaceClient",
+      "filePath": "Rmms.Infrastructure/Face/CompreFaceClient.cs",
+      "lineRange": [
+        15,
+        91
+      ],
+      "summary": "Class CompreFaceClient trong CompreFaceClient.cs.",
+      "tags": [
+        "rmms.infrastructure",
+        "face",
+        "code",
+        "cs",
+        "class"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:Rmms.Infrastructure/Face/DevFaceClient.cs",
+      "type": "file",
+      "name": "DevFaceClient.cs",
+      "filePath": "Rmms.Infrastructure/Face/DevFaceClient.cs",
+      "summary": "DevFaceClient.cs — tệp mã nguồn C# trong backend RMMS (3 hàm, 1 class).",
+      "tags": [
+        "rmms.infrastructure",
+        "face",
+        "code",
+        "cs"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Rmms.Infrastructure/Face/DevFaceClient.cs:EnrollAsync",
+      "type": "function",
+      "name": "EnrollAsync",
+      "filePath": "Rmms.Infrastructure/Face/DevFaceClient.cs",
+      "lineRange": [
+        14,
+        15
+      ],
+      "summary": "Hàm EnrollAsync trong DevFaceClient.cs.",
+      "tags": [
+        "rmms.infrastructure",
+        "face",
+        "code",
+        "cs",
+        "ham"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Rmms.Infrastructure/Face/DevFaceClient.cs:VerifyAsync",
+      "type": "function",
+      "name": "VerifyAsync",
+      "filePath": "Rmms.Infrastructure/Face/DevFaceClient.cs",
+      "lineRange": [
+        17,
+        18
+      ],
+      "summary": "Hàm VerifyAsync trong DevFaceClient.cs.",
+      "tags": [
+        "rmms.infrastructure",
+        "face",
+        "code",
+        "cs",
+        "ham"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Rmms.Infrastructure/Face/DevFaceClient.cs:DeleteAsync",
+      "type": "function",
+      "name": "DeleteAsync",
+      "filePath": "Rmms.Infrastructure/Face/DevFaceClient.cs",
+      "lineRange": [
+        20,
+        20
+      ],
+      "summary": "Hàm DeleteAsync trong DevFaceClient.cs.",
+      "tags": [
+        "rmms.infrastructure",
+        "face",
+        "code",
+        "cs",
+        "ham"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:Rmms.Infrastructure/Face/DevFaceClient.cs:DevFaceClient",
+      "type": "class",
+      "name": "DevFaceClient",
+      "filePath": "Rmms.Infrastructure/Face/DevFaceClient.cs",
+      "lineRange": [
+        10,
+        21
+      ],
+      "summary": "Class DevFaceClient trong DevFaceClient.cs.",
+      "tags": [
+        "rmms.infrastructure",
+        "face",
+        "code",
+        "cs",
+        "class"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:Rmms.Infrastructure/Face/FaceVerificationService.cs",
+      "type": "file",
+      "name": "FaceVerificationService.cs",
+      "filePath": "Rmms.Infrastructure/Face/FaceVerificationService.cs",
+      "summary": "FaceVerificationService.cs — tệp mã nguồn C# trong backend RMMS (2 hàm, 1 class).",
+      "tags": [
+        "rmms.infrastructure",
+        "face",
+        "code",
+        "cs"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Rmms.Infrastructure/Face/FaceVerificationService.cs:FaceVerificationService",
+      "type": "function",
+      "name": "FaceVerificationService",
+      "filePath": "Rmms.Infrastructure/Face/FaceVerificationService.cs",
+      "lineRange": [
+        22,
+        27
+      ],
+      "summary": "Hàm FaceVerificationService trong FaceVerificationService.cs.",
+      "tags": [
+        "rmms.infrastructure",
+        "face",
+        "code",
+        "cs",
+        "ham"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Rmms.Infrastructure/Face/FaceVerificationService.cs:VerifyAsync",
+      "type": "function",
+      "name": "VerifyAsync",
+      "filePath": "Rmms.Infrastructure/Face/FaceVerificationService.cs",
+      "lineRange": [
+        29,
+        55
+      ],
+      "summary": "Hàm VerifyAsync trong FaceVerificationService.cs.",
+      "tags": [
+        "rmms.infrastructure",
+        "face",
+        "code",
+        "cs",
+        "ham"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:Rmms.Infrastructure/Face/FaceVerificationService.cs:FaceVerificationService",
+      "type": "class",
+      "name": "FaceVerificationService",
+      "filePath": "Rmms.Infrastructure/Face/FaceVerificationService.cs",
+      "lineRange": [
+        16,
+        56
+      ],
+      "summary": "Class FaceVerificationService trong FaceVerificationService.cs.",
+      "tags": [
+        "rmms.infrastructure",
+        "face",
+        "code",
+        "cs",
+        "class"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:Rmms.Infrastructure/Identity/BCryptPasswordHasher.cs",
+      "type": "file",
+      "name": "BCryptPasswordHasher.cs",
+      "filePath": "Rmms.Infrastructure/Identity/BCryptPasswordHasher.cs",
+      "summary": "BCryptPasswordHasher.cs — tệp mã nguồn C# trong backend RMMS (3 hàm, 1 class).",
+      "tags": [
+        "rmms.infrastructure",
+        "identity",
+        "code",
+        "cs"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Rmms.Infrastructure/Identity/BCryptPasswordHasher.cs:Hash",
+      "type": "function",
+      "name": "Hash",
+      "filePath": "Rmms.Infrastructure/Identity/BCryptPasswordHasher.cs",
+      "lineRange": [
+        14,
+        18
+      ],
+      "summary": "Hàm Hash trong BCryptPasswordHasher.cs.",
+      "tags": [
+        "rmms.infrastructure",
+        "identity",
+        "code",
+        "cs",
+        "ham"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Rmms.Infrastructure/Identity/BCryptPasswordHasher.cs:Verify",
+      "type": "function",
+      "name": "Verify",
+      "filePath": "Rmms.Infrastructure/Identity/BCryptPasswordHasher.cs",
+      "lineRange": [
+        20,
+        36
+      ],
+      "summary": "Hàm Verify trong BCryptPasswordHasher.cs.",
+      "tags": [
+        "rmms.infrastructure",
+        "identity",
+        "code",
+        "cs",
+        "ham"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Rmms.Infrastructure/Identity/BCryptPasswordHasher.cs:NeedsRehash",
+      "type": "function",
+      "name": "NeedsRehash",
+      "filePath": "Rmms.Infrastructure/Identity/BCryptPasswordHasher.cs",
+      "lineRange": [
+        38,
+        50
+      ],
+      "summary": "Hàm NeedsRehash trong BCryptPasswordHasher.cs.",
+      "tags": [
+        "rmms.infrastructure",
+        "identity",
+        "code",
+        "cs",
+        "ham"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:Rmms.Infrastructure/Identity/BCryptPasswordHasher.cs:BCryptPasswordHasher",
+      "type": "class",
+      "name": "BCryptPasswordHasher",
+      "filePath": "Rmms.Infrastructure/Identity/BCryptPasswordHasher.cs",
+      "lineRange": [
+        10,
+        51
+      ],
+      "summary": "Class BCryptPasswordHasher trong BCryptPasswordHasher.cs.",
+      "tags": [
+        "rmms.infrastructure",
+        "identity",
+        "code",
+        "cs",
+        "class"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:Rmms.Infrastructure/Identity/JwtOptions.cs",
+      "type": "file",
+      "name": "JwtOptions.cs",
+      "filePath": "Rmms.Infrastructure/Identity/JwtOptions.cs",
+      "summary": "JwtOptions.cs — tệp mã nguồn C# trong backend RMMS (0 hàm, 0 class).",
+      "tags": [
+        "rmms.infrastructure",
+        "identity",
+        "code",
+        "cs"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:Rmms.Infrastructure/Identity/JwtTokenService.cs",
+      "type": "file",
+      "name": "JwtTokenService.cs",
+      "filePath": "Rmms.Infrastructure/Identity/JwtTokenService.cs",
+      "summary": "JwtTokenService.cs — tệp mã nguồn C# trong backend RMMS (2 hàm, 1 class).",
+      "tags": [
+        "rmms.infrastructure",
+        "identity",
+        "code",
+        "cs"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Rmms.Infrastructure/Identity/JwtTokenService.cs:JwtTokenService",
+      "type": "function",
+      "name": "JwtTokenService",
+      "filePath": "Rmms.Infrastructure/Identity/JwtTokenService.cs",
+      "lineRange": [
+        30,
+        42
+      ],
+      "summary": "Hàm JwtTokenService trong JwtTokenService.cs.",
+      "tags": [
+        "rmms.infrastructure",
+        "identity",
+        "code",
+        "cs",
+        "ham"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Rmms.Infrastructure/Identity/JwtTokenService.cs:IssueAccess",
+      "type": "function",
+      "name": "IssueAccess",
+      "filePath": "Rmms.Infrastructure/Identity/JwtTokenService.cs",
+      "lineRange": [
+        44,
+        70
+      ],
+      "summary": "Hàm IssueAccess trong JwtTokenService.cs.",
+      "tags": [
+        "rmms.infrastructure",
+        "identity",
+        "code",
+        "cs",
+        "ham"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:Rmms.Infrastructure/Identity/JwtTokenService.cs:JwtTokenService",
+      "type": "class",
+      "name": "JwtTokenService",
+      "filePath": "Rmms.Infrastructure/Identity/JwtTokenService.cs",
+      "lineRange": [
+        25,
+        71
+      ],
+      "summary": "Class JwtTokenService trong JwtTokenService.cs.",
+      "tags": [
+        "rmms.infrastructure",
+        "identity",
+        "code",
+        "cs",
+        "class"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:Rmms.Infrastructure/Identity/RefreshTokenGenerator.cs",
+      "type": "file",
+      "name": "RefreshTokenGenerator.cs",
+      "filePath": "Rmms.Infrastructure/Identity/RefreshTokenGenerator.cs",
+      "summary": "RefreshTokenGenerator.cs — tệp mã nguồn C# trong backend RMMS (3 hàm, 1 class).",
+      "tags": [
+        "rmms.infrastructure",
+        "identity",
+        "code",
+        "cs"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Rmms.Infrastructure/Identity/RefreshTokenGenerator.cs:Generate",
+      "type": "function",
+      "name": "Generate",
+      "filePath": "Rmms.Infrastructure/Identity/RefreshTokenGenerator.cs",
+      "lineRange": [
+        13,
+        18
+      ],
+      "summary": "Hàm Generate trong RefreshTokenGenerator.cs.",
+      "tags": [
+        "rmms.infrastructure",
+        "identity",
+        "code",
+        "cs",
+        "ham"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Rmms.Infrastructure/Identity/RefreshTokenGenerator.cs:Hash",
+      "type": "function",
+      "name": "Hash",
+      "filePath": "Rmms.Infrastructure/Identity/RefreshTokenGenerator.cs",
+      "lineRange": [
+        20,
+        26
+      ],
+      "summary": "Hàm Hash trong RefreshTokenGenerator.cs.",
+      "tags": [
+        "rmms.infrastructure",
+        "identity",
+        "code",
+        "cs",
+        "ham"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Rmms.Infrastructure/Identity/RefreshTokenGenerator.cs:Base64Url",
+      "type": "function",
+      "name": "Base64Url",
+      "filePath": "Rmms.Infrastructure/Identity/RefreshTokenGenerator.cs",
+      "lineRange": [
+        28,
+        32
+      ],
+      "summary": "Hàm Base64Url trong RefreshTokenGenerator.cs.",
+      "tags": [
+        "rmms.infrastructure",
+        "identity",
+        "code",
+        "cs",
+        "ham"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:Rmms.Infrastructure/Identity/RefreshTokenGenerator.cs:RefreshTokenGenerator",
+      "type": "class",
+      "name": "RefreshTokenGenerator",
+      "filePath": "Rmms.Infrastructure/Identity/RefreshTokenGenerator.cs",
+      "lineRange": [
+        11,
+        33
+      ],
+      "summary": "Class RefreshTokenGenerator trong RefreshTokenGenerator.cs.",
+      "tags": [
+        "rmms.infrastructure",
+        "identity",
+        "code",
+        "cs",
+        "class"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:Rmms.Infrastructure/Logging/SerilogElasticsearchExtensions.cs",
+      "type": "file",
+      "name": "SerilogElasticsearchExtensions.cs",
+      "filePath": "Rmms.Infrastructure/Logging/SerilogElasticsearchExtensions.cs",
+      "summary": "SerilogElasticsearchExtensions.cs — tệp mã nguồn C# trong backend RMMS (1 hàm, 1 class).",
+      "tags": [
+        "rmms.infrastructure",
+        "logging",
+        "code",
+        "cs"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Rmms.Infrastructure/Logging/SerilogElasticsearchExtensions.cs:WriteToElasticsearchIfConfigured",
+      "type": "function",
+      "name": "WriteToElasticsearchIfConfigured",
+      "filePath": "Rmms.Infrastructure/Logging/SerilogElasticsearchExtensions.cs",
+      "lineRange": [
+        27,
+        87
+      ],
+      "summary": "Hàm WriteToElasticsearchIfConfigured trong SerilogElasticsearchExtensions.cs.",
+      "tags": [
+        "rmms.infrastructure",
+        "logging",
+        "code",
+        "cs",
+        "ham"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:Rmms.Infrastructure/Logging/SerilogElasticsearchExtensions.cs:SerilogElasticsearchExtensions",
+      "type": "class",
+      "name": "SerilogElasticsearchExtensions",
+      "filePath": "Rmms.Infrastructure/Logging/SerilogElasticsearchExtensions.cs",
+      "lineRange": [
+        25,
+        88
+      ],
+      "summary": "Class SerilogElasticsearchExtensions trong SerilogElasticsearchExtensions.cs.",
+      "tags": [
+        "rmms.infrastructure",
+        "logging",
+        "code",
+        "cs",
+        "class"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:Rmms.Infrastructure/Notifications/FcmPushSender.cs",
+      "type": "file",
+      "name": "FcmPushSender.cs",
+      "filePath": "Rmms.Infrastructure/Notifications/FcmPushSender.cs",
+      "summary": "FcmPushSender.cs — tệp mã nguồn C# trong backend RMMS (2 hàm, 1 class).",
+      "tags": [
+        "rmms.infrastructure",
+        "notifications",
+        "code",
+        "cs"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Rmms.Infrastructure/Notifications/FcmPushSender.cs:FcmPushSender",
+      "type": "function",
+      "name": "FcmPushSender",
+      "filePath": "Rmms.Infrastructure/Notifications/FcmPushSender.cs",
+      "lineRange": [
+        20,
+        20
+      ],
+      "summary": "Hàm FcmPushSender trong FcmPushSender.cs.",
+      "tags": [
+        "rmms.infrastructure",
+        "notifications",
+        "code",
+        "cs",
+        "ham"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Rmms.Infrastructure/Notifications/FcmPushSender.cs:SendAsync",
+      "type": "function",
+      "name": "SendAsync",
+      "filePath": "Rmms.Infrastructure/Notifications/FcmPushSender.cs",
+      "lineRange": [
+        22,
+        40
+      ],
+      "summary": "Hàm SendAsync trong FcmPushSender.cs.",
+      "tags": [
+        "rmms.infrastructure",
+        "notifications",
+        "code",
+        "cs",
+        "ham"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:Rmms.Infrastructure/Notifications/FcmPushSender.cs:FcmPushSender",
+      "type": "class",
+      "name": "FcmPushSender",
+      "filePath": "Rmms.Infrastructure/Notifications/FcmPushSender.cs",
+      "lineRange": [
+        16,
+        41
+      ],
+      "summary": "Class FcmPushSender trong FcmPushSender.cs.",
+      "tags": [
+        "rmms.infrastructure",
+        "notifications",
+        "code",
+        "cs",
+        "class"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:Rmms.Infrastructure/Notifications/LoggingPushSender.cs",
+      "type": "file",
+      "name": "LoggingPushSender.cs",
+      "filePath": "Rmms.Infrastructure/Notifications/LoggingPushSender.cs",
+      "summary": "LoggingPushSender.cs — tệp mã nguồn C# trong backend RMMS (3 hàm, 1 class).",
+      "tags": [
+        "rmms.infrastructure",
+        "notifications",
+        "code",
+        "cs"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Rmms.Infrastructure/Notifications/LoggingPushSender.cs:LoggingPushSender",
+      "type": "function",
+      "name": "LoggingPushSender",
+      "filePath": "Rmms.Infrastructure/Notifications/LoggingPushSender.cs",
+      "lineRange": [
+        16,
+        16
+      ],
+      "summary": "Hàm LoggingPushSender trong LoggingPushSender.cs.",
+      "tags": [
+        "rmms.infrastructure",
+        "notifications",
+        "code",
+        "cs",
+        "ham"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Rmms.Infrastructure/Notifications/LoggingPushSender.cs:SendAsync",
+      "type": "function",
+      "name": "SendAsync",
+      "filePath": "Rmms.Infrastructure/Notifications/LoggingPushSender.cs",
+      "lineRange": [
+        18,
+        27
+      ],
+      "summary": "Hàm SendAsync trong LoggingPushSender.cs.",
+      "tags": [
+        "rmms.infrastructure",
+        "notifications",
+        "code",
+        "cs",
+        "ham"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Rmms.Infrastructure/Notifications/LoggingPushSender.cs:Mask",
+      "type": "function",
+      "name": "Mask",
+      "filePath": "Rmms.Infrastructure/Notifications/LoggingPushSender.cs",
+      "lineRange": [
+        29,
+        30
+      ],
+      "summary": "Hàm Mask trong LoggingPushSender.cs.",
+      "tags": [
+        "rmms.infrastructure",
+        "notifications",
+        "code",
+        "cs",
+        "ham"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:Rmms.Infrastructure/Notifications/LoggingPushSender.cs:LoggingPushSender",
+      "type": "class",
+      "name": "LoggingPushSender",
+      "filePath": "Rmms.Infrastructure/Notifications/LoggingPushSender.cs",
+      "lineRange": [
+        12,
+        31
+      ],
+      "summary": "Class LoggingPushSender trong LoggingPushSender.cs.",
+      "tags": [
+        "rmms.infrastructure",
+        "notifications",
+        "code",
+        "cs",
+        "class"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:Rmms.Infrastructure/Notifications/NoOpRealtimeNotifier.cs",
+      "type": "file",
+      "name": "NoOpRealtimeNotifier.cs",
+      "filePath": "Rmms.Infrastructure/Notifications/NoOpRealtimeNotifier.cs",
+      "summary": "NoOpRealtimeNotifier.cs — tệp mã nguồn C# trong backend RMMS (1 hàm, 1 class).",
+      "tags": [
+        "rmms.infrastructure",
+        "notifications",
+        "code",
+        "cs"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Rmms.Infrastructure/Notifications/NoOpRealtimeNotifier.cs:PushNotificationAsync",
+      "type": "function",
+      "name": "PushNotificationAsync",
+      "filePath": "Rmms.Infrastructure/Notifications/NoOpRealtimeNotifier.cs",
+      "lineRange": [
+        11,
+        12
+      ],
+      "summary": "Hàm PushNotificationAsync trong NoOpRealtimeNotifier.cs.",
+      "tags": [
+        "rmms.infrastructure",
+        "notifications",
+        "code",
+        "cs",
+        "ham"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:Rmms.Infrastructure/Notifications/NoOpRealtimeNotifier.cs:NoOpRealtimeNotifier",
+      "type": "class",
+      "name": "NoOpRealtimeNotifier",
+      "filePath": "Rmms.Infrastructure/Notifications/NoOpRealtimeNotifier.cs",
+      "lineRange": [
+        9,
+        13
+      ],
+      "summary": "Class NoOpRealtimeNotifier trong NoOpRealtimeNotifier.cs.",
+      "tags": [
+        "rmms.infrastructure",
+        "notifications",
+        "code",
+        "cs",
+        "class"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:Rmms.Infrastructure/Notifications/NotificationService.cs",
+      "type": "file",
+      "name": "NotificationService.cs",
+      "filePath": "Rmms.Infrastructure/Notifications/NotificationService.cs",
+      "summary": "NotificationService.cs — tệp mã nguồn C# trong backend RMMS (3 hàm, 1 class).",
+      "tags": [
+        "rmms.infrastructure",
+        "notifications",
+        "code",
+        "cs"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:Rmms.Infrastructure/Notifications/NotificationService.cs:NotificationService",
+      "type": "function",
+      "name": "NotificationService",
+      "filePath": "Rmms.Infrastructure/Notifications/NotificationService.cs",
+      "lineRange": [
+        29,
+        43
+      ],
+      "summary": "Hàm NotificationService trong NotificationService.cs.",
+      "tags": [
+        "rmms.infrastructure",
+        "notifications",
+        "code",
+        "cs",
+        "ham"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Rmms.Infrastructure/Notifications/NotificationService.cs:NotifyAsync",
+      "type": "function",
+      "name": "NotifyAsync",
+      "filePath": "Rmms.Infrastructure/Notifications/NotificationService.cs",
+      "lineRange": [
+        45,
+        113
+      ],
+      "summary": "Hàm NotifyAsync trong NotificationService.cs.",
+      "tags": [
+        "rmms.infrastructure",
+        "notifications",
+        "code",
+        "cs",
+        "ham"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Rmms.Infrastructure/Notifications/NotificationService.cs:ResolvePushTokensAsync",
+      "type": "function",
+      "name": "ResolvePushTokensAsync",
+      "filePath": "Rmms.Infrastructure/Notifications/NotificationService.cs",
+      "lineRange": [
+        116,
+        133
+      ],
+      "summary": "Hàm ResolvePushTokensAsync trong NotificationService.cs.",
+      "tags": [
+        "rmms.infrastructure",
+        "notifications",
+        "code",
+        "cs",
+        "ham"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:Rmms.Infrastructure/Notifications/NotificationService.cs:NotificationService",
+      "type": "class",
+      "name": "NotificationService",
+      "filePath": "Rmms.Infrastructure/Notifications/NotificationService.cs",
+      "lineRange": [
+        20,
+        134
+      ],
+      "summary": "Class NotificationService trong NotificationService.cs.",
+      "tags": [
+        "rmms.infrastructure",
+        "notifications",
+        "code",
+        "cs",
+        "class"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:Rmms.Infrastructure/Notifications/PushOptions.cs",
+      "type": "file",
+      "name": "PushOptions.cs",
+      "filePath": "Rmms.Infrastructure/Notifications/PushOptions.cs",
+      "summary": "PushOptions.cs — tệp mã nguồn C# trong backend RMMS (0 hàm, 1 class).",
+      "tags": [
+        "rmms.infrastructure",
+        "notifications",
+        "code",
+        "cs"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:Rmms.Infrastructure/Notifications/PushOptions.cs:PushOptions",
+      "type": "class",
+      "name": "PushOptions",
+      "filePath": "Rmms.Infrastructure/Notifications/PushOptions.cs",
+      "lineRange": [
+        6,
+        21
+      ],
+      "summary": "Class PushOptions trong PushOptions.cs.",
+      "tags": [
+        "rmms.infrastructure",
+        "notifications",
+        "code",
+        "cs",
+        "class"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:Rmms.Infrastructure/Persistence/AppDbContext.cs",
+      "type": "file",
+      "name": "AppDbContext.cs",
+      "filePath": "Rmms.Infrastructure/Persistence/AppDbContext.cs",
+      "summary": "AppDbContext.cs — tệp mã nguồn C# trong backend RMMS (2 hàm, 1 class).",
+      "tags": [
+        "rmms.infrastructure",
+        "persistence",
+        "code",
+        "cs"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Rmms.Infrastructure/Persistence/AppDbContext.cs:AppDbContext",
+      "type": "function",
+      "name": "AppDbContext",
+      "filePath": "Rmms.Infrastructure/Persistence/AppDbContext.cs",
+      "lineRange": [
+        27,
+        27
+      ],
+      "summary": "Hàm AppDbContext trong AppDbContext.cs.",
+      "tags": [
+        "rmms.infrastructure",
+        "persistence",
+        "code",
+        "cs",
+        "ham"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Rmms.Infrastructure/Persistence/AppDbContext.cs:OnModelCreating",
+      "type": "function",
+      "name": "OnModelCreating",
+      "filePath": "Rmms.Infrastructure/Persistence/AppDbContext.cs",
+      "lineRange": [
+        87,
+        93
+      ],
+      "summary": "Hàm OnModelCreating trong AppDbContext.cs.",
+      "tags": [
+        "rmms.infrastructure",
+        "persistence",
+        "code",
+        "cs",
+        "ham"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:Rmms.Infrastructure/Persistence/AppDbContext.cs:AppDbContext",
+      "type": "class",
+      "name": "AppDbContext",
+      "filePath": "Rmms.Infrastructure/Persistence/AppDbContext.cs",
+      "lineRange": [
+        25,
+        94
+      ],
+      "summary": "Class AppDbContext trong AppDbContext.cs.",
+      "tags": [
+        "rmms.infrastructure",
+        "persistence",
+        "code",
+        "cs",
+        "class"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:Rmms.Infrastructure/Persistence/Configurations/ApprovalConfiguration.cs",
+      "type": "file",
+      "name": "ApprovalConfiguration.cs",
+      "filePath": "Rmms.Infrastructure/Persistence/Configurations/ApprovalConfiguration.cs",
+      "summary": "ApprovalConfiguration.cs — tệp mã nguồn C# trong backend RMMS (2 hàm, 1 class).",
+      "tags": [
+        "rmms.infrastructure",
+        "persistence",
+        "code",
+        "cs"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Rmms.Infrastructure/Persistence/Configurations/ApprovalConfiguration.cs:Configure",
+      "type": "function",
+      "name": "Configure",
+      "filePath": "Rmms.Infrastructure/Persistence/Configurations/ApprovalConfiguration.cs",
+      "lineRange": [
+        11,
+        54
+      ],
+      "summary": "Hàm Configure trong ApprovalConfiguration.cs.",
+      "tags": [
+        "rmms.infrastructure",
+        "persistence",
+        "code",
+        "cs",
+        "ham"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Rmms.Infrastructure/Persistence/Configurations/ApprovalConfiguration.cs:FromSnake",
+      "type": "function",
+      "name": "FromSnake",
+      "filePath": "Rmms.Infrastructure/Persistence/Configurations/ApprovalConfiguration.cs",
+      "lineRange": [
+        56,
+        57
+      ],
+      "summary": "Hàm FromSnake trong ApprovalConfiguration.cs.",
+      "tags": [
+        "rmms.infrastructure",
+        "persistence",
+        "code",
+        "cs",
+        "ham"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:Rmms.Infrastructure/Persistence/Configurations/ApprovalConfiguration.cs:ApprovalConfiguration",
+      "type": "class",
+      "name": "ApprovalConfiguration",
+      "filePath": "Rmms.Infrastructure/Persistence/Configurations/ApprovalConfiguration.cs",
+      "lineRange": [
+        9,
+        58
+      ],
+      "summary": "Class ApprovalConfiguration trong ApprovalConfiguration.cs.",
+      "tags": [
+        "rmms.infrastructure",
+        "persistence",
+        "code",
+        "cs",
+        "class"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:Rmms.Infrastructure/Persistence/Configurations/ApprovalEmailTokenConfiguration.cs",
+      "type": "file",
+      "name": "ApprovalEmailTokenConfiguration.cs",
+      "filePath": "Rmms.Infrastructure/Persistence/Configurations/ApprovalEmailTokenConfiguration.cs",
+      "summary": "ApprovalEmailTokenConfiguration.cs — tệp mã nguồn C# trong backend RMMS (1 hàm, 1 class).",
+      "tags": [
+        "rmms.infrastructure",
+        "persistence",
+        "code",
+        "cs"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Rmms.Infrastructure/Persistence/Configurations/ApprovalEmailTokenConfiguration.cs:Configure",
+      "type": "function",
+      "name": "Configure",
+      "filePath": "Rmms.Infrastructure/Persistence/Configurations/ApprovalEmailTokenConfiguration.cs",
+      "lineRange": [
+        9,
+        26
+      ],
+      "summary": "Hàm Configure trong ApprovalEmailTokenConfiguration.cs.",
+      "tags": [
+        "rmms.infrastructure",
+        "persistence",
+        "code",
+        "cs",
+        "ham"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:Rmms.Infrastructure/Persistence/Configurations/ApprovalEmailTokenConfiguration.cs:ApprovalEmailTokenConfiguration",
+      "type": "class",
+      "name": "ApprovalEmailTokenConfiguration",
+      "filePath": "Rmms.Infrastructure/Persistence/Configurations/ApprovalEmailTokenConfiguration.cs",
+      "lineRange": [
+        7,
+        27
+      ],
+      "summary": "Class ApprovalEmailTokenConfiguration trong ApprovalEmailTokenConfiguration.cs.",
+      "tags": [
+        "rmms.infrastructure",
+        "persistence",
+        "code",
+        "cs",
+        "class"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:Rmms.Infrastructure/Persistence/Configurations/AreaConfiguration.cs",
+      "type": "file",
+      "name": "AreaConfiguration.cs",
+      "filePath": "Rmms.Infrastructure/Persistence/Configurations/AreaConfiguration.cs",
+      "summary": "AreaConfiguration.cs — tệp mã nguồn C# trong backend RMMS (1 hàm, 1 class).",
+      "tags": [
+        "rmms.infrastructure",
+        "persistence",
+        "code",
+        "cs"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Rmms.Infrastructure/Persistence/Configurations/AreaConfiguration.cs:Configure",
+      "type": "function",
+      "name": "Configure",
+      "filePath": "Rmms.Infrastructure/Persistence/Configurations/AreaConfiguration.cs",
+      "lineRange": [
+        9,
+        26
+      ],
+      "summary": "Hàm Configure trong AreaConfiguration.cs.",
+      "tags": [
+        "rmms.infrastructure",
+        "persistence",
+        "code",
+        "cs",
+        "ham"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:Rmms.Infrastructure/Persistence/Configurations/AreaConfiguration.cs:AreaConfiguration",
+      "type": "class",
+      "name": "AreaConfiguration",
+      "filePath": "Rmms.Infrastructure/Persistence/Configurations/AreaConfiguration.cs",
+      "lineRange": [
+        7,
+        27
+      ],
+      "summary": "Class AreaConfiguration trong AreaConfiguration.cs.",
+      "tags": [
+        "rmms.infrastructure",
+        "persistence",
+        "code",
+        "cs",
+        "class"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:Rmms.Infrastructure/Persistence/Configurations/AttendanceRecordConfiguration.cs",
+      "type": "file",
+      "name": "AttendanceRecordConfiguration.cs",
+      "filePath": "Rmms.Infrastructure/Persistence/Configurations/AttendanceRecordConfiguration.cs",
+      "summary": "AttendanceRecordConfiguration.cs — tệp mã nguồn C# trong backend RMMS (5 hàm, 1 class).",
+      "tags": [
+        "rmms.infrastructure",
+        "persistence",
+        "code",
+        "cs"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:Rmms.Infrastructure/Persistence/Configurations/AttendanceRecordConfiguration.cs:Configure",
+      "type": "function",
+      "name": "Configure",
+      "filePath": "Rmms.Infrastructure/Persistence/Configurations/AttendanceRecordConfiguration.cs",
+      "lineRange": [
+        14,
+        71
+      ],
+      "summary": "Hàm Configure trong AttendanceRecordConfiguration.cs.",
+      "tags": [
+        "rmms.infrastructure",
+        "persistence",
+        "code",
+        "cs",
+        "ham"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Rmms.Infrastructure/Persistence/Configurations/AttendanceRecordConfiguration.cs:FaceToString",
+      "type": "function",
+      "name": "FaceToString",
+      "filePath": "Rmms.Infrastructure/Persistence/Configurations/AttendanceRecordConfiguration.cs",
+      "lineRange": [
+        73,
+        79
+      ],
+      "summary": "Hàm FaceToString trong AttendanceRecordConfiguration.cs.",
+      "tags": [
+        "rmms.infrastructure",
+        "persistence",
+        "code",
+        "cs",
+        "ham"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Rmms.Infrastructure/Persistence/Configurations/AttendanceRecordConfiguration.cs:FaceFromString",
+      "type": "function",
+      "name": "FaceFromString",
+      "filePath": "Rmms.Infrastructure/Persistence/Configurations/AttendanceRecordConfiguration.cs",
+      "lineRange": [
+        81,
+        87
+      ],
+      "summary": "Hàm FaceFromString trong AttendanceRecordConfiguration.cs.",
+      "tags": [
+        "rmms.infrastructure",
+        "persistence",
+        "code",
+        "cs",
+        "ham"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Rmms.Infrastructure/Persistence/Configurations/AttendanceRecordConfiguration.cs:StatusToString",
+      "type": "function",
+      "name": "StatusToString",
+      "filePath": "Rmms.Infrastructure/Persistence/Configurations/AttendanceRecordConfiguration.cs",
+      "lineRange": [
+        89,
+        99
+      ],
+      "summary": "Hàm StatusToString trong AttendanceRecordConfiguration.cs.",
+      "tags": [
+        "rmms.infrastructure",
+        "persistence",
+        "code",
+        "cs",
+        "ham"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Rmms.Infrastructure/Persistence/Configurations/AttendanceRecordConfiguration.cs:StatusFromString",
+      "type": "function",
+      "name": "StatusFromString",
+      "filePath": "Rmms.Infrastructure/Persistence/Configurations/AttendanceRecordConfiguration.cs",
+      "lineRange": [
+        101,
+        111
+      ],
+      "summary": "Hàm StatusFromString trong AttendanceRecordConfiguration.cs.",
+      "tags": [
+        "rmms.infrastructure",
+        "persistence",
+        "code",
+        "cs",
+        "ham"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:Rmms.Infrastructure/Persistence/Configurations/AttendanceRecordConfiguration.cs:AttendanceRecordConfiguration",
+      "type": "class",
+      "name": "AttendanceRecordConfiguration",
+      "filePath": "Rmms.Infrastructure/Persistence/Configurations/AttendanceRecordConfiguration.cs",
+      "lineRange": [
+        8,
+        112
+      ],
+      "summary": "Class AttendanceRecordConfiguration trong AttendanceRecordConfiguration.cs.",
+      "tags": [
+        "rmms.infrastructure",
+        "persistence",
+        "code",
+        "cs",
+        "class"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:Rmms.Infrastructure/Persistence/Configurations/AuditLogConfiguration.cs",
+      "type": "file",
+      "name": "AuditLogConfiguration.cs",
+      "filePath": "Rmms.Infrastructure/Persistence/Configurations/AuditLogConfiguration.cs",
+      "summary": "AuditLogConfiguration.cs — tệp mã nguồn C# trong backend RMMS (1 hàm, 1 class).",
+      "tags": [
+        "rmms.infrastructure",
+        "persistence",
+        "code",
+        "cs"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Rmms.Infrastructure/Persistence/Configurations/AuditLogConfiguration.cs:Configure",
+      "type": "function",
+      "name": "Configure",
+      "filePath": "Rmms.Infrastructure/Persistence/Configurations/AuditLogConfiguration.cs",
+      "lineRange": [
+        9,
+        44
+      ],
+      "summary": "Hàm Configure trong AuditLogConfiguration.cs.",
+      "tags": [
+        "rmms.infrastructure",
+        "persistence",
+        "code",
+        "cs",
+        "ham"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:Rmms.Infrastructure/Persistence/Configurations/AuditLogConfiguration.cs:AuditLogConfiguration",
+      "type": "class",
+      "name": "AuditLogConfiguration",
+      "filePath": "Rmms.Infrastructure/Persistence/Configurations/AuditLogConfiguration.cs",
+      "lineRange": [
+        7,
+        45
+      ],
+      "summary": "Class AuditLogConfiguration trong AuditLogConfiguration.cs.",
+      "tags": [
+        "rmms.infrastructure",
+        "persistence",
+        "code",
+        "cs",
+        "class"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:Rmms.Infrastructure/Persistence/Configurations/CategoryConfiguration.cs",
+      "type": "file",
+      "name": "CategoryConfiguration.cs",
+      "filePath": "Rmms.Infrastructure/Persistence/Configurations/CategoryConfiguration.cs",
+      "summary": "CategoryConfiguration.cs — tệp mã nguồn C# trong backend RMMS (1 hàm, 1 class).",
+      "tags": [
+        "rmms.infrastructure",
+        "persistence",
+        "code",
+        "cs"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Rmms.Infrastructure/Persistence/Configurations/CategoryConfiguration.cs:Configure",
+      "type": "function",
+      "name": "Configure",
+      "filePath": "Rmms.Infrastructure/Persistence/Configurations/CategoryConfiguration.cs",
+      "lineRange": [
+        9,
+        23
+      ],
+      "summary": "Hàm Configure trong CategoryConfiguration.cs.",
+      "tags": [
+        "rmms.infrastructure",
+        "persistence",
+        "code",
+        "cs",
+        "ham"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:Rmms.Infrastructure/Persistence/Configurations/CategoryConfiguration.cs:CategoryConfiguration",
+      "type": "class",
+      "name": "CategoryConfiguration",
+      "filePath": "Rmms.Infrastructure/Persistence/Configurations/CategoryConfiguration.cs",
+      "lineRange": [
+        7,
+        24
+      ],
+      "summary": "Class CategoryConfiguration trong CategoryConfiguration.cs.",
+      "tags": [
+        "rmms.infrastructure",
+        "persistence",
+        "code",
+        "cs",
+        "class"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:Rmms.Infrastructure/Persistence/Configurations/DocumentConfiguration.cs",
+      "type": "file",
+      "name": "DocumentConfiguration.cs",
+      "filePath": "Rmms.Infrastructure/Persistence/Configurations/DocumentConfiguration.cs",
+      "summary": "DocumentConfiguration.cs — tệp mã nguồn C# trong backend RMMS (4 hàm, 2 class).",
+      "tags": [
+        "rmms.infrastructure",
+        "persistence",
+        "code",
+        "cs"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:Rmms.Infrastructure/Persistence/Configurations/DocumentConfiguration.cs:Configure",
+      "type": "function",
+      "name": "Configure",
+      "filePath": "Rmms.Infrastructure/Persistence/Configurations/DocumentConfiguration.cs",
+      "lineRange": [
+        10,
+        30
+      ],
+      "summary": "Hàm Configure trong DocumentConfiguration.cs.",
+      "tags": [
+        "rmms.infrastructure",
+        "persistence",
+        "code",
+        "cs",
+        "ham"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Rmms.Infrastructure/Persistence/Configurations/DocumentConfiguration.cs:FolderToString",
+      "type": "function",
+      "name": "FolderToString",
+      "filePath": "Rmms.Infrastructure/Persistence/Configurations/DocumentConfiguration.cs",
+      "lineRange": [
+        32,
+        37
+      ],
+      "summary": "Hàm FolderToString trong DocumentConfiguration.cs.",
+      "tags": [
+        "rmms.infrastructure",
+        "persistence",
+        "code",
+        "cs",
+        "ham"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Rmms.Infrastructure/Persistence/Configurations/DocumentConfiguration.cs:FolderFromString",
+      "type": "function",
+      "name": "FolderFromString",
+      "filePath": "Rmms.Infrastructure/Persistence/Configurations/DocumentConfiguration.cs",
+      "lineRange": [
+        39,
+        44
+      ],
+      "summary": "Hàm FolderFromString trong DocumentConfiguration.cs.",
+      "tags": [
+        "rmms.infrastructure",
+        "persistence",
+        "code",
+        "cs",
+        "ham"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:Rmms.Infrastructure/Persistence/Configurations/DocumentConfiguration.cs:DocumentConfiguration",
+      "type": "class",
+      "name": "DocumentConfiguration",
+      "filePath": "Rmms.Infrastructure/Persistence/Configurations/DocumentConfiguration.cs",
+      "lineRange": [
+        8,
+        45
+      ],
+      "summary": "Class DocumentConfiguration trong DocumentConfiguration.cs.",
+      "tags": [
+        "rmms.infrastructure",
+        "persistence",
+        "code",
+        "cs",
+        "class"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "class:Rmms.Infrastructure/Persistence/Configurations/DocumentConfiguration.cs:DocumentAssignmentConfiguration",
+      "type": "class",
+      "name": "DocumentAssignmentConfiguration",
+      "filePath": "Rmms.Infrastructure/Persistence/Configurations/DocumentConfiguration.cs",
+      "lineRange": [
+        47,
+        63
+      ],
+      "summary": "Class DocumentAssignmentConfiguration trong DocumentConfiguration.cs.",
+      "tags": [
+        "rmms.infrastructure",
+        "persistence",
+        "code",
+        "cs",
+        "class"
+      ],
+      "complexity": "moderate"
+    }
+  ],
+  "edges": [
+    {
+      "source": "file:Rmms.Infrastructure/Email/EmailOptions.cs",
+      "target": "class:Rmms.Infrastructure/Email/EmailOptions.cs:EmailOptions",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Infrastructure/Email/EmailTemplateRenderer.cs",
+      "target": "function:Rmms.Infrastructure/Email/EmailTemplateRenderer.cs:EmailTemplateRenderer",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Infrastructure/Email/EmailTemplateRenderer.cs",
+      "target": "function:Rmms.Infrastructure/Email/EmailTemplateRenderer.cs:BuildVerifyEmail",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Infrastructure/Email/EmailTemplateRenderer.cs",
+      "target": "function:Rmms.Infrastructure/Email/EmailTemplateRenderer.cs:BuildPasswordReset",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Infrastructure/Email/EmailTemplateRenderer.cs",
+      "target": "function:Rmms.Infrastructure/Email/EmailTemplateRenderer.cs:BuildAdminCreatedAccount",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Infrastructure/Email/EmailTemplateRenderer.cs",
+      "target": "function:Rmms.Infrastructure/Email/EmailTemplateRenderer.cs:BuildVerifyEmailUrl",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Infrastructure/Email/EmailTemplateRenderer.cs",
+      "target": "function:Rmms.Infrastructure/Email/EmailTemplateRenderer.cs:BuildResetPasswordUrl",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Infrastructure/Email/EmailTemplateRenderer.cs",
+      "target": "function:Rmms.Infrastructure/Email/EmailTemplateRenderer.cs:Normalize",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Infrastructure/Email/EmailTemplateRenderer.cs",
+      "target": "function:Rmms.Infrastructure/Email/EmailTemplateRenderer.cs:WebEscape",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Infrastructure/Email/EmailTemplateRenderer.cs",
+      "target": "class:Rmms.Infrastructure/Email/EmailTemplateRenderer.cs:EmailTemplateRenderer",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Infrastructure/Email/SendGridEmailSender.cs",
+      "target": "function:Rmms.Infrastructure/Email/SendGridEmailSender.cs:SendGridEmailSender",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Infrastructure/Email/SendGridEmailSender.cs",
+      "target": "function:Rmms.Infrastructure/Email/SendGridEmailSender.cs:SendAsync",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Infrastructure/Email/SendGridEmailSender.cs",
+      "target": "class:Rmms.Infrastructure/Email/SendGridEmailSender.cs:SendGridEmailSender",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Infrastructure/Email/SmtpEmailSender.cs",
+      "target": "function:Rmms.Infrastructure/Email/SmtpEmailSender.cs:SmtpEmailSender",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Infrastructure/Email/SmtpEmailSender.cs",
+      "target": "function:Rmms.Infrastructure/Email/SmtpEmailSender.cs:SendAsync",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Infrastructure/Email/SmtpEmailSender.cs",
+      "target": "class:Rmms.Infrastructure/Email/SmtpEmailSender.cs:SmtpEmailSender",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Infrastructure/Face/CompreFaceClient.cs",
+      "target": "function:Rmms.Infrastructure/Face/CompreFaceClient.cs:CompreFaceClient",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Infrastructure/Face/CompreFaceClient.cs",
+      "target": "function:Rmms.Infrastructure/Face/CompreFaceClient.cs:EnrollAsync",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Infrastructure/Face/CompreFaceClient.cs",
+      "target": "function:Rmms.Infrastructure/Face/CompreFaceClient.cs:VerifyAsync",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Infrastructure/Face/CompreFaceClient.cs",
+      "target": "function:Rmms.Infrastructure/Face/CompreFaceClient.cs:DeleteAsync",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Infrastructure/Face/CompreFaceClient.cs",
+      "target": "function:Rmms.Infrastructure/Face/CompreFaceClient.cs:BuildFileContent",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Infrastructure/Face/CompreFaceClient.cs",
+      "target": "class:Rmms.Infrastructure/Face/CompreFaceClient.cs:CompreFaceClient",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Infrastructure/Face/DevFaceClient.cs",
+      "target": "function:Rmms.Infrastructure/Face/DevFaceClient.cs:EnrollAsync",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Infrastructure/Face/DevFaceClient.cs",
+      "target": "function:Rmms.Infrastructure/Face/DevFaceClient.cs:VerifyAsync",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Infrastructure/Face/DevFaceClient.cs",
+      "target": "function:Rmms.Infrastructure/Face/DevFaceClient.cs:DeleteAsync",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Infrastructure/Face/DevFaceClient.cs",
+      "target": "class:Rmms.Infrastructure/Face/DevFaceClient.cs:DevFaceClient",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Infrastructure/Face/FaceVerificationService.cs",
+      "target": "function:Rmms.Infrastructure/Face/FaceVerificationService.cs:FaceVerificationService",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Infrastructure/Face/FaceVerificationService.cs",
+      "target": "function:Rmms.Infrastructure/Face/FaceVerificationService.cs:VerifyAsync",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Infrastructure/Face/FaceVerificationService.cs",
+      "target": "class:Rmms.Infrastructure/Face/FaceVerificationService.cs:FaceVerificationService",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Infrastructure/Identity/BCryptPasswordHasher.cs",
+      "target": "function:Rmms.Infrastructure/Identity/BCryptPasswordHasher.cs:Hash",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Infrastructure/Identity/BCryptPasswordHasher.cs",
+      "target": "function:Rmms.Infrastructure/Identity/BCryptPasswordHasher.cs:Verify",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Infrastructure/Identity/BCryptPasswordHasher.cs",
+      "target": "function:Rmms.Infrastructure/Identity/BCryptPasswordHasher.cs:NeedsRehash",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Infrastructure/Identity/BCryptPasswordHasher.cs",
+      "target": "class:Rmms.Infrastructure/Identity/BCryptPasswordHasher.cs:BCryptPasswordHasher",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Infrastructure/Identity/JwtTokenService.cs",
+      "target": "function:Rmms.Infrastructure/Identity/JwtTokenService.cs:JwtTokenService",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Infrastructure/Identity/JwtTokenService.cs",
+      "target": "function:Rmms.Infrastructure/Identity/JwtTokenService.cs:IssueAccess",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Infrastructure/Identity/JwtTokenService.cs",
+      "target": "class:Rmms.Infrastructure/Identity/JwtTokenService.cs:JwtTokenService",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Infrastructure/Identity/RefreshTokenGenerator.cs",
+      "target": "function:Rmms.Infrastructure/Identity/RefreshTokenGenerator.cs:Generate",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Infrastructure/Identity/RefreshTokenGenerator.cs",
+      "target": "function:Rmms.Infrastructure/Identity/RefreshTokenGenerator.cs:Hash",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Infrastructure/Identity/RefreshTokenGenerator.cs",
+      "target": "function:Rmms.Infrastructure/Identity/RefreshTokenGenerator.cs:Base64Url",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Infrastructure/Identity/RefreshTokenGenerator.cs",
+      "target": "class:Rmms.Infrastructure/Identity/RefreshTokenGenerator.cs:RefreshTokenGenerator",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Infrastructure/Logging/SerilogElasticsearchExtensions.cs",
+      "target": "function:Rmms.Infrastructure/Logging/SerilogElasticsearchExtensions.cs:WriteToElasticsearchIfConfigured",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Infrastructure/Logging/SerilogElasticsearchExtensions.cs",
+      "target": "class:Rmms.Infrastructure/Logging/SerilogElasticsearchExtensions.cs:SerilogElasticsearchExtensions",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Infrastructure/Notifications/FcmPushSender.cs",
+      "target": "function:Rmms.Infrastructure/Notifications/FcmPushSender.cs:FcmPushSender",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Infrastructure/Notifications/FcmPushSender.cs",
+      "target": "function:Rmms.Infrastructure/Notifications/FcmPushSender.cs:SendAsync",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Infrastructure/Notifications/FcmPushSender.cs",
+      "target": "class:Rmms.Infrastructure/Notifications/FcmPushSender.cs:FcmPushSender",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Infrastructure/Notifications/LoggingPushSender.cs",
+      "target": "function:Rmms.Infrastructure/Notifications/LoggingPushSender.cs:LoggingPushSender",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Infrastructure/Notifications/LoggingPushSender.cs",
+      "target": "function:Rmms.Infrastructure/Notifications/LoggingPushSender.cs:SendAsync",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Infrastructure/Notifications/LoggingPushSender.cs",
+      "target": "function:Rmms.Infrastructure/Notifications/LoggingPushSender.cs:Mask",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Infrastructure/Notifications/LoggingPushSender.cs",
+      "target": "class:Rmms.Infrastructure/Notifications/LoggingPushSender.cs:LoggingPushSender",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Infrastructure/Notifications/NoOpRealtimeNotifier.cs",
+      "target": "function:Rmms.Infrastructure/Notifications/NoOpRealtimeNotifier.cs:PushNotificationAsync",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Infrastructure/Notifications/NoOpRealtimeNotifier.cs",
+      "target": "class:Rmms.Infrastructure/Notifications/NoOpRealtimeNotifier.cs:NoOpRealtimeNotifier",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Infrastructure/Notifications/NotificationService.cs",
+      "target": "function:Rmms.Infrastructure/Notifications/NotificationService.cs:NotificationService",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Infrastructure/Notifications/NotificationService.cs",
+      "target": "function:Rmms.Infrastructure/Notifications/NotificationService.cs:NotifyAsync",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Infrastructure/Notifications/NotificationService.cs",
+      "target": "function:Rmms.Infrastructure/Notifications/NotificationService.cs:ResolvePushTokensAsync",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Infrastructure/Notifications/NotificationService.cs",
+      "target": "class:Rmms.Infrastructure/Notifications/NotificationService.cs:NotificationService",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Infrastructure/Notifications/PushOptions.cs",
+      "target": "class:Rmms.Infrastructure/Notifications/PushOptions.cs:PushOptions",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Infrastructure/Persistence/AppDbContext.cs",
+      "target": "function:Rmms.Infrastructure/Persistence/AppDbContext.cs:AppDbContext",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Infrastructure/Persistence/AppDbContext.cs",
+      "target": "function:Rmms.Infrastructure/Persistence/AppDbContext.cs:OnModelCreating",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Infrastructure/Persistence/AppDbContext.cs",
+      "target": "class:Rmms.Infrastructure/Persistence/AppDbContext.cs:AppDbContext",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Infrastructure/Persistence/Configurations/ApprovalConfiguration.cs",
+      "target": "function:Rmms.Infrastructure/Persistence/Configurations/ApprovalConfiguration.cs:Configure",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Infrastructure/Persistence/Configurations/ApprovalConfiguration.cs",
+      "target": "function:Rmms.Infrastructure/Persistence/Configurations/ApprovalConfiguration.cs:FromSnake",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Infrastructure/Persistence/Configurations/ApprovalConfiguration.cs",
+      "target": "class:Rmms.Infrastructure/Persistence/Configurations/ApprovalConfiguration.cs:ApprovalConfiguration",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Infrastructure/Persistence/Configurations/ApprovalEmailTokenConfiguration.cs",
+      "target": "function:Rmms.Infrastructure/Persistence/Configurations/ApprovalEmailTokenConfiguration.cs:Configure",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Infrastructure/Persistence/Configurations/ApprovalEmailTokenConfiguration.cs",
+      "target": "class:Rmms.Infrastructure/Persistence/Configurations/ApprovalEmailTokenConfiguration.cs:ApprovalEmailTokenConfiguration",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Infrastructure/Persistence/Configurations/AreaConfiguration.cs",
+      "target": "function:Rmms.Infrastructure/Persistence/Configurations/AreaConfiguration.cs:Configure",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Infrastructure/Persistence/Configurations/AreaConfiguration.cs",
+      "target": "class:Rmms.Infrastructure/Persistence/Configurations/AreaConfiguration.cs:AreaConfiguration",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Infrastructure/Persistence/Configurations/AttendanceRecordConfiguration.cs",
+      "target": "function:Rmms.Infrastructure/Persistence/Configurations/AttendanceRecordConfiguration.cs:Configure",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Infrastructure/Persistence/Configurations/AttendanceRecordConfiguration.cs",
+      "target": "function:Rmms.Infrastructure/Persistence/Configurations/AttendanceRecordConfiguration.cs:FaceToString",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Infrastructure/Persistence/Configurations/AttendanceRecordConfiguration.cs",
+      "target": "function:Rmms.Infrastructure/Persistence/Configurations/AttendanceRecordConfiguration.cs:FaceFromString",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Infrastructure/Persistence/Configurations/AttendanceRecordConfiguration.cs",
+      "target": "function:Rmms.Infrastructure/Persistence/Configurations/AttendanceRecordConfiguration.cs:StatusToString",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Infrastructure/Persistence/Configurations/AttendanceRecordConfiguration.cs",
+      "target": "function:Rmms.Infrastructure/Persistence/Configurations/AttendanceRecordConfiguration.cs:StatusFromString",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Infrastructure/Persistence/Configurations/AttendanceRecordConfiguration.cs",
+      "target": "class:Rmms.Infrastructure/Persistence/Configurations/AttendanceRecordConfiguration.cs:AttendanceRecordConfiguration",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Infrastructure/Persistence/Configurations/AuditLogConfiguration.cs",
+      "target": "function:Rmms.Infrastructure/Persistence/Configurations/AuditLogConfiguration.cs:Configure",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Infrastructure/Persistence/Configurations/AuditLogConfiguration.cs",
+      "target": "class:Rmms.Infrastructure/Persistence/Configurations/AuditLogConfiguration.cs:AuditLogConfiguration",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Infrastructure/Persistence/Configurations/CategoryConfiguration.cs",
+      "target": "function:Rmms.Infrastructure/Persistence/Configurations/CategoryConfiguration.cs:Configure",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Infrastructure/Persistence/Configurations/CategoryConfiguration.cs",
+      "target": "class:Rmms.Infrastructure/Persistence/Configurations/CategoryConfiguration.cs:CategoryConfiguration",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Infrastructure/Persistence/Configurations/DocumentConfiguration.cs",
+      "target": "function:Rmms.Infrastructure/Persistence/Configurations/DocumentConfiguration.cs:Configure",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Infrastructure/Persistence/Configurations/DocumentConfiguration.cs",
+      "target": "function:Rmms.Infrastructure/Persistence/Configurations/DocumentConfiguration.cs:FolderToString",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Infrastructure/Persistence/Configurations/DocumentConfiguration.cs",
+      "target": "function:Rmms.Infrastructure/Persistence/Configurations/DocumentConfiguration.cs:FolderFromString",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Infrastructure/Persistence/Configurations/DocumentConfiguration.cs",
+      "target": "function:Rmms.Infrastructure/Persistence/Configurations/DocumentConfiguration.cs:Configure",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Infrastructure/Persistence/Configurations/DocumentConfiguration.cs",
+      "target": "class:Rmms.Infrastructure/Persistence/Configurations/DocumentConfiguration.cs:DocumentConfiguration",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Infrastructure/Persistence/Configurations/DocumentConfiguration.cs",
+      "target": "class:Rmms.Infrastructure/Persistence/Configurations/DocumentConfiguration.cs:DocumentAssignmentConfiguration",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    }
+  ]
+}

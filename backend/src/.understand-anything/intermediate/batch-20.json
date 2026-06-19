@@ -1,0 +1,1078 @@
+{
+  "nodes": [
+    {
+      "id": "file:Rmms.Infrastructure/Persistence/Migrations/20260615022635_S17_AttendanceCheckInIndex.Designer.cs",
+      "type": "file",
+      "name": "20260615022635_S17_AttendanceCheckInIndex.Designer.cs",
+      "filePath": "Rmms.Infrastructure/Persistence/Migrations/20260615022635_S17_AttendanceCheckInIndex.Designer.cs",
+      "summary": "20260615022635_S17_AttendanceCheckInIndex.Designer.cs — tệp mã nguồn C# trong backend RMMS (1 hàm, 1 class).",
+      "tags": [
+        "rmms.infrastructure",
+        "persistence",
+        "code",
+        "cs"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:Rmms.Infrastructure/Persistence/Migrations/20260615022635_S17_AttendanceCheckInIndex.Designer.cs:BuildTargetModel",
+      "type": "function",
+      "name": "BuildTargetModel",
+      "filePath": "Rmms.Infrastructure/Persistence/Migrations/20260615022635_S17_AttendanceCheckInIndex.Designer.cs",
+      "lineRange": [
+        21,
+        2439
+      ],
+      "summary": "Hàm BuildTargetModel trong 20260615022635_S17_AttendanceCheckInIndex.Designer.cs.",
+      "tags": [
+        "rmms.infrastructure",
+        "persistence",
+        "code",
+        "cs",
+        "ham"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:Rmms.Infrastructure/Persistence/Migrations/20260615022635_S17_AttendanceCheckInIndex.Designer.cs:S17_AttendanceCheckInIndex",
+      "type": "class",
+      "name": "S17_AttendanceCheckInIndex",
+      "filePath": "Rmms.Infrastructure/Persistence/Migrations/20260615022635_S17_AttendanceCheckInIndex.Designer.cs",
+      "lineRange": [
+        16,
+        2440
+      ],
+      "summary": "Class S17_AttendanceCheckInIndex trong 20260615022635_S17_AttendanceCheckInIndex.Designer.cs.",
+      "tags": [
+        "rmms.infrastructure",
+        "persistence",
+        "code",
+        "cs",
+        "class"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:Rmms.Infrastructure/Persistence/Migrations/20260616081404_M10_FormSubmissionGps.cs",
+      "type": "file",
+      "name": "20260616081404_M10_FormSubmissionGps.cs",
+      "filePath": "Rmms.Infrastructure/Persistence/Migrations/20260616081404_M10_FormSubmissionGps.cs",
+      "summary": "20260616081404_M10_FormSubmissionGps.cs — tệp mã nguồn C# trong backend RMMS (2 hàm, 1 class).",
+      "tags": [
+        "rmms.infrastructure",
+        "persistence",
+        "code",
+        "cs"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Rmms.Infrastructure/Persistence/Migrations/20260616081404_M10_FormSubmissionGps.cs:Up",
+      "type": "function",
+      "name": "Up",
+      "filePath": "Rmms.Infrastructure/Persistence/Migrations/20260616081404_M10_FormSubmissionGps.cs",
+      "lineRange": [
+        11,
+        24
+      ],
+      "summary": "Hàm Up trong 20260616081404_M10_FormSubmissionGps.cs.",
+      "tags": [
+        "rmms.infrastructure",
+        "persistence",
+        "code",
+        "cs",
+        "ham"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Rmms.Infrastructure/Persistence/Migrations/20260616081404_M10_FormSubmissionGps.cs:Down",
+      "type": "function",
+      "name": "Down",
+      "filePath": "Rmms.Infrastructure/Persistence/Migrations/20260616081404_M10_FormSubmissionGps.cs",
+      "lineRange": [
+        27,
+        36
+      ],
+      "summary": "Hàm Down trong 20260616081404_M10_FormSubmissionGps.cs.",
+      "tags": [
+        "rmms.infrastructure",
+        "persistence",
+        "code",
+        "cs",
+        "ham"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:Rmms.Infrastructure/Persistence/Migrations/20260616081404_M10_FormSubmissionGps.cs:M10_FormSubmissionGps",
+      "type": "class",
+      "name": "M10_FormSubmissionGps",
+      "filePath": "Rmms.Infrastructure/Persistence/Migrations/20260616081404_M10_FormSubmissionGps.cs",
+      "lineRange": [
+        8,
+        37
+      ],
+      "summary": "Class M10_FormSubmissionGps trong 20260616081404_M10_FormSubmissionGps.cs.",
+      "tags": [
+        "rmms.infrastructure",
+        "persistence",
+        "code",
+        "cs",
+        "class"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:Rmms.Infrastructure/Persistence/Migrations/20260616081404_M10_FormSubmissionGps.Designer.cs",
+      "type": "file",
+      "name": "20260616081404_M10_FormSubmissionGps.Designer.cs",
+      "filePath": "Rmms.Infrastructure/Persistence/Migrations/20260616081404_M10_FormSubmissionGps.Designer.cs",
+      "summary": "20260616081404_M10_FormSubmissionGps.Designer.cs — tệp mã nguồn C# trong backend RMMS (1 hàm, 1 class).",
+      "tags": [
+        "rmms.infrastructure",
+        "persistence",
+        "code",
+        "cs"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:Rmms.Infrastructure/Persistence/Migrations/20260616081404_M10_FormSubmissionGps.Designer.cs:BuildTargetModel",
+      "type": "function",
+      "name": "BuildTargetModel",
+      "filePath": "Rmms.Infrastructure/Persistence/Migrations/20260616081404_M10_FormSubmissionGps.Designer.cs",
+      "lineRange": [
+        21,
+        2447
+      ],
+      "summary": "Hàm BuildTargetModel trong 20260616081404_M10_FormSubmissionGps.Designer.cs.",
+      "tags": [
+        "rmms.infrastructure",
+        "persistence",
+        "code",
+        "cs",
+        "ham"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:Rmms.Infrastructure/Persistence/Migrations/20260616081404_M10_FormSubmissionGps.Designer.cs:M10_FormSubmissionGps",
+      "type": "class",
+      "name": "M10_FormSubmissionGps",
+      "filePath": "Rmms.Infrastructure/Persistence/Migrations/20260616081404_M10_FormSubmissionGps.Designer.cs",
+      "lineRange": [
+        16,
+        2448
+      ],
+      "summary": "Class M10_FormSubmissionGps trong 20260616081404_M10_FormSubmissionGps.Designer.cs.",
+      "tags": [
+        "rmms.infrastructure",
+        "persistence",
+        "code",
+        "cs",
+        "class"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:Rmms.Infrastructure/Persistence/Migrations/20260616111821_M14_PushTokens.cs",
+      "type": "file",
+      "name": "20260616111821_M14_PushTokens.cs",
+      "filePath": "Rmms.Infrastructure/Persistence/Migrations/20260616111821_M14_PushTokens.cs",
+      "summary": "20260616111821_M14_PushTokens.cs — tệp mã nguồn C# trong backend RMMS (2 hàm, 1 class).",
+      "tags": [
+        "rmms.infrastructure",
+        "persistence",
+        "code",
+        "cs"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Rmms.Infrastructure/Persistence/Migrations/20260616111821_M14_PushTokens.cs:Up",
+      "type": "function",
+      "name": "Up",
+      "filePath": "Rmms.Infrastructure/Persistence/Migrations/20260616111821_M14_PushTokens.cs",
+      "lineRange": [
+        12,
+        44
+      ],
+      "summary": "Hàm Up trong 20260616111821_M14_PushTokens.cs.",
+      "tags": [
+        "rmms.infrastructure",
+        "persistence",
+        "code",
+        "cs",
+        "ham"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Rmms.Infrastructure/Persistence/Migrations/20260616111821_M14_PushTokens.cs:Down",
+      "type": "function",
+      "name": "Down",
+      "filePath": "Rmms.Infrastructure/Persistence/Migrations/20260616111821_M14_PushTokens.cs",
+      "lineRange": [
+        47,
+        51
+      ],
+      "summary": "Hàm Down trong 20260616111821_M14_PushTokens.cs.",
+      "tags": [
+        "rmms.infrastructure",
+        "persistence",
+        "code",
+        "cs",
+        "ham"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:Rmms.Infrastructure/Persistence/Migrations/20260616111821_M14_PushTokens.cs:M14_PushTokens",
+      "type": "class",
+      "name": "M14_PushTokens",
+      "filePath": "Rmms.Infrastructure/Persistence/Migrations/20260616111821_M14_PushTokens.cs",
+      "lineRange": [
+        9,
+        52
+      ],
+      "summary": "Class M14_PushTokens trong 20260616111821_M14_PushTokens.cs.",
+      "tags": [
+        "rmms.infrastructure",
+        "persistence",
+        "code",
+        "cs",
+        "class"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:Rmms.Infrastructure/Persistence/Migrations/20260616111821_M14_PushTokens.Designer.cs",
+      "type": "file",
+      "name": "20260616111821_M14_PushTokens.Designer.cs",
+      "filePath": "Rmms.Infrastructure/Persistence/Migrations/20260616111821_M14_PushTokens.Designer.cs",
+      "summary": "20260616111821_M14_PushTokens.Designer.cs — tệp mã nguồn C# trong backend RMMS (1 hàm, 1 class).",
+      "tags": [
+        "rmms.infrastructure",
+        "persistence",
+        "code",
+        "cs"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:Rmms.Infrastructure/Persistence/Migrations/20260616111821_M14_PushTokens.Designer.cs:BuildTargetModel",
+      "type": "function",
+      "name": "BuildTargetModel",
+      "filePath": "Rmms.Infrastructure/Persistence/Migrations/20260616111821_M14_PushTokens.Designer.cs",
+      "lineRange": [
+        21,
+        2502
+      ],
+      "summary": "Hàm BuildTargetModel trong 20260616111821_M14_PushTokens.Designer.cs.",
+      "tags": [
+        "rmms.infrastructure",
+        "persistence",
+        "code",
+        "cs",
+        "ham"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:Rmms.Infrastructure/Persistence/Migrations/20260616111821_M14_PushTokens.Designer.cs:M14_PushTokens",
+      "type": "class",
+      "name": "M14_PushTokens",
+      "filePath": "Rmms.Infrastructure/Persistence/Migrations/20260616111821_M14_PushTokens.Designer.cs",
+      "lineRange": [
+        16,
+        2503
+      ],
+      "summary": "Class M14_PushTokens trong 20260616111821_M14_PushTokens.Designer.cs.",
+      "tags": [
+        "rmms.infrastructure",
+        "persistence",
+        "code",
+        "cs",
+        "class"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:Rmms.Infrastructure/Persistence/Migrations/20260617151300_M01_SuperAdminFlag.cs",
+      "type": "file",
+      "name": "20260617151300_M01_SuperAdminFlag.cs",
+      "filePath": "Rmms.Infrastructure/Persistence/Migrations/20260617151300_M01_SuperAdminFlag.cs",
+      "summary": "20260617151300_M01_SuperAdminFlag.cs — tệp mã nguồn C# trong backend RMMS (2 hàm, 1 class).",
+      "tags": [
+        "rmms.infrastructure",
+        "persistence",
+        "code",
+        "cs"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Rmms.Infrastructure/Persistence/Migrations/20260617151300_M01_SuperAdminFlag.cs:Up",
+      "type": "function",
+      "name": "Up",
+      "filePath": "Rmms.Infrastructure/Persistence/Migrations/20260617151300_M01_SuperAdminFlag.cs",
+      "lineRange": [
+        11,
+        19
+      ],
+      "summary": "Hàm Up trong 20260617151300_M01_SuperAdminFlag.cs.",
+      "tags": [
+        "rmms.infrastructure",
+        "persistence",
+        "code",
+        "cs",
+        "ham"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Rmms.Infrastructure/Persistence/Migrations/20260617151300_M01_SuperAdminFlag.cs:Down",
+      "type": "function",
+      "name": "Down",
+      "filePath": "Rmms.Infrastructure/Persistence/Migrations/20260617151300_M01_SuperAdminFlag.cs",
+      "lineRange": [
+        22,
+        27
+      ],
+      "summary": "Hàm Down trong 20260617151300_M01_SuperAdminFlag.cs.",
+      "tags": [
+        "rmms.infrastructure",
+        "persistence",
+        "code",
+        "cs",
+        "ham"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:Rmms.Infrastructure/Persistence/Migrations/20260617151300_M01_SuperAdminFlag.cs:M01_SuperAdminFlag",
+      "type": "class",
+      "name": "M01_SuperAdminFlag",
+      "filePath": "Rmms.Infrastructure/Persistence/Migrations/20260617151300_M01_SuperAdminFlag.cs",
+      "lineRange": [
+        8,
+        28
+      ],
+      "summary": "Class M01_SuperAdminFlag trong 20260617151300_M01_SuperAdminFlag.cs.",
+      "tags": [
+        "rmms.infrastructure",
+        "persistence",
+        "code",
+        "cs",
+        "class"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:Rmms.Infrastructure/Persistence/Migrations/20260617151300_M01_SuperAdminFlag.Designer.cs",
+      "type": "file",
+      "name": "20260617151300_M01_SuperAdminFlag.Designer.cs",
+      "filePath": "Rmms.Infrastructure/Persistence/Migrations/20260617151300_M01_SuperAdminFlag.Designer.cs",
+      "summary": "20260617151300_M01_SuperAdminFlag.Designer.cs — tệp mã nguồn C# trong backend RMMS (1 hàm, 1 class).",
+      "tags": [
+        "rmms.infrastructure",
+        "persistence",
+        "code",
+        "cs"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:Rmms.Infrastructure/Persistence/Migrations/20260617151300_M01_SuperAdminFlag.Designer.cs:BuildTargetModel",
+      "type": "function",
+      "name": "BuildTargetModel",
+      "filePath": "Rmms.Infrastructure/Persistence/Migrations/20260617151300_M01_SuperAdminFlag.Designer.cs",
+      "lineRange": [
+        21,
+        2508
+      ],
+      "summary": "Hàm BuildTargetModel trong 20260617151300_M01_SuperAdminFlag.Designer.cs.",
+      "tags": [
+        "rmms.infrastructure",
+        "persistence",
+        "code",
+        "cs",
+        "ham"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:Rmms.Infrastructure/Persistence/Migrations/20260617151300_M01_SuperAdminFlag.Designer.cs:M01_SuperAdminFlag",
+      "type": "class",
+      "name": "M01_SuperAdminFlag",
+      "filePath": "Rmms.Infrastructure/Persistence/Migrations/20260617151300_M01_SuperAdminFlag.Designer.cs",
+      "lineRange": [
+        16,
+        2509
+      ],
+      "summary": "Class M01_SuperAdminFlag trong 20260617151300_M01_SuperAdminFlag.Designer.cs.",
+      "tags": [
+        "rmms.infrastructure",
+        "persistence",
+        "code",
+        "cs",
+        "class"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:Rmms.Infrastructure/Persistence/Migrations/AppDbContextModelSnapshot.cs",
+      "type": "file",
+      "name": "AppDbContextModelSnapshot.cs",
+      "filePath": "Rmms.Infrastructure/Persistence/Migrations/AppDbContextModelSnapshot.cs",
+      "summary": "AppDbContextModelSnapshot.cs — tệp mã nguồn C# trong backend RMMS (1 hàm, 1 class).",
+      "tags": [
+        "rmms.infrastructure",
+        "persistence",
+        "code",
+        "cs"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:Rmms.Infrastructure/Persistence/Migrations/AppDbContextModelSnapshot.cs:BuildModel",
+      "type": "function",
+      "name": "BuildModel",
+      "filePath": "Rmms.Infrastructure/Persistence/Migrations/AppDbContextModelSnapshot.cs",
+      "lineRange": [
+        18,
+        2505
+      ],
+      "summary": "Hàm BuildModel trong AppDbContextModelSnapshot.cs.",
+      "tags": [
+        "rmms.infrastructure",
+        "persistence",
+        "code",
+        "cs",
+        "ham"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:Rmms.Infrastructure/Persistence/Migrations/AppDbContextModelSnapshot.cs:AppDbContextModelSnapshot",
+      "type": "class",
+      "name": "AppDbContextModelSnapshot",
+      "filePath": "Rmms.Infrastructure/Persistence/Migrations/AppDbContextModelSnapshot.cs",
+      "lineRange": [
+        15,
+        2506
+      ],
+      "summary": "Class AppDbContextModelSnapshot trong AppDbContextModelSnapshot.cs.",
+      "tags": [
+        "rmms.infrastructure",
+        "persistence",
+        "code",
+        "cs",
+        "class"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "config:Rmms.Infrastructure/Persistence/Migrations/PostMigrationScripts/001_audit_log_append_only.sql",
+      "type": "config",
+      "name": "001_audit_log_append_only.sql",
+      "filePath": "Rmms.Infrastructure/Persistence/Migrations/PostMigrationScripts/001_audit_log_append_only.sql",
+      "summary": "001_audit_log_append_only.sql — tệp data trong backend RMMS.",
+      "tags": [
+        "rmms.infrastructure",
+        "persistence",
+        "data",
+        "sql"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:Rmms.Infrastructure/Reports/ClosedXmlReportExporter.cs",
+      "type": "file",
+      "name": "ClosedXmlReportExporter.cs",
+      "filePath": "Rmms.Infrastructure/Reports/ClosedXmlReportExporter.cs",
+      "summary": "ClosedXmlReportExporter.cs — tệp mã nguồn C# trong backend RMMS (2 hàm, 1 class).",
+      "tags": [
+        "rmms.infrastructure",
+        "reports",
+        "code",
+        "cs"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Rmms.Infrastructure/Reports/ClosedXmlReportExporter.cs:ToXlsx",
+      "type": "function",
+      "name": "ToXlsx",
+      "filePath": "Rmms.Infrastructure/Reports/ClosedXmlReportExporter.cs",
+      "lineRange": [
+        15,
+        46
+      ],
+      "summary": "Hàm ToXlsx trong ClosedXmlReportExporter.cs.",
+      "tags": [
+        "rmms.infrastructure",
+        "reports",
+        "code",
+        "cs",
+        "ham"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Rmms.Infrastructure/Reports/ClosedXmlReportExporter.cs:Sanitize",
+      "type": "function",
+      "name": "Sanitize",
+      "filePath": "Rmms.Infrastructure/Reports/ClosedXmlReportExporter.cs",
+      "lineRange": [
+        49,
+        53
+      ],
+      "summary": "Hàm Sanitize trong ClosedXmlReportExporter.cs.",
+      "tags": [
+        "rmms.infrastructure",
+        "reports",
+        "code",
+        "cs",
+        "ham"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:Rmms.Infrastructure/Reports/ClosedXmlReportExporter.cs:ClosedXmlReportExporter",
+      "type": "class",
+      "name": "ClosedXmlReportExporter",
+      "filePath": "Rmms.Infrastructure/Reports/ClosedXmlReportExporter.cs",
+      "lineRange": [
+        11,
+        54
+      ],
+      "summary": "Class ClosedXmlReportExporter trong ClosedXmlReportExporter.cs.",
+      "tags": [
+        "rmms.infrastructure",
+        "reports",
+        "code",
+        "cs",
+        "class"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "config:Rmms.Infrastructure/Rmms.Infrastructure.csproj",
+      "type": "config",
+      "name": "Rmms.Infrastructure.csproj",
+      "filePath": "Rmms.Infrastructure/Rmms.Infrastructure.csproj",
+      "summary": "Rmms.Infrastructure.csproj — tệp cấu hình backend RMMS.",
+      "tags": [
+        "rmms.infrastructure",
+        "rmms.infrastructure.csproj",
+        "config",
+        "csproj"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:Rmms.Infrastructure/Services/RedisLoginRateLimiter.cs",
+      "type": "file",
+      "name": "RedisLoginRateLimiter.cs",
+      "filePath": "Rmms.Infrastructure/Services/RedisLoginRateLimiter.cs",
+      "summary": "RedisLoginRateLimiter.cs — tệp mã nguồn C# trong backend RMMS (5 hàm, 1 class).",
+      "tags": [
+        "rmms.infrastructure",
+        "services",
+        "code",
+        "cs"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:Rmms.Infrastructure/Services/RedisLoginRateLimiter.cs:RedisLoginRateLimiter",
+      "type": "function",
+      "name": "RedisLoginRateLimiter",
+      "filePath": "Rmms.Infrastructure/Services/RedisLoginRateLimiter.cs",
+      "lineRange": [
+        22,
+        26
+      ],
+      "summary": "Hàm RedisLoginRateLimiter trong RedisLoginRateLimiter.cs.",
+      "tags": [
+        "rmms.infrastructure",
+        "services",
+        "code",
+        "cs",
+        "ham"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Rmms.Infrastructure/Services/RedisLoginRateLimiter.cs:IsBlockedAsync",
+      "type": "function",
+      "name": "IsBlockedAsync",
+      "filePath": "Rmms.Infrastructure/Services/RedisLoginRateLimiter.cs",
+      "lineRange": [
+        28,
+        40
+      ],
+      "summary": "Hàm IsBlockedAsync trong RedisLoginRateLimiter.cs.",
+      "tags": [
+        "rmms.infrastructure",
+        "services",
+        "code",
+        "cs",
+        "ham"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Rmms.Infrastructure/Services/RedisLoginRateLimiter.cs:RegisterFailureAsync",
+      "type": "function",
+      "name": "RegisterFailureAsync",
+      "filePath": "Rmms.Infrastructure/Services/RedisLoginRateLimiter.cs",
+      "lineRange": [
+        42,
+        59
+      ],
+      "summary": "Hàm RegisterFailureAsync trong RedisLoginRateLimiter.cs.",
+      "tags": [
+        "rmms.infrastructure",
+        "services",
+        "code",
+        "cs",
+        "ham"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Rmms.Infrastructure/Services/RedisLoginRateLimiter.cs:ResetAsync",
+      "type": "function",
+      "name": "ResetAsync",
+      "filePath": "Rmms.Infrastructure/Services/RedisLoginRateLimiter.cs",
+      "lineRange": [
+        61,
+        71
+      ],
+      "summary": "Hàm ResetAsync trong RedisLoginRateLimiter.cs.",
+      "tags": [
+        "rmms.infrastructure",
+        "services",
+        "code",
+        "cs",
+        "ham"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Rmms.Infrastructure/Services/RedisLoginRateLimiter.cs:Key",
+      "type": "function",
+      "name": "Key",
+      "filePath": "Rmms.Infrastructure/Services/RedisLoginRateLimiter.cs",
+      "lineRange": [
+        73,
+        78
+      ],
+      "summary": "Hàm Key trong RedisLoginRateLimiter.cs.",
+      "tags": [
+        "rmms.infrastructure",
+        "services",
+        "code",
+        "cs",
+        "ham"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:Rmms.Infrastructure/Services/RedisLoginRateLimiter.cs:RedisLoginRateLimiter",
+      "type": "class",
+      "name": "RedisLoginRateLimiter",
+      "filePath": "Rmms.Infrastructure/Services/RedisLoginRateLimiter.cs",
+      "lineRange": [
+        14,
+        79
+      ],
+      "summary": "Class RedisLoginRateLimiter trong RedisLoginRateLimiter.cs.",
+      "tags": [
+        "rmms.infrastructure",
+        "services",
+        "code",
+        "cs",
+        "class"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:Rmms.Infrastructure/Services/SystemDateTimeProvider.cs",
+      "type": "file",
+      "name": "SystemDateTimeProvider.cs",
+      "filePath": "Rmms.Infrastructure/Services/SystemDateTimeProvider.cs",
+      "summary": "SystemDateTimeProvider.cs — tệp mã nguồn C# trong backend RMMS (0 hàm, 1 class).",
+      "tags": [
+        "rmms.infrastructure",
+        "services",
+        "code",
+        "cs"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:Rmms.Infrastructure/Services/SystemDateTimeProvider.cs:SystemDateTimeProvider",
+      "type": "class",
+      "name": "SystemDateTimeProvider",
+      "filePath": "Rmms.Infrastructure/Services/SystemDateTimeProvider.cs",
+      "lineRange": [
+        6,
+        9
+      ],
+      "summary": "Class SystemDateTimeProvider trong SystemDateTimeProvider.cs.",
+      "tags": [
+        "rmms.infrastructure",
+        "services",
+        "code",
+        "cs",
+        "class"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:Rmms.Shared/Errors/ErrorCodes.cs",
+      "type": "file",
+      "name": "ErrorCodes.cs",
+      "filePath": "Rmms.Shared/Errors/ErrorCodes.cs",
+      "summary": "ErrorCodes.cs — tệp mã nguồn C# trong backend RMMS (0 hàm, 1 class).",
+      "tags": [
+        "rmms.shared",
+        "errors",
+        "code",
+        "cs"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:Rmms.Shared/Errors/ErrorCodes.cs:ErrorCodes",
+      "type": "class",
+      "name": "ErrorCodes",
+      "filePath": "Rmms.Shared/Errors/ErrorCodes.cs",
+      "lineRange": [
+        7,
+        70
+      ],
+      "summary": "Class ErrorCodes trong ErrorCodes.cs.",
+      "tags": [
+        "rmms.shared",
+        "errors",
+        "code",
+        "cs",
+        "class"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:Rmms.Shared/Errors/ErrorEnvelope.cs",
+      "type": "file",
+      "name": "ErrorEnvelope.cs",
+      "filePath": "Rmms.Shared/Errors/ErrorEnvelope.cs",
+      "summary": "ErrorEnvelope.cs — tệp mã nguồn C# trong backend RMMS (0 hàm, 0 class).",
+      "tags": [
+        "rmms.shared",
+        "errors",
+        "code",
+        "cs"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:Rmms.Shared/Pagination/PaginatedResponse.cs",
+      "type": "file",
+      "name": "PaginatedResponse.cs",
+      "filePath": "Rmms.Shared/Pagination/PaginatedResponse.cs",
+      "summary": "PaginatedResponse.cs — tệp mã nguồn C# trong backend RMMS (0 hàm, 0 class).",
+      "tags": [
+        "rmms.shared",
+        "pagination",
+        "code",
+        "cs"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "config:Rmms.Shared/Rmms.Shared.csproj",
+      "type": "config",
+      "name": "Rmms.Shared.csproj",
+      "filePath": "Rmms.Shared/Rmms.Shared.csproj",
+      "summary": "Rmms.Shared.csproj — tệp cấu hình backend RMMS.",
+      "tags": [
+        "rmms.shared",
+        "rmms.shared.csproj",
+        "config",
+        "csproj"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:Rmms.Worker/Program.cs",
+      "type": "file",
+      "name": "Program.cs",
+      "filePath": "Rmms.Worker/Program.cs",
+      "summary": "Program.cs — tệp mã nguồn C# trong backend RMMS (0 hàm, 0 class).",
+      "tags": [
+        "rmms.worker",
+        "program.cs",
+        "code",
+        "cs"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:Rmms.Worker/SystemCurrentUser.cs",
+      "type": "file",
+      "name": "SystemCurrentUser.cs",
+      "filePath": "Rmms.Worker/SystemCurrentUser.cs",
+      "summary": "SystemCurrentUser.cs — tệp mã nguồn C# trong backend RMMS (0 hàm, 1 class).",
+      "tags": [
+        "rmms.worker",
+        "systemcurrentuser.cs",
+        "code",
+        "cs"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:Rmms.Worker/SystemCurrentUser.cs:SystemCurrentUser",
+      "type": "class",
+      "name": "SystemCurrentUser",
+      "filePath": "Rmms.Worker/SystemCurrentUser.cs",
+      "lineRange": [
+        9,
+        16
+      ],
+      "summary": "Class SystemCurrentUser trong SystemCurrentUser.cs.",
+      "tags": [
+        "rmms.worker",
+        "systemcurrentuser.cs",
+        "code",
+        "cs",
+        "class"
+      ],
+      "complexity": "moderate"
+    }
+  ],
+  "edges": [
+    {
+      "source": "file:Rmms.Infrastructure/Persistence/Migrations/20260615022635_S17_AttendanceCheckInIndex.Designer.cs",
+      "target": "function:Rmms.Infrastructure/Persistence/Migrations/20260615022635_S17_AttendanceCheckInIndex.Designer.cs:BuildTargetModel",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Infrastructure/Persistence/Migrations/20260615022635_S17_AttendanceCheckInIndex.Designer.cs",
+      "target": "class:Rmms.Infrastructure/Persistence/Migrations/20260615022635_S17_AttendanceCheckInIndex.Designer.cs:S17_AttendanceCheckInIndex",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Infrastructure/Persistence/Migrations/20260616081404_M10_FormSubmissionGps.cs",
+      "target": "function:Rmms.Infrastructure/Persistence/Migrations/20260616081404_M10_FormSubmissionGps.cs:Up",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Infrastructure/Persistence/Migrations/20260616081404_M10_FormSubmissionGps.cs",
+      "target": "function:Rmms.Infrastructure/Persistence/Migrations/20260616081404_M10_FormSubmissionGps.cs:Down",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Infrastructure/Persistence/Migrations/20260616081404_M10_FormSubmissionGps.cs",
+      "target": "class:Rmms.Infrastructure/Persistence/Migrations/20260616081404_M10_FormSubmissionGps.cs:M10_FormSubmissionGps",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Infrastructure/Persistence/Migrations/20260616081404_M10_FormSubmissionGps.Designer.cs",
+      "target": "function:Rmms.Infrastructure/Persistence/Migrations/20260616081404_M10_FormSubmissionGps.Designer.cs:BuildTargetModel",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Infrastructure/Persistence/Migrations/20260616081404_M10_FormSubmissionGps.Designer.cs",
+      "target": "class:Rmms.Infrastructure/Persistence/Migrations/20260616081404_M10_FormSubmissionGps.Designer.cs:M10_FormSubmissionGps",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Infrastructure/Persistence/Migrations/20260616111821_M14_PushTokens.cs",
+      "target": "function:Rmms.Infrastructure/Persistence/Migrations/20260616111821_M14_PushTokens.cs:Up",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Infrastructure/Persistence/Migrations/20260616111821_M14_PushTokens.cs",
+      "target": "function:Rmms.Infrastructure/Persistence/Migrations/20260616111821_M14_PushTokens.cs:Down",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Infrastructure/Persistence/Migrations/20260616111821_M14_PushTokens.cs",
+      "target": "class:Rmms.Infrastructure/Persistence/Migrations/20260616111821_M14_PushTokens.cs:M14_PushTokens",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Infrastructure/Persistence/Migrations/20260616111821_M14_PushTokens.Designer.cs",
+      "target": "function:Rmms.Infrastructure/Persistence/Migrations/20260616111821_M14_PushTokens.Designer.cs:BuildTargetModel",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Infrastructure/Persistence/Migrations/20260616111821_M14_PushTokens.Designer.cs",
+      "target": "class:Rmms.Infrastructure/Persistence/Migrations/20260616111821_M14_PushTokens.Designer.cs:M14_PushTokens",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Infrastructure/Persistence/Migrations/20260617151300_M01_SuperAdminFlag.cs",
+      "target": "function:Rmms.Infrastructure/Persistence/Migrations/20260617151300_M01_SuperAdminFlag.cs:Up",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Infrastructure/Persistence/Migrations/20260617151300_M01_SuperAdminFlag.cs",
+      "target": "function:Rmms.Infrastructure/Persistence/Migrations/20260617151300_M01_SuperAdminFlag.cs:Down",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Infrastructure/Persistence/Migrations/20260617151300_M01_SuperAdminFlag.cs",
+      "target": "class:Rmms.Infrastructure/Persistence/Migrations/20260617151300_M01_SuperAdminFlag.cs:M01_SuperAdminFlag",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Infrastructure/Persistence/Migrations/20260617151300_M01_SuperAdminFlag.Designer.cs",
+      "target": "function:Rmms.Infrastructure/Persistence/Migrations/20260617151300_M01_SuperAdminFlag.Designer.cs:BuildTargetModel",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Infrastructure/Persistence/Migrations/20260617151300_M01_SuperAdminFlag.Designer.cs",
+      "target": "class:Rmms.Infrastructure/Persistence/Migrations/20260617151300_M01_SuperAdminFlag.Designer.cs:M01_SuperAdminFlag",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Infrastructure/Persistence/Migrations/AppDbContextModelSnapshot.cs",
+      "target": "function:Rmms.Infrastructure/Persistence/Migrations/AppDbContextModelSnapshot.cs:BuildModel",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Infrastructure/Persistence/Migrations/AppDbContextModelSnapshot.cs",
+      "target": "class:Rmms.Infrastructure/Persistence/Migrations/AppDbContextModelSnapshot.cs:AppDbContextModelSnapshot",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Infrastructure/Reports/ClosedXmlReportExporter.cs",
+      "target": "function:Rmms.Infrastructure/Reports/ClosedXmlReportExporter.cs:ToXlsx",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Infrastructure/Reports/ClosedXmlReportExporter.cs",
+      "target": "function:Rmms.Infrastructure/Reports/ClosedXmlReportExporter.cs:Sanitize",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Infrastructure/Reports/ClosedXmlReportExporter.cs",
+      "target": "class:Rmms.Infrastructure/Reports/ClosedXmlReportExporter.cs:ClosedXmlReportExporter",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Infrastructure/Services/RedisLoginRateLimiter.cs",
+      "target": "function:Rmms.Infrastructure/Services/RedisLoginRateLimiter.cs:RedisLoginRateLimiter",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Infrastructure/Services/RedisLoginRateLimiter.cs",
+      "target": "function:Rmms.Infrastructure/Services/RedisLoginRateLimiter.cs:IsBlockedAsync",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Infrastructure/Services/RedisLoginRateLimiter.cs",
+      "target": "function:Rmms.Infrastructure/Services/RedisLoginRateLimiter.cs:RegisterFailureAsync",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Infrastructure/Services/RedisLoginRateLimiter.cs",
+      "target": "function:Rmms.Infrastructure/Services/RedisLoginRateLimiter.cs:ResetAsync",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Infrastructure/Services/RedisLoginRateLimiter.cs",
+      "target": "function:Rmms.Infrastructure/Services/RedisLoginRateLimiter.cs:Key",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Infrastructure/Services/RedisLoginRateLimiter.cs",
+      "target": "class:Rmms.Infrastructure/Services/RedisLoginRateLimiter.cs:RedisLoginRateLimiter",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Infrastructure/Services/SystemDateTimeProvider.cs",
+      "target": "class:Rmms.Infrastructure/Services/SystemDateTimeProvider.cs:SystemDateTimeProvider",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Shared/Errors/ErrorCodes.cs",
+      "target": "class:Rmms.Shared/Errors/ErrorCodes.cs:ErrorCodes",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Worker/SystemCurrentUser.cs",
+      "target": "class:Rmms.Worker/SystemCurrentUser.cs:SystemCurrentUser",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    }
+  ]
+}

@@ -1,0 +1,3698 @@
+{
+  "nodes": [
+    {
+      "id": "file:Rmms.Domain/News/NewsRead.cs",
+      "type": "file",
+      "name": "NewsRead.cs",
+      "filePath": "Rmms.Domain/News/NewsRead.cs",
+      "summary": "NewsRead.cs — tệp mã nguồn C# trong backend RMMS (3 hàm, 1 class).",
+      "tags": [
+        "rmms.domain",
+        "news",
+        "code",
+        "cs"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Rmms.Domain/News/NewsRead.cs:NewsRead",
+      "type": "function",
+      "name": "NewsRead",
+      "filePath": "Rmms.Domain/News/NewsRead.cs",
+      "lineRange": [
+        17,
+        17
+      ],
+      "summary": "Hàm NewsRead trong NewsRead.cs.",
+      "tags": [
+        "rmms.domain",
+        "news",
+        "code",
+        "cs",
+        "ham"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Rmms.Domain/News/NewsRead.cs:Create",
+      "type": "function",
+      "name": "Create",
+      "filePath": "Rmms.Domain/News/NewsRead.cs",
+      "lineRange": [
+        19,
+        25
+      ],
+      "summary": "Hàm Create trong NewsRead.cs.",
+      "tags": [
+        "rmms.domain",
+        "news",
+        "code",
+        "cs",
+        "ham"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Rmms.Domain/News/NewsRead.cs:Confirm",
+      "type": "function",
+      "name": "Confirm",
+      "filePath": "Rmms.Domain/News/NewsRead.cs",
+      "lineRange": [
+        29,
+        32
+      ],
+      "summary": "Hàm Confirm trong NewsRead.cs.",
+      "tags": [
+        "rmms.domain",
+        "news",
+        "code",
+        "cs",
+        "ham"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:Rmms.Domain/News/NewsRead.cs:NewsRead",
+      "type": "class",
+      "name": "NewsRead",
+      "filePath": "Rmms.Domain/News/NewsRead.cs",
+      "lineRange": [
+        10,
+        33
+      ],
+      "summary": "Class NewsRead trong NewsRead.cs.",
+      "tags": [
+        "rmms.domain",
+        "news",
+        "code",
+        "cs",
+        "class"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:Rmms.Domain/Notifications/Notification.cs",
+      "type": "file",
+      "name": "Notification.cs",
+      "filePath": "Rmms.Domain/Notifications/Notification.cs",
+      "summary": "Notification.cs — tệp mã nguồn C# trong backend RMMS (3 hàm, 1 class).",
+      "tags": [
+        "rmms.domain",
+        "notifications",
+        "code",
+        "cs"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Rmms.Domain/Notifications/Notification.cs:Notification",
+      "type": "function",
+      "name": "Notification",
+      "filePath": "Rmms.Domain/Notifications/Notification.cs",
+      "lineRange": [
+        31,
+        31
+      ],
+      "summary": "Hàm Notification trong Notification.cs.",
+      "tags": [
+        "rmms.domain",
+        "notifications",
+        "code",
+        "cs",
+        "ham"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Rmms.Domain/Notifications/Notification.cs:Create",
+      "type": "function",
+      "name": "Create",
+      "filePath": "Rmms.Domain/Notifications/Notification.cs",
+      "lineRange": [
+        33,
+        56
+      ],
+      "summary": "Hàm Create trong Notification.cs.",
+      "tags": [
+        "rmms.domain",
+        "notifications",
+        "code",
+        "cs",
+        "ham"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Rmms.Domain/Notifications/Notification.cs:MarkRead",
+      "type": "function",
+      "name": "MarkRead",
+      "filePath": "Rmms.Domain/Notifications/Notification.cs",
+      "lineRange": [
+        58,
+        63
+      ],
+      "summary": "Hàm MarkRead trong Notification.cs.",
+      "tags": [
+        "rmms.domain",
+        "notifications",
+        "code",
+        "cs",
+        "ham"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:Rmms.Domain/Notifications/Notification.cs:Notification",
+      "type": "class",
+      "name": "Notification",
+      "filePath": "Rmms.Domain/Notifications/Notification.cs",
+      "lineRange": [
+        15,
+        64
+      ],
+      "summary": "Class Notification trong Notification.cs.",
+      "tags": [
+        "rmms.domain",
+        "notifications",
+        "code",
+        "cs",
+        "class"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:Rmms.Domain/Notifications/PushToken.cs",
+      "type": "file",
+      "name": "PushToken.cs",
+      "filePath": "Rmms.Domain/Notifications/PushToken.cs",
+      "summary": "PushToken.cs — tệp mã nguồn C# trong backend RMMS (3 hàm, 1 class).",
+      "tags": [
+        "rmms.domain",
+        "notifications",
+        "code",
+        "cs"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Rmms.Domain/Notifications/PushToken.cs:PushToken",
+      "type": "function",
+      "name": "PushToken",
+      "filePath": "Rmms.Domain/Notifications/PushToken.cs",
+      "lineRange": [
+        23,
+        23
+      ],
+      "summary": "Hàm PushToken trong PushToken.cs.",
+      "tags": [
+        "rmms.domain",
+        "notifications",
+        "code",
+        "cs",
+        "ham"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Rmms.Domain/Notifications/PushToken.cs:Create",
+      "type": "function",
+      "name": "Create",
+      "filePath": "Rmms.Domain/Notifications/PushToken.cs",
+      "lineRange": [
+        25,
+        35
+      ],
+      "summary": "Hàm Create trong PushToken.cs.",
+      "tags": [
+        "rmms.domain",
+        "notifications",
+        "code",
+        "cs",
+        "ham"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Rmms.Domain/Notifications/PushToken.cs:AssignTo",
+      "type": "function",
+      "name": "AssignTo",
+      "filePath": "Rmms.Domain/Notifications/PushToken.cs",
+      "lineRange": [
+        38,
+        42
+      ],
+      "summary": "Hàm AssignTo trong PushToken.cs.",
+      "tags": [
+        "rmms.domain",
+        "notifications",
+        "code",
+        "cs",
+        "ham"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:Rmms.Domain/Notifications/PushToken.cs:PushToken",
+      "type": "class",
+      "name": "PushToken",
+      "filePath": "Rmms.Domain/Notifications/PushToken.cs",
+      "lineRange": [
+        16,
+        43
+      ],
+      "summary": "Class PushToken trong PushToken.cs.",
+      "tags": [
+        "rmms.domain",
+        "notifications",
+        "code",
+        "cs",
+        "class"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:Rmms.Domain/Organization/Area.cs",
+      "type": "file",
+      "name": "Area.cs",
+      "filePath": "Rmms.Domain/Organization/Area.cs",
+      "summary": "Area.cs — tệp mã nguồn C# trong backend RMMS (3 hàm, 1 class).",
+      "tags": [
+        "rmms.domain",
+        "organization",
+        "code",
+        "cs"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Rmms.Domain/Organization/Area.cs:Area",
+      "type": "function",
+      "name": "Area",
+      "filePath": "Rmms.Domain/Organization/Area.cs",
+      "lineRange": [
+        19,
+        19
+      ],
+      "summary": "Hàm Area trong Area.cs.",
+      "tags": [
+        "rmms.domain",
+        "organization",
+        "code",
+        "cs",
+        "ham"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Rmms.Domain/Organization/Area.cs:Create",
+      "type": "function",
+      "name": "Create",
+      "filePath": "Rmms.Domain/Organization/Area.cs",
+      "lineRange": [
+        21,
+        32
+      ],
+      "summary": "Hàm Create trong Area.cs.",
+      "tags": [
+        "rmms.domain",
+        "organization",
+        "code",
+        "cs",
+        "ham"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Rmms.Domain/Organization/Area.cs:Update",
+      "type": "function",
+      "name": "Update",
+      "filePath": "Rmms.Domain/Organization/Area.cs",
+      "lineRange": [
+        34,
+        45
+      ],
+      "summary": "Hàm Update trong Area.cs.",
+      "tags": [
+        "rmms.domain",
+        "organization",
+        "code",
+        "cs",
+        "ham"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:Rmms.Domain/Organization/Area.cs:Area",
+      "type": "class",
+      "name": "Area",
+      "filePath": "Rmms.Domain/Organization/Area.cs",
+      "lineRange": [
+        9,
+        46
+      ],
+      "summary": "Class Area trong Area.cs.",
+      "tags": [
+        "rmms.domain",
+        "organization",
+        "code",
+        "cs",
+        "class"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:Rmms.Domain/Organization/Category.cs",
+      "type": "file",
+      "name": "Category.cs",
+      "filePath": "Rmms.Domain/Organization/Category.cs",
+      "summary": "Category.cs — tệp mã nguồn C# trong backend RMMS (3 hàm, 1 class).",
+      "tags": [
+        "rmms.domain",
+        "organization",
+        "code",
+        "cs"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Rmms.Domain/Organization/Category.cs:Category",
+      "type": "function",
+      "name": "Category",
+      "filePath": "Rmms.Domain/Organization/Category.cs",
+      "lineRange": [
+        16,
+        16
+      ],
+      "summary": "Hàm Category trong Category.cs.",
+      "tags": [
+        "rmms.domain",
+        "organization",
+        "code",
+        "cs",
+        "ham"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Rmms.Domain/Organization/Category.cs:Create",
+      "type": "function",
+      "name": "Create",
+      "filePath": "Rmms.Domain/Organization/Category.cs",
+      "lineRange": [
+        18,
+        28
+      ],
+      "summary": "Hàm Create trong Category.cs.",
+      "tags": [
+        "rmms.domain",
+        "organization",
+        "code",
+        "cs",
+        "ham"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Rmms.Domain/Organization/Category.cs:Update",
+      "type": "function",
+      "name": "Update",
+      "filePath": "Rmms.Domain/Organization/Category.cs",
+      "lineRange": [
+        30,
+        34
+      ],
+      "summary": "Hàm Update trong Category.cs.",
+      "tags": [
+        "rmms.domain",
+        "organization",
+        "code",
+        "cs",
+        "ham"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:Rmms.Domain/Organization/Category.cs:Category",
+      "type": "class",
+      "name": "Category",
+      "filePath": "Rmms.Domain/Organization/Category.cs",
+      "lineRange": [
+        9,
+        35
+      ],
+      "summary": "Class Category trong Category.cs.",
+      "tags": [
+        "rmms.domain",
+        "organization",
+        "code",
+        "cs",
+        "class"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:Rmms.Domain/Organization/Product.cs",
+      "type": "file",
+      "name": "Product.cs",
+      "filePath": "Rmms.Domain/Organization/Product.cs",
+      "summary": "Product.cs — tệp mã nguồn C# trong backend RMMS (5 hàm, 1 class).",
+      "tags": [
+        "rmms.domain",
+        "organization",
+        "code",
+        "cs"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:Rmms.Domain/Organization/Product.cs:Product",
+      "type": "function",
+      "name": "Product",
+      "filePath": "Rmms.Domain/Organization/Product.cs",
+      "lineRange": [
+        28,
+        28
+      ],
+      "summary": "Hàm Product trong Product.cs.",
+      "tags": [
+        "rmms.domain",
+        "organization",
+        "code",
+        "cs",
+        "ham"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Rmms.Domain/Organization/Product.cs:Create",
+      "type": "function",
+      "name": "Create",
+      "filePath": "Rmms.Domain/Organization/Product.cs",
+      "lineRange": [
+        30,
+        44
+      ],
+      "summary": "Hàm Create trong Product.cs.",
+      "tags": [
+        "rmms.domain",
+        "organization",
+        "code",
+        "cs",
+        "ham"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Rmms.Domain/Organization/Product.cs:Update",
+      "type": "function",
+      "name": "Update",
+      "filePath": "Rmms.Domain/Organization/Product.cs",
+      "lineRange": [
+        46,
+        54
+      ],
+      "summary": "Hàm Update trong Product.cs.",
+      "tags": [
+        "rmms.domain",
+        "organization",
+        "code",
+        "cs",
+        "ham"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Rmms.Domain/Organization/Product.cs:Activate",
+      "type": "function",
+      "name": "Activate",
+      "filePath": "Rmms.Domain/Organization/Product.cs",
+      "lineRange": [
+        56,
+        56
+      ],
+      "summary": "Hàm Activate trong Product.cs.",
+      "tags": [
+        "rmms.domain",
+        "organization",
+        "code",
+        "cs",
+        "ham"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Rmms.Domain/Organization/Product.cs:Deactivate",
+      "type": "function",
+      "name": "Deactivate",
+      "filePath": "Rmms.Domain/Organization/Product.cs",
+      "lineRange": [
+        58,
+        58
+      ],
+      "summary": "Hàm Deactivate trong Product.cs.",
+      "tags": [
+        "rmms.domain",
+        "organization",
+        "code",
+        "cs",
+        "ham"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:Rmms.Domain/Organization/Product.cs:Product",
+      "type": "class",
+      "name": "Product",
+      "filePath": "Rmms.Domain/Organization/Product.cs",
+      "lineRange": [
+        11,
+        59
+      ],
+      "summary": "Class Product trong Product.cs.",
+      "tags": [
+        "rmms.domain",
+        "organization",
+        "code",
+        "cs",
+        "class"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:Rmms.Domain/Organization/Store.cs",
+      "type": "file",
+      "name": "Store.cs",
+      "filePath": "Rmms.Domain/Organization/Store.cs",
+      "summary": "Store.cs — tệp mã nguồn C# trong backend RMMS (6 hàm, 1 class).",
+      "tags": [
+        "rmms.domain",
+        "organization",
+        "code",
+        "cs"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:Rmms.Domain/Organization/Store.cs:Store",
+      "type": "function",
+      "name": "Store",
+      "filePath": "Rmms.Domain/Organization/Store.cs",
+      "lineRange": [
+        31,
+        31
+      ],
+      "summary": "Hàm Store trong Store.cs.",
+      "tags": [
+        "rmms.domain",
+        "organization",
+        "code",
+        "cs",
+        "ham"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Rmms.Domain/Organization/Store.cs:Create",
+      "type": "function",
+      "name": "Create",
+      "filePath": "Rmms.Domain/Organization/Store.cs",
+      "lineRange": [
+        33,
+        49
+      ],
+      "summary": "Hàm Create trong Store.cs.",
+      "tags": [
+        "rmms.domain",
+        "organization",
+        "code",
+        "cs",
+        "ham"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Rmms.Domain/Organization/Store.cs:Update",
+      "type": "function",
+      "name": "Update",
+      "filePath": "Rmms.Domain/Organization/Store.cs",
+      "lineRange": [
+        51,
+        61
+      ],
+      "summary": "Hàm Update trong Store.cs.",
+      "tags": [
+        "rmms.domain",
+        "organization",
+        "code",
+        "cs",
+        "ham"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Rmms.Domain/Organization/Store.cs:Activate",
+      "type": "function",
+      "name": "Activate",
+      "filePath": "Rmms.Domain/Organization/Store.cs",
+      "lineRange": [
+        63,
+        63
+      ],
+      "summary": "Hàm Activate trong Store.cs.",
+      "tags": [
+        "rmms.domain",
+        "organization",
+        "code",
+        "cs",
+        "ham"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Rmms.Domain/Organization/Store.cs:Deactivate",
+      "type": "function",
+      "name": "Deactivate",
+      "filePath": "Rmms.Domain/Organization/Store.cs",
+      "lineRange": [
+        65,
+        65
+      ],
+      "summary": "Hàm Deactivate trong Store.cs.",
+      "tags": [
+        "rmms.domain",
+        "organization",
+        "code",
+        "cs",
+        "ham"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Rmms.Domain/Organization/Store.cs:ValidateCoordinates",
+      "type": "function",
+      "name": "ValidateCoordinates",
+      "filePath": "Rmms.Domain/Organization/Store.cs",
+      "lineRange": [
+        67,
+        77
+      ],
+      "summary": "Hàm ValidateCoordinates trong Store.cs.",
+      "tags": [
+        "rmms.domain",
+        "organization",
+        "code",
+        "cs",
+        "ham"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:Rmms.Domain/Organization/Store.cs:Store",
+      "type": "class",
+      "name": "Store",
+      "filePath": "Rmms.Domain/Organization/Store.cs",
+      "lineRange": [
+        12,
+        78
+      ],
+      "summary": "Class Store trong Store.cs.",
+      "tags": [
+        "rmms.domain",
+        "organization",
+        "code",
+        "cs",
+        "class"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:Rmms.Domain/Organization/UserCategoryAssignment.cs",
+      "type": "file",
+      "name": "UserCategoryAssignment.cs",
+      "filePath": "Rmms.Domain/Organization/UserCategoryAssignment.cs",
+      "summary": "UserCategoryAssignment.cs — tệp mã nguồn C# trong backend RMMS (2 hàm, 1 class).",
+      "tags": [
+        "rmms.domain",
+        "organization",
+        "code",
+        "cs"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Rmms.Domain/Organization/UserCategoryAssignment.cs:UserCategoryAssignment",
+      "type": "function",
+      "name": "UserCategoryAssignment",
+      "filePath": "Rmms.Domain/Organization/UserCategoryAssignment.cs",
+      "lineRange": [
+        15,
+        15
+      ],
+      "summary": "Hàm UserCategoryAssignment trong UserCategoryAssignment.cs.",
+      "tags": [
+        "rmms.domain",
+        "organization",
+        "code",
+        "cs",
+        "ham"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Rmms.Domain/Organization/UserCategoryAssignment.cs:Create",
+      "type": "function",
+      "name": "Create",
+      "filePath": "Rmms.Domain/Organization/UserCategoryAssignment.cs",
+      "lineRange": [
+        17,
+        27
+      ],
+      "summary": "Hàm Create trong UserCategoryAssignment.cs.",
+      "tags": [
+        "rmms.domain",
+        "organization",
+        "code",
+        "cs",
+        "ham"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:Rmms.Domain/Organization/UserCategoryAssignment.cs:UserCategoryAssignment",
+      "type": "class",
+      "name": "UserCategoryAssignment",
+      "filePath": "Rmms.Domain/Organization/UserCategoryAssignment.cs",
+      "lineRange": [
+        10,
+        28
+      ],
+      "summary": "Class UserCategoryAssignment trong UserCategoryAssignment.cs.",
+      "tags": [
+        "rmms.domain",
+        "organization",
+        "code",
+        "cs",
+        "class"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:Rmms.Domain/Organization/UserLeaderAssignment.cs",
+      "type": "file",
+      "name": "UserLeaderAssignment.cs",
+      "filePath": "Rmms.Domain/Organization/UserLeaderAssignment.cs",
+      "summary": "UserLeaderAssignment.cs — tệp mã nguồn C# trong backend RMMS (4 hàm, 1 class).",
+      "tags": [
+        "rmms.domain",
+        "organization",
+        "code",
+        "cs"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Rmms.Domain/Organization/UserLeaderAssignment.cs:UserLeaderAssignment",
+      "type": "function",
+      "name": "UserLeaderAssignment",
+      "filePath": "Rmms.Domain/Organization/UserLeaderAssignment.cs",
+      "lineRange": [
+        23,
+        23
+      ],
+      "summary": "Hàm UserLeaderAssignment trong UserLeaderAssignment.cs.",
+      "tags": [
+        "rmms.domain",
+        "organization",
+        "code",
+        "cs",
+        "ham"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Rmms.Domain/Organization/UserLeaderAssignment.cs:Create",
+      "type": "function",
+      "name": "Create",
+      "filePath": "Rmms.Domain/Organization/UserLeaderAssignment.cs",
+      "lineRange": [
+        25,
+        37
+      ],
+      "summary": "Hàm Create trong UserLeaderAssignment.cs.",
+      "tags": [
+        "rmms.domain",
+        "organization",
+        "code",
+        "cs",
+        "ham"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Rmms.Domain/Organization/UserLeaderAssignment.cs:IsActiveOn",
+      "type": "function",
+      "name": "IsActiveOn",
+      "filePath": "Rmms.Domain/Organization/UserLeaderAssignment.cs",
+      "lineRange": [
+        40,
+        41
+      ],
+      "summary": "Hàm IsActiveOn trong UserLeaderAssignment.cs.",
+      "tags": [
+        "rmms.domain",
+        "organization",
+        "code",
+        "cs",
+        "ham"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Rmms.Domain/Organization/UserLeaderAssignment.cs:End",
+      "type": "function",
+      "name": "End",
+      "filePath": "Rmms.Domain/Organization/UserLeaderAssignment.cs",
+      "lineRange": [
+        44,
+        51
+      ],
+      "summary": "Hàm End trong UserLeaderAssignment.cs.",
+      "tags": [
+        "rmms.domain",
+        "organization",
+        "code",
+        "cs",
+        "ham"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:Rmms.Domain/Organization/UserLeaderAssignment.cs:UserLeaderAssignment",
+      "type": "class",
+      "name": "UserLeaderAssignment",
+      "filePath": "Rmms.Domain/Organization/UserLeaderAssignment.cs",
+      "lineRange": [
+        15,
+        52
+      ],
+      "summary": "Class UserLeaderAssignment trong UserLeaderAssignment.cs.",
+      "tags": [
+        "rmms.domain",
+        "organization",
+        "code",
+        "cs",
+        "class"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:Rmms.Domain/Organization/UserStoreAssignment.cs",
+      "type": "file",
+      "name": "UserStoreAssignment.cs",
+      "filePath": "Rmms.Domain/Organization/UserStoreAssignment.cs",
+      "summary": "UserStoreAssignment.cs — tệp mã nguồn C# trong backend RMMS (4 hàm, 1 class).",
+      "tags": [
+        "rmms.domain",
+        "organization",
+        "code",
+        "cs"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Rmms.Domain/Organization/UserStoreAssignment.cs:UserStoreAssignment",
+      "type": "function",
+      "name": "UserStoreAssignment",
+      "filePath": "Rmms.Domain/Organization/UserStoreAssignment.cs",
+      "lineRange": [
+        18,
+        18
+      ],
+      "summary": "Hàm UserStoreAssignment trong UserStoreAssignment.cs.",
+      "tags": [
+        "rmms.domain",
+        "organization",
+        "code",
+        "cs",
+        "ham"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Rmms.Domain/Organization/UserStoreAssignment.cs:Create",
+      "type": "function",
+      "name": "Create",
+      "filePath": "Rmms.Domain/Organization/UserStoreAssignment.cs",
+      "lineRange": [
+        20,
+        31
+      ],
+      "summary": "Hàm Create trong UserStoreAssignment.cs.",
+      "tags": [
+        "rmms.domain",
+        "organization",
+        "code",
+        "cs",
+        "ham"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Rmms.Domain/Organization/UserStoreAssignment.cs:IsActiveOn",
+      "type": "function",
+      "name": "IsActiveOn",
+      "filePath": "Rmms.Domain/Organization/UserStoreAssignment.cs",
+      "lineRange": [
+        33,
+        34
+      ],
+      "summary": "Hàm IsActiveOn trong UserStoreAssignment.cs.",
+      "tags": [
+        "rmms.domain",
+        "organization",
+        "code",
+        "cs",
+        "ham"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Rmms.Domain/Organization/UserStoreAssignment.cs:End",
+      "type": "function",
+      "name": "End",
+      "filePath": "Rmms.Domain/Organization/UserStoreAssignment.cs",
+      "lineRange": [
+        36,
+        43
+      ],
+      "summary": "Hàm End trong UserStoreAssignment.cs.",
+      "tags": [
+        "rmms.domain",
+        "organization",
+        "code",
+        "cs",
+        "ham"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:Rmms.Domain/Organization/UserStoreAssignment.cs:UserStoreAssignment",
+      "type": "class",
+      "name": "UserStoreAssignment",
+      "filePath": "Rmms.Domain/Organization/UserStoreAssignment.cs",
+      "lineRange": [
+        10,
+        44
+      ],
+      "summary": "Class UserStoreAssignment trong UserStoreAssignment.cs.",
+      "tags": [
+        "rmms.domain",
+        "organization",
+        "code",
+        "cs",
+        "class"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "config:Rmms.Domain/Rmms.Domain.csproj",
+      "type": "config",
+      "name": "Rmms.Domain.csproj",
+      "filePath": "Rmms.Domain/Rmms.Domain.csproj",
+      "summary": "Rmms.Domain.csproj — tệp cấu hình backend RMMS.",
+      "tags": [
+        "rmms.domain",
+        "rmms.domain.csproj",
+        "config",
+        "csproj"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:Rmms.Domain/Users/User.cs",
+      "type": "file",
+      "name": "User.cs",
+      "filePath": "Rmms.Domain/Users/User.cs",
+      "summary": "User.cs — tệp mã nguồn C# trong backend RMMS (14 hàm, 1 class).",
+      "tags": [
+        "rmms.domain",
+        "users",
+        "code",
+        "cs"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:Rmms.Domain/Users/User.cs:User",
+      "type": "function",
+      "name": "User",
+      "filePath": "Rmms.Domain/Users/User.cs",
+      "lineRange": [
+        64,
+        64
+      ],
+      "summary": "Hàm User trong User.cs.",
+      "tags": [
+        "rmms.domain",
+        "users",
+        "code",
+        "cs",
+        "ham"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Rmms.Domain/Users/User.cs:Register",
+      "type": "function",
+      "name": "Register",
+      "filePath": "Rmms.Domain/Users/User.cs",
+      "lineRange": [
+        67,
+        83
+      ],
+      "summary": "Hàm Register trong User.cs.",
+      "tags": [
+        "rmms.domain",
+        "users",
+        "code",
+        "cs",
+        "ham"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Rmms.Domain/Users/User.cs:CreateByAdmin",
+      "type": "function",
+      "name": "CreateByAdmin",
+      "filePath": "Rmms.Domain/Users/User.cs",
+      "lineRange": [
+        86,
+        111
+      ],
+      "summary": "Hàm CreateByAdmin trong User.cs.",
+      "tags": [
+        "rmms.domain",
+        "users",
+        "code",
+        "cs",
+        "ham"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Rmms.Domain/Users/User.cs:CreateSuperAdmin",
+      "type": "function",
+      "name": "CreateSuperAdmin",
+      "filePath": "Rmms.Domain/Users/User.cs",
+      "lineRange": [
+        117,
+        134
+      ],
+      "summary": "Hàm CreateSuperAdmin trong User.cs.",
+      "tags": [
+        "rmms.domain",
+        "users",
+        "code",
+        "cs",
+        "ham"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Rmms.Domain/Users/User.cs:PromoteToSuperAdmin",
+      "type": "function",
+      "name": "PromoteToSuperAdmin",
+      "filePath": "Rmms.Domain/Users/User.cs",
+      "lineRange": [
+        137,
+        137
+      ],
+      "summary": "Hàm PromoteToSuperAdmin trong User.cs.",
+      "tags": [
+        "rmms.domain",
+        "users",
+        "code",
+        "cs",
+        "ham"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Rmms.Domain/Users/User.cs:VerifyEmail",
+      "type": "function",
+      "name": "VerifyEmail",
+      "filePath": "Rmms.Domain/Users/User.cs",
+      "lineRange": [
+        141,
+        151
+      ],
+      "summary": "Hàm VerifyEmail trong User.cs.",
+      "tags": [
+        "rmms.domain",
+        "users",
+        "code",
+        "cs",
+        "ham"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Rmms.Domain/Users/User.cs:ChangePassword",
+      "type": "function",
+      "name": "ChangePassword",
+      "filePath": "Rmms.Domain/Users/User.cs",
+      "lineRange": [
+        153,
+        157
+      ],
+      "summary": "Hàm ChangePassword trong User.cs.",
+      "tags": [
+        "rmms.domain",
+        "users",
+        "code",
+        "cs",
+        "ham"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Rmms.Domain/Users/User.cs:Activate",
+      "type": "function",
+      "name": "Activate",
+      "filePath": "Rmms.Domain/Users/User.cs",
+      "lineRange": [
+        159,
+        167
+      ],
+      "summary": "Hàm Activate trong User.cs.",
+      "tags": [
+        "rmms.domain",
+        "users",
+        "code",
+        "cs",
+        "ham"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Rmms.Domain/Users/User.cs:Deactivate",
+      "type": "function",
+      "name": "Deactivate",
+      "filePath": "Rmms.Domain/Users/User.cs",
+      "lineRange": [
+        169,
+        172
+      ],
+      "summary": "Hàm Deactivate trong User.cs.",
+      "tags": [
+        "rmms.domain",
+        "users",
+        "code",
+        "cs",
+        "ham"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Rmms.Domain/Users/User.cs:RecordLogin",
+      "type": "function",
+      "name": "RecordLogin",
+      "filePath": "Rmms.Domain/Users/User.cs",
+      "lineRange": [
+        174,
+        177
+      ],
+      "summary": "Hàm RecordLogin trong User.cs.",
+      "tags": [
+        "rmms.domain",
+        "users",
+        "code",
+        "cs",
+        "ham"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Rmms.Domain/Users/User.cs:UpdateProfile",
+      "type": "function",
+      "name": "UpdateProfile",
+      "filePath": "Rmms.Domain/Users/User.cs",
+      "lineRange": [
+        179,
+        195
+      ],
+      "summary": "Hàm UpdateProfile trong User.cs.",
+      "tags": [
+        "rmms.domain",
+        "users",
+        "code",
+        "cs",
+        "ham"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Rmms.Domain/Users/User.cs:RecordFaceEnrollment",
+      "type": "function",
+      "name": "RecordFaceEnrollment",
+      "filePath": "Rmms.Domain/Users/User.cs",
+      "lineRange": [
+        198,
+        203
+      ],
+      "summary": "Hàm RecordFaceEnrollment trong User.cs.",
+      "tags": [
+        "rmms.domain",
+        "users",
+        "code",
+        "cs",
+        "ham"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Rmms.Domain/Users/User.cs:ClearFaceEnrollment",
+      "type": "function",
+      "name": "ClearFaceEnrollment",
+      "filePath": "Rmms.Domain/Users/User.cs",
+      "lineRange": [
+        206,
+        210
+      ],
+      "summary": "Hàm ClearFaceEnrollment trong User.cs.",
+      "tags": [
+        "rmms.domain",
+        "users",
+        "code",
+        "cs",
+        "ham"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Rmms.Domain/Users/User.cs:NormalizeLanguage",
+      "type": "function",
+      "name": "NormalizeLanguage",
+      "filePath": "Rmms.Domain/Users/User.cs",
+      "lineRange": [
+        217,
+        221
+      ],
+      "summary": "Hàm NormalizeLanguage trong User.cs.",
+      "tags": [
+        "rmms.domain",
+        "users",
+        "code",
+        "cs",
+        "ham"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:Rmms.Domain/Users/User.cs:User",
+      "type": "class",
+      "name": "User",
+      "filePath": "Rmms.Domain/Users/User.cs",
+      "lineRange": [
+        23,
+        222
+      ],
+      "summary": "Class User trong User.cs.",
+      "tags": [
+        "rmms.domain",
+        "users",
+        "code",
+        "cs",
+        "class"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "file:Rmms.Domain/ValueObjects/GpsCoordinate.cs",
+      "type": "file",
+      "name": "GpsCoordinate.cs",
+      "filePath": "Rmms.Domain/ValueObjects/GpsCoordinate.cs",
+      "summary": "GpsCoordinate.cs — tệp mã nguồn C# trong backend RMMS (4 hàm, 1 class).",
+      "tags": [
+        "rmms.domain",
+        "valueobjects",
+        "code",
+        "cs"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Rmms.Domain/ValueObjects/GpsCoordinate.cs:GpsCoordinate",
+      "type": "function",
+      "name": "GpsCoordinate",
+      "filePath": "Rmms.Domain/ValueObjects/GpsCoordinate.cs",
+      "lineRange": [
+        17,
+        30
+      ],
+      "summary": "Hàm GpsCoordinate trong GpsCoordinate.cs.",
+      "tags": [
+        "rmms.domain",
+        "valueobjects",
+        "code",
+        "cs",
+        "ham"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Rmms.Domain/ValueObjects/GpsCoordinate.cs:DistanceMetersTo",
+      "type": "function",
+      "name": "DistanceMetersTo",
+      "filePath": "Rmms.Domain/ValueObjects/GpsCoordinate.cs",
+      "lineRange": [
+        36,
+        48
+      ],
+      "summary": "Hàm DistanceMetersTo trong GpsCoordinate.cs.",
+      "tags": [
+        "rmms.domain",
+        "valueobjects",
+        "code",
+        "cs",
+        "ham"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Rmms.Domain/ValueObjects/GpsCoordinate.cs:ToRad",
+      "type": "function",
+      "name": "ToRad",
+      "filePath": "Rmms.Domain/ValueObjects/GpsCoordinate.cs",
+      "lineRange": [
+        50,
+        50
+      ],
+      "summary": "Hàm ToRad trong GpsCoordinate.cs.",
+      "tags": [
+        "rmms.domain",
+        "valueobjects",
+        "code",
+        "cs",
+        "ham"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Rmms.Domain/ValueObjects/GpsCoordinate.cs:GetEqualityComponents",
+      "type": "function",
+      "name": "GetEqualityComponents",
+      "filePath": "Rmms.Domain/ValueObjects/GpsCoordinate.cs",
+      "lineRange": [
+        52,
+        58
+      ],
+      "summary": "Hàm GetEqualityComponents trong GpsCoordinate.cs.",
+      "tags": [
+        "rmms.domain",
+        "valueobjects",
+        "code",
+        "cs",
+        "ham"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:Rmms.Domain/ValueObjects/GpsCoordinate.cs:GpsCoordinate",
+      "type": "class",
+      "name": "GpsCoordinate",
+      "filePath": "Rmms.Domain/ValueObjects/GpsCoordinate.cs",
+      "lineRange": [
+        10,
+        59
+      ],
+      "summary": "Class GpsCoordinate trong GpsCoordinate.cs.",
+      "tags": [
+        "rmms.domain",
+        "valueobjects",
+        "code",
+        "cs",
+        "class"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:Rmms.Domain/VisitPlan/VisitPlan.cs",
+      "type": "file",
+      "name": "VisitPlan.cs",
+      "filePath": "Rmms.Domain/VisitPlan/VisitPlan.cs",
+      "summary": "VisitPlan.cs — tệp mã nguồn C# trong backend RMMS (10 hàm, 1 class).",
+      "tags": [
+        "rmms.domain",
+        "visitplan",
+        "code",
+        "cs"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:Rmms.Domain/VisitPlan/VisitPlan.cs:VisitPlan",
+      "type": "function",
+      "name": "VisitPlan",
+      "filePath": "Rmms.Domain/VisitPlan/VisitPlan.cs",
+      "lineRange": [
+        32,
+        32
+      ],
+      "summary": "Hàm VisitPlan trong VisitPlan.cs.",
+      "tags": [
+        "rmms.domain",
+        "visitplan",
+        "code",
+        "cs",
+        "ham"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Rmms.Domain/VisitPlan/VisitPlan.cs:Create",
+      "type": "function",
+      "name": "Create",
+      "filePath": "Rmms.Domain/VisitPlan/VisitPlan.cs",
+      "lineRange": [
+        35,
+        48
+      ],
+      "summary": "Hàm Create trong VisitPlan.cs.",
+      "tags": [
+        "rmms.domain",
+        "visitplan",
+        "code",
+        "cs",
+        "ham"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Rmms.Domain/VisitPlan/VisitPlan.cs:LinkApproval",
+      "type": "function",
+      "name": "LinkApproval",
+      "filePath": "Rmms.Domain/VisitPlan/VisitPlan.cs",
+      "lineRange": [
+        52,
+        52
+      ],
+      "summary": "Hàm LinkApproval trong VisitPlan.cs.",
+      "tags": [
+        "rmms.domain",
+        "visitplan",
+        "code",
+        "cs",
+        "ham"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Rmms.Domain/VisitPlan/VisitPlan.cs:ReplaceItems",
+      "type": "function",
+      "name": "ReplaceItems",
+      "filePath": "Rmms.Domain/VisitPlan/VisitPlan.cs",
+      "lineRange": [
+        58,
+        83
+      ],
+      "summary": "Hàm ReplaceItems trong VisitPlan.cs.",
+      "tags": [
+        "rmms.domain",
+        "visitplan",
+        "code",
+        "cs",
+        "ham"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Rmms.Domain/VisitPlan/VisitPlan.cs:Approve",
+      "type": "function",
+      "name": "Approve",
+      "filePath": "Rmms.Domain/VisitPlan/VisitPlan.cs",
+      "lineRange": [
+        85,
+        90
+      ],
+      "summary": "Hàm Approve trong VisitPlan.cs.",
+      "tags": [
+        "rmms.domain",
+        "visitplan",
+        "code",
+        "cs",
+        "ham"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Rmms.Domain/VisitPlan/VisitPlan.cs:Reject",
+      "type": "function",
+      "name": "Reject",
+      "filePath": "Rmms.Domain/VisitPlan/VisitPlan.cs",
+      "lineRange": [
+        92,
+        97
+      ],
+      "summary": "Hàm Reject trong VisitPlan.cs.",
+      "tags": [
+        "rmms.domain",
+        "visitplan",
+        "code",
+        "cs",
+        "ham"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Rmms.Domain/VisitPlan/VisitPlan.cs:ExecuteItem",
+      "type": "function",
+      "name": "ExecuteItem",
+      "filePath": "Rmms.Domain/VisitPlan/VisitPlan.cs",
+      "lineRange": [
+        103,
+        120
+      ],
+      "summary": "Hàm ExecuteItem trong VisitPlan.cs.",
+      "tags": [
+        "rmms.domain",
+        "visitplan",
+        "code",
+        "cs",
+        "ham"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Rmms.Domain/VisitPlan/VisitPlan.cs:EnsurePending",
+      "type": "function",
+      "name": "EnsurePending",
+      "filePath": "Rmms.Domain/VisitPlan/VisitPlan.cs",
+      "lineRange": [
+        122,
+        128
+      ],
+      "summary": "Hàm EnsurePending trong VisitPlan.cs.",
+      "tags": [
+        "rmms.domain",
+        "visitplan",
+        "code",
+        "cs",
+        "ham"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Rmms.Domain/VisitPlan/VisitPlan.cs:SetItems",
+      "type": "function",
+      "name": "SetItems",
+      "filePath": "Rmms.Domain/VisitPlan/VisitPlan.cs",
+      "lineRange": [
+        130,
+        138
+      ],
+      "summary": "Hàm SetItems trong VisitPlan.cs.",
+      "tags": [
+        "rmms.domain",
+        "visitplan",
+        "code",
+        "cs",
+        "ham"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Rmms.Domain/VisitPlan/VisitPlan.cs:ValidateAndOrder",
+      "type": "function",
+      "name": "ValidateAndOrder",
+      "filePath": "Rmms.Domain/VisitPlan/VisitPlan.cs",
+      "lineRange": [
+        141,
+        152
+      ],
+      "summary": "Hàm ValidateAndOrder trong VisitPlan.cs.",
+      "tags": [
+        "rmms.domain",
+        "visitplan",
+        "code",
+        "cs",
+        "ham"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:Rmms.Domain/VisitPlan/VisitPlan.cs:VisitPlan",
+      "type": "class",
+      "name": "VisitPlan",
+      "filePath": "Rmms.Domain/VisitPlan/VisitPlan.cs",
+      "lineRange": [
+        20,
+        153
+      ],
+      "summary": "Class VisitPlan trong VisitPlan.cs.",
+      "tags": [
+        "rmms.domain",
+        "visitplan",
+        "code",
+        "cs",
+        "class"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "file:Rmms.Domain/VisitPlan/VisitPlanItem.cs",
+      "type": "file",
+      "name": "VisitPlanItem.cs",
+      "filePath": "Rmms.Domain/VisitPlan/VisitPlanItem.cs",
+      "summary": "VisitPlanItem.cs — tệp mã nguồn C# trong backend RMMS (4 hàm, 1 class).",
+      "tags": [
+        "rmms.domain",
+        "visitplan",
+        "code",
+        "cs"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Rmms.Domain/VisitPlan/VisitPlanItem.cs:VisitPlanItem",
+      "type": "function",
+      "name": "VisitPlanItem",
+      "filePath": "Rmms.Domain/VisitPlan/VisitPlanItem.cs",
+      "lineRange": [
+        29,
+        29
+      ],
+      "summary": "Hàm VisitPlanItem trong VisitPlanItem.cs.",
+      "tags": [
+        "rmms.domain",
+        "visitplan",
+        "code",
+        "cs",
+        "ham"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Rmms.Domain/VisitPlan/VisitPlanItem.cs:Update",
+      "type": "function",
+      "name": "Update",
+      "filePath": "Rmms.Domain/VisitPlan/VisitPlanItem.cs",
+      "lineRange": [
+        43,
+        51
+      ],
+      "summary": "Hàm Update trong VisitPlanItem.cs.",
+      "tags": [
+        "rmms.domain",
+        "visitplan",
+        "code",
+        "cs",
+        "ham"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Rmms.Domain/VisitPlan/VisitPlanItem.cs:Execute",
+      "type": "function",
+      "name": "Execute",
+      "filePath": "Rmms.Domain/VisitPlan/VisitPlanItem.cs",
+      "lineRange": [
+        56,
+        61
+      ],
+      "summary": "Hàm Execute trong VisitPlanItem.cs.",
+      "tags": [
+        "rmms.domain",
+        "visitplan",
+        "code",
+        "cs",
+        "ham"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:Rmms.Domain/VisitPlan/VisitPlanItem.cs:VisitPlanItem",
+      "type": "class",
+      "name": "VisitPlanItem",
+      "filePath": "Rmms.Domain/VisitPlan/VisitPlanItem.cs",
+      "lineRange": [
+        13,
+        62
+      ],
+      "summary": "Class VisitPlanItem trong VisitPlanItem.cs.",
+      "tags": [
+        "rmms.domain",
+        "visitplan",
+        "code",
+        "cs",
+        "class"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:Rmms.Domain/WorkSchedule/WorkSchedule.cs",
+      "type": "file",
+      "name": "WorkSchedule.cs",
+      "filePath": "Rmms.Domain/WorkSchedule/WorkSchedule.cs",
+      "summary": "WorkSchedule.cs — tệp mã nguồn C# trong backend RMMS (10 hàm, 1 class).",
+      "tags": [
+        "rmms.domain",
+        "workschedule",
+        "code",
+        "cs"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:Rmms.Domain/WorkSchedule/WorkSchedule.cs:WorkSchedule",
+      "type": "function",
+      "name": "WorkSchedule",
+      "filePath": "Rmms.Domain/WorkSchedule/WorkSchedule.cs",
+      "lineRange": [
+        38,
+        38
+      ],
+      "summary": "Hàm WorkSchedule trong WorkSchedule.cs.",
+      "tags": [
+        "rmms.domain",
+        "workschedule",
+        "code",
+        "cs",
+        "ham"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Rmms.Domain/WorkSchedule/WorkSchedule.cs:Create",
+      "type": "function",
+      "name": "Create",
+      "filePath": "Rmms.Domain/WorkSchedule/WorkSchedule.cs",
+      "lineRange": [
+        41,
+        54
+      ],
+      "summary": "Hàm Create trong WorkSchedule.cs.",
+      "tags": [
+        "rmms.domain",
+        "workschedule",
+        "code",
+        "cs",
+        "ham"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Rmms.Domain/WorkSchedule/WorkSchedule.cs:Submit",
+      "type": "function",
+      "name": "Submit",
+      "filePath": "Rmms.Domain/WorkSchedule/WorkSchedule.cs",
+      "lineRange": [
+        57,
+        64
+      ],
+      "summary": "Hàm Submit trong WorkSchedule.cs.",
+      "tags": [
+        "rmms.domain",
+        "workschedule",
+        "code",
+        "cs",
+        "ham"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Rmms.Domain/WorkSchedule/WorkSchedule.cs:ReplaceShifts",
+      "type": "function",
+      "name": "ReplaceShifts",
+      "filePath": "Rmms.Domain/WorkSchedule/WorkSchedule.cs",
+      "lineRange": [
+        71,
+        94
+      ],
+      "summary": "Hàm ReplaceShifts trong WorkSchedule.cs.",
+      "tags": [
+        "rmms.domain",
+        "workschedule",
+        "code",
+        "cs",
+        "ham"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Rmms.Domain/WorkSchedule/WorkSchedule.cs:CreateEditedVersion",
+      "type": "function",
+      "name": "CreateEditedVersion",
+      "filePath": "Rmms.Domain/WorkSchedule/WorkSchedule.cs",
+      "lineRange": [
+        101,
+        119
+      ],
+      "summary": "Hàm CreateEditedVersion trong WorkSchedule.cs.",
+      "tags": [
+        "rmms.domain",
+        "workschedule",
+        "code",
+        "cs",
+        "ham"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Rmms.Domain/WorkSchedule/WorkSchedule.cs:Approve",
+      "type": "function",
+      "name": "Approve",
+      "filePath": "Rmms.Domain/WorkSchedule/WorkSchedule.cs",
+      "lineRange": [
+        122,
+        132
+      ],
+      "summary": "Hàm Approve trong WorkSchedule.cs.",
+      "tags": [
+        "rmms.domain",
+        "workschedule",
+        "code",
+        "cs",
+        "ham"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Rmms.Domain/WorkSchedule/WorkSchedule.cs:Reject",
+      "type": "function",
+      "name": "Reject",
+      "filePath": "Rmms.Domain/WorkSchedule/WorkSchedule.cs",
+      "lineRange": [
+        135,
+        149
+      ],
+      "summary": "Hàm Reject trong WorkSchedule.cs.",
+      "tags": [
+        "rmms.domain",
+        "workschedule",
+        "code",
+        "cs",
+        "ham"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Rmms.Domain/WorkSchedule/WorkSchedule.cs:Supersede",
+      "type": "function",
+      "name": "Supersede",
+      "filePath": "Rmms.Domain/WorkSchedule/WorkSchedule.cs",
+      "lineRange": [
+        152,
+        159
+      ],
+      "summary": "Hàm Supersede trong WorkSchedule.cs.",
+      "tags": [
+        "rmms.domain",
+        "workschedule",
+        "code",
+        "cs",
+        "ham"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Rmms.Domain/WorkSchedule/WorkSchedule.cs:SetShifts",
+      "type": "function",
+      "name": "SetShifts",
+      "filePath": "Rmms.Domain/WorkSchedule/WorkSchedule.cs",
+      "lineRange": [
+        161,
+        169
+      ],
+      "summary": "Hàm SetShifts trong WorkSchedule.cs.",
+      "tags": [
+        "rmms.domain",
+        "workschedule",
+        "code",
+        "cs",
+        "ham"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Rmms.Domain/WorkSchedule/WorkSchedule.cs:ValidateAndOrder",
+      "type": "function",
+      "name": "ValidateAndOrder",
+      "filePath": "Rmms.Domain/WorkSchedule/WorkSchedule.cs",
+      "lineRange": [
+        172,
+        198
+      ],
+      "summary": "Hàm ValidateAndOrder trong WorkSchedule.cs.",
+      "tags": [
+        "rmms.domain",
+        "workschedule",
+        "code",
+        "cs",
+        "ham"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:Rmms.Domain/WorkSchedule/WorkSchedule.cs:WorkSchedule",
+      "type": "class",
+      "name": "WorkSchedule",
+      "filePath": "Rmms.Domain/WorkSchedule/WorkSchedule.cs",
+      "lineRange": [
+        21,
+        199
+      ],
+      "summary": "Class WorkSchedule trong WorkSchedule.cs.",
+      "tags": [
+        "rmms.domain",
+        "workschedule",
+        "code",
+        "cs",
+        "class"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "file:Rmms.Domain/WorkSchedule/WorkScheduleShift.cs",
+      "type": "file",
+      "name": "WorkScheduleShift.cs",
+      "filePath": "Rmms.Domain/WorkSchedule/WorkScheduleShift.cs",
+      "summary": "WorkScheduleShift.cs — tệp mã nguồn C# trong backend RMMS (4 hàm, 1 class).",
+      "tags": [
+        "rmms.domain",
+        "workschedule",
+        "code",
+        "cs"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Rmms.Domain/WorkSchedule/WorkScheduleShift.cs:WorkScheduleShift",
+      "type": "function",
+      "name": "WorkScheduleShift",
+      "filePath": "Rmms.Domain/WorkSchedule/WorkScheduleShift.cs",
+      "lineRange": [
+        28,
+        28
+      ],
+      "summary": "Hàm WorkScheduleShift trong WorkScheduleShift.cs.",
+      "tags": [
+        "rmms.domain",
+        "workschedule",
+        "code",
+        "cs",
+        "ham"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Rmms.Domain/WorkSchedule/WorkScheduleShift.cs:Update",
+      "type": "function",
+      "name": "Update",
+      "filePath": "Rmms.Domain/WorkSchedule/WorkScheduleShift.cs",
+      "lineRange": [
+        43,
+        52
+      ],
+      "summary": "Hàm Update trong WorkScheduleShift.cs.",
+      "tags": [
+        "rmms.domain",
+        "workschedule",
+        "code",
+        "cs",
+        "ham"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Rmms.Domain/WorkSchedule/WorkScheduleShift.cs:OverlapsWith",
+      "type": "function",
+      "name": "OverlapsWith",
+      "filePath": "Rmms.Domain/WorkSchedule/WorkScheduleShift.cs",
+      "lineRange": [
+        55,
+        56
+      ],
+      "summary": "Hàm OverlapsWith trong WorkScheduleShift.cs.",
+      "tags": [
+        "rmms.domain",
+        "workschedule",
+        "code",
+        "cs",
+        "ham"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:Rmms.Domain/WorkSchedule/WorkScheduleShift.cs:WorkScheduleShift",
+      "type": "class",
+      "name": "WorkScheduleShift",
+      "filePath": "Rmms.Domain/WorkSchedule/WorkScheduleShift.cs",
+      "lineRange": [
+        12,
+        57
+      ],
+      "summary": "Class WorkScheduleShift trong WorkScheduleShift.cs.",
+      "tags": [
+        "rmms.domain",
+        "workschedule",
+        "code",
+        "cs",
+        "class"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:Rmms.Infrastructure/Approvals/ApprovalService.cs",
+      "type": "file",
+      "name": "ApprovalService.cs",
+      "filePath": "Rmms.Infrastructure/Approvals/ApprovalService.cs",
+      "summary": "ApprovalService.cs — tệp mã nguồn C# trong backend RMMS (3 hàm, 1 class).",
+      "tags": [
+        "rmms.infrastructure",
+        "approvals",
+        "code",
+        "cs"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Rmms.Infrastructure/Approvals/ApprovalService.cs:ApprovalService",
+      "type": "function",
+      "name": "ApprovalService",
+      "filePath": "Rmms.Infrastructure/Approvals/ApprovalService.cs",
+      "lineRange": [
+        28,
+        44
+      ],
+      "summary": "Hàm ApprovalService trong ApprovalService.cs.",
+      "tags": [
+        "rmms.infrastructure",
+        "approvals",
+        "code",
+        "cs",
+        "ham"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Rmms.Infrastructure/Approvals/ApprovalService.cs:CreateAsync",
+      "type": "function",
+      "name": "CreateAsync",
+      "filePath": "Rmms.Infrastructure/Approvals/ApprovalService.cs",
+      "lineRange": [
+        46,
+        99
+      ],
+      "summary": "Hàm CreateAsync trong ApprovalService.cs.",
+      "tags": [
+        "rmms.infrastructure",
+        "approvals",
+        "code",
+        "cs",
+        "ham"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Rmms.Infrastructure/Approvals/ApprovalService.cs:BuildEmail",
+      "type": "function",
+      "name": "BuildEmail",
+      "filePath": "Rmms.Infrastructure/Approvals/ApprovalService.cs",
+      "lineRange": [
+        101,
+        112
+      ],
+      "summary": "Hàm BuildEmail trong ApprovalService.cs.",
+      "tags": [
+        "rmms.infrastructure",
+        "approvals",
+        "code",
+        "cs",
+        "ham"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:Rmms.Infrastructure/Approvals/ApprovalService.cs:ApprovalService",
+      "type": "class",
+      "name": "ApprovalService",
+      "filePath": "Rmms.Infrastructure/Approvals/ApprovalService.cs",
+      "lineRange": [
+        18,
+        113
+      ],
+      "summary": "Class ApprovalService trong ApprovalService.cs.",
+      "tags": [
+        "rmms.infrastructure",
+        "approvals",
+        "code",
+        "cs",
+        "class"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:Rmms.Infrastructure/Approvals/ApprovalTokenService.cs",
+      "type": "file",
+      "name": "ApprovalTokenService.cs",
+      "filePath": "Rmms.Infrastructure/Approvals/ApprovalTokenService.cs",
+      "summary": "ApprovalTokenService.cs — tệp mã nguồn C# trong backend RMMS (6 hàm, 1 class).",
+      "tags": [
+        "rmms.infrastructure",
+        "approvals",
+        "code",
+        "cs"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:Rmms.Infrastructure/Approvals/ApprovalTokenService.cs:ApprovalTokenService",
+      "type": "function",
+      "name": "ApprovalTokenService",
+      "filePath": "Rmms.Infrastructure/Approvals/ApprovalTokenService.cs",
+      "lineRange": [
+        22,
+        32
+      ],
+      "summary": "Hàm ApprovalTokenService trong ApprovalTokenService.cs.",
+      "tags": [
+        "rmms.infrastructure",
+        "approvals",
+        "code",
+        "cs",
+        "ham"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Rmms.Infrastructure/Approvals/ApprovalTokenService.cs:Issue",
+      "type": "function",
+      "name": "Issue",
+      "filePath": "Rmms.Infrastructure/Approvals/ApprovalTokenService.cs",
+      "lineRange": [
+        36,
+        51
+      ],
+      "summary": "Hàm Issue trong ApprovalTokenService.cs.",
+      "tags": [
+        "rmms.infrastructure",
+        "approvals",
+        "code",
+        "cs",
+        "ham"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Rmms.Infrastructure/Approvals/ApprovalTokenService.cs:Verify",
+      "type": "function",
+      "name": "Verify",
+      "filePath": "Rmms.Infrastructure/Approvals/ApprovalTokenService.cs",
+      "lineRange": [
+        53,
+        79
+      ],
+      "summary": "Hàm Verify trong ApprovalTokenService.cs.",
+      "tags": [
+        "rmms.infrastructure",
+        "approvals",
+        "code",
+        "cs",
+        "ham"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Rmms.Infrastructure/Approvals/ApprovalTokenService.cs:Sign",
+      "type": "function",
+      "name": "Sign",
+      "filePath": "Rmms.Infrastructure/Approvals/ApprovalTokenService.cs",
+      "lineRange": [
+        81,
+        85
+      ],
+      "summary": "Hàm Sign trong ApprovalTokenService.cs.",
+      "tags": [
+        "rmms.infrastructure",
+        "approvals",
+        "code",
+        "cs",
+        "ham"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Rmms.Infrastructure/Approvals/ApprovalTokenService.cs:B64",
+      "type": "function",
+      "name": "B64",
+      "filePath": "Rmms.Infrastructure/Approvals/ApprovalTokenService.cs",
+      "lineRange": [
+        87,
+        88
+      ],
+      "summary": "Hàm B64 trong ApprovalTokenService.cs.",
+      "tags": [
+        "rmms.infrastructure",
+        "approvals",
+        "code",
+        "cs",
+        "ham"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Rmms.Infrastructure/Approvals/ApprovalTokenService.cs:FromB64",
+      "type": "function",
+      "name": "FromB64",
+      "filePath": "Rmms.Infrastructure/Approvals/ApprovalTokenService.cs",
+      "lineRange": [
+        90,
+        100
+      ],
+      "summary": "Hàm FromB64 trong ApprovalTokenService.cs.",
+      "tags": [
+        "rmms.infrastructure",
+        "approvals",
+        "code",
+        "cs",
+        "ham"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:Rmms.Infrastructure/Approvals/ApprovalTokenService.cs:ApprovalTokenService",
+      "type": "class",
+      "name": "ApprovalTokenService",
+      "filePath": "Rmms.Infrastructure/Approvals/ApprovalTokenService.cs",
+      "lineRange": [
+        16,
+        101
+      ],
+      "summary": "Class ApprovalTokenService trong ApprovalTokenService.cs.",
+      "tags": [
+        "rmms.infrastructure",
+        "approvals",
+        "code",
+        "cs",
+        "class"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:Rmms.Infrastructure/Attendance/LocalAttendancePhotoStorage.cs",
+      "type": "file",
+      "name": "LocalAttendancePhotoStorage.cs",
+      "filePath": "Rmms.Infrastructure/Attendance/LocalAttendancePhotoStorage.cs",
+      "summary": "LocalAttendancePhotoStorage.cs — tệp mã nguồn C# trong backend RMMS (3 hàm, 1 class).",
+      "tags": [
+        "rmms.infrastructure",
+        "attendance",
+        "code",
+        "cs"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Rmms.Infrastructure/Attendance/LocalAttendancePhotoStorage.cs:SaveAsync",
+      "type": "function",
+      "name": "SaveAsync",
+      "filePath": "Rmms.Infrastructure/Attendance/LocalAttendancePhotoStorage.cs",
+      "lineRange": [
+        14,
+        18
+      ],
+      "summary": "Hàm SaveAsync trong LocalAttendancePhotoStorage.cs.",
+      "tags": [
+        "rmms.infrastructure",
+        "attendance",
+        "code",
+        "cs",
+        "ham"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Rmms.Infrastructure/Attendance/LocalAttendancePhotoStorage.cs:GetUrlAsync",
+      "type": "function",
+      "name": "GetUrlAsync",
+      "filePath": "Rmms.Infrastructure/Attendance/LocalAttendancePhotoStorage.cs",
+      "lineRange": [
+        20,
+        21
+      ],
+      "summary": "Hàm GetUrlAsync trong LocalAttendancePhotoStorage.cs.",
+      "tags": [
+        "rmms.infrastructure",
+        "attendance",
+        "code",
+        "cs",
+        "ham"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Rmms.Infrastructure/Attendance/LocalAttendancePhotoStorage.cs:DeleteAsync",
+      "type": "function",
+      "name": "DeleteAsync",
+      "filePath": "Rmms.Infrastructure/Attendance/LocalAttendancePhotoStorage.cs",
+      "lineRange": [
+        23,
+        23
+      ],
+      "summary": "Hàm DeleteAsync trong LocalAttendancePhotoStorage.cs.",
+      "tags": [
+        "rmms.infrastructure",
+        "attendance",
+        "code",
+        "cs",
+        "ham"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:Rmms.Infrastructure/Attendance/LocalAttendancePhotoStorage.cs:LocalAttendancePhotoStorage",
+      "type": "class",
+      "name": "LocalAttendancePhotoStorage",
+      "filePath": "Rmms.Infrastructure/Attendance/LocalAttendancePhotoStorage.cs",
+      "lineRange": [
+        12,
+        24
+      ],
+      "summary": "Class LocalAttendancePhotoStorage trong LocalAttendancePhotoStorage.cs.",
+      "tags": [
+        "rmms.infrastructure",
+        "attendance",
+        "code",
+        "cs",
+        "class"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:Rmms.Infrastructure/Attendance/MinioAttendancePhotoStorage.cs",
+      "type": "file",
+      "name": "MinioAttendancePhotoStorage.cs",
+      "filePath": "Rmms.Infrastructure/Attendance/MinioAttendancePhotoStorage.cs",
+      "summary": "MinioAttendancePhotoStorage.cs — tệp mã nguồn C# trong backend RMMS (7 hàm, 1 class).",
+      "tags": [
+        "rmms.infrastructure",
+        "attendance",
+        "code",
+        "cs"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:Rmms.Infrastructure/Attendance/MinioAttendancePhotoStorage.cs:MinioAttendancePhotoStorage",
+      "type": "function",
+      "name": "MinioAttendancePhotoStorage",
+      "filePath": "Rmms.Infrastructure/Attendance/MinioAttendancePhotoStorage.cs",
+      "lineRange": [
+        32,
+        47
+      ],
+      "summary": "Hàm MinioAttendancePhotoStorage trong MinioAttendancePhotoStorage.cs.",
+      "tags": [
+        "rmms.infrastructure",
+        "attendance",
+        "code",
+        "cs",
+        "ham"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Rmms.Infrastructure/Attendance/MinioAttendancePhotoStorage.cs:SaveAsync",
+      "type": "function",
+      "name": "SaveAsync",
+      "filePath": "Rmms.Infrastructure/Attendance/MinioAttendancePhotoStorage.cs",
+      "lineRange": [
+        49,
+        66
+      ],
+      "summary": "Hàm SaveAsync trong MinioAttendancePhotoStorage.cs.",
+      "tags": [
+        "rmms.infrastructure",
+        "attendance",
+        "code",
+        "cs",
+        "ham"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Rmms.Infrastructure/Attendance/MinioAttendancePhotoStorage.cs:GetUrlAsync",
+      "type": "function",
+      "name": "GetUrlAsync",
+      "filePath": "Rmms.Infrastructure/Attendance/MinioAttendancePhotoStorage.cs",
+      "lineRange": [
+        68,
+        84
+      ],
+      "summary": "Hàm GetUrlAsync trong MinioAttendancePhotoStorage.cs.",
+      "tags": [
+        "rmms.infrastructure",
+        "attendance",
+        "code",
+        "cs",
+        "ham"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Rmms.Infrastructure/Attendance/MinioAttendancePhotoStorage.cs:DeleteAsync",
+      "type": "function",
+      "name": "DeleteAsync",
+      "filePath": "Rmms.Infrastructure/Attendance/MinioAttendancePhotoStorage.cs",
+      "lineRange": [
+        86,
+        106
+      ],
+      "summary": "Hàm DeleteAsync trong MinioAttendancePhotoStorage.cs.",
+      "tags": [
+        "rmms.infrastructure",
+        "attendance",
+        "code",
+        "cs",
+        "ham"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Rmms.Infrastructure/Attendance/MinioAttendancePhotoStorage.cs:EnsureBucketAsync",
+      "type": "function",
+      "name": "EnsureBucketAsync",
+      "filePath": "Rmms.Infrastructure/Attendance/MinioAttendancePhotoStorage.cs",
+      "lineRange": [
+        108,
+        128
+      ],
+      "summary": "Hàm EnsureBucketAsync trong MinioAttendancePhotoStorage.cs.",
+      "tags": [
+        "rmms.infrastructure",
+        "attendance",
+        "code",
+        "cs",
+        "ham"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Rmms.Infrastructure/Attendance/MinioAttendancePhotoStorage.cs:Dispose",
+      "type": "function",
+      "name": "Dispose",
+      "filePath": "Rmms.Infrastructure/Attendance/MinioAttendancePhotoStorage.cs",
+      "lineRange": [
+        130,
+        134
+      ],
+      "summary": "Hàm Dispose trong MinioAttendancePhotoStorage.cs.",
+      "tags": [
+        "rmms.infrastructure",
+        "attendance",
+        "code",
+        "cs",
+        "ham"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Rmms.Infrastructure/Attendance/MinioAttendancePhotoStorage.cs:ExtensionFor",
+      "type": "function",
+      "name": "ExtensionFor",
+      "filePath": "Rmms.Infrastructure/Attendance/MinioAttendancePhotoStorage.cs",
+      "lineRange": [
+        136,
+        144
+      ],
+      "summary": "Hàm ExtensionFor trong MinioAttendancePhotoStorage.cs.",
+      "tags": [
+        "rmms.infrastructure",
+        "attendance",
+        "code",
+        "cs",
+        "ham"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:Rmms.Infrastructure/Attendance/MinioAttendancePhotoStorage.cs:MinioAttendancePhotoStorage",
+      "type": "class",
+      "name": "MinioAttendancePhotoStorage",
+      "filePath": "Rmms.Infrastructure/Attendance/MinioAttendancePhotoStorage.cs",
+      "lineRange": [
+        17,
+        145
+      ],
+      "summary": "Class MinioAttendancePhotoStorage trong MinioAttendancePhotoStorage.cs.",
+      "tags": [
+        "rmms.infrastructure",
+        "attendance",
+        "code",
+        "cs",
+        "class"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:Rmms.Infrastructure/Audit/DbAuditLogger.cs",
+      "type": "file",
+      "name": "DbAuditLogger.cs",
+      "filePath": "Rmms.Infrastructure/Audit/DbAuditLogger.cs",
+      "summary": "DbAuditLogger.cs — tệp mã nguồn C# trong backend RMMS (2 hàm, 1 class).",
+      "tags": [
+        "rmms.infrastructure",
+        "audit",
+        "code",
+        "cs"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Rmms.Infrastructure/Audit/DbAuditLogger.cs:DbAuditLogger",
+      "type": "function",
+      "name": "DbAuditLogger",
+      "filePath": "Rmms.Infrastructure/Audit/DbAuditLogger.cs",
+      "lineRange": [
+        27,
+        33
+      ],
+      "summary": "Hàm DbAuditLogger trong DbAuditLogger.cs.",
+      "tags": [
+        "rmms.infrastructure",
+        "audit",
+        "code",
+        "cs",
+        "ham"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Rmms.Infrastructure/Audit/DbAuditLogger.cs:RecordAsync",
+      "type": "function",
+      "name": "RecordAsync",
+      "filePath": "Rmms.Infrastructure/Audit/DbAuditLogger.cs",
+      "lineRange": [
+        35,
+        51
+      ],
+      "summary": "Hàm RecordAsync trong DbAuditLogger.cs.",
+      "tags": [
+        "rmms.infrastructure",
+        "audit",
+        "code",
+        "cs",
+        "ham"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:Rmms.Infrastructure/Audit/DbAuditLogger.cs:DbAuditLogger",
+      "type": "class",
+      "name": "DbAuditLogger",
+      "filePath": "Rmms.Infrastructure/Audit/DbAuditLogger.cs",
+      "lineRange": [
+        14,
+        52
+      ],
+      "summary": "Class DbAuditLogger trong DbAuditLogger.cs.",
+      "tags": [
+        "rmms.infrastructure",
+        "audit",
+        "code",
+        "cs",
+        "class"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:Rmms.Infrastructure/DependencyInjection.cs",
+      "type": "file",
+      "name": "DependencyInjection.cs",
+      "filePath": "Rmms.Infrastructure/DependencyInjection.cs",
+      "summary": "DependencyInjection.cs — tệp mã nguồn C# trong backend RMMS (1 hàm, 1 class).",
+      "tags": [
+        "rmms.infrastructure",
+        "dependencyinjection.cs",
+        "code",
+        "cs"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:Rmms.Infrastructure/DependencyInjection.cs:AddInfrastructure",
+      "type": "function",
+      "name": "AddInfrastructure",
+      "filePath": "Rmms.Infrastructure/DependencyInjection.cs",
+      "lineRange": [
+        26,
+        181
+      ],
+      "summary": "Hàm AddInfrastructure trong DependencyInjection.cs.",
+      "tags": [
+        "rmms.infrastructure",
+        "dependencyinjection.cs",
+        "code",
+        "cs",
+        "ham"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:Rmms.Infrastructure/DependencyInjection.cs:DependencyInjection",
+      "type": "class",
+      "name": "DependencyInjection",
+      "filePath": "Rmms.Infrastructure/DependencyInjection.cs",
+      "lineRange": [
+        24,
+        182
+      ],
+      "summary": "Class DependencyInjection trong DependencyInjection.cs.",
+      "tags": [
+        "rmms.infrastructure",
+        "dependencyinjection.cs",
+        "code",
+        "cs",
+        "class"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:Rmms.Infrastructure/Email/AppUrlOptions.cs",
+      "type": "file",
+      "name": "AppUrlOptions.cs",
+      "filePath": "Rmms.Infrastructure/Email/AppUrlOptions.cs",
+      "summary": "AppUrlOptions.cs — tệp mã nguồn C# trong backend RMMS (0 hàm, 1 class).",
+      "tags": [
+        "rmms.infrastructure",
+        "email",
+        "code",
+        "cs"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:Rmms.Infrastructure/Email/AppUrlOptions.cs:AppUrlOptions",
+      "type": "class",
+      "name": "AppUrlOptions",
+      "filePath": "Rmms.Infrastructure/Email/AppUrlOptions.cs",
+      "lineRange": [
+        7,
+        18
+      ],
+      "summary": "Class AppUrlOptions trong AppUrlOptions.cs.",
+      "tags": [
+        "rmms.infrastructure",
+        "email",
+        "code",
+        "cs",
+        "class"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:Rmms.Infrastructure/Email/ConsoleEmailSender.cs",
+      "type": "file",
+      "name": "ConsoleEmailSender.cs",
+      "filePath": "Rmms.Infrastructure/Email/ConsoleEmailSender.cs",
+      "summary": "ConsoleEmailSender.cs — tệp mã nguồn C# trong backend RMMS (2 hàm, 1 class).",
+      "tags": [
+        "rmms.infrastructure",
+        "email",
+        "code",
+        "cs"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Rmms.Infrastructure/Email/ConsoleEmailSender.cs:ConsoleEmailSender",
+      "type": "function",
+      "name": "ConsoleEmailSender",
+      "filePath": "Rmms.Infrastructure/Email/ConsoleEmailSender.cs",
+      "lineRange": [
+        16,
+        19
+      ],
+      "summary": "Hàm ConsoleEmailSender trong ConsoleEmailSender.cs.",
+      "tags": [
+        "rmms.infrastructure",
+        "email",
+        "code",
+        "cs",
+        "ham"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Rmms.Infrastructure/Email/ConsoleEmailSender.cs:SendAsync",
+      "type": "function",
+      "name": "SendAsync",
+      "filePath": "Rmms.Infrastructure/Email/ConsoleEmailSender.cs",
+      "lineRange": [
+        21,
+        32
+      ],
+      "summary": "Hàm SendAsync trong ConsoleEmailSender.cs.",
+      "tags": [
+        "rmms.infrastructure",
+        "email",
+        "code",
+        "cs",
+        "ham"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:Rmms.Infrastructure/Email/ConsoleEmailSender.cs:ConsoleEmailSender",
+      "type": "class",
+      "name": "ConsoleEmailSender",
+      "filePath": "Rmms.Infrastructure/Email/ConsoleEmailSender.cs",
+      "lineRange": [
+        12,
+        33
+      ],
+      "summary": "Class ConsoleEmailSender trong ConsoleEmailSender.cs.",
+      "tags": [
+        "rmms.infrastructure",
+        "email",
+        "code",
+        "cs",
+        "class"
+      ],
+      "complexity": "moderate"
+    }
+  ],
+  "edges": [
+    {
+      "source": "file:Rmms.Domain/News/NewsRead.cs",
+      "target": "function:Rmms.Domain/News/NewsRead.cs:NewsRead",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Domain/News/NewsRead.cs",
+      "target": "function:Rmms.Domain/News/NewsRead.cs:Create",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Domain/News/NewsRead.cs",
+      "target": "function:Rmms.Domain/News/NewsRead.cs:Confirm",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Domain/News/NewsRead.cs",
+      "target": "class:Rmms.Domain/News/NewsRead.cs:NewsRead",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Domain/Notifications/Notification.cs",
+      "target": "function:Rmms.Domain/Notifications/Notification.cs:Notification",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Domain/Notifications/Notification.cs",
+      "target": "function:Rmms.Domain/Notifications/Notification.cs:Create",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Domain/Notifications/Notification.cs",
+      "target": "function:Rmms.Domain/Notifications/Notification.cs:MarkRead",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Domain/Notifications/Notification.cs",
+      "target": "class:Rmms.Domain/Notifications/Notification.cs:Notification",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Domain/Notifications/PushToken.cs",
+      "target": "function:Rmms.Domain/Notifications/PushToken.cs:PushToken",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Domain/Notifications/PushToken.cs",
+      "target": "function:Rmms.Domain/Notifications/PushToken.cs:Create",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Domain/Notifications/PushToken.cs",
+      "target": "function:Rmms.Domain/Notifications/PushToken.cs:AssignTo",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Domain/Notifications/PushToken.cs",
+      "target": "class:Rmms.Domain/Notifications/PushToken.cs:PushToken",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Domain/Organization/Area.cs",
+      "target": "function:Rmms.Domain/Organization/Area.cs:Area",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Domain/Organization/Area.cs",
+      "target": "function:Rmms.Domain/Organization/Area.cs:Create",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Domain/Organization/Area.cs",
+      "target": "function:Rmms.Domain/Organization/Area.cs:Update",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Domain/Organization/Area.cs",
+      "target": "class:Rmms.Domain/Organization/Area.cs:Area",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Domain/Organization/Category.cs",
+      "target": "function:Rmms.Domain/Organization/Category.cs:Category",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Domain/Organization/Category.cs",
+      "target": "function:Rmms.Domain/Organization/Category.cs:Create",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Domain/Organization/Category.cs",
+      "target": "function:Rmms.Domain/Organization/Category.cs:Update",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Domain/Organization/Category.cs",
+      "target": "class:Rmms.Domain/Organization/Category.cs:Category",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Domain/Organization/Product.cs",
+      "target": "function:Rmms.Domain/Organization/Product.cs:Product",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Domain/Organization/Product.cs",
+      "target": "function:Rmms.Domain/Organization/Product.cs:Create",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Domain/Organization/Product.cs",
+      "target": "function:Rmms.Domain/Organization/Product.cs:Update",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Domain/Organization/Product.cs",
+      "target": "function:Rmms.Domain/Organization/Product.cs:Activate",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Domain/Organization/Product.cs",
+      "target": "function:Rmms.Domain/Organization/Product.cs:Deactivate",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Domain/Organization/Product.cs",
+      "target": "class:Rmms.Domain/Organization/Product.cs:Product",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Domain/Organization/Store.cs",
+      "target": "function:Rmms.Domain/Organization/Store.cs:Store",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Domain/Organization/Store.cs",
+      "target": "function:Rmms.Domain/Organization/Store.cs:Create",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Domain/Organization/Store.cs",
+      "target": "function:Rmms.Domain/Organization/Store.cs:Update",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Domain/Organization/Store.cs",
+      "target": "function:Rmms.Domain/Organization/Store.cs:Activate",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Domain/Organization/Store.cs",
+      "target": "function:Rmms.Domain/Organization/Store.cs:Deactivate",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Domain/Organization/Store.cs",
+      "target": "function:Rmms.Domain/Organization/Store.cs:ValidateCoordinates",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Domain/Organization/Store.cs",
+      "target": "class:Rmms.Domain/Organization/Store.cs:Store",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Domain/Organization/UserCategoryAssignment.cs",
+      "target": "function:Rmms.Domain/Organization/UserCategoryAssignment.cs:UserCategoryAssignment",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Domain/Organization/UserCategoryAssignment.cs",
+      "target": "function:Rmms.Domain/Organization/UserCategoryAssignment.cs:Create",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Domain/Organization/UserCategoryAssignment.cs",
+      "target": "class:Rmms.Domain/Organization/UserCategoryAssignment.cs:UserCategoryAssignment",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Domain/Organization/UserLeaderAssignment.cs",
+      "target": "function:Rmms.Domain/Organization/UserLeaderAssignment.cs:UserLeaderAssignment",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Domain/Organization/UserLeaderAssignment.cs",
+      "target": "function:Rmms.Domain/Organization/UserLeaderAssignment.cs:Create",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Domain/Organization/UserLeaderAssignment.cs",
+      "target": "function:Rmms.Domain/Organization/UserLeaderAssignment.cs:IsActiveOn",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Domain/Organization/UserLeaderAssignment.cs",
+      "target": "function:Rmms.Domain/Organization/UserLeaderAssignment.cs:End",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Domain/Organization/UserLeaderAssignment.cs",
+      "target": "class:Rmms.Domain/Organization/UserLeaderAssignment.cs:UserLeaderAssignment",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Domain/Organization/UserStoreAssignment.cs",
+      "target": "function:Rmms.Domain/Organization/UserStoreAssignment.cs:UserStoreAssignment",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Domain/Organization/UserStoreAssignment.cs",
+      "target": "function:Rmms.Domain/Organization/UserStoreAssignment.cs:Create",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Domain/Organization/UserStoreAssignment.cs",
+      "target": "function:Rmms.Domain/Organization/UserStoreAssignment.cs:IsActiveOn",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Domain/Organization/UserStoreAssignment.cs",
+      "target": "function:Rmms.Domain/Organization/UserStoreAssignment.cs:End",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Domain/Organization/UserStoreAssignment.cs",
+      "target": "class:Rmms.Domain/Organization/UserStoreAssignment.cs:UserStoreAssignment",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Domain/Users/User.cs",
+      "target": "function:Rmms.Domain/Users/User.cs:User",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Domain/Users/User.cs",
+      "target": "function:Rmms.Domain/Users/User.cs:Register",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Domain/Users/User.cs",
+      "target": "function:Rmms.Domain/Users/User.cs:CreateByAdmin",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Domain/Users/User.cs",
+      "target": "function:Rmms.Domain/Users/User.cs:CreateSuperAdmin",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Domain/Users/User.cs",
+      "target": "function:Rmms.Domain/Users/User.cs:PromoteToSuperAdmin",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Domain/Users/User.cs",
+      "target": "function:Rmms.Domain/Users/User.cs:VerifyEmail",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Domain/Users/User.cs",
+      "target": "function:Rmms.Domain/Users/User.cs:ChangePassword",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Domain/Users/User.cs",
+      "target": "function:Rmms.Domain/Users/User.cs:Activate",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Domain/Users/User.cs",
+      "target": "function:Rmms.Domain/Users/User.cs:Deactivate",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Domain/Users/User.cs",
+      "target": "function:Rmms.Domain/Users/User.cs:RecordLogin",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Domain/Users/User.cs",
+      "target": "function:Rmms.Domain/Users/User.cs:UpdateProfile",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Domain/Users/User.cs",
+      "target": "function:Rmms.Domain/Users/User.cs:RecordFaceEnrollment",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Domain/Users/User.cs",
+      "target": "function:Rmms.Domain/Users/User.cs:ClearFaceEnrollment",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Domain/Users/User.cs",
+      "target": "function:Rmms.Domain/Users/User.cs:NormalizeLanguage",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Domain/Users/User.cs",
+      "target": "class:Rmms.Domain/Users/User.cs:User",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Domain/ValueObjects/GpsCoordinate.cs",
+      "target": "function:Rmms.Domain/ValueObjects/GpsCoordinate.cs:GpsCoordinate",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Domain/ValueObjects/GpsCoordinate.cs",
+      "target": "function:Rmms.Domain/ValueObjects/GpsCoordinate.cs:DistanceMetersTo",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Domain/ValueObjects/GpsCoordinate.cs",
+      "target": "function:Rmms.Domain/ValueObjects/GpsCoordinate.cs:ToRad",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Domain/ValueObjects/GpsCoordinate.cs",
+      "target": "function:Rmms.Domain/ValueObjects/GpsCoordinate.cs:GetEqualityComponents",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Domain/ValueObjects/GpsCoordinate.cs",
+      "target": "class:Rmms.Domain/ValueObjects/GpsCoordinate.cs:GpsCoordinate",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Domain/VisitPlan/VisitPlan.cs",
+      "target": "function:Rmms.Domain/VisitPlan/VisitPlan.cs:VisitPlan",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Domain/VisitPlan/VisitPlan.cs",
+      "target": "function:Rmms.Domain/VisitPlan/VisitPlan.cs:Create",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Domain/VisitPlan/VisitPlan.cs",
+      "target": "function:Rmms.Domain/VisitPlan/VisitPlan.cs:LinkApproval",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Domain/VisitPlan/VisitPlan.cs",
+      "target": "function:Rmms.Domain/VisitPlan/VisitPlan.cs:ReplaceItems",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Domain/VisitPlan/VisitPlan.cs",
+      "target": "function:Rmms.Domain/VisitPlan/VisitPlan.cs:Approve",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Domain/VisitPlan/VisitPlan.cs",
+      "target": "function:Rmms.Domain/VisitPlan/VisitPlan.cs:Reject",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Domain/VisitPlan/VisitPlan.cs",
+      "target": "function:Rmms.Domain/VisitPlan/VisitPlan.cs:ExecuteItem",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Domain/VisitPlan/VisitPlan.cs",
+      "target": "function:Rmms.Domain/VisitPlan/VisitPlan.cs:EnsurePending",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Domain/VisitPlan/VisitPlan.cs",
+      "target": "function:Rmms.Domain/VisitPlan/VisitPlan.cs:SetItems",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Domain/VisitPlan/VisitPlan.cs",
+      "target": "function:Rmms.Domain/VisitPlan/VisitPlan.cs:ValidateAndOrder",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Domain/VisitPlan/VisitPlan.cs",
+      "target": "class:Rmms.Domain/VisitPlan/VisitPlan.cs:VisitPlan",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Domain/VisitPlan/VisitPlanItem.cs",
+      "target": "function:Rmms.Domain/VisitPlan/VisitPlanItem.cs:VisitPlanItem",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Domain/VisitPlan/VisitPlanItem.cs",
+      "target": "function:Rmms.Domain/VisitPlan/VisitPlanItem.cs:VisitPlanItem",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Domain/VisitPlan/VisitPlanItem.cs",
+      "target": "function:Rmms.Domain/VisitPlan/VisitPlanItem.cs:Update",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Domain/VisitPlan/VisitPlanItem.cs",
+      "target": "function:Rmms.Domain/VisitPlan/VisitPlanItem.cs:Execute",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Domain/VisitPlan/VisitPlanItem.cs",
+      "target": "class:Rmms.Domain/VisitPlan/VisitPlanItem.cs:VisitPlanItem",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Domain/WorkSchedule/WorkSchedule.cs",
+      "target": "function:Rmms.Domain/WorkSchedule/WorkSchedule.cs:WorkSchedule",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Domain/WorkSchedule/WorkSchedule.cs",
+      "target": "function:Rmms.Domain/WorkSchedule/WorkSchedule.cs:Create",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Domain/WorkSchedule/WorkSchedule.cs",
+      "target": "function:Rmms.Domain/WorkSchedule/WorkSchedule.cs:Submit",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Domain/WorkSchedule/WorkSchedule.cs",
+      "target": "function:Rmms.Domain/WorkSchedule/WorkSchedule.cs:ReplaceShifts",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Domain/WorkSchedule/WorkSchedule.cs",
+      "target": "function:Rmms.Domain/WorkSchedule/WorkSchedule.cs:CreateEditedVersion",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Domain/WorkSchedule/WorkSchedule.cs",
+      "target": "function:Rmms.Domain/WorkSchedule/WorkSchedule.cs:Approve",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Domain/WorkSchedule/WorkSchedule.cs",
+      "target": "function:Rmms.Domain/WorkSchedule/WorkSchedule.cs:Reject",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Domain/WorkSchedule/WorkSchedule.cs",
+      "target": "function:Rmms.Domain/WorkSchedule/WorkSchedule.cs:Supersede",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Domain/WorkSchedule/WorkSchedule.cs",
+      "target": "function:Rmms.Domain/WorkSchedule/WorkSchedule.cs:SetShifts",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Domain/WorkSchedule/WorkSchedule.cs",
+      "target": "function:Rmms.Domain/WorkSchedule/WorkSchedule.cs:ValidateAndOrder",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Domain/WorkSchedule/WorkSchedule.cs",
+      "target": "class:Rmms.Domain/WorkSchedule/WorkSchedule.cs:WorkSchedule",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Domain/WorkSchedule/WorkScheduleShift.cs",
+      "target": "function:Rmms.Domain/WorkSchedule/WorkScheduleShift.cs:WorkScheduleShift",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Domain/WorkSchedule/WorkScheduleShift.cs",
+      "target": "function:Rmms.Domain/WorkSchedule/WorkScheduleShift.cs:WorkScheduleShift",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Domain/WorkSchedule/WorkScheduleShift.cs",
+      "target": "function:Rmms.Domain/WorkSchedule/WorkScheduleShift.cs:Update",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Domain/WorkSchedule/WorkScheduleShift.cs",
+      "target": "function:Rmms.Domain/WorkSchedule/WorkScheduleShift.cs:OverlapsWith",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Domain/WorkSchedule/WorkScheduleShift.cs",
+      "target": "class:Rmms.Domain/WorkSchedule/WorkScheduleShift.cs:WorkScheduleShift",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Infrastructure/Approvals/ApprovalService.cs",
+      "target": "function:Rmms.Infrastructure/Approvals/ApprovalService.cs:ApprovalService",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Infrastructure/Approvals/ApprovalService.cs",
+      "target": "function:Rmms.Infrastructure/Approvals/ApprovalService.cs:CreateAsync",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Infrastructure/Approvals/ApprovalService.cs",
+      "target": "function:Rmms.Infrastructure/Approvals/ApprovalService.cs:BuildEmail",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Infrastructure/Approvals/ApprovalService.cs",
+      "target": "class:Rmms.Infrastructure/Approvals/ApprovalService.cs:ApprovalService",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Infrastructure/Approvals/ApprovalTokenService.cs",
+      "target": "function:Rmms.Infrastructure/Approvals/ApprovalTokenService.cs:ApprovalTokenService",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Infrastructure/Approvals/ApprovalTokenService.cs",
+      "target": "function:Rmms.Infrastructure/Approvals/ApprovalTokenService.cs:Issue",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Infrastructure/Approvals/ApprovalTokenService.cs",
+      "target": "function:Rmms.Infrastructure/Approvals/ApprovalTokenService.cs:Verify",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Infrastructure/Approvals/ApprovalTokenService.cs",
+      "target": "function:Rmms.Infrastructure/Approvals/ApprovalTokenService.cs:Sign",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Infrastructure/Approvals/ApprovalTokenService.cs",
+      "target": "function:Rmms.Infrastructure/Approvals/ApprovalTokenService.cs:B64",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Infrastructure/Approvals/ApprovalTokenService.cs",
+      "target": "function:Rmms.Infrastructure/Approvals/ApprovalTokenService.cs:FromB64",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Infrastructure/Approvals/ApprovalTokenService.cs",
+      "target": "class:Rmms.Infrastructure/Approvals/ApprovalTokenService.cs:ApprovalTokenService",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Infrastructure/Attendance/LocalAttendancePhotoStorage.cs",
+      "target": "function:Rmms.Infrastructure/Attendance/LocalAttendancePhotoStorage.cs:SaveAsync",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Infrastructure/Attendance/LocalAttendancePhotoStorage.cs",
+      "target": "function:Rmms.Infrastructure/Attendance/LocalAttendancePhotoStorage.cs:GetUrlAsync",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Infrastructure/Attendance/LocalAttendancePhotoStorage.cs",
+      "target": "function:Rmms.Infrastructure/Attendance/LocalAttendancePhotoStorage.cs:DeleteAsync",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Infrastructure/Attendance/LocalAttendancePhotoStorage.cs",
+      "target": "class:Rmms.Infrastructure/Attendance/LocalAttendancePhotoStorage.cs:LocalAttendancePhotoStorage",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Infrastructure/Attendance/MinioAttendancePhotoStorage.cs",
+      "target": "function:Rmms.Infrastructure/Attendance/MinioAttendancePhotoStorage.cs:MinioAttendancePhotoStorage",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Infrastructure/Attendance/MinioAttendancePhotoStorage.cs",
+      "target": "function:Rmms.Infrastructure/Attendance/MinioAttendancePhotoStorage.cs:SaveAsync",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Infrastructure/Attendance/MinioAttendancePhotoStorage.cs",
+      "target": "function:Rmms.Infrastructure/Attendance/MinioAttendancePhotoStorage.cs:GetUrlAsync",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Infrastructure/Attendance/MinioAttendancePhotoStorage.cs",
+      "target": "function:Rmms.Infrastructure/Attendance/MinioAttendancePhotoStorage.cs:DeleteAsync",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Infrastructure/Attendance/MinioAttendancePhotoStorage.cs",
+      "target": "function:Rmms.Infrastructure/Attendance/MinioAttendancePhotoStorage.cs:EnsureBucketAsync",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Infrastructure/Attendance/MinioAttendancePhotoStorage.cs",
+      "target": "function:Rmms.Infrastructure/Attendance/MinioAttendancePhotoStorage.cs:Dispose",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Infrastructure/Attendance/MinioAttendancePhotoStorage.cs",
+      "target": "function:Rmms.Infrastructure/Attendance/MinioAttendancePhotoStorage.cs:ExtensionFor",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Infrastructure/Attendance/MinioAttendancePhotoStorage.cs",
+      "target": "class:Rmms.Infrastructure/Attendance/MinioAttendancePhotoStorage.cs:MinioAttendancePhotoStorage",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Infrastructure/Audit/DbAuditLogger.cs",
+      "target": "function:Rmms.Infrastructure/Audit/DbAuditLogger.cs:DbAuditLogger",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Infrastructure/Audit/DbAuditLogger.cs",
+      "target": "function:Rmms.Infrastructure/Audit/DbAuditLogger.cs:RecordAsync",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Infrastructure/Audit/DbAuditLogger.cs",
+      "target": "class:Rmms.Infrastructure/Audit/DbAuditLogger.cs:DbAuditLogger",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Infrastructure/DependencyInjection.cs",
+      "target": "function:Rmms.Infrastructure/DependencyInjection.cs:AddInfrastructure",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Infrastructure/DependencyInjection.cs",
+      "target": "class:Rmms.Infrastructure/DependencyInjection.cs:DependencyInjection",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Infrastructure/Email/AppUrlOptions.cs",
+      "target": "class:Rmms.Infrastructure/Email/AppUrlOptions.cs:AppUrlOptions",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Infrastructure/Email/ConsoleEmailSender.cs",
+      "target": "function:Rmms.Infrastructure/Email/ConsoleEmailSender.cs:ConsoleEmailSender",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Infrastructure/Email/ConsoleEmailSender.cs",
+      "target": "function:Rmms.Infrastructure/Email/ConsoleEmailSender.cs:SendAsync",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Infrastructure/Email/ConsoleEmailSender.cs",
+      "target": "class:Rmms.Infrastructure/Email/ConsoleEmailSender.cs:ConsoleEmailSender",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    }
+  ]
+}

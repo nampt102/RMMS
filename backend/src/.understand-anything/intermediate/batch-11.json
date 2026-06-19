@@ -1,0 +1,2003 @@
+{
+  "nodes": [
+    {
+      "id": "file:Rmms.Application/Common/Behaviors/ValidationBehavior.cs",
+      "type": "file",
+      "name": "ValidationBehavior.cs",
+      "filePath": "Rmms.Application/Common/Behaviors/ValidationBehavior.cs",
+      "summary": "ValidationBehavior.cs — tệp mã nguồn C# trong backend RMMS (2 hàm, 1 class).",
+      "tags": [
+        "rmms.application",
+        "common",
+        "code",
+        "cs"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Rmms.Application/Common/Behaviors/ValidationBehavior.cs:ValidationBehavior",
+      "type": "function",
+      "name": "ValidationBehavior",
+      "filePath": "Rmms.Application/Common/Behaviors/ValidationBehavior.cs",
+      "lineRange": [
+        15,
+        15
+      ],
+      "summary": "Hàm ValidationBehavior trong ValidationBehavior.cs.",
+      "tags": [
+        "rmms.application",
+        "common",
+        "code",
+        "cs",
+        "ham"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Rmms.Application/Common/Behaviors/ValidationBehavior.cs:Handle",
+      "type": "function",
+      "name": "Handle",
+      "filePath": "Rmms.Application/Common/Behaviors/ValidationBehavior.cs",
+      "lineRange": [
+        17,
+        33
+      ],
+      "summary": "Hàm Handle trong ValidationBehavior.cs.",
+      "tags": [
+        "rmms.application",
+        "common",
+        "code",
+        "cs",
+        "ham"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:Rmms.Application/Common/Behaviors/ValidationBehavior.cs:ValidationBehavior",
+      "type": "class",
+      "name": "ValidationBehavior",
+      "filePath": "Rmms.Application/Common/Behaviors/ValidationBehavior.cs",
+      "lineRange": [
+        10,
+        34
+      ],
+      "summary": "Class ValidationBehavior trong ValidationBehavior.cs.",
+      "tags": [
+        "rmms.application",
+        "common",
+        "code",
+        "cs",
+        "class"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:Rmms.Application/Common/EnumFormatting.cs",
+      "type": "file",
+      "name": "EnumFormatting.cs",
+      "filePath": "Rmms.Application/Common/EnumFormatting.cs",
+      "summary": "EnumFormatting.cs — tệp mã nguồn C# trong backend RMMS (1 hàm, 1 class).",
+      "tags": [
+        "rmms.application",
+        "common",
+        "code",
+        "cs"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Rmms.Application/Common/EnumFormatting.cs:ToSnakeCase",
+      "type": "function",
+      "name": "ToSnakeCase",
+      "filePath": "Rmms.Application/Common/EnumFormatting.cs",
+      "lineRange": [
+        18,
+        33
+      ],
+      "summary": "Hàm ToSnakeCase trong EnumFormatting.cs.",
+      "tags": [
+        "rmms.application",
+        "common",
+        "code",
+        "cs",
+        "ham"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:Rmms.Application/Common/EnumFormatting.cs:EnumFormatting",
+      "type": "class",
+      "name": "EnumFormatting",
+      "filePath": "Rmms.Application/Common/EnumFormatting.cs",
+      "lineRange": [
+        15,
+        34
+      ],
+      "summary": "Class EnumFormatting trong EnumFormatting.cs.",
+      "tags": [
+        "rmms.application",
+        "common",
+        "code",
+        "cs",
+        "class"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:Rmms.Application/Common/Interfaces/IAppDbContext.cs",
+      "type": "file",
+      "name": "IAppDbContext.cs",
+      "filePath": "Rmms.Application/Common/Interfaces/IAppDbContext.cs",
+      "summary": "IAppDbContext.cs — tệp mã nguồn C# trong backend RMMS (0 hàm, 1 class).",
+      "tags": [
+        "rmms.application",
+        "common",
+        "code",
+        "cs"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:Rmms.Application/Common/Interfaces/IAppDbContext.cs:IAppDbContext",
+      "type": "class",
+      "name": "IAppDbContext",
+      "filePath": "Rmms.Application/Common/Interfaces/IAppDbContext.cs",
+      "lineRange": [
+        24,
+        85
+      ],
+      "summary": "Class IAppDbContext trong IAppDbContext.cs.",
+      "tags": [
+        "rmms.application",
+        "common",
+        "code",
+        "cs",
+        "class"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:Rmms.Application/Common/Interfaces/ICurrentUser.cs",
+      "type": "file",
+      "name": "ICurrentUser.cs",
+      "filePath": "Rmms.Application/Common/Interfaces/ICurrentUser.cs",
+      "summary": "ICurrentUser.cs — tệp mã nguồn C# trong backend RMMS (0 hàm, 1 class).",
+      "tags": [
+        "rmms.application",
+        "common",
+        "code",
+        "cs"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:Rmms.Application/Common/Interfaces/ICurrentUser.cs:ICurrentUser",
+      "type": "class",
+      "name": "ICurrentUser",
+      "filePath": "Rmms.Application/Common/Interfaces/ICurrentUser.cs",
+      "lineRange": [
+        9,
+        16
+      ],
+      "summary": "Class ICurrentUser trong ICurrentUser.cs.",
+      "tags": [
+        "rmms.application",
+        "common",
+        "code",
+        "cs",
+        "class"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:Rmms.Application/Common/Interfaces/IDateTimeProvider.cs",
+      "type": "file",
+      "name": "IDateTimeProvider.cs",
+      "filePath": "Rmms.Application/Common/Interfaces/IDateTimeProvider.cs",
+      "summary": "IDateTimeProvider.cs — tệp mã nguồn C# trong backend RMMS (0 hàm, 1 class).",
+      "tags": [
+        "rmms.application",
+        "common",
+        "code",
+        "cs"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:Rmms.Application/Common/Interfaces/IDateTimeProvider.cs:IDateTimeProvider",
+      "type": "class",
+      "name": "IDateTimeProvider",
+      "filePath": "Rmms.Application/Common/Interfaces/IDateTimeProvider.cs",
+      "lineRange": [
+        6,
+        10
+      ],
+      "summary": "Class IDateTimeProvider trong IDateTimeProvider.cs.",
+      "tags": [
+        "rmms.application",
+        "common",
+        "code",
+        "cs",
+        "class"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:Rmms.Application/Common/Options/ApprovalOptions.cs",
+      "type": "file",
+      "name": "ApprovalOptions.cs",
+      "filePath": "Rmms.Application/Common/Options/ApprovalOptions.cs",
+      "summary": "ApprovalOptions.cs — tệp mã nguồn C# trong backend RMMS (0 hàm, 1 class).",
+      "tags": [
+        "rmms.application",
+        "common",
+        "code",
+        "cs"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:Rmms.Application/Common/Options/ApprovalOptions.cs:ApprovalOptions",
+      "type": "class",
+      "name": "ApprovalOptions",
+      "filePath": "Rmms.Application/Common/Options/ApprovalOptions.cs",
+      "lineRange": [
+        7,
+        21
+      ],
+      "summary": "Class ApprovalOptions trong ApprovalOptions.cs.",
+      "tags": [
+        "rmms.application",
+        "common",
+        "code",
+        "cs",
+        "class"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:Rmms.Application/Common/Options/CompreFaceOptions.cs",
+      "type": "file",
+      "name": "CompreFaceOptions.cs",
+      "filePath": "Rmms.Application/Common/Options/CompreFaceOptions.cs",
+      "summary": "CompreFaceOptions.cs — tệp mã nguồn C# trong backend RMMS (0 hàm, 1 class).",
+      "tags": [
+        "rmms.application",
+        "common",
+        "code",
+        "cs"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:Rmms.Application/Common/Options/CompreFaceOptions.cs:CompreFaceOptions",
+      "type": "class",
+      "name": "CompreFaceOptions",
+      "filePath": "Rmms.Application/Common/Options/CompreFaceOptions.cs",
+      "lineRange": [
+        8,
+        23
+      ],
+      "summary": "Class CompreFaceOptions trong CompreFaceOptions.cs.",
+      "tags": [
+        "rmms.application",
+        "common",
+        "code",
+        "cs",
+        "class"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:Rmms.Application/Common/Options/JwtOptions.cs",
+      "type": "file",
+      "name": "JwtOptions.cs",
+      "filePath": "Rmms.Application/Common/Options/JwtOptions.cs",
+      "summary": "JwtOptions.cs — tệp mã nguồn C# trong backend RMMS (0 hàm, 1 class).",
+      "tags": [
+        "rmms.application",
+        "common",
+        "code",
+        "cs"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:Rmms.Application/Common/Options/JwtOptions.cs:JwtOptions",
+      "type": "class",
+      "name": "JwtOptions",
+      "filePath": "Rmms.Application/Common/Options/JwtOptions.cs",
+      "lineRange": [
+        10,
+        25
+      ],
+      "summary": "Class JwtOptions trong JwtOptions.cs.",
+      "tags": [
+        "rmms.application",
+        "common",
+        "code",
+        "cs",
+        "class"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:Rmms.Application/Common/Options/MinioOptions.cs",
+      "type": "file",
+      "name": "MinioOptions.cs",
+      "filePath": "Rmms.Application/Common/Options/MinioOptions.cs",
+      "summary": "MinioOptions.cs — tệp mã nguồn C# trong backend RMMS (0 hàm, 1 class).",
+      "tags": [
+        "rmms.application",
+        "common",
+        "code",
+        "cs"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:Rmms.Application/Common/Options/MinioOptions.cs:MinioOptions",
+      "type": "class",
+      "name": "MinioOptions",
+      "filePath": "Rmms.Application/Common/Options/MinioOptions.cs",
+      "lineRange": [
+        8,
+        32
+      ],
+      "summary": "Class MinioOptions trong MinioOptions.cs.",
+      "tags": [
+        "rmms.application",
+        "common",
+        "code",
+        "cs",
+        "class"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:Rmms.Application/Common/Security/OpaqueToken.cs",
+      "type": "file",
+      "name": "OpaqueToken.cs",
+      "filePath": "Rmms.Application/Common/Security/OpaqueToken.cs",
+      "summary": "OpaqueToken.cs — tệp mã nguồn C# trong backend RMMS (3 hàm, 1 class).",
+      "tags": [
+        "rmms.application",
+        "common",
+        "code",
+        "cs"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Rmms.Application/Common/Security/OpaqueToken.cs:Generate",
+      "type": "function",
+      "name": "Generate",
+      "filePath": "Rmms.Application/Common/Security/OpaqueToken.cs",
+      "lineRange": [
+        21,
+        28
+      ],
+      "summary": "Hàm Generate trong OpaqueToken.cs.",
+      "tags": [
+        "rmms.application",
+        "common",
+        "code",
+        "cs",
+        "ham"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Rmms.Application/Common/Security/OpaqueToken.cs:Hash",
+      "type": "function",
+      "name": "Hash",
+      "filePath": "Rmms.Application/Common/Security/OpaqueToken.cs",
+      "lineRange": [
+        31,
+        41
+      ],
+      "summary": "Hàm Hash trong OpaqueToken.cs.",
+      "tags": [
+        "rmms.application",
+        "common",
+        "code",
+        "cs",
+        "ham"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Rmms.Application/Common/Security/OpaqueToken.cs:Base64Url",
+      "type": "function",
+      "name": "Base64Url",
+      "filePath": "Rmms.Application/Common/Security/OpaqueToken.cs",
+      "lineRange": [
+        43,
+        47
+      ],
+      "summary": "Hàm Base64Url trong OpaqueToken.cs.",
+      "tags": [
+        "rmms.application",
+        "common",
+        "code",
+        "cs",
+        "ham"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:Rmms.Application/Common/Security/OpaqueToken.cs:OpaqueToken",
+      "type": "class",
+      "name": "OpaqueToken",
+      "filePath": "Rmms.Application/Common/Security/OpaqueToken.cs",
+      "lineRange": [
+        18,
+        48
+      ],
+      "summary": "Class OpaqueToken trong OpaqueToken.cs.",
+      "tags": [
+        "rmms.application",
+        "common",
+        "code",
+        "cs",
+        "class"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:Rmms.Application/Common/SuperAdminAccess.cs",
+      "type": "file",
+      "name": "SuperAdminAccess.cs",
+      "filePath": "Rmms.Application/Common/SuperAdminAccess.cs",
+      "summary": "SuperAdminAccess.cs — tệp mã nguồn C# trong backend RMMS (1 hàm, 1 class).",
+      "tags": [
+        "rmms.application",
+        "common",
+        "code",
+        "cs"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Rmms.Application/Common/SuperAdminAccess.cs:CallerIsSuperAdminAsync",
+      "type": "function",
+      "name": "CallerIsSuperAdminAsync",
+      "filePath": "Rmms.Application/Common/SuperAdminAccess.cs",
+      "lineRange": [
+        13,
+        14
+      ],
+      "summary": "Hàm CallerIsSuperAdminAsync trong SuperAdminAccess.cs.",
+      "tags": [
+        "rmms.application",
+        "common",
+        "code",
+        "cs",
+        "ham"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:Rmms.Application/Common/SuperAdminAccess.cs:SuperAdminAccess",
+      "type": "class",
+      "name": "SuperAdminAccess",
+      "filePath": "Rmms.Application/Common/SuperAdminAccess.cs",
+      "lineRange": [
+        11,
+        15
+      ],
+      "summary": "Class SuperAdminAccess trong SuperAdminAccess.cs.",
+      "tags": [
+        "rmms.application",
+        "common",
+        "code",
+        "cs",
+        "class"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:Rmms.Application/Dashboard/GetDashboardSummary.cs",
+      "type": "file",
+      "name": "GetDashboardSummary.cs",
+      "filePath": "Rmms.Application/Dashboard/GetDashboardSummary.cs",
+      "summary": "GetDashboardSummary.cs — tệp mã nguồn C# trong backend RMMS (2 hàm, 1 class).",
+      "tags": [
+        "rmms.application",
+        "dashboard",
+        "code",
+        "cs"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:Rmms.Application/Dashboard/GetDashboardSummary.cs:GetDashboardSummaryQueryHandler",
+      "type": "function",
+      "name": "GetDashboardSummaryQueryHandler",
+      "filePath": "Rmms.Application/Dashboard/GetDashboardSummary.cs",
+      "lineRange": [
+        39,
+        43
+      ],
+      "summary": "Hàm GetDashboardSummaryQueryHandler trong GetDashboardSummary.cs.",
+      "tags": [
+        "rmms.application",
+        "dashboard",
+        "code",
+        "cs",
+        "ham"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Rmms.Application/Dashboard/GetDashboardSummary.cs:Handle",
+      "type": "function",
+      "name": "Handle",
+      "filePath": "Rmms.Application/Dashboard/GetDashboardSummary.cs",
+      "lineRange": [
+        45,
+        144
+      ],
+      "summary": "Hàm Handle trong GetDashboardSummary.cs.",
+      "tags": [
+        "rmms.application",
+        "dashboard",
+        "code",
+        "cs",
+        "ham"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:Rmms.Application/Dashboard/GetDashboardSummary.cs:GetDashboardSummaryQueryHandler",
+      "type": "class",
+      "name": "GetDashboardSummaryQueryHandler",
+      "filePath": "Rmms.Application/Dashboard/GetDashboardSummary.cs",
+      "lineRange": [
+        33,
+        145
+      ],
+      "summary": "Class GetDashboardSummaryQueryHandler trong GetDashboardSummary.cs.",
+      "tags": [
+        "rmms.application",
+        "dashboard",
+        "code",
+        "cs",
+        "class"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:Rmms.Application/DependencyInjection.cs",
+      "type": "file",
+      "name": "DependencyInjection.cs",
+      "filePath": "Rmms.Application/DependencyInjection.cs",
+      "summary": "DependencyInjection.cs — tệp mã nguồn C# trong backend RMMS (1 hàm, 1 class).",
+      "tags": [
+        "rmms.application",
+        "dependencyinjection.cs",
+        "code",
+        "cs"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Rmms.Application/DependencyInjection.cs:AddApplication",
+      "type": "function",
+      "name": "AddApplication",
+      "filePath": "Rmms.Application/DependencyInjection.cs",
+      "lineRange": [
+        16,
+        38
+      ],
+      "summary": "Hàm AddApplication trong DependencyInjection.cs.",
+      "tags": [
+        "rmms.application",
+        "dependencyinjection.cs",
+        "code",
+        "cs",
+        "ham"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:Rmms.Application/DependencyInjection.cs:DependencyInjection",
+      "type": "class",
+      "name": "DependencyInjection",
+      "filePath": "Rmms.Application/DependencyInjection.cs",
+      "lineRange": [
+        14,
+        39
+      ],
+      "summary": "Class DependencyInjection trong DependencyInjection.cs.",
+      "tags": [
+        "rmms.application",
+        "dependencyinjection.cs",
+        "code",
+        "cs",
+        "class"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:Rmms.Application/Devices/ApproveDevice/ApproveDeviceCommand.cs",
+      "type": "file",
+      "name": "ApproveDeviceCommand.cs",
+      "filePath": "Rmms.Application/Devices/ApproveDevice/ApproveDeviceCommand.cs",
+      "summary": "ApproveDeviceCommand.cs — tệp mã nguồn C# trong backend RMMS (0 hàm, 0 class).",
+      "tags": [
+        "rmms.application",
+        "devices",
+        "code",
+        "cs"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:Rmms.Application/Devices/ApproveDevice/ApproveDeviceCommandHandler.cs",
+      "type": "file",
+      "name": "ApproveDeviceCommandHandler.cs",
+      "filePath": "Rmms.Application/Devices/ApproveDevice/ApproveDeviceCommandHandler.cs",
+      "summary": "ApproveDeviceCommandHandler.cs — tệp mã nguồn C# trong backend RMMS (2 hàm, 1 class).",
+      "tags": [
+        "rmms.application",
+        "devices",
+        "code",
+        "cs"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Rmms.Application/Devices/ApproveDevice/ApproveDeviceCommandHandler.cs:ApproveDeviceCommandHandler",
+      "type": "function",
+      "name": "ApproveDeviceCommandHandler",
+      "filePath": "Rmms.Application/Devices/ApproveDevice/ApproveDeviceCommandHandler.cs",
+      "lineRange": [
+        17,
+        22
+      ],
+      "summary": "Hàm ApproveDeviceCommandHandler trong ApproveDeviceCommandHandler.cs.",
+      "tags": [
+        "rmms.application",
+        "devices",
+        "code",
+        "cs",
+        "ham"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Rmms.Application/Devices/ApproveDevice/ApproveDeviceCommandHandler.cs:Handle",
+      "type": "function",
+      "name": "Handle",
+      "filePath": "Rmms.Application/Devices/ApproveDevice/ApproveDeviceCommandHandler.cs",
+      "lineRange": [
+        24,
+        83
+      ],
+      "summary": "Hàm Handle trong ApproveDeviceCommandHandler.cs.",
+      "tags": [
+        "rmms.application",
+        "devices",
+        "code",
+        "cs",
+        "ham"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:Rmms.Application/Devices/ApproveDevice/ApproveDeviceCommandHandler.cs:ApproveDeviceCommandHandler",
+      "type": "class",
+      "name": "ApproveDeviceCommandHandler",
+      "filePath": "Rmms.Application/Devices/ApproveDevice/ApproveDeviceCommandHandler.cs",
+      "lineRange": [
+        11,
+        84
+      ],
+      "summary": "Class ApproveDeviceCommandHandler trong ApproveDeviceCommandHandler.cs.",
+      "tags": [
+        "rmms.application",
+        "devices",
+        "code",
+        "cs",
+        "class"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:Rmms.Application/Devices/GetMyDevice/GetMyDeviceQuery.cs",
+      "type": "file",
+      "name": "GetMyDeviceQuery.cs",
+      "filePath": "Rmms.Application/Devices/GetMyDevice/GetMyDeviceQuery.cs",
+      "summary": "GetMyDeviceQuery.cs — tệp mã nguồn C# trong backend RMMS (0 hàm, 0 class).",
+      "tags": [
+        "rmms.application",
+        "devices",
+        "code",
+        "cs"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:Rmms.Application/Devices/GetMyDevice/GetMyDeviceQueryHandler.cs",
+      "type": "file",
+      "name": "GetMyDeviceQueryHandler.cs",
+      "filePath": "Rmms.Application/Devices/GetMyDevice/GetMyDeviceQueryHandler.cs",
+      "summary": "GetMyDeviceQueryHandler.cs — tệp mã nguồn C# trong backend RMMS (3 hàm, 1 class).",
+      "tags": [
+        "rmms.application",
+        "devices",
+        "code",
+        "cs"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Rmms.Application/Devices/GetMyDevice/GetMyDeviceQueryHandler.cs:GetMyDeviceQueryHandler",
+      "type": "function",
+      "name": "GetMyDeviceQueryHandler",
+      "filePath": "Rmms.Application/Devices/GetMyDevice/GetMyDeviceQueryHandler.cs",
+      "lineRange": [
+        15,
+        15
+      ],
+      "summary": "Hàm GetMyDeviceQueryHandler trong GetMyDeviceQueryHandler.cs.",
+      "tags": [
+        "rmms.application",
+        "devices",
+        "code",
+        "cs",
+        "ham"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Rmms.Application/Devices/GetMyDevice/GetMyDeviceQueryHandler.cs:Handle",
+      "type": "function",
+      "name": "Handle",
+      "filePath": "Rmms.Application/Devices/GetMyDevice/GetMyDeviceQueryHandler.cs",
+      "lineRange": [
+        17,
+        29
+      ],
+      "summary": "Hàm Handle trong GetMyDeviceQueryHandler.cs.",
+      "tags": [
+        "rmms.application",
+        "devices",
+        "code",
+        "cs",
+        "ham"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Rmms.Application/Devices/GetMyDevice/GetMyDeviceQueryHandler.cs:Map",
+      "type": "function",
+      "name": "Map",
+      "filePath": "Rmms.Application/Devices/GetMyDevice/GetMyDeviceQueryHandler.cs",
+      "lineRange": [
+        31,
+        34
+      ],
+      "summary": "Hàm Map trong GetMyDeviceQueryHandler.cs.",
+      "tags": [
+        "rmms.application",
+        "devices",
+        "code",
+        "cs",
+        "ham"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:Rmms.Application/Devices/GetMyDevice/GetMyDeviceQueryHandler.cs:GetMyDeviceQueryHandler",
+      "type": "class",
+      "name": "GetMyDeviceQueryHandler",
+      "filePath": "Rmms.Application/Devices/GetMyDevice/GetMyDeviceQueryHandler.cs",
+      "lineRange": [
+        11,
+        35
+      ],
+      "summary": "Class GetMyDeviceQueryHandler trong GetMyDeviceQueryHandler.cs.",
+      "tags": [
+        "rmms.application",
+        "devices",
+        "code",
+        "cs",
+        "class"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:Rmms.Application/Devices/GetPendingDevices/GetPendingDevicesQuery.cs",
+      "type": "file",
+      "name": "GetPendingDevicesQuery.cs",
+      "filePath": "Rmms.Application/Devices/GetPendingDevices/GetPendingDevicesQuery.cs",
+      "summary": "GetPendingDevicesQuery.cs — tệp mã nguồn C# trong backend RMMS (0 hàm, 0 class).",
+      "tags": [
+        "rmms.application",
+        "devices",
+        "code",
+        "cs"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:Rmms.Application/Devices/GetPendingDevices/GetPendingDevicesQueryHandler.cs",
+      "type": "file",
+      "name": "GetPendingDevicesQueryHandler.cs",
+      "filePath": "Rmms.Application/Devices/GetPendingDevices/GetPendingDevicesQueryHandler.cs",
+      "summary": "GetPendingDevicesQueryHandler.cs — tệp mã nguồn C# trong backend RMMS (2 hàm, 1 class).",
+      "tags": [
+        "rmms.application",
+        "devices",
+        "code",
+        "cs"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Rmms.Application/Devices/GetPendingDevices/GetPendingDevicesQueryHandler.cs:GetPendingDevicesQueryHandler",
+      "type": "function",
+      "name": "GetPendingDevicesQueryHandler",
+      "filePath": "Rmms.Application/Devices/GetPendingDevices/GetPendingDevicesQueryHandler.cs",
+      "lineRange": [
+        15,
+        15
+      ],
+      "summary": "Hàm GetPendingDevicesQueryHandler trong GetPendingDevicesQueryHandler.cs.",
+      "tags": [
+        "rmms.application",
+        "devices",
+        "code",
+        "cs",
+        "ham"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Rmms.Application/Devices/GetPendingDevices/GetPendingDevicesQueryHandler.cs:Handle",
+      "type": "function",
+      "name": "Handle",
+      "filePath": "Rmms.Application/Devices/GetPendingDevices/GetPendingDevicesQueryHandler.cs",
+      "lineRange": [
+        17,
+        65
+      ],
+      "summary": "Hàm Handle trong GetPendingDevicesQueryHandler.cs.",
+      "tags": [
+        "rmms.application",
+        "devices",
+        "code",
+        "cs",
+        "ham"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:Rmms.Application/Devices/GetPendingDevices/GetPendingDevicesQueryHandler.cs:GetPendingDevicesQueryHandler",
+      "type": "class",
+      "name": "GetPendingDevicesQueryHandler",
+      "filePath": "Rmms.Application/Devices/GetPendingDevices/GetPendingDevicesQueryHandler.cs",
+      "lineRange": [
+        10,
+        66
+      ],
+      "summary": "Class GetPendingDevicesQueryHandler trong GetPendingDevicesQueryHandler.cs.",
+      "tags": [
+        "rmms.application",
+        "devices",
+        "code",
+        "cs",
+        "class"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:Rmms.Application/Devices/RejectDevice/RejectDeviceCommand.cs",
+      "type": "file",
+      "name": "RejectDeviceCommand.cs",
+      "filePath": "Rmms.Application/Devices/RejectDevice/RejectDeviceCommand.cs",
+      "summary": "RejectDeviceCommand.cs — tệp mã nguồn C# trong backend RMMS (0 hàm, 0 class).",
+      "tags": [
+        "rmms.application",
+        "devices",
+        "code",
+        "cs"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:Rmms.Application/Devices/RejectDevice/RejectDeviceCommandHandler.cs",
+      "type": "file",
+      "name": "RejectDeviceCommandHandler.cs",
+      "filePath": "Rmms.Application/Devices/RejectDevice/RejectDeviceCommandHandler.cs",
+      "summary": "RejectDeviceCommandHandler.cs — tệp mã nguồn C# trong backend RMMS (2 hàm, 1 class).",
+      "tags": [
+        "rmms.application",
+        "devices",
+        "code",
+        "cs"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Rmms.Application/Devices/RejectDevice/RejectDeviceCommandHandler.cs:RejectDeviceCommandHandler",
+      "type": "function",
+      "name": "RejectDeviceCommandHandler",
+      "filePath": "Rmms.Application/Devices/RejectDevice/RejectDeviceCommandHandler.cs",
+      "lineRange": [
+        17,
+        22
+      ],
+      "summary": "Hàm RejectDeviceCommandHandler trong RejectDeviceCommandHandler.cs.",
+      "tags": [
+        "rmms.application",
+        "devices",
+        "code",
+        "cs",
+        "ham"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Rmms.Application/Devices/RejectDevice/RejectDeviceCommandHandler.cs:Handle",
+      "type": "function",
+      "name": "Handle",
+      "filePath": "Rmms.Application/Devices/RejectDevice/RejectDeviceCommandHandler.cs",
+      "lineRange": [
+        24,
+        59
+      ],
+      "summary": "Hàm Handle trong RejectDeviceCommandHandler.cs.",
+      "tags": [
+        "rmms.application",
+        "devices",
+        "code",
+        "cs",
+        "ham"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:Rmms.Application/Devices/RejectDevice/RejectDeviceCommandHandler.cs:RejectDeviceCommandHandler",
+      "type": "class",
+      "name": "RejectDeviceCommandHandler",
+      "filePath": "Rmms.Application/Devices/RejectDevice/RejectDeviceCommandHandler.cs",
+      "lineRange": [
+        11,
+        60
+      ],
+      "summary": "Class RejectDeviceCommandHandler trong RejectDeviceCommandHandler.cs.",
+      "tags": [
+        "rmms.application",
+        "devices",
+        "code",
+        "cs",
+        "class"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:Rmms.Application/Devices/RejectDevice/RejectDeviceCommandValidator.cs",
+      "type": "file",
+      "name": "RejectDeviceCommandValidator.cs",
+      "filePath": "Rmms.Application/Devices/RejectDevice/RejectDeviceCommandValidator.cs",
+      "summary": "RejectDeviceCommandValidator.cs — tệp mã nguồn C# trong backend RMMS (1 hàm, 1 class).",
+      "tags": [
+        "rmms.application",
+        "devices",
+        "code",
+        "cs"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Rmms.Application/Devices/RejectDevice/RejectDeviceCommandValidator.cs:RejectDeviceCommandValidator",
+      "type": "function",
+      "name": "RejectDeviceCommandValidator",
+      "filePath": "Rmms.Application/Devices/RejectDevice/RejectDeviceCommandValidator.cs",
+      "lineRange": [
+        7,
+        14
+      ],
+      "summary": "Hàm RejectDeviceCommandValidator trong RejectDeviceCommandValidator.cs.",
+      "tags": [
+        "rmms.application",
+        "devices",
+        "code",
+        "cs",
+        "ham"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:Rmms.Application/Devices/RejectDevice/RejectDeviceCommandValidator.cs:RejectDeviceCommandValidator",
+      "type": "class",
+      "name": "RejectDeviceCommandValidator",
+      "filePath": "Rmms.Application/Devices/RejectDevice/RejectDeviceCommandValidator.cs",
+      "lineRange": [
+        5,
+        15
+      ],
+      "summary": "Class RejectDeviceCommandValidator trong RejectDeviceCommandValidator.cs.",
+      "tags": [
+        "rmms.application",
+        "devices",
+        "code",
+        "cs",
+        "class"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:Rmms.Application/Documents/DocumentDtos.cs",
+      "type": "file",
+      "name": "DocumentDtos.cs",
+      "filePath": "Rmms.Application/Documents/DocumentDtos.cs",
+      "summary": "DocumentDtos.cs — tệp mã nguồn C# trong backend RMMS (1 hàm, 1 class).",
+      "tags": [
+        "rmms.application",
+        "documents",
+        "code",
+        "cs"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Rmms.Application/Documents/DocumentDtos.cs:ToDto",
+      "type": "function",
+      "name": "ToDto",
+      "filePath": "Rmms.Application/Documents/DocumentDtos.cs",
+      "lineRange": [
+        19,
+        20
+      ],
+      "summary": "Hàm ToDto trong DocumentDtos.cs.",
+      "tags": [
+        "rmms.application",
+        "documents",
+        "code",
+        "cs",
+        "ham"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:Rmms.Application/Documents/DocumentDtos.cs:DocumentMapper",
+      "type": "class",
+      "name": "DocumentMapper",
+      "filePath": "Rmms.Application/Documents/DocumentDtos.cs",
+      "lineRange": [
+        17,
+        21
+      ],
+      "summary": "Class DocumentMapper trong DocumentDtos.cs.",
+      "tags": [
+        "rmms.application",
+        "documents",
+        "code",
+        "cs",
+        "class"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:Rmms.Application/Documents/Documents.cs",
+      "type": "file",
+      "name": "Documents.cs",
+      "filePath": "Rmms.Application/Documents/Documents.cs",
+      "summary": "Documents.cs — tệp mã nguồn C# trong backend RMMS (17 hàm, 9 class).",
+      "tags": [
+        "rmms.application",
+        "documents",
+        "code",
+        "cs"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:Rmms.Application/Documents/Documents.cs:UploadDocumentCommandValidator",
+      "type": "function",
+      "name": "UploadDocumentCommandValidator",
+      "filePath": "Rmms.Application/Documents/Documents.cs",
+      "lineRange": [
+        22,
+        27
+      ],
+      "summary": "Hàm UploadDocumentCommandValidator trong Documents.cs.",
+      "tags": [
+        "rmms.application",
+        "documents",
+        "code",
+        "cs",
+        "ham"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Rmms.Application/Documents/Documents.cs:UploadDocumentCommandHandler",
+      "type": "function",
+      "name": "UploadDocumentCommandHandler",
+      "filePath": "Rmms.Application/Documents/Documents.cs",
+      "lineRange": [
+        36,
+        41
+      ],
+      "summary": "Hàm UploadDocumentCommandHandler trong Documents.cs.",
+      "tags": [
+        "rmms.application",
+        "documents",
+        "code",
+        "cs",
+        "ham"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Rmms.Application/Documents/Documents.cs:Handle",
+      "type": "function",
+      "name": "Handle",
+      "filePath": "Rmms.Application/Documents/Documents.cs",
+      "lineRange": [
+        43,
+        66
+      ],
+      "summary": "Hàm Handle trong Documents.cs.",
+      "tags": [
+        "rmms.application",
+        "documents",
+        "code",
+        "cs",
+        "ham"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Rmms.Application/Documents/Documents.cs:AssignDocumentCommandHandler",
+      "type": "function",
+      "name": "AssignDocumentCommandHandler",
+      "filePath": "Rmms.Application/Documents/Documents.cs",
+      "lineRange": [
+        79,
+        84
+      ],
+      "summary": "Hàm AssignDocumentCommandHandler trong Documents.cs.",
+      "tags": [
+        "rmms.application",
+        "documents",
+        "code",
+        "cs",
+        "ham"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Rmms.Application/Documents/Documents.cs:ResolveRecipientsAsync",
+      "type": "function",
+      "name": "ResolveRecipientsAsync",
+      "filePath": "Rmms.Application/Documents/Documents.cs",
+      "lineRange": [
+        120,
+        129
+      ],
+      "summary": "Hàm ResolveRecipientsAsync trong Documents.cs.",
+      "tags": [
+        "rmms.application",
+        "documents",
+        "code",
+        "cs",
+        "ham"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Rmms.Application/Documents/Documents.cs:BuildSpec",
+      "type": "function",
+      "name": "BuildSpec",
+      "filePath": "Rmms.Application/Documents/Documents.cs",
+      "lineRange": [
+        131,
+        145
+      ],
+      "summary": "Hàm BuildSpec trong Documents.cs.",
+      "tags": [
+        "rmms.application",
+        "documents",
+        "code",
+        "cs",
+        "ham"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Rmms.Application/Documents/Documents.cs:GetMyDocumentsQueryHandler",
+      "type": "function",
+      "name": "GetMyDocumentsQueryHandler",
+      "filePath": "Rmms.Application/Documents/Documents.cs",
+      "lineRange": [
+        157,
+        157
+      ],
+      "summary": "Hàm GetMyDocumentsQueryHandler trong Documents.cs.",
+      "tags": [
+        "rmms.application",
+        "documents",
+        "code",
+        "cs",
+        "ham"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Rmms.Application/Documents/Documents.cs:GetDocumentDownloadUrlQueryHandler",
+      "type": "function",
+      "name": "GetDocumentDownloadUrlQueryHandler",
+      "filePath": "Rmms.Application/Documents/Documents.cs",
+      "lineRange": [
+        190,
+        195
+      ],
+      "summary": "Hàm GetDocumentDownloadUrlQueryHandler trong Documents.cs.",
+      "tags": [
+        "rmms.application",
+        "documents",
+        "code",
+        "cs",
+        "ham"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Rmms.Application/Documents/Documents.cs:DeleteDocumentCommandHandler",
+      "type": "function",
+      "name": "DeleteDocumentCommandHandler",
+      "filePath": "Rmms.Application/Documents/Documents.cs",
+      "lineRange": [
+        238,
+        242
+      ],
+      "summary": "Hàm DeleteDocumentCommandHandler trong Documents.cs.",
+      "tags": [
+        "rmms.application",
+        "documents",
+        "code",
+        "cs",
+        "ham"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Rmms.Application/Documents/Documents.cs:AdminGetDocumentsQueryHandler",
+      "type": "function",
+      "name": "AdminGetDocumentsQueryHandler",
+      "filePath": "Rmms.Application/Documents/Documents.cs",
+      "lineRange": [
+        267,
+        267
+      ],
+      "summary": "Hàm AdminGetDocumentsQueryHandler trong Documents.cs.",
+      "tags": [
+        "rmms.application",
+        "documents",
+        "code",
+        "cs",
+        "ham"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Rmms.Application/Documents/Documents.cs:TryParse",
+      "type": "function",
+      "name": "TryParse",
+      "filePath": "Rmms.Application/Documents/Documents.cs",
+      "lineRange": [
+        286,
+        294
+      ],
+      "summary": "Hàm TryParse trong Documents.cs.",
+      "tags": [
+        "rmms.application",
+        "documents",
+        "code",
+        "cs",
+        "ham"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Rmms.Application/Documents/Documents.cs:ResolveAccessibleIdsAsync",
+      "type": "function",
+      "name": "ResolveAccessibleIdsAsync",
+      "filePath": "Rmms.Application/Documents/Documents.cs",
+      "lineRange": [
+        300,
+        309
+      ],
+      "summary": "Hàm ResolveAccessibleIdsAsync trong Documents.cs.",
+      "tags": [
+        "rmms.application",
+        "documents",
+        "code",
+        "cs",
+        "ham"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:Rmms.Application/Documents/Documents.cs:UploadDocumentCommandValidator",
+      "type": "class",
+      "name": "UploadDocumentCommandValidator",
+      "filePath": "Rmms.Application/Documents/Documents.cs",
+      "lineRange": [
+        20,
+        28
+      ],
+      "summary": "Class UploadDocumentCommandValidator trong Documents.cs.",
+      "tags": [
+        "rmms.application",
+        "documents",
+        "code",
+        "cs",
+        "class"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "class:Rmms.Application/Documents/Documents.cs:UploadDocumentCommandHandler",
+      "type": "class",
+      "name": "UploadDocumentCommandHandler",
+      "filePath": "Rmms.Application/Documents/Documents.cs",
+      "lineRange": [
+        30,
+        67
+      ],
+      "summary": "Class UploadDocumentCommandHandler trong Documents.cs.",
+      "tags": [
+        "rmms.application",
+        "documents",
+        "code",
+        "cs",
+        "class"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "class:Rmms.Application/Documents/Documents.cs:AssignDocumentCommandHandler",
+      "type": "class",
+      "name": "AssignDocumentCommandHandler",
+      "filePath": "Rmms.Application/Documents/Documents.cs",
+      "lineRange": [
+        73,
+        146
+      ],
+      "summary": "Class AssignDocumentCommandHandler trong Documents.cs.",
+      "tags": [
+        "rmms.application",
+        "documents",
+        "code",
+        "cs",
+        "class"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "class:Rmms.Application/Documents/Documents.cs:GetMyDocumentsQueryHandler",
+      "type": "class",
+      "name": "GetMyDocumentsQueryHandler",
+      "filePath": "Rmms.Application/Documents/Documents.cs",
+      "lineRange": [
+        153,
+        177
+      ],
+      "summary": "Class GetMyDocumentsQueryHandler trong Documents.cs.",
+      "tags": [
+        "rmms.application",
+        "documents",
+        "code",
+        "cs",
+        "class"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "class:Rmms.Application/Documents/Documents.cs:GetDocumentDownloadUrlQueryHandler",
+      "type": "class",
+      "name": "GetDocumentDownloadUrlQueryHandler",
+      "filePath": "Rmms.Application/Documents/Documents.cs",
+      "lineRange": [
+        184,
+        227
+      ],
+      "summary": "Class GetDocumentDownloadUrlQueryHandler trong Documents.cs.",
+      "tags": [
+        "rmms.application",
+        "documents",
+        "code",
+        "cs",
+        "class"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "class:Rmms.Application/Documents/Documents.cs:DeleteDocumentCommandHandler",
+      "type": "class",
+      "name": "DeleteDocumentCommandHandler",
+      "filePath": "Rmms.Application/Documents/Documents.cs",
+      "lineRange": [
+        233,
+        257
+      ],
+      "summary": "Class DeleteDocumentCommandHandler trong Documents.cs.",
+      "tags": [
+        "rmms.application",
+        "documents",
+        "code",
+        "cs",
+        "class"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "class:Rmms.Application/Documents/Documents.cs:AdminGetDocumentsQueryHandler",
+      "type": "class",
+      "name": "AdminGetDocumentsQueryHandler",
+      "filePath": "Rmms.Application/Documents/Documents.cs",
+      "lineRange": [
+        263,
+        280
+      ],
+      "summary": "Class AdminGetDocumentsQueryHandler trong Documents.cs.",
+      "tags": [
+        "rmms.application",
+        "documents",
+        "code",
+        "cs",
+        "class"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "class:Rmms.Application/Documents/Documents.cs:DocumentFolders",
+      "type": "class",
+      "name": "DocumentFolders",
+      "filePath": "Rmms.Application/Documents/Documents.cs",
+      "lineRange": [
+        284,
+        295
+      ],
+      "summary": "Class DocumentFolders trong Documents.cs.",
+      "tags": [
+        "rmms.application",
+        "documents",
+        "code",
+        "cs",
+        "class"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "class:Rmms.Application/Documents/Documents.cs:DocumentScope",
+      "type": "class",
+      "name": "DocumentScope",
+      "filePath": "Rmms.Application/Documents/Documents.cs",
+      "lineRange": [
+        297,
+        310
+      ],
+      "summary": "Class DocumentScope trong Documents.cs.",
+      "tags": [
+        "rmms.application",
+        "documents",
+        "code",
+        "cs",
+        "class"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:Rmms.Application/Email/IEmailTemplateRenderer.cs",
+      "type": "file",
+      "name": "IEmailTemplateRenderer.cs",
+      "filePath": "Rmms.Application/Email/IEmailTemplateRenderer.cs",
+      "summary": "IEmailTemplateRenderer.cs — tệp mã nguồn C# trong backend RMMS (0 hàm, 1 class).",
+      "tags": [
+        "rmms.application",
+        "email",
+        "code",
+        "cs"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:Rmms.Application/Email/IEmailTemplateRenderer.cs:IEmailTemplateRenderer",
+      "type": "class",
+      "name": "IEmailTemplateRenderer",
+      "filePath": "Rmms.Application/Email/IEmailTemplateRenderer.cs",
+      "lineRange": [
+        12,
+        22
+      ],
+      "summary": "Class IEmailTemplateRenderer trong IEmailTemplateRenderer.cs.",
+      "tags": [
+        "rmms.application",
+        "email",
+        "code",
+        "cs",
+        "class"
+      ],
+      "complexity": "moderate"
+    }
+  ],
+  "edges": [
+    {
+      "source": "file:Rmms.Application/Common/Behaviors/ValidationBehavior.cs",
+      "target": "function:Rmms.Application/Common/Behaviors/ValidationBehavior.cs:ValidationBehavior",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Application/Common/Behaviors/ValidationBehavior.cs",
+      "target": "function:Rmms.Application/Common/Behaviors/ValidationBehavior.cs:Handle",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Application/Common/Behaviors/ValidationBehavior.cs",
+      "target": "class:Rmms.Application/Common/Behaviors/ValidationBehavior.cs:ValidationBehavior",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Application/Common/EnumFormatting.cs",
+      "target": "function:Rmms.Application/Common/EnumFormatting.cs:ToSnakeCase",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Application/Common/EnumFormatting.cs",
+      "target": "class:Rmms.Application/Common/EnumFormatting.cs:EnumFormatting",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Application/Common/Interfaces/IAppDbContext.cs",
+      "target": "class:Rmms.Application/Common/Interfaces/IAppDbContext.cs:IAppDbContext",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Application/Common/Interfaces/ICurrentUser.cs",
+      "target": "class:Rmms.Application/Common/Interfaces/ICurrentUser.cs:ICurrentUser",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Application/Common/Interfaces/IDateTimeProvider.cs",
+      "target": "class:Rmms.Application/Common/Interfaces/IDateTimeProvider.cs:IDateTimeProvider",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Application/Common/Options/ApprovalOptions.cs",
+      "target": "class:Rmms.Application/Common/Options/ApprovalOptions.cs:ApprovalOptions",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Application/Common/Options/CompreFaceOptions.cs",
+      "target": "class:Rmms.Application/Common/Options/CompreFaceOptions.cs:CompreFaceOptions",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Application/Common/Options/JwtOptions.cs",
+      "target": "class:Rmms.Application/Common/Options/JwtOptions.cs:JwtOptions",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Application/Common/Options/MinioOptions.cs",
+      "target": "class:Rmms.Application/Common/Options/MinioOptions.cs:MinioOptions",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Application/Common/Security/OpaqueToken.cs",
+      "target": "function:Rmms.Application/Common/Security/OpaqueToken.cs:Generate",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Application/Common/Security/OpaqueToken.cs",
+      "target": "function:Rmms.Application/Common/Security/OpaqueToken.cs:Hash",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Application/Common/Security/OpaqueToken.cs",
+      "target": "function:Rmms.Application/Common/Security/OpaqueToken.cs:Base64Url",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Application/Common/Security/OpaqueToken.cs",
+      "target": "class:Rmms.Application/Common/Security/OpaqueToken.cs:OpaqueToken",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Application/Common/SuperAdminAccess.cs",
+      "target": "function:Rmms.Application/Common/SuperAdminAccess.cs:CallerIsSuperAdminAsync",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Application/Common/SuperAdminAccess.cs",
+      "target": "class:Rmms.Application/Common/SuperAdminAccess.cs:SuperAdminAccess",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Application/Dashboard/GetDashboardSummary.cs",
+      "target": "function:Rmms.Application/Dashboard/GetDashboardSummary.cs:GetDashboardSummaryQueryHandler",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Application/Dashboard/GetDashboardSummary.cs",
+      "target": "function:Rmms.Application/Dashboard/GetDashboardSummary.cs:Handle",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Application/Dashboard/GetDashboardSummary.cs",
+      "target": "class:Rmms.Application/Dashboard/GetDashboardSummary.cs:GetDashboardSummaryQueryHandler",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Application/DependencyInjection.cs",
+      "target": "function:Rmms.Application/DependencyInjection.cs:AddApplication",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Application/DependencyInjection.cs",
+      "target": "class:Rmms.Application/DependencyInjection.cs:DependencyInjection",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Application/Devices/ApproveDevice/ApproveDeviceCommandHandler.cs",
+      "target": "function:Rmms.Application/Devices/ApproveDevice/ApproveDeviceCommandHandler.cs:ApproveDeviceCommandHandler",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Application/Devices/ApproveDevice/ApproveDeviceCommandHandler.cs",
+      "target": "function:Rmms.Application/Devices/ApproveDevice/ApproveDeviceCommandHandler.cs:Handle",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Application/Devices/ApproveDevice/ApproveDeviceCommandHandler.cs",
+      "target": "class:Rmms.Application/Devices/ApproveDevice/ApproveDeviceCommandHandler.cs:ApproveDeviceCommandHandler",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Application/Devices/GetMyDevice/GetMyDeviceQueryHandler.cs",
+      "target": "function:Rmms.Application/Devices/GetMyDevice/GetMyDeviceQueryHandler.cs:GetMyDeviceQueryHandler",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Application/Devices/GetMyDevice/GetMyDeviceQueryHandler.cs",
+      "target": "function:Rmms.Application/Devices/GetMyDevice/GetMyDeviceQueryHandler.cs:Handle",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Application/Devices/GetMyDevice/GetMyDeviceQueryHandler.cs",
+      "target": "function:Rmms.Application/Devices/GetMyDevice/GetMyDeviceQueryHandler.cs:Map",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Application/Devices/GetMyDevice/GetMyDeviceQueryHandler.cs",
+      "target": "class:Rmms.Application/Devices/GetMyDevice/GetMyDeviceQueryHandler.cs:GetMyDeviceQueryHandler",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Application/Devices/GetPendingDevices/GetPendingDevicesQueryHandler.cs",
+      "target": "function:Rmms.Application/Devices/GetPendingDevices/GetPendingDevicesQueryHandler.cs:GetPendingDevicesQueryHandler",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Application/Devices/GetPendingDevices/GetPendingDevicesQueryHandler.cs",
+      "target": "function:Rmms.Application/Devices/GetPendingDevices/GetPendingDevicesQueryHandler.cs:Handle",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Application/Devices/GetPendingDevices/GetPendingDevicesQueryHandler.cs",
+      "target": "class:Rmms.Application/Devices/GetPendingDevices/GetPendingDevicesQueryHandler.cs:GetPendingDevicesQueryHandler",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Application/Devices/RejectDevice/RejectDeviceCommandHandler.cs",
+      "target": "function:Rmms.Application/Devices/RejectDevice/RejectDeviceCommandHandler.cs:RejectDeviceCommandHandler",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Application/Devices/RejectDevice/RejectDeviceCommandHandler.cs",
+      "target": "function:Rmms.Application/Devices/RejectDevice/RejectDeviceCommandHandler.cs:Handle",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Application/Devices/RejectDevice/RejectDeviceCommandHandler.cs",
+      "target": "class:Rmms.Application/Devices/RejectDevice/RejectDeviceCommandHandler.cs:RejectDeviceCommandHandler",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Application/Devices/RejectDevice/RejectDeviceCommandValidator.cs",
+      "target": "function:Rmms.Application/Devices/RejectDevice/RejectDeviceCommandValidator.cs:RejectDeviceCommandValidator",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Application/Devices/RejectDevice/RejectDeviceCommandValidator.cs",
+      "target": "class:Rmms.Application/Devices/RejectDevice/RejectDeviceCommandValidator.cs:RejectDeviceCommandValidator",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Application/Documents/DocumentDtos.cs",
+      "target": "function:Rmms.Application/Documents/DocumentDtos.cs:ToDto",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Application/Documents/DocumentDtos.cs",
+      "target": "class:Rmms.Application/Documents/DocumentDtos.cs:DocumentMapper",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Application/Documents/Documents.cs",
+      "target": "function:Rmms.Application/Documents/Documents.cs:UploadDocumentCommandValidator",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Application/Documents/Documents.cs",
+      "target": "function:Rmms.Application/Documents/Documents.cs:UploadDocumentCommandHandler",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Application/Documents/Documents.cs",
+      "target": "function:Rmms.Application/Documents/Documents.cs:Handle",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Application/Documents/Documents.cs",
+      "target": "function:Rmms.Application/Documents/Documents.cs:AssignDocumentCommandHandler",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Application/Documents/Documents.cs",
+      "target": "function:Rmms.Application/Documents/Documents.cs:Handle",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Application/Documents/Documents.cs",
+      "target": "function:Rmms.Application/Documents/Documents.cs:ResolveRecipientsAsync",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Application/Documents/Documents.cs",
+      "target": "function:Rmms.Application/Documents/Documents.cs:BuildSpec",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Application/Documents/Documents.cs",
+      "target": "function:Rmms.Application/Documents/Documents.cs:GetMyDocumentsQueryHandler",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Application/Documents/Documents.cs",
+      "target": "function:Rmms.Application/Documents/Documents.cs:Handle",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Application/Documents/Documents.cs",
+      "target": "function:Rmms.Application/Documents/Documents.cs:GetDocumentDownloadUrlQueryHandler",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Application/Documents/Documents.cs",
+      "target": "function:Rmms.Application/Documents/Documents.cs:Handle",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Application/Documents/Documents.cs",
+      "target": "function:Rmms.Application/Documents/Documents.cs:DeleteDocumentCommandHandler",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Application/Documents/Documents.cs",
+      "target": "function:Rmms.Application/Documents/Documents.cs:Handle",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Application/Documents/Documents.cs",
+      "target": "function:Rmms.Application/Documents/Documents.cs:AdminGetDocumentsQueryHandler",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Application/Documents/Documents.cs",
+      "target": "function:Rmms.Application/Documents/Documents.cs:Handle",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Application/Documents/Documents.cs",
+      "target": "function:Rmms.Application/Documents/Documents.cs:TryParse",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Application/Documents/Documents.cs",
+      "target": "function:Rmms.Application/Documents/Documents.cs:ResolveAccessibleIdsAsync",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Application/Documents/Documents.cs",
+      "target": "class:Rmms.Application/Documents/Documents.cs:UploadDocumentCommandValidator",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Application/Documents/Documents.cs",
+      "target": "class:Rmms.Application/Documents/Documents.cs:UploadDocumentCommandHandler",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Application/Documents/Documents.cs",
+      "target": "class:Rmms.Application/Documents/Documents.cs:AssignDocumentCommandHandler",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Application/Documents/Documents.cs",
+      "target": "class:Rmms.Application/Documents/Documents.cs:GetMyDocumentsQueryHandler",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Application/Documents/Documents.cs",
+      "target": "class:Rmms.Application/Documents/Documents.cs:GetDocumentDownloadUrlQueryHandler",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Application/Documents/Documents.cs",
+      "target": "class:Rmms.Application/Documents/Documents.cs:DeleteDocumentCommandHandler",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Application/Documents/Documents.cs",
+      "target": "class:Rmms.Application/Documents/Documents.cs:AdminGetDocumentsQueryHandler",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Application/Documents/Documents.cs",
+      "target": "class:Rmms.Application/Documents/Documents.cs:DocumentFolders",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Application/Documents/Documents.cs",
+      "target": "class:Rmms.Application/Documents/Documents.cs:DocumentScope",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Application/Email/IEmailTemplateRenderer.cs",
+      "target": "class:Rmms.Application/Email/IEmailTemplateRenderer.cs:IEmailTemplateRenderer",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    }
+  ]
+}

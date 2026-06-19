@@ -1,0 +1,47 @@
+{
+  "nodes": [
+    {
+      "id": "config:Rmms.Worker/Rmms.Worker.csproj",
+      "type": "config",
+      "name": "Rmms.Worker.csproj",
+      "filePath": "Rmms.Worker/Rmms.Worker.csproj",
+      "summary": "Rmms.Worker.csproj — tệp cấu hình backend RMMS.",
+      "tags": [
+        "rmms.worker",
+        "rmms.worker.csproj",
+        "config",
+        "csproj"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "config:Rmms.Worker/appsettings.Development.json",
+      "type": "config",
+      "name": "appsettings.Development.json",
+      "filePath": "Rmms.Worker/appsettings.Development.json",
+      "summary": "appsettings.Development.json — tệp cấu hình backend RMMS.",
+      "tags": [
+        "rmms.worker",
+        "appsettings.development.json",
+        "config",
+        "json"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "config:Rmms.Worker/appsettings.json",
+      "type": "config",
+      "name": "appsettings.json",
+      "filePath": "Rmms.Worker/appsettings.json",
+      "summary": "appsettings.json — tệp cấu hình backend RMMS.",
+      "tags": [
+        "rmms.worker",
+        "appsettings.json",
+        "config",
+        "json"
+      ],
+      "complexity": "simple"
+    }
+  ],
+  "edges": []
+}

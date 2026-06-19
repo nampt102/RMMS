@@ -1,0 +1,5045 @@
+{
+  "nodes": [
+    {
+      "id": "file:Rmms.Application/FaceRecognition/AdminRemoveFace.cs",
+      "type": "file",
+      "name": "AdminRemoveFace.cs",
+      "filePath": "Rmms.Application/FaceRecognition/AdminRemoveFace.cs",
+      "summary": "AdminRemoveFace.cs — tệp mã nguồn C# trong backend RMMS (2 hàm, 1 class).",
+      "tags": [
+        "rmms.application",
+        "facerecognition",
+        "code",
+        "cs"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Rmms.Application/FaceRecognition/AdminRemoveFace.cs:AdminRemoveFaceCommandHandler",
+      "type": "function",
+      "name": "AdminRemoveFaceCommandHandler",
+      "filePath": "Rmms.Application/FaceRecognition/AdminRemoveFace.cs",
+      "lineRange": [
+        24,
+        29
+      ],
+      "summary": "Hàm AdminRemoveFaceCommandHandler trong AdminRemoveFace.cs.",
+      "tags": [
+        "rmms.application",
+        "facerecognition",
+        "code",
+        "cs",
+        "ham"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Rmms.Application/FaceRecognition/AdminRemoveFace.cs:Handle",
+      "type": "function",
+      "name": "Handle",
+      "filePath": "Rmms.Application/FaceRecognition/AdminRemoveFace.cs",
+      "lineRange": [
+        31,
+        57
+      ],
+      "summary": "Hàm Handle trong AdminRemoveFace.cs.",
+      "tags": [
+        "rmms.application",
+        "facerecognition",
+        "code",
+        "cs",
+        "ham"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:Rmms.Application/FaceRecognition/AdminRemoveFace.cs:AdminRemoveFaceCommandHandler",
+      "type": "class",
+      "name": "AdminRemoveFaceCommandHandler",
+      "filePath": "Rmms.Application/FaceRecognition/AdminRemoveFace.cs",
+      "lineRange": [
+        18,
+        58
+      ],
+      "summary": "Class AdminRemoveFaceCommandHandler trong AdminRemoveFace.cs.",
+      "tags": [
+        "rmms.application",
+        "facerecognition",
+        "code",
+        "cs",
+        "class"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:Rmms.Application/FaceRecognition/EnrollFace.cs",
+      "type": "file",
+      "name": "EnrollFace.cs",
+      "filePath": "Rmms.Application/FaceRecognition/EnrollFace.cs",
+      "summary": "EnrollFace.cs — tệp mã nguồn C# trong backend RMMS (3 hàm, 2 class).",
+      "tags": [
+        "rmms.application",
+        "facerecognition",
+        "code",
+        "cs"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:Rmms.Application/FaceRecognition/EnrollFace.cs:EnrollFaceCommandValidator",
+      "type": "function",
+      "name": "EnrollFaceCommandValidator",
+      "filePath": "Rmms.Application/FaceRecognition/EnrollFace.cs",
+      "lineRange": [
+        23,
+        27
+      ],
+      "summary": "Hàm EnrollFaceCommandValidator trong EnrollFace.cs.",
+      "tags": [
+        "rmms.application",
+        "facerecognition",
+        "code",
+        "cs",
+        "ham"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Rmms.Application/FaceRecognition/EnrollFace.cs:EnrollFaceCommandHandler",
+      "type": "function",
+      "name": "EnrollFaceCommandHandler",
+      "filePath": "Rmms.Application/FaceRecognition/EnrollFace.cs",
+      "lineRange": [
+        38,
+        45
+      ],
+      "summary": "Hàm EnrollFaceCommandHandler trong EnrollFace.cs.",
+      "tags": [
+        "rmms.application",
+        "facerecognition",
+        "code",
+        "cs",
+        "ham"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Rmms.Application/FaceRecognition/EnrollFace.cs:Handle",
+      "type": "function",
+      "name": "Handle",
+      "filePath": "Rmms.Application/FaceRecognition/EnrollFace.cs",
+      "lineRange": [
+        47,
+        78
+      ],
+      "summary": "Hàm Handle trong EnrollFace.cs.",
+      "tags": [
+        "rmms.application",
+        "facerecognition",
+        "code",
+        "cs",
+        "ham"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:Rmms.Application/FaceRecognition/EnrollFace.cs:EnrollFaceCommandValidator",
+      "type": "class",
+      "name": "EnrollFaceCommandValidator",
+      "filePath": "Rmms.Application/FaceRecognition/EnrollFace.cs",
+      "lineRange": [
+        21,
+        28
+      ],
+      "summary": "Class EnrollFaceCommandValidator trong EnrollFace.cs.",
+      "tags": [
+        "rmms.application",
+        "facerecognition",
+        "code",
+        "cs",
+        "class"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "class:Rmms.Application/FaceRecognition/EnrollFace.cs:EnrollFaceCommandHandler",
+      "type": "class",
+      "name": "EnrollFaceCommandHandler",
+      "filePath": "Rmms.Application/FaceRecognition/EnrollFace.cs",
+      "lineRange": [
+        30,
+        79
+      ],
+      "summary": "Class EnrollFaceCommandHandler trong EnrollFace.cs.",
+      "tags": [
+        "rmms.application",
+        "facerecognition",
+        "code",
+        "cs",
+        "class"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:Rmms.Application/FaceRecognition/FaceDtos.cs",
+      "type": "file",
+      "name": "FaceDtos.cs",
+      "filePath": "Rmms.Application/FaceRecognition/FaceDtos.cs",
+      "summary": "FaceDtos.cs — tệp mã nguồn C# trong backend RMMS (0 hàm, 0 class).",
+      "tags": [
+        "rmms.application",
+        "facerecognition",
+        "code",
+        "cs"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:Rmms.Application/FaceRecognition/RemoveMyFace.cs",
+      "type": "file",
+      "name": "RemoveMyFace.cs",
+      "filePath": "Rmms.Application/FaceRecognition/RemoveMyFace.cs",
+      "summary": "RemoveMyFace.cs — tệp mã nguồn C# trong backend RMMS (2 hàm, 1 class).",
+      "tags": [
+        "rmms.application",
+        "facerecognition",
+        "code",
+        "cs"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Rmms.Application/FaceRecognition/RemoveMyFace.cs:RemoveMyFaceCommandHandler",
+      "type": "function",
+      "name": "RemoveMyFaceCommandHandler",
+      "filePath": "Rmms.Application/FaceRecognition/RemoveMyFace.cs",
+      "lineRange": [
+        25,
+        30
+      ],
+      "summary": "Hàm RemoveMyFaceCommandHandler trong RemoveMyFace.cs.",
+      "tags": [
+        "rmms.application",
+        "facerecognition",
+        "code",
+        "cs",
+        "ham"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Rmms.Application/FaceRecognition/RemoveMyFace.cs:Handle",
+      "type": "function",
+      "name": "Handle",
+      "filePath": "Rmms.Application/FaceRecognition/RemoveMyFace.cs",
+      "lineRange": [
+        32,
+        58
+      ],
+      "summary": "Hàm Handle trong RemoveMyFace.cs.",
+      "tags": [
+        "rmms.application",
+        "facerecognition",
+        "code",
+        "cs",
+        "ham"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:Rmms.Application/FaceRecognition/RemoveMyFace.cs:RemoveMyFaceCommandHandler",
+      "type": "class",
+      "name": "RemoveMyFaceCommandHandler",
+      "filePath": "Rmms.Application/FaceRecognition/RemoveMyFace.cs",
+      "lineRange": [
+        19,
+        59
+      ],
+      "summary": "Class RemoveMyFaceCommandHandler trong RemoveMyFace.cs.",
+      "tags": [
+        "rmms.application",
+        "facerecognition",
+        "code",
+        "cs",
+        "class"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:Rmms.Application/FaceRecognition/VerifyFace.cs",
+      "type": "file",
+      "name": "VerifyFace.cs",
+      "filePath": "Rmms.Application/FaceRecognition/VerifyFace.cs",
+      "summary": "VerifyFace.cs — tệp mã nguồn C# trong backend RMMS (5 hàm, 3 class).",
+      "tags": [
+        "rmms.application",
+        "facerecognition",
+        "code",
+        "cs"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:Rmms.Application/FaceRecognition/VerifyFace.cs:VerifyFaceCommandValidator",
+      "type": "function",
+      "name": "VerifyFaceCommandValidator",
+      "filePath": "Rmms.Application/FaceRecognition/VerifyFace.cs",
+      "lineRange": [
+        17,
+        17
+      ],
+      "summary": "Hàm VerifyFaceCommandValidator trong VerifyFace.cs.",
+      "tags": [
+        "rmms.application",
+        "facerecognition",
+        "code",
+        "cs",
+        "ham"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Rmms.Application/FaceRecognition/VerifyFace.cs:VerifyFaceCommandHandler",
+      "type": "function",
+      "name": "VerifyFaceCommandHandler",
+      "filePath": "Rmms.Application/FaceRecognition/VerifyFace.cs",
+      "lineRange": [
+        24,
+        24
+      ],
+      "summary": "Hàm VerifyFaceCommandHandler trong VerifyFace.cs.",
+      "tags": [
+        "rmms.application",
+        "facerecognition",
+        "code",
+        "cs",
+        "ham"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Rmms.Application/FaceRecognition/VerifyFace.cs:Handle",
+      "type": "function",
+      "name": "Handle",
+      "filePath": "Rmms.Application/FaceRecognition/VerifyFace.cs",
+      "lineRange": [
+        26,
+        30
+      ],
+      "summary": "Hàm Handle trong VerifyFace.cs.",
+      "tags": [
+        "rmms.application",
+        "facerecognition",
+        "code",
+        "cs",
+        "ham"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Rmms.Application/FaceRecognition/VerifyFace.cs:GetFaceStatusQueryHandler",
+      "type": "function",
+      "name": "GetFaceStatusQueryHandler",
+      "filePath": "Rmms.Application/FaceRecognition/VerifyFace.cs",
+      "lineRange": [
+        41,
+        41
+      ],
+      "summary": "Hàm GetFaceStatusQueryHandler trong VerifyFace.cs.",
+      "tags": [
+        "rmms.application",
+        "facerecognition",
+        "code",
+        "cs",
+        "ham"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:Rmms.Application/FaceRecognition/VerifyFace.cs:VerifyFaceCommandValidator",
+      "type": "class",
+      "name": "VerifyFaceCommandValidator",
+      "filePath": "Rmms.Application/FaceRecognition/VerifyFace.cs",
+      "lineRange": [
+        15,
+        18
+      ],
+      "summary": "Class VerifyFaceCommandValidator trong VerifyFace.cs.",
+      "tags": [
+        "rmms.application",
+        "facerecognition",
+        "code",
+        "cs",
+        "class"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "class:Rmms.Application/FaceRecognition/VerifyFace.cs:VerifyFaceCommandHandler",
+      "type": "class",
+      "name": "VerifyFaceCommandHandler",
+      "filePath": "Rmms.Application/FaceRecognition/VerifyFace.cs",
+      "lineRange": [
+        20,
+        31
+      ],
+      "summary": "Class VerifyFaceCommandHandler trong VerifyFace.cs.",
+      "tags": [
+        "rmms.application",
+        "facerecognition",
+        "code",
+        "cs",
+        "class"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "class:Rmms.Application/FaceRecognition/VerifyFace.cs:GetFaceStatusQueryHandler",
+      "type": "class",
+      "name": "GetFaceStatusQueryHandler",
+      "filePath": "Rmms.Application/FaceRecognition/VerifyFace.cs",
+      "lineRange": [
+        37,
+        57
+      ],
+      "summary": "Class GetFaceStatusQueryHandler trong VerifyFace.cs.",
+      "tags": [
+        "rmms.application",
+        "facerecognition",
+        "code",
+        "cs",
+        "class"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:Rmms.Application/Forms/FormFill.cs",
+      "type": "file",
+      "name": "FormFill.cs",
+      "filePath": "Rmms.Application/Forms/FormFill.cs",
+      "summary": "FormFill.cs — tệp mã nguồn C# trong backend RMMS (18 hàm, 8 class).",
+      "tags": [
+        "rmms.application",
+        "forms",
+        "code",
+        "cs"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:Rmms.Application/Forms/FormFill.cs:AssignFormCommandHandler",
+      "type": "function",
+      "name": "AssignFormCommandHandler",
+      "filePath": "Rmms.Application/Forms/FormFill.cs",
+      "lineRange": [
+        26,
+        31
+      ],
+      "summary": "Hàm AssignFormCommandHandler trong FormFill.cs.",
+      "tags": [
+        "rmms.application",
+        "forms",
+        "code",
+        "cs",
+        "ham"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Rmms.Application/Forms/FormFill.cs:Handle",
+      "type": "function",
+      "name": "Handle",
+      "filePath": "Rmms.Application/Forms/FormFill.cs",
+      "lineRange": [
+        33,
+        60
+      ],
+      "summary": "Hàm Handle trong FormFill.cs.",
+      "tags": [
+        "rmms.application",
+        "forms",
+        "code",
+        "cs",
+        "ham"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Rmms.Application/Forms/FormFill.cs:UploadFormAttachmentCommandHandler",
+      "type": "function",
+      "name": "UploadFormAttachmentCommandHandler",
+      "filePath": "Rmms.Application/Forms/FormFill.cs",
+      "lineRange": [
+        76,
+        80
+      ],
+      "summary": "Hàm UploadFormAttachmentCommandHandler trong FormFill.cs.",
+      "tags": [
+        "rmms.application",
+        "forms",
+        "code",
+        "cs",
+        "ham"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Rmms.Application/Forms/FormFill.cs:GetMyFormsQueryHandler",
+      "type": "function",
+      "name": "GetMyFormsQueryHandler",
+      "filePath": "Rmms.Application/Forms/FormFill.cs",
+      "lineRange": [
+        112,
+        116
+      ],
+      "summary": "Hàm GetMyFormsQueryHandler trong FormFill.cs.",
+      "tags": [
+        "rmms.application",
+        "forms",
+        "code",
+        "cs",
+        "ham"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Rmms.Application/Forms/FormFill.cs:GetFormForFillQueryHandler",
+      "type": "function",
+      "name": "GetFormForFillQueryHandler",
+      "filePath": "Rmms.Application/Forms/FormFill.cs",
+      "lineRange": [
+        147,
+        151
+      ],
+      "summary": "Hàm GetFormForFillQueryHandler trong FormFill.cs.",
+      "tags": [
+        "rmms.application",
+        "forms",
+        "code",
+        "cs",
+        "ham"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Rmms.Application/Forms/FormFill.cs:SubmitFormCommandValidator",
+      "type": "function",
+      "name": "SubmitFormCommandValidator",
+      "filePath": "Rmms.Application/Forms/FormFill.cs",
+      "lineRange": [
+        192,
+        196
+      ],
+      "summary": "Hàm SubmitFormCommandValidator trong FormFill.cs.",
+      "tags": [
+        "rmms.application",
+        "forms",
+        "code",
+        "cs",
+        "ham"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Rmms.Application/Forms/FormFill.cs:SubmitFormCommandHandler",
+      "type": "function",
+      "name": "SubmitFormCommandHandler",
+      "filePath": "Rmms.Application/Forms/FormFill.cs",
+      "lineRange": [
+        205,
+        210
+      ],
+      "summary": "Hàm SubmitFormCommandHandler trong FormFill.cs.",
+      "tags": [
+        "rmms.application",
+        "forms",
+        "code",
+        "cs",
+        "ham"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Rmms.Application/Forms/FormFill.cs:VnDayBounds",
+      "type": "function",
+      "name": "VnDayBounds",
+      "filePath": "Rmms.Application/Forms/FormFill.cs",
+      "lineRange": [
+        289,
+        295
+      ],
+      "summary": "Hàm VnDayBounds trong FormFill.cs.",
+      "tags": [
+        "rmms.application",
+        "forms",
+        "code",
+        "cs",
+        "ham"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Rmms.Application/Forms/FormFill.cs:ResolveAssignedFormIdsAsync",
+      "type": "function",
+      "name": "ResolveAssignedFormIdsAsync",
+      "filePath": "Rmms.Application/Forms/FormFill.cs",
+      "lineRange": [
+        307,
+        345
+      ],
+      "summary": "Hàm ResolveAssignedFormIdsAsync trong FormFill.cs.",
+      "tags": [
+        "rmms.application",
+        "forms",
+        "code",
+        "cs",
+        "ham"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Rmms.Application/Forms/FormFill.cs:IsValidJson",
+      "type": "function",
+      "name": "IsValidJson",
+      "filePath": "Rmms.Application/Forms/FormFill.cs",
+      "lineRange": [
+        352,
+        356
+      ],
+      "summary": "Hàm IsValidJson trong FormFill.cs.",
+      "tags": [
+        "rmms.application",
+        "forms",
+        "code",
+        "cs",
+        "ham"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Rmms.Application/Forms/FormFill.cs:FindMissingRequired",
+      "type": "function",
+      "name": "FindMissingRequired",
+      "filePath": "Rmms.Application/Forms/FormFill.cs",
+      "lineRange": [
+        362,
+        389
+      ],
+      "summary": "Hàm FindMissingRequired trong FormFill.cs.",
+      "tags": [
+        "rmms.application",
+        "forms",
+        "code",
+        "cs",
+        "ham"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Rmms.Application/Forms/FormFill.cs:IsEmpty",
+      "type": "function",
+      "name": "IsEmpty",
+      "filePath": "Rmms.Application/Forms/FormFill.cs",
+      "lineRange": [
+        391,
+        398
+      ],
+      "summary": "Hàm IsEmpty trong FormFill.cs.",
+      "tags": [
+        "rmms.application",
+        "forms",
+        "code",
+        "cs",
+        "ham"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Rmms.Application/Forms/FormFill.cs:ParseRules",
+      "type": "function",
+      "name": "ParseRules",
+      "filePath": "Rmms.Application/Forms/FormFill.cs",
+      "lineRange": [
+        403,
+        419
+      ],
+      "summary": "Hàm ParseRules trong FormFill.cs.",
+      "tags": [
+        "rmms.application",
+        "forms",
+        "code",
+        "cs",
+        "ham"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Rmms.Application/Forms/FormFill.cs:HasAnyAttachment",
+      "type": "function",
+      "name": "HasAnyAttachment",
+      "filePath": "Rmms.Application/Forms/FormFill.cs",
+      "lineRange": [
+        422,
+        439
+      ],
+      "summary": "Hàm HasAnyAttachment trong FormFill.cs.",
+      "tags": [
+        "rmms.application",
+        "forms",
+        "code",
+        "cs",
+        "ham"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:Rmms.Application/Forms/FormFill.cs:AssignFormCommandHandler",
+      "type": "class",
+      "name": "AssignFormCommandHandler",
+      "filePath": "Rmms.Application/Forms/FormFill.cs",
+      "lineRange": [
+        20,
+        61
+      ],
+      "summary": "Class AssignFormCommandHandler trong FormFill.cs.",
+      "tags": [
+        "rmms.application",
+        "forms",
+        "code",
+        "cs",
+        "class"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "class:Rmms.Application/Forms/FormFill.cs:UploadFormAttachmentCommandHandler",
+      "type": "class",
+      "name": "UploadFormAttachmentCommandHandler",
+      "filePath": "Rmms.Application/Forms/FormFill.cs",
+      "lineRange": [
+        70,
+        98
+      ],
+      "summary": "Class UploadFormAttachmentCommandHandler trong FormFill.cs.",
+      "tags": [
+        "rmms.application",
+        "forms",
+        "code",
+        "cs",
+        "class"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "class:Rmms.Application/Forms/FormFill.cs:GetMyFormsQueryHandler",
+      "type": "class",
+      "name": "GetMyFormsQueryHandler",
+      "filePath": "Rmms.Application/Forms/FormFill.cs",
+      "lineRange": [
+        107,
+        133
+      ],
+      "summary": "Class GetMyFormsQueryHandler trong FormFill.cs.",
+      "tags": [
+        "rmms.application",
+        "forms",
+        "code",
+        "cs",
+        "class"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "class:Rmms.Application/Forms/FormFill.cs:GetFormForFillQueryHandler",
+      "type": "class",
+      "name": "GetFormForFillQueryHandler",
+      "filePath": "Rmms.Application/Forms/FormFill.cs",
+      "lineRange": [
+        142,
+        181
+      ],
+      "summary": "Class GetFormForFillQueryHandler trong FormFill.cs.",
+      "tags": [
+        "rmms.application",
+        "forms",
+        "code",
+        "cs",
+        "class"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "class:Rmms.Application/Forms/FormFill.cs:SubmitFormCommandValidator",
+      "type": "class",
+      "name": "SubmitFormCommandValidator",
+      "filePath": "Rmms.Application/Forms/FormFill.cs",
+      "lineRange": [
+        190,
+        197
+      ],
+      "summary": "Class SubmitFormCommandValidator trong FormFill.cs.",
+      "tags": [
+        "rmms.application",
+        "forms",
+        "code",
+        "cs",
+        "class"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "class:Rmms.Application/Forms/FormFill.cs:SubmitFormCommandHandler",
+      "type": "class",
+      "name": "SubmitFormCommandHandler",
+      "filePath": "Rmms.Application/Forms/FormFill.cs",
+      "lineRange": [
+        199,
+        296
+      ],
+      "summary": "Class SubmitFormCommandHandler trong FormFill.cs.",
+      "tags": [
+        "rmms.application",
+        "forms",
+        "code",
+        "cs",
+        "class"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "class:Rmms.Application/Forms/FormFill.cs:FormScope",
+      "type": "class",
+      "name": "FormScope",
+      "filePath": "Rmms.Application/Forms/FormFill.cs",
+      "lineRange": [
+        300,
+        346
+      ],
+      "summary": "Class FormScope trong FormFill.cs.",
+      "tags": [
+        "rmms.application",
+        "forms",
+        "code",
+        "cs",
+        "class"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "class:Rmms.Application/Forms/FormFill.cs:FormAnswers",
+      "type": "class",
+      "name": "FormAnswers",
+      "filePath": "Rmms.Application/Forms/FormFill.cs",
+      "lineRange": [
+        350,
+        440
+      ],
+      "summary": "Class FormAnswers trong FormFill.cs.",
+      "tags": [
+        "rmms.application",
+        "forms",
+        "code",
+        "cs",
+        "class"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:Rmms.Application/Forms/Forms.cs",
+      "type": "file",
+      "name": "Forms.cs",
+      "filePath": "Rmms.Application/Forms/Forms.cs",
+      "summary": "Forms.cs — tệp mã nguồn C# trong backend RMMS (17 hàm, 9 class).",
+      "tags": [
+        "rmms.application",
+        "forms",
+        "code",
+        "cs"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:Rmms.Application/Forms/Forms.cs:CreateFormCommandValidator",
+      "type": "function",
+      "name": "CreateFormCommandValidator",
+      "filePath": "Rmms.Application/Forms/Forms.cs",
+      "lineRange": [
+        33,
+        39
+      ],
+      "summary": "Hàm CreateFormCommandValidator trong Forms.cs.",
+      "tags": [
+        "rmms.application",
+        "forms",
+        "code",
+        "cs",
+        "ham"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Rmms.Application/Forms/Forms.cs:CreateFormCommandHandler",
+      "type": "function",
+      "name": "CreateFormCommandHandler",
+      "filePath": "Rmms.Application/Forms/Forms.cs",
+      "lineRange": [
+        47,
+        51
+      ],
+      "summary": "Hàm CreateFormCommandHandler trong Forms.cs.",
+      "tags": [
+        "rmms.application",
+        "forms",
+        "code",
+        "cs",
+        "ham"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Rmms.Application/Forms/Forms.cs:Handle",
+      "type": "function",
+      "name": "Handle",
+      "filePath": "Rmms.Application/Forms/Forms.cs",
+      "lineRange": [
+        53,
+        79
+      ],
+      "summary": "Hàm Handle trong Forms.cs.",
+      "tags": [
+        "rmms.application",
+        "forms",
+        "code",
+        "cs",
+        "ham"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Rmms.Application/Forms/Forms.cs:UpdateFormDraftCommandValidator",
+      "type": "function",
+      "name": "UpdateFormDraftCommandValidator",
+      "filePath": "Rmms.Application/Forms/Forms.cs",
+      "lineRange": [
+        90,
+        94
+      ],
+      "summary": "Hàm UpdateFormDraftCommandValidator trong Forms.cs.",
+      "tags": [
+        "rmms.application",
+        "forms",
+        "code",
+        "cs",
+        "ham"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Rmms.Application/Forms/Forms.cs:UpdateFormDraftCommandHandler",
+      "type": "function",
+      "name": "UpdateFormDraftCommandHandler",
+      "filePath": "Rmms.Application/Forms/Forms.cs",
+      "lineRange": [
+        102,
+        106
+      ],
+      "summary": "Hàm UpdateFormDraftCommandHandler trong Forms.cs.",
+      "tags": [
+        "rmms.application",
+        "forms",
+        "code",
+        "cs",
+        "ham"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Rmms.Application/Forms/Forms.cs:PublishFormCommandHandler",
+      "type": "function",
+      "name": "PublishFormCommandHandler",
+      "filePath": "Rmms.Application/Forms/Forms.cs",
+      "lineRange": [
+        153,
+        159
+      ],
+      "summary": "Hàm PublishFormCommandHandler trong Forms.cs.",
+      "tags": [
+        "rmms.application",
+        "forms",
+        "code",
+        "cs",
+        "ham"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Rmms.Application/Forms/Forms.cs:GetFormsQueryHandler",
+      "type": "function",
+      "name": "GetFormsQueryHandler",
+      "filePath": "Rmms.Application/Forms/Forms.cs",
+      "lineRange": [
+        201,
+        201
+      ],
+      "summary": "Hàm GetFormsQueryHandler trong Forms.cs.",
+      "tags": [
+        "rmms.application",
+        "forms",
+        "code",
+        "cs",
+        "ham"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Rmms.Application/Forms/Forms.cs:FormStatusText",
+      "type": "function",
+      "name": "FormStatusText",
+      "filePath": "Rmms.Application/Forms/Forms.cs",
+      "lineRange": [
+        222,
+        228
+      ],
+      "summary": "Hàm FormStatusText trong Forms.cs.",
+      "tags": [
+        "rmms.application",
+        "forms",
+        "code",
+        "cs",
+        "ham"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Rmms.Application/Forms/Forms.cs:GetFormQueryHandler",
+      "type": "function",
+      "name": "GetFormQueryHandler",
+      "filePath": "Rmms.Application/Forms/Forms.cs",
+      "lineRange": [
+        239,
+        239
+      ],
+      "summary": "Hàm GetFormQueryHandler trong Forms.cs.",
+      "tags": [
+        "rmms.application",
+        "forms",
+        "code",
+        "cs",
+        "ham"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Rmms.Application/Forms/Forms.cs:GetFormVersionsQueryHandler",
+      "type": "function",
+      "name": "GetFormVersionsQueryHandler",
+      "filePath": "Rmms.Application/Forms/Forms.cs",
+      "lineRange": [
+        279,
+        279
+      ],
+      "summary": "Hàm GetFormVersionsQueryHandler trong Forms.cs.",
+      "tags": [
+        "rmms.application",
+        "forms",
+        "code",
+        "cs",
+        "ham"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Rmms.Application/Forms/Forms.cs:TryParse",
+      "type": "function",
+      "name": "TryParse",
+      "filePath": "Rmms.Application/Forms/Forms.cs",
+      "lineRange": [
+        297,
+        312
+      ],
+      "summary": "Hàm TryParse trong Forms.cs.",
+      "tags": [
+        "rmms.application",
+        "forms",
+        "code",
+        "cs",
+        "ham"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Rmms.Application/Forms/Forms.cs:ToText",
+      "type": "function",
+      "name": "ToText",
+      "filePath": "Rmms.Application/Forms/Forms.cs",
+      "lineRange": [
+        314,
+        326
+      ],
+      "summary": "Hàm ToText trong Forms.cs.",
+      "tags": [
+        "rmms.application",
+        "forms",
+        "code",
+        "cs",
+        "ham"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:Rmms.Application/Forms/Forms.cs:CreateFormCommandValidator",
+      "type": "class",
+      "name": "CreateFormCommandValidator",
+      "filePath": "Rmms.Application/Forms/Forms.cs",
+      "lineRange": [
+        31,
+        40
+      ],
+      "summary": "Class CreateFormCommandValidator trong Forms.cs.",
+      "tags": [
+        "rmms.application",
+        "forms",
+        "code",
+        "cs",
+        "class"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "class:Rmms.Application/Forms/Forms.cs:CreateFormCommandHandler",
+      "type": "class",
+      "name": "CreateFormCommandHandler",
+      "filePath": "Rmms.Application/Forms/Forms.cs",
+      "lineRange": [
+        42,
+        80
+      ],
+      "summary": "Class CreateFormCommandHandler trong Forms.cs.",
+      "tags": [
+        "rmms.application",
+        "forms",
+        "code",
+        "cs",
+        "class"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "class:Rmms.Application/Forms/Forms.cs:UpdateFormDraftCommandValidator",
+      "type": "class",
+      "name": "UpdateFormDraftCommandValidator",
+      "filePath": "Rmms.Application/Forms/Forms.cs",
+      "lineRange": [
+        88,
+        95
+      ],
+      "summary": "Class UpdateFormDraftCommandValidator trong Forms.cs.",
+      "tags": [
+        "rmms.application",
+        "forms",
+        "code",
+        "cs",
+        "class"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "class:Rmms.Application/Forms/Forms.cs:UpdateFormDraftCommandHandler",
+      "type": "class",
+      "name": "UpdateFormDraftCommandHandler",
+      "filePath": "Rmms.Application/Forms/Forms.cs",
+      "lineRange": [
+        97,
+        140
+      ],
+      "summary": "Class UpdateFormDraftCommandHandler trong Forms.cs.",
+      "tags": [
+        "rmms.application",
+        "forms",
+        "code",
+        "cs",
+        "class"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "class:Rmms.Application/Forms/Forms.cs:PublishFormCommandHandler",
+      "type": "class",
+      "name": "PublishFormCommandHandler",
+      "filePath": "Rmms.Application/Forms/Forms.cs",
+      "lineRange": [
+        146,
+        191
+      ],
+      "summary": "Class PublishFormCommandHandler trong Forms.cs.",
+      "tags": [
+        "rmms.application",
+        "forms",
+        "code",
+        "cs",
+        "class"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "class:Rmms.Application/Forms/Forms.cs:GetFormsQueryHandler",
+      "type": "class",
+      "name": "GetFormsQueryHandler",
+      "filePath": "Rmms.Application/Forms/Forms.cs",
+      "lineRange": [
+        197,
+        229
+      ],
+      "summary": "Class GetFormsQueryHandler trong Forms.cs.",
+      "tags": [
+        "rmms.application",
+        "forms",
+        "code",
+        "cs",
+        "class"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "class:Rmms.Application/Forms/Forms.cs:GetFormQueryHandler",
+      "type": "class",
+      "name": "GetFormQueryHandler",
+      "filePath": "Rmms.Application/Forms/Forms.cs",
+      "lineRange": [
+        235,
+        268
+      ],
+      "summary": "Class GetFormQueryHandler trong Forms.cs.",
+      "tags": [
+        "rmms.application",
+        "forms",
+        "code",
+        "cs",
+        "class"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "class:Rmms.Application/Forms/Forms.cs:GetFormVersionsQueryHandler",
+      "type": "class",
+      "name": "GetFormVersionsQueryHandler",
+      "filePath": "Rmms.Application/Forms/Forms.cs",
+      "lineRange": [
+        274,
+        291
+      ],
+      "summary": "Class GetFormVersionsQueryHandler trong Forms.cs.",
+      "tags": [
+        "rmms.application",
+        "forms",
+        "code",
+        "cs",
+        "class"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "class:Rmms.Application/Forms/Forms.cs:FormTypeMap",
+      "type": "class",
+      "name": "FormTypeMap",
+      "filePath": "Rmms.Application/Forms/Forms.cs",
+      "lineRange": [
+        295,
+        327
+      ],
+      "summary": "Class FormTypeMap trong Forms.cs.",
+      "tags": [
+        "rmms.application",
+        "forms",
+        "code",
+        "cs",
+        "class"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:Rmms.Application/Forms/FormSchema.cs",
+      "type": "file",
+      "name": "FormSchema.cs",
+      "filePath": "Rmms.Application/Forms/FormSchema.cs",
+      "summary": "FormSchema.cs — tệp mã nguồn C# trong backend RMMS (1 hàm, 1 class).",
+      "tags": [
+        "rmms.application",
+        "forms",
+        "code",
+        "cs"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Rmms.Application/Forms/FormSchema.cs:Validate",
+      "type": "function",
+      "name": "Validate",
+      "filePath": "Rmms.Application/Forms/FormSchema.cs",
+      "lineRange": [
+        32,
+        99
+      ],
+      "summary": "Hàm Validate trong FormSchema.cs.",
+      "tags": [
+        "rmms.application",
+        "forms",
+        "code",
+        "cs",
+        "ham"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:Rmms.Application/Forms/FormSchema.cs:FormSchema",
+      "type": "class",
+      "name": "FormSchema",
+      "filePath": "Rmms.Application/Forms/FormSchema.cs",
+      "lineRange": [
+        11,
+        100
+      ],
+      "summary": "Class FormSchema trong FormSchema.cs.",
+      "tags": [
+        "rmms.application",
+        "forms",
+        "code",
+        "cs",
+        "class"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:Rmms.Application/LeaveOt/AdminGetRequests.cs",
+      "type": "file",
+      "name": "AdminGetRequests.cs",
+      "filePath": "Rmms.Application/LeaveOt/AdminGetRequests.cs",
+      "summary": "AdminGetRequests.cs — tệp mã nguồn C# trong backend RMMS (4 hàm, 2 class).",
+      "tags": [
+        "rmms.application",
+        "leaveot",
+        "code",
+        "cs"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:Rmms.Application/LeaveOt/AdminGetRequests.cs:GetAllLeaveRequestsQueryHandler",
+      "type": "function",
+      "name": "GetAllLeaveRequestsQueryHandler",
+      "filePath": "Rmms.Application/LeaveOt/AdminGetRequests.cs",
+      "lineRange": [
+        23,
+        23
+      ],
+      "summary": "Hàm GetAllLeaveRequestsQueryHandler trong AdminGetRequests.cs.",
+      "tags": [
+        "rmms.application",
+        "leaveot",
+        "code",
+        "cs",
+        "ham"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Rmms.Application/LeaveOt/AdminGetRequests.cs:Handle",
+      "type": "function",
+      "name": "Handle",
+      "filePath": "Rmms.Application/LeaveOt/AdminGetRequests.cs",
+      "lineRange": [
+        25,
+        44
+      ],
+      "summary": "Hàm Handle trong AdminGetRequests.cs.",
+      "tags": [
+        "rmms.application",
+        "leaveot",
+        "code",
+        "cs",
+        "ham"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Rmms.Application/LeaveOt/AdminGetRequests.cs:GetAllOtRequestsQueryHandler",
+      "type": "function",
+      "name": "GetAllOtRequestsQueryHandler",
+      "filePath": "Rmms.Application/LeaveOt/AdminGetRequests.cs",
+      "lineRange": [
+        52,
+        52
+      ],
+      "summary": "Hàm GetAllOtRequestsQueryHandler trong AdminGetRequests.cs.",
+      "tags": [
+        "rmms.application",
+        "leaveot",
+        "code",
+        "cs",
+        "ham"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:Rmms.Application/LeaveOt/AdminGetRequests.cs:GetAllLeaveRequestsQueryHandler",
+      "type": "class",
+      "name": "GetAllLeaveRequestsQueryHandler",
+      "filePath": "Rmms.Application/LeaveOt/AdminGetRequests.cs",
+      "lineRange": [
+        18,
+        45
+      ],
+      "summary": "Class GetAllLeaveRequestsQueryHandler trong AdminGetRequests.cs.",
+      "tags": [
+        "rmms.application",
+        "leaveot",
+        "code",
+        "cs",
+        "class"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "class:Rmms.Application/LeaveOt/AdminGetRequests.cs:GetAllOtRequestsQueryHandler",
+      "type": "class",
+      "name": "GetAllOtRequestsQueryHandler",
+      "filePath": "Rmms.Application/LeaveOt/AdminGetRequests.cs",
+      "lineRange": [
+        47,
+        74
+      ],
+      "summary": "Class GetAllOtRequestsQueryHandler trong AdminGetRequests.cs.",
+      "tags": [
+        "rmms.application",
+        "leaveot",
+        "code",
+        "cs",
+        "class"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:Rmms.Application/LeaveOt/CreateLeaveRequest.cs",
+      "type": "file",
+      "name": "CreateLeaveRequest.cs",
+      "filePath": "Rmms.Application/LeaveOt/CreateLeaveRequest.cs",
+      "summary": "CreateLeaveRequest.cs — tệp mã nguồn C# trong backend RMMS (5 hàm, 3 class).",
+      "tags": [
+        "rmms.application",
+        "leaveot",
+        "code",
+        "cs"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:Rmms.Application/LeaveOt/CreateLeaveRequest.cs:CreateLeaveRequestCommandValidator",
+      "type": "function",
+      "name": "CreateLeaveRequestCommandValidator",
+      "filePath": "Rmms.Application/LeaveOt/CreateLeaveRequest.cs",
+      "lineRange": [
+        21,
+        25
+      ],
+      "summary": "Hàm CreateLeaveRequestCommandValidator trong CreateLeaveRequest.cs.",
+      "tags": [
+        "rmms.application",
+        "leaveot",
+        "code",
+        "cs",
+        "ham"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Rmms.Application/LeaveOt/CreateLeaveRequest.cs:CreateLeaveRequestCommandHandler",
+      "type": "function",
+      "name": "CreateLeaveRequestCommandHandler",
+      "filePath": "Rmms.Application/LeaveOt/CreateLeaveRequest.cs",
+      "lineRange": [
+        34,
+        39
+      ],
+      "summary": "Hàm CreateLeaveRequestCommandHandler trong CreateLeaveRequest.cs.",
+      "tags": [
+        "rmms.application",
+        "leaveot",
+        "code",
+        "cs",
+        "ham"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Rmms.Application/LeaveOt/CreateLeaveRequest.cs:Handle",
+      "type": "function",
+      "name": "Handle",
+      "filePath": "Rmms.Application/LeaveOt/CreateLeaveRequest.cs",
+      "lineRange": [
+        41,
+        55
+      ],
+      "summary": "Hàm Handle trong CreateLeaveRequest.cs.",
+      "tags": [
+        "rmms.application",
+        "leaveot",
+        "code",
+        "cs",
+        "ham"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Rmms.Application/LeaveOt/CreateLeaveRequest.cs:CreateEmergencyLeaveCommandHandler",
+      "type": "function",
+      "name": "CreateEmergencyLeaveCommandHandler",
+      "filePath": "Rmms.Application/LeaveOt/CreateLeaveRequest.cs",
+      "lineRange": [
+        69,
+        75
+      ],
+      "summary": "Hàm CreateEmergencyLeaveCommandHandler trong CreateLeaveRequest.cs.",
+      "tags": [
+        "rmms.application",
+        "leaveot",
+        "code",
+        "cs",
+        "ham"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:Rmms.Application/LeaveOt/CreateLeaveRequest.cs:CreateLeaveRequestCommandValidator",
+      "type": "class",
+      "name": "CreateLeaveRequestCommandValidator",
+      "filePath": "Rmms.Application/LeaveOt/CreateLeaveRequest.cs",
+      "lineRange": [
+        19,
+        26
+      ],
+      "summary": "Class CreateLeaveRequestCommandValidator trong CreateLeaveRequest.cs.",
+      "tags": [
+        "rmms.application",
+        "leaveot",
+        "code",
+        "cs",
+        "class"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "class:Rmms.Application/LeaveOt/CreateLeaveRequest.cs:CreateLeaveRequestCommandHandler",
+      "type": "class",
+      "name": "CreateLeaveRequestCommandHandler",
+      "filePath": "Rmms.Application/LeaveOt/CreateLeaveRequest.cs",
+      "lineRange": [
+        28,
+        56
+      ],
+      "summary": "Class CreateLeaveRequestCommandHandler trong CreateLeaveRequest.cs.",
+      "tags": [
+        "rmms.application",
+        "leaveot",
+        "code",
+        "cs",
+        "class"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "class:Rmms.Application/LeaveOt/CreateLeaveRequest.cs:CreateEmergencyLeaveCommandHandler",
+      "type": "class",
+      "name": "CreateEmergencyLeaveCommandHandler",
+      "filePath": "Rmms.Application/LeaveOt/CreateLeaveRequest.cs",
+      "lineRange": [
+        62,
+        103
+      ],
+      "summary": "Class CreateEmergencyLeaveCommandHandler trong CreateLeaveRequest.cs.",
+      "tags": [
+        "rmms.application",
+        "leaveot",
+        "code",
+        "cs",
+        "class"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:Rmms.Application/LeaveOt/CreateOtRequest.cs",
+      "type": "file",
+      "name": "CreateOtRequest.cs",
+      "filePath": "Rmms.Application/LeaveOt/CreateOtRequest.cs",
+      "summary": "CreateOtRequest.cs — tệp mã nguồn C# trong backend RMMS (3 hàm, 2 class).",
+      "tags": [
+        "rmms.application",
+        "leaveot",
+        "code",
+        "cs"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:Rmms.Application/LeaveOt/CreateOtRequest.cs:CreateOtRequestCommandValidator",
+      "type": "function",
+      "name": "CreateOtRequestCommandValidator",
+      "filePath": "Rmms.Application/LeaveOt/CreateOtRequest.cs",
+      "lineRange": [
+        17,
+        21
+      ],
+      "summary": "Hàm CreateOtRequestCommandValidator trong CreateOtRequest.cs.",
+      "tags": [
+        "rmms.application",
+        "leaveot",
+        "code",
+        "cs",
+        "ham"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Rmms.Application/LeaveOt/CreateOtRequest.cs:CreateOtRequestCommandHandler",
+      "type": "function",
+      "name": "CreateOtRequestCommandHandler",
+      "filePath": "Rmms.Application/LeaveOt/CreateOtRequest.cs",
+      "lineRange": [
+        30,
+        35
+      ],
+      "summary": "Hàm CreateOtRequestCommandHandler trong CreateOtRequest.cs.",
+      "tags": [
+        "rmms.application",
+        "leaveot",
+        "code",
+        "cs",
+        "ham"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Rmms.Application/LeaveOt/CreateOtRequest.cs:Handle",
+      "type": "function",
+      "name": "Handle",
+      "filePath": "Rmms.Application/LeaveOt/CreateOtRequest.cs",
+      "lineRange": [
+        37,
+        49
+      ],
+      "summary": "Hàm Handle trong CreateOtRequest.cs.",
+      "tags": [
+        "rmms.application",
+        "leaveot",
+        "code",
+        "cs",
+        "ham"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:Rmms.Application/LeaveOt/CreateOtRequest.cs:CreateOtRequestCommandValidator",
+      "type": "class",
+      "name": "CreateOtRequestCommandValidator",
+      "filePath": "Rmms.Application/LeaveOt/CreateOtRequest.cs",
+      "lineRange": [
+        15,
+        22
+      ],
+      "summary": "Class CreateOtRequestCommandValidator trong CreateOtRequest.cs.",
+      "tags": [
+        "rmms.application",
+        "leaveot",
+        "code",
+        "cs",
+        "class"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "class:Rmms.Application/LeaveOt/CreateOtRequest.cs:CreateOtRequestCommandHandler",
+      "type": "class",
+      "name": "CreateOtRequestCommandHandler",
+      "filePath": "Rmms.Application/LeaveOt/CreateOtRequest.cs",
+      "lineRange": [
+        24,
+        50
+      ],
+      "summary": "Class CreateOtRequestCommandHandler trong CreateOtRequest.cs.",
+      "tags": [
+        "rmms.application",
+        "leaveot",
+        "code",
+        "cs",
+        "class"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:Rmms.Application/LeaveOt/GetMyRequests.cs",
+      "type": "file",
+      "name": "GetMyRequests.cs",
+      "filePath": "Rmms.Application/LeaveOt/GetMyRequests.cs",
+      "summary": "GetMyRequests.cs — tệp mã nguồn C# trong backend RMMS (4 hàm, 2 class).",
+      "tags": [
+        "rmms.application",
+        "leaveot",
+        "code",
+        "cs"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:Rmms.Application/LeaveOt/GetMyRequests.cs:GetMyLeaveRequestsQueryHandler",
+      "type": "function",
+      "name": "GetMyLeaveRequestsQueryHandler",
+      "filePath": "Rmms.Application/LeaveOt/GetMyRequests.cs",
+      "lineRange": [
+        16,
+        16
+      ],
+      "summary": "Hàm GetMyLeaveRequestsQueryHandler trong GetMyRequests.cs.",
+      "tags": [
+        "rmms.application",
+        "leaveot",
+        "code",
+        "cs",
+        "ham"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Rmms.Application/LeaveOt/GetMyRequests.cs:Handle",
+      "type": "function",
+      "name": "Handle",
+      "filePath": "Rmms.Application/LeaveOt/GetMyRequests.cs",
+      "lineRange": [
+        18,
+        26
+      ],
+      "summary": "Hàm Handle trong GetMyRequests.cs.",
+      "tags": [
+        "rmms.application",
+        "leaveot",
+        "code",
+        "cs",
+        "ham"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Rmms.Application/LeaveOt/GetMyRequests.cs:GetMyOtRequestsQueryHandler",
+      "type": "function",
+      "name": "GetMyOtRequestsQueryHandler",
+      "filePath": "Rmms.Application/LeaveOt/GetMyRequests.cs",
+      "lineRange": [
+        33,
+        33
+      ],
+      "summary": "Hàm GetMyOtRequestsQueryHandler trong GetMyRequests.cs.",
+      "tags": [
+        "rmms.application",
+        "leaveot",
+        "code",
+        "cs",
+        "ham"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:Rmms.Application/LeaveOt/GetMyRequests.cs:GetMyLeaveRequestsQueryHandler",
+      "type": "class",
+      "name": "GetMyLeaveRequestsQueryHandler",
+      "filePath": "Rmms.Application/LeaveOt/GetMyRequests.cs",
+      "lineRange": [
+        12,
+        27
+      ],
+      "summary": "Class GetMyLeaveRequestsQueryHandler trong GetMyRequests.cs.",
+      "tags": [
+        "rmms.application",
+        "leaveot",
+        "code",
+        "cs",
+        "class"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "class:Rmms.Application/LeaveOt/GetMyRequests.cs:GetMyOtRequestsQueryHandler",
+      "type": "class",
+      "name": "GetMyOtRequestsQueryHandler",
+      "filePath": "Rmms.Application/LeaveOt/GetMyRequests.cs",
+      "lineRange": [
+        29,
+        44
+      ],
+      "summary": "Class GetMyOtRequestsQueryHandler trong GetMyRequests.cs.",
+      "tags": [
+        "rmms.application",
+        "leaveot",
+        "code",
+        "cs",
+        "class"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:Rmms.Application/LeaveOt/LeaveOtDtos.cs",
+      "type": "file",
+      "name": "LeaveOtDtos.cs",
+      "filePath": "Rmms.Application/LeaveOt/LeaveOtDtos.cs",
+      "summary": "LeaveOtDtos.cs — tệp mã nguồn C# trong backend RMMS (2 hàm, 1 class).",
+      "tags": [
+        "rmms.application",
+        "leaveot",
+        "code",
+        "cs"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Rmms.Application/LeaveOt/LeaveOtDtos.cs:ToDto",
+      "type": "function",
+      "name": "ToDto",
+      "filePath": "Rmms.Application/LeaveOt/LeaveOtDtos.cs",
+      "lineRange": [
+        37,
+        39
+      ],
+      "summary": "Hàm ToDto trong LeaveOtDtos.cs.",
+      "tags": [
+        "rmms.application",
+        "leaveot",
+        "code",
+        "cs",
+        "ham"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:Rmms.Application/LeaveOt/LeaveOtDtos.cs:LeaveOtMapper",
+      "type": "class",
+      "name": "LeaveOtMapper",
+      "filePath": "Rmms.Application/LeaveOt/LeaveOtDtos.cs",
+      "lineRange": [
+        35,
+        43
+      ],
+      "summary": "Class LeaveOtMapper trong LeaveOtDtos.cs.",
+      "tags": [
+        "rmms.application",
+        "leaveot",
+        "code",
+        "cs",
+        "class"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:Rmms.Application/LeaveOt/RequestRouting.cs",
+      "type": "file",
+      "name": "RequestRouting.cs",
+      "filePath": "Rmms.Application/LeaveOt/RequestRouting.cs",
+      "summary": "RequestRouting.cs — tệp mã nguồn C# trong backend RMMS (3 hàm, 2 class).",
+      "tags": [
+        "rmms.application",
+        "leaveot",
+        "code",
+        "cs"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:Rmms.Application/LeaveOt/RequestRouting.cs:RouteAsync",
+      "type": "function",
+      "name": "RouteAsync",
+      "filePath": "Rmms.Application/LeaveOt/RequestRouting.cs",
+      "lineRange": [
+        11,
+        19
+      ],
+      "summary": "Hàm RouteAsync trong RequestRouting.cs.",
+      "tags": [
+        "rmms.application",
+        "leaveot",
+        "code",
+        "cs",
+        "ham"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Rmms.Application/LeaveOt/RequestRouting.cs:ResolveApproverAsync",
+      "type": "function",
+      "name": "ResolveApproverAsync",
+      "filePath": "Rmms.Application/LeaveOt/RequestRouting.cs",
+      "lineRange": [
+        34,
+        56
+      ],
+      "summary": "Hàm ResolveApproverAsync trong RequestRouting.cs.",
+      "tags": [
+        "rmms.application",
+        "leaveot",
+        "code",
+        "cs",
+        "ham"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Rmms.Application/LeaveOt/RequestRouting.cs:ResolveBuhApproverAsync",
+      "type": "function",
+      "name": "ResolveBuhApproverAsync",
+      "filePath": "Rmms.Application/LeaveOt/RequestRouting.cs",
+      "lineRange": [
+        59,
+        67
+      ],
+      "summary": "Hàm ResolveBuhApproverAsync trong RequestRouting.cs.",
+      "tags": [
+        "rmms.application",
+        "leaveot",
+        "code",
+        "cs",
+        "ham"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:Rmms.Application/LeaveOt/RequestRouting.cs:LeaveOtProducer",
+      "type": "class",
+      "name": "LeaveOtProducer",
+      "filePath": "Rmms.Application/LeaveOt/RequestRouting.cs",
+      "lineRange": [
+        9,
+        20
+      ],
+      "summary": "Class LeaveOtProducer trong RequestRouting.cs.",
+      "tags": [
+        "rmms.application",
+        "leaveot",
+        "code",
+        "cs",
+        "class"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "class:Rmms.Application/LeaveOt/RequestRouting.cs:RequestRouting",
+      "type": "class",
+      "name": "RequestRouting",
+      "filePath": "Rmms.Application/LeaveOt/RequestRouting.cs",
+      "lineRange": [
+        32,
+        68
+      ],
+      "summary": "Class RequestRouting trong RequestRouting.cs.",
+      "tags": [
+        "rmms.application",
+        "leaveot",
+        "code",
+        "cs",
+        "class"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:Rmms.Application/LeaveOt/WithdrawLeaveRequest.cs",
+      "type": "file",
+      "name": "WithdrawLeaveRequest.cs",
+      "filePath": "Rmms.Application/LeaveOt/WithdrawLeaveRequest.cs",
+      "summary": "WithdrawLeaveRequest.cs — tệp mã nguồn C# trong backend RMMS (2 hàm, 1 class).",
+      "tags": [
+        "rmms.application",
+        "leaveot",
+        "code",
+        "cs"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Rmms.Application/LeaveOt/WithdrawLeaveRequest.cs:WithdrawLeaveRequestCommandHandler",
+      "type": "function",
+      "name": "WithdrawLeaveRequestCommandHandler",
+      "filePath": "Rmms.Application/LeaveOt/WithdrawLeaveRequest.cs",
+      "lineRange": [
+        19,
+        23
+      ],
+      "summary": "Hàm WithdrawLeaveRequestCommandHandler trong WithdrawLeaveRequest.cs.",
+      "tags": [
+        "rmms.application",
+        "leaveot",
+        "code",
+        "cs",
+        "ham"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Rmms.Application/LeaveOt/WithdrawLeaveRequest.cs:Handle",
+      "type": "function",
+      "name": "Handle",
+      "filePath": "Rmms.Application/LeaveOt/WithdrawLeaveRequest.cs",
+      "lineRange": [
+        25,
+        48
+      ],
+      "summary": "Hàm Handle trong WithdrawLeaveRequest.cs.",
+      "tags": [
+        "rmms.application",
+        "leaveot",
+        "code",
+        "cs",
+        "ham"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:Rmms.Application/LeaveOt/WithdrawLeaveRequest.cs:WithdrawLeaveRequestCommandHandler",
+      "type": "class",
+      "name": "WithdrawLeaveRequestCommandHandler",
+      "filePath": "Rmms.Application/LeaveOt/WithdrawLeaveRequest.cs",
+      "lineRange": [
+        14,
+        49
+      ],
+      "summary": "Class WithdrawLeaveRequestCommandHandler trong WithdrawLeaveRequest.cs.",
+      "tags": [
+        "rmms.application",
+        "leaveot",
+        "code",
+        "cs",
+        "class"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:Rmms.Application/Maintenance/AttendancePhotoRetentionService.cs",
+      "type": "file",
+      "name": "AttendancePhotoRetentionService.cs",
+      "filePath": "Rmms.Application/Maintenance/AttendancePhotoRetentionService.cs",
+      "summary": "AttendancePhotoRetentionService.cs — tệp mã nguồn C# trong backend RMMS (2 hàm, 1 class).",
+      "tags": [
+        "rmms.application",
+        "maintenance",
+        "code",
+        "cs"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Rmms.Application/Maintenance/AttendancePhotoRetentionService.cs:AttendancePhotoRetentionService",
+      "type": "function",
+      "name": "AttendancePhotoRetentionService",
+      "filePath": "Rmms.Application/Maintenance/AttendancePhotoRetentionService.cs",
+      "lineRange": [
+        22,
+        32
+      ],
+      "summary": "Hàm AttendancePhotoRetentionService trong AttendancePhotoRetentionService.cs.",
+      "tags": [
+        "rmms.application",
+        "maintenance",
+        "code",
+        "cs",
+        "ham"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Rmms.Application/Maintenance/AttendancePhotoRetentionService.cs:RunAsync",
+      "type": "function",
+      "name": "RunAsync",
+      "filePath": "Rmms.Application/Maintenance/AttendancePhotoRetentionService.cs",
+      "lineRange": [
+        34,
+        63
+      ],
+      "summary": "Hàm RunAsync trong AttendancePhotoRetentionService.cs.",
+      "tags": [
+        "rmms.application",
+        "maintenance",
+        "code",
+        "cs",
+        "ham"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:Rmms.Application/Maintenance/AttendancePhotoRetentionService.cs:AttendancePhotoRetentionService",
+      "type": "class",
+      "name": "AttendancePhotoRetentionService",
+      "filePath": "Rmms.Application/Maintenance/AttendancePhotoRetentionService.cs",
+      "lineRange": [
+        9,
+        64
+      ],
+      "summary": "Class AttendancePhotoRetentionService trong AttendancePhotoRetentionService.cs.",
+      "tags": [
+        "rmms.application",
+        "maintenance",
+        "code",
+        "cs",
+        "class"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:Rmms.Application/Maintenance/TokenCleanupService.cs",
+      "type": "file",
+      "name": "TokenCleanupService.cs",
+      "filePath": "Rmms.Application/Maintenance/TokenCleanupService.cs",
+      "summary": "TokenCleanupService.cs — tệp mã nguồn C# trong backend RMMS (2 hàm, 1 class).",
+      "tags": [
+        "rmms.application",
+        "maintenance",
+        "code",
+        "cs"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Rmms.Application/Maintenance/TokenCleanupService.cs:TokenCleanupService",
+      "type": "function",
+      "name": "TokenCleanupService",
+      "filePath": "Rmms.Application/Maintenance/TokenCleanupService.cs",
+      "lineRange": [
+        15,
+        20
+      ],
+      "summary": "Hàm TokenCleanupService trong TokenCleanupService.cs.",
+      "tags": [
+        "rmms.application",
+        "maintenance",
+        "code",
+        "cs",
+        "ham"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Rmms.Application/Maintenance/TokenCleanupService.cs:RunAsync",
+      "type": "function",
+      "name": "RunAsync",
+      "filePath": "Rmms.Application/Maintenance/TokenCleanupService.cs",
+      "lineRange": [
+        22,
+        57
+      ],
+      "summary": "Hàm RunAsync trong TokenCleanupService.cs.",
+      "tags": [
+        "rmms.application",
+        "maintenance",
+        "code",
+        "cs",
+        "ham"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:Rmms.Application/Maintenance/TokenCleanupService.cs:TokenCleanupService",
+      "type": "class",
+      "name": "TokenCleanupService",
+      "filePath": "Rmms.Application/Maintenance/TokenCleanupService.cs",
+      "lineRange": [
+        9,
+        58
+      ],
+      "summary": "Class TokenCleanupService trong TokenCleanupService.cs.",
+      "tags": [
+        "rmms.application",
+        "maintenance",
+        "code",
+        "cs",
+        "class"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:Rmms.Application/News/News.cs",
+      "type": "file",
+      "name": "News.cs",
+      "filePath": "Rmms.Application/News/News.cs",
+      "summary": "News.cs — tệp mã nguồn C# trong backend RMMS (22 hàm, 13 class).",
+      "tags": [
+        "rmms.application",
+        "news",
+        "code",
+        "cs"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:Rmms.Application/News/News.cs:CreateNewsCommandValidator",
+      "type": "function",
+      "name": "CreateNewsCommandValidator",
+      "filePath": "Rmms.Application/News/News.cs",
+      "lineRange": [
+        21,
+        25
+      ],
+      "summary": "Hàm CreateNewsCommandValidator trong News.cs.",
+      "tags": [
+        "rmms.application",
+        "news",
+        "code",
+        "cs",
+        "ham"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Rmms.Application/News/News.cs:CreateNewsCommandHandler",
+      "type": "function",
+      "name": "CreateNewsCommandHandler",
+      "filePath": "Rmms.Application/News/News.cs",
+      "lineRange": [
+        33,
+        37
+      ],
+      "summary": "Hàm CreateNewsCommandHandler trong News.cs.",
+      "tags": [
+        "rmms.application",
+        "news",
+        "code",
+        "cs",
+        "ham"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Rmms.Application/News/News.cs:Handle",
+      "type": "function",
+      "name": "Handle",
+      "filePath": "Rmms.Application/News/News.cs",
+      "lineRange": [
+        39,
+        47
+      ],
+      "summary": "Hàm Handle trong News.cs.",
+      "tags": [
+        "rmms.application",
+        "news",
+        "code",
+        "cs",
+        "ham"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Rmms.Application/News/News.cs:UpdateNewsCommandValidator",
+      "type": "function",
+      "name": "UpdateNewsCommandValidator",
+      "filePath": "Rmms.Application/News/News.cs",
+      "lineRange": [
+        58,
+        63
+      ],
+      "summary": "Hàm UpdateNewsCommandValidator trong News.cs.",
+      "tags": [
+        "rmms.application",
+        "news",
+        "code",
+        "cs",
+        "ham"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Rmms.Application/News/News.cs:UpdateNewsCommandHandler",
+      "type": "function",
+      "name": "UpdateNewsCommandHandler",
+      "filePath": "Rmms.Application/News/News.cs",
+      "lineRange": [
+        71,
+        75
+      ],
+      "summary": "Hàm UpdateNewsCommandHandler trong News.cs.",
+      "tags": [
+        "rmms.application",
+        "news",
+        "code",
+        "cs",
+        "ham"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Rmms.Application/News/News.cs:AssignNewsCommandHandler",
+      "type": "function",
+      "name": "AssignNewsCommandHandler",
+      "filePath": "Rmms.Application/News/News.cs",
+      "lineRange": [
+        103,
+        107
+      ],
+      "summary": "Hàm AssignNewsCommandHandler trong News.cs.",
+      "tags": [
+        "rmms.application",
+        "news",
+        "code",
+        "cs",
+        "ham"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Rmms.Application/News/News.cs:PublishNewsCommandHandler",
+      "type": "function",
+      "name": "PublishNewsCommandHandler",
+      "filePath": "Rmms.Application/News/News.cs",
+      "lineRange": [
+        143,
+        149
+      ],
+      "summary": "Hàm PublishNewsCommandHandler trong News.cs.",
+      "tags": [
+        "rmms.application",
+        "news",
+        "code",
+        "cs",
+        "ham"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Rmms.Application/News/News.cs:DeleteNewsCommandHandler",
+      "type": "function",
+      "name": "DeleteNewsCommandHandler",
+      "filePath": "Rmms.Application/News/News.cs",
+      "lineRange": [
+        193,
+        197
+      ],
+      "summary": "Hàm DeleteNewsCommandHandler trong News.cs.",
+      "tags": [
+        "rmms.application",
+        "news",
+        "code",
+        "cs",
+        "ham"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Rmms.Application/News/News.cs:GetMyNewsQueryHandler",
+      "type": "function",
+      "name": "GetMyNewsQueryHandler",
+      "filePath": "Rmms.Application/News/News.cs",
+      "lineRange": [
+        219,
+        219
+      ],
+      "summary": "Hàm GetMyNewsQueryHandler trong News.cs.",
+      "tags": [
+        "rmms.application",
+        "news",
+        "code",
+        "cs",
+        "ham"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Rmms.Application/News/News.cs:MarkNewsReadCommandHandler",
+      "type": "function",
+      "name": "MarkNewsReadCommandHandler",
+      "filePath": "Rmms.Application/News/News.cs",
+      "lineRange": [
+        249,
+        253
+      ],
+      "summary": "Hàm MarkNewsReadCommandHandler trong News.cs.",
+      "tags": [
+        "rmms.application",
+        "news",
+        "code",
+        "cs",
+        "ham"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Rmms.Application/News/News.cs:ConfirmNewsCommandHandler",
+      "type": "function",
+      "name": "ConfirmNewsCommandHandler",
+      "filePath": "Rmms.Application/News/News.cs",
+      "lineRange": [
+        277,
+        281
+      ],
+      "summary": "Hàm ConfirmNewsCommandHandler trong News.cs.",
+      "tags": [
+        "rmms.application",
+        "news",
+        "code",
+        "cs",
+        "ham"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Rmms.Application/News/News.cs:AdminGetNewsQueryHandler",
+      "type": "function",
+      "name": "AdminGetNewsQueryHandler",
+      "filePath": "Rmms.Application/News/News.cs",
+      "lineRange": [
+        312,
+        312
+      ],
+      "summary": "Hàm AdminGetNewsQueryHandler trong News.cs.",
+      "tags": [
+        "rmms.application",
+        "news",
+        "code",
+        "cs",
+        "ham"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Rmms.Application/News/News.cs:ResolveAssignedIdsAsync",
+      "type": "function",
+      "name": "ResolveAssignedIdsAsync",
+      "filePath": "Rmms.Application/News/News.cs",
+      "lineRange": [
+        328,
+        337
+      ],
+      "summary": "Hàm ResolveAssignedIdsAsync trong News.cs.",
+      "tags": [
+        "rmms.application",
+        "news",
+        "code",
+        "cs",
+        "ham"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Rmms.Application/News/News.cs:ResolveAsync",
+      "type": "function",
+      "name": "ResolveAsync",
+      "filePath": "Rmms.Application/News/News.cs",
+      "lineRange": [
+        343,
+        371
+      ],
+      "summary": "Hàm ResolveAsync trong News.cs.",
+      "tags": [
+        "rmms.application",
+        "news",
+        "code",
+        "cs",
+        "ham"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:Rmms.Application/News/News.cs:CreateNewsCommandValidator",
+      "type": "class",
+      "name": "CreateNewsCommandValidator",
+      "filePath": "Rmms.Application/News/News.cs",
+      "lineRange": [
+        19,
+        26
+      ],
+      "summary": "Class CreateNewsCommandValidator trong News.cs.",
+      "tags": [
+        "rmms.application",
+        "news",
+        "code",
+        "cs",
+        "class"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "class:Rmms.Application/News/News.cs:CreateNewsCommandHandler",
+      "type": "class",
+      "name": "CreateNewsCommandHandler",
+      "filePath": "Rmms.Application/News/News.cs",
+      "lineRange": [
+        28,
+        48
+      ],
+      "summary": "Class CreateNewsCommandHandler trong News.cs.",
+      "tags": [
+        "rmms.application",
+        "news",
+        "code",
+        "cs",
+        "class"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "class:Rmms.Application/News/News.cs:UpdateNewsCommandValidator",
+      "type": "class",
+      "name": "UpdateNewsCommandValidator",
+      "filePath": "Rmms.Application/News/News.cs",
+      "lineRange": [
+        56,
+        64
+      ],
+      "summary": "Class UpdateNewsCommandValidator trong News.cs.",
+      "tags": [
+        "rmms.application",
+        "news",
+        "code",
+        "cs",
+        "class"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "class:Rmms.Application/News/News.cs:UpdateNewsCommandHandler",
+      "type": "class",
+      "name": "UpdateNewsCommandHandler",
+      "filePath": "Rmms.Application/News/News.cs",
+      "lineRange": [
+        66,
+        92
+      ],
+      "summary": "Class UpdateNewsCommandHandler trong News.cs.",
+      "tags": [
+        "rmms.application",
+        "news",
+        "code",
+        "cs",
+        "class"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "class:Rmms.Application/News/News.cs:AssignNewsCommandHandler",
+      "type": "class",
+      "name": "AssignNewsCommandHandler",
+      "filePath": "Rmms.Application/News/News.cs",
+      "lineRange": [
+        98,
+        130
+      ],
+      "summary": "Class AssignNewsCommandHandler trong News.cs.",
+      "tags": [
+        "rmms.application",
+        "news",
+        "code",
+        "cs",
+        "class"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "class:Rmms.Application/News/News.cs:PublishNewsCommandHandler",
+      "type": "class",
+      "name": "PublishNewsCommandHandler",
+      "filePath": "Rmms.Application/News/News.cs",
+      "lineRange": [
+        136,
+        182
+      ],
+      "summary": "Class PublishNewsCommandHandler trong News.cs.",
+      "tags": [
+        "rmms.application",
+        "news",
+        "code",
+        "cs",
+        "class"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "class:Rmms.Application/News/News.cs:DeleteNewsCommandHandler",
+      "type": "class",
+      "name": "DeleteNewsCommandHandler",
+      "filePath": "Rmms.Application/News/News.cs",
+      "lineRange": [
+        188,
+        209
+      ],
+      "summary": "Class DeleteNewsCommandHandler trong News.cs.",
+      "tags": [
+        "rmms.application",
+        "news",
+        "code",
+        "cs",
+        "class"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "class:Rmms.Application/News/News.cs:GetMyNewsQueryHandler",
+      "type": "class",
+      "name": "GetMyNewsQueryHandler",
+      "filePath": "Rmms.Application/News/News.cs",
+      "lineRange": [
+        215,
+        238
+      ],
+      "summary": "Class GetMyNewsQueryHandler trong News.cs.",
+      "tags": [
+        "rmms.application",
+        "news",
+        "code",
+        "cs",
+        "class"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "class:Rmms.Application/News/News.cs:MarkNewsReadCommandHandler",
+      "type": "class",
+      "name": "MarkNewsReadCommandHandler",
+      "filePath": "Rmms.Application/News/News.cs",
+      "lineRange": [
+        244,
+        266
+      ],
+      "summary": "Class MarkNewsReadCommandHandler trong News.cs.",
+      "tags": [
+        "rmms.application",
+        "news",
+        "code",
+        "cs",
+        "class"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "class:Rmms.Application/News/News.cs:ConfirmNewsCommandHandler",
+      "type": "class",
+      "name": "ConfirmNewsCommandHandler",
+      "filePath": "Rmms.Application/News/News.cs",
+      "lineRange": [
+        272,
+        302
+      ],
+      "summary": "Class ConfirmNewsCommandHandler trong News.cs.",
+      "tags": [
+        "rmms.application",
+        "news",
+        "code",
+        "cs",
+        "class"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "class:Rmms.Application/News/News.cs:AdminGetNewsQueryHandler",
+      "type": "class",
+      "name": "AdminGetNewsQueryHandler",
+      "filePath": "Rmms.Application/News/News.cs",
+      "lineRange": [
+        308,
+        321
+      ],
+      "summary": "Class AdminGetNewsQueryHandler trong News.cs.",
+      "tags": [
+        "rmms.application",
+        "news",
+        "code",
+        "cs",
+        "class"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "class:Rmms.Application/News/News.cs:NewsScope",
+      "type": "class",
+      "name": "NewsScope",
+      "filePath": "Rmms.Application/News/News.cs",
+      "lineRange": [
+        325,
+        338
+      ],
+      "summary": "Class NewsScope trong News.cs.",
+      "tags": [
+        "rmms.application",
+        "news",
+        "code",
+        "cs",
+        "class"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "class:Rmms.Application/News/News.cs:NewsRecipients",
+      "type": "class",
+      "name": "NewsRecipients",
+      "filePath": "Rmms.Application/News/News.cs",
+      "lineRange": [
+        340,
+        372
+      ],
+      "summary": "Class NewsRecipients trong News.cs.",
+      "tags": [
+        "rmms.application",
+        "news",
+        "code",
+        "cs",
+        "class"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:Rmms.Application/News/NewsDtos.cs",
+      "type": "file",
+      "name": "NewsDtos.cs",
+      "filePath": "Rmms.Application/News/NewsDtos.cs",
+      "summary": "NewsDtos.cs — tệp mã nguồn C# trong backend RMMS (2 hàm, 1 class).",
+      "tags": [
+        "rmms.application",
+        "news",
+        "code",
+        "cs"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Rmms.Application/News/NewsDtos.cs:ToDto",
+      "type": "function",
+      "name": "ToDto",
+      "filePath": "Rmms.Application/News/NewsDtos.cs",
+      "lineRange": [
+        34,
+        36
+      ],
+      "summary": "Hàm ToDto trong NewsDtos.cs.",
+      "tags": [
+        "rmms.application",
+        "news",
+        "code",
+        "cs",
+        "ham"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Rmms.Application/News/NewsDtos.cs:ToAdminDto",
+      "type": "function",
+      "name": "ToAdminDto",
+      "filePath": "Rmms.Application/News/NewsDtos.cs",
+      "lineRange": [
+        38,
+        39
+      ],
+      "summary": "Hàm ToAdminDto trong NewsDtos.cs.",
+      "tags": [
+        "rmms.application",
+        "news",
+        "code",
+        "cs",
+        "ham"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:Rmms.Application/News/NewsDtos.cs:NewsMapper",
+      "type": "class",
+      "name": "NewsMapper",
+      "filePath": "Rmms.Application/News/NewsDtos.cs",
+      "lineRange": [
+        32,
+        40
+      ],
+      "summary": "Class NewsMapper trong NewsDtos.cs.",
+      "tags": [
+        "rmms.application",
+        "news",
+        "code",
+        "cs",
+        "class"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:Rmms.Application/Notifications/GetMyNotifications.cs",
+      "type": "file",
+      "name": "GetMyNotifications.cs",
+      "filePath": "Rmms.Application/Notifications/GetMyNotifications.cs",
+      "summary": "GetMyNotifications.cs — tệp mã nguồn C# trong backend RMMS (2 hàm, 1 class).",
+      "tags": [
+        "rmms.application",
+        "notifications",
+        "code",
+        "cs"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Rmms.Application/Notifications/GetMyNotifications.cs:GetMyNotificationsQueryHandler",
+      "type": "function",
+      "name": "GetMyNotificationsQueryHandler",
+      "filePath": "Rmms.Application/Notifications/GetMyNotifications.cs",
+      "lineRange": [
+        16,
+        16
+      ],
+      "summary": "Hàm GetMyNotificationsQueryHandler trong GetMyNotifications.cs.",
+      "tags": [
+        "rmms.application",
+        "notifications",
+        "code",
+        "cs",
+        "ham"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Rmms.Application/Notifications/GetMyNotifications.cs:Handle",
+      "type": "function",
+      "name": "Handle",
+      "filePath": "Rmms.Application/Notifications/GetMyNotifications.cs",
+      "lineRange": [
+        18,
+        36
+      ],
+      "summary": "Hàm Handle trong GetMyNotifications.cs.",
+      "tags": [
+        "rmms.application",
+        "notifications",
+        "code",
+        "cs",
+        "ham"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:Rmms.Application/Notifications/GetMyNotifications.cs:GetMyNotificationsQueryHandler",
+      "type": "class",
+      "name": "GetMyNotificationsQueryHandler",
+      "filePath": "Rmms.Application/Notifications/GetMyNotifications.cs",
+      "lineRange": [
+        12,
+        37
+      ],
+      "summary": "Class GetMyNotificationsQueryHandler trong GetMyNotifications.cs.",
+      "tags": [
+        "rmms.application",
+        "notifications",
+        "code",
+        "cs",
+        "class"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:Rmms.Application/Notifications/MarkNotificationRead.cs",
+      "type": "file",
+      "name": "MarkNotificationRead.cs",
+      "filePath": "Rmms.Application/Notifications/MarkNotificationRead.cs",
+      "summary": "MarkNotificationRead.cs — tệp mã nguồn C# trong backend RMMS (4 hàm, 2 class).",
+      "tags": [
+        "rmms.application",
+        "notifications",
+        "code",
+        "cs"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:Rmms.Application/Notifications/MarkNotificationRead.cs:MarkNotificationReadCommandHandler",
+      "type": "function",
+      "name": "MarkNotificationReadCommandHandler",
+      "filePath": "Rmms.Application/Notifications/MarkNotificationRead.cs",
+      "lineRange": [
+        21,
+        25
+      ],
+      "summary": "Hàm MarkNotificationReadCommandHandler trong MarkNotificationRead.cs.",
+      "tags": [
+        "rmms.application",
+        "notifications",
+        "code",
+        "cs",
+        "ham"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Rmms.Application/Notifications/MarkNotificationRead.cs:Handle",
+      "type": "function",
+      "name": "Handle",
+      "filePath": "Rmms.Application/Notifications/MarkNotificationRead.cs",
+      "lineRange": [
+        27,
+        36
+      ],
+      "summary": "Hàm Handle trong MarkNotificationRead.cs.",
+      "tags": [
+        "rmms.application",
+        "notifications",
+        "code",
+        "cs",
+        "ham"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Rmms.Application/Notifications/MarkNotificationRead.cs:MarkAllNotificationsReadCommandHandler",
+      "type": "function",
+      "name": "MarkAllNotificationsReadCommandHandler",
+      "filePath": "Rmms.Application/Notifications/MarkNotificationRead.cs",
+      "lineRange": [
+        44,
+        48
+      ],
+      "summary": "Hàm MarkAllNotificationsReadCommandHandler trong MarkNotificationRead.cs.",
+      "tags": [
+        "rmms.application",
+        "notifications",
+        "code",
+        "cs",
+        "ham"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:Rmms.Application/Notifications/MarkNotificationRead.cs:MarkNotificationReadCommandHandler",
+      "type": "class",
+      "name": "MarkNotificationReadCommandHandler",
+      "filePath": "Rmms.Application/Notifications/MarkNotificationRead.cs",
+      "lineRange": [
+        16,
+        37
+      ],
+      "summary": "Class MarkNotificationReadCommandHandler trong MarkNotificationRead.cs.",
+      "tags": [
+        "rmms.application",
+        "notifications",
+        "code",
+        "cs",
+        "class"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "class:Rmms.Application/Notifications/MarkNotificationRead.cs:MarkAllNotificationsReadCommandHandler",
+      "type": "class",
+      "name": "MarkAllNotificationsReadCommandHandler",
+      "filePath": "Rmms.Application/Notifications/MarkNotificationRead.cs",
+      "lineRange": [
+        39,
+        62
+      ],
+      "summary": "Class MarkAllNotificationsReadCommandHandler trong MarkNotificationRead.cs.",
+      "tags": [
+        "rmms.application",
+        "notifications",
+        "code",
+        "cs",
+        "class"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:Rmms.Application/Notifications/NotificationDtos.cs",
+      "type": "file",
+      "name": "NotificationDtos.cs",
+      "filePath": "Rmms.Application/Notifications/NotificationDtos.cs",
+      "summary": "NotificationDtos.cs — tệp mã nguồn C# trong backend RMMS (2 hàm, 1 class).",
+      "tags": [
+        "rmms.application",
+        "notifications",
+        "code",
+        "cs"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Rmms.Application/Notifications/NotificationDtos.cs:ToDto",
+      "type": "function",
+      "name": "ToDto",
+      "filePath": "Rmms.Application/Notifications/NotificationDtos.cs",
+      "lineRange": [
+        28,
+        36
+      ],
+      "summary": "Hàm ToDto trong NotificationDtos.cs.",
+      "tags": [
+        "rmms.application",
+        "notifications",
+        "code",
+        "cs",
+        "ham"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Rmms.Application/Notifications/NotificationDtos.cs:ParseData",
+      "type": "function",
+      "name": "ParseData",
+      "filePath": "Rmms.Application/Notifications/NotificationDtos.cs",
+      "lineRange": [
+        38,
+        49
+      ],
+      "summary": "Hàm ParseData trong NotificationDtos.cs.",
+      "tags": [
+        "rmms.application",
+        "notifications",
+        "code",
+        "cs",
+        "ham"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:Rmms.Application/Notifications/NotificationDtos.cs:NotificationMapper",
+      "type": "class",
+      "name": "NotificationMapper",
+      "filePath": "Rmms.Application/Notifications/NotificationDtos.cs",
+      "lineRange": [
+        26,
+        50
+      ],
+      "summary": "Class NotificationMapper trong NotificationDtos.cs.",
+      "tags": [
+        "rmms.application",
+        "notifications",
+        "code",
+        "cs",
+        "class"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:Rmms.Application/Notifications/RegisterFcmToken.cs",
+      "type": "file",
+      "name": "RegisterFcmToken.cs",
+      "filePath": "Rmms.Application/Notifications/RegisterFcmToken.cs",
+      "summary": "RegisterFcmToken.cs — tệp mã nguồn C# trong backend RMMS (3 hàm, 1 class).",
+      "tags": [
+        "rmms.application",
+        "notifications",
+        "code",
+        "cs"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Rmms.Application/Notifications/RegisterFcmToken.cs:RegisterFcmTokenCommandHandler",
+      "type": "function",
+      "name": "RegisterFcmTokenCommandHandler",
+      "filePath": "Rmms.Application/Notifications/RegisterFcmToken.cs",
+      "lineRange": [
+        27,
+        27
+      ],
+      "summary": "Hàm RegisterFcmTokenCommandHandler trong RegisterFcmToken.cs.",
+      "tags": [
+        "rmms.application",
+        "notifications",
+        "code",
+        "cs",
+        "ham"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Rmms.Application/Notifications/RegisterFcmToken.cs:Handle",
+      "type": "function",
+      "name": "Handle",
+      "filePath": "Rmms.Application/Notifications/RegisterFcmToken.cs",
+      "lineRange": [
+        29,
+        51
+      ],
+      "summary": "Hàm Handle trong RegisterFcmToken.cs.",
+      "tags": [
+        "rmms.application",
+        "notifications",
+        "code",
+        "cs",
+        "ham"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Rmms.Application/Notifications/RegisterFcmToken.cs:ResolveDeviceAsync",
+      "type": "function",
+      "name": "ResolveDeviceAsync",
+      "filePath": "Rmms.Application/Notifications/RegisterFcmToken.cs",
+      "lineRange": [
+        53,
+        70
+      ],
+      "summary": "Hàm ResolveDeviceAsync trong RegisterFcmToken.cs.",
+      "tags": [
+        "rmms.application",
+        "notifications",
+        "code",
+        "cs",
+        "ham"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:Rmms.Application/Notifications/RegisterFcmToken.cs:RegisterFcmTokenCommandHandler",
+      "type": "class",
+      "name": "RegisterFcmTokenCommandHandler",
+      "filePath": "Rmms.Application/Notifications/RegisterFcmToken.cs",
+      "lineRange": [
+        24,
+        71
+      ],
+      "summary": "Class RegisterFcmTokenCommandHandler trong RegisterFcmToken.cs.",
+      "tags": [
+        "rmms.application",
+        "notifications",
+        "code",
+        "cs",
+        "class"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:Rmms.Application/Organization/Areas/Areas.cs",
+      "type": "file",
+      "name": "Areas.cs",
+      "filePath": "Rmms.Application/Organization/Areas/Areas.cs",
+      "summary": "Areas.cs — tệp mã nguồn C# trong backend RMMS (10 hàm, 6 class).",
+      "tags": [
+        "rmms.application",
+        "organization",
+        "code",
+        "cs"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:Rmms.Application/Organization/Areas/Areas.cs:CreateAreaCommandValidator",
+      "type": "function",
+      "name": "CreateAreaCommandValidator",
+      "filePath": "Rmms.Application/Organization/Areas/Areas.cs",
+      "lineRange": [
+        29,
+        33
+      ],
+      "summary": "Hàm CreateAreaCommandValidator trong Areas.cs.",
+      "tags": [
+        "rmms.application",
+        "organization",
+        "code",
+        "cs",
+        "ham"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Rmms.Application/Organization/Areas/Areas.cs:CreateAreaCommandHandler",
+      "type": "function",
+      "name": "CreateAreaCommandHandler",
+      "filePath": "Rmms.Application/Organization/Areas/Areas.cs",
+      "lineRange": [
+        41,
+        45
+      ],
+      "summary": "Hàm CreateAreaCommandHandler trong Areas.cs.",
+      "tags": [
+        "rmms.application",
+        "organization",
+        "code",
+        "cs",
+        "ham"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Rmms.Application/Organization/Areas/Areas.cs:Handle",
+      "type": "function",
+      "name": "Handle",
+      "filePath": "Rmms.Application/Organization/Areas/Areas.cs",
+      "lineRange": [
+        47,
+        66
+      ],
+      "summary": "Hàm Handle trong Areas.cs.",
+      "tags": [
+        "rmms.application",
+        "organization",
+        "code",
+        "cs",
+        "ham"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Rmms.Application/Organization/Areas/Areas.cs:UpdateAreaCommandValidator",
+      "type": "function",
+      "name": "UpdateAreaCommandValidator",
+      "filePath": "Rmms.Application/Organization/Areas/Areas.cs",
+      "lineRange": [
+        75,
+        76
+      ],
+      "summary": "Hàm UpdateAreaCommandValidator trong Areas.cs.",
+      "tags": [
+        "rmms.application",
+        "organization",
+        "code",
+        "cs",
+        "ham"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Rmms.Application/Organization/Areas/Areas.cs:UpdateAreaCommandHandler",
+      "type": "function",
+      "name": "UpdateAreaCommandHandler",
+      "filePath": "Rmms.Application/Organization/Areas/Areas.cs",
+      "lineRange": [
+        84,
+        88
+      ],
+      "summary": "Hàm UpdateAreaCommandHandler trong Areas.cs.",
+      "tags": [
+        "rmms.application",
+        "organization",
+        "code",
+        "cs",
+        "ham"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Rmms.Application/Organization/Areas/Areas.cs:DeleteAreaCommandHandler",
+      "type": "function",
+      "name": "DeleteAreaCommandHandler",
+      "filePath": "Rmms.Application/Organization/Areas/Areas.cs",
+      "lineRange": [
+        127,
+        131
+      ],
+      "summary": "Hàm DeleteAreaCommandHandler trong Areas.cs.",
+      "tags": [
+        "rmms.application",
+        "organization",
+        "code",
+        "cs",
+        "ham"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Rmms.Application/Organization/Areas/Areas.cs:GetAreasQueryHandler",
+      "type": "function",
+      "name": "GetAreasQueryHandler",
+      "filePath": "Rmms.Application/Organization/Areas/Areas.cs",
+      "lineRange": [
+        161,
+        161
+      ],
+      "summary": "Hàm GetAreasQueryHandler trong Areas.cs.",
+      "tags": [
+        "rmms.application",
+        "organization",
+        "code",
+        "cs",
+        "ham"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:Rmms.Application/Organization/Areas/Areas.cs:CreateAreaCommandValidator",
+      "type": "class",
+      "name": "CreateAreaCommandValidator",
+      "filePath": "Rmms.Application/Organization/Areas/Areas.cs",
+      "lineRange": [
+        27,
+        34
+      ],
+      "summary": "Class CreateAreaCommandValidator trong Areas.cs.",
+      "tags": [
+        "rmms.application",
+        "organization",
+        "code",
+        "cs",
+        "class"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "class:Rmms.Application/Organization/Areas/Areas.cs:CreateAreaCommandHandler",
+      "type": "class",
+      "name": "CreateAreaCommandHandler",
+      "filePath": "Rmms.Application/Organization/Areas/Areas.cs",
+      "lineRange": [
+        36,
+        67
+      ],
+      "summary": "Class CreateAreaCommandHandler trong Areas.cs.",
+      "tags": [
+        "rmms.application",
+        "organization",
+        "code",
+        "cs",
+        "class"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "class:Rmms.Application/Organization/Areas/Areas.cs:UpdateAreaCommandValidator",
+      "type": "class",
+      "name": "UpdateAreaCommandValidator",
+      "filePath": "Rmms.Application/Organization/Areas/Areas.cs",
+      "lineRange": [
+        73,
+        77
+      ],
+      "summary": "Class UpdateAreaCommandValidator trong Areas.cs.",
+      "tags": [
+        "rmms.application",
+        "organization",
+        "code",
+        "cs",
+        "class"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "class:Rmms.Application/Organization/Areas/Areas.cs:UpdateAreaCommandHandler",
+      "type": "class",
+      "name": "UpdateAreaCommandHandler",
+      "filePath": "Rmms.Application/Organization/Areas/Areas.cs",
+      "lineRange": [
+        79,
+        116
+      ],
+      "summary": "Class UpdateAreaCommandHandler trong Areas.cs.",
+      "tags": [
+        "rmms.application",
+        "organization",
+        "code",
+        "cs",
+        "class"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "class:Rmms.Application/Organization/Areas/Areas.cs:DeleteAreaCommandHandler",
+      "type": "class",
+      "name": "DeleteAreaCommandHandler",
+      "filePath": "Rmms.Application/Organization/Areas/Areas.cs",
+      "lineRange": [
+        122,
+        151
+      ],
+      "summary": "Class DeleteAreaCommandHandler trong Areas.cs.",
+      "tags": [
+        "rmms.application",
+        "organization",
+        "code",
+        "cs",
+        "class"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "class:Rmms.Application/Organization/Areas/Areas.cs:GetAreasQueryHandler",
+      "type": "class",
+      "name": "GetAreasQueryHandler",
+      "filePath": "Rmms.Application/Organization/Areas/Areas.cs",
+      "lineRange": [
+        157,
+        177
+      ],
+      "summary": "Class GetAreasQueryHandler trong Areas.cs.",
+      "tags": [
+        "rmms.application",
+        "organization",
+        "code",
+        "cs",
+        "class"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:Rmms.Application/Organization/Assignments/Assignments.cs",
+      "type": "file",
+      "name": "Assignments.cs",
+      "filePath": "Rmms.Application/Organization/Assignments/Assignments.cs",
+      "summary": "Assignments.cs — tệp mã nguồn C# trong backend RMMS (12 hàm, 6 class).",
+      "tags": [
+        "rmms.application",
+        "organization",
+        "code",
+        "cs"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:Rmms.Application/Organization/Assignments/Assignments.cs:AssignPgLeaderCommandHandler",
+      "type": "function",
+      "name": "AssignPgLeaderCommandHandler",
+      "filePath": "Rmms.Application/Organization/Assignments/Assignments.cs",
+      "lineRange": [
+        38,
+        43
+      ],
+      "summary": "Hàm AssignPgLeaderCommandHandler trong Assignments.cs.",
+      "tags": [
+        "rmms.application",
+        "organization",
+        "code",
+        "cs",
+        "ham"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Rmms.Application/Organization/Assignments/Assignments.cs:Handle",
+      "type": "function",
+      "name": "Handle",
+      "filePath": "Rmms.Application/Organization/Assignments/Assignments.cs",
+      "lineRange": [
+        45,
+        83
+      ],
+      "summary": "Hàm Handle trong Assignments.cs.",
+      "tags": [
+        "rmms.application",
+        "organization",
+        "code",
+        "cs",
+        "ham"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Rmms.Application/Organization/Assignments/Assignments.cs:AssignUserStoreCommandHandler",
+      "type": "function",
+      "name": "AssignUserStoreCommandHandler",
+      "filePath": "Rmms.Application/Organization/Assignments/Assignments.cs",
+      "lineRange": [
+        96,
+        101
+      ],
+      "summary": "Hàm AssignUserStoreCommandHandler trong Assignments.cs.",
+      "tags": [
+        "rmms.application",
+        "organization",
+        "code",
+        "cs",
+        "ham"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Rmms.Application/Organization/Assignments/Assignments.cs:UnassignUserStoreCommandHandler",
+      "type": "function",
+      "name": "UnassignUserStoreCommandHandler",
+      "filePath": "Rmms.Application/Organization/Assignments/Assignments.cs",
+      "lineRange": [
+        142,
+        147
+      ],
+      "summary": "Hàm UnassignUserStoreCommandHandler trong Assignments.cs.",
+      "tags": [
+        "rmms.application",
+        "organization",
+        "code",
+        "cs",
+        "ham"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Rmms.Application/Organization/Assignments/Assignments.cs:AssignUserCategoryCommandHandler",
+      "type": "function",
+      "name": "AssignUserCategoryCommandHandler",
+      "filePath": "Rmms.Application/Organization/Assignments/Assignments.cs",
+      "lineRange": [
+        178,
+        182
+      ],
+      "summary": "Hàm AssignUserCategoryCommandHandler trong Assignments.cs.",
+      "tags": [
+        "rmms.application",
+        "organization",
+        "code",
+        "cs",
+        "ham"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Rmms.Application/Organization/Assignments/Assignments.cs:UnassignUserCategoryCommandHandler",
+      "type": "function",
+      "name": "UnassignUserCategoryCommandHandler",
+      "filePath": "Rmms.Application/Organization/Assignments/Assignments.cs",
+      "lineRange": [
+        221,
+        225
+      ],
+      "summary": "Hàm UnassignUserCategoryCommandHandler trong Assignments.cs.",
+      "tags": [
+        "rmms.application",
+        "organization",
+        "code",
+        "cs",
+        "ham"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Rmms.Application/Organization/Assignments/Assignments.cs:GetUserAssignmentsQueryHandler",
+      "type": "function",
+      "name": "GetUserAssignmentsQueryHandler",
+      "filePath": "Rmms.Application/Organization/Assignments/Assignments.cs",
+      "lineRange": [
+        255,
+        255
+      ],
+      "summary": "Hàm GetUserAssignmentsQueryHandler trong Assignments.cs.",
+      "tags": [
+        "rmms.application",
+        "organization",
+        "code",
+        "cs",
+        "ham"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:Rmms.Application/Organization/Assignments/Assignments.cs:AssignPgLeaderCommandHandler",
+      "type": "class",
+      "name": "AssignPgLeaderCommandHandler",
+      "filePath": "Rmms.Application/Organization/Assignments/Assignments.cs",
+      "lineRange": [
+        32,
+        84
+      ],
+      "summary": "Class AssignPgLeaderCommandHandler trong Assignments.cs.",
+      "tags": [
+        "rmms.application",
+        "organization",
+        "code",
+        "cs",
+        "class"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "class:Rmms.Application/Organization/Assignments/Assignments.cs:AssignUserStoreCommandHandler",
+      "type": "class",
+      "name": "AssignUserStoreCommandHandler",
+      "filePath": "Rmms.Application/Organization/Assignments/Assignments.cs",
+      "lineRange": [
+        90,
+        132
+      ],
+      "summary": "Class AssignUserStoreCommandHandler trong Assignments.cs.",
+      "tags": [
+        "rmms.application",
+        "organization",
+        "code",
+        "cs",
+        "class"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "class:Rmms.Application/Organization/Assignments/Assignments.cs:UnassignUserStoreCommandHandler",
+      "type": "class",
+      "name": "UnassignUserStoreCommandHandler",
+      "filePath": "Rmms.Application/Organization/Assignments/Assignments.cs",
+      "lineRange": [
+        136,
+        167
+      ],
+      "summary": "Class UnassignUserStoreCommandHandler trong Assignments.cs.",
+      "tags": [
+        "rmms.application",
+        "organization",
+        "code",
+        "cs",
+        "class"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "class:Rmms.Application/Organization/Assignments/Assignments.cs:AssignUserCategoryCommandHandler",
+      "type": "class",
+      "name": "AssignUserCategoryCommandHandler",
+      "filePath": "Rmms.Application/Organization/Assignments/Assignments.cs",
+      "lineRange": [
+        173,
+        212
+      ],
+      "summary": "Class AssignUserCategoryCommandHandler trong Assignments.cs.",
+      "tags": [
+        "rmms.application",
+        "organization",
+        "code",
+        "cs",
+        "class"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "class:Rmms.Application/Organization/Assignments/Assignments.cs:UnassignUserCategoryCommandHandler",
+      "type": "class",
+      "name": "UnassignUserCategoryCommandHandler",
+      "filePath": "Rmms.Application/Organization/Assignments/Assignments.cs",
+      "lineRange": [
+        216,
+        245
+      ],
+      "summary": "Class UnassignUserCategoryCommandHandler trong Assignments.cs.",
+      "tags": [
+        "rmms.application",
+        "organization",
+        "code",
+        "cs",
+        "class"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "class:Rmms.Application/Organization/Assignments/Assignments.cs:GetUserAssignmentsQueryHandler",
+      "type": "class",
+      "name": "GetUserAssignmentsQueryHandler",
+      "filePath": "Rmms.Application/Organization/Assignments/Assignments.cs",
+      "lineRange": [
+        251,
+        286
+      ],
+      "summary": "Class GetUserAssignmentsQueryHandler trong Assignments.cs.",
+      "tags": [
+        "rmms.application",
+        "organization",
+        "code",
+        "cs",
+        "class"
+      ],
+      "complexity": "moderate"
+    }
+  ],
+  "edges": [
+    {
+      "source": "file:Rmms.Application/FaceRecognition/AdminRemoveFace.cs",
+      "target": "function:Rmms.Application/FaceRecognition/AdminRemoveFace.cs:AdminRemoveFaceCommandHandler",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Application/FaceRecognition/AdminRemoveFace.cs",
+      "target": "function:Rmms.Application/FaceRecognition/AdminRemoveFace.cs:Handle",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Application/FaceRecognition/AdminRemoveFace.cs",
+      "target": "class:Rmms.Application/FaceRecognition/AdminRemoveFace.cs:AdminRemoveFaceCommandHandler",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Application/FaceRecognition/EnrollFace.cs",
+      "target": "function:Rmms.Application/FaceRecognition/EnrollFace.cs:EnrollFaceCommandValidator",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Application/FaceRecognition/EnrollFace.cs",
+      "target": "function:Rmms.Application/FaceRecognition/EnrollFace.cs:EnrollFaceCommandHandler",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Application/FaceRecognition/EnrollFace.cs",
+      "target": "function:Rmms.Application/FaceRecognition/EnrollFace.cs:Handle",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Application/FaceRecognition/EnrollFace.cs",
+      "target": "class:Rmms.Application/FaceRecognition/EnrollFace.cs:EnrollFaceCommandValidator",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Application/FaceRecognition/EnrollFace.cs",
+      "target": "class:Rmms.Application/FaceRecognition/EnrollFace.cs:EnrollFaceCommandHandler",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Application/FaceRecognition/RemoveMyFace.cs",
+      "target": "function:Rmms.Application/FaceRecognition/RemoveMyFace.cs:RemoveMyFaceCommandHandler",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Application/FaceRecognition/RemoveMyFace.cs",
+      "target": "function:Rmms.Application/FaceRecognition/RemoveMyFace.cs:Handle",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Application/FaceRecognition/RemoveMyFace.cs",
+      "target": "class:Rmms.Application/FaceRecognition/RemoveMyFace.cs:RemoveMyFaceCommandHandler",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Application/FaceRecognition/VerifyFace.cs",
+      "target": "function:Rmms.Application/FaceRecognition/VerifyFace.cs:VerifyFaceCommandValidator",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Application/FaceRecognition/VerifyFace.cs",
+      "target": "function:Rmms.Application/FaceRecognition/VerifyFace.cs:VerifyFaceCommandHandler",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Application/FaceRecognition/VerifyFace.cs",
+      "target": "function:Rmms.Application/FaceRecognition/VerifyFace.cs:Handle",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Application/FaceRecognition/VerifyFace.cs",
+      "target": "function:Rmms.Application/FaceRecognition/VerifyFace.cs:GetFaceStatusQueryHandler",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Application/FaceRecognition/VerifyFace.cs",
+      "target": "function:Rmms.Application/FaceRecognition/VerifyFace.cs:Handle",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Application/FaceRecognition/VerifyFace.cs",
+      "target": "class:Rmms.Application/FaceRecognition/VerifyFace.cs:VerifyFaceCommandValidator",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Application/FaceRecognition/VerifyFace.cs",
+      "target": "class:Rmms.Application/FaceRecognition/VerifyFace.cs:VerifyFaceCommandHandler",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Application/FaceRecognition/VerifyFace.cs",
+      "target": "class:Rmms.Application/FaceRecognition/VerifyFace.cs:GetFaceStatusQueryHandler",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Application/Forms/FormFill.cs",
+      "target": "function:Rmms.Application/Forms/FormFill.cs:AssignFormCommandHandler",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Application/Forms/FormFill.cs",
+      "target": "function:Rmms.Application/Forms/FormFill.cs:Handle",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Application/Forms/FormFill.cs",
+      "target": "function:Rmms.Application/Forms/FormFill.cs:UploadFormAttachmentCommandHandler",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Application/Forms/FormFill.cs",
+      "target": "function:Rmms.Application/Forms/FormFill.cs:Handle",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Application/Forms/FormFill.cs",
+      "target": "function:Rmms.Application/Forms/FormFill.cs:GetMyFormsQueryHandler",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Application/Forms/FormFill.cs",
+      "target": "function:Rmms.Application/Forms/FormFill.cs:Handle",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Application/Forms/FormFill.cs",
+      "target": "function:Rmms.Application/Forms/FormFill.cs:GetFormForFillQueryHandler",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Application/Forms/FormFill.cs",
+      "target": "function:Rmms.Application/Forms/FormFill.cs:Handle",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Application/Forms/FormFill.cs",
+      "target": "function:Rmms.Application/Forms/FormFill.cs:SubmitFormCommandValidator",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Application/Forms/FormFill.cs",
+      "target": "function:Rmms.Application/Forms/FormFill.cs:SubmitFormCommandHandler",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Application/Forms/FormFill.cs",
+      "target": "function:Rmms.Application/Forms/FormFill.cs:Handle",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Application/Forms/FormFill.cs",
+      "target": "function:Rmms.Application/Forms/FormFill.cs:VnDayBounds",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Application/Forms/FormFill.cs",
+      "target": "function:Rmms.Application/Forms/FormFill.cs:ResolveAssignedFormIdsAsync",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Application/Forms/FormFill.cs",
+      "target": "function:Rmms.Application/Forms/FormFill.cs:IsValidJson",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Application/Forms/FormFill.cs",
+      "target": "function:Rmms.Application/Forms/FormFill.cs:FindMissingRequired",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Application/Forms/FormFill.cs",
+      "target": "function:Rmms.Application/Forms/FormFill.cs:IsEmpty",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Application/Forms/FormFill.cs",
+      "target": "function:Rmms.Application/Forms/FormFill.cs:ParseRules",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Application/Forms/FormFill.cs",
+      "target": "function:Rmms.Application/Forms/FormFill.cs:HasAnyAttachment",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Application/Forms/FormFill.cs",
+      "target": "class:Rmms.Application/Forms/FormFill.cs:AssignFormCommandHandler",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Application/Forms/FormFill.cs",
+      "target": "class:Rmms.Application/Forms/FormFill.cs:UploadFormAttachmentCommandHandler",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Application/Forms/FormFill.cs",
+      "target": "class:Rmms.Application/Forms/FormFill.cs:GetMyFormsQueryHandler",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Application/Forms/FormFill.cs",
+      "target": "class:Rmms.Application/Forms/FormFill.cs:GetFormForFillQueryHandler",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Application/Forms/FormFill.cs",
+      "target": "class:Rmms.Application/Forms/FormFill.cs:SubmitFormCommandValidator",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Application/Forms/FormFill.cs",
+      "target": "class:Rmms.Application/Forms/FormFill.cs:SubmitFormCommandHandler",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Application/Forms/FormFill.cs",
+      "target": "class:Rmms.Application/Forms/FormFill.cs:FormScope",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Application/Forms/FormFill.cs",
+      "target": "class:Rmms.Application/Forms/FormFill.cs:FormAnswers",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Application/Forms/Forms.cs",
+      "target": "function:Rmms.Application/Forms/Forms.cs:CreateFormCommandValidator",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Application/Forms/Forms.cs",
+      "target": "function:Rmms.Application/Forms/Forms.cs:CreateFormCommandHandler",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Application/Forms/Forms.cs",
+      "target": "function:Rmms.Application/Forms/Forms.cs:Handle",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Application/Forms/Forms.cs",
+      "target": "function:Rmms.Application/Forms/Forms.cs:UpdateFormDraftCommandValidator",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Application/Forms/Forms.cs",
+      "target": "function:Rmms.Application/Forms/Forms.cs:UpdateFormDraftCommandHandler",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Application/Forms/Forms.cs",
+      "target": "function:Rmms.Application/Forms/Forms.cs:Handle",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Application/Forms/Forms.cs",
+      "target": "function:Rmms.Application/Forms/Forms.cs:PublishFormCommandHandler",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Application/Forms/Forms.cs",
+      "target": "function:Rmms.Application/Forms/Forms.cs:Handle",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Application/Forms/Forms.cs",
+      "target": "function:Rmms.Application/Forms/Forms.cs:GetFormsQueryHandler",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Application/Forms/Forms.cs",
+      "target": "function:Rmms.Application/Forms/Forms.cs:Handle",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Application/Forms/Forms.cs",
+      "target": "function:Rmms.Application/Forms/Forms.cs:FormStatusText",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Application/Forms/Forms.cs",
+      "target": "function:Rmms.Application/Forms/Forms.cs:GetFormQueryHandler",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Application/Forms/Forms.cs",
+      "target": "function:Rmms.Application/Forms/Forms.cs:Handle",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Application/Forms/Forms.cs",
+      "target": "function:Rmms.Application/Forms/Forms.cs:GetFormVersionsQueryHandler",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Application/Forms/Forms.cs",
+      "target": "function:Rmms.Application/Forms/Forms.cs:Handle",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Application/Forms/Forms.cs",
+      "target": "function:Rmms.Application/Forms/Forms.cs:TryParse",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Application/Forms/Forms.cs",
+      "target": "function:Rmms.Application/Forms/Forms.cs:ToText",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Application/Forms/Forms.cs",
+      "target": "class:Rmms.Application/Forms/Forms.cs:CreateFormCommandValidator",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Application/Forms/Forms.cs",
+      "target": "class:Rmms.Application/Forms/Forms.cs:CreateFormCommandHandler",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Application/Forms/Forms.cs",
+      "target": "class:Rmms.Application/Forms/Forms.cs:UpdateFormDraftCommandValidator",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Application/Forms/Forms.cs",
+      "target": "class:Rmms.Application/Forms/Forms.cs:UpdateFormDraftCommandHandler",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Application/Forms/Forms.cs",
+      "target": "class:Rmms.Application/Forms/Forms.cs:PublishFormCommandHandler",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Application/Forms/Forms.cs",
+      "target": "class:Rmms.Application/Forms/Forms.cs:GetFormsQueryHandler",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Application/Forms/Forms.cs",
+      "target": "class:Rmms.Application/Forms/Forms.cs:GetFormQueryHandler",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Application/Forms/Forms.cs",
+      "target": "class:Rmms.Application/Forms/Forms.cs:GetFormVersionsQueryHandler",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Application/Forms/Forms.cs",
+      "target": "class:Rmms.Application/Forms/Forms.cs:FormTypeMap",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Application/Forms/FormSchema.cs",
+      "target": "function:Rmms.Application/Forms/FormSchema.cs:Validate",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Application/Forms/FormSchema.cs",
+      "target": "class:Rmms.Application/Forms/FormSchema.cs:FormSchema",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Application/LeaveOt/AdminGetRequests.cs",
+      "target": "function:Rmms.Application/LeaveOt/AdminGetRequests.cs:GetAllLeaveRequestsQueryHandler",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Application/LeaveOt/AdminGetRequests.cs",
+      "target": "function:Rmms.Application/LeaveOt/AdminGetRequests.cs:Handle",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Application/LeaveOt/AdminGetRequests.cs",
+      "target": "function:Rmms.Application/LeaveOt/AdminGetRequests.cs:GetAllOtRequestsQueryHandler",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Application/LeaveOt/AdminGetRequests.cs",
+      "target": "function:Rmms.Application/LeaveOt/AdminGetRequests.cs:Handle",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Application/LeaveOt/AdminGetRequests.cs",
+      "target": "class:Rmms.Application/LeaveOt/AdminGetRequests.cs:GetAllLeaveRequestsQueryHandler",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Application/LeaveOt/AdminGetRequests.cs",
+      "target": "class:Rmms.Application/LeaveOt/AdminGetRequests.cs:GetAllOtRequestsQueryHandler",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Application/LeaveOt/CreateLeaveRequest.cs",
+      "target": "function:Rmms.Application/LeaveOt/CreateLeaveRequest.cs:CreateLeaveRequestCommandValidator",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Application/LeaveOt/CreateLeaveRequest.cs",
+      "target": "function:Rmms.Application/LeaveOt/CreateLeaveRequest.cs:CreateLeaveRequestCommandHandler",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Application/LeaveOt/CreateLeaveRequest.cs",
+      "target": "function:Rmms.Application/LeaveOt/CreateLeaveRequest.cs:Handle",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Application/LeaveOt/CreateLeaveRequest.cs",
+      "target": "function:Rmms.Application/LeaveOt/CreateLeaveRequest.cs:CreateEmergencyLeaveCommandHandler",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Application/LeaveOt/CreateLeaveRequest.cs",
+      "target": "function:Rmms.Application/LeaveOt/CreateLeaveRequest.cs:Handle",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Application/LeaveOt/CreateLeaveRequest.cs",
+      "target": "class:Rmms.Application/LeaveOt/CreateLeaveRequest.cs:CreateLeaveRequestCommandValidator",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Application/LeaveOt/CreateLeaveRequest.cs",
+      "target": "class:Rmms.Application/LeaveOt/CreateLeaveRequest.cs:CreateLeaveRequestCommandHandler",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Application/LeaveOt/CreateLeaveRequest.cs",
+      "target": "class:Rmms.Application/LeaveOt/CreateLeaveRequest.cs:CreateEmergencyLeaveCommandHandler",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Application/LeaveOt/CreateOtRequest.cs",
+      "target": "function:Rmms.Application/LeaveOt/CreateOtRequest.cs:CreateOtRequestCommandValidator",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Application/LeaveOt/CreateOtRequest.cs",
+      "target": "function:Rmms.Application/LeaveOt/CreateOtRequest.cs:CreateOtRequestCommandHandler",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Application/LeaveOt/CreateOtRequest.cs",
+      "target": "function:Rmms.Application/LeaveOt/CreateOtRequest.cs:Handle",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Application/LeaveOt/CreateOtRequest.cs",
+      "target": "class:Rmms.Application/LeaveOt/CreateOtRequest.cs:CreateOtRequestCommandValidator",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Application/LeaveOt/CreateOtRequest.cs",
+      "target": "class:Rmms.Application/LeaveOt/CreateOtRequest.cs:CreateOtRequestCommandHandler",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Application/LeaveOt/GetMyRequests.cs",
+      "target": "function:Rmms.Application/LeaveOt/GetMyRequests.cs:GetMyLeaveRequestsQueryHandler",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Application/LeaveOt/GetMyRequests.cs",
+      "target": "function:Rmms.Application/LeaveOt/GetMyRequests.cs:Handle",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Application/LeaveOt/GetMyRequests.cs",
+      "target": "function:Rmms.Application/LeaveOt/GetMyRequests.cs:GetMyOtRequestsQueryHandler",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Application/LeaveOt/GetMyRequests.cs",
+      "target": "function:Rmms.Application/LeaveOt/GetMyRequests.cs:Handle",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Application/LeaveOt/GetMyRequests.cs",
+      "target": "class:Rmms.Application/LeaveOt/GetMyRequests.cs:GetMyLeaveRequestsQueryHandler",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Application/LeaveOt/GetMyRequests.cs",
+      "target": "class:Rmms.Application/LeaveOt/GetMyRequests.cs:GetMyOtRequestsQueryHandler",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Application/LeaveOt/LeaveOtDtos.cs",
+      "target": "function:Rmms.Application/LeaveOt/LeaveOtDtos.cs:ToDto",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Application/LeaveOt/LeaveOtDtos.cs",
+      "target": "function:Rmms.Application/LeaveOt/LeaveOtDtos.cs:ToDto",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Application/LeaveOt/LeaveOtDtos.cs",
+      "target": "class:Rmms.Application/LeaveOt/LeaveOtDtos.cs:LeaveOtMapper",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Application/LeaveOt/RequestRouting.cs",
+      "target": "function:Rmms.Application/LeaveOt/RequestRouting.cs:RouteAsync",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Application/LeaveOt/RequestRouting.cs",
+      "target": "function:Rmms.Application/LeaveOt/RequestRouting.cs:ResolveApproverAsync",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Application/LeaveOt/RequestRouting.cs",
+      "target": "function:Rmms.Application/LeaveOt/RequestRouting.cs:ResolveBuhApproverAsync",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Application/LeaveOt/RequestRouting.cs",
+      "target": "class:Rmms.Application/LeaveOt/RequestRouting.cs:LeaveOtProducer",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Application/LeaveOt/RequestRouting.cs",
+      "target": "class:Rmms.Application/LeaveOt/RequestRouting.cs:RequestRouting",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Application/LeaveOt/WithdrawLeaveRequest.cs",
+      "target": "function:Rmms.Application/LeaveOt/WithdrawLeaveRequest.cs:WithdrawLeaveRequestCommandHandler",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Application/LeaveOt/WithdrawLeaveRequest.cs",
+      "target": "function:Rmms.Application/LeaveOt/WithdrawLeaveRequest.cs:Handle",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Application/LeaveOt/WithdrawLeaveRequest.cs",
+      "target": "class:Rmms.Application/LeaveOt/WithdrawLeaveRequest.cs:WithdrawLeaveRequestCommandHandler",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Application/Maintenance/AttendancePhotoRetentionService.cs",
+      "target": "function:Rmms.Application/Maintenance/AttendancePhotoRetentionService.cs:AttendancePhotoRetentionService",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Application/Maintenance/AttendancePhotoRetentionService.cs",
+      "target": "function:Rmms.Application/Maintenance/AttendancePhotoRetentionService.cs:RunAsync",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Application/Maintenance/AttendancePhotoRetentionService.cs",
+      "target": "class:Rmms.Application/Maintenance/AttendancePhotoRetentionService.cs:AttendancePhotoRetentionService",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Application/Maintenance/TokenCleanupService.cs",
+      "target": "function:Rmms.Application/Maintenance/TokenCleanupService.cs:TokenCleanupService",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Application/Maintenance/TokenCleanupService.cs",
+      "target": "function:Rmms.Application/Maintenance/TokenCleanupService.cs:RunAsync",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Application/Maintenance/TokenCleanupService.cs",
+      "target": "class:Rmms.Application/Maintenance/TokenCleanupService.cs:TokenCleanupService",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Application/News/News.cs",
+      "target": "function:Rmms.Application/News/News.cs:CreateNewsCommandValidator",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Application/News/News.cs",
+      "target": "function:Rmms.Application/News/News.cs:CreateNewsCommandHandler",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Application/News/News.cs",
+      "target": "function:Rmms.Application/News/News.cs:Handle",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Application/News/News.cs",
+      "target": "function:Rmms.Application/News/News.cs:UpdateNewsCommandValidator",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Application/News/News.cs",
+      "target": "function:Rmms.Application/News/News.cs:UpdateNewsCommandHandler",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Application/News/News.cs",
+      "target": "function:Rmms.Application/News/News.cs:Handle",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Application/News/News.cs",
+      "target": "function:Rmms.Application/News/News.cs:AssignNewsCommandHandler",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Application/News/News.cs",
+      "target": "function:Rmms.Application/News/News.cs:Handle",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Application/News/News.cs",
+      "target": "function:Rmms.Application/News/News.cs:PublishNewsCommandHandler",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Application/News/News.cs",
+      "target": "function:Rmms.Application/News/News.cs:Handle",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Application/News/News.cs",
+      "target": "function:Rmms.Application/News/News.cs:DeleteNewsCommandHandler",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Application/News/News.cs",
+      "target": "function:Rmms.Application/News/News.cs:Handle",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Application/News/News.cs",
+      "target": "function:Rmms.Application/News/News.cs:GetMyNewsQueryHandler",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Application/News/News.cs",
+      "target": "function:Rmms.Application/News/News.cs:Handle",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Application/News/News.cs",
+      "target": "function:Rmms.Application/News/News.cs:MarkNewsReadCommandHandler",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Application/News/News.cs",
+      "target": "function:Rmms.Application/News/News.cs:Handle",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Application/News/News.cs",
+      "target": "function:Rmms.Application/News/News.cs:ConfirmNewsCommandHandler",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Application/News/News.cs",
+      "target": "function:Rmms.Application/News/News.cs:Handle",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Application/News/News.cs",
+      "target": "function:Rmms.Application/News/News.cs:AdminGetNewsQueryHandler",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Application/News/News.cs",
+      "target": "function:Rmms.Application/News/News.cs:Handle",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Application/News/News.cs",
+      "target": "function:Rmms.Application/News/News.cs:ResolveAssignedIdsAsync",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Application/News/News.cs",
+      "target": "function:Rmms.Application/News/News.cs:ResolveAsync",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Application/News/News.cs",
+      "target": "class:Rmms.Application/News/News.cs:CreateNewsCommandValidator",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Application/News/News.cs",
+      "target": "class:Rmms.Application/News/News.cs:CreateNewsCommandHandler",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Application/News/News.cs",
+      "target": "class:Rmms.Application/News/News.cs:UpdateNewsCommandValidator",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Application/News/News.cs",
+      "target": "class:Rmms.Application/News/News.cs:UpdateNewsCommandHandler",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Application/News/News.cs",
+      "target": "class:Rmms.Application/News/News.cs:AssignNewsCommandHandler",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Application/News/News.cs",
+      "target": "class:Rmms.Application/News/News.cs:PublishNewsCommandHandler",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Application/News/News.cs",
+      "target": "class:Rmms.Application/News/News.cs:DeleteNewsCommandHandler",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Application/News/News.cs",
+      "target": "class:Rmms.Application/News/News.cs:GetMyNewsQueryHandler",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Application/News/News.cs",
+      "target": "class:Rmms.Application/News/News.cs:MarkNewsReadCommandHandler",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Application/News/News.cs",
+      "target": "class:Rmms.Application/News/News.cs:ConfirmNewsCommandHandler",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Application/News/News.cs",
+      "target": "class:Rmms.Application/News/News.cs:AdminGetNewsQueryHandler",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Application/News/News.cs",
+      "target": "class:Rmms.Application/News/News.cs:NewsScope",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Application/News/News.cs",
+      "target": "class:Rmms.Application/News/News.cs:NewsRecipients",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Application/News/NewsDtos.cs",
+      "target": "function:Rmms.Application/News/NewsDtos.cs:ToDto",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Application/News/NewsDtos.cs",
+      "target": "function:Rmms.Application/News/NewsDtos.cs:ToAdminDto",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Application/News/NewsDtos.cs",
+      "target": "class:Rmms.Application/News/NewsDtos.cs:NewsMapper",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Application/Notifications/GetMyNotifications.cs",
+      "target": "function:Rmms.Application/Notifications/GetMyNotifications.cs:GetMyNotificationsQueryHandler",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Application/Notifications/GetMyNotifications.cs",
+      "target": "function:Rmms.Application/Notifications/GetMyNotifications.cs:Handle",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Application/Notifications/GetMyNotifications.cs",
+      "target": "class:Rmms.Application/Notifications/GetMyNotifications.cs:GetMyNotificationsQueryHandler",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Application/Notifications/MarkNotificationRead.cs",
+      "target": "function:Rmms.Application/Notifications/MarkNotificationRead.cs:MarkNotificationReadCommandHandler",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Application/Notifications/MarkNotificationRead.cs",
+      "target": "function:Rmms.Application/Notifications/MarkNotificationRead.cs:Handle",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Application/Notifications/MarkNotificationRead.cs",
+      "target": "function:Rmms.Application/Notifications/MarkNotificationRead.cs:MarkAllNotificationsReadCommandHandler",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Application/Notifications/MarkNotificationRead.cs",
+      "target": "function:Rmms.Application/Notifications/MarkNotificationRead.cs:Handle",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Application/Notifications/MarkNotificationRead.cs",
+      "target": "class:Rmms.Application/Notifications/MarkNotificationRead.cs:MarkNotificationReadCommandHandler",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Application/Notifications/MarkNotificationRead.cs",
+      "target": "class:Rmms.Application/Notifications/MarkNotificationRead.cs:MarkAllNotificationsReadCommandHandler",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Application/Notifications/NotificationDtos.cs",
+      "target": "function:Rmms.Application/Notifications/NotificationDtos.cs:ToDto",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Application/Notifications/NotificationDtos.cs",
+      "target": "function:Rmms.Application/Notifications/NotificationDtos.cs:ParseData",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Application/Notifications/NotificationDtos.cs",
+      "target": "class:Rmms.Application/Notifications/NotificationDtos.cs:NotificationMapper",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Application/Notifications/RegisterFcmToken.cs",
+      "target": "function:Rmms.Application/Notifications/RegisterFcmToken.cs:RegisterFcmTokenCommandHandler",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Application/Notifications/RegisterFcmToken.cs",
+      "target": "function:Rmms.Application/Notifications/RegisterFcmToken.cs:Handle",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Application/Notifications/RegisterFcmToken.cs",
+      "target": "function:Rmms.Application/Notifications/RegisterFcmToken.cs:ResolveDeviceAsync",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Application/Notifications/RegisterFcmToken.cs",
+      "target": "class:Rmms.Application/Notifications/RegisterFcmToken.cs:RegisterFcmTokenCommandHandler",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Application/Organization/Areas/Areas.cs",
+      "target": "function:Rmms.Application/Organization/Areas/Areas.cs:CreateAreaCommandValidator",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Application/Organization/Areas/Areas.cs",
+      "target": "function:Rmms.Application/Organization/Areas/Areas.cs:CreateAreaCommandHandler",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Application/Organization/Areas/Areas.cs",
+      "target": "function:Rmms.Application/Organization/Areas/Areas.cs:Handle",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Application/Organization/Areas/Areas.cs",
+      "target": "function:Rmms.Application/Organization/Areas/Areas.cs:UpdateAreaCommandValidator",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Application/Organization/Areas/Areas.cs",
+      "target": "function:Rmms.Application/Organization/Areas/Areas.cs:UpdateAreaCommandHandler",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Application/Organization/Areas/Areas.cs",
+      "target": "function:Rmms.Application/Organization/Areas/Areas.cs:Handle",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Application/Organization/Areas/Areas.cs",
+      "target": "function:Rmms.Application/Organization/Areas/Areas.cs:DeleteAreaCommandHandler",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Application/Organization/Areas/Areas.cs",
+      "target": "function:Rmms.Application/Organization/Areas/Areas.cs:Handle",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Application/Organization/Areas/Areas.cs",
+      "target": "function:Rmms.Application/Organization/Areas/Areas.cs:GetAreasQueryHandler",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Application/Organization/Areas/Areas.cs",
+      "target": "function:Rmms.Application/Organization/Areas/Areas.cs:Handle",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Application/Organization/Areas/Areas.cs",
+      "target": "class:Rmms.Application/Organization/Areas/Areas.cs:CreateAreaCommandValidator",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Application/Organization/Areas/Areas.cs",
+      "target": "class:Rmms.Application/Organization/Areas/Areas.cs:CreateAreaCommandHandler",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Application/Organization/Areas/Areas.cs",
+      "target": "class:Rmms.Application/Organization/Areas/Areas.cs:UpdateAreaCommandValidator",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Application/Organization/Areas/Areas.cs",
+      "target": "class:Rmms.Application/Organization/Areas/Areas.cs:UpdateAreaCommandHandler",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Application/Organization/Areas/Areas.cs",
+      "target": "class:Rmms.Application/Organization/Areas/Areas.cs:DeleteAreaCommandHandler",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Application/Organization/Areas/Areas.cs",
+      "target": "class:Rmms.Application/Organization/Areas/Areas.cs:GetAreasQueryHandler",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Application/Organization/Assignments/Assignments.cs",
+      "target": "function:Rmms.Application/Organization/Assignments/Assignments.cs:AssignPgLeaderCommandHandler",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Application/Organization/Assignments/Assignments.cs",
+      "target": "function:Rmms.Application/Organization/Assignments/Assignments.cs:Handle",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Application/Organization/Assignments/Assignments.cs",
+      "target": "function:Rmms.Application/Organization/Assignments/Assignments.cs:AssignUserStoreCommandHandler",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Application/Organization/Assignments/Assignments.cs",
+      "target": "function:Rmms.Application/Organization/Assignments/Assignments.cs:Handle",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Application/Organization/Assignments/Assignments.cs",
+      "target": "function:Rmms.Application/Organization/Assignments/Assignments.cs:UnassignUserStoreCommandHandler",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Application/Organization/Assignments/Assignments.cs",
+      "target": "function:Rmms.Application/Organization/Assignments/Assignments.cs:Handle",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Application/Organization/Assignments/Assignments.cs",
+      "target": "function:Rmms.Application/Organization/Assignments/Assignments.cs:AssignUserCategoryCommandHandler",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Application/Organization/Assignments/Assignments.cs",
+      "target": "function:Rmms.Application/Organization/Assignments/Assignments.cs:Handle",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Application/Organization/Assignments/Assignments.cs",
+      "target": "function:Rmms.Application/Organization/Assignments/Assignments.cs:UnassignUserCategoryCommandHandler",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Application/Organization/Assignments/Assignments.cs",
+      "target": "function:Rmms.Application/Organization/Assignments/Assignments.cs:Handle",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Application/Organization/Assignments/Assignments.cs",
+      "target": "function:Rmms.Application/Organization/Assignments/Assignments.cs:GetUserAssignmentsQueryHandler",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Application/Organization/Assignments/Assignments.cs",
+      "target": "function:Rmms.Application/Organization/Assignments/Assignments.cs:Handle",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Application/Organization/Assignments/Assignments.cs",
+      "target": "class:Rmms.Application/Organization/Assignments/Assignments.cs:AssignPgLeaderCommandHandler",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Application/Organization/Assignments/Assignments.cs",
+      "target": "class:Rmms.Application/Organization/Assignments/Assignments.cs:AssignUserStoreCommandHandler",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Application/Organization/Assignments/Assignments.cs",
+      "target": "class:Rmms.Application/Organization/Assignments/Assignments.cs:UnassignUserStoreCommandHandler",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Application/Organization/Assignments/Assignments.cs",
+      "target": "class:Rmms.Application/Organization/Assignments/Assignments.cs:AssignUserCategoryCommandHandler",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Application/Organization/Assignments/Assignments.cs",
+      "target": "class:Rmms.Application/Organization/Assignments/Assignments.cs:UnassignUserCategoryCommandHandler",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Application/Organization/Assignments/Assignments.cs",
+      "target": "class:Rmms.Application/Organization/Assignments/Assignments.cs:GetUserAssignmentsQueryHandler",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    }
+  ]
+}

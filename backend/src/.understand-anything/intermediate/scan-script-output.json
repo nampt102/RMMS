@@ -1,0 +1,2611 @@
+{
+  "scriptCompleted": true,
+  "files": [
+    {
+      "path": ".understand-anything/.understandignore",
+      "language": "unknown",
+      "sizeLines": 27,
+      "fileCategory": "code"
+    },
+    {
+      "path": ".understand-anything/config.json",
+      "language": "json",
+      "sizeLines": 3,
+      "fileCategory": "config"
+    },
+    {
+      "path": ".understand-anything/intermediate/assembled-graph.json",
+      "language": "json",
+      "sizeLines": 40285,
+      "fileCategory": "config"
+    },
+    {
+      "path": ".understand-anything/intermediate/batch-1.json",
+      "language": "json",
+      "sizeLines": 32,
+      "fileCategory": "config"
+    },
+    {
+      "path": ".understand-anything/intermediate/batch-10.json",
+      "language": "json",
+      "sizeLines": 1265,
+      "fileCategory": "config"
+    },
+    {
+      "path": ".understand-anything/intermediate/batch-11.json",
+      "language": "json",
+      "sizeLines": 2002,
+      "fileCategory": "config"
+    },
+    {
+      "path": ".understand-anything/intermediate/batch-12.json",
+      "language": "json",
+      "sizeLines": 5044,
+      "fileCategory": "config"
+    },
+    {
+      "path": ".understand-anything/intermediate/batch-13.json",
+      "language": "json",
+      "sizeLines": 4022,
+      "fileCategory": "config"
+    },
+    {
+      "path": ".understand-anything/intermediate/batch-14.json",
+      "language": "json",
+      "sizeLines": 2704,
+      "fileCategory": "config"
+    },
+    {
+      "path": ".understand-anything/intermediate/batch-15.json",
+      "language": "json",
+      "sizeLines": 1395,
+      "fileCategory": "config"
+    },
+    {
+      "path": ".understand-anything/intermediate/batch-16.json",
+      "language": "json",
+      "sizeLines": 3697,
+      "fileCategory": "config"
+    },
+    {
+      "path": ".understand-anything/intermediate/batch-17.json",
+      "language": "json",
+      "sizeLines": 2468,
+      "fileCategory": "config"
+    },
+    {
+      "path": ".understand-anything/intermediate/batch-18.json",
+      "language": "json",
+      "sizeLines": 2319,
+      "fileCategory": "config"
+    },
+    {
+      "path": ".understand-anything/intermediate/batch-19.json",
+      "language": "json",
+      "sizeLines": 1993,
+      "fileCategory": "config"
+    },
+    {
+      "path": ".understand-anything/intermediate/batch-2.json",
+      "language": "json",
+      "sizeLines": 18,
+      "fileCategory": "config"
+    },
+    {
+      "path": ".understand-anything/intermediate/batch-20.json",
+      "language": "json",
+      "sizeLines": 1077,
+      "fileCategory": "config"
+    },
+    {
+      "path": ".understand-anything/intermediate/batch-3.json",
+      "language": "json",
+      "sizeLines": 46,
+      "fileCategory": "config"
+    },
+    {
+      "path": ".understand-anything/intermediate/batch-4.json",
+      "language": "json",
+      "sizeLines": 46,
+      "fileCategory": "config"
+    },
+    {
+      "path": ".understand-anything/intermediate/batch-5.json",
+      "language": "json",
+      "sizeLines": 3501,
+      "fileCategory": "config"
+    },
+    {
+      "path": ".understand-anything/intermediate/batch-6.json",
+      "language": "json",
+      "sizeLines": 3397,
+      "fileCategory": "config"
+    },
+    {
+      "path": ".understand-anything/intermediate/batch-7.json",
+      "language": "json",
+      "sizeLines": 1213,
+      "fileCategory": "config"
+    },
+    {
+      "path": ".understand-anything/intermediate/batch-8.json",
+      "language": "json",
+      "sizeLines": 2737,
+      "fileCategory": "config"
+    },
+    {
+      "path": ".understand-anything/intermediate/batch-9.json",
+      "language": "json",
+      "sizeLines": 1343,
+      "fileCategory": "config"
+    },
+    {
+      "path": ".understand-anything/intermediate/batches.json",
+      "language": "json",
+      "sizeLines": 5150,
+      "fileCategory": "config"
+    },
+    {
+      "path": ".understand-anything/intermediate/scan-result.json",
+      "language": "json",
+      "sizeLines": 2455,
+      "fileCategory": "config"
+    },
+    {
+      "path": ".understand-anything/intermediate/scan-script-output.json",
+      "language": "json",
+      "sizeLines": 2448,
+      "fileCategory": "config"
+    },
+    {
+      "path": ".understand-anything/knowledge-graph.json",
+      "language": "json",
+      "sizeLines": 40285,
+      "fileCategory": "config"
+    },
+    {
+      "path": ".understand-anything/meta.json",
+      "language": "json",
+      "sizeLines": 5,
+      "fileCategory": "config"
+    },
+    {
+      "path": "Rmms.Api/.dockerignore",
+      "language": "unknown",
+      "sizeLines": 18,
+      "fileCategory": "infra"
+    },
+    {
+      "path": "Rmms.Api/appsettings.Development.json",
+      "language": "json",
+      "sizeLines": 36,
+      "fileCategory": "config"
+    },
+    {
+      "path": "Rmms.Api/appsettings.json",
+      "language": "json",
+      "sizeLines": 92,
+      "fileCategory": "config"
+    },
+    {
+      "path": "Rmms.Api/Authentication/AuthorizationPolicies.cs",
+      "language": "csharp",
+      "sizeLines": 58,
+      "fileCategory": "code"
+    },
+    {
+      "path": "Rmms.Api/Authentication/HttpContextClientContext.cs",
+      "language": "csharp",
+      "sizeLines": 61,
+      "fileCategory": "code"
+    },
+    {
+      "path": "Rmms.Api/Authentication/HttpContextCurrentUser.cs",
+      "language": "csharp",
+      "sizeLines": 33,
+      "fileCategory": "code"
+    },
+    {
+      "path": "Rmms.Api/Cli/ResetDataCommand.cs",
+      "language": "csharp",
+      "sizeLines": 91,
+      "fileCategory": "code"
+    },
+    {
+      "path": "Rmms.Api/Cli/SeedAdminCommand.cs",
+      "language": "csharp",
+      "sizeLines": 137,
+      "fileCategory": "code"
+    },
+    {
+      "path": "Rmms.Api/Cli/SeedDemoCommand.cs",
+      "language": "csharp",
+      "sizeLines": 187,
+      "fileCategory": "code"
+    },
+    {
+      "path": "Rmms.Api/Cli/SeedMasterCommand.cs",
+      "language": "csharp",
+      "sizeLines": 219,
+      "fileCategory": "code"
+    },
+    {
+      "path": "Rmms.Api/Cli/SeedSuperAdminCommand.cs",
+      "language": "csharp",
+      "sizeLines": 134,
+      "fileCategory": "code"
+    },
+    {
+      "path": "Rmms.Api/Common/InvariantFormParsing.cs",
+      "language": "csharp",
+      "sizeLines": 58,
+      "fileCategory": "code"
+    },
+    {
+      "path": "Rmms.Api/Common/ResultMapping.cs",
+      "language": "csharp",
+      "sizeLines": 55,
+      "fileCategory": "code"
+    },
+    {
+      "path": "Rmms.Api/Controllers/AdminApprovalsController.cs",
+      "language": "csharp",
+      "sizeLines": 43,
+      "fileCategory": "code"
+    },
+    {
+      "path": "Rmms.Api/Controllers/AdminAttendanceController.cs",
+      "language": "csharp",
+      "sizeLines": 50,
+      "fileCategory": "code"
+    },
+    {
+      "path": "Rmms.Api/Controllers/AdminAuditController.cs",
+      "language": "csharp",
+      "sizeLines": 36,
+      "fileCategory": "code"
+    },
+    {
+      "path": "Rmms.Api/Controllers/AdminDocumentsController.cs",
+      "language": "csharp",
+      "sizeLines": 77,
+      "fileCategory": "code"
+    },
+    {
+      "path": "Rmms.Api/Controllers/AdminFaceController.cs",
+      "language": "csharp",
+      "sizeLines": 67,
+      "fileCategory": "code"
+    },
+    {
+      "path": "Rmms.Api/Controllers/AdminFormsController.cs",
+      "language": "csharp",
+      "sizeLines": 77,
+      "fileCategory": "code"
+    },
+    {
+      "path": "Rmms.Api/Controllers/AdminNewsController.cs",
+      "language": "csharp",
+      "sizeLines": 74,
+      "fileCategory": "code"
+    },
+    {
+      "path": "Rmms.Api/Controllers/AdminProductsController.cs",
+      "language": "csharp",
+      "sizeLines": 62,
+      "fileCategory": "code"
+    },
+    {
+      "path": "Rmms.Api/Controllers/AdminRequestsController.cs",
+      "language": "csharp",
+      "sizeLines": 51,
+      "fileCategory": "code"
+    },
+    {
+      "path": "Rmms.Api/Controllers/AdminUsersController.cs",
+      "language": "csharp",
+      "sizeLines": 100,
+      "fileCategory": "code"
+    },
+    {
+      "path": "Rmms.Api/Controllers/AdminVisitPlansController.cs",
+      "language": "csharp",
+      "sizeLines": 29,
+      "fileCategory": "code"
+    },
+    {
+      "path": "Rmms.Api/Controllers/ApprovalsController.cs",
+      "language": "csharp",
+      "sizeLines": 92,
+      "fileCategory": "code"
+    },
+    {
+      "path": "Rmms.Api/Controllers/AreasController.cs",
+      "language": "csharp",
+      "sizeLines": 48,
+      "fileCategory": "code"
+    },
+    {
+      "path": "Rmms.Api/Controllers/AssignmentsController.cs",
+      "language": "csharp",
+      "sizeLines": 66,
+      "fileCategory": "code"
+    },
+    {
+      "path": "Rmms.Api/Controllers/AttendanceController.cs",
+      "language": "csharp",
+      "sizeLines": 117,
+      "fileCategory": "code"
+    },
+    {
+      "path": "Rmms.Api/Controllers/AuthController.cs",
+      "language": "csharp",
+      "sizeLines": 302,
+      "fileCategory": "code"
+    },
+    {
+      "path": "Rmms.Api/Controllers/CategoriesController.cs",
+      "language": "csharp",
+      "sizeLines": 48,
+      "fileCategory": "code"
+    },
+    {
+      "path": "Rmms.Api/Controllers/DashboardController.cs",
+      "language": "csharp",
+      "sizeLines": 40,
+      "fileCategory": "code"
+    },
+    {
+      "path": "Rmms.Api/Controllers/DevicesController.cs",
+      "language": "csharp",
+      "sizeLines": 117,
+      "fileCategory": "code"
+    },
+    {
+      "path": "Rmms.Api/Controllers/DocumentsController.cs",
+      "language": "csharp",
+      "sizeLines": 45,
+      "fileCategory": "code"
+    },
+    {
+      "path": "Rmms.Api/Controllers/FaceController.cs",
+      "language": "csharp",
+      "sizeLines": 88,
+      "fileCategory": "code"
+    },
+    {
+      "path": "Rmms.Api/Controllers/FormsController.cs",
+      "language": "csharp",
+      "sizeLines": 76,
+      "fileCategory": "code"
+    },
+    {
+      "path": "Rmms.Api/Controllers/HealthController.cs",
+      "language": "csharp",
+      "sizeLines": 22,
+      "fileCategory": "code"
+    },
+    {
+      "path": "Rmms.Api/Controllers/LeaveRequestsController.cs",
+      "language": "csharp",
+      "sizeLines": 60,
+      "fileCategory": "code"
+    },
+    {
+      "path": "Rmms.Api/Controllers/NewsController.cs",
+      "language": "csharp",
+      "sizeLines": 52,
+      "fileCategory": "code"
+    },
+    {
+      "path": "Rmms.Api/Controllers/NotificationsController.cs",
+      "language": "csharp",
+      "sizeLines": 66,
+      "fileCategory": "code"
+    },
+    {
+      "path": "Rmms.Api/Controllers/OrgController.cs",
+      "language": "csharp",
+      "sizeLines": 39,
+      "fileCategory": "code"
+    },
+    {
+      "path": "Rmms.Api/Controllers/OtRequestsController.cs",
+      "language": "csharp",
+      "sizeLines": 44,
+      "fileCategory": "code"
+    },
+    {
+      "path": "Rmms.Api/Controllers/ProductsController.cs",
+      "language": "csharp",
+      "sizeLines": 34,
+      "fileCategory": "code"
+    },
+    {
+      "path": "Rmms.Api/Controllers/ReportsController.cs",
+      "language": "csharp",
+      "sizeLines": 71,
+      "fileCategory": "code"
+    },
+    {
+      "path": "Rmms.Api/Controllers/ScheduleController.cs",
+      "language": "csharp",
+      "sizeLines": 158,
+      "fileCategory": "code"
+    },
+    {
+      "path": "Rmms.Api/Controllers/StoresController.cs",
+      "language": "csharp",
+      "sizeLines": 64,
+      "fileCategory": "code"
+    },
+    {
+      "path": "Rmms.Api/Controllers/TeamMonitoringController.cs",
+      "language": "csharp",
+      "sizeLines": 40,
+      "fileCategory": "code"
+    },
+    {
+      "path": "Rmms.Api/Controllers/UsersController.cs",
+      "language": "csharp",
+      "sizeLines": 60,
+      "fileCategory": "code"
+    },
+    {
+      "path": "Rmms.Api/Controllers/VisitPlansController.cs",
+      "language": "csharp",
+      "sizeLines": 74,
+      "fileCategory": "code"
+    },
+    {
+      "path": "Rmms.Api/Dockerfile",
+      "language": "dockerfile",
+      "sizeLines": 38,
+      "fileCategory": "infra"
+    },
+    {
+      "path": "Rmms.Api/Dtos/Admin/CreateUserRequest.cs",
+      "language": "csharp",
+      "sizeLines": 10,
+      "fileCategory": "code"
+    },
+    {
+      "path": "Rmms.Api/Dtos/Admin/UpdateUserRequest.cs",
+      "language": "csharp",
+      "sizeLines": 13,
+      "fileCategory": "code"
+    },
+    {
+      "path": "Rmms.Api/Dtos/Approvals/ApprovalRequests.cs",
+      "language": "csharp",
+      "sizeLines": 10,
+      "fileCategory": "code"
+    },
+    {
+      "path": "Rmms.Api/Dtos/Attendance/AttendanceRequests.cs",
+      "language": "csharp",
+      "sizeLines": 35,
+      "fileCategory": "code"
+    },
+    {
+      "path": "Rmms.Api/Dtos/Auth/ForgotPasswordRequest.cs",
+      "language": "csharp",
+      "sizeLines": 6,
+      "fileCategory": "code"
+    },
+    {
+      "path": "Rmms.Api/Dtos/Auth/LoginRequest.cs",
+      "language": "csharp",
+      "sizeLines": 23,
+      "fileCategory": "code"
+    },
+    {
+      "path": "Rmms.Api/Dtos/Auth/LogoutRequest.cs",
+      "language": "csharp",
+      "sizeLines": 6,
+      "fileCategory": "code"
+    },
+    {
+      "path": "Rmms.Api/Dtos/Auth/RefreshTokenRequest.cs",
+      "language": "csharp",
+      "sizeLines": 6,
+      "fileCategory": "code"
+    },
+    {
+      "path": "Rmms.Api/Dtos/Auth/RegisterRequest.cs",
+      "language": "csharp",
+      "sizeLines": 19,
+      "fileCategory": "code"
+    },
+    {
+      "path": "Rmms.Api/Dtos/Auth/ResetPasswordRequest.cs",
+      "language": "csharp",
+      "sizeLines": 7,
+      "fileCategory": "code"
+    },
+    {
+      "path": "Rmms.Api/Dtos/Auth/VerifyEmailRequest.cs",
+      "language": "csharp",
+      "sizeLines": 13,
+      "fileCategory": "code"
+    },
+    {
+      "path": "Rmms.Api/Dtos/Devices/RejectDeviceRequest.cs",
+      "language": "csharp",
+      "sizeLines": 6,
+      "fileCategory": "code"
+    },
+    {
+      "path": "Rmms.Api/Dtos/Documents/DocumentRequests.cs",
+      "language": "csharp",
+      "sizeLines": 4,
+      "fileCategory": "code"
+    },
+    {
+      "path": "Rmms.Api/Dtos/Face/FaceRequests.cs",
+      "language": "csharp",
+      "sizeLines": 15,
+      "fileCategory": "code"
+    },
+    {
+      "path": "Rmms.Api/Dtos/Forms/FormRequests.cs",
+      "language": "csharp",
+      "sizeLines": 41,
+      "fileCategory": "code"
+    },
+    {
+      "path": "Rmms.Api/Dtos/LeaveOt/LeaveOtRequests.cs",
+      "language": "csharp",
+      "sizeLines": 11,
+      "fileCategory": "code"
+    },
+    {
+      "path": "Rmms.Api/Dtos/News/NewsRequests.cs",
+      "language": "csharp",
+      "sizeLines": 12,
+      "fileCategory": "code"
+    },
+    {
+      "path": "Rmms.Api/Dtos/Organization/OrganizationRequests.cs",
+      "language": "csharp",
+      "sizeLines": 24,
+      "fileCategory": "code"
+    },
+    {
+      "path": "Rmms.Api/Dtos/Scheduling/ScheduleRequests.cs",
+      "language": "csharp",
+      "sizeLines": 16,
+      "fileCategory": "code"
+    },
+    {
+      "path": "Rmms.Api/Dtos/VisitPlans/VisitPlanRequests.cs",
+      "language": "csharp",
+      "sizeLines": 19,
+      "fileCategory": "code"
+    },
+    {
+      "path": "Rmms.Api/Hubs/HubUserIdProvider.cs",
+      "language": "csharp",
+      "sizeLines": 16,
+      "fileCategory": "code"
+    },
+    {
+      "path": "Rmms.Api/Hubs/NotificationsHub.cs",
+      "language": "csharp",
+      "sizeLines": 15,
+      "fileCategory": "code"
+    },
+    {
+      "path": "Rmms.Api/Hubs/SignalRRealtimeNotifier.cs",
+      "language": "csharp",
+      "sizeLines": 19,
+      "fileCategory": "code"
+    },
+    {
+      "path": "Rmms.Api/Localization/ErrorLocalizationFilter.cs",
+      "language": "csharp",
+      "sizeLines": 39,
+      "fileCategory": "code"
+    },
+    {
+      "path": "Rmms.Api/Localization/ErrorMessageCatalog.cs",
+      "language": "csharp",
+      "sizeLines": 79,
+      "fileCategory": "code"
+    },
+    {
+      "path": "Rmms.Api/Logging/RequestEnrichmentMiddleware.cs",
+      "language": "csharp",
+      "sizeLines": 50,
+      "fileCategory": "code"
+    },
+    {
+      "path": "Rmms.Api/Middlewares/ExceptionHandlingMiddleware.cs",
+      "language": "csharp",
+      "sizeLines": 83,
+      "fileCategory": "code"
+    },
+    {
+      "path": "Rmms.Api/Middlewares/IdempotencyMiddleware.cs",
+      "language": "csharp",
+      "sizeLines": 219,
+      "fileCategory": "code"
+    },
+    {
+      "path": "Rmms.Api/Program.cs",
+      "language": "csharp",
+      "sizeLines": 241,
+      "fileCategory": "code"
+    },
+    {
+      "path": "Rmms.Api/Properties/launchSettings.json",
+      "language": "json",
+      "sizeLines": 22,
+      "fileCategory": "config"
+    },
+    {
+      "path": "Rmms.Api/Rmms.Api.csproj",
+      "language": "csproj",
+      "sizeLines": 53,
+      "fileCategory": "config"
+    },
+    {
+      "path": "Rmms.Application/Admin/Users/AdminResetPassword/AdminResetPasswordCommand.cs",
+      "language": "csharp",
+      "sizeLines": 11,
+      "fileCategory": "code"
+    },
+    {
+      "path": "Rmms.Application/Admin/Users/AdminResetPassword/AdminResetPasswordCommandHandler.cs",
+      "language": "csharp",
+      "sizeLines": 79,
+      "fileCategory": "code"
+    },
+    {
+      "path": "Rmms.Application/Admin/Users/AdminUserDto.cs",
+      "language": "csharp",
+      "sizeLines": 17,
+      "fileCategory": "code"
+    },
+    {
+      "path": "Rmms.Application/Admin/Users/CreateAdminUser/CreateAdminUserCommand.cs",
+      "language": "csharp",
+      "sizeLines": 18,
+      "fileCategory": "code"
+    },
+    {
+      "path": "Rmms.Application/Admin/Users/CreateAdminUser/CreateAdminUserCommandHandler.cs",
+      "language": "csharp",
+      "sizeLines": 136,
+      "fileCategory": "code"
+    },
+    {
+      "path": "Rmms.Application/Admin/Users/CreateAdminUser/CreateAdminUserCommandValidator.cs",
+      "language": "csharp",
+      "sizeLines": 33,
+      "fileCategory": "code"
+    },
+    {
+      "path": "Rmms.Application/Admin/Users/GetUsers/GetUsersQuery.cs",
+      "language": "csharp",
+      "sizeLines": 17,
+      "fileCategory": "code"
+    },
+    {
+      "path": "Rmms.Application/Admin/Users/GetUsers/GetUsersQueryHandler.cs",
+      "language": "csharp",
+      "sizeLines": 110,
+      "fileCategory": "code"
+    },
+    {
+      "path": "Rmms.Application/Admin/Users/UpdateUser/UpdateUserCommand.cs",
+      "language": "csharp",
+      "sizeLines": 19,
+      "fileCategory": "code"
+    },
+    {
+      "path": "Rmms.Application/Admin/Users/UpdateUser/UpdateUserCommandHandler.cs",
+      "language": "csharp",
+      "sizeLines": 134,
+      "fileCategory": "code"
+    },
+    {
+      "path": "Rmms.Application/Admin/Users/UpdateUser/UpdateUserCommandValidator.cs",
+      "language": "csharp",
+      "sizeLines": 25,
+      "fileCategory": "code"
+    },
+    {
+      "path": "Rmms.Application/Approvals/ApprovalDtos.cs",
+      "language": "csharp",
+      "sizeLines": 53,
+      "fileCategory": "code"
+    },
+    {
+      "path": "Rmms.Application/Approvals/DecideApproval.cs",
+      "language": "csharp",
+      "sizeLines": 95,
+      "fileCategory": "code"
+    },
+    {
+      "path": "Rmms.Application/Approvals/EmailAction.cs",
+      "language": "csharp",
+      "sizeLines": 137,
+      "fileCategory": "code"
+    },
+    {
+      "path": "Rmms.Application/Approvals/GetApprovals.cs",
+      "language": "csharp",
+      "sizeLines": 105,
+      "fileCategory": "code"
+    },
+    {
+      "path": "Rmms.Application/Approvals/OverrideApproval.cs",
+      "language": "csharp",
+      "sizeLines": 47,
+      "fileCategory": "code"
+    },
+    {
+      "path": "Rmms.Application/Approvals/ScheduleApprovalSync.cs",
+      "language": "csharp",
+      "sizeLines": 150,
+      "fileCategory": "code"
+    },
+    {
+      "path": "Rmms.Application/Attendance/AdminListAttendance.cs",
+      "language": "csharp",
+      "sizeLines": 80,
+      "fileCategory": "code"
+    },
+    {
+      "path": "Rmms.Application/Attendance/AttendanceDtos.cs",
+      "language": "csharp",
+      "sizeLines": 109,
+      "fileCategory": "code"
+    },
+    {
+      "path": "Rmms.Application/Attendance/AttendanceNotifications.cs",
+      "language": "csharp",
+      "sizeLines": 35,
+      "fileCategory": "code"
+    },
+    {
+      "path": "Rmms.Application/Attendance/AttendanceTime.cs",
+      "language": "csharp",
+      "sizeLines": 38,
+      "fileCategory": "code"
+    },
+    {
+      "path": "Rmms.Application/Attendance/CheckIn.cs",
+      "language": "csharp",
+      "sizeLines": 229,
+      "fileCategory": "code"
+    },
+    {
+      "path": "Rmms.Application/Attendance/CheckOut.cs",
+      "language": "csharp",
+      "sizeLines": 122,
+      "fileCategory": "code"
+    },
+    {
+      "path": "Rmms.Application/Attendance/GetAttendance.cs",
+      "language": "csharp",
+      "sizeLines": 211,
+      "fileCategory": "code"
+    },
+    {
+      "path": "Rmms.Application/Attendance/ReviewAttendance.cs",
+      "language": "csharp",
+      "sizeLines": 105,
+      "fileCategory": "code"
+    },
+    {
+      "path": "Rmms.Application/Audit/GetAuditLogs.cs",
+      "language": "csharp",
+      "sizeLines": 65,
+      "fileCategory": "code"
+    },
+    {
+      "path": "Rmms.Application/Auth/ForgotPassword/ForgotPasswordCommand.cs",
+      "language": "csharp",
+      "sizeLines": 10,
+      "fileCategory": "code"
+    },
+    {
+      "path": "Rmms.Application/Auth/ForgotPassword/ForgotPasswordCommandHandler.cs",
+      "language": "csharp",
+      "sizeLines": 105,
+      "fileCategory": "code"
+    },
+    {
+      "path": "Rmms.Application/Auth/ForgotPassword/ForgotPasswordCommandValidator.cs",
+      "language": "csharp",
+      "sizeLines": 14,
+      "fileCategory": "code"
+    },
+    {
+      "path": "Rmms.Application/Auth/Login/LoginCommand.cs",
+      "language": "csharp",
+      "sizeLines": 38,
+      "fileCategory": "code"
+    },
+    {
+      "path": "Rmms.Application/Auth/Login/LoginCommandHandler.cs",
+      "language": "csharp",
+      "sizeLines": 292,
+      "fileCategory": "code"
+    },
+    {
+      "path": "Rmms.Application/Auth/Login/LoginCommandValidator.cs",
+      "language": "csharp",
+      "sizeLines": 41,
+      "fileCategory": "code"
+    },
+    {
+      "path": "Rmms.Application/Auth/Login/LoginResponse.cs",
+      "language": "csharp",
+      "sizeLines": 23,
+      "fileCategory": "code"
+    },
+    {
+      "path": "Rmms.Application/Auth/Logout/LogoutCommand.cs",
+      "language": "csharp",
+      "sizeLines": 10,
+      "fileCategory": "code"
+    },
+    {
+      "path": "Rmms.Application/Auth/Logout/LogoutCommandHandler.cs",
+      "language": "csharp",
+      "sizeLines": 57,
+      "fileCategory": "code"
+    },
+    {
+      "path": "Rmms.Application/Auth/Logout/LogoutCommandValidator.cs",
+      "language": "csharp",
+      "sizeLines": 13,
+      "fileCategory": "code"
+    },
+    {
+      "path": "Rmms.Application/Auth/Me/GetDeviceStatusQuery.cs",
+      "language": "csharp",
+      "sizeLines": 23,
+      "fileCategory": "code"
+    },
+    {
+      "path": "Rmms.Application/Auth/Me/GetDeviceStatusQueryHandler.cs",
+      "language": "csharp",
+      "sizeLines": 36,
+      "fileCategory": "code"
+    },
+    {
+      "path": "Rmms.Application/Auth/Me/GetMeQuery.cs",
+      "language": "csharp",
+      "sizeLines": 11,
+      "fileCategory": "code"
+    },
+    {
+      "path": "Rmms.Application/Auth/Me/GetMeQueryHandler.cs",
+      "language": "csharp",
+      "sizeLines": 59,
+      "fileCategory": "code"
+    },
+    {
+      "path": "Rmms.Application/Auth/Me/MeDto.cs",
+      "language": "csharp",
+      "sizeLines": 25,
+      "fileCategory": "code"
+    },
+    {
+      "path": "Rmms.Application/Auth/Refresh/RefreshTokenCommand.cs",
+      "language": "csharp",
+      "sizeLines": 12,
+      "fileCategory": "code"
+    },
+    {
+      "path": "Rmms.Application/Auth/Refresh/RefreshTokenCommandHandler.cs",
+      "language": "csharp",
+      "sizeLines": 153,
+      "fileCategory": "code"
+    },
+    {
+      "path": "Rmms.Application/Auth/Refresh/RefreshTokenCommandValidator.cs",
+      "language": "csharp",
+      "sizeLines": 14,
+      "fileCategory": "code"
+    },
+    {
+      "path": "Rmms.Application/Auth/Refresh/RefreshTokenResponse.cs",
+      "language": "csharp",
+      "sizeLines": 7,
+      "fileCategory": "code"
+    },
+    {
+      "path": "Rmms.Application/Auth/Register/RegisterUserCommand.cs",
+      "language": "csharp",
+      "sizeLines": 16,
+      "fileCategory": "code"
+    },
+    {
+      "path": "Rmms.Application/Auth/Register/RegisterUserCommandHandler.cs",
+      "language": "csharp",
+      "sizeLines": 118,
+      "fileCategory": "code"
+    },
+    {
+      "path": "Rmms.Application/Auth/Register/RegisterUserCommandValidator.cs",
+      "language": "csharp",
+      "sizeLines": 48,
+      "fileCategory": "code"
+    },
+    {
+      "path": "Rmms.Application/Auth/Register/RegisterUserResponse.cs",
+      "language": "csharp",
+      "sizeLines": 10,
+      "fileCategory": "code"
+    },
+    {
+      "path": "Rmms.Application/Auth/ResetPassword/ResetPasswordCommand.cs",
+      "language": "csharp",
+      "sizeLines": 11,
+      "fileCategory": "code"
+    },
+    {
+      "path": "Rmms.Application/Auth/ResetPassword/ResetPasswordCommandHandler.cs",
+      "language": "csharp",
+      "sizeLines": 96,
+      "fileCategory": "code"
+    },
+    {
+      "path": "Rmms.Application/Auth/ResetPassword/ResetPasswordCommandValidator.cs",
+      "language": "csharp",
+      "sizeLines": 22,
+      "fileCategory": "code"
+    },
+    {
+      "path": "Rmms.Application/Auth/VerifyEmail/VerifyEmailCommand.cs",
+      "language": "csharp",
+      "sizeLines": 12,
+      "fileCategory": "code"
+    },
+    {
+      "path": "Rmms.Application/Auth/VerifyEmail/VerifyEmailCommandHandler.cs",
+      "language": "csharp",
+      "sizeLines": 96,
+      "fileCategory": "code"
+    },
+    {
+      "path": "Rmms.Application/Auth/VerifyEmail/VerifyEmailCommandValidator.cs",
+      "language": "csharp",
+      "sizeLines": 14,
+      "fileCategory": "code"
+    },
+    {
+      "path": "Rmms.Application/Auth/VerifyEmail/VerifyEmailResponse.cs",
+      "language": "csharp",
+      "sizeLines": 6,
+      "fileCategory": "code"
+    },
+    {
+      "path": "Rmms.Application/Common/Abstractions/IApprovalService.cs",
+      "language": "csharp",
+      "sizeLines": 20,
+      "fileCategory": "code"
+    },
+    {
+      "path": "Rmms.Application/Common/Abstractions/IApprovalTokenService.cs",
+      "language": "csharp",
+      "sizeLines": 26,
+      "fileCategory": "code"
+    },
+    {
+      "path": "Rmms.Application/Common/Abstractions/IAttendancePhotoRetentionService.cs",
+      "language": "csharp",
+      "sizeLines": 13,
+      "fileCategory": "code"
+    },
+    {
+      "path": "Rmms.Application/Common/Abstractions/IAttendancePhotoStorage.cs",
+      "language": "csharp",
+      "sizeLines": 25,
+      "fileCategory": "code"
+    },
+    {
+      "path": "Rmms.Application/Common/Abstractions/IAuditLogger.cs",
+      "language": "csharp",
+      "sizeLines": 19,
+      "fileCategory": "code"
+    },
+    {
+      "path": "Rmms.Application/Common/Abstractions/IClientContext.cs",
+      "language": "csharp",
+      "sizeLines": 22,
+      "fileCategory": "code"
+    },
+    {
+      "path": "Rmms.Application/Common/Abstractions/IEmailSender.cs",
+      "language": "csharp",
+      "sizeLines": 25,
+      "fileCategory": "code"
+    },
+    {
+      "path": "Rmms.Application/Common/Abstractions/IFaceClient.cs",
+      "language": "csharp",
+      "sizeLines": 27,
+      "fileCategory": "code"
+    },
+    {
+      "path": "Rmms.Application/Common/Abstractions/IFaceVerificationService.cs",
+      "language": "csharp",
+      "sizeLines": 17,
+      "fileCategory": "code"
+    },
+    {
+      "path": "Rmms.Application/Common/Abstractions/IJwtTokenService.cs",
+      "language": "csharp",
+      "sizeLines": 19,
+      "fileCategory": "code"
+    },
+    {
+      "path": "Rmms.Application/Common/Abstractions/ILoginRateLimiter.cs",
+      "language": "csharp",
+      "sizeLines": 22,
+      "fileCategory": "code"
+    },
+    {
+      "path": "Rmms.Application/Common/Abstractions/INotificationService.cs",
+      "language": "csharp",
+      "sizeLines": 35,
+      "fileCategory": "code"
+    },
+    {
+      "path": "Rmms.Application/Common/Abstractions/IPasswordHasher.cs",
+      "language": "csharp",
+      "sizeLines": 20,
+      "fileCategory": "code"
+    },
+    {
+      "path": "Rmms.Application/Common/Abstractions/IPushSender.cs",
+      "language": "csharp",
+      "sizeLines": 24,
+      "fileCategory": "code"
+    },
+    {
+      "path": "Rmms.Application/Common/Abstractions/IRealtimeNotifier.cs",
+      "language": "csharp",
+      "sizeLines": 17,
+      "fileCategory": "code"
+    },
+    {
+      "path": "Rmms.Application/Common/Abstractions/IRefreshTokenGenerator.cs",
+      "language": "csharp",
+      "sizeLines": 16,
+      "fileCategory": "code"
+    },
+    {
+      "path": "Rmms.Application/Common/Abstractions/IReportExporter.cs",
+      "language": "csharp",
+      "sizeLines": 19,
+      "fileCategory": "code"
+    },
+    {
+      "path": "Rmms.Application/Common/Abstractions/ITokenCleanupService.cs",
+      "language": "csharp",
+      "sizeLines": 25,
+      "fileCategory": "code"
+    },
+    {
+      "path": "Rmms.Application/Common/Behaviors/LoggingBehavior.cs",
+      "language": "csharp",
+      "sizeLines": 45,
+      "fileCategory": "code"
+    },
+    {
+      "path": "Rmms.Application/Common/Behaviors/ValidationBehavior.cs",
+      "language": "csharp",
+      "sizeLines": 34,
+      "fileCategory": "code"
+    },
+    {
+      "path": "Rmms.Application/Common/EnumFormatting.cs",
+      "language": "csharp",
+      "sizeLines": 34,
+      "fileCategory": "code"
+    },
+    {
+      "path": "Rmms.Application/Common/Interfaces/IAppDbContext.cs",
+      "language": "csharp",
+      "sizeLines": 85,
+      "fileCategory": "code"
+    },
+    {
+      "path": "Rmms.Application/Common/Interfaces/ICurrentUser.cs",
+      "language": "csharp",
+      "sizeLines": 16,
+      "fileCategory": "code"
+    },
+    {
+      "path": "Rmms.Application/Common/Interfaces/IDateTimeProvider.cs",
+      "language": "csharp",
+      "sizeLines": 10,
+      "fileCategory": "code"
+    },
+    {
+      "path": "Rmms.Application/Common/Options/ApprovalOptions.cs",
+      "language": "csharp",
+      "sizeLines": 21,
+      "fileCategory": "code"
+    },
+    {
+      "path": "Rmms.Application/Common/Options/CompreFaceOptions.cs",
+      "language": "csharp",
+      "sizeLines": 23,
+      "fileCategory": "code"
+    },
+    {
+      "path": "Rmms.Application/Common/Options/JwtOptions.cs",
+      "language": "csharp",
+      "sizeLines": 25,
+      "fileCategory": "code"
+    },
+    {
+      "path": "Rmms.Application/Common/Options/MinioOptions.cs",
+      "language": "csharp",
+      "sizeLines": 32,
+      "fileCategory": "code"
+    },
+    {
+      "path": "Rmms.Application/Common/Security/OpaqueToken.cs",
+      "language": "csharp",
+      "sizeLines": 48,
+      "fileCategory": "code"
+    },
+    {
+      "path": "Rmms.Application/Common/SuperAdminAccess.cs",
+      "language": "csharp",
+      "sizeLines": 15,
+      "fileCategory": "code"
+    },
+    {
+      "path": "Rmms.Application/Dashboard/GetDashboardSummary.cs",
+      "language": "csharp",
+      "sizeLines": 145,
+      "fileCategory": "code"
+    },
+    {
+      "path": "Rmms.Application/DependencyInjection.cs",
+      "language": "csharp",
+      "sizeLines": 39,
+      "fileCategory": "code"
+    },
+    {
+      "path": "Rmms.Application/Devices/ApproveDevice/ApproveDeviceCommand.cs",
+      "language": "csharp",
+      "sizeLines": 14,
+      "fileCategory": "code"
+    },
+    {
+      "path": "Rmms.Application/Devices/ApproveDevice/ApproveDeviceCommandHandler.cs",
+      "language": "csharp",
+      "sizeLines": 84,
+      "fileCategory": "code"
+    },
+    {
+      "path": "Rmms.Application/Devices/GetMyDevice/GetMyDeviceQuery.cs",
+      "language": "csharp",
+      "sizeLines": 20,
+      "fileCategory": "code"
+    },
+    {
+      "path": "Rmms.Application/Devices/GetMyDevice/GetMyDeviceQueryHandler.cs",
+      "language": "csharp",
+      "sizeLines": 35,
+      "fileCategory": "code"
+    },
+    {
+      "path": "Rmms.Application/Devices/GetPendingDevices/GetPendingDevicesQuery.cs",
+      "language": "csharp",
+      "sizeLines": 24,
+      "fileCategory": "code"
+    },
+    {
+      "path": "Rmms.Application/Devices/GetPendingDevices/GetPendingDevicesQueryHandler.cs",
+      "language": "csharp",
+      "sizeLines": 66,
+      "fileCategory": "code"
+    },
+    {
+      "path": "Rmms.Application/Devices/RejectDevice/RejectDeviceCommand.cs",
+      "language": "csharp",
+      "sizeLines": 11,
+      "fileCategory": "code"
+    },
+    {
+      "path": "Rmms.Application/Devices/RejectDevice/RejectDeviceCommandHandler.cs",
+      "language": "csharp",
+      "sizeLines": 60,
+      "fileCategory": "code"
+    },
+    {
+      "path": "Rmms.Application/Devices/RejectDevice/RejectDeviceCommandValidator.cs",
+      "language": "csharp",
+      "sizeLines": 15,
+      "fileCategory": "code"
+    },
+    {
+      "path": "Rmms.Application/Documents/DocumentDtos.cs",
+      "language": "csharp",
+      "sizeLines": 21,
+      "fileCategory": "code"
+    },
+    {
+      "path": "Rmms.Application/Documents/Documents.cs",
+      "language": "csharp",
+      "sizeLines": 310,
+      "fileCategory": "code"
+    },
+    {
+      "path": "Rmms.Application/Email/IEmailTemplateRenderer.cs",
+      "language": "csharp",
+      "sizeLines": 22,
+      "fileCategory": "code"
+    },
+    {
+      "path": "Rmms.Application/FaceRecognition/AdminRemoveFace.cs",
+      "language": "csharp",
+      "sizeLines": 58,
+      "fileCategory": "code"
+    },
+    {
+      "path": "Rmms.Application/FaceRecognition/EnrollFace.cs",
+      "language": "csharp",
+      "sizeLines": 79,
+      "fileCategory": "code"
+    },
+    {
+      "path": "Rmms.Application/FaceRecognition/FaceDtos.cs",
+      "language": "csharp",
+      "sizeLines": 7,
+      "fileCategory": "code"
+    },
+    {
+      "path": "Rmms.Application/FaceRecognition/RemoveMyFace.cs",
+      "language": "csharp",
+      "sizeLines": 59,
+      "fileCategory": "code"
+    },
+    {
+      "path": "Rmms.Application/FaceRecognition/VerifyFace.cs",
+      "language": "csharp",
+      "sizeLines": 57,
+      "fileCategory": "code"
+    },
+    {
+      "path": "Rmms.Application/Forms/FormFill.cs",
+      "language": "csharp",
+      "sizeLines": 440,
+      "fileCategory": "code"
+    },
+    {
+      "path": "Rmms.Application/Forms/Forms.cs",
+      "language": "csharp",
+      "sizeLines": 327,
+      "fileCategory": "code"
+    },
+    {
+      "path": "Rmms.Application/Forms/FormSchema.cs",
+      "language": "csharp",
+      "sizeLines": 100,
+      "fileCategory": "code"
+    },
+    {
+      "path": "Rmms.Application/LeaveOt/AdminGetRequests.cs",
+      "language": "csharp",
+      "sizeLines": 74,
+      "fileCategory": "code"
+    },
+    {
+      "path": "Rmms.Application/LeaveOt/CreateLeaveRequest.cs",
+      "language": "csharp",
+      "sizeLines": 103,
+      "fileCategory": "code"
+    },
+    {
+      "path": "Rmms.Application/LeaveOt/CreateOtRequest.cs",
+      "language": "csharp",
+      "sizeLines": 50,
+      "fileCategory": "code"
+    },
+    {
+      "path": "Rmms.Application/LeaveOt/GetMyRequests.cs",
+      "language": "csharp",
+      "sizeLines": 44,
+      "fileCategory": "code"
+    },
+    {
+      "path": "Rmms.Application/LeaveOt/LeaveOtDtos.cs",
+      "language": "csharp",
+      "sizeLines": 43,
+      "fileCategory": "code"
+    },
+    {
+      "path": "Rmms.Application/LeaveOt/RequestRouting.cs",
+      "language": "csharp",
+      "sizeLines": 68,
+      "fileCategory": "code"
+    },
+    {
+      "path": "Rmms.Application/LeaveOt/WithdrawLeaveRequest.cs",
+      "language": "csharp",
+      "sizeLines": 49,
+      "fileCategory": "code"
+    },
+    {
+      "path": "Rmms.Application/Maintenance/AttendancePhotoRetentionService.cs",
+      "language": "csharp",
+      "sizeLines": 64,
+      "fileCategory": "code"
+    },
+    {
+      "path": "Rmms.Application/Maintenance/TokenCleanupService.cs",
+      "language": "csharp",
+      "sizeLines": 58,
+      "fileCategory": "code"
+    },
+    {
+      "path": "Rmms.Application/News/News.cs",
+      "language": "csharp",
+      "sizeLines": 372,
+      "fileCategory": "code"
+    },
+    {
+      "path": "Rmms.Application/News/NewsDtos.cs",
+      "language": "csharp",
+      "sizeLines": 40,
+      "fileCategory": "code"
+    },
+    {
+      "path": "Rmms.Application/Notifications/GetMyNotifications.cs",
+      "language": "csharp",
+      "sizeLines": 37,
+      "fileCategory": "code"
+    },
+    {
+      "path": "Rmms.Application/Notifications/MarkNotificationRead.cs",
+      "language": "csharp",
+      "sizeLines": 62,
+      "fileCategory": "code"
+    },
+    {
+      "path": "Rmms.Application/Notifications/NotificationDtos.cs",
+      "language": "csharp",
+      "sizeLines": 50,
+      "fileCategory": "code"
+    },
+    {
+      "path": "Rmms.Application/Notifications/RegisterFcmToken.cs",
+      "language": "csharp",
+      "sizeLines": 71,
+      "fileCategory": "code"
+    },
+    {
+      "path": "Rmms.Application/Organization/Areas/Areas.cs",
+      "language": "csharp",
+      "sizeLines": 177,
+      "fileCategory": "code"
+    },
+    {
+      "path": "Rmms.Application/Organization/Assignments/Assignments.cs",
+      "language": "csharp",
+      "sizeLines": 286,
+      "fileCategory": "code"
+    },
+    {
+      "path": "Rmms.Application/Organization/Categories/Categories.cs",
+      "language": "csharp",
+      "sizeLines": 144,
+      "fileCategory": "code"
+    },
+    {
+      "path": "Rmms.Application/Organization/Me/GetMyLeader.cs",
+      "language": "csharp",
+      "sizeLines": 33,
+      "fileCategory": "code"
+    },
+    {
+      "path": "Rmms.Application/Organization/Me/GetMyStores.cs",
+      "language": "csharp",
+      "sizeLines": 46,
+      "fileCategory": "code"
+    },
+    {
+      "path": "Rmms.Application/Organization/Products/Products.cs",
+      "language": "csharp",
+      "sizeLines": 285,
+      "fileCategory": "code"
+    },
+    {
+      "path": "Rmms.Application/Organization/Stores/ChangeStoreStatus.cs",
+      "language": "csharp",
+      "sizeLines": 60,
+      "fileCategory": "code"
+    },
+    {
+      "path": "Rmms.Application/Organization/Stores/CreateStore.cs",
+      "language": "csharp",
+      "sizeLines": 71,
+      "fileCategory": "code"
+    },
+    {
+      "path": "Rmms.Application/Organization/Stores/DeleteStore.cs",
+      "language": "csharp",
+      "sizeLines": 45,
+      "fileCategory": "code"
+    },
+    {
+      "path": "Rmms.Application/Organization/Stores/GetStores.cs",
+      "language": "csharp",
+      "sizeLines": 81,
+      "fileCategory": "code"
+    },
+    {
+      "path": "Rmms.Application/Organization/Stores/StoreDtos.cs",
+      "language": "csharp",
+      "sizeLines": 15,
+      "fileCategory": "code"
+    },
+    {
+      "path": "Rmms.Application/Organization/Stores/UpdateStore.cs",
+      "language": "csharp",
+      "sizeLines": 67,
+      "fileCategory": "code"
+    },
+    {
+      "path": "Rmms.Application/Organization/Views/OrgViews.cs",
+      "language": "csharp",
+      "sizeLines": 158,
+      "fileCategory": "code"
+    },
+    {
+      "path": "Rmms.Application/Reports/AttendanceReports.cs",
+      "language": "csharp",
+      "sizeLines": 211,
+      "fileCategory": "code"
+    },
+    {
+      "path": "Rmms.Application/Reports/RequestReports.cs",
+      "language": "csharp",
+      "sizeLines": 102,
+      "fileCategory": "code"
+    },
+    {
+      "path": "Rmms.Application/Rmms.Application.csproj",
+      "language": "csproj",
+      "sizeLines": 34,
+      "fileCategory": "config"
+    },
+    {
+      "path": "Rmms.Application/TeamMonitoring/GetTeamToday.cs",
+      "language": "csharp",
+      "sizeLines": 159,
+      "fileCategory": "code"
+    },
+    {
+      "path": "Rmms.Application/VisitPlans/CreateVisitPlan.cs",
+      "language": "csharp",
+      "sizeLines": 104,
+      "fileCategory": "code"
+    },
+    {
+      "path": "Rmms.Application/VisitPlans/EditVisitPlan.cs",
+      "language": "csharp",
+      "sizeLines": 74,
+      "fileCategory": "code"
+    },
+    {
+      "path": "Rmms.Application/VisitPlans/ExecuteVisitPlanItem.cs",
+      "language": "csharp",
+      "sizeLines": 83,
+      "fileCategory": "code"
+    },
+    {
+      "path": "Rmms.Application/VisitPlans/GetVisitPlans.cs",
+      "language": "csharp",
+      "sizeLines": 131,
+      "fileCategory": "code"
+    },
+    {
+      "path": "Rmms.Application/VisitPlans/VisitPlanDtos.cs",
+      "language": "csharp",
+      "sizeLines": 67,
+      "fileCategory": "code"
+    },
+    {
+      "path": "Rmms.Application/VisitPlans/VisitPlanRouting.cs",
+      "language": "csharp",
+      "sizeLines": 44,
+      "fileCategory": "code"
+    },
+    {
+      "path": "Rmms.Application/WorkSchedule/ApproveRejectSchedule.cs",
+      "language": "csharp",
+      "sizeLines": 145,
+      "fileCategory": "code"
+    },
+    {
+      "path": "Rmms.Application/WorkSchedule/CreateSchedule.cs",
+      "language": "csharp",
+      "sizeLines": 108,
+      "fileCategory": "code"
+    },
+    {
+      "path": "Rmms.Application/WorkSchedule/EditSchedule.cs",
+      "language": "csharp",
+      "sizeLines": 104,
+      "fileCategory": "code"
+    },
+    {
+      "path": "Rmms.Application/WorkSchedule/GetSchedules.cs",
+      "language": "csharp",
+      "sizeLines": 83,
+      "fileCategory": "code"
+    },
+    {
+      "path": "Rmms.Application/WorkSchedule/SubmitWithdrawSchedule.cs",
+      "language": "csharp",
+      "sizeLines": 114,
+      "fileCategory": "code"
+    },
+    {
+      "path": "Rmms.Application/WorkSchedule/WorkScheduleDtos.cs",
+      "language": "csharp",
+      "sizeLines": 73,
+      "fileCategory": "code"
+    },
+    {
+      "path": "Rmms.Domain/Approvals/Approval.cs",
+      "language": "csharp",
+      "sizeLines": 110,
+      "fileCategory": "code"
+    },
+    {
+      "path": "Rmms.Domain/Approvals/ApprovalEmailToken.cs",
+      "language": "csharp",
+      "sizeLines": 46,
+      "fileCategory": "code"
+    },
+    {
+      "path": "Rmms.Domain/Attendance/AttendanceRecord.cs",
+      "language": "csharp",
+      "sizeLines": 206,
+      "fileCategory": "code"
+    },
+    {
+      "path": "Rmms.Domain/Audit/AuditLog.cs",
+      "language": "csharp",
+      "sizeLines": 63,
+      "fileCategory": "code"
+    },
+    {
+      "path": "Rmms.Domain/Auth/EmailVerificationToken.cs",
+      "language": "csharp",
+      "sizeLines": 44,
+      "fileCategory": "code"
+    },
+    {
+      "path": "Rmms.Domain/Auth/LoginHistory.cs",
+      "language": "csharp",
+      "sizeLines": 67,
+      "fileCategory": "code"
+    },
+    {
+      "path": "Rmms.Domain/Auth/PasswordResetToken.cs",
+      "language": "csharp",
+      "sizeLines": 43,
+      "fileCategory": "code"
+    },
+    {
+      "path": "Rmms.Domain/Auth/RefreshToken.cs",
+      "language": "csharp",
+      "sizeLines": 63,
+      "fileCategory": "code"
+    },
+    {
+      "path": "Rmms.Domain/Common/AggregateRoot.cs",
+      "language": "csharp",
+      "sizeLines": 13,
+      "fileCategory": "code"
+    },
+    {
+      "path": "Rmms.Domain/Common/AuditableEntity.cs",
+      "language": "csharp",
+      "sizeLines": 19,
+      "fileCategory": "code"
+    },
+    {
+      "path": "Rmms.Domain/Common/Entity.cs",
+      "language": "csharp",
+      "sizeLines": 23,
+      "fileCategory": "code"
+    },
+    {
+      "path": "Rmms.Domain/Common/Error.cs",
+      "language": "csharp",
+      "sizeLines": 27,
+      "fileCategory": "code"
+    },
+    {
+      "path": "Rmms.Domain/Common/IAggregateRoot.cs",
+      "language": "csharp",
+      "sizeLines": 12,
+      "fileCategory": "code"
+    },
+    {
+      "path": "Rmms.Domain/Common/IDomainEvent.cs",
+      "language": "csharp",
+      "sizeLines": 11,
+      "fileCategory": "code"
+    },
+    {
+      "path": "Rmms.Domain/Common/Result.cs",
+      "language": "csharp",
+      "sizeLines": 44,
+      "fileCategory": "code"
+    },
+    {
+      "path": "Rmms.Domain/Common/UuidV7.cs",
+      "language": "csharp",
+      "sizeLines": 40,
+      "fileCategory": "code"
+    },
+    {
+      "path": "Rmms.Domain/Common/ValueObject.cs",
+      "language": "csharp",
+      "sizeLines": 24,
+      "fileCategory": "code"
+    },
+    {
+      "path": "Rmms.Domain/Devices/UserDevice.cs",
+      "language": "csharp",
+      "sizeLines": 148,
+      "fileCategory": "code"
+    },
+    {
+      "path": "Rmms.Domain/Documents/Document.cs",
+      "language": "csharp",
+      "sizeLines": 48,
+      "fileCategory": "code"
+    },
+    {
+      "path": "Rmms.Domain/Documents/DocumentAssignment.cs",
+      "language": "csharp",
+      "sizeLines": 36,
+      "fileCategory": "code"
+    },
+    {
+      "path": "Rmms.Domain/Enums/ApprovalDecisionVia.cs",
+      "language": "csharp",
+      "sizeLines": 13,
+      "fileCategory": "code"
+    },
+    {
+      "path": "Rmms.Domain/Enums/ApprovalEntityType.cs",
+      "language": "csharp",
+      "sizeLines": 14,
+      "fileCategory": "code"
+    },
+    {
+      "path": "Rmms.Domain/Enums/ApprovalStatus.cs",
+      "language": "csharp",
+      "sizeLines": 14,
+      "fileCategory": "code"
+    },
+    {
+      "path": "Rmms.Domain/Enums/AttendanceStatus.cs",
+      "language": "csharp",
+      "sizeLines": 33,
+      "fileCategory": "code"
+    },
+    {
+      "path": "Rmms.Domain/Enums/AuditAction.cs",
+      "language": "csharp",
+      "sizeLines": 117,
+      "fileCategory": "code"
+    },
+    {
+      "path": "Rmms.Domain/Enums/DeviceStatus.cs",
+      "language": "csharp",
+      "sizeLines": 20,
+      "fileCategory": "code"
+    },
+    {
+      "path": "Rmms.Domain/Enums/DocumentFolderType.cs",
+      "language": "csharp",
+      "sizeLines": 12,
+      "fileCategory": "code"
+    },
+    {
+      "path": "Rmms.Domain/Enums/FaceVerificationResult.cs",
+      "language": "csharp",
+      "sizeLines": 17,
+      "fileCategory": "code"
+    },
+    {
+      "path": "Rmms.Domain/Enums/FormStatus.cs",
+      "language": "csharp",
+      "sizeLines": 9,
+      "fileCategory": "code"
+    },
+    {
+      "path": "Rmms.Domain/Enums/FormSubmissionStatus.cs",
+      "language": "csharp",
+      "sizeLines": 9,
+      "fileCategory": "code"
+    },
+    {
+      "path": "Rmms.Domain/Enums/FormType.cs",
+      "language": "csharp",
+      "sizeLines": 15,
+      "fileCategory": "code"
+    },
+    {
+      "path": "Rmms.Domain/Enums/LeaveType.cs",
+      "language": "csharp",
+      "sizeLines": 8,
+      "fileCategory": "code"
+    },
+    {
+      "path": "Rmms.Domain/Enums/NotificationType.cs",
+      "language": "csharp",
+      "sizeLines": 39,
+      "fileCategory": "code"
+    },
+    {
+      "path": "Rmms.Domain/Enums/ProductStatus.cs",
+      "language": "csharp",
+      "sizeLines": 8,
+      "fileCategory": "code"
+    },
+    {
+      "path": "Rmms.Domain/Enums/RequestStatus.cs",
+      "language": "csharp",
+      "sizeLines": 12,
+      "fileCategory": "code"
+    },
+    {
+      "path": "Rmms.Domain/Enums/StoreStatus.cs",
+      "language": "csharp",
+      "sizeLines": 17,
+      "fileCategory": "code"
+    },
+    {
+      "path": "Rmms.Domain/Enums/UserRole.cs",
+      "language": "csharp",
+      "sizeLines": 13,
+      "fileCategory": "code"
+    },
+    {
+      "path": "Rmms.Domain/Enums/UserStatus.cs",
+      "language": "csharp",
+      "sizeLines": 17,
+      "fileCategory": "code"
+    },
+    {
+      "path": "Rmms.Domain/Enums/VisitPlanStatus.cs",
+      "language": "csharp",
+      "sizeLines": 15,
+      "fileCategory": "code"
+    },
+    {
+      "path": "Rmms.Domain/Enums/WorkScheduleStatus.cs",
+      "language": "csharp",
+      "sizeLines": 29,
+      "fileCategory": "code"
+    },
+    {
+      "path": "Rmms.Domain/Forms/Form.cs",
+      "language": "csharp",
+      "sizeLines": 69,
+      "fileCategory": "code"
+    },
+    {
+      "path": "Rmms.Domain/Forms/FormAssignment.cs",
+      "language": "csharp",
+      "sizeLines": 47,
+      "fileCategory": "code"
+    },
+    {
+      "path": "Rmms.Domain/Forms/FormSubmission.cs",
+      "language": "csharp",
+      "sizeLines": 67,
+      "fileCategory": "code"
+    },
+    {
+      "path": "Rmms.Domain/Forms/FormVersion.cs",
+      "language": "csharp",
+      "sizeLines": 55,
+      "fileCategory": "code"
+    },
+    {
+      "path": "Rmms.Domain/LeaveOt/LeaveRequest.cs",
+      "language": "csharp",
+      "sizeLines": 70,
+      "fileCategory": "code"
+    },
+    {
+      "path": "Rmms.Domain/LeaveOt/OtRequest.cs",
+      "language": "csharp",
+      "sizeLines": 61,
+      "fileCategory": "code"
+    },
+    {
+      "path": "Rmms.Domain/News/NewsAssignment.cs",
+      "language": "csharp",
+      "sizeLines": 32,
+      "fileCategory": "code"
+    },
+    {
+      "path": "Rmms.Domain/News/NewsItem.cs",
+      "language": "csharp",
+      "sizeLines": 67,
+      "fileCategory": "code"
+    },
+    {
+      "path": "Rmms.Domain/News/NewsRead.cs",
+      "language": "csharp",
+      "sizeLines": 33,
+      "fileCategory": "code"
+    },
+    {
+      "path": "Rmms.Domain/Notifications/Notification.cs",
+      "language": "csharp",
+      "sizeLines": 64,
+      "fileCategory": "code"
+    },
+    {
+      "path": "Rmms.Domain/Notifications/PushToken.cs",
+      "language": "csharp",
+      "sizeLines": 43,
+      "fileCategory": "code"
+    },
+    {
+      "path": "Rmms.Domain/Organization/Area.cs",
+      "language": "csharp",
+      "sizeLines": 46,
+      "fileCategory": "code"
+    },
+    {
+      "path": "Rmms.Domain/Organization/Category.cs",
+      "language": "csharp",
+      "sizeLines": 35,
+      "fileCategory": "code"
+    },
+    {
+      "path": "Rmms.Domain/Organization/Product.cs",
+      "language": "csharp",
+      "sizeLines": 59,
+      "fileCategory": "code"
+    },
+    {
+      "path": "Rmms.Domain/Organization/Store.cs",
+      "language": "csharp",
+      "sizeLines": 78,
+      "fileCategory": "code"
+    },
+    {
+      "path": "Rmms.Domain/Organization/UserCategoryAssignment.cs",
+      "language": "csharp",
+      "sizeLines": 28,
+      "fileCategory": "code"
+    },
+    {
+      "path": "Rmms.Domain/Organization/UserLeaderAssignment.cs",
+      "language": "csharp",
+      "sizeLines": 52,
+      "fileCategory": "code"
+    },
+    {
+      "path": "Rmms.Domain/Organization/UserStoreAssignment.cs",
+      "language": "csharp",
+      "sizeLines": 44,
+      "fileCategory": "code"
+    },
+    {
+      "path": "Rmms.Domain/Rmms.Domain.csproj",
+      "language": "csproj",
+      "sizeLines": 11,
+      "fileCategory": "config"
+    },
+    {
+      "path": "Rmms.Domain/Users/User.cs",
+      "language": "csharp",
+      "sizeLines": 222,
+      "fileCategory": "code"
+    },
+    {
+      "path": "Rmms.Domain/ValueObjects/GpsCoordinate.cs",
+      "language": "csharp",
+      "sizeLines": 59,
+      "fileCategory": "code"
+    },
+    {
+      "path": "Rmms.Domain/VisitPlan/VisitPlan.cs",
+      "language": "csharp",
+      "sizeLines": 153,
+      "fileCategory": "code"
+    },
+    {
+      "path": "Rmms.Domain/VisitPlan/VisitPlanItem.cs",
+      "language": "csharp",
+      "sizeLines": 62,
+      "fileCategory": "code"
+    },
+    {
+      "path": "Rmms.Domain/WorkSchedule/WorkSchedule.cs",
+      "language": "csharp",
+      "sizeLines": 199,
+      "fileCategory": "code"
+    },
+    {
+      "path": "Rmms.Domain/WorkSchedule/WorkScheduleShift.cs",
+      "language": "csharp",
+      "sizeLines": 57,
+      "fileCategory": "code"
+    },
+    {
+      "path": "Rmms.Infrastructure/Approvals/ApprovalService.cs",
+      "language": "csharp",
+      "sizeLines": 113,
+      "fileCategory": "code"
+    },
+    {
+      "path": "Rmms.Infrastructure/Approvals/ApprovalTokenService.cs",
+      "language": "csharp",
+      "sizeLines": 101,
+      "fileCategory": "code"
+    },
+    {
+      "path": "Rmms.Infrastructure/Attendance/LocalAttendancePhotoStorage.cs",
+      "language": "csharp",
+      "sizeLines": 24,
+      "fileCategory": "code"
+    },
+    {
+      "path": "Rmms.Infrastructure/Attendance/MinioAttendancePhotoStorage.cs",
+      "language": "csharp",
+      "sizeLines": 145,
+      "fileCategory": "code"
+    },
+    {
+      "path": "Rmms.Infrastructure/Audit/DbAuditLogger.cs",
+      "language": "csharp",
+      "sizeLines": 52,
+      "fileCategory": "code"
+    },
+    {
+      "path": "Rmms.Infrastructure/DependencyInjection.cs",
+      "language": "csharp",
+      "sizeLines": 182,
+      "fileCategory": "code"
+    },
+    {
+      "path": "Rmms.Infrastructure/Email/AppUrlOptions.cs",
+      "language": "csharp",
+      "sizeLines": 18,
+      "fileCategory": "code"
+    },
+    {
+      "path": "Rmms.Infrastructure/Email/ConsoleEmailSender.cs",
+      "language": "csharp",
+      "sizeLines": 33,
+      "fileCategory": "code"
+    },
+    {
+      "path": "Rmms.Infrastructure/Email/EmailOptions.cs",
+      "language": "csharp",
+      "sizeLines": 35,
+      "fileCategory": "code"
+    },
+    {
+      "path": "Rmms.Infrastructure/Email/EmailTemplateRenderer.cs",
+      "language": "csharp",
+      "sizeLines": 138,
+      "fileCategory": "code"
+    },
+    {
+      "path": "Rmms.Infrastructure/Email/SendGridEmailSender.cs",
+      "language": "csharp",
+      "sizeLines": 57,
+      "fileCategory": "code"
+    },
+    {
+      "path": "Rmms.Infrastructure/Email/SmtpEmailSender.cs",
+      "language": "csharp",
+      "sizeLines": 68,
+      "fileCategory": "code"
+    },
+    {
+      "path": "Rmms.Infrastructure/Face/CompreFaceClient.cs",
+      "language": "csharp",
+      "sizeLines": 91,
+      "fileCategory": "code"
+    },
+    {
+      "path": "Rmms.Infrastructure/Face/DevFaceClient.cs",
+      "language": "csharp",
+      "sizeLines": 21,
+      "fileCategory": "code"
+    },
+    {
+      "path": "Rmms.Infrastructure/Face/FaceVerificationService.cs",
+      "language": "csharp",
+      "sizeLines": 56,
+      "fileCategory": "code"
+    },
+    {
+      "path": "Rmms.Infrastructure/Identity/BCryptPasswordHasher.cs",
+      "language": "csharp",
+      "sizeLines": 51,
+      "fileCategory": "code"
+    },
+    {
+      "path": "Rmms.Infrastructure/Identity/JwtOptions.cs",
+      "language": "csharp",
+      "sizeLines": 6,
+      "fileCategory": "code"
+    },
+    {
+      "path": "Rmms.Infrastructure/Identity/JwtTokenService.cs",
+      "language": "csharp",
+      "sizeLines": 71,
+      "fileCategory": "code"
+    },
+    {
+      "path": "Rmms.Infrastructure/Identity/RefreshTokenGenerator.cs",
+      "language": "csharp",
+      "sizeLines": 33,
+      "fileCategory": "code"
+    },
+    {
+      "path": "Rmms.Infrastructure/Logging/SerilogElasticsearchExtensions.cs",
+      "language": "csharp",
+      "sizeLines": 88,
+      "fileCategory": "code"
+    },
+    {
+      "path": "Rmms.Infrastructure/Notifications/FcmPushSender.cs",
+      "language": "csharp",
+      "sizeLines": 41,
+      "fileCategory": "code"
+    },
+    {
+      "path": "Rmms.Infrastructure/Notifications/LoggingPushSender.cs",
+      "language": "csharp",
+      "sizeLines": 31,
+      "fileCategory": "code"
+    },
+    {
+      "path": "Rmms.Infrastructure/Notifications/NoOpRealtimeNotifier.cs",
+      "language": "csharp",
+      "sizeLines": 13,
+      "fileCategory": "code"
+    },
+    {
+      "path": "Rmms.Infrastructure/Notifications/NotificationService.cs",
+      "language": "csharp",
+      "sizeLines": 134,
+      "fileCategory": "code"
+    },
+    {
+      "path": "Rmms.Infrastructure/Notifications/PushOptions.cs",
+      "language": "csharp",
+      "sizeLines": 21,
+      "fileCategory": "code"
+    },
+    {
+      "path": "Rmms.Infrastructure/Persistence/AppDbContext.cs",
+      "language": "csharp",
+      "sizeLines": 94,
+      "fileCategory": "code"
+    },
+    {
+      "path": "Rmms.Infrastructure/Persistence/Configurations/ApprovalConfiguration.cs",
+      "language": "csharp",
+      "sizeLines": 58,
+      "fileCategory": "code"
+    },
+    {
+      "path": "Rmms.Infrastructure/Persistence/Configurations/ApprovalEmailTokenConfiguration.cs",
+      "language": "csharp",
+      "sizeLines": 27,
+      "fileCategory": "code"
+    },
+    {
+      "path": "Rmms.Infrastructure/Persistence/Configurations/AreaConfiguration.cs",
+      "language": "csharp",
+      "sizeLines": 27,
+      "fileCategory": "code"
+    },
+    {
+      "path": "Rmms.Infrastructure/Persistence/Configurations/AttendanceRecordConfiguration.cs",
+      "language": "csharp",
+      "sizeLines": 112,
+      "fileCategory": "code"
+    },
+    {
+      "path": "Rmms.Infrastructure/Persistence/Configurations/AuditLogConfiguration.cs",
+      "language": "csharp",
+      "sizeLines": 45,
+      "fileCategory": "code"
+    },
+    {
+      "path": "Rmms.Infrastructure/Persistence/Configurations/CategoryConfiguration.cs",
+      "language": "csharp",
+      "sizeLines": 24,
+      "fileCategory": "code"
+    },
+    {
+      "path": "Rmms.Infrastructure/Persistence/Configurations/DocumentConfiguration.cs",
+      "language": "csharp",
+      "sizeLines": 63,
+      "fileCategory": "code"
+    },
+    {
+      "path": "Rmms.Infrastructure/Persistence/Configurations/EmailVerificationTokenConfiguration.cs",
+      "language": "csharp",
+      "sizeLines": 29,
+      "fileCategory": "code"
+    },
+    {
+      "path": "Rmms.Infrastructure/Persistence/Configurations/FormAssignmentConfiguration.cs",
+      "language": "csharp",
+      "sizeLines": 26,
+      "fileCategory": "code"
+    },
+    {
+      "path": "Rmms.Infrastructure/Persistence/Configurations/FormConfiguration.cs",
+      "language": "csharp",
+      "sizeLines": 87,
+      "fileCategory": "code"
+    },
+    {
+      "path": "Rmms.Infrastructure/Persistence/Configurations/FormSubmissionConfiguration.cs",
+      "language": "csharp",
+      "sizeLines": 57,
+      "fileCategory": "code"
+    },
+    {
+      "path": "Rmms.Infrastructure/Persistence/Configurations/FormVersionConfiguration.cs",
+      "language": "csharp",
+      "sizeLines": 28,
+      "fileCategory": "code"
+    },
+    {
+      "path": "Rmms.Infrastructure/Persistence/Configurations/LeaveRequestConfiguration.cs",
+      "language": "csharp",
+      "sizeLines": 35,
+      "fileCategory": "code"
+    },
+    {
+      "path": "Rmms.Infrastructure/Persistence/Configurations/LoginHistoryConfiguration.cs",
+      "language": "csharp",
+      "sizeLines": 29,
+      "fileCategory": "code"
+    },
+    {
+      "path": "Rmms.Infrastructure/Persistence/Configurations/NewsConfiguration.cs",
+      "language": "csharp",
+      "sizeLines": 67,
+      "fileCategory": "code"
+    },
+    {
+      "path": "Rmms.Infrastructure/Persistence/Configurations/NotificationConfiguration.cs",
+      "language": "csharp",
+      "sizeLines": 42,
+      "fileCategory": "code"
+    },
+    {
+      "path": "Rmms.Infrastructure/Persistence/Configurations/OtRequestConfiguration.cs",
+      "language": "csharp",
+      "sizeLines": 30,
+      "fileCategory": "code"
+    },
+    {
+      "path": "Rmms.Infrastructure/Persistence/Configurations/PasswordResetTokenConfiguration.cs",
+      "language": "csharp",
+      "sizeLines": 29,
+      "fileCategory": "code"
+    },
+    {
+      "path": "Rmms.Infrastructure/Persistence/Configurations/ProductConfiguration.cs",
+      "language": "csharp",
+      "sizeLines": 58,
+      "fileCategory": "code"
+    },
+    {
+      "path": "Rmms.Infrastructure/Persistence/Configurations/PushTokenConfiguration.cs",
+      "language": "csharp",
+      "sizeLines": 28,
+      "fileCategory": "code"
+    },
+    {
+      "path": "Rmms.Infrastructure/Persistence/Configurations/RefreshTokenConfiguration.cs",
+      "language": "csharp",
+      "sizeLines": 34,
+      "fileCategory": "code"
+    },
+    {
+      "path": "Rmms.Infrastructure/Persistence/Configurations/StoreConfiguration.cs",
+      "language": "csharp",
+      "sizeLines": 66,
+      "fileCategory": "code"
+    },
+    {
+      "path": "Rmms.Infrastructure/Persistence/Configurations/UserCategoryAssignmentConfiguration.cs",
+      "language": "csharp",
+      "sizeLines": 27,
+      "fileCategory": "code"
+    },
+    {
+      "path": "Rmms.Infrastructure/Persistence/Configurations/UserConfiguration.cs",
+      "language": "csharp",
+      "sizeLines": 110,
+      "fileCategory": "code"
+    },
+    {
+      "path": "Rmms.Infrastructure/Persistence/Configurations/UserDeviceConfiguration.cs",
+      "language": "csharp",
+      "sizeLines": 77,
+      "fileCategory": "code"
+    },
+    {
+      "path": "Rmms.Infrastructure/Persistence/Configurations/UserLeaderAssignmentConfiguration.cs",
+      "language": "csharp",
+      "sizeLines": 29,
+      "fileCategory": "code"
+    },
+    {
+      "path": "Rmms.Infrastructure/Persistence/Configurations/UserStoreAssignmentConfiguration.cs",
+      "language": "csharp",
+      "sizeLines": 30,
+      "fileCategory": "code"
+    },
+    {
+      "path": "Rmms.Infrastructure/Persistence/Configurations/VisitPlanConfiguration.cs",
+      "language": "csharp",
+      "sizeLines": 70,
+      "fileCategory": "code"
+    },
+    {
+      "path": "Rmms.Infrastructure/Persistence/Configurations/WorkScheduleConfiguration.cs",
+      "language": "csharp",
+      "sizeLines": 82,
+      "fileCategory": "code"
+    },
+    {
+      "path": "Rmms.Infrastructure/Persistence/Interceptors/AuditableEntityInterceptor.cs",
+      "language": "csharp",
+      "sizeLines": 67,
+      "fileCategory": "code"
+    },
+    {
+      "path": "Rmms.Infrastructure/Persistence/Migrations/20260529022602_Init_M01_M02_Foundation.cs",
+      "language": "csharp",
+      "sizeLines": 292,
+      "fileCategory": "code"
+    },
+    {
+      "path": "Rmms.Infrastructure/Persistence/Migrations/20260529022602_Init_M01_M02_Foundation.Designer.cs",
+      "language": "csharp",
+      "sizeLines": 518,
+      "fileCategory": "code"
+    },
+    {
+      "path": "Rmms.Infrastructure/Persistence/Migrations/20260605034359_M03_Organization_Assignment.cs",
+      "language": "csharp",
+      "sizeLines": 234,
+      "fileCategory": "code"
+    },
+    {
+      "path": "Rmms.Infrastructure/Persistence/Migrations/20260605034359_M03_Organization_Assignment.Designer.cs",
+      "language": "csharp",
+      "sizeLines": 891,
+      "fileCategory": "code"
+    },
+    {
+      "path": "Rmms.Infrastructure/Persistence/Migrations/20260606042427_M07_WorkSchedule.cs",
+      "language": "csharp",
+      "sizeLines": 94,
+      "fileCategory": "code"
+    },
+    {
+      "path": "Rmms.Infrastructure/Persistence/Migrations/20260606042427_M07_WorkSchedule.Designer.cs",
+      "language": "csharp",
+      "sizeLines": 1024,
+      "fileCategory": "code"
+    },
+    {
+      "path": "Rmms.Infrastructure/Persistence/Migrations/20260606082819_M05_Attendance.cs",
+      "language": "csharp",
+      "sizeLines": 86,
+      "fileCategory": "code"
+    },
+    {
+      "path": "Rmms.Infrastructure/Persistence/Migrations/20260606082819_M05_Attendance.Designer.cs",
+      "language": "csharp",
+      "sizeLines": 1186,
+      "fileCategory": "code"
+    },
+    {
+      "path": "Rmms.Infrastructure/Persistence/Migrations/20260606171533_M09_Approvals.cs",
+      "language": "csharp",
+      "sizeLines": 97,
+      "fileCategory": "code"
+    },
+    {
+      "path": "Rmms.Infrastructure/Persistence/Migrations/20260606171533_M09_Approvals.Designer.cs",
+      "language": "csharp",
+      "sizeLines": 1334,
+      "fileCategory": "code"
+    },
+    {
+      "path": "Rmms.Infrastructure/Persistence/Migrations/20260607024229_M08_LeaveOt.cs",
+      "language": "csharp",
+      "sizeLines": 96,
+      "fileCategory": "code"
+    },
+    {
+      "path": "Rmms.Infrastructure/Persistence/Migrations/20260607024229_M08_LeaveOt.Designer.cs",
+      "language": "csharp",
+      "sizeLines": 1496,
+      "fileCategory": "code"
+    },
+    {
+      "path": "Rmms.Infrastructure/Persistence/Migrations/20260608034404_M14_Notifications.cs",
+      "language": "csharp",
+      "sizeLines": 53,
+      "fileCategory": "code"
+    },
+    {
+      "path": "Rmms.Infrastructure/Persistence/Migrations/20260608034404_M14_Notifications.Designer.cs",
+      "language": "csharp",
+      "sizeLines": 1575,
+      "fileCategory": "code"
+    },
+    {
+      "path": "Rmms.Infrastructure/Persistence/Migrations/20260614092038_M04_ProductMaster.cs",
+      "language": "csharp",
+      "sizeLines": 63,
+      "fileCategory": "code"
+    },
+    {
+      "path": "Rmms.Infrastructure/Persistence/Migrations/20260614092038_M04_ProductMaster.Designer.cs",
+      "language": "csharp",
+      "sizeLines": 1655,
+      "fileCategory": "code"
+    },
+    {
+      "path": "Rmms.Infrastructure/Persistence/Migrations/20260614102719_M10_Forms.cs",
+      "language": "csharp",
+      "sizeLines": 92,
+      "fileCategory": "code"
+    },
+    {
+      "path": "Rmms.Infrastructure/Persistence/Migrations/20260614102719_M10_Forms.Designer.cs",
+      "language": "csharp",
+      "sizeLines": 1806,
+      "fileCategory": "code"
+    },
+    {
+      "path": "Rmms.Infrastructure/Persistence/Migrations/20260614104723_M10_FormFill.cs",
+      "language": "csharp",
+      "sizeLines": 117,
+      "fileCategory": "code"
+    },
+    {
+      "path": "Rmms.Infrastructure/Persistence/Migrations/20260614104723_M10_FormFill.Designer.cs",
+      "language": "csharp",
+      "sizeLines": 1993,
+      "fileCategory": "code"
+    },
+    {
+      "path": "Rmms.Infrastructure/Persistence/Migrations/20260614125121_M11_VisitPlan.cs",
+      "language": "csharp",
+      "sizeLines": 91,
+      "fileCategory": "code"
+    },
+    {
+      "path": "Rmms.Infrastructure/Persistence/Migrations/20260614125121_M11_VisitPlan.Designer.cs",
+      "language": "csharp",
+      "sizeLines": 2114,
+      "fileCategory": "code"
+    },
+    {
+      "path": "Rmms.Infrastructure/Persistence/Migrations/20260614164936_M13_Documents.cs",
+      "language": "csharp",
+      "sizeLines": 84,
+      "fileCategory": "code"
+    },
+    {
+      "path": "Rmms.Infrastructure/Persistence/Migrations/20260614164936_M13_Documents.Designer.cs",
+      "language": "csharp",
+      "sizeLines": 2245,
+      "fileCategory": "code"
+    },
+    {
+      "path": "Rmms.Infrastructure/Persistence/Migrations/20260614165737_M14_News.cs",
+      "language": "csharp",
+      "sizeLines": 116,
+      "fileCategory": "code"
+    },
+    {
+      "path": "Rmms.Infrastructure/Persistence/Migrations/20260614165737_M14_News.Designer.cs",
+      "language": "csharp",
+      "sizeLines": 2438,
+      "fileCategory": "code"
+    },
+    {
+      "path": "Rmms.Infrastructure/Persistence/Migrations/20260615022635_S17_AttendanceCheckInIndex.cs",
+      "language": "csharp",
+      "sizeLines": 27,
+      "fileCategory": "code"
+    },
+    {
+      "path": "Rmms.Infrastructure/Persistence/Migrations/20260615022635_S17_AttendanceCheckInIndex.Designer.cs",
+      "language": "csharp",
+      "sizeLines": 2441,
+      "fileCategory": "code"
+    },
+    {
+      "path": "Rmms.Infrastructure/Persistence/Migrations/20260616081404_M10_FormSubmissionGps.cs",
+      "language": "csharp",
+      "sizeLines": 38,
+      "fileCategory": "code"
+    },
+    {
+      "path": "Rmms.Infrastructure/Persistence/Migrations/20260616081404_M10_FormSubmissionGps.Designer.cs",
+      "language": "csharp",
+      "sizeLines": 2449,
+      "fileCategory": "code"
+    },
+    {
+      "path": "Rmms.Infrastructure/Persistence/Migrations/20260616111821_M14_PushTokens.cs",
+      "language": "csharp",
+      "sizeLines": 53,
+      "fileCategory": "code"
+    },
+    {
+      "path": "Rmms.Infrastructure/Persistence/Migrations/20260616111821_M14_PushTokens.Designer.cs",
+      "language": "csharp",
+      "sizeLines": 2504,
+      "fileCategory": "code"
+    },
+    {
+      "path": "Rmms.Infrastructure/Persistence/Migrations/20260617151300_M01_SuperAdminFlag.cs",
+      "language": "csharp",
+      "sizeLines": 29,
+      "fileCategory": "code"
+    },
+    {
+      "path": "Rmms.Infrastructure/Persistence/Migrations/20260617151300_M01_SuperAdminFlag.Designer.cs",
+      "language": "csharp",
+      "sizeLines": 2510,
+      "fileCategory": "code"
+    },
+    {
+      "path": "Rmms.Infrastructure/Persistence/Migrations/AppDbContextModelSnapshot.cs",
+      "language": "csharp",
+      "sizeLines": 2507,
+      "fileCategory": "code"
+    },
+    {
+      "path": "Rmms.Infrastructure/Persistence/Migrations/PostMigrationScripts/001_audit_log_append_only.sql",
+      "language": "sql",
+      "sizeLines": 36,
+      "fileCategory": "data"
+    },
+    {
+      "path": "Rmms.Infrastructure/Reports/ClosedXmlReportExporter.cs",
+      "language": "csharp",
+      "sizeLines": 54,
+      "fileCategory": "code"
+    },
+    {
+      "path": "Rmms.Infrastructure/Rmms.Infrastructure.csproj",
+      "language": "csproj",
+      "sizeLines": 58,
+      "fileCategory": "config"
+    },
+    {
+      "path": "Rmms.Infrastructure/Services/RedisLoginRateLimiter.cs",
+      "language": "csharp",
+      "sizeLines": 79,
+      "fileCategory": "code"
+    },
+    {
+      "path": "Rmms.Infrastructure/Services/SystemDateTimeProvider.cs",
+      "language": "csharp",
+      "sizeLines": 9,
+      "fileCategory": "code"
+    },
+    {
+      "path": "Rmms.Shared/Errors/ErrorCodes.cs",
+      "language": "csharp",
+      "sizeLines": 70,
+      "fileCategory": "code"
+    },
+    {
+      "path": "Rmms.Shared/Errors/ErrorEnvelope.cs",
+      "language": "csharp",
+      "sizeLines": 17,
+      "fileCategory": "code"
+    },
+    {
+      "path": "Rmms.Shared/Pagination/PaginatedResponse.cs",
+      "language": "csharp",
+      "sizeLines": 31,
+      "fileCategory": "code"
+    },
+    {
+      "path": "Rmms.Shared/Rmms.Shared.csproj",
+      "language": "csproj",
+      "sizeLines": 11,
+      "fileCategory": "config"
+    },
+    {
+      "path": "Rmms.Worker/appsettings.Development.json",
+      "language": "json",
+      "sizeLines": 6,
+      "fileCategory": "config"
+    },
+    {
+      "path": "Rmms.Worker/appsettings.json",
+      "language": "json",
+      "sizeLines": 34,
+      "fileCategory": "config"
+    },
+    {
+      "path": "Rmms.Worker/Dockerfile",
+      "language": "dockerfile",
+      "sizeLines": 31,
+      "fileCategory": "infra"
+    },
+    {
+      "path": "Rmms.Worker/Program.cs",
+      "language": "csharp",
+      "sizeLines": 68,
+      "fileCategory": "code"
+    },
+    {
+      "path": "Rmms.Worker/Rmms.Worker.csproj",
+      "language": "csproj",
+      "sizeLines": 25,
+      "fileCategory": "config"
+    },
+    {
+      "path": "Rmms.Worker/SystemCurrentUser.cs",
+      "language": "csharp",
+      "sizeLines": 16,
+      "fileCategory": "code"
+    }
+  ],
+  "totalFiles": 431,
+  "filteredByIgnore": 0,
+  "estimatedComplexity": "large",
+  "stats": {
+    "filesScanned": 431,
+    "byCategory": {
+      "code": 389,
+      "config": 38,
+      "infra": 3,
+      "data": 1
+    },
+    "byLanguage": {
+      "unknown": 2,
+      "json": 32,
+      "csharp": 388,
+      "dockerfile": 2,
+      "csproj": 6,
+      "sql": 1
+    }
+  }
+}

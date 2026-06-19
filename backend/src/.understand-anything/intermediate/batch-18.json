@@ -1,0 +1,2320 @@
+{
+  "nodes": [
+    {
+      "id": "file:Rmms.Infrastructure/Persistence/Configurations/EmailVerificationTokenConfiguration.cs",
+      "type": "file",
+      "name": "EmailVerificationTokenConfiguration.cs",
+      "filePath": "Rmms.Infrastructure/Persistence/Configurations/EmailVerificationTokenConfiguration.cs",
+      "summary": "EmailVerificationTokenConfiguration.cs — tệp mã nguồn C# trong backend RMMS (1 hàm, 1 class).",
+      "tags": [
+        "rmms.infrastructure",
+        "persistence",
+        "code",
+        "cs"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Rmms.Infrastructure/Persistence/Configurations/EmailVerificationTokenConfiguration.cs:Configure",
+      "type": "function",
+      "name": "Configure",
+      "filePath": "Rmms.Infrastructure/Persistence/Configurations/EmailVerificationTokenConfiguration.cs",
+      "lineRange": [
+        9,
+        28
+      ],
+      "summary": "Hàm Configure trong EmailVerificationTokenConfiguration.cs.",
+      "tags": [
+        "rmms.infrastructure",
+        "persistence",
+        "code",
+        "cs",
+        "ham"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:Rmms.Infrastructure/Persistence/Configurations/EmailVerificationTokenConfiguration.cs:EmailVerificationTokenConfiguration",
+      "type": "class",
+      "name": "EmailVerificationTokenConfiguration",
+      "filePath": "Rmms.Infrastructure/Persistence/Configurations/EmailVerificationTokenConfiguration.cs",
+      "lineRange": [
+        7,
+        29
+      ],
+      "summary": "Class EmailVerificationTokenConfiguration trong EmailVerificationTokenConfiguration.cs.",
+      "tags": [
+        "rmms.infrastructure",
+        "persistence",
+        "code",
+        "cs",
+        "class"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:Rmms.Infrastructure/Persistence/Configurations/FormAssignmentConfiguration.cs",
+      "type": "file",
+      "name": "FormAssignmentConfiguration.cs",
+      "filePath": "Rmms.Infrastructure/Persistence/Configurations/FormAssignmentConfiguration.cs",
+      "summary": "FormAssignmentConfiguration.cs — tệp mã nguồn C# trong backend RMMS (1 hàm, 1 class).",
+      "tags": [
+        "rmms.infrastructure",
+        "persistence",
+        "code",
+        "cs"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Rmms.Infrastructure/Persistence/Configurations/FormAssignmentConfiguration.cs:Configure",
+      "type": "function",
+      "name": "Configure",
+      "filePath": "Rmms.Infrastructure/Persistence/Configurations/FormAssignmentConfiguration.cs",
+      "lineRange": [
+        9,
+        25
+      ],
+      "summary": "Hàm Configure trong FormAssignmentConfiguration.cs.",
+      "tags": [
+        "rmms.infrastructure",
+        "persistence",
+        "code",
+        "cs",
+        "ham"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:Rmms.Infrastructure/Persistence/Configurations/FormAssignmentConfiguration.cs:FormAssignmentConfiguration",
+      "type": "class",
+      "name": "FormAssignmentConfiguration",
+      "filePath": "Rmms.Infrastructure/Persistence/Configurations/FormAssignmentConfiguration.cs",
+      "lineRange": [
+        7,
+        26
+      ],
+      "summary": "Class FormAssignmentConfiguration trong FormAssignmentConfiguration.cs.",
+      "tags": [
+        "rmms.infrastructure",
+        "persistence",
+        "code",
+        "cs",
+        "class"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:Rmms.Infrastructure/Persistence/Configurations/FormConfiguration.cs",
+      "type": "file",
+      "name": "FormConfiguration.cs",
+      "filePath": "Rmms.Infrastructure/Persistence/Configurations/FormConfiguration.cs",
+      "summary": "FormConfiguration.cs — tệp mã nguồn C# trong backend RMMS (5 hàm, 1 class).",
+      "tags": [
+        "rmms.infrastructure",
+        "persistence",
+        "code",
+        "cs"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:Rmms.Infrastructure/Persistence/Configurations/FormConfiguration.cs:Configure",
+      "type": "function",
+      "name": "Configure",
+      "filePath": "Rmms.Infrastructure/Persistence/Configurations/FormConfiguration.cs",
+      "lineRange": [
+        10,
+        42
+      ],
+      "summary": "Hàm Configure trong FormConfiguration.cs.",
+      "tags": [
+        "rmms.infrastructure",
+        "persistence",
+        "code",
+        "cs",
+        "ham"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Rmms.Infrastructure/Persistence/Configurations/FormConfiguration.cs:FormTypeToString",
+      "type": "function",
+      "name": "FormTypeToString",
+      "filePath": "Rmms.Infrastructure/Persistence/Configurations/FormConfiguration.cs",
+      "lineRange": [
+        44,
+        56
+      ],
+      "summary": "Hàm FormTypeToString trong FormConfiguration.cs.",
+      "tags": [
+        "rmms.infrastructure",
+        "persistence",
+        "code",
+        "cs",
+        "ham"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Rmms.Infrastructure/Persistence/Configurations/FormConfiguration.cs:FormTypeFromString",
+      "type": "function",
+      "name": "FormTypeFromString",
+      "filePath": "Rmms.Infrastructure/Persistence/Configurations/FormConfiguration.cs",
+      "lineRange": [
+        58,
+        70
+      ],
+      "summary": "Hàm FormTypeFromString trong FormConfiguration.cs.",
+      "tags": [
+        "rmms.infrastructure",
+        "persistence",
+        "code",
+        "cs",
+        "ham"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Rmms.Infrastructure/Persistence/Configurations/FormConfiguration.cs:FormStatusToString",
+      "type": "function",
+      "name": "FormStatusToString",
+      "filePath": "Rmms.Infrastructure/Persistence/Configurations/FormConfiguration.cs",
+      "lineRange": [
+        72,
+        78
+      ],
+      "summary": "Hàm FormStatusToString trong FormConfiguration.cs.",
+      "tags": [
+        "rmms.infrastructure",
+        "persistence",
+        "code",
+        "cs",
+        "ham"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Rmms.Infrastructure/Persistence/Configurations/FormConfiguration.cs:FormStatusFromString",
+      "type": "function",
+      "name": "FormStatusFromString",
+      "filePath": "Rmms.Infrastructure/Persistence/Configurations/FormConfiguration.cs",
+      "lineRange": [
+        80,
+        86
+      ],
+      "summary": "Hàm FormStatusFromString trong FormConfiguration.cs.",
+      "tags": [
+        "rmms.infrastructure",
+        "persistence",
+        "code",
+        "cs",
+        "ham"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:Rmms.Infrastructure/Persistence/Configurations/FormConfiguration.cs:FormConfiguration",
+      "type": "class",
+      "name": "FormConfiguration",
+      "filePath": "Rmms.Infrastructure/Persistence/Configurations/FormConfiguration.cs",
+      "lineRange": [
+        8,
+        87
+      ],
+      "summary": "Class FormConfiguration trong FormConfiguration.cs.",
+      "tags": [
+        "rmms.infrastructure",
+        "persistence",
+        "code",
+        "cs",
+        "class"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:Rmms.Infrastructure/Persistence/Configurations/FormSubmissionConfiguration.cs",
+      "type": "file",
+      "name": "FormSubmissionConfiguration.cs",
+      "filePath": "Rmms.Infrastructure/Persistence/Configurations/FormSubmissionConfiguration.cs",
+      "summary": "FormSubmissionConfiguration.cs — tệp mã nguồn C# trong backend RMMS (3 hàm, 1 class).",
+      "tags": [
+        "rmms.infrastructure",
+        "persistence",
+        "code",
+        "cs"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Rmms.Infrastructure/Persistence/Configurations/FormSubmissionConfiguration.cs:Configure",
+      "type": "function",
+      "name": "Configure",
+      "filePath": "Rmms.Infrastructure/Persistence/Configurations/FormSubmissionConfiguration.cs",
+      "lineRange": [
+        10,
+        40
+      ],
+      "summary": "Hàm Configure trong FormSubmissionConfiguration.cs.",
+      "tags": [
+        "rmms.infrastructure",
+        "persistence",
+        "code",
+        "cs",
+        "ham"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Rmms.Infrastructure/Persistence/Configurations/FormSubmissionConfiguration.cs:StatusToString",
+      "type": "function",
+      "name": "StatusToString",
+      "filePath": "Rmms.Infrastructure/Persistence/Configurations/FormSubmissionConfiguration.cs",
+      "lineRange": [
+        42,
+        48
+      ],
+      "summary": "Hàm StatusToString trong FormSubmissionConfiguration.cs.",
+      "tags": [
+        "rmms.infrastructure",
+        "persistence",
+        "code",
+        "cs",
+        "ham"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Rmms.Infrastructure/Persistence/Configurations/FormSubmissionConfiguration.cs:StatusFromString",
+      "type": "function",
+      "name": "StatusFromString",
+      "filePath": "Rmms.Infrastructure/Persistence/Configurations/FormSubmissionConfiguration.cs",
+      "lineRange": [
+        50,
+        56
+      ],
+      "summary": "Hàm StatusFromString trong FormSubmissionConfiguration.cs.",
+      "tags": [
+        "rmms.infrastructure",
+        "persistence",
+        "code",
+        "cs",
+        "ham"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:Rmms.Infrastructure/Persistence/Configurations/FormSubmissionConfiguration.cs:FormSubmissionConfiguration",
+      "type": "class",
+      "name": "FormSubmissionConfiguration",
+      "filePath": "Rmms.Infrastructure/Persistence/Configurations/FormSubmissionConfiguration.cs",
+      "lineRange": [
+        8,
+        57
+      ],
+      "summary": "Class FormSubmissionConfiguration trong FormSubmissionConfiguration.cs.",
+      "tags": [
+        "rmms.infrastructure",
+        "persistence",
+        "code",
+        "cs",
+        "class"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:Rmms.Infrastructure/Persistence/Configurations/FormVersionConfiguration.cs",
+      "type": "file",
+      "name": "FormVersionConfiguration.cs",
+      "filePath": "Rmms.Infrastructure/Persistence/Configurations/FormVersionConfiguration.cs",
+      "summary": "FormVersionConfiguration.cs — tệp mã nguồn C# trong backend RMMS (1 hàm, 1 class).",
+      "tags": [
+        "rmms.infrastructure",
+        "persistence",
+        "code",
+        "cs"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Rmms.Infrastructure/Persistence/Configurations/FormVersionConfiguration.cs:Configure",
+      "type": "function",
+      "name": "Configure",
+      "filePath": "Rmms.Infrastructure/Persistence/Configurations/FormVersionConfiguration.cs",
+      "lineRange": [
+        9,
+        27
+      ],
+      "summary": "Hàm Configure trong FormVersionConfiguration.cs.",
+      "tags": [
+        "rmms.infrastructure",
+        "persistence",
+        "code",
+        "cs",
+        "ham"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:Rmms.Infrastructure/Persistence/Configurations/FormVersionConfiguration.cs:FormVersionConfiguration",
+      "type": "class",
+      "name": "FormVersionConfiguration",
+      "filePath": "Rmms.Infrastructure/Persistence/Configurations/FormVersionConfiguration.cs",
+      "lineRange": [
+        7,
+        28
+      ],
+      "summary": "Class FormVersionConfiguration trong FormVersionConfiguration.cs.",
+      "tags": [
+        "rmms.infrastructure",
+        "persistence",
+        "code",
+        "cs",
+        "class"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:Rmms.Infrastructure/Persistence/Configurations/LeaveRequestConfiguration.cs",
+      "type": "file",
+      "name": "LeaveRequestConfiguration.cs",
+      "filePath": "Rmms.Infrastructure/Persistence/Configurations/LeaveRequestConfiguration.cs",
+      "summary": "LeaveRequestConfiguration.cs — tệp mã nguồn C# trong backend RMMS (1 hàm, 1 class).",
+      "tags": [
+        "rmms.infrastructure",
+        "persistence",
+        "code",
+        "cs"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Rmms.Infrastructure/Persistence/Configurations/LeaveRequestConfiguration.cs:Configure",
+      "type": "function",
+      "name": "Configure",
+      "filePath": "Rmms.Infrastructure/Persistence/Configurations/LeaveRequestConfiguration.cs",
+      "lineRange": [
+        11,
+        34
+      ],
+      "summary": "Hàm Configure trong LeaveRequestConfiguration.cs.",
+      "tags": [
+        "rmms.infrastructure",
+        "persistence",
+        "code",
+        "cs",
+        "ham"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:Rmms.Infrastructure/Persistence/Configurations/LeaveRequestConfiguration.cs:LeaveRequestConfiguration",
+      "type": "class",
+      "name": "LeaveRequestConfiguration",
+      "filePath": "Rmms.Infrastructure/Persistence/Configurations/LeaveRequestConfiguration.cs",
+      "lineRange": [
+        9,
+        35
+      ],
+      "summary": "Class LeaveRequestConfiguration trong LeaveRequestConfiguration.cs.",
+      "tags": [
+        "rmms.infrastructure",
+        "persistence",
+        "code",
+        "cs",
+        "class"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:Rmms.Infrastructure/Persistence/Configurations/LoginHistoryConfiguration.cs",
+      "type": "file",
+      "name": "LoginHistoryConfiguration.cs",
+      "filePath": "Rmms.Infrastructure/Persistence/Configurations/LoginHistoryConfiguration.cs",
+      "summary": "LoginHistoryConfiguration.cs — tệp mã nguồn C# trong backend RMMS (1 hàm, 1 class).",
+      "tags": [
+        "rmms.infrastructure",
+        "persistence",
+        "code",
+        "cs"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Rmms.Infrastructure/Persistence/Configurations/LoginHistoryConfiguration.cs:Configure",
+      "type": "function",
+      "name": "Configure",
+      "filePath": "Rmms.Infrastructure/Persistence/Configurations/LoginHistoryConfiguration.cs",
+      "lineRange": [
+        9,
+        28
+      ],
+      "summary": "Hàm Configure trong LoginHistoryConfiguration.cs.",
+      "tags": [
+        "rmms.infrastructure",
+        "persistence",
+        "code",
+        "cs",
+        "ham"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:Rmms.Infrastructure/Persistence/Configurations/LoginHistoryConfiguration.cs:LoginHistoryConfiguration",
+      "type": "class",
+      "name": "LoginHistoryConfiguration",
+      "filePath": "Rmms.Infrastructure/Persistence/Configurations/LoginHistoryConfiguration.cs",
+      "lineRange": [
+        7,
+        29
+      ],
+      "summary": "Class LoginHistoryConfiguration trong LoginHistoryConfiguration.cs.",
+      "tags": [
+        "rmms.infrastructure",
+        "persistence",
+        "code",
+        "cs",
+        "class"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:Rmms.Infrastructure/Persistence/Configurations/NewsConfiguration.cs",
+      "type": "file",
+      "name": "NewsConfiguration.cs",
+      "filePath": "Rmms.Infrastructure/Persistence/Configurations/NewsConfiguration.cs",
+      "summary": "NewsConfiguration.cs — tệp mã nguồn C# trong backend RMMS (3 hàm, 3 class).",
+      "tags": [
+        "rmms.infrastructure",
+        "persistence",
+        "code",
+        "cs"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:Rmms.Infrastructure/Persistence/Configurations/NewsConfiguration.cs:Configure",
+      "type": "function",
+      "name": "Configure",
+      "filePath": "Rmms.Infrastructure/Persistence/Configurations/NewsConfiguration.cs",
+      "lineRange": [
+        9,
+        26
+      ],
+      "summary": "Hàm Configure trong NewsConfiguration.cs.",
+      "tags": [
+        "rmms.infrastructure",
+        "persistence",
+        "code",
+        "cs",
+        "ham"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:Rmms.Infrastructure/Persistence/Configurations/NewsConfiguration.cs:NewsItemConfiguration",
+      "type": "class",
+      "name": "NewsItemConfiguration",
+      "filePath": "Rmms.Infrastructure/Persistence/Configurations/NewsConfiguration.cs",
+      "lineRange": [
+        7,
+        27
+      ],
+      "summary": "Class NewsItemConfiguration trong NewsConfiguration.cs.",
+      "tags": [
+        "rmms.infrastructure",
+        "persistence",
+        "code",
+        "cs",
+        "class"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "class:Rmms.Infrastructure/Persistence/Configurations/NewsConfiguration.cs:NewsAssignmentConfiguration",
+      "type": "class",
+      "name": "NewsAssignmentConfiguration",
+      "filePath": "Rmms.Infrastructure/Persistence/Configurations/NewsConfiguration.cs",
+      "lineRange": [
+        29,
+        45
+      ],
+      "summary": "Class NewsAssignmentConfiguration trong NewsConfiguration.cs.",
+      "tags": [
+        "rmms.infrastructure",
+        "persistence",
+        "code",
+        "cs",
+        "class"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "class:Rmms.Infrastructure/Persistence/Configurations/NewsConfiguration.cs:NewsReadConfiguration",
+      "type": "class",
+      "name": "NewsReadConfiguration",
+      "filePath": "Rmms.Infrastructure/Persistence/Configurations/NewsConfiguration.cs",
+      "lineRange": [
+        47,
+        67
+      ],
+      "summary": "Class NewsReadConfiguration trong NewsConfiguration.cs.",
+      "tags": [
+        "rmms.infrastructure",
+        "persistence",
+        "code",
+        "cs",
+        "class"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:Rmms.Infrastructure/Persistence/Configurations/NotificationConfiguration.cs",
+      "type": "file",
+      "name": "NotificationConfiguration.cs",
+      "filePath": "Rmms.Infrastructure/Persistence/Configurations/NotificationConfiguration.cs",
+      "summary": "NotificationConfiguration.cs — tệp mã nguồn C# trong backend RMMS (2 hàm, 1 class).",
+      "tags": [
+        "rmms.infrastructure",
+        "persistence",
+        "code",
+        "cs"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Rmms.Infrastructure/Persistence/Configurations/NotificationConfiguration.cs:Configure",
+      "type": "function",
+      "name": "Configure",
+      "filePath": "Rmms.Infrastructure/Persistence/Configurations/NotificationConfiguration.cs",
+      "lineRange": [
+        11,
+        38
+      ],
+      "summary": "Hàm Configure trong NotificationConfiguration.cs.",
+      "tags": [
+        "rmms.infrastructure",
+        "persistence",
+        "code",
+        "cs",
+        "ham"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Rmms.Infrastructure/Persistence/Configurations/NotificationConfiguration.cs:FromSnake",
+      "type": "function",
+      "name": "FromSnake",
+      "filePath": "Rmms.Infrastructure/Persistence/Configurations/NotificationConfiguration.cs",
+      "lineRange": [
+        40,
+        41
+      ],
+      "summary": "Hàm FromSnake trong NotificationConfiguration.cs.",
+      "tags": [
+        "rmms.infrastructure",
+        "persistence",
+        "code",
+        "cs",
+        "ham"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:Rmms.Infrastructure/Persistence/Configurations/NotificationConfiguration.cs:NotificationConfiguration",
+      "type": "class",
+      "name": "NotificationConfiguration",
+      "filePath": "Rmms.Infrastructure/Persistence/Configurations/NotificationConfiguration.cs",
+      "lineRange": [
+        9,
+        42
+      ],
+      "summary": "Class NotificationConfiguration trong NotificationConfiguration.cs.",
+      "tags": [
+        "rmms.infrastructure",
+        "persistence",
+        "code",
+        "cs",
+        "class"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:Rmms.Infrastructure/Persistence/Configurations/OtRequestConfiguration.cs",
+      "type": "file",
+      "name": "OtRequestConfiguration.cs",
+      "filePath": "Rmms.Infrastructure/Persistence/Configurations/OtRequestConfiguration.cs",
+      "summary": "OtRequestConfiguration.cs — tệp mã nguồn C# trong backend RMMS (1 hàm, 1 class).",
+      "tags": [
+        "rmms.infrastructure",
+        "persistence",
+        "code",
+        "cs"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Rmms.Infrastructure/Persistence/Configurations/OtRequestConfiguration.cs:Configure",
+      "type": "function",
+      "name": "Configure",
+      "filePath": "Rmms.Infrastructure/Persistence/Configurations/OtRequestConfiguration.cs",
+      "lineRange": [
+        11,
+        29
+      ],
+      "summary": "Hàm Configure trong OtRequestConfiguration.cs.",
+      "tags": [
+        "rmms.infrastructure",
+        "persistence",
+        "code",
+        "cs",
+        "ham"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:Rmms.Infrastructure/Persistence/Configurations/OtRequestConfiguration.cs:OtRequestConfiguration",
+      "type": "class",
+      "name": "OtRequestConfiguration",
+      "filePath": "Rmms.Infrastructure/Persistence/Configurations/OtRequestConfiguration.cs",
+      "lineRange": [
+        9,
+        30
+      ],
+      "summary": "Class OtRequestConfiguration trong OtRequestConfiguration.cs.",
+      "tags": [
+        "rmms.infrastructure",
+        "persistence",
+        "code",
+        "cs",
+        "class"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:Rmms.Infrastructure/Persistence/Configurations/PasswordResetTokenConfiguration.cs",
+      "type": "file",
+      "name": "PasswordResetTokenConfiguration.cs",
+      "filePath": "Rmms.Infrastructure/Persistence/Configurations/PasswordResetTokenConfiguration.cs",
+      "summary": "PasswordResetTokenConfiguration.cs — tệp mã nguồn C# trong backend RMMS (1 hàm, 1 class).",
+      "tags": [
+        "rmms.infrastructure",
+        "persistence",
+        "code",
+        "cs"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Rmms.Infrastructure/Persistence/Configurations/PasswordResetTokenConfiguration.cs:Configure",
+      "type": "function",
+      "name": "Configure",
+      "filePath": "Rmms.Infrastructure/Persistence/Configurations/PasswordResetTokenConfiguration.cs",
+      "lineRange": [
+        9,
+        28
+      ],
+      "summary": "Hàm Configure trong PasswordResetTokenConfiguration.cs.",
+      "tags": [
+        "rmms.infrastructure",
+        "persistence",
+        "code",
+        "cs",
+        "ham"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:Rmms.Infrastructure/Persistence/Configurations/PasswordResetTokenConfiguration.cs:PasswordResetTokenConfiguration",
+      "type": "class",
+      "name": "PasswordResetTokenConfiguration",
+      "filePath": "Rmms.Infrastructure/Persistence/Configurations/PasswordResetTokenConfiguration.cs",
+      "lineRange": [
+        7,
+        29
+      ],
+      "summary": "Class PasswordResetTokenConfiguration trong PasswordResetTokenConfiguration.cs.",
+      "tags": [
+        "rmms.infrastructure",
+        "persistence",
+        "code",
+        "cs",
+        "class"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:Rmms.Infrastructure/Persistence/Configurations/ProductConfiguration.cs",
+      "type": "file",
+      "name": "ProductConfiguration.cs",
+      "filePath": "Rmms.Infrastructure/Persistence/Configurations/ProductConfiguration.cs",
+      "summary": "ProductConfiguration.cs — tệp mã nguồn C# trong backend RMMS (3 hàm, 1 class).",
+      "tags": [
+        "rmms.infrastructure",
+        "persistence",
+        "code",
+        "cs"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Rmms.Infrastructure/Persistence/Configurations/ProductConfiguration.cs:Configure",
+      "type": "function",
+      "name": "Configure",
+      "filePath": "Rmms.Infrastructure/Persistence/Configurations/ProductConfiguration.cs",
+      "lineRange": [
+        10,
+        42
+      ],
+      "summary": "Hàm Configure trong ProductConfiguration.cs.",
+      "tags": [
+        "rmms.infrastructure",
+        "persistence",
+        "code",
+        "cs",
+        "ham"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Rmms.Infrastructure/Persistence/Configurations/ProductConfiguration.cs:ProductStatusToString",
+      "type": "function",
+      "name": "ProductStatusToString",
+      "filePath": "Rmms.Infrastructure/Persistence/Configurations/ProductConfiguration.cs",
+      "lineRange": [
+        45,
+        50
+      ],
+      "summary": "Hàm ProductStatusToString trong ProductConfiguration.cs.",
+      "tags": [
+        "rmms.infrastructure",
+        "persistence",
+        "code",
+        "cs",
+        "ham"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Rmms.Infrastructure/Persistence/Configurations/ProductConfiguration.cs:ProductStatusFromString",
+      "type": "function",
+      "name": "ProductStatusFromString",
+      "filePath": "Rmms.Infrastructure/Persistence/Configurations/ProductConfiguration.cs",
+      "lineRange": [
+        52,
+        57
+      ],
+      "summary": "Hàm ProductStatusFromString trong ProductConfiguration.cs.",
+      "tags": [
+        "rmms.infrastructure",
+        "persistence",
+        "code",
+        "cs",
+        "ham"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:Rmms.Infrastructure/Persistence/Configurations/ProductConfiguration.cs:ProductConfiguration",
+      "type": "class",
+      "name": "ProductConfiguration",
+      "filePath": "Rmms.Infrastructure/Persistence/Configurations/ProductConfiguration.cs",
+      "lineRange": [
+        8,
+        58
+      ],
+      "summary": "Class ProductConfiguration trong ProductConfiguration.cs.",
+      "tags": [
+        "rmms.infrastructure",
+        "persistence",
+        "code",
+        "cs",
+        "class"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:Rmms.Infrastructure/Persistence/Configurations/PushTokenConfiguration.cs",
+      "type": "file",
+      "name": "PushTokenConfiguration.cs",
+      "filePath": "Rmms.Infrastructure/Persistence/Configurations/PushTokenConfiguration.cs",
+      "summary": "PushTokenConfiguration.cs — tệp mã nguồn C# trong backend RMMS (1 hàm, 1 class).",
+      "tags": [
+        "rmms.infrastructure",
+        "persistence",
+        "code",
+        "cs"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Rmms.Infrastructure/Persistence/Configurations/PushTokenConfiguration.cs:Configure",
+      "type": "function",
+      "name": "Configure",
+      "filePath": "Rmms.Infrastructure/Persistence/Configurations/PushTokenConfiguration.cs",
+      "lineRange": [
+        9,
+        27
+      ],
+      "summary": "Hàm Configure trong PushTokenConfiguration.cs.",
+      "tags": [
+        "rmms.infrastructure",
+        "persistence",
+        "code",
+        "cs",
+        "ham"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:Rmms.Infrastructure/Persistence/Configurations/PushTokenConfiguration.cs:PushTokenConfiguration",
+      "type": "class",
+      "name": "PushTokenConfiguration",
+      "filePath": "Rmms.Infrastructure/Persistence/Configurations/PushTokenConfiguration.cs",
+      "lineRange": [
+        7,
+        28
+      ],
+      "summary": "Class PushTokenConfiguration trong PushTokenConfiguration.cs.",
+      "tags": [
+        "rmms.infrastructure",
+        "persistence",
+        "code",
+        "cs",
+        "class"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:Rmms.Infrastructure/Persistence/Configurations/RefreshTokenConfiguration.cs",
+      "type": "file",
+      "name": "RefreshTokenConfiguration.cs",
+      "filePath": "Rmms.Infrastructure/Persistence/Configurations/RefreshTokenConfiguration.cs",
+      "summary": "RefreshTokenConfiguration.cs — tệp mã nguồn C# trong backend RMMS (1 hàm, 1 class).",
+      "tags": [
+        "rmms.infrastructure",
+        "persistence",
+        "code",
+        "cs"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Rmms.Infrastructure/Persistence/Configurations/RefreshTokenConfiguration.cs:Configure",
+      "type": "function",
+      "name": "Configure",
+      "filePath": "Rmms.Infrastructure/Persistence/Configurations/RefreshTokenConfiguration.cs",
+      "lineRange": [
+        9,
+        33
+      ],
+      "summary": "Hàm Configure trong RefreshTokenConfiguration.cs.",
+      "tags": [
+        "rmms.infrastructure",
+        "persistence",
+        "code",
+        "cs",
+        "ham"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:Rmms.Infrastructure/Persistence/Configurations/RefreshTokenConfiguration.cs:RefreshTokenConfiguration",
+      "type": "class",
+      "name": "RefreshTokenConfiguration",
+      "filePath": "Rmms.Infrastructure/Persistence/Configurations/RefreshTokenConfiguration.cs",
+      "lineRange": [
+        7,
+        34
+      ],
+      "summary": "Class RefreshTokenConfiguration trong RefreshTokenConfiguration.cs.",
+      "tags": [
+        "rmms.infrastructure",
+        "persistence",
+        "code",
+        "cs",
+        "class"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:Rmms.Infrastructure/Persistence/Configurations/StoreConfiguration.cs",
+      "type": "file",
+      "name": "StoreConfiguration.cs",
+      "filePath": "Rmms.Infrastructure/Persistence/Configurations/StoreConfiguration.cs",
+      "summary": "StoreConfiguration.cs — tệp mã nguồn C# trong backend RMMS (3 hàm, 1 class).",
+      "tags": [
+        "rmms.infrastructure",
+        "persistence",
+        "code",
+        "cs"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Rmms.Infrastructure/Persistence/Configurations/StoreConfiguration.cs:Configure",
+      "type": "function",
+      "name": "Configure",
+      "filePath": "Rmms.Infrastructure/Persistence/Configurations/StoreConfiguration.cs",
+      "lineRange": [
+        10,
+        44
+      ],
+      "summary": "Hàm Configure trong StoreConfiguration.cs.",
+      "tags": [
+        "rmms.infrastructure",
+        "persistence",
+        "code",
+        "cs",
+        "ham"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Rmms.Infrastructure/Persistence/Configurations/StoreConfiguration.cs:StoreStatusToString",
+      "type": "function",
+      "name": "StoreStatusToString",
+      "filePath": "Rmms.Infrastructure/Persistence/Configurations/StoreConfiguration.cs",
+      "lineRange": [
+        47,
+        55
+      ],
+      "summary": "Hàm StoreStatusToString trong StoreConfiguration.cs.",
+      "tags": [
+        "rmms.infrastructure",
+        "persistence",
+        "code",
+        "cs",
+        "ham"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Rmms.Infrastructure/Persistence/Configurations/StoreConfiguration.cs:StoreStatusFromString",
+      "type": "function",
+      "name": "StoreStatusFromString",
+      "filePath": "Rmms.Infrastructure/Persistence/Configurations/StoreConfiguration.cs",
+      "lineRange": [
+        57,
+        65
+      ],
+      "summary": "Hàm StoreStatusFromString trong StoreConfiguration.cs.",
+      "tags": [
+        "rmms.infrastructure",
+        "persistence",
+        "code",
+        "cs",
+        "ham"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:Rmms.Infrastructure/Persistence/Configurations/StoreConfiguration.cs:StoreConfiguration",
+      "type": "class",
+      "name": "StoreConfiguration",
+      "filePath": "Rmms.Infrastructure/Persistence/Configurations/StoreConfiguration.cs",
+      "lineRange": [
+        8,
+        66
+      ],
+      "summary": "Class StoreConfiguration trong StoreConfiguration.cs.",
+      "tags": [
+        "rmms.infrastructure",
+        "persistence",
+        "code",
+        "cs",
+        "class"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:Rmms.Infrastructure/Persistence/Configurations/UserCategoryAssignmentConfiguration.cs",
+      "type": "file",
+      "name": "UserCategoryAssignmentConfiguration.cs",
+      "filePath": "Rmms.Infrastructure/Persistence/Configurations/UserCategoryAssignmentConfiguration.cs",
+      "summary": "UserCategoryAssignmentConfiguration.cs — tệp mã nguồn C# trong backend RMMS (1 hàm, 1 class).",
+      "tags": [
+        "rmms.infrastructure",
+        "persistence",
+        "code",
+        "cs"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Rmms.Infrastructure/Persistence/Configurations/UserCategoryAssignmentConfiguration.cs:Configure",
+      "type": "function",
+      "name": "Configure",
+      "filePath": "Rmms.Infrastructure/Persistence/Configurations/UserCategoryAssignmentConfiguration.cs",
+      "lineRange": [
+        9,
+        26
+      ],
+      "summary": "Hàm Configure trong UserCategoryAssignmentConfiguration.cs.",
+      "tags": [
+        "rmms.infrastructure",
+        "persistence",
+        "code",
+        "cs",
+        "ham"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:Rmms.Infrastructure/Persistence/Configurations/UserCategoryAssignmentConfiguration.cs:UserCategoryAssignmentConfiguration",
+      "type": "class",
+      "name": "UserCategoryAssignmentConfiguration",
+      "filePath": "Rmms.Infrastructure/Persistence/Configurations/UserCategoryAssignmentConfiguration.cs",
+      "lineRange": [
+        7,
+        27
+      ],
+      "summary": "Class UserCategoryAssignmentConfiguration trong UserCategoryAssignmentConfiguration.cs.",
+      "tags": [
+        "rmms.infrastructure",
+        "persistence",
+        "code",
+        "cs",
+        "class"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:Rmms.Infrastructure/Persistence/Configurations/UserConfiguration.cs",
+      "type": "file",
+      "name": "UserConfiguration.cs",
+      "filePath": "Rmms.Infrastructure/Persistence/Configurations/UserConfiguration.cs",
+      "summary": "UserConfiguration.cs — tệp mã nguồn C# trong backend RMMS (3 hàm, 1 class).",
+      "tags": [
+        "rmms.infrastructure",
+        "persistence",
+        "code",
+        "cs"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Rmms.Infrastructure/Persistence/Configurations/UserConfiguration.cs:Configure",
+      "type": "function",
+      "name": "Configure",
+      "filePath": "Rmms.Infrastructure/Persistence/Configurations/UserConfiguration.cs",
+      "lineRange": [
+        10,
+        80
+      ],
+      "summary": "Hàm Configure trong UserConfiguration.cs.",
+      "tags": [
+        "rmms.infrastructure",
+        "persistence",
+        "code",
+        "cs",
+        "ham"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Rmms.Infrastructure/Persistence/Configurations/UserConfiguration.cs:ToDbString",
+      "type": "function",
+      "name": "ToDbString",
+      "filePath": "Rmms.Infrastructure/Persistence/Configurations/UserConfiguration.cs",
+      "lineRange": [
+        86,
+        100
+      ],
+      "summary": "Hàm ToDbString trong UserConfiguration.cs.",
+      "tags": [
+        "rmms.infrastructure",
+        "persistence",
+        "code",
+        "cs",
+        "ham"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Rmms.Infrastructure/Persistence/Configurations/UserConfiguration.cs:FromDbString",
+      "type": "function",
+      "name": "FromDbString",
+      "filePath": "Rmms.Infrastructure/Persistence/Configurations/UserConfiguration.cs",
+      "lineRange": [
+        102,
+        109
+      ],
+      "summary": "Hàm FromDbString trong UserConfiguration.cs.",
+      "tags": [
+        "rmms.infrastructure",
+        "persistence",
+        "code",
+        "cs",
+        "ham"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:Rmms.Infrastructure/Persistence/Configurations/UserConfiguration.cs:UserConfiguration",
+      "type": "class",
+      "name": "UserConfiguration",
+      "filePath": "Rmms.Infrastructure/Persistence/Configurations/UserConfiguration.cs",
+      "lineRange": [
+        8,
+        110
+      ],
+      "summary": "Class UserConfiguration trong UserConfiguration.cs.",
+      "tags": [
+        "rmms.infrastructure",
+        "persistence",
+        "code",
+        "cs",
+        "class"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:Rmms.Infrastructure/Persistence/Configurations/UserDeviceConfiguration.cs",
+      "type": "file",
+      "name": "UserDeviceConfiguration.cs",
+      "filePath": "Rmms.Infrastructure/Persistence/Configurations/UserDeviceConfiguration.cs",
+      "summary": "UserDeviceConfiguration.cs — tệp mã nguồn C# trong backend RMMS (3 hàm, 1 class).",
+      "tags": [
+        "rmms.infrastructure",
+        "persistence",
+        "code",
+        "cs"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Rmms.Infrastructure/Persistence/Configurations/UserDeviceConfiguration.cs:Configure",
+      "type": "function",
+      "name": "Configure",
+      "filePath": "Rmms.Infrastructure/Persistence/Configurations/UserDeviceConfiguration.cs",
+      "lineRange": [
+        10,
+        49
+      ],
+      "summary": "Hàm Configure trong UserDeviceConfiguration.cs.",
+      "tags": [
+        "rmms.infrastructure",
+        "persistence",
+        "code",
+        "cs",
+        "ham"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Rmms.Infrastructure/Persistence/Configurations/UserDeviceConfiguration.cs:DeviceStatusToString",
+      "type": "function",
+      "name": "DeviceStatusToString",
+      "filePath": "Rmms.Infrastructure/Persistence/Configurations/UserDeviceConfiguration.cs",
+      "lineRange": [
+        54,
+        64
+      ],
+      "summary": "Hàm DeviceStatusToString trong UserDeviceConfiguration.cs.",
+      "tags": [
+        "rmms.infrastructure",
+        "persistence",
+        "code",
+        "cs",
+        "ham"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Rmms.Infrastructure/Persistence/Configurations/UserDeviceConfiguration.cs:DeviceStatusFromString",
+      "type": "function",
+      "name": "DeviceStatusFromString",
+      "filePath": "Rmms.Infrastructure/Persistence/Configurations/UserDeviceConfiguration.cs",
+      "lineRange": [
+        66,
+        76
+      ],
+      "summary": "Hàm DeviceStatusFromString trong UserDeviceConfiguration.cs.",
+      "tags": [
+        "rmms.infrastructure",
+        "persistence",
+        "code",
+        "cs",
+        "ham"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:Rmms.Infrastructure/Persistence/Configurations/UserDeviceConfiguration.cs:UserDeviceConfiguration",
+      "type": "class",
+      "name": "UserDeviceConfiguration",
+      "filePath": "Rmms.Infrastructure/Persistence/Configurations/UserDeviceConfiguration.cs",
+      "lineRange": [
+        8,
+        77
+      ],
+      "summary": "Class UserDeviceConfiguration trong UserDeviceConfiguration.cs.",
+      "tags": [
+        "rmms.infrastructure",
+        "persistence",
+        "code",
+        "cs",
+        "class"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:Rmms.Infrastructure/Persistence/Configurations/UserLeaderAssignmentConfiguration.cs",
+      "type": "file",
+      "name": "UserLeaderAssignmentConfiguration.cs",
+      "filePath": "Rmms.Infrastructure/Persistence/Configurations/UserLeaderAssignmentConfiguration.cs",
+      "summary": "UserLeaderAssignmentConfiguration.cs — tệp mã nguồn C# trong backend RMMS (1 hàm, 1 class).",
+      "tags": [
+        "rmms.infrastructure",
+        "persistence",
+        "code",
+        "cs"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Rmms.Infrastructure/Persistence/Configurations/UserLeaderAssignmentConfiguration.cs:Configure",
+      "type": "function",
+      "name": "Configure",
+      "filePath": "Rmms.Infrastructure/Persistence/Configurations/UserLeaderAssignmentConfiguration.cs",
+      "lineRange": [
+        9,
+        28
+      ],
+      "summary": "Hàm Configure trong UserLeaderAssignmentConfiguration.cs.",
+      "tags": [
+        "rmms.infrastructure",
+        "persistence",
+        "code",
+        "cs",
+        "ham"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:Rmms.Infrastructure/Persistence/Configurations/UserLeaderAssignmentConfiguration.cs:UserLeaderAssignmentConfiguration",
+      "type": "class",
+      "name": "UserLeaderAssignmentConfiguration",
+      "filePath": "Rmms.Infrastructure/Persistence/Configurations/UserLeaderAssignmentConfiguration.cs",
+      "lineRange": [
+        7,
+        29
+      ],
+      "summary": "Class UserLeaderAssignmentConfiguration trong UserLeaderAssignmentConfiguration.cs.",
+      "tags": [
+        "rmms.infrastructure",
+        "persistence",
+        "code",
+        "cs",
+        "class"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:Rmms.Infrastructure/Persistence/Configurations/UserStoreAssignmentConfiguration.cs",
+      "type": "file",
+      "name": "UserStoreAssignmentConfiguration.cs",
+      "filePath": "Rmms.Infrastructure/Persistence/Configurations/UserStoreAssignmentConfiguration.cs",
+      "summary": "UserStoreAssignmentConfiguration.cs — tệp mã nguồn C# trong backend RMMS (1 hàm, 1 class).",
+      "tags": [
+        "rmms.infrastructure",
+        "persistence",
+        "code",
+        "cs"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Rmms.Infrastructure/Persistence/Configurations/UserStoreAssignmentConfiguration.cs:Configure",
+      "type": "function",
+      "name": "Configure",
+      "filePath": "Rmms.Infrastructure/Persistence/Configurations/UserStoreAssignmentConfiguration.cs",
+      "lineRange": [
+        9,
+        29
+      ],
+      "summary": "Hàm Configure trong UserStoreAssignmentConfiguration.cs.",
+      "tags": [
+        "rmms.infrastructure",
+        "persistence",
+        "code",
+        "cs",
+        "ham"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:Rmms.Infrastructure/Persistence/Configurations/UserStoreAssignmentConfiguration.cs:UserStoreAssignmentConfiguration",
+      "type": "class",
+      "name": "UserStoreAssignmentConfiguration",
+      "filePath": "Rmms.Infrastructure/Persistence/Configurations/UserStoreAssignmentConfiguration.cs",
+      "lineRange": [
+        7,
+        30
+      ],
+      "summary": "Class UserStoreAssignmentConfiguration trong UserStoreAssignmentConfiguration.cs.",
+      "tags": [
+        "rmms.infrastructure",
+        "persistence",
+        "code",
+        "cs",
+        "class"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:Rmms.Infrastructure/Persistence/Configurations/VisitPlanConfiguration.cs",
+      "type": "file",
+      "name": "VisitPlanConfiguration.cs",
+      "filePath": "Rmms.Infrastructure/Persistence/Configurations/VisitPlanConfiguration.cs",
+      "summary": "VisitPlanConfiguration.cs — tệp mã nguồn C# trong backend RMMS (3 hàm, 1 class).",
+      "tags": [
+        "rmms.infrastructure",
+        "persistence",
+        "code",
+        "cs"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Rmms.Infrastructure/Persistence/Configurations/VisitPlanConfiguration.cs:Configure",
+      "type": "function",
+      "name": "Configure",
+      "filePath": "Rmms.Infrastructure/Persistence/Configurations/VisitPlanConfiguration.cs",
+      "lineRange": [
+        11,
+        51
+      ],
+      "summary": "Hàm Configure trong VisitPlanConfiguration.cs.",
+      "tags": [
+        "rmms.infrastructure",
+        "persistence",
+        "code",
+        "cs",
+        "ham"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Rmms.Infrastructure/Persistence/Configurations/VisitPlanConfiguration.cs:StatusToString",
+      "type": "function",
+      "name": "StatusToString",
+      "filePath": "Rmms.Infrastructure/Persistence/Configurations/VisitPlanConfiguration.cs",
+      "lineRange": [
+        53,
+        60
+      ],
+      "summary": "Hàm StatusToString trong VisitPlanConfiguration.cs.",
+      "tags": [
+        "rmms.infrastructure",
+        "persistence",
+        "code",
+        "cs",
+        "ham"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Rmms.Infrastructure/Persistence/Configurations/VisitPlanConfiguration.cs:StatusFromString",
+      "type": "function",
+      "name": "StatusFromString",
+      "filePath": "Rmms.Infrastructure/Persistence/Configurations/VisitPlanConfiguration.cs",
+      "lineRange": [
+        62,
+        69
+      ],
+      "summary": "Hàm StatusFromString trong VisitPlanConfiguration.cs.",
+      "tags": [
+        "rmms.infrastructure",
+        "persistence",
+        "code",
+        "cs",
+        "ham"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:Rmms.Infrastructure/Persistence/Configurations/VisitPlanConfiguration.cs:VisitPlanConfiguration",
+      "type": "class",
+      "name": "VisitPlanConfiguration",
+      "filePath": "Rmms.Infrastructure/Persistence/Configurations/VisitPlanConfiguration.cs",
+      "lineRange": [
+        9,
+        70
+      ],
+      "summary": "Class VisitPlanConfiguration trong VisitPlanConfiguration.cs.",
+      "tags": [
+        "rmms.infrastructure",
+        "persistence",
+        "code",
+        "cs",
+        "class"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:Rmms.Infrastructure/Persistence/Configurations/WorkScheduleConfiguration.cs",
+      "type": "file",
+      "name": "WorkScheduleConfiguration.cs",
+      "filePath": "Rmms.Infrastructure/Persistence/Configurations/WorkScheduleConfiguration.cs",
+      "summary": "WorkScheduleConfiguration.cs — tệp mã nguồn C# trong backend RMMS (3 hàm, 1 class).",
+      "tags": [
+        "rmms.infrastructure",
+        "persistence",
+        "code",
+        "cs"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Rmms.Infrastructure/Persistence/Configurations/WorkScheduleConfiguration.cs:Configure",
+      "type": "function",
+      "name": "Configure",
+      "filePath": "Rmms.Infrastructure/Persistence/Configurations/WorkScheduleConfiguration.cs",
+      "lineRange": [
+        11,
+        61
+      ],
+      "summary": "Hàm Configure trong WorkScheduleConfiguration.cs.",
+      "tags": [
+        "rmms.infrastructure",
+        "persistence",
+        "code",
+        "cs",
+        "ham"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Rmms.Infrastructure/Persistence/Configurations/WorkScheduleConfiguration.cs:StatusToString",
+      "type": "function",
+      "name": "StatusToString",
+      "filePath": "Rmms.Infrastructure/Persistence/Configurations/WorkScheduleConfiguration.cs",
+      "lineRange": [
+        63,
+        71
+      ],
+      "summary": "Hàm StatusToString trong WorkScheduleConfiguration.cs.",
+      "tags": [
+        "rmms.infrastructure",
+        "persistence",
+        "code",
+        "cs",
+        "ham"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Rmms.Infrastructure/Persistence/Configurations/WorkScheduleConfiguration.cs:StatusFromString",
+      "type": "function",
+      "name": "StatusFromString",
+      "filePath": "Rmms.Infrastructure/Persistence/Configurations/WorkScheduleConfiguration.cs",
+      "lineRange": [
+        73,
+        81
+      ],
+      "summary": "Hàm StatusFromString trong WorkScheduleConfiguration.cs.",
+      "tags": [
+        "rmms.infrastructure",
+        "persistence",
+        "code",
+        "cs",
+        "ham"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:Rmms.Infrastructure/Persistence/Configurations/WorkScheduleConfiguration.cs:WorkScheduleConfiguration",
+      "type": "class",
+      "name": "WorkScheduleConfiguration",
+      "filePath": "Rmms.Infrastructure/Persistence/Configurations/WorkScheduleConfiguration.cs",
+      "lineRange": [
+        9,
+        82
+      ],
+      "summary": "Class WorkScheduleConfiguration trong WorkScheduleConfiguration.cs.",
+      "tags": [
+        "rmms.infrastructure",
+        "persistence",
+        "code",
+        "cs",
+        "class"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:Rmms.Infrastructure/Persistence/Interceptors/AuditableEntityInterceptor.cs",
+      "type": "file",
+      "name": "AuditableEntityInterceptor.cs",
+      "filePath": "Rmms.Infrastructure/Persistence/Interceptors/AuditableEntityInterceptor.cs",
+      "summary": "AuditableEntityInterceptor.cs — tệp mã nguồn C# trong backend RMMS (4 hàm, 1 class).",
+      "tags": [
+        "rmms.infrastructure",
+        "persistence",
+        "code",
+        "cs"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Rmms.Infrastructure/Persistence/Interceptors/AuditableEntityInterceptor.cs:AuditableEntityInterceptor",
+      "type": "function",
+      "name": "AuditableEntityInterceptor",
+      "filePath": "Rmms.Infrastructure/Persistence/Interceptors/AuditableEntityInterceptor.cs",
+      "lineRange": [
+        17,
+        21
+      ],
+      "summary": "Hàm AuditableEntityInterceptor trong AuditableEntityInterceptor.cs.",
+      "tags": [
+        "rmms.infrastructure",
+        "persistence",
+        "code",
+        "cs",
+        "ham"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Rmms.Infrastructure/Persistence/Interceptors/AuditableEntityInterceptor.cs:SavingChangesAsync",
+      "type": "function",
+      "name": "SavingChangesAsync",
+      "filePath": "Rmms.Infrastructure/Persistence/Interceptors/AuditableEntityInterceptor.cs",
+      "lineRange": [
+        23,
+        30
+      ],
+      "summary": "Hàm SavingChangesAsync trong AuditableEntityInterceptor.cs.",
+      "tags": [
+        "rmms.infrastructure",
+        "persistence",
+        "code",
+        "cs",
+        "ham"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Rmms.Infrastructure/Persistence/Interceptors/AuditableEntityInterceptor.cs:SavingChanges",
+      "type": "function",
+      "name": "SavingChanges",
+      "filePath": "Rmms.Infrastructure/Persistence/Interceptors/AuditableEntityInterceptor.cs",
+      "lineRange": [
+        32,
+        38
+      ],
+      "summary": "Hàm SavingChanges trong AuditableEntityInterceptor.cs.",
+      "tags": [
+        "rmms.infrastructure",
+        "persistence",
+        "code",
+        "cs",
+        "ham"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Rmms.Infrastructure/Persistence/Interceptors/AuditableEntityInterceptor.cs:Apply",
+      "type": "function",
+      "name": "Apply",
+      "filePath": "Rmms.Infrastructure/Persistence/Interceptors/AuditableEntityInterceptor.cs",
+      "lineRange": [
+        40,
+        66
+      ],
+      "summary": "Hàm Apply trong AuditableEntityInterceptor.cs.",
+      "tags": [
+        "rmms.infrastructure",
+        "persistence",
+        "code",
+        "cs",
+        "ham"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:Rmms.Infrastructure/Persistence/Interceptors/AuditableEntityInterceptor.cs:AuditableEntityInterceptor",
+      "type": "class",
+      "name": "AuditableEntityInterceptor",
+      "filePath": "Rmms.Infrastructure/Persistence/Interceptors/AuditableEntityInterceptor.cs",
+      "lineRange": [
+        12,
+        67
+      ],
+      "summary": "Class AuditableEntityInterceptor trong AuditableEntityInterceptor.cs.",
+      "tags": [
+        "rmms.infrastructure",
+        "persistence",
+        "code",
+        "cs",
+        "class"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:Rmms.Infrastructure/Persistence/Migrations/20260529022602_Init_M01_M02_Foundation.cs",
+      "type": "file",
+      "name": "20260529022602_Init_M01_M02_Foundation.cs",
+      "filePath": "Rmms.Infrastructure/Persistence/Migrations/20260529022602_Init_M01_M02_Foundation.cs",
+      "summary": "20260529022602_Init_M01_M02_Foundation.cs — tệp mã nguồn C# trong backend RMMS (2 hàm, 1 class).",
+      "tags": [
+        "rmms.infrastructure",
+        "persistence",
+        "code",
+        "cs"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:Rmms.Infrastructure/Persistence/Migrations/20260529022602_Init_M01_M02_Foundation.cs:Up",
+      "type": "function",
+      "name": "Up",
+      "filePath": "Rmms.Infrastructure/Persistence/Migrations/20260529022602_Init_M01_M02_Foundation.cs",
+      "lineRange": [
+        13,
+        265
+      ],
+      "summary": "Hàm Up trong 20260529022602_Init_M01_M02_Foundation.cs.",
+      "tags": [
+        "rmms.infrastructure",
+        "persistence",
+        "code",
+        "cs",
+        "ham"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Rmms.Infrastructure/Persistence/Migrations/20260529022602_Init_M01_M02_Foundation.cs:Down",
+      "type": "function",
+      "name": "Down",
+      "filePath": "Rmms.Infrastructure/Persistence/Migrations/20260529022602_Init_M01_M02_Foundation.cs",
+      "lineRange": [
+        268,
+        290
+      ],
+      "summary": "Hàm Down trong 20260529022602_Init_M01_M02_Foundation.cs.",
+      "tags": [
+        "rmms.infrastructure",
+        "persistence",
+        "code",
+        "cs",
+        "ham"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:Rmms.Infrastructure/Persistence/Migrations/20260529022602_Init_M01_M02_Foundation.cs:Init_M01_M02_Foundation",
+      "type": "class",
+      "name": "Init_M01_M02_Foundation",
+      "filePath": "Rmms.Infrastructure/Persistence/Migrations/20260529022602_Init_M01_M02_Foundation.cs",
+      "lineRange": [
+        10,
+        291
+      ],
+      "summary": "Class Init_M01_M02_Foundation trong 20260529022602_Init_M01_M02_Foundation.cs.",
+      "tags": [
+        "rmms.infrastructure",
+        "persistence",
+        "code",
+        "cs",
+        "class"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:Rmms.Infrastructure/Persistence/Migrations/20260529022602_Init_M01_M02_Foundation.Designer.cs",
+      "type": "file",
+      "name": "20260529022602_Init_M01_M02_Foundation.Designer.cs",
+      "filePath": "Rmms.Infrastructure/Persistence/Migrations/20260529022602_Init_M01_M02_Foundation.Designer.cs",
+      "summary": "20260529022602_Init_M01_M02_Foundation.Designer.cs — tệp mã nguồn C# trong backend RMMS (1 hàm, 1 class).",
+      "tags": [
+        "rmms.infrastructure",
+        "persistence",
+        "code",
+        "cs"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:Rmms.Infrastructure/Persistence/Migrations/20260529022602_Init_M01_M02_Foundation.Designer.cs:BuildTargetModel",
+      "type": "function",
+      "name": "BuildTargetModel",
+      "filePath": "Rmms.Infrastructure/Persistence/Migrations/20260529022602_Init_M01_M02_Foundation.Designer.cs",
+      "lineRange": [
+        20,
+        516
+      ],
+      "summary": "Hàm BuildTargetModel trong 20260529022602_Init_M01_M02_Foundation.Designer.cs.",
+      "tags": [
+        "rmms.infrastructure",
+        "persistence",
+        "code",
+        "cs",
+        "ham"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:Rmms.Infrastructure/Persistence/Migrations/20260529022602_Init_M01_M02_Foundation.Designer.cs:Init_M01_M02_Foundation",
+      "type": "class",
+      "name": "Init_M01_M02_Foundation",
+      "filePath": "Rmms.Infrastructure/Persistence/Migrations/20260529022602_Init_M01_M02_Foundation.Designer.cs",
+      "lineRange": [
+        15,
+        517
+      ],
+      "summary": "Class Init_M01_M02_Foundation trong 20260529022602_Init_M01_M02_Foundation.Designer.cs.",
+      "tags": [
+        "rmms.infrastructure",
+        "persistence",
+        "code",
+        "cs",
+        "class"
+      ],
+      "complexity": "moderate"
+    }
+  ],
+  "edges": [
+    {
+      "source": "file:Rmms.Infrastructure/Persistence/Configurations/EmailVerificationTokenConfiguration.cs",
+      "target": "function:Rmms.Infrastructure/Persistence/Configurations/EmailVerificationTokenConfiguration.cs:Configure",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Infrastructure/Persistence/Configurations/EmailVerificationTokenConfiguration.cs",
+      "target": "class:Rmms.Infrastructure/Persistence/Configurations/EmailVerificationTokenConfiguration.cs:EmailVerificationTokenConfiguration",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Infrastructure/Persistence/Configurations/FormAssignmentConfiguration.cs",
+      "target": "function:Rmms.Infrastructure/Persistence/Configurations/FormAssignmentConfiguration.cs:Configure",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Infrastructure/Persistence/Configurations/FormAssignmentConfiguration.cs",
+      "target": "class:Rmms.Infrastructure/Persistence/Configurations/FormAssignmentConfiguration.cs:FormAssignmentConfiguration",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Infrastructure/Persistence/Configurations/FormConfiguration.cs",
+      "target": "function:Rmms.Infrastructure/Persistence/Configurations/FormConfiguration.cs:Configure",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Infrastructure/Persistence/Configurations/FormConfiguration.cs",
+      "target": "function:Rmms.Infrastructure/Persistence/Configurations/FormConfiguration.cs:FormTypeToString",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Infrastructure/Persistence/Configurations/FormConfiguration.cs",
+      "target": "function:Rmms.Infrastructure/Persistence/Configurations/FormConfiguration.cs:FormTypeFromString",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Infrastructure/Persistence/Configurations/FormConfiguration.cs",
+      "target": "function:Rmms.Infrastructure/Persistence/Configurations/FormConfiguration.cs:FormStatusToString",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Infrastructure/Persistence/Configurations/FormConfiguration.cs",
+      "target": "function:Rmms.Infrastructure/Persistence/Configurations/FormConfiguration.cs:FormStatusFromString",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Infrastructure/Persistence/Configurations/FormConfiguration.cs",
+      "target": "class:Rmms.Infrastructure/Persistence/Configurations/FormConfiguration.cs:FormConfiguration",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Infrastructure/Persistence/Configurations/FormSubmissionConfiguration.cs",
+      "target": "function:Rmms.Infrastructure/Persistence/Configurations/FormSubmissionConfiguration.cs:Configure",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Infrastructure/Persistence/Configurations/FormSubmissionConfiguration.cs",
+      "target": "function:Rmms.Infrastructure/Persistence/Configurations/FormSubmissionConfiguration.cs:StatusToString",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Infrastructure/Persistence/Configurations/FormSubmissionConfiguration.cs",
+      "target": "function:Rmms.Infrastructure/Persistence/Configurations/FormSubmissionConfiguration.cs:StatusFromString",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Infrastructure/Persistence/Configurations/FormSubmissionConfiguration.cs",
+      "target": "class:Rmms.Infrastructure/Persistence/Configurations/FormSubmissionConfiguration.cs:FormSubmissionConfiguration",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Infrastructure/Persistence/Configurations/FormVersionConfiguration.cs",
+      "target": "function:Rmms.Infrastructure/Persistence/Configurations/FormVersionConfiguration.cs:Configure",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Infrastructure/Persistence/Configurations/FormVersionConfiguration.cs",
+      "target": "class:Rmms.Infrastructure/Persistence/Configurations/FormVersionConfiguration.cs:FormVersionConfiguration",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Infrastructure/Persistence/Configurations/LeaveRequestConfiguration.cs",
+      "target": "function:Rmms.Infrastructure/Persistence/Configurations/LeaveRequestConfiguration.cs:Configure",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Infrastructure/Persistence/Configurations/LeaveRequestConfiguration.cs",
+      "target": "class:Rmms.Infrastructure/Persistence/Configurations/LeaveRequestConfiguration.cs:LeaveRequestConfiguration",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Infrastructure/Persistence/Configurations/LoginHistoryConfiguration.cs",
+      "target": "function:Rmms.Infrastructure/Persistence/Configurations/LoginHistoryConfiguration.cs:Configure",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Infrastructure/Persistence/Configurations/LoginHistoryConfiguration.cs",
+      "target": "class:Rmms.Infrastructure/Persistence/Configurations/LoginHistoryConfiguration.cs:LoginHistoryConfiguration",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Infrastructure/Persistence/Configurations/NewsConfiguration.cs",
+      "target": "function:Rmms.Infrastructure/Persistence/Configurations/NewsConfiguration.cs:Configure",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Infrastructure/Persistence/Configurations/NewsConfiguration.cs",
+      "target": "function:Rmms.Infrastructure/Persistence/Configurations/NewsConfiguration.cs:Configure",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Infrastructure/Persistence/Configurations/NewsConfiguration.cs",
+      "target": "function:Rmms.Infrastructure/Persistence/Configurations/NewsConfiguration.cs:Configure",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Infrastructure/Persistence/Configurations/NewsConfiguration.cs",
+      "target": "class:Rmms.Infrastructure/Persistence/Configurations/NewsConfiguration.cs:NewsItemConfiguration",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Infrastructure/Persistence/Configurations/NewsConfiguration.cs",
+      "target": "class:Rmms.Infrastructure/Persistence/Configurations/NewsConfiguration.cs:NewsAssignmentConfiguration",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Infrastructure/Persistence/Configurations/NewsConfiguration.cs",
+      "target": "class:Rmms.Infrastructure/Persistence/Configurations/NewsConfiguration.cs:NewsReadConfiguration",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Infrastructure/Persistence/Configurations/NotificationConfiguration.cs",
+      "target": "function:Rmms.Infrastructure/Persistence/Configurations/NotificationConfiguration.cs:Configure",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Infrastructure/Persistence/Configurations/NotificationConfiguration.cs",
+      "target": "function:Rmms.Infrastructure/Persistence/Configurations/NotificationConfiguration.cs:FromSnake",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Infrastructure/Persistence/Configurations/NotificationConfiguration.cs",
+      "target": "class:Rmms.Infrastructure/Persistence/Configurations/NotificationConfiguration.cs:NotificationConfiguration",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Infrastructure/Persistence/Configurations/OtRequestConfiguration.cs",
+      "target": "function:Rmms.Infrastructure/Persistence/Configurations/OtRequestConfiguration.cs:Configure",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Infrastructure/Persistence/Configurations/OtRequestConfiguration.cs",
+      "target": "class:Rmms.Infrastructure/Persistence/Configurations/OtRequestConfiguration.cs:OtRequestConfiguration",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Infrastructure/Persistence/Configurations/PasswordResetTokenConfiguration.cs",
+      "target": "function:Rmms.Infrastructure/Persistence/Configurations/PasswordResetTokenConfiguration.cs:Configure",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Infrastructure/Persistence/Configurations/PasswordResetTokenConfiguration.cs",
+      "target": "class:Rmms.Infrastructure/Persistence/Configurations/PasswordResetTokenConfiguration.cs:PasswordResetTokenConfiguration",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Infrastructure/Persistence/Configurations/ProductConfiguration.cs",
+      "target": "function:Rmms.Infrastructure/Persistence/Configurations/ProductConfiguration.cs:Configure",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Infrastructure/Persistence/Configurations/ProductConfiguration.cs",
+      "target": "function:Rmms.Infrastructure/Persistence/Configurations/ProductConfiguration.cs:ProductStatusToString",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Infrastructure/Persistence/Configurations/ProductConfiguration.cs",
+      "target": "function:Rmms.Infrastructure/Persistence/Configurations/ProductConfiguration.cs:ProductStatusFromString",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Infrastructure/Persistence/Configurations/ProductConfiguration.cs",
+      "target": "class:Rmms.Infrastructure/Persistence/Configurations/ProductConfiguration.cs:ProductConfiguration",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Infrastructure/Persistence/Configurations/PushTokenConfiguration.cs",
+      "target": "function:Rmms.Infrastructure/Persistence/Configurations/PushTokenConfiguration.cs:Configure",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Infrastructure/Persistence/Configurations/PushTokenConfiguration.cs",
+      "target": "class:Rmms.Infrastructure/Persistence/Configurations/PushTokenConfiguration.cs:PushTokenConfiguration",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Infrastructure/Persistence/Configurations/RefreshTokenConfiguration.cs",
+      "target": "function:Rmms.Infrastructure/Persistence/Configurations/RefreshTokenConfiguration.cs:Configure",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Infrastructure/Persistence/Configurations/RefreshTokenConfiguration.cs",
+      "target": "class:Rmms.Infrastructure/Persistence/Configurations/RefreshTokenConfiguration.cs:RefreshTokenConfiguration",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Infrastructure/Persistence/Configurations/StoreConfiguration.cs",
+      "target": "function:Rmms.Infrastructure/Persistence/Configurations/StoreConfiguration.cs:Configure",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Infrastructure/Persistence/Configurations/StoreConfiguration.cs",
+      "target": "function:Rmms.Infrastructure/Persistence/Configurations/StoreConfiguration.cs:StoreStatusToString",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Infrastructure/Persistence/Configurations/StoreConfiguration.cs",
+      "target": "function:Rmms.Infrastructure/Persistence/Configurations/StoreConfiguration.cs:StoreStatusFromString",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Infrastructure/Persistence/Configurations/StoreConfiguration.cs",
+      "target": "class:Rmms.Infrastructure/Persistence/Configurations/StoreConfiguration.cs:StoreConfiguration",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Infrastructure/Persistence/Configurations/UserCategoryAssignmentConfiguration.cs",
+      "target": "function:Rmms.Infrastructure/Persistence/Configurations/UserCategoryAssignmentConfiguration.cs:Configure",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Infrastructure/Persistence/Configurations/UserCategoryAssignmentConfiguration.cs",
+      "target": "class:Rmms.Infrastructure/Persistence/Configurations/UserCategoryAssignmentConfiguration.cs:UserCategoryAssignmentConfiguration",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Infrastructure/Persistence/Configurations/UserConfiguration.cs",
+      "target": "function:Rmms.Infrastructure/Persistence/Configurations/UserConfiguration.cs:Configure",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Infrastructure/Persistence/Configurations/UserConfiguration.cs",
+      "target": "function:Rmms.Infrastructure/Persistence/Configurations/UserConfiguration.cs:ToDbString",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Infrastructure/Persistence/Configurations/UserConfiguration.cs",
+      "target": "function:Rmms.Infrastructure/Persistence/Configurations/UserConfiguration.cs:FromDbString",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Infrastructure/Persistence/Configurations/UserConfiguration.cs",
+      "target": "class:Rmms.Infrastructure/Persistence/Configurations/UserConfiguration.cs:UserConfiguration",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Infrastructure/Persistence/Configurations/UserDeviceConfiguration.cs",
+      "target": "function:Rmms.Infrastructure/Persistence/Configurations/UserDeviceConfiguration.cs:Configure",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Infrastructure/Persistence/Configurations/UserDeviceConfiguration.cs",
+      "target": "function:Rmms.Infrastructure/Persistence/Configurations/UserDeviceConfiguration.cs:DeviceStatusToString",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Infrastructure/Persistence/Configurations/UserDeviceConfiguration.cs",
+      "target": "function:Rmms.Infrastructure/Persistence/Configurations/UserDeviceConfiguration.cs:DeviceStatusFromString",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Infrastructure/Persistence/Configurations/UserDeviceConfiguration.cs",
+      "target": "class:Rmms.Infrastructure/Persistence/Configurations/UserDeviceConfiguration.cs:UserDeviceConfiguration",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Infrastructure/Persistence/Configurations/UserLeaderAssignmentConfiguration.cs",
+      "target": "function:Rmms.Infrastructure/Persistence/Configurations/UserLeaderAssignmentConfiguration.cs:Configure",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Infrastructure/Persistence/Configurations/UserLeaderAssignmentConfiguration.cs",
+      "target": "class:Rmms.Infrastructure/Persistence/Configurations/UserLeaderAssignmentConfiguration.cs:UserLeaderAssignmentConfiguration",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Infrastructure/Persistence/Configurations/UserStoreAssignmentConfiguration.cs",
+      "target": "function:Rmms.Infrastructure/Persistence/Configurations/UserStoreAssignmentConfiguration.cs:Configure",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Infrastructure/Persistence/Configurations/UserStoreAssignmentConfiguration.cs",
+      "target": "class:Rmms.Infrastructure/Persistence/Configurations/UserStoreAssignmentConfiguration.cs:UserStoreAssignmentConfiguration",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Infrastructure/Persistence/Configurations/VisitPlanConfiguration.cs",
+      "target": "function:Rmms.Infrastructure/Persistence/Configurations/VisitPlanConfiguration.cs:Configure",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Infrastructure/Persistence/Configurations/VisitPlanConfiguration.cs",
+      "target": "function:Rmms.Infrastructure/Persistence/Configurations/VisitPlanConfiguration.cs:StatusToString",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Infrastructure/Persistence/Configurations/VisitPlanConfiguration.cs",
+      "target": "function:Rmms.Infrastructure/Persistence/Configurations/VisitPlanConfiguration.cs:StatusFromString",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Infrastructure/Persistence/Configurations/VisitPlanConfiguration.cs",
+      "target": "class:Rmms.Infrastructure/Persistence/Configurations/VisitPlanConfiguration.cs:VisitPlanConfiguration",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Infrastructure/Persistence/Configurations/WorkScheduleConfiguration.cs",
+      "target": "function:Rmms.Infrastructure/Persistence/Configurations/WorkScheduleConfiguration.cs:Configure",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Infrastructure/Persistence/Configurations/WorkScheduleConfiguration.cs",
+      "target": "function:Rmms.Infrastructure/Persistence/Configurations/WorkScheduleConfiguration.cs:StatusToString",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Infrastructure/Persistence/Configurations/WorkScheduleConfiguration.cs",
+      "target": "function:Rmms.Infrastructure/Persistence/Configurations/WorkScheduleConfiguration.cs:StatusFromString",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Infrastructure/Persistence/Configurations/WorkScheduleConfiguration.cs",
+      "target": "class:Rmms.Infrastructure/Persistence/Configurations/WorkScheduleConfiguration.cs:WorkScheduleConfiguration",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Infrastructure/Persistence/Interceptors/AuditableEntityInterceptor.cs",
+      "target": "function:Rmms.Infrastructure/Persistence/Interceptors/AuditableEntityInterceptor.cs:AuditableEntityInterceptor",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Infrastructure/Persistence/Interceptors/AuditableEntityInterceptor.cs",
+      "target": "function:Rmms.Infrastructure/Persistence/Interceptors/AuditableEntityInterceptor.cs:SavingChangesAsync",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Infrastructure/Persistence/Interceptors/AuditableEntityInterceptor.cs",
+      "target": "function:Rmms.Infrastructure/Persistence/Interceptors/AuditableEntityInterceptor.cs:SavingChanges",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Infrastructure/Persistence/Interceptors/AuditableEntityInterceptor.cs",
+      "target": "function:Rmms.Infrastructure/Persistence/Interceptors/AuditableEntityInterceptor.cs:Apply",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Infrastructure/Persistence/Interceptors/AuditableEntityInterceptor.cs",
+      "target": "class:Rmms.Infrastructure/Persistence/Interceptors/AuditableEntityInterceptor.cs:AuditableEntityInterceptor",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Infrastructure/Persistence/Migrations/20260529022602_Init_M01_M02_Foundation.cs",
+      "target": "function:Rmms.Infrastructure/Persistence/Migrations/20260529022602_Init_M01_M02_Foundation.cs:Up",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Infrastructure/Persistence/Migrations/20260529022602_Init_M01_M02_Foundation.cs",
+      "target": "function:Rmms.Infrastructure/Persistence/Migrations/20260529022602_Init_M01_M02_Foundation.cs:Down",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Infrastructure/Persistence/Migrations/20260529022602_Init_M01_M02_Foundation.cs",
+      "target": "class:Rmms.Infrastructure/Persistence/Migrations/20260529022602_Init_M01_M02_Foundation.cs:Init_M01_M02_Foundation",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Infrastructure/Persistence/Migrations/20260529022602_Init_M01_M02_Foundation.Designer.cs",
+      "target": "function:Rmms.Infrastructure/Persistence/Migrations/20260529022602_Init_M01_M02_Foundation.Designer.cs:BuildTargetModel",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Infrastructure/Persistence/Migrations/20260529022602_Init_M01_M02_Foundation.Designer.cs",
+      "target": "class:Rmms.Infrastructure/Persistence/Migrations/20260529022602_Init_M01_M02_Foundation.Designer.cs:Init_M01_M02_Foundation",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    }
+  ]
+}

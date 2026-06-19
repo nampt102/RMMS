@@ -1,0 +1,5151 @@
+{
+  "schemaVersion": 1,
+  "algorithm": "louvain",
+  "totalFiles": 403,
+  "totalBatches": 20,
+  "exportsByPath": {
+    "Rmms.Api/Authentication/AuthorizationPolicies.cs": [
+      "PgOnly",
+      "LeaderOnly",
+      "BuhOnly",
+      "AdminOnly",
+      "PgOrLeader",
+      "AdminOrLeader",
+      "AnyAuthenticated",
+      "AddRmmsAuthorization",
+      "AuthorizationPolicies"
+    ],
+    "Rmms.Api/Authentication/HttpContextClientContext.cs": [
+      "HttpContextClientContext",
+      "IpAddress",
+      "UserAgent",
+      "DeviceFingerprint",
+      "AppVersion",
+      "Language",
+      "HttpContextClientContext"
+    ],
+    "Rmms.Api/Authentication/HttpContextCurrentUser.cs": [
+      "HttpContextCurrentUser",
+      "IsAuthenticated",
+      "UserId",
+      "Email",
+      "Role",
+      "DeviceId",
+      "HttpContextCurrentUser"
+    ],
+    "Rmms.Api/Cli/ResetDataCommand.cs": [
+      "RunAsync",
+      "ResetDataCommand"
+    ],
+    "Rmms.Api/Cli/SeedAdminCommand.cs": [
+      "RunAsync",
+      "SeedAdminCommand"
+    ],
+    "Rmms.Api/Cli/SeedDemoCommand.cs": [
+      "RunAsync",
+      "SeedDemoCommand"
+    ],
+    "Rmms.Api/Cli/SeedMasterCommand.cs": [
+      "RunAsync",
+      "SeedMasterCommand"
+    ],
+    "Rmms.Api/Cli/SeedSuperAdminCommand.cs": [
+      "RunAsync",
+      "SeedSuperAdminCommand"
+    ],
+    "Rmms.Api/Common/InvariantFormParsing.cs": [
+      "TryParseGps",
+      "TryParseDouble",
+      "TryParseNullableDouble"
+    ],
+    "Rmms.Api/Common/ResultMapping.cs": [
+      "Ok",
+      "Created",
+      "Failure",
+      "ToActionResult"
+    ],
+    "Rmms.Api/Controllers/AdminApprovalsController.cs": [
+      "AdminApprovalsController",
+      "List",
+      "Override",
+      "AdminApprovalsController"
+    ],
+    "Rmms.Api/Controllers/AdminAttendanceController.cs": [
+      "AdminAttendanceController",
+      "List",
+      "Review",
+      "AdminAttendanceController"
+    ],
+    "Rmms.Api/Controllers/AdminAuditController.cs": [
+      "AdminAuditController",
+      "List",
+      "AdminAuditController"
+    ],
+    "Rmms.Api/Controllers/AdminDocumentsController.cs": [
+      "AdminDocumentsController",
+      "List",
+      "Upload",
+      "Assign",
+      "Delete",
+      "AdminDocumentsController"
+    ],
+    "Rmms.Api/Controllers/AdminFaceController.cs": [
+      "AdminFaceController",
+      "Enroll",
+      "ReEnroll",
+      "Delete",
+      "AdminFaceController"
+    ],
+    "Rmms.Api/Controllers/AdminFormsController.cs": [
+      "AdminFormsController",
+      "List",
+      "Get",
+      "Versions",
+      "Create",
+      "Update",
+      "Publish",
+      "Assign",
+      "AdminFormsController"
+    ],
+    "Rmms.Api/Controllers/AdminNewsController.cs": [
+      "AdminNewsController",
+      "List",
+      "Create",
+      "Update",
+      "Assign",
+      "Publish",
+      "Delete",
+      "AdminNewsController"
+    ],
+    "Rmms.Api/Controllers/AdminProductsController.cs": [
+      "AdminProductsController",
+      "List",
+      "Create",
+      "Update",
+      "ChangeStatus",
+      "Delete",
+      "AdminProductsController"
+    ],
+    "Rmms.Api/Controllers/AdminRequestsController.cs": [
+      "AdminRequestsController",
+      "Leave",
+      "Ot",
+      "ExportLeave",
+      "ExportOt",
+      "AdminRequestsController"
+    ],
+    "Rmms.Api/Controllers/AdminUsersController.cs": [
+      "AdminUsersController",
+      "List",
+      "Create",
+      "Update",
+      "ResetPassword",
+      "AdminUsersController"
+    ],
+    "Rmms.Api/Controllers/AdminVisitPlansController.cs": [
+      "AdminVisitPlansController",
+      "List",
+      "AdminVisitPlansController"
+    ],
+    "Rmms.Api/Controllers/ApprovalsController.cs": [
+      "ApprovalsController",
+      "Pending",
+      "Detail",
+      "Approve",
+      "Reject",
+      "EmailActionPreview",
+      "EmailActionConfirm",
+      "ApprovalsController"
+    ],
+    "Rmms.Api/Controllers/AreasController.cs": [
+      "AreasController",
+      "List",
+      "Create",
+      "Update",
+      "Delete",
+      "AreasController"
+    ],
+    "Rmms.Api/Controllers/AssignmentsController.cs": [
+      "AssignmentsController",
+      "GetForUser",
+      "AssignPgLeader",
+      "AssignUserStore",
+      "UnassignUserStore",
+      "AssignUserCategory",
+      "UnassignUserCategory",
+      "AssignmentsController"
+    ],
+    "Rmms.Api/Controllers/AttendanceController.cs": [
+      "AttendanceController",
+      "Today",
+      "CheckInInfo",
+      "CheckIn",
+      "CheckOut",
+      "History",
+      "AttendanceController"
+    ],
+    "Rmms.Api/Controllers/AuthController.cs": [
+      "AuthController",
+      "Register",
+      "VerifyEmail",
+      "Login",
+      "Refresh",
+      "Logout",
+      "ForgotPassword",
+      "ResetPassword",
+      "Me",
+      "DeviceStatus",
+      "AuthController"
+    ],
+    "Rmms.Api/Controllers/CategoriesController.cs": [
+      "CategoriesController",
+      "List",
+      "Create",
+      "Update",
+      "Delete",
+      "CategoriesController"
+    ],
+    "Rmms.Api/Controllers/DashboardController.cs": [
+      "DashboardController",
+      "Summary",
+      "DashboardController"
+    ],
+    "Rmms.Api/Controllers/DevicesController.cs": [
+      "DevicesController",
+      "Me",
+      "Pending",
+      "Approve",
+      "Reject",
+      "DevicesController"
+    ],
+    "Rmms.Api/Controllers/DocumentsController.cs": [
+      "DocumentsController",
+      "MyDocuments",
+      "Download",
+      "DocumentsController"
+    ],
+    "Rmms.Api/Controllers/FaceController.cs": [
+      "FaceController",
+      "Status",
+      "Enroll",
+      "Remove",
+      "Verify",
+      "FaceController"
+    ],
+    "Rmms.Api/Controllers/FormsController.cs": [
+      "FormsController",
+      "MyForms",
+      "Get",
+      "UploadAttachment",
+      "Submit",
+      "FormsController"
+    ],
+    "Rmms.Api/Controllers/HealthController.cs": [
+      "Get",
+      "HealthController"
+    ],
+    "Rmms.Api/Controllers/LeaveRequestsController.cs": [
+      "LeaveRequestsController",
+      "Create",
+      "CreateEmergency",
+      "Mine",
+      "Withdraw",
+      "LeaveRequestsController"
+    ],
+    "Rmms.Api/Controllers/NewsController.cs": [
+      "NewsController",
+      "MyNews",
+      "Read",
+      "Confirm",
+      "NewsController"
+    ],
+    "Rmms.Api/Controllers/NotificationsController.cs": [
+      "NotificationsController",
+      "Mine",
+      "MarkRead",
+      "MarkAllRead",
+      "RegisterFcmToken",
+      "NotificationsController"
+    ],
+    "Rmms.Api/Controllers/OrgController.cs": [
+      "OrgController",
+      "Hierarchy",
+      "AreaTree",
+      "OrgController"
+    ],
+    "Rmms.Api/Controllers/OtRequestsController.cs": [
+      "OtRequestsController",
+      "Create",
+      "Mine",
+      "OtRequestsController"
+    ],
+    "Rmms.Api/Controllers/ProductsController.cs": [
+      "ProductsController",
+      "List",
+      "ProductsController"
+    ],
+    "Rmms.Api/Controllers/ReportsController.cs": [
+      "ReportsController",
+      "Attendance",
+      "Anomalies",
+      "AttendanceTrend",
+      "ExportAttendance",
+      "ExportAnomalies",
+      "ReportsController"
+    ],
+    "Rmms.Api/Controllers/ScheduleController.cs": [
+      "ScheduleController",
+      "GetMine",
+      "Create",
+      "Submit",
+      "Edit",
+      "Withdraw",
+      "GetForUser",
+      "Approve",
+      "Reject",
+      "ScheduleController"
+    ],
+    "Rmms.Api/Controllers/StoresController.cs": [
+      "StoresController",
+      "List",
+      "Create",
+      "Update",
+      "ChangeStatus",
+      "Delete",
+      "StoresController"
+    ],
+    "Rmms.Api/Controllers/TeamMonitoringController.cs": [
+      "TeamMonitoringController",
+      "Today",
+      "TeamMonitoringController"
+    ],
+    "Rmms.Api/Controllers/UsersController.cs": [
+      "UsersController",
+      "MyStores",
+      "MyLeader",
+      "UsersController"
+    ],
+    "Rmms.Api/Controllers/VisitPlansController.cs": [
+      "VisitPlansController",
+      "MyPlans",
+      "Get",
+      "Create",
+      "Edit",
+      "Execute",
+      "VisitPlansController"
+    ],
+    "Rmms.Api/Dtos/Admin/CreateUserRequest.cs": [],
+    "Rmms.Api/Dtos/Admin/UpdateUserRequest.cs": [],
+    "Rmms.Api/Dtos/Approvals/ApprovalRequests.cs": [],
+    "Rmms.Api/Dtos/Attendance/AttendanceRequests.cs": [
+      "StoreId",
+      "FakeGpsDetected",
+      "Note",
+      "Selfie",
+      "StorePhoto",
+      "CheckInForm",
+      "FakeGpsDetected",
+      "Note",
+      "Selfie",
+      "StorePhoto",
+      "CheckOutForm"
+    ],
+    "Rmms.Api/Dtos/Auth/ForgotPasswordRequest.cs": [],
+    "Rmms.Api/Dtos/Auth/LoginRequest.cs": [],
+    "Rmms.Api/Dtos/Auth/LogoutRequest.cs": [],
+    "Rmms.Api/Dtos/Auth/RefreshTokenRequest.cs": [],
+    "Rmms.Api/Dtos/Auth/RegisterRequest.cs": [],
+    "Rmms.Api/Dtos/Auth/ResetPasswordRequest.cs": [],
+    "Rmms.Api/Dtos/Auth/VerifyEmailRequest.cs": [],
+    "Rmms.Api/Dtos/Devices/RejectDeviceRequest.cs": [],
+    "Rmms.Api/Dtos/Documents/DocumentRequests.cs": [],
+    "Rmms.Api/Dtos/Face/FaceRequests.cs": [
+      "Photos",
+      "EnrollFaceForm",
+      "Selfie",
+      "VerifyFaceForm"
+    ],
+    "Rmms.Api/Dtos/Forms/FormRequests.cs": [],
+    "Rmms.Api/Dtos/LeaveOt/LeaveOtRequests.cs": [],
+    "Rmms.Api/Dtos/News/NewsRequests.cs": [],
+    "Rmms.Api/Dtos/Organization/OrganizationRequests.cs": [],
+    "Rmms.Api/Dtos/Scheduling/ScheduleRequests.cs": [],
+    "Rmms.Api/Dtos/VisitPlans/VisitPlanRequests.cs": [],
+    "Rmms.Api/Hubs/HubUserIdProvider.cs": [
+      "GetUserId",
+      "HubUserIdProvider"
+    ],
+    "Rmms.Api/Hubs/NotificationsHub.cs": [
+      "NotificationsHub"
+    ],
+    "Rmms.Api/Hubs/SignalRRealtimeNotifier.cs": [
+      "SignalRRealtimeNotifier",
+      "PushNotificationAsync"
+    ],
+    "Rmms.Api/Localization/ErrorLocalizationFilter.cs": [
+      "ErrorLocalizationFilter",
+      "OnActionExecuting",
+      "OnActionExecuted",
+      "ErrorLocalizationFilter"
+    ],
+    "Rmms.Api/Localization/ErrorMessageCatalog.cs": [
+      "IErrorMessageLocalizer",
+      "Localize",
+      "ErrorMessageCatalog"
+    ],
+    "Rmms.Api/Logging/RequestEnrichmentMiddleware.cs": [
+      "RequestEnrichmentMiddleware",
+      "Invoke",
+      "RequestEnrichmentMiddleware"
+    ],
+    "Rmms.Api/Middlewares/ExceptionHandlingMiddleware.cs": [
+      "ExceptionHandlingMiddleware",
+      "InvokeAsync",
+      "ExceptionHandlingMiddleware"
+    ],
+    "Rmms.Api/Middlewares/IdempotencyMiddleware.cs": [
+      "IdempotencyMiddleware",
+      "InvokeAsync",
+      "IdempotencyMiddleware"
+    ],
+    "Rmms.Api/Program.cs": [
+      "Program"
+    ],
+    "Rmms.Application/Admin/Users/AdminResetPassword/AdminResetPasswordCommand.cs": [],
+    "Rmms.Application/Admin/Users/AdminResetPassword/AdminResetPasswordCommandHandler.cs": [
+      "AdminResetPasswordCommandHandler",
+      "Handle"
+    ],
+    "Rmms.Application/Admin/Users/AdminUserDto.cs": [],
+    "Rmms.Application/Admin/Users/CreateAdminUser/CreateAdminUserCommand.cs": [],
+    "Rmms.Application/Admin/Users/CreateAdminUser/CreateAdminUserCommandHandler.cs": [
+      "CreateAdminUserCommandHandler",
+      "Handle"
+    ],
+    "Rmms.Application/Admin/Users/CreateAdminUser/CreateAdminUserCommandValidator.cs": [
+      "CreateAdminUserCommandValidator",
+      "CreateAdminUserCommandValidator"
+    ],
+    "Rmms.Application/Admin/Users/GetUsers/GetUsersQuery.cs": [],
+    "Rmms.Application/Admin/Users/GetUsers/GetUsersQueryHandler.cs": [
+      "GetUsersQueryHandler",
+      "Handle"
+    ],
+    "Rmms.Application/Admin/Users/UpdateUser/UpdateUserCommand.cs": [],
+    "Rmms.Application/Admin/Users/UpdateUser/UpdateUserCommandHandler.cs": [
+      "UpdateUserCommandHandler",
+      "Handle"
+    ],
+    "Rmms.Application/Admin/Users/UpdateUser/UpdateUserCommandValidator.cs": [
+      "UpdateUserCommandValidator",
+      "UpdateUserCommandValidator"
+    ],
+    "Rmms.Application/Approvals/ApprovalDtos.cs": [
+      "ToDto"
+    ],
+    "Rmms.Application/Approvals/DecideApproval.cs": [
+      "ApproveApprovalCommandHandler",
+      "Handle",
+      "RejectApprovalCommandHandler",
+      "Handle"
+    ],
+    "Rmms.Application/Approvals/EmailAction.cs": [
+      "EmailActionPreviewQueryHandler",
+      "Handle",
+      "EmailActionConfirmCommandHandler",
+      "Handle"
+    ],
+    "Rmms.Application/Approvals/GetApprovals.cs": [
+      "GetAllApprovalsQueryHandler",
+      "Handle",
+      "GetPendingApprovalsQueryHandler",
+      "Handle",
+      "GetApprovalDetailQueryHandler",
+      "Handle"
+    ],
+    "Rmms.Application/Approvals/OverrideApproval.cs": [
+      "OverrideApprovalCommandHandler",
+      "Handle"
+    ],
+    "Rmms.Application/Approvals/ScheduleApprovalSync.cs": [
+      "ApplyDecisionAsync",
+      "BuildDecisionSpec",
+      "SyncScheduleApprovalAsync"
+    ],
+    "Rmms.Application/Attendance/AdminListAttendance.cs": [
+      "AdminListAttendanceQueryHandler",
+      "Handle"
+    ],
+    "Rmms.Application/Attendance/AttendanceDtos.cs": [
+      "ToDto",
+      "AttendanceMapper"
+    ],
+    "Rmms.Application/Attendance/AttendanceNotifications.cs": [
+      "InReview"
+    ],
+    "Rmms.Application/Attendance/AttendanceTime.cs": [
+      "VnOffset",
+      "EarlyCheckInMinutes",
+      "LateThresholdMinutes",
+      "VnToday",
+      "ToUtc",
+      "OpenStatuses"
+    ],
+    "Rmms.Application/Attendance/CheckIn.cs": [
+      "CheckInCommandValidator",
+      "CheckInCommandValidator",
+      "CheckInCommandHandler",
+      "Handle"
+    ],
+    "Rmms.Application/Attendance/CheckOut.cs": [
+      "CheckOutCommandValidator",
+      "CheckOutCommandValidator",
+      "CheckOutCommandHandler",
+      "Handle"
+    ],
+    "Rmms.Application/Attendance/GetAttendance.cs": [
+      "GetHistoryQueryHandler",
+      "Handle",
+      "GetTodayQueryHandler",
+      "Handle",
+      "GetCheckInInfoQueryHandler",
+      "Handle",
+      "PresignAsync",
+      "PresignAllAsync",
+      "MapWithStoresAsync",
+      "TodayShiftsAsync"
+    ],
+    "Rmms.Application/Attendance/ReviewAttendance.cs": [
+      "ReviewAttendanceCommandValidator",
+      "ReviewAttendanceCommandValidator",
+      "ReviewAttendanceCommandHandler",
+      "Handle"
+    ],
+    "Rmms.Application/Audit/GetAuditLogs.cs": [
+      "GetAuditLogsQueryHandler",
+      "Handle"
+    ],
+    "Rmms.Application/Auth/ForgotPassword/ForgotPasswordCommand.cs": [],
+    "Rmms.Application/Auth/ForgotPassword/ForgotPasswordCommandHandler.cs": [
+      "ForgotPasswordCommandHandler",
+      "Handle"
+    ],
+    "Rmms.Application/Auth/ForgotPassword/ForgotPasswordCommandValidator.cs": [
+      "ForgotPasswordCommandValidator",
+      "ForgotPasswordCommandValidator"
+    ],
+    "Rmms.Application/Auth/Login/LoginCommand.cs": [],
+    "Rmms.Application/Auth/Login/LoginCommandHandler.cs": [
+      "LoginCommandHandler",
+      "Handle"
+    ],
+    "Rmms.Application/Auth/Login/LoginCommandValidator.cs": [
+      "LoginCommandValidator",
+      "LoginCommandValidator"
+    ],
+    "Rmms.Application/Auth/Login/LoginResponse.cs": [],
+    "Rmms.Application/Auth/Logout/LogoutCommand.cs": [],
+    "Rmms.Application/Auth/Logout/LogoutCommandHandler.cs": [
+      "LogoutCommandHandler",
+      "Handle"
+    ],
+    "Rmms.Application/Auth/Logout/LogoutCommandValidator.cs": [
+      "LogoutCommandValidator",
+      "LogoutCommandValidator"
+    ],
+    "Rmms.Application/Auth/Me/GetDeviceStatusQuery.cs": [],
+    "Rmms.Application/Auth/Me/GetDeviceStatusQueryHandler.cs": [
+      "GetDeviceStatusQueryHandler",
+      "Handle"
+    ],
+    "Rmms.Application/Auth/Me/GetMeQuery.cs": [],
+    "Rmms.Application/Auth/Me/GetMeQueryHandler.cs": [
+      "GetMeQueryHandler",
+      "Handle"
+    ],
+    "Rmms.Application/Auth/Me/MeDto.cs": [],
+    "Rmms.Application/Auth/Refresh/RefreshTokenCommand.cs": [],
+    "Rmms.Application/Auth/Refresh/RefreshTokenCommandHandler.cs": [
+      "RefreshTokenCommandHandler",
+      "Handle"
+    ],
+    "Rmms.Application/Auth/Refresh/RefreshTokenCommandValidator.cs": [
+      "RefreshTokenCommandValidator",
+      "RefreshTokenCommandValidator"
+    ],
+    "Rmms.Application/Auth/Refresh/RefreshTokenResponse.cs": [],
+    "Rmms.Application/Auth/Register/RegisterUserCommand.cs": [],
+    "Rmms.Application/Auth/Register/RegisterUserCommandHandler.cs": [
+      "RegisterUserCommandHandler",
+      "Handle"
+    ],
+    "Rmms.Application/Auth/Register/RegisterUserCommandValidator.cs": [
+      "RegisterUserCommandValidator",
+      "RegisterUserCommandValidator"
+    ],
+    "Rmms.Application/Auth/Register/RegisterUserResponse.cs": [],
+    "Rmms.Application/Auth/ResetPassword/ResetPasswordCommand.cs": [],
+    "Rmms.Application/Auth/ResetPassword/ResetPasswordCommandHandler.cs": [
+      "ResetPasswordCommandHandler",
+      "Handle"
+    ],
+    "Rmms.Application/Auth/ResetPassword/ResetPasswordCommandValidator.cs": [
+      "ResetPasswordCommandValidator",
+      "ResetPasswordCommandValidator"
+    ],
+    "Rmms.Application/Auth/VerifyEmail/VerifyEmailCommand.cs": [],
+    "Rmms.Application/Auth/VerifyEmail/VerifyEmailCommandHandler.cs": [
+      "VerifyEmailCommandHandler",
+      "Handle"
+    ],
+    "Rmms.Application/Auth/VerifyEmail/VerifyEmailCommandValidator.cs": [
+      "VerifyEmailCommandValidator",
+      "VerifyEmailCommandValidator"
+    ],
+    "Rmms.Application/Auth/VerifyEmail/VerifyEmailResponse.cs": [],
+    "Rmms.Application/Common/Abstractions/IApprovalService.cs": [
+      "IApprovalService"
+    ],
+    "Rmms.Application/Common/Abstractions/IApprovalTokenService.cs": [
+      "IApprovalTokenService"
+    ],
+    "Rmms.Application/Common/Abstractions/IAttendancePhotoRetentionService.cs": [
+      "IAttendancePhotoRetentionService"
+    ],
+    "Rmms.Application/Common/Abstractions/IAttendancePhotoStorage.cs": [
+      "IAttendancePhotoStorage"
+    ],
+    "Rmms.Application/Common/Abstractions/IAuditLogger.cs": [
+      "IAuditLogger"
+    ],
+    "Rmms.Application/Common/Abstractions/IClientContext.cs": [
+      "IClientContext"
+    ],
+    "Rmms.Application/Common/Abstractions/IEmailSender.cs": [
+      "IEmailSender"
+    ],
+    "Rmms.Application/Common/Abstractions/IFaceClient.cs": [
+      "IFaceClient"
+    ],
+    "Rmms.Application/Common/Abstractions/IFaceVerificationService.cs": [
+      "IFaceVerificationService"
+    ],
+    "Rmms.Application/Common/Abstractions/IJwtTokenService.cs": [
+      "IJwtTokenService"
+    ],
+    "Rmms.Application/Common/Abstractions/ILoginRateLimiter.cs": [
+      "ILoginRateLimiter"
+    ],
+    "Rmms.Application/Common/Abstractions/INotificationService.cs": [
+      "INotificationService"
+    ],
+    "Rmms.Application/Common/Abstractions/IPasswordHasher.cs": [
+      "IPasswordHasher"
+    ],
+    "Rmms.Application/Common/Abstractions/IPushSender.cs": [
+      "IPushSender"
+    ],
+    "Rmms.Application/Common/Abstractions/IRealtimeNotifier.cs": [
+      "IRealtimeNotifier"
+    ],
+    "Rmms.Application/Common/Abstractions/IRefreshTokenGenerator.cs": [
+      "IRefreshTokenGenerator"
+    ],
+    "Rmms.Application/Common/Abstractions/IReportExporter.cs": [
+      "IReportExporter"
+    ],
+    "Rmms.Application/Common/Abstractions/ITokenCleanupService.cs": [
+      "ITokenCleanupService"
+    ],
+    "Rmms.Application/Common/Behaviors/LoggingBehavior.cs": [
+      "LoggingBehavior",
+      "Handle",
+      "LoggingBehavior"
+    ],
+    "Rmms.Application/Common/Behaviors/ValidationBehavior.cs": [
+      "ValidationBehavior",
+      "Handle",
+      "ValidationBehavior"
+    ],
+    "Rmms.Application/Common/EnumFormatting.cs": [
+      "ToSnakeCase",
+      "EnumFormatting"
+    ],
+    "Rmms.Application/Common/Interfaces/IAppDbContext.cs": [
+      "IAppDbContext"
+    ],
+    "Rmms.Application/Common/Interfaces/ICurrentUser.cs": [
+      "ICurrentUser"
+    ],
+    "Rmms.Application/Common/Interfaces/IDateTimeProvider.cs": [
+      "IDateTimeProvider"
+    ],
+    "Rmms.Application/Common/Options/ApprovalOptions.cs": [
+      "SectionName",
+      "SigningKey",
+      "TokenTtlHours",
+      "WebApprovalPath",
+      "IsConfigured",
+      "ApprovalOptions"
+    ],
+    "Rmms.Application/Common/Options/CompreFaceOptions.cs": [
+      "SectionName",
+      "BaseUrl",
+      "ApiKey",
+      "ConfidenceThreshold",
+      "IsConfigured",
+      "CompreFaceOptions"
+    ],
+    "Rmms.Application/Common/Options/JwtOptions.cs": [
+      "SectionName",
+      "SigningKey",
+      "Issuer",
+      "Audience",
+      "AccessTokenMinutes",
+      "RefreshTokenDays",
+      "JwtOptions"
+    ],
+    "Rmms.Application/Common/Options/MinioOptions.cs": [
+      "SectionName",
+      "Endpoint",
+      "AccessKey",
+      "SecretKey",
+      "BucketName",
+      "UseSsl",
+      "PublicEndpoint",
+      "PublicUseSsl",
+      "PresignedUrlTtlSeconds",
+      "MinioOptions"
+    ],
+    "Rmms.Application/Common/Security/OpaqueToken.cs": [
+      "Generate",
+      "Hash",
+      "OpaqueToken"
+    ],
+    "Rmms.Application/Common/SuperAdminAccess.cs": [
+      "CallerIsSuperAdminAsync",
+      "SuperAdminAccess"
+    ],
+    "Rmms.Application/Dashboard/GetDashboardSummary.cs": [
+      "GetDashboardSummaryQueryHandler",
+      "Handle"
+    ],
+    "Rmms.Application/DependencyInjection.cs": [
+      "AddApplication",
+      "DependencyInjection"
+    ],
+    "Rmms.Application/Devices/ApproveDevice/ApproveDeviceCommand.cs": [],
+    "Rmms.Application/Devices/ApproveDevice/ApproveDeviceCommandHandler.cs": [
+      "ApproveDeviceCommandHandler",
+      "Handle"
+    ],
+    "Rmms.Application/Devices/GetMyDevice/GetMyDeviceQuery.cs": [],
+    "Rmms.Application/Devices/GetMyDevice/GetMyDeviceQueryHandler.cs": [
+      "GetMyDeviceQueryHandler",
+      "Handle"
+    ],
+    "Rmms.Application/Devices/GetPendingDevices/GetPendingDevicesQuery.cs": [],
+    "Rmms.Application/Devices/GetPendingDevices/GetPendingDevicesQueryHandler.cs": [
+      "GetPendingDevicesQueryHandler",
+      "Handle"
+    ],
+    "Rmms.Application/Devices/RejectDevice/RejectDeviceCommand.cs": [],
+    "Rmms.Application/Devices/RejectDevice/RejectDeviceCommandHandler.cs": [
+      "RejectDeviceCommandHandler",
+      "Handle"
+    ],
+    "Rmms.Application/Devices/RejectDevice/RejectDeviceCommandValidator.cs": [
+      "RejectDeviceCommandValidator",
+      "RejectDeviceCommandValidator"
+    ],
+    "Rmms.Application/Documents/DocumentDtos.cs": [
+      "ToDto"
+    ],
+    "Rmms.Application/Documents/Documents.cs": [
+      "UploadDocumentCommandValidator",
+      "UploadDocumentCommandValidator",
+      "UploadDocumentCommandHandler",
+      "Handle",
+      "AssignDocumentCommandHandler",
+      "Handle",
+      "GetMyDocumentsQueryHandler",
+      "Handle",
+      "GetDocumentDownloadUrlQueryHandler",
+      "Handle",
+      "DeleteDocumentCommandHandler",
+      "Handle",
+      "AdminGetDocumentsQueryHandler",
+      "Handle",
+      "TryParse",
+      "ResolveAccessibleIdsAsync"
+    ],
+    "Rmms.Application/Email/IEmailTemplateRenderer.cs": [
+      "IEmailTemplateRenderer"
+    ],
+    "Rmms.Application/FaceRecognition/AdminRemoveFace.cs": [
+      "AdminRemoveFaceCommandHandler",
+      "Handle"
+    ],
+    "Rmms.Application/FaceRecognition/EnrollFace.cs": [
+      "EnrollFaceCommandValidator",
+      "EnrollFaceCommandValidator",
+      "EnrollFaceCommandHandler",
+      "Handle"
+    ],
+    "Rmms.Application/FaceRecognition/FaceDtos.cs": [],
+    "Rmms.Application/FaceRecognition/RemoveMyFace.cs": [
+      "RemoveMyFaceCommandHandler",
+      "Handle"
+    ],
+    "Rmms.Application/FaceRecognition/VerifyFace.cs": [
+      "VerifyFaceCommandValidator",
+      "VerifyFaceCommandValidator",
+      "VerifyFaceCommandHandler",
+      "Handle",
+      "GetFaceStatusQueryHandler",
+      "Handle"
+    ],
+    "Rmms.Application/Forms/FormFill.cs": [
+      "AssignFormCommandHandler",
+      "Handle",
+      "UploadFormAttachmentCommandHandler",
+      "Handle",
+      "GetMyFormsQueryHandler",
+      "Handle",
+      "GetFormForFillQueryHandler",
+      "Handle",
+      "SubmitFormCommandValidator",
+      "SubmitFormCommandValidator",
+      "SubmitFormCommandHandler",
+      "Handle",
+      "ResolveAssignedFormIdsAsync",
+      "IsValidJson",
+      "FindMissingRequired",
+      "ParseRules",
+      "HasAnyAttachment"
+    ],
+    "Rmms.Application/Forms/Forms.cs": [
+      "CreateFormCommandValidator",
+      "CreateFormCommandValidator",
+      "CreateFormCommandHandler",
+      "Handle",
+      "UpdateFormDraftCommandValidator",
+      "UpdateFormDraftCommandValidator",
+      "UpdateFormDraftCommandHandler",
+      "Handle",
+      "PublishFormCommandHandler",
+      "Handle",
+      "GetFormsQueryHandler",
+      "Handle",
+      "GetFormQueryHandler",
+      "Handle",
+      "GetFormVersionsQueryHandler",
+      "Handle",
+      "TryParse",
+      "ToText"
+    ],
+    "Rmms.Application/Forms/FormSchema.cs": [
+      "KnownFieldTypes",
+      "Validate",
+      "FormSchema"
+    ],
+    "Rmms.Application/LeaveOt/AdminGetRequests.cs": [
+      "GetAllLeaveRequestsQueryHandler",
+      "Handle",
+      "GetAllOtRequestsQueryHandler",
+      "Handle"
+    ],
+    "Rmms.Application/LeaveOt/CreateLeaveRequest.cs": [
+      "CreateLeaveRequestCommandValidator",
+      "CreateLeaveRequestCommandValidator",
+      "CreateLeaveRequestCommandHandler",
+      "Handle",
+      "CreateEmergencyLeaveCommandHandler",
+      "Handle"
+    ],
+    "Rmms.Application/LeaveOt/CreateOtRequest.cs": [
+      "CreateOtRequestCommandValidator",
+      "CreateOtRequestCommandValidator",
+      "CreateOtRequestCommandHandler",
+      "Handle"
+    ],
+    "Rmms.Application/LeaveOt/GetMyRequests.cs": [
+      "GetMyLeaveRequestsQueryHandler",
+      "Handle",
+      "GetMyOtRequestsQueryHandler",
+      "Handle"
+    ],
+    "Rmms.Application/LeaveOt/LeaveOtDtos.cs": [
+      "ToDto",
+      "ToDto"
+    ],
+    "Rmms.Application/LeaveOt/RequestRouting.cs": [
+      "RouteAsync",
+      "ResolveApproverAsync"
+    ],
+    "Rmms.Application/LeaveOt/WithdrawLeaveRequest.cs": [
+      "WithdrawLeaveRequestCommandHandler",
+      "Handle"
+    ],
+    "Rmms.Application/Maintenance/AttendancePhotoRetentionService.cs": [
+      "AttendancePhotoRetentionService",
+      "RunAsync"
+    ],
+    "Rmms.Application/Maintenance/TokenCleanupService.cs": [
+      "TokenCleanupService",
+      "RunAsync"
+    ],
+    "Rmms.Application/News/News.cs": [
+      "CreateNewsCommandValidator",
+      "CreateNewsCommandValidator",
+      "CreateNewsCommandHandler",
+      "Handle",
+      "UpdateNewsCommandValidator",
+      "UpdateNewsCommandValidator",
+      "UpdateNewsCommandHandler",
+      "Handle",
+      "AssignNewsCommandHandler",
+      "Handle",
+      "PublishNewsCommandHandler",
+      "Handle",
+      "DeleteNewsCommandHandler",
+      "Handle",
+      "GetMyNewsQueryHandler",
+      "Handle",
+      "MarkNewsReadCommandHandler",
+      "Handle",
+      "ConfirmNewsCommandHandler",
+      "Handle",
+      "AdminGetNewsQueryHandler",
+      "Handle",
+      "ResolveAssignedIdsAsync",
+      "ResolveAsync"
+    ],
+    "Rmms.Application/News/NewsDtos.cs": [
+      "ToDto",
+      "ToAdminDto"
+    ],
+    "Rmms.Application/Notifications/GetMyNotifications.cs": [
+      "GetMyNotificationsQueryHandler",
+      "Handle"
+    ],
+    "Rmms.Application/Notifications/MarkNotificationRead.cs": [
+      "MarkNotificationReadCommandHandler",
+      "Handle",
+      "MarkAllNotificationsReadCommandHandler",
+      "Handle"
+    ],
+    "Rmms.Application/Notifications/NotificationDtos.cs": [
+      "ToDto"
+    ],
+    "Rmms.Application/Notifications/RegisterFcmToken.cs": [
+      "RegisterFcmTokenCommandHandler",
+      "Handle"
+    ],
+    "Rmms.Application/Organization/Areas/Areas.cs": [
+      "CreateAreaCommandValidator",
+      "CreateAreaCommandValidator",
+      "CreateAreaCommandHandler",
+      "Handle",
+      "UpdateAreaCommandValidator",
+      "UpdateAreaCommandValidator",
+      "UpdateAreaCommandHandler",
+      "Handle",
+      "DeleteAreaCommandHandler",
+      "Handle",
+      "GetAreasQueryHandler",
+      "Handle"
+    ],
+    "Rmms.Application/Organization/Assignments/Assignments.cs": [
+      "AssignPgLeaderCommandHandler",
+      "Handle",
+      "AssignUserStoreCommandHandler",
+      "Handle",
+      "UnassignUserStoreCommandHandler",
+      "Handle",
+      "AssignUserCategoryCommandHandler",
+      "Handle",
+      "UnassignUserCategoryCommandHandler",
+      "Handle",
+      "GetUserAssignmentsQueryHandler",
+      "Handle"
+    ],
+    "Rmms.Application/Organization/Categories/Categories.cs": [
+      "CreateCategoryCommandValidator",
+      "CreateCategoryCommandValidator",
+      "CreateCategoryCommandHandler",
+      "Handle",
+      "UpdateCategoryCommandValidator",
+      "UpdateCategoryCommandValidator",
+      "UpdateCategoryCommandHandler",
+      "Handle",
+      "DeleteCategoryCommandHandler",
+      "Handle",
+      "GetCategoriesQueryHandler",
+      "Handle"
+    ],
+    "Rmms.Application/Organization/Me/GetMyLeader.cs": [
+      "GetMyLeaderQueryHandler",
+      "Handle"
+    ],
+    "Rmms.Application/Organization/Me/GetMyStores.cs": [
+      "GetMyStoresQueryHandler",
+      "Handle"
+    ],
+    "Rmms.Application/Organization/Products/Products.cs": [
+      "CreateProductCommandValidator",
+      "CreateProductCommandValidator",
+      "CreateProductCommandHandler",
+      "Handle",
+      "UpdateProductCommandValidator",
+      "UpdateProductCommandValidator",
+      "UpdateProductCommandHandler",
+      "Handle",
+      "ChangeProductStatusCommandHandler",
+      "Handle",
+      "DeleteProductCommandHandler",
+      "Handle",
+      "GetProductsQueryHandler",
+      "Handle",
+      "IsValidAttributes",
+      "TryParseStatus"
+    ],
+    "Rmms.Application/Organization/Stores/ChangeStoreStatus.cs": [
+      "ChangeStoreStatusCommandValidator",
+      "ChangeStoreStatusCommandValidator",
+      "ChangeStoreStatusCommandHandler",
+      "Handle"
+    ],
+    "Rmms.Application/Organization/Stores/CreateStore.cs": [
+      "CreateStoreCommandValidator",
+      "CreateStoreCommandValidator",
+      "CreateStoreCommandHandler",
+      "Handle"
+    ],
+    "Rmms.Application/Organization/Stores/DeleteStore.cs": [
+      "DeleteStoreCommandHandler",
+      "Handle"
+    ],
+    "Rmms.Application/Organization/Stores/GetStores.cs": [
+      "GetStoresQueryHandler",
+      "Handle"
+    ],
+    "Rmms.Application/Organization/Stores/StoreDtos.cs": [],
+    "Rmms.Application/Organization/Stores/UpdateStore.cs": [
+      "UpdateStoreCommandValidator",
+      "UpdateStoreCommandValidator",
+      "UpdateStoreCommandHandler",
+      "Handle"
+    ],
+    "Rmms.Application/Organization/Views/OrgViews.cs": [
+      "GetOrgHierarchyQueryHandler",
+      "Handle",
+      "GetOrgAreaTreeQueryHandler",
+      "Handle"
+    ],
+    "Rmms.Application/Reports/AttendanceReports.cs": [
+      "GetAttendanceReportQueryHandler",
+      "Handle",
+      "GetAttendanceTrendQueryHandler",
+      "Handle",
+      "ExportAttendanceReportCommandHandler",
+      "Handle",
+      "IsAnomaly",
+      "QueryAsync",
+      "NamesAsync"
+    ],
+    "Rmms.Application/Reports/RequestReports.cs": [
+      "ExportLeaveRequestsCommandHandler",
+      "Handle",
+      "ExportOtRequestsCommandHandler",
+      "Handle"
+    ],
+    "Rmms.Application/TeamMonitoring/GetTeamToday.cs": [
+      "Working",
+      "CheckedOut",
+      "NotCheckedIn",
+      "OnLeave",
+      "NoScheduleToday",
+      "PendingReview",
+      "GetTeamTodayQueryHandler",
+      "Handle"
+    ],
+    "Rmms.Application/VisitPlans/CreateVisitPlan.cs": [
+      "CreateVisitPlanCommandValidator",
+      "CreateVisitPlanCommandValidator",
+      "CreateVisitPlanCommandHandler",
+      "Handle",
+      "ValidateItemsAsync"
+    ],
+    "Rmms.Application/VisitPlans/EditVisitPlan.cs": [
+      "EditVisitPlanCommandValidator",
+      "EditVisitPlanCommandValidator",
+      "EditVisitPlanCommandHandler",
+      "Handle"
+    ],
+    "Rmms.Application/VisitPlans/ExecuteVisitPlanItem.cs": [
+      "ExecuteVisitItemCommandHandler",
+      "Handle"
+    ],
+    "Rmms.Application/VisitPlans/GetVisitPlans.cs": [
+      "GetMyVisitPlansQueryHandler",
+      "Handle",
+      "GetVisitPlanQueryHandler",
+      "Handle",
+      "AdminGetVisitPlansQueryHandler",
+      "Handle",
+      "BuildAsync"
+    ],
+    "Rmms.Application/VisitPlans/VisitPlanDtos.cs": [
+      "ToDto"
+    ],
+    "Rmms.Application/VisitPlans/VisitPlanRouting.cs": [
+      "RouteAsync",
+      "ResolveBuhApproverAsync"
+    ],
+    "Rmms.Application/WorkSchedule/ApproveRejectSchedule.cs": [
+      "ApproveScheduleCommandHandler",
+      "Handle",
+      "RejectScheduleCommandValidator",
+      "RejectScheduleCommandValidator",
+      "RejectScheduleCommandHandler",
+      "Handle"
+    ],
+    "Rmms.Application/WorkSchedule/CreateSchedule.cs": [
+      "CreateScheduleCommandValidator",
+      "CreateScheduleCommandValidator",
+      "CreateScheduleCommandHandler",
+      "Handle"
+    ],
+    "Rmms.Application/WorkSchedule/EditSchedule.cs": [
+      "EditScheduleCommandHandler",
+      "Handle"
+    ],
+    "Rmms.Application/WorkSchedule/GetSchedules.cs": [
+      "GetMyScheduleQueryHandler",
+      "Handle",
+      "GetUserScheduleQueryHandler",
+      "Handle",
+      "LoadAsync"
+    ],
+    "Rmms.Application/WorkSchedule/SubmitWithdrawSchedule.cs": [
+      "SubmitScheduleCommandHandler",
+      "Handle",
+      "WithdrawScheduleCommandHandler",
+      "Handle"
+    ],
+    "Rmms.Application/WorkSchedule/WorkScheduleDtos.cs": [
+      "ToDto",
+      "WorkScheduleMapper"
+    ],
+    "Rmms.Domain/Approvals/Approval.cs": [
+      "EntityType",
+      "EntityId",
+      "RequesterId",
+      "ApproverId",
+      "ApproverRole",
+      "Status",
+      "DecisionReason",
+      "DecidedAt",
+      "DecidedVia",
+      "OverriddenBy",
+      "OverrideReason",
+      "Create",
+      "IsPending",
+      "Approve",
+      "Reject",
+      "Override",
+      "Approval"
+    ],
+    "Rmms.Domain/Approvals/ApprovalEmailToken.cs": [
+      "ApprovalId",
+      "TokenHash",
+      "ExpiresAt",
+      "UsedAt",
+      "IpAddress",
+      "UserAgent",
+      "CreatedAt",
+      "Issue",
+      "IsExpired",
+      "IsUsed",
+      "IsValid",
+      "MarkUsed",
+      "ApprovalEmailToken"
+    ],
+    "Rmms.Domain/Attendance/AttendanceRecord.cs": [
+      "GeofenceRadiusMeters",
+      "UserId",
+      "WorkScheduleShiftId",
+      "StoreId",
+      "CheckInAt",
+      "CheckInLatitude",
+      "CheckInLongitude",
+      "CheckInDistanceMeters",
+      "CheckInFaceResult",
+      "CheckInFaceConfidence",
+      "CheckInSelfieUrl",
+      "CheckInStorePhotoUrl",
+      "CheckInFakeGpsDetected",
+      "IsLate",
+      "CheckInNote",
+      "CheckOutAt",
+      "CheckOutLatitude",
+      "CheckOutLongitude",
+      "CheckOutDistanceMeters",
+      "CheckOutFaceResult",
+      "CheckOutFaceConfidence",
+      "CheckOutSelfieUrl",
+      "CheckOutStorePhotoUrl",
+      "CheckOutNote",
+      "Status",
+      "ReviewedBy",
+      "ReviewedAt",
+      "ReviewNote",
+      "CheckIn",
+      "IsOpen",
+      "RequiresReview",
+      "CheckOut",
+      "ApproveReview",
+      "RejectReview",
+      "PurgePhotos",
+      "AttendanceRecord"
+    ],
+    "Rmms.Domain/Audit/AuditLog.cs": [
+      "ActorUserId",
+      "Action",
+      "TargetEntity",
+      "TargetId",
+      "IpAddress",
+      "UserAgent",
+      "Metadata",
+      "CreatedAt",
+      "Record",
+      "AuditLog"
+    ],
+    "Rmms.Domain/Auth/EmailVerificationToken.cs": [
+      "UserId",
+      "TokenHash",
+      "ExpiresAt",
+      "CreatedAt",
+      "UsedAt",
+      "Issue",
+      "IsValid",
+      "MarkUsed",
+      "EmailVerificationToken"
+    ],
+    "Rmms.Domain/Auth/LoginHistory.cs": [
+      "UserId",
+      "DeviceId",
+      "IpAddress",
+      "UserAgent",
+      "Success",
+      "FailureReason",
+      "CreatedAt",
+      "RecordSuccess",
+      "RecordFailure",
+      "LoginHistory"
+    ],
+    "Rmms.Domain/Auth/PasswordResetToken.cs": [
+      "UserId",
+      "TokenHash",
+      "ExpiresAt",
+      "CreatedAt",
+      "UsedAt",
+      "Issue",
+      "IsValid",
+      "MarkUsed",
+      "PasswordResetToken"
+    ],
+    "Rmms.Domain/Auth/RefreshToken.cs": [
+      "UserId",
+      "DeviceId",
+      "TokenHash",
+      "ExpiresAt",
+      "CreatedAt",
+      "RevokedAt",
+      "ReplacedByTokenId",
+      "Issue",
+      "IsActive",
+      "Revoke",
+      "MarkRotatedBy",
+      "RefreshToken"
+    ],
+    "Rmms.Domain/Common/AggregateRoot.cs": [
+      "DomainEvents",
+      "ClearDomainEvents",
+      "AggregateRoot"
+    ],
+    "Rmms.Domain/Common/AuditableEntity.cs": [
+      "CreatedAt",
+      "CreatedBy",
+      "UpdatedAt",
+      "UpdatedBy",
+      "DeletedAt",
+      "DeletedBy",
+      "IsDeleted",
+      "AuditableEntity"
+    ],
+    "Rmms.Domain/Common/Entity.cs": [
+      "Id",
+      "Equals",
+      "GetHashCode",
+      "Entity"
+    ],
+    "Rmms.Domain/Common/Error.cs": [],
+    "Rmms.Domain/Common/IAggregateRoot.cs": [
+      "IAggregateRoot"
+    ],
+    "Rmms.Domain/Common/IDomainEvent.cs": [
+      "IDomainEvent"
+    ],
+    "Rmms.Domain/Common/Result.cs": [
+      "IsSuccess",
+      "IsFailure",
+      "Error",
+      "Success",
+      "Failure",
+      "Success",
+      "Failure",
+      "Result",
+      "Value",
+      "Result"
+    ],
+    "Rmms.Domain/Common/UuidV7.cs": [
+      "NewGuid",
+      "UuidV7"
+    ],
+    "Rmms.Domain/Common/ValueObject.cs": [
+      "Equals",
+      "GetHashCode",
+      "ValueObject"
+    ],
+    "Rmms.Domain/Devices/UserDevice.cs": [
+      "UserId",
+      "DeviceId",
+      "DeviceName",
+      "Os",
+      "OsVersion",
+      "AppVersion",
+      "FcmToken",
+      "Status",
+      "ApprovedBy",
+      "ApprovedAt",
+      "LastUsedAt",
+      "RegisterFirstActive",
+      "RegisterPendingApproval",
+      "Approve",
+      "Reject",
+      "MarkReplaced",
+      "Touch",
+      "UpdateFcmToken",
+      "UserDevice"
+    ],
+    "Rmms.Domain/Documents/Document.cs": [
+      "Name",
+      "Description",
+      "FolderType",
+      "FileKey",
+      "FileSizeBytes",
+      "MimeType",
+      "UploadedBy",
+      "Create",
+      "IsPrivate",
+      "Document"
+    ],
+    "Rmms.Domain/Documents/DocumentAssignment.cs": [
+      "DocumentId",
+      "AssignedToRole",
+      "AssignedToUserId",
+      "Create",
+      "DocumentAssignment"
+    ],
+    "Rmms.Domain/Enums/ApprovalDecisionVia.cs": [],
+    "Rmms.Domain/Enums/ApprovalEntityType.cs": [],
+    "Rmms.Domain/Enums/ApprovalStatus.cs": [],
+    "Rmms.Domain/Enums/AttendanceStatus.cs": [],
+    "Rmms.Domain/Enums/AuditAction.cs": [
+      "UserRegistered",
+      "UserEmailVerified",
+      "UserCreatedByAdmin",
+      "UserUpdatedByAdmin",
+      "UserStatusChanged",
+      "UserPasswordReset",
+      "UserPasswordResetRequested",
+      "AuthLoginSuccess",
+      "AuthLoginFailed",
+      "AuthLogout",
+      "AuthRefreshRotated",
+      "AuthRefreshReused",
+      "DeviceRegistered",
+      "DeviceChangeRequested",
+      "DeviceApproved",
+      "DeviceRejected",
+      "StoreCreated",
+      "StoreUpdated",
+      "StoreStatusChanged",
+      "StoreDeleted",
+      "AreaCreated",
+      "AreaUpdated",
+      "AreaDeleted",
+      "CategoryCreated",
+      "CategoryUpdated",
+      "CategoryDeleted",
+      "ProductCreated",
+      "ProductUpdated",
+      "ProductStatusChanged",
+      "ProductDeleted",
+      "PgLeaderAssigned",
+      "UserStoreAssigned",
+      "UserStoreUnassigned",
+      "UserCategoryAssigned",
+      "UserCategoryUnassigned",
+      "ScheduleCreated",
+      "ScheduleSubmitted",
+      "ScheduleEdited",
+      "ScheduleWithdrawn",
+      "ScheduleApproved",
+      "ScheduleRejected",
+      "AttendanceCheckedIn",
+      "AttendanceCheckedOut",
+      "AttendanceFaceFailed",
+      "AttendanceGpsViolation",
+      "AttendanceFakeGpsBlocked",
+      "AttendanceReviewed",
+      "FaceEnrolled",
+      "FaceRemoved",
+      "LeaveRequested",
+      "LeaveWithdrawn",
+      "OtRequested",
+      "ApprovalRequested",
+      "ApprovalApproved",
+      "ApprovalRejected",
+      "ApprovalOverridden",
+      "FormCreated",
+      "FormUpdated",
+      "FormPublished",
+      "FormAssigned",
+      "FormSubmitted",
+      "VisitPlanCreated",
+      "VisitPlanEdited",
+      "VisitPlanItemExecuted",
+      "DocumentUploaded",
+      "DocumentAssigned",
+      "DocumentDeleted",
+      "DocumentDownloaded",
+      "NewsCreated",
+      "NewsUpdated",
+      "NewsAssigned",
+      "NewsPublished",
+      "NewsDeleted",
+      "AuditAction"
+    ],
+    "Rmms.Domain/Enums/DeviceStatus.cs": [],
+    "Rmms.Domain/Enums/DocumentFolderType.cs": [],
+    "Rmms.Domain/Enums/FaceVerificationResult.cs": [],
+    "Rmms.Domain/Enums/FormStatus.cs": [],
+    "Rmms.Domain/Enums/FormSubmissionStatus.cs": [],
+    "Rmms.Domain/Enums/FormType.cs": [],
+    "Rmms.Domain/Enums/LeaveType.cs": [],
+    "Rmms.Domain/Enums/NotificationType.cs": [],
+    "Rmms.Domain/Enums/ProductStatus.cs": [],
+    "Rmms.Domain/Enums/RequestStatus.cs": [],
+    "Rmms.Domain/Enums/StoreStatus.cs": [],
+    "Rmms.Domain/Enums/UserRole.cs": [],
+    "Rmms.Domain/Enums/UserStatus.cs": [],
+    "Rmms.Domain/Enums/VisitPlanStatus.cs": [],
+    "Rmms.Domain/Enums/WorkScheduleStatus.cs": [],
+    "Rmms.Domain/Forms/Form.cs": [
+      "Code",
+      "NameVi",
+      "NameEn",
+      "DescriptionVi",
+      "DescriptionEn",
+      "FormType",
+      "CurrentVersion",
+      "Status",
+      "Create",
+      "UpdateMeta",
+      "MarkPublished",
+      "Archive",
+      "Form"
+    ],
+    "Rmms.Domain/Forms/FormAssignment.cs": [
+      "FormId",
+      "AssignedToRole",
+      "AssignedToUserId",
+      "AssignedToStoreId",
+      "AssignedToAreaId",
+      "AssignedToCategoryId",
+      "AssignedToProductId",
+      "ValidFrom",
+      "ValidTo",
+      "Create",
+      "FormAssignment"
+    ],
+    "Rmms.Domain/Forms/FormSubmission.cs": [
+      "FormId",
+      "FormVersionId",
+      "UserId",
+      "StoreId",
+      "Answers",
+      "Attachments",
+      "Score",
+      "TimeSpentSeconds",
+      "GpsLatitude",
+      "GpsLongitude",
+      "SubmittedAt",
+      "EditedAt",
+      "Status",
+      "ClientIdempotencyKey",
+      "Create",
+      "FormSubmission"
+    ],
+    "Rmms.Domain/Forms/FormVersion.cs": [
+      "FormId",
+      "Version",
+      "Schema",
+      "PublishedAt",
+      "PublishedBy",
+      "IsPublished",
+      "CreateDraft",
+      "UpdateSchema",
+      "Publish",
+      "FormVersion"
+    ],
+    "Rmms.Domain/LeaveOt/LeaveRequest.cs": [
+      "UserId",
+      "LeaveType",
+      "StartDate",
+      "EndDate",
+      "StartTime",
+      "EndTime",
+      "Reason",
+      "Status",
+      "ApprovalId",
+      "LinkedAttendanceId",
+      "Create",
+      "IsPending",
+      "LinkApproval",
+      "Approve",
+      "Reject",
+      "LeaveRequest"
+    ],
+    "Rmms.Domain/LeaveOt/OtRequest.cs": [
+      "UserId",
+      "OtDate",
+      "StartTime",
+      "EndTime",
+      "Reason",
+      "Status",
+      "ApprovalId",
+      "Create",
+      "IsPending",
+      "LinkApproval",
+      "Approve",
+      "Reject",
+      "OtRequest"
+    ],
+    "Rmms.Domain/News/NewsAssignment.cs": [
+      "NewsId",
+      "AssignedToRole",
+      "AssignedToUserId",
+      "Create",
+      "NewsAssignment"
+    ],
+    "Rmms.Domain/News/NewsItem.cs": [
+      "TitleVi",
+      "TitleEn",
+      "ContentVi",
+      "ContentEn",
+      "Category",
+      "IsImportant",
+      "PublishedAt",
+      "PublishedBy",
+      "IsPublished",
+      "Create",
+      "UpdateContent",
+      "Publish",
+      "NewsItem"
+    ],
+    "Rmms.Domain/News/NewsRead.cs": [
+      "NewsId",
+      "UserId",
+      "ReadAt",
+      "ConfirmedAt",
+      "Create",
+      "IsConfirmed",
+      "Confirm",
+      "NewsRead"
+    ],
+    "Rmms.Domain/Notifications/Notification.cs": [
+      "UserId",
+      "Type",
+      "Title",
+      "Body",
+      "Data",
+      "ChannelsSent",
+      "IsRead",
+      "ReadAt",
+      "Create",
+      "MarkRead",
+      "Notification"
+    ],
+    "Rmms.Domain/Notifications/PushToken.cs": [
+      "UserId",
+      "Token",
+      "Create",
+      "AssignTo",
+      "PushToken"
+    ],
+    "Rmms.Domain/Organization/Area.cs": [
+      "Code",
+      "Name",
+      "ParentAreaId",
+      "Create",
+      "Update",
+      "Area"
+    ],
+    "Rmms.Domain/Organization/Category.cs": [
+      "Code",
+      "Name",
+      "Create",
+      "Update",
+      "Category"
+    ],
+    "Rmms.Domain/Organization/Product.cs": [
+      "Sku",
+      "Name",
+      "Brand",
+      "CategoryId",
+      "Attributes",
+      "Status",
+      "Create",
+      "Update",
+      "Activate",
+      "Deactivate",
+      "Product"
+    ],
+    "Rmms.Domain/Organization/Store.cs": [
+      "Code",
+      "Name",
+      "Address",
+      "Latitude",
+      "Longitude",
+      "AreaId",
+      "Status",
+      "Create",
+      "Update",
+      "Activate",
+      "Deactivate",
+      "Store"
+    ],
+    "Rmms.Domain/Organization/UserCategoryAssignment.cs": [
+      "UserId",
+      "CategoryId",
+      "Create",
+      "UserCategoryAssignment"
+    ],
+    "Rmms.Domain/Organization/UserLeaderAssignment.cs": [
+      "PgUserId",
+      "LeaderUserId",
+      "EffectiveFrom",
+      "EffectiveTo",
+      "Create",
+      "IsActiveOn",
+      "End",
+      "UserLeaderAssignment"
+    ],
+    "Rmms.Domain/Organization/UserStoreAssignment.cs": [
+      "UserId",
+      "StoreId",
+      "EffectiveFrom",
+      "EffectiveTo",
+      "Create",
+      "IsActiveOn",
+      "End",
+      "UserStoreAssignment"
+    ],
+    "Rmms.Domain/Users/User.cs": [
+      "Email",
+      "PasswordHash",
+      "FullName",
+      "Phone",
+      "Role",
+      "Status",
+      "IsSuperAdmin",
+      "EmailVerifiedAt",
+      "LastLoginAt",
+      "PreferredLanguage",
+      "FaceEnrolledAt",
+      "FaceTemplateExternalId",
+      "ExternalProvider",
+      "ExternalId",
+      "MfaEnabled",
+      "MfaSecretExternalId",
+      "Register",
+      "CreateByAdmin",
+      "CreateSuperAdmin",
+      "PromoteToSuperAdmin",
+      "VerifyEmail",
+      "ChangePassword",
+      "Activate",
+      "Deactivate",
+      "RecordLogin",
+      "UpdateProfile",
+      "RecordFaceEnrollment",
+      "ClearFaceEnrollment",
+      "IsFaceEnrolled",
+      "User"
+    ],
+    "Rmms.Domain/ValueObjects/GpsCoordinate.cs": [
+      "Latitude",
+      "Longitude",
+      "AccuracyMeters",
+      "IsMocked",
+      "GpsCoordinate",
+      "DistanceMetersTo",
+      "GpsCoordinate"
+    ],
+    "Rmms.Domain/VisitPlan/VisitPlan.cs": [
+      "LeaderUserId",
+      "VisitDate",
+      "Notes",
+      "Status",
+      "ApprovalId",
+      "Items",
+      "Create",
+      "IsPending",
+      "LinkApproval",
+      "ReplaceItems",
+      "Approve",
+      "Reject",
+      "ExecuteItem",
+      "VisitPlan"
+    ],
+    "Rmms.Domain/VisitPlan/VisitPlanItem.cs": [
+      "VisitPlanId",
+      "StoreId",
+      "FormId",
+      "Ordering",
+      "ExecutedAt",
+      "FormSubmissionId",
+      "CreatedAt",
+      "IsExecuted",
+      "VisitPlanItem"
+    ],
+    "Rmms.Domain/WorkSchedule/WorkSchedule.cs": [
+      "UserId",
+      "ScheduleDate",
+      "Status",
+      "Version",
+      "PreviousVersionId",
+      "SubmittedAt",
+      "ApprovedAt",
+      "ApprovedBy",
+      "RejectReason",
+      "Shifts",
+      "Create",
+      "Submit",
+      "ReplaceShifts",
+      "CreateEditedVersion",
+      "Approve",
+      "Reject",
+      "Supersede",
+      "WorkSchedule"
+    ],
+    "Rmms.Domain/WorkSchedule/WorkScheduleShift.cs": [
+      "WorkScheduleId",
+      "StoreId",
+      "StartTime",
+      "EndTime",
+      "Ordering",
+      "CreatedAt",
+      "OverlapsWith",
+      "WorkScheduleShift"
+    ],
+    "Rmms.Infrastructure/Approvals/ApprovalService.cs": [
+      "ApprovalService",
+      "CreateAsync"
+    ],
+    "Rmms.Infrastructure/Approvals/ApprovalTokenService.cs": [
+      "ApprovalTokenService",
+      "Issue",
+      "Verify"
+    ],
+    "Rmms.Infrastructure/Attendance/LocalAttendancePhotoStorage.cs": [
+      "SaveAsync",
+      "GetUrlAsync",
+      "DeleteAsync"
+    ],
+    "Rmms.Infrastructure/Attendance/MinioAttendancePhotoStorage.cs": [
+      "MinioAttendancePhotoStorage",
+      "SaveAsync",
+      "GetUrlAsync",
+      "DeleteAsync",
+      "Dispose"
+    ],
+    "Rmms.Infrastructure/Audit/DbAuditLogger.cs": [
+      "DbAuditLogger",
+      "RecordAsync"
+    ],
+    "Rmms.Infrastructure/DependencyInjection.cs": [
+      "AddInfrastructure",
+      "DependencyInjection"
+    ],
+    "Rmms.Infrastructure/Email/AppUrlOptions.cs": [
+      "SectionName",
+      "AppBaseUrl",
+      "AppUrlOptions"
+    ],
+    "Rmms.Infrastructure/Email/ConsoleEmailSender.cs": [
+      "ConsoleEmailSender",
+      "SendAsync"
+    ],
+    "Rmms.Infrastructure/Email/EmailOptions.cs": [
+      "SectionName",
+      "Provider",
+      "BrandName",
+      "FromEmail",
+      "FromName",
+      "ApiKey",
+      "SmtpHost",
+      "SmtpPort",
+      "SmtpUser",
+      "SmtpPassword",
+      "IsSendGrid",
+      "IsSmtp",
+      "EmailOptions"
+    ],
+    "Rmms.Infrastructure/Email/EmailTemplateRenderer.cs": [
+      "EmailTemplateRenderer",
+      "BuildVerifyEmail",
+      "BuildPasswordReset",
+      "BuildAdminCreatedAccount"
+    ],
+    "Rmms.Infrastructure/Email/SendGridEmailSender.cs": [
+      "SendGridEmailSender",
+      "SendAsync"
+    ],
+    "Rmms.Infrastructure/Email/SmtpEmailSender.cs": [
+      "SmtpEmailSender",
+      "SendAsync"
+    ],
+    "Rmms.Infrastructure/Face/CompreFaceClient.cs": [
+      "CompreFaceClient",
+      "IsLive",
+      "EnrollAsync",
+      "VerifyAsync",
+      "DeleteAsync"
+    ],
+    "Rmms.Infrastructure/Face/DevFaceClient.cs": [
+      "IsLive",
+      "EnrollAsync",
+      "VerifyAsync",
+      "DeleteAsync"
+    ],
+    "Rmms.Infrastructure/Face/FaceVerificationService.cs": [
+      "FaceVerificationService",
+      "VerifyAsync"
+    ],
+    "Rmms.Infrastructure/Identity/BCryptPasswordHasher.cs": [
+      "Hash",
+      "Verify",
+      "NeedsRehash"
+    ],
+    "Rmms.Infrastructure/Identity/JwtOptions.cs": [],
+    "Rmms.Infrastructure/Identity/JwtTokenService.cs": [
+      "JwtTokenService",
+      "IssueAccess"
+    ],
+    "Rmms.Infrastructure/Identity/RefreshTokenGenerator.cs": [
+      "Generate",
+      "Hash"
+    ],
+    "Rmms.Infrastructure/Logging/SerilogElasticsearchExtensions.cs": [
+      "WriteToElasticsearchIfConfigured",
+      "SerilogElasticsearchExtensions"
+    ],
+    "Rmms.Infrastructure/Notifications/FcmPushSender.cs": [
+      "FcmPushSender",
+      "SendAsync"
+    ],
+    "Rmms.Infrastructure/Notifications/LoggingPushSender.cs": [
+      "LoggingPushSender",
+      "SendAsync"
+    ],
+    "Rmms.Infrastructure/Notifications/NoOpRealtimeNotifier.cs": [
+      "PushNotificationAsync"
+    ],
+    "Rmms.Infrastructure/Notifications/NotificationService.cs": [
+      "NotificationService",
+      "NotifyAsync"
+    ],
+    "Rmms.Infrastructure/Notifications/PushOptions.cs": [
+      "SectionName",
+      "Provider",
+      "CredentialsPath",
+      "IsFcm",
+      "PushOptions"
+    ],
+    "Rmms.Infrastructure/Persistence/AppDbContext.cs": [
+      "AppDbContext",
+      "Users",
+      "RefreshTokens",
+      "LoginHistory",
+      "EmailVerificationTokens",
+      "PasswordResetTokens",
+      "UserDevices",
+      "Areas",
+      "Stores",
+      "Categories",
+      "Products",
+      "UserLeaderAssignments",
+      "UserStoreAssignments",
+      "UserCategoryAssignments",
+      "WorkSchedules",
+      "Approvals",
+      "ApprovalEmailTokens",
+      "LeaveRequests",
+      "OtRequests",
+      "AttendanceRecords",
+      "Forms",
+      "FormVersions",
+      "FormAssignments",
+      "FormSubmissions",
+      "VisitPlans",
+      "Documents",
+      "DocumentAssignments",
+      "News",
+      "NewsAssignments",
+      "NewsReads",
+      "Notifications",
+      "PushTokens",
+      "AuditLogs",
+      "AppDbContext"
+    ],
+    "Rmms.Infrastructure/Persistence/Configurations/ApprovalConfiguration.cs": [
+      "Configure"
+    ],
+    "Rmms.Infrastructure/Persistence/Configurations/ApprovalEmailTokenConfiguration.cs": [
+      "Configure"
+    ],
+    "Rmms.Infrastructure/Persistence/Configurations/AreaConfiguration.cs": [
+      "Configure"
+    ],
+    "Rmms.Infrastructure/Persistence/Configurations/AttendanceRecordConfiguration.cs": [
+      "Configure"
+    ],
+    "Rmms.Infrastructure/Persistence/Configurations/AuditLogConfiguration.cs": [
+      "Configure"
+    ],
+    "Rmms.Infrastructure/Persistence/Configurations/CategoryConfiguration.cs": [
+      "Configure"
+    ],
+    "Rmms.Infrastructure/Persistence/Configurations/DocumentConfiguration.cs": [
+      "Configure",
+      "Configure"
+    ],
+    "Rmms.Infrastructure/Persistence/Configurations/EmailVerificationTokenConfiguration.cs": [
+      "Configure"
+    ],
+    "Rmms.Infrastructure/Persistence/Configurations/FormAssignmentConfiguration.cs": [
+      "Configure"
+    ],
+    "Rmms.Infrastructure/Persistence/Configurations/FormConfiguration.cs": [
+      "Configure"
+    ],
+    "Rmms.Infrastructure/Persistence/Configurations/FormSubmissionConfiguration.cs": [
+      "Configure"
+    ],
+    "Rmms.Infrastructure/Persistence/Configurations/FormVersionConfiguration.cs": [
+      "Configure"
+    ],
+    "Rmms.Infrastructure/Persistence/Configurations/LeaveRequestConfiguration.cs": [
+      "Configure"
+    ],
+    "Rmms.Infrastructure/Persistence/Configurations/LoginHistoryConfiguration.cs": [
+      "Configure"
+    ],
+    "Rmms.Infrastructure/Persistence/Configurations/NewsConfiguration.cs": [
+      "Configure",
+      "Configure",
+      "Configure"
+    ],
+    "Rmms.Infrastructure/Persistence/Configurations/NotificationConfiguration.cs": [
+      "Configure"
+    ],
+    "Rmms.Infrastructure/Persistence/Configurations/OtRequestConfiguration.cs": [
+      "Configure"
+    ],
+    "Rmms.Infrastructure/Persistence/Configurations/PasswordResetTokenConfiguration.cs": [
+      "Configure"
+    ],
+    "Rmms.Infrastructure/Persistence/Configurations/ProductConfiguration.cs": [
+      "Configure"
+    ],
+    "Rmms.Infrastructure/Persistence/Configurations/PushTokenConfiguration.cs": [
+      "Configure"
+    ],
+    "Rmms.Infrastructure/Persistence/Configurations/RefreshTokenConfiguration.cs": [
+      "Configure"
+    ],
+    "Rmms.Infrastructure/Persistence/Configurations/StoreConfiguration.cs": [
+      "Configure"
+    ],
+    "Rmms.Infrastructure/Persistence/Configurations/UserCategoryAssignmentConfiguration.cs": [
+      "Configure"
+    ],
+    "Rmms.Infrastructure/Persistence/Configurations/UserConfiguration.cs": [
+      "Configure"
+    ],
+    "Rmms.Infrastructure/Persistence/Configurations/UserDeviceConfiguration.cs": [
+      "Configure"
+    ],
+    "Rmms.Infrastructure/Persistence/Configurations/UserLeaderAssignmentConfiguration.cs": [
+      "Configure"
+    ],
+    "Rmms.Infrastructure/Persistence/Configurations/UserStoreAssignmentConfiguration.cs": [
+      "Configure"
+    ],
+    "Rmms.Infrastructure/Persistence/Configurations/VisitPlanConfiguration.cs": [
+      "Configure"
+    ],
+    "Rmms.Infrastructure/Persistence/Configurations/WorkScheduleConfiguration.cs": [
+      "Configure"
+    ],
+    "Rmms.Infrastructure/Persistence/Interceptors/AuditableEntityInterceptor.cs": [
+      "AuditableEntityInterceptor",
+      "SavingChangesAsync",
+      "SavingChanges",
+      "AuditableEntityInterceptor"
+    ],
+    "Rmms.Infrastructure/Persistence/Migrations/20260529022602_Init_M01_M02_Foundation.cs": [
+      "Init_M01_M02_Foundation"
+    ],
+    "Rmms.Infrastructure/Persistence/Migrations/20260529022602_Init_M01_M02_Foundation.Designer.cs": [],
+    "Rmms.Infrastructure/Persistence/Migrations/20260605034359_M03_Organization_Assignment.cs": [
+      "M03_Organization_Assignment"
+    ],
+    "Rmms.Infrastructure/Persistence/Migrations/20260605034359_M03_Organization_Assignment.Designer.cs": [],
+    "Rmms.Infrastructure/Persistence/Migrations/20260606042427_M07_WorkSchedule.cs": [
+      "M07_WorkSchedule"
+    ],
+    "Rmms.Infrastructure/Persistence/Migrations/20260606042427_M07_WorkSchedule.Designer.cs": [],
+    "Rmms.Infrastructure/Persistence/Migrations/20260606082819_M05_Attendance.cs": [
+      "M05_Attendance"
+    ],
+    "Rmms.Infrastructure/Persistence/Migrations/20260606082819_M05_Attendance.Designer.cs": [],
+    "Rmms.Infrastructure/Persistence/Migrations/20260606171533_M09_Approvals.cs": [
+      "M09_Approvals"
+    ],
+    "Rmms.Infrastructure/Persistence/Migrations/20260606171533_M09_Approvals.Designer.cs": [],
+    "Rmms.Infrastructure/Persistence/Migrations/20260607024229_M08_LeaveOt.cs": [
+      "M08_LeaveOt"
+    ],
+    "Rmms.Infrastructure/Persistence/Migrations/20260607024229_M08_LeaveOt.Designer.cs": [],
+    "Rmms.Infrastructure/Persistence/Migrations/20260608034404_M14_Notifications.cs": [
+      "M14_Notifications"
+    ],
+    "Rmms.Infrastructure/Persistence/Migrations/20260608034404_M14_Notifications.Designer.cs": [],
+    "Rmms.Infrastructure/Persistence/Migrations/20260614092038_M04_ProductMaster.cs": [
+      "M04_ProductMaster"
+    ],
+    "Rmms.Infrastructure/Persistence/Migrations/20260614092038_M04_ProductMaster.Designer.cs": [],
+    "Rmms.Infrastructure/Persistence/Migrations/20260614102719_M10_Forms.cs": [
+      "M10_Forms"
+    ],
+    "Rmms.Infrastructure/Persistence/Migrations/20260614102719_M10_Forms.Designer.cs": [],
+    "Rmms.Infrastructure/Persistence/Migrations/20260614104723_M10_FormFill.cs": [
+      "M10_FormFill"
+    ],
+    "Rmms.Infrastructure/Persistence/Migrations/20260614104723_M10_FormFill.Designer.cs": [],
+    "Rmms.Infrastructure/Persistence/Migrations/20260614125121_M11_VisitPlan.cs": [
+      "M11_VisitPlan"
+    ],
+    "Rmms.Infrastructure/Persistence/Migrations/20260614125121_M11_VisitPlan.Designer.cs": [],
+    "Rmms.Infrastructure/Persistence/Migrations/20260614164936_M13_Documents.cs": [
+      "M13_Documents"
+    ],
+    "Rmms.Infrastructure/Persistence/Migrations/20260614164936_M13_Documents.Designer.cs": [],
+    "Rmms.Infrastructure/Persistence/Migrations/20260614165737_M14_News.cs": [
+      "M14_News"
+    ],
+    "Rmms.Infrastructure/Persistence/Migrations/20260614165737_M14_News.Designer.cs": [],
+    "Rmms.Infrastructure/Persistence/Migrations/20260615022635_S17_AttendanceCheckInIndex.cs": [
+      "S17_AttendanceCheckInIndex"
+    ],
+    "Rmms.Infrastructure/Persistence/Migrations/20260615022635_S17_AttendanceCheckInIndex.Designer.cs": [],
+    "Rmms.Infrastructure/Persistence/Migrations/20260616081404_M10_FormSubmissionGps.cs": [
+      "M10_FormSubmissionGps"
+    ],
+    "Rmms.Infrastructure/Persistence/Migrations/20260616081404_M10_FormSubmissionGps.Designer.cs": [],
+    "Rmms.Infrastructure/Persistence/Migrations/20260616111821_M14_PushTokens.cs": [
+      "M14_PushTokens"
+    ],
+    "Rmms.Infrastructure/Persistence/Migrations/20260616111821_M14_PushTokens.Designer.cs": [],
+    "Rmms.Infrastructure/Persistence/Migrations/20260617151300_M01_SuperAdminFlag.cs": [
+      "M01_SuperAdminFlag"
+    ],
+    "Rmms.Infrastructure/Persistence/Migrations/20260617151300_M01_SuperAdminFlag.Designer.cs": [],
+    "Rmms.Infrastructure/Persistence/Migrations/AppDbContextModelSnapshot.cs": [],
+    "Rmms.Infrastructure/Reports/ClosedXmlReportExporter.cs": [
+      "ToXlsx"
+    ],
+    "Rmms.Infrastructure/Services/RedisLoginRateLimiter.cs": [
+      "RedisLoginRateLimiter",
+      "IsBlockedAsync",
+      "RegisterFailureAsync",
+      "ResetAsync",
+      "RedisLoginRateLimiter"
+    ],
+    "Rmms.Infrastructure/Services/SystemDateTimeProvider.cs": [
+      "UtcNow",
+      "SystemDateTimeProvider"
+    ],
+    "Rmms.Shared/Errors/ErrorCodes.cs": [
+      "ValidationFailed",
+      "NotFound",
+      "Conflict",
+      "InternalError",
+      "RateLimitExceeded",
+      "UpstreamUnavailable",
+      "InvalidCredentials",
+      "EmailNotVerified",
+      "EmailAlreadyRegistered",
+      "AccountInactive",
+      "AccountLocked",
+      "TokenExpired",
+      "TokenInvalid",
+      "RefreshTokenRevoked",
+      "RefreshTokenReused",
+      "DeviceNotAuthorized",
+      "PasswordTooWeak",
+      "PermissionDenied",
+      "StoreNotAssigned",
+      "FakeGpsDetected",
+      "FaceVerificationFailed",
+      "FaceNotEnrolled",
+      "AlreadyCheckedIn",
+      "NoOpenAttendance",
+      "CheckInTooEarly",
+      "ShiftNotFound",
+      "AttendanceNotFound",
+      "AttendanceNotReviewable",
+      "OfflineNotSupported",
+      "ApprovalNotPending",
+      "NotApprover",
+      "RejectReasonRequired",
+      "EmailTokenExpired",
+      "EmailTokenUsed",
+      "ScheduleNotFound",
+      "ScheduleNotEditable",
+      "ScheduleDateInPast",
+      "ShiftOverlap",
+      "ScheduleNotPending",
+      "CodeAlreadyExists",
+      "InvalidReference",
+      "InvalidAssignment",
+      "AssignmentExists",
+      "FormNotAssigned",
+      "FormExpired",
+      "FormDeadlinePassed",
+      "EditNotAllowed",
+      "IdempotencyKeyReused",
+      "ErrorCodes"
+    ],
+    "Rmms.Shared/Errors/ErrorEnvelope.cs": [],
+    "Rmms.Shared/Pagination/PaginatedResponse.cs": [],
+    "Rmms.Worker/Program.cs": [],
+    "Rmms.Worker/SystemCurrentUser.cs": [
+      "UserId",
+      "Email",
+      "Role",
+      "DeviceId",
+      "IsAuthenticated",
+      "SystemCurrentUser"
+    ]
+  },
+  "batches": [
+    {
+      "batchIndex": 1,
+      "files": [
+        {
+          "path": "Rmms.Api/.dockerignore",
+          "language": "unknown",
+          "sizeLines": 18,
+          "fileCategory": "infra"
+        },
+        {
+          "path": "Rmms.Api/Dockerfile",
+          "language": "dockerfile",
+          "sizeLines": 38,
+          "fileCategory": "infra"
+        }
+      ],
+      "batchImportData": {
+        "Rmms.Api/.dockerignore": [],
+        "Rmms.Api/Dockerfile": []
+      },
+      "neighborMap": {}
+    },
+    {
+      "batchIndex": 2,
+      "files": [
+        {
+          "path": "Rmms.Worker/Dockerfile",
+          "language": "dockerfile",
+          "sizeLines": 31,
+          "fileCategory": "infra"
+        }
+      ],
+      "batchImportData": {
+        "Rmms.Worker/Dockerfile": []
+      },
+      "neighborMap": {}
+    },
+    {
+      "batchIndex": 3,
+      "files": [
+        {
+          "path": "Rmms.Api/Rmms.Api.csproj",
+          "language": "csproj",
+          "sizeLines": 53,
+          "fileCategory": "config"
+        },
+        {
+          "path": "Rmms.Api/appsettings.Development.json",
+          "language": "json",
+          "sizeLines": 36,
+          "fileCategory": "config"
+        },
+        {
+          "path": "Rmms.Api/appsettings.json",
+          "language": "json",
+          "sizeLines": 92,
+          "fileCategory": "config"
+        }
+      ],
+      "batchImportData": {
+        "Rmms.Api/Rmms.Api.csproj": [],
+        "Rmms.Api/appsettings.Development.json": [],
+        "Rmms.Api/appsettings.json": []
+      },
+      "neighborMap": {}
+    },
+    {
+      "batchIndex": 4,
+      "files": [
+        {
+          "path": "Rmms.Worker/Rmms.Worker.csproj",
+          "language": "csproj",
+          "sizeLines": 25,
+          "fileCategory": "config"
+        },
+        {
+          "path": "Rmms.Worker/appsettings.Development.json",
+          "language": "json",
+          "sizeLines": 6,
+          "fileCategory": "config"
+        },
+        {
+          "path": "Rmms.Worker/appsettings.json",
+          "language": "json",
+          "sizeLines": 34,
+          "fileCategory": "config"
+        }
+      ],
+      "batchImportData": {
+        "Rmms.Worker/Rmms.Worker.csproj": [],
+        "Rmms.Worker/appsettings.Development.json": [],
+        "Rmms.Worker/appsettings.json": []
+      },
+      "neighborMap": {}
+    },
+    {
+      "batchIndex": 5,
+      "files": [
+        {
+          "path": "Rmms.Api/Authentication/AuthorizationPolicies.cs",
+          "language": "csharp",
+          "sizeLines": 58,
+          "fileCategory": "code"
+        },
+        {
+          "path": "Rmms.Api/Authentication/HttpContextClientContext.cs",
+          "language": "csharp",
+          "sizeLines": 61,
+          "fileCategory": "code"
+        },
+        {
+          "path": "Rmms.Api/Authentication/HttpContextCurrentUser.cs",
+          "language": "csharp",
+          "sizeLines": 33,
+          "fileCategory": "code"
+        },
+        {
+          "path": "Rmms.Api/Cli/ResetDataCommand.cs",
+          "language": "csharp",
+          "sizeLines": 91,
+          "fileCategory": "code"
+        },
+        {
+          "path": "Rmms.Api/Cli/SeedAdminCommand.cs",
+          "language": "csharp",
+          "sizeLines": 137,
+          "fileCategory": "code"
+        },
+        {
+          "path": "Rmms.Api/Cli/SeedDemoCommand.cs",
+          "language": "csharp",
+          "sizeLines": 187,
+          "fileCategory": "code"
+        },
+        {
+          "path": "Rmms.Api/Cli/SeedMasterCommand.cs",
+          "language": "csharp",
+          "sizeLines": 219,
+          "fileCategory": "code"
+        },
+        {
+          "path": "Rmms.Api/Cli/SeedSuperAdminCommand.cs",
+          "language": "csharp",
+          "sizeLines": 134,
+          "fileCategory": "code"
+        },
+        {
+          "path": "Rmms.Api/Common/InvariantFormParsing.cs",
+          "language": "csharp",
+          "sizeLines": 58,
+          "fileCategory": "code"
+        },
+        {
+          "path": "Rmms.Api/Common/ResultMapping.cs",
+          "language": "csharp",
+          "sizeLines": 55,
+          "fileCategory": "code"
+        },
+        {
+          "path": "Rmms.Api/Controllers/AdminApprovalsController.cs",
+          "language": "csharp",
+          "sizeLines": 43,
+          "fileCategory": "code"
+        },
+        {
+          "path": "Rmms.Api/Controllers/AdminAttendanceController.cs",
+          "language": "csharp",
+          "sizeLines": 50,
+          "fileCategory": "code"
+        },
+        {
+          "path": "Rmms.Api/Controllers/AdminAuditController.cs",
+          "language": "csharp",
+          "sizeLines": 36,
+          "fileCategory": "code"
+        },
+        {
+          "path": "Rmms.Api/Controllers/AdminDocumentsController.cs",
+          "language": "csharp",
+          "sizeLines": 77,
+          "fileCategory": "code"
+        },
+        {
+          "path": "Rmms.Api/Controllers/AdminFaceController.cs",
+          "language": "csharp",
+          "sizeLines": 67,
+          "fileCategory": "code"
+        },
+        {
+          "path": "Rmms.Api/Controllers/AdminFormsController.cs",
+          "language": "csharp",
+          "sizeLines": 77,
+          "fileCategory": "code"
+        },
+        {
+          "path": "Rmms.Api/Controllers/AdminNewsController.cs",
+          "language": "csharp",
+          "sizeLines": 74,
+          "fileCategory": "code"
+        },
+        {
+          "path": "Rmms.Api/Controllers/AdminProductsController.cs",
+          "language": "csharp",
+          "sizeLines": 62,
+          "fileCategory": "code"
+        },
+        {
+          "path": "Rmms.Api/Controllers/AdminRequestsController.cs",
+          "language": "csharp",
+          "sizeLines": 51,
+          "fileCategory": "code"
+        },
+        {
+          "path": "Rmms.Api/Controllers/AdminUsersController.cs",
+          "language": "csharp",
+          "sizeLines": 100,
+          "fileCategory": "code"
+        },
+        {
+          "path": "Rmms.Api/Controllers/AdminVisitPlansController.cs",
+          "language": "csharp",
+          "sizeLines": 29,
+          "fileCategory": "code"
+        },
+        {
+          "path": "Rmms.Api/Controllers/ApprovalsController.cs",
+          "language": "csharp",
+          "sizeLines": 92,
+          "fileCategory": "code"
+        },
+        {
+          "path": "Rmms.Api/Controllers/AreasController.cs",
+          "language": "csharp",
+          "sizeLines": 48,
+          "fileCategory": "code"
+        },
+        {
+          "path": "Rmms.Api/Controllers/AssignmentsController.cs",
+          "language": "csharp",
+          "sizeLines": 66,
+          "fileCategory": "code"
+        },
+        {
+          "path": "Rmms.Api/Controllers/AttendanceController.cs",
+          "language": "csharp",
+          "sizeLines": 117,
+          "fileCategory": "code"
+        }
+      ],
+      "batchImportData": {
+        "Rmms.Api/Authentication/AuthorizationPolicies.cs": [],
+        "Rmms.Api/Authentication/HttpContextClientContext.cs": [],
+        "Rmms.Api/Authentication/HttpContextCurrentUser.cs": [],
+        "Rmms.Api/Cli/ResetDataCommand.cs": [],
+        "Rmms.Api/Cli/SeedAdminCommand.cs": [],
+        "Rmms.Api/Cli/SeedDemoCommand.cs": [],
+        "Rmms.Api/Cli/SeedMasterCommand.cs": [],
+        "Rmms.Api/Cli/SeedSuperAdminCommand.cs": [],
+        "Rmms.Api/Common/InvariantFormParsing.cs": [],
+        "Rmms.Api/Common/ResultMapping.cs": [],
+        "Rmms.Api/Controllers/AdminApprovalsController.cs": [],
+        "Rmms.Api/Controllers/AdminAttendanceController.cs": [],
+        "Rmms.Api/Controllers/AdminAuditController.cs": [],
+        "Rmms.Api/Controllers/AdminDocumentsController.cs": [],
+        "Rmms.Api/Controllers/AdminFaceController.cs": [],
+        "Rmms.Api/Controllers/AdminFormsController.cs": [],
+        "Rmms.Api/Controllers/AdminNewsController.cs": [],
+        "Rmms.Api/Controllers/AdminProductsController.cs": [],
+        "Rmms.Api/Controllers/AdminRequestsController.cs": [],
+        "Rmms.Api/Controllers/AdminUsersController.cs": [],
+        "Rmms.Api/Controllers/AdminVisitPlansController.cs": [],
+        "Rmms.Api/Controllers/ApprovalsController.cs": [],
+        "Rmms.Api/Controllers/AreasController.cs": [],
+        "Rmms.Api/Controllers/AssignmentsController.cs": [],
+        "Rmms.Api/Controllers/AttendanceController.cs": []
+      },
+      "neighborMap": {}
+    },
+    {
+      "batchIndex": 6,
+      "files": [
+        {
+          "path": "Rmms.Api/Controllers/AuthController.cs",
+          "language": "csharp",
+          "sizeLines": 302,
+          "fileCategory": "code"
+        },
+        {
+          "path": "Rmms.Api/Controllers/CategoriesController.cs",
+          "language": "csharp",
+          "sizeLines": 48,
+          "fileCategory": "code"
+        },
+        {
+          "path": "Rmms.Api/Controllers/DashboardController.cs",
+          "language": "csharp",
+          "sizeLines": 40,
+          "fileCategory": "code"
+        },
+        {
+          "path": "Rmms.Api/Controllers/DevicesController.cs",
+          "language": "csharp",
+          "sizeLines": 117,
+          "fileCategory": "code"
+        },
+        {
+          "path": "Rmms.Api/Controllers/DocumentsController.cs",
+          "language": "csharp",
+          "sizeLines": 45,
+          "fileCategory": "code"
+        },
+        {
+          "path": "Rmms.Api/Controllers/FaceController.cs",
+          "language": "csharp",
+          "sizeLines": 88,
+          "fileCategory": "code"
+        },
+        {
+          "path": "Rmms.Api/Controllers/FormsController.cs",
+          "language": "csharp",
+          "sizeLines": 76,
+          "fileCategory": "code"
+        },
+        {
+          "path": "Rmms.Api/Controllers/HealthController.cs",
+          "language": "csharp",
+          "sizeLines": 22,
+          "fileCategory": "code"
+        },
+        {
+          "path": "Rmms.Api/Controllers/LeaveRequestsController.cs",
+          "language": "csharp",
+          "sizeLines": 60,
+          "fileCategory": "code"
+        },
+        {
+          "path": "Rmms.Api/Controllers/NewsController.cs",
+          "language": "csharp",
+          "sizeLines": 52,
+          "fileCategory": "code"
+        },
+        {
+          "path": "Rmms.Api/Controllers/NotificationsController.cs",
+          "language": "csharp",
+          "sizeLines": 66,
+          "fileCategory": "code"
+        },
+        {
+          "path": "Rmms.Api/Controllers/OrgController.cs",
+          "language": "csharp",
+          "sizeLines": 39,
+          "fileCategory": "code"
+        },
+        {
+          "path": "Rmms.Api/Controllers/OtRequestsController.cs",
+          "language": "csharp",
+          "sizeLines": 44,
+          "fileCategory": "code"
+        },
+        {
+          "path": "Rmms.Api/Controllers/ProductsController.cs",
+          "language": "csharp",
+          "sizeLines": 34,
+          "fileCategory": "code"
+        },
+        {
+          "path": "Rmms.Api/Controllers/ReportsController.cs",
+          "language": "csharp",
+          "sizeLines": 71,
+          "fileCategory": "code"
+        },
+        {
+          "path": "Rmms.Api/Controllers/ScheduleController.cs",
+          "language": "csharp",
+          "sizeLines": 158,
+          "fileCategory": "code"
+        },
+        {
+          "path": "Rmms.Api/Controllers/StoresController.cs",
+          "language": "csharp",
+          "sizeLines": 64,
+          "fileCategory": "code"
+        },
+        {
+          "path": "Rmms.Api/Controllers/TeamMonitoringController.cs",
+          "language": "csharp",
+          "sizeLines": 40,
+          "fileCategory": "code"
+        },
+        {
+          "path": "Rmms.Api/Controllers/UsersController.cs",
+          "language": "csharp",
+          "sizeLines": 60,
+          "fileCategory": "code"
+        },
+        {
+          "path": "Rmms.Api/Controllers/VisitPlansController.cs",
+          "language": "csharp",
+          "sizeLines": 74,
+          "fileCategory": "code"
+        },
+        {
+          "path": "Rmms.Api/Dtos/Admin/CreateUserRequest.cs",
+          "language": "csharp",
+          "sizeLines": 10,
+          "fileCategory": "code"
+        },
+        {
+          "path": "Rmms.Api/Dtos/Admin/UpdateUserRequest.cs",
+          "language": "csharp",
+          "sizeLines": 13,
+          "fileCategory": "code"
+        },
+        {
+          "path": "Rmms.Api/Dtos/Approvals/ApprovalRequests.cs",
+          "language": "csharp",
+          "sizeLines": 10,
+          "fileCategory": "code"
+        },
+        {
+          "path": "Rmms.Api/Dtos/Attendance/AttendanceRequests.cs",
+          "language": "csharp",
+          "sizeLines": 35,
+          "fileCategory": "code"
+        },
+        {
+          "path": "Rmms.Api/Dtos/Auth/ForgotPasswordRequest.cs",
+          "language": "csharp",
+          "sizeLines": 6,
+          "fileCategory": "code"
+        }
+      ],
+      "batchImportData": {
+        "Rmms.Api/Controllers/AuthController.cs": [],
+        "Rmms.Api/Controllers/CategoriesController.cs": [],
+        "Rmms.Api/Controllers/DashboardController.cs": [],
+        "Rmms.Api/Controllers/DevicesController.cs": [],
+        "Rmms.Api/Controllers/DocumentsController.cs": [],
+        "Rmms.Api/Controllers/FaceController.cs": [],
+        "Rmms.Api/Controllers/FormsController.cs": [],
+        "Rmms.Api/Controllers/HealthController.cs": [],
+        "Rmms.Api/Controllers/LeaveRequestsController.cs": [],
+        "Rmms.Api/Controllers/NewsController.cs": [],
+        "Rmms.Api/Controllers/NotificationsController.cs": [],
+        "Rmms.Api/Controllers/OrgController.cs": [],
+        "Rmms.Api/Controllers/OtRequestsController.cs": [],
+        "Rmms.Api/Controllers/ProductsController.cs": [],
+        "Rmms.Api/Controllers/ReportsController.cs": [],
+        "Rmms.Api/Controllers/ScheduleController.cs": [],
+        "Rmms.Api/Controllers/StoresController.cs": [],
+        "Rmms.Api/Controllers/TeamMonitoringController.cs": [],
+        "Rmms.Api/Controllers/UsersController.cs": [],
+        "Rmms.Api/Controllers/VisitPlansController.cs": [],
+        "Rmms.Api/Dtos/Admin/CreateUserRequest.cs": [],
+        "Rmms.Api/Dtos/Admin/UpdateUserRequest.cs": [],
+        "Rmms.Api/Dtos/Approvals/ApprovalRequests.cs": [],
+        "Rmms.Api/Dtos/Attendance/AttendanceRequests.cs": [],
+        "Rmms.Api/Dtos/Auth/ForgotPasswordRequest.cs": []
+      },
+      "neighborMap": {}
+    },
+    {
+      "batchIndex": 7,
+      "files": [
+        {
+          "path": "Rmms.Api/Dtos/Auth/LoginRequest.cs",
+          "language": "csharp",
+          "sizeLines": 23,
+          "fileCategory": "code"
+        },
+        {
+          "path": "Rmms.Api/Dtos/Auth/LogoutRequest.cs",
+          "language": "csharp",
+          "sizeLines": 6,
+          "fileCategory": "code"
+        },
+        {
+          "path": "Rmms.Api/Dtos/Auth/RefreshTokenRequest.cs",
+          "language": "csharp",
+          "sizeLines": 6,
+          "fileCategory": "code"
+        },
+        {
+          "path": "Rmms.Api/Dtos/Auth/RegisterRequest.cs",
+          "language": "csharp",
+          "sizeLines": 19,
+          "fileCategory": "code"
+        },
+        {
+          "path": "Rmms.Api/Dtos/Auth/ResetPasswordRequest.cs",
+          "language": "csharp",
+          "sizeLines": 7,
+          "fileCategory": "code"
+        },
+        {
+          "path": "Rmms.Api/Dtos/Auth/VerifyEmailRequest.cs",
+          "language": "csharp",
+          "sizeLines": 13,
+          "fileCategory": "code"
+        },
+        {
+          "path": "Rmms.Api/Dtos/Devices/RejectDeviceRequest.cs",
+          "language": "csharp",
+          "sizeLines": 6,
+          "fileCategory": "code"
+        },
+        {
+          "path": "Rmms.Api/Dtos/Documents/DocumentRequests.cs",
+          "language": "csharp",
+          "sizeLines": 4,
+          "fileCategory": "code"
+        },
+        {
+          "path": "Rmms.Api/Dtos/Face/FaceRequests.cs",
+          "language": "csharp",
+          "sizeLines": 15,
+          "fileCategory": "code"
+        },
+        {
+          "path": "Rmms.Api/Dtos/Forms/FormRequests.cs",
+          "language": "csharp",
+          "sizeLines": 41,
+          "fileCategory": "code"
+        },
+        {
+          "path": "Rmms.Api/Dtos/LeaveOt/LeaveOtRequests.cs",
+          "language": "csharp",
+          "sizeLines": 11,
+          "fileCategory": "code"
+        },
+        {
+          "path": "Rmms.Api/Dtos/News/NewsRequests.cs",
+          "language": "csharp",
+          "sizeLines": 12,
+          "fileCategory": "code"
+        },
+        {
+          "path": "Rmms.Api/Dtos/Organization/OrganizationRequests.cs",
+          "language": "csharp",
+          "sizeLines": 24,
+          "fileCategory": "code"
+        },
+        {
+          "path": "Rmms.Api/Dtos/Scheduling/ScheduleRequests.cs",
+          "language": "csharp",
+          "sizeLines": 16,
+          "fileCategory": "code"
+        },
+        {
+          "path": "Rmms.Api/Dtos/VisitPlans/VisitPlanRequests.cs",
+          "language": "csharp",
+          "sizeLines": 19,
+          "fileCategory": "code"
+        },
+        {
+          "path": "Rmms.Api/Hubs/HubUserIdProvider.cs",
+          "language": "csharp",
+          "sizeLines": 16,
+          "fileCategory": "code"
+        },
+        {
+          "path": "Rmms.Api/Hubs/NotificationsHub.cs",
+          "language": "csharp",
+          "sizeLines": 15,
+          "fileCategory": "code"
+        },
+        {
+          "path": "Rmms.Api/Hubs/SignalRRealtimeNotifier.cs",
+          "language": "csharp",
+          "sizeLines": 19,
+          "fileCategory": "code"
+        },
+        {
+          "path": "Rmms.Api/Localization/ErrorLocalizationFilter.cs",
+          "language": "csharp",
+          "sizeLines": 39,
+          "fileCategory": "code"
+        },
+        {
+          "path": "Rmms.Api/Localization/ErrorMessageCatalog.cs",
+          "language": "csharp",
+          "sizeLines": 79,
+          "fileCategory": "code"
+        },
+        {
+          "path": "Rmms.Api/Logging/RequestEnrichmentMiddleware.cs",
+          "language": "csharp",
+          "sizeLines": 50,
+          "fileCategory": "code"
+        },
+        {
+          "path": "Rmms.Api/Middlewares/ExceptionHandlingMiddleware.cs",
+          "language": "csharp",
+          "sizeLines": 83,
+          "fileCategory": "code"
+        },
+        {
+          "path": "Rmms.Api/Middlewares/IdempotencyMiddleware.cs",
+          "language": "csharp",
+          "sizeLines": 219,
+          "fileCategory": "code"
+        },
+        {
+          "path": "Rmms.Api/Program.cs",
+          "language": "csharp",
+          "sizeLines": 241,
+          "fileCategory": "code"
+        },
+        {
+          "path": "Rmms.Api/Properties/launchSettings.json",
+          "language": "json",
+          "sizeLines": 22,
+          "fileCategory": "config"
+        }
+      ],
+      "batchImportData": {
+        "Rmms.Api/Dtos/Auth/LoginRequest.cs": [],
+        "Rmms.Api/Dtos/Auth/LogoutRequest.cs": [],
+        "Rmms.Api/Dtos/Auth/RefreshTokenRequest.cs": [],
+        "Rmms.Api/Dtos/Auth/RegisterRequest.cs": [],
+        "Rmms.Api/Dtos/Auth/ResetPasswordRequest.cs": [],
+        "Rmms.Api/Dtos/Auth/VerifyEmailRequest.cs": [],
+        "Rmms.Api/Dtos/Devices/RejectDeviceRequest.cs": [],
+        "Rmms.Api/Dtos/Documents/DocumentRequests.cs": [],
+        "Rmms.Api/Dtos/Face/FaceRequests.cs": [],
+        "Rmms.Api/Dtos/Forms/FormRequests.cs": [],
+        "Rmms.Api/Dtos/LeaveOt/LeaveOtRequests.cs": [],
+        "Rmms.Api/Dtos/News/NewsRequests.cs": [],
+        "Rmms.Api/Dtos/Organization/OrganizationRequests.cs": [],
+        "Rmms.Api/Dtos/Scheduling/ScheduleRequests.cs": [],
+        "Rmms.Api/Dtos/VisitPlans/VisitPlanRequests.cs": [],
+        "Rmms.Api/Hubs/HubUserIdProvider.cs": [],
+        "Rmms.Api/Hubs/NotificationsHub.cs": [],
+        "Rmms.Api/Hubs/SignalRRealtimeNotifier.cs": [],
+        "Rmms.Api/Localization/ErrorLocalizationFilter.cs": [],
+        "Rmms.Api/Localization/ErrorMessageCatalog.cs": [],
+        "Rmms.Api/Logging/RequestEnrichmentMiddleware.cs": [],
+        "Rmms.Api/Middlewares/ExceptionHandlingMiddleware.cs": [],
+        "Rmms.Api/Middlewares/IdempotencyMiddleware.cs": [],
+        "Rmms.Api/Program.cs": [],
+        "Rmms.Api/Properties/launchSettings.json": []
+      },
+      "neighborMap": {}
+    },
+    {
+      "batchIndex": 8,
+      "files": [
+        {
+          "path": "Rmms.Application/Admin/Users/AdminResetPassword/AdminResetPasswordCommand.cs",
+          "language": "csharp",
+          "sizeLines": 11,
+          "fileCategory": "code"
+        },
+        {
+          "path": "Rmms.Application/Admin/Users/AdminResetPassword/AdminResetPasswordCommandHandler.cs",
+          "language": "csharp",
+          "sizeLines": 79,
+          "fileCategory": "code"
+        },
+        {
+          "path": "Rmms.Application/Admin/Users/AdminUserDto.cs",
+          "language": "csharp",
+          "sizeLines": 17,
+          "fileCategory": "code"
+        },
+        {
+          "path": "Rmms.Application/Admin/Users/CreateAdminUser/CreateAdminUserCommand.cs",
+          "language": "csharp",
+          "sizeLines": 18,
+          "fileCategory": "code"
+        },
+        {
+          "path": "Rmms.Application/Admin/Users/CreateAdminUser/CreateAdminUserCommandHandler.cs",
+          "language": "csharp",
+          "sizeLines": 136,
+          "fileCategory": "code"
+        },
+        {
+          "path": "Rmms.Application/Admin/Users/CreateAdminUser/CreateAdminUserCommandValidator.cs",
+          "language": "csharp",
+          "sizeLines": 33,
+          "fileCategory": "code"
+        },
+        {
+          "path": "Rmms.Application/Admin/Users/GetUsers/GetUsersQuery.cs",
+          "language": "csharp",
+          "sizeLines": 17,
+          "fileCategory": "code"
+        },
+        {
+          "path": "Rmms.Application/Admin/Users/GetUsers/GetUsersQueryHandler.cs",
+          "language": "csharp",
+          "sizeLines": 110,
+          "fileCategory": "code"
+        },
+        {
+          "path": "Rmms.Application/Admin/Users/UpdateUser/UpdateUserCommand.cs",
+          "language": "csharp",
+          "sizeLines": 19,
+          "fileCategory": "code"
+        },
+        {
+          "path": "Rmms.Application/Admin/Users/UpdateUser/UpdateUserCommandHandler.cs",
+          "language": "csharp",
+          "sizeLines": 134,
+          "fileCategory": "code"
+        },
+        {
+          "path": "Rmms.Application/Admin/Users/UpdateUser/UpdateUserCommandValidator.cs",
+          "language": "csharp",
+          "sizeLines": 25,
+          "fileCategory": "code"
+        },
+        {
+          "path": "Rmms.Application/Approvals/ApprovalDtos.cs",
+          "language": "csharp",
+          "sizeLines": 53,
+          "fileCategory": "code"
+        },
+        {
+          "path": "Rmms.Application/Approvals/DecideApproval.cs",
+          "language": "csharp",
+          "sizeLines": 95,
+          "fileCategory": "code"
+        },
+        {
+          "path": "Rmms.Application/Approvals/EmailAction.cs",
+          "language": "csharp",
+          "sizeLines": 137,
+          "fileCategory": "code"
+        },
+        {
+          "path": "Rmms.Application/Approvals/GetApprovals.cs",
+          "language": "csharp",
+          "sizeLines": 105,
+          "fileCategory": "code"
+        },
+        {
+          "path": "Rmms.Application/Approvals/OverrideApproval.cs",
+          "language": "csharp",
+          "sizeLines": 47,
+          "fileCategory": "code"
+        },
+        {
+          "path": "Rmms.Application/Approvals/ScheduleApprovalSync.cs",
+          "language": "csharp",
+          "sizeLines": 150,
+          "fileCategory": "code"
+        },
+        {
+          "path": "Rmms.Application/Attendance/AdminListAttendance.cs",
+          "language": "csharp",
+          "sizeLines": 80,
+          "fileCategory": "code"
+        },
+        {
+          "path": "Rmms.Application/Attendance/AttendanceDtos.cs",
+          "language": "csharp",
+          "sizeLines": 109,
+          "fileCategory": "code"
+        },
+        {
+          "path": "Rmms.Application/Attendance/AttendanceNotifications.cs",
+          "language": "csharp",
+          "sizeLines": 35,
+          "fileCategory": "code"
+        },
+        {
+          "path": "Rmms.Application/Attendance/AttendanceTime.cs",
+          "language": "csharp",
+          "sizeLines": 38,
+          "fileCategory": "code"
+        },
+        {
+          "path": "Rmms.Application/Attendance/CheckIn.cs",
+          "language": "csharp",
+          "sizeLines": 229,
+          "fileCategory": "code"
+        },
+        {
+          "path": "Rmms.Application/Attendance/CheckOut.cs",
+          "language": "csharp",
+          "sizeLines": 122,
+          "fileCategory": "code"
+        },
+        {
+          "path": "Rmms.Application/Attendance/GetAttendance.cs",
+          "language": "csharp",
+          "sizeLines": 211,
+          "fileCategory": "code"
+        },
+        {
+          "path": "Rmms.Application/Attendance/ReviewAttendance.cs",
+          "language": "csharp",
+          "sizeLines": 105,
+          "fileCategory": "code"
+        }
+      ],
+      "batchImportData": {
+        "Rmms.Application/Admin/Users/AdminResetPassword/AdminResetPasswordCommand.cs": [],
+        "Rmms.Application/Admin/Users/AdminResetPassword/AdminResetPasswordCommandHandler.cs": [],
+        "Rmms.Application/Admin/Users/AdminUserDto.cs": [],
+        "Rmms.Application/Admin/Users/CreateAdminUser/CreateAdminUserCommand.cs": [],
+        "Rmms.Application/Admin/Users/CreateAdminUser/CreateAdminUserCommandHandler.cs": [],
+        "Rmms.Application/Admin/Users/CreateAdminUser/CreateAdminUserCommandValidator.cs": [],
+        "Rmms.Application/Admin/Users/GetUsers/GetUsersQuery.cs": [],
+        "Rmms.Application/Admin/Users/GetUsers/GetUsersQueryHandler.cs": [],
+        "Rmms.Application/Admin/Users/UpdateUser/UpdateUserCommand.cs": [],
+        "Rmms.Application/Admin/Users/UpdateUser/UpdateUserCommandHandler.cs": [],
+        "Rmms.Application/Admin/Users/UpdateUser/UpdateUserCommandValidator.cs": [],
+        "Rmms.Application/Approvals/ApprovalDtos.cs": [],
+        "Rmms.Application/Approvals/DecideApproval.cs": [],
+        "Rmms.Application/Approvals/EmailAction.cs": [],
+        "Rmms.Application/Approvals/GetApprovals.cs": [],
+        "Rmms.Application/Approvals/OverrideApproval.cs": [],
+        "Rmms.Application/Approvals/ScheduleApprovalSync.cs": [],
+        "Rmms.Application/Attendance/AdminListAttendance.cs": [],
+        "Rmms.Application/Attendance/AttendanceDtos.cs": [],
+        "Rmms.Application/Attendance/AttendanceNotifications.cs": [],
+        "Rmms.Application/Attendance/AttendanceTime.cs": [],
+        "Rmms.Application/Attendance/CheckIn.cs": [],
+        "Rmms.Application/Attendance/CheckOut.cs": [],
+        "Rmms.Application/Attendance/GetAttendance.cs": [],
+        "Rmms.Application/Attendance/ReviewAttendance.cs": []
+      },
+      "neighborMap": {}
+    },
+    {
+      "batchIndex": 9,
+      "files": [
+        {
+          "path": "Rmms.Application/Audit/GetAuditLogs.cs",
+          "language": "csharp",
+          "sizeLines": 65,
+          "fileCategory": "code"
+        },
+        {
+          "path": "Rmms.Application/Auth/ForgotPassword/ForgotPasswordCommand.cs",
+          "language": "csharp",
+          "sizeLines": 10,
+          "fileCategory": "code"
+        },
+        {
+          "path": "Rmms.Application/Auth/ForgotPassword/ForgotPasswordCommandHandler.cs",
+          "language": "csharp",
+          "sizeLines": 105,
+          "fileCategory": "code"
+        },
+        {
+          "path": "Rmms.Application/Auth/ForgotPassword/ForgotPasswordCommandValidator.cs",
+          "language": "csharp",
+          "sizeLines": 14,
+          "fileCategory": "code"
+        },
+        {
+          "path": "Rmms.Application/Auth/Login/LoginCommand.cs",
+          "language": "csharp",
+          "sizeLines": 38,
+          "fileCategory": "code"
+        },
+        {
+          "path": "Rmms.Application/Auth/Login/LoginCommandHandler.cs",
+          "language": "csharp",
+          "sizeLines": 292,
+          "fileCategory": "code"
+        },
+        {
+          "path": "Rmms.Application/Auth/Login/LoginCommandValidator.cs",
+          "language": "csharp",
+          "sizeLines": 41,
+          "fileCategory": "code"
+        },
+        {
+          "path": "Rmms.Application/Auth/Login/LoginResponse.cs",
+          "language": "csharp",
+          "sizeLines": 23,
+          "fileCategory": "code"
+        },
+        {
+          "path": "Rmms.Application/Auth/Logout/LogoutCommand.cs",
+          "language": "csharp",
+          "sizeLines": 10,
+          "fileCategory": "code"
+        },
+        {
+          "path": "Rmms.Application/Auth/Logout/LogoutCommandHandler.cs",
+          "language": "csharp",
+          "sizeLines": 57,
+          "fileCategory": "code"
+        },
+        {
+          "path": "Rmms.Application/Auth/Logout/LogoutCommandValidator.cs",
+          "language": "csharp",
+          "sizeLines": 13,
+          "fileCategory": "code"
+        },
+        {
+          "path": "Rmms.Application/Auth/Me/GetDeviceStatusQuery.cs",
+          "language": "csharp",
+          "sizeLines": 23,
+          "fileCategory": "code"
+        },
+        {
+          "path": "Rmms.Application/Auth/Me/GetDeviceStatusQueryHandler.cs",
+          "language": "csharp",
+          "sizeLines": 36,
+          "fileCategory": "code"
+        },
+        {
+          "path": "Rmms.Application/Auth/Me/GetMeQuery.cs",
+          "language": "csharp",
+          "sizeLines": 11,
+          "fileCategory": "code"
+        },
+        {
+          "path": "Rmms.Application/Auth/Me/GetMeQueryHandler.cs",
+          "language": "csharp",
+          "sizeLines": 59,
+          "fileCategory": "code"
+        },
+        {
+          "path": "Rmms.Application/Auth/Me/MeDto.cs",
+          "language": "csharp",
+          "sizeLines": 25,
+          "fileCategory": "code"
+        },
+        {
+          "path": "Rmms.Application/Auth/Refresh/RefreshTokenCommand.cs",
+          "language": "csharp",
+          "sizeLines": 12,
+          "fileCategory": "code"
+        },
+        {
+          "path": "Rmms.Application/Auth/Refresh/RefreshTokenCommandHandler.cs",
+          "language": "csharp",
+          "sizeLines": 153,
+          "fileCategory": "code"
+        },
+        {
+          "path": "Rmms.Application/Auth/Refresh/RefreshTokenCommandValidator.cs",
+          "language": "csharp",
+          "sizeLines": 14,
+          "fileCategory": "code"
+        },
+        {
+          "path": "Rmms.Application/Auth/Refresh/RefreshTokenResponse.cs",
+          "language": "csharp",
+          "sizeLines": 7,
+          "fileCategory": "code"
+        },
+        {
+          "path": "Rmms.Application/Auth/Register/RegisterUserCommand.cs",
+          "language": "csharp",
+          "sizeLines": 16,
+          "fileCategory": "code"
+        },
+        {
+          "path": "Rmms.Application/Auth/Register/RegisterUserCommandHandler.cs",
+          "language": "csharp",
+          "sizeLines": 118,
+          "fileCategory": "code"
+        },
+        {
+          "path": "Rmms.Application/Auth/Register/RegisterUserCommandValidator.cs",
+          "language": "csharp",
+          "sizeLines": 48,
+          "fileCategory": "code"
+        },
+        {
+          "path": "Rmms.Application/Auth/Register/RegisterUserResponse.cs",
+          "language": "csharp",
+          "sizeLines": 10,
+          "fileCategory": "code"
+        },
+        {
+          "path": "Rmms.Application/Auth/ResetPassword/ResetPasswordCommand.cs",
+          "language": "csharp",
+          "sizeLines": 11,
+          "fileCategory": "code"
+        }
+      ],
+      "batchImportData": {
+        "Rmms.Application/Audit/GetAuditLogs.cs": [],
+        "Rmms.Application/Auth/ForgotPassword/ForgotPasswordCommand.cs": [],
+        "Rmms.Application/Auth/ForgotPassword/ForgotPasswordCommandHandler.cs": [],
+        "Rmms.Application/Auth/ForgotPassword/ForgotPasswordCommandValidator.cs": [],
+        "Rmms.Application/Auth/Login/LoginCommand.cs": [],
+        "Rmms.Application/Auth/Login/LoginCommandHandler.cs": [],
+        "Rmms.Application/Auth/Login/LoginCommandValidator.cs": [],
+        "Rmms.Application/Auth/Login/LoginResponse.cs": [],
+        "Rmms.Application/Auth/Logout/LogoutCommand.cs": [],
+        "Rmms.Application/Auth/Logout/LogoutCommandHandler.cs": [],
+        "Rmms.Application/Auth/Logout/LogoutCommandValidator.cs": [],
+        "Rmms.Application/Auth/Me/GetDeviceStatusQuery.cs": [],
+        "Rmms.Application/Auth/Me/GetDeviceStatusQueryHandler.cs": [],
+        "Rmms.Application/Auth/Me/GetMeQuery.cs": [],
+        "Rmms.Application/Auth/Me/GetMeQueryHandler.cs": [],
+        "Rmms.Application/Auth/Me/MeDto.cs": [],
+        "Rmms.Application/Auth/Refresh/RefreshTokenCommand.cs": [],
+        "Rmms.Application/Auth/Refresh/RefreshTokenCommandHandler.cs": [],
+        "Rmms.Application/Auth/Refresh/RefreshTokenCommandValidator.cs": [],
+        "Rmms.Application/Auth/Refresh/RefreshTokenResponse.cs": [],
+        "Rmms.Application/Auth/Register/RegisterUserCommand.cs": [],
+        "Rmms.Application/Auth/Register/RegisterUserCommandHandler.cs": [],
+        "Rmms.Application/Auth/Register/RegisterUserCommandValidator.cs": [],
+        "Rmms.Application/Auth/Register/RegisterUserResponse.cs": [],
+        "Rmms.Application/Auth/ResetPassword/ResetPasswordCommand.cs": []
+      },
+      "neighborMap": {}
+    },
+    {
+      "batchIndex": 10,
+      "files": [
+        {
+          "path": "Rmms.Application/Auth/ResetPassword/ResetPasswordCommandHandler.cs",
+          "language": "csharp",
+          "sizeLines": 96,
+          "fileCategory": "code"
+        },
+        {
+          "path": "Rmms.Application/Auth/ResetPassword/ResetPasswordCommandValidator.cs",
+          "language": "csharp",
+          "sizeLines": 22,
+          "fileCategory": "code"
+        },
+        {
+          "path": "Rmms.Application/Auth/VerifyEmail/VerifyEmailCommand.cs",
+          "language": "csharp",
+          "sizeLines": 12,
+          "fileCategory": "code"
+        },
+        {
+          "path": "Rmms.Application/Auth/VerifyEmail/VerifyEmailCommandHandler.cs",
+          "language": "csharp",
+          "sizeLines": 96,
+          "fileCategory": "code"
+        },
+        {
+          "path": "Rmms.Application/Auth/VerifyEmail/VerifyEmailCommandValidator.cs",
+          "language": "csharp",
+          "sizeLines": 14,
+          "fileCategory": "code"
+        },
+        {
+          "path": "Rmms.Application/Auth/VerifyEmail/VerifyEmailResponse.cs",
+          "language": "csharp",
+          "sizeLines": 6,
+          "fileCategory": "code"
+        },
+        {
+          "path": "Rmms.Application/Common/Abstractions/IApprovalService.cs",
+          "language": "csharp",
+          "sizeLines": 20,
+          "fileCategory": "code"
+        },
+        {
+          "path": "Rmms.Application/Common/Abstractions/IApprovalTokenService.cs",
+          "language": "csharp",
+          "sizeLines": 26,
+          "fileCategory": "code"
+        },
+        {
+          "path": "Rmms.Application/Common/Abstractions/IAttendancePhotoRetentionService.cs",
+          "language": "csharp",
+          "sizeLines": 13,
+          "fileCategory": "code"
+        },
+        {
+          "path": "Rmms.Application/Common/Abstractions/IAttendancePhotoStorage.cs",
+          "language": "csharp",
+          "sizeLines": 25,
+          "fileCategory": "code"
+        },
+        {
+          "path": "Rmms.Application/Common/Abstractions/IAuditLogger.cs",
+          "language": "csharp",
+          "sizeLines": 19,
+          "fileCategory": "code"
+        },
+        {
+          "path": "Rmms.Application/Common/Abstractions/IClientContext.cs",
+          "language": "csharp",
+          "sizeLines": 22,
+          "fileCategory": "code"
+        },
+        {
+          "path": "Rmms.Application/Common/Abstractions/IEmailSender.cs",
+          "language": "csharp",
+          "sizeLines": 25,
+          "fileCategory": "code"
+        },
+        {
+          "path": "Rmms.Application/Common/Abstractions/IFaceClient.cs",
+          "language": "csharp",
+          "sizeLines": 27,
+          "fileCategory": "code"
+        },
+        {
+          "path": "Rmms.Application/Common/Abstractions/IFaceVerificationService.cs",
+          "language": "csharp",
+          "sizeLines": 17,
+          "fileCategory": "code"
+        },
+        {
+          "path": "Rmms.Application/Common/Abstractions/IJwtTokenService.cs",
+          "language": "csharp",
+          "sizeLines": 19,
+          "fileCategory": "code"
+        },
+        {
+          "path": "Rmms.Application/Common/Abstractions/ILoginRateLimiter.cs",
+          "language": "csharp",
+          "sizeLines": 22,
+          "fileCategory": "code"
+        },
+        {
+          "path": "Rmms.Application/Common/Abstractions/INotificationService.cs",
+          "language": "csharp",
+          "sizeLines": 35,
+          "fileCategory": "code"
+        },
+        {
+          "path": "Rmms.Application/Common/Abstractions/IPasswordHasher.cs",
+          "language": "csharp",
+          "sizeLines": 20,
+          "fileCategory": "code"
+        },
+        {
+          "path": "Rmms.Application/Common/Abstractions/IPushSender.cs",
+          "language": "csharp",
+          "sizeLines": 24,
+          "fileCategory": "code"
+        },
+        {
+          "path": "Rmms.Application/Common/Abstractions/IRealtimeNotifier.cs",
+          "language": "csharp",
+          "sizeLines": 17,
+          "fileCategory": "code"
+        },
+        {
+          "path": "Rmms.Application/Common/Abstractions/IRefreshTokenGenerator.cs",
+          "language": "csharp",
+          "sizeLines": 16,
+          "fileCategory": "code"
+        },
+        {
+          "path": "Rmms.Application/Common/Abstractions/IReportExporter.cs",
+          "language": "csharp",
+          "sizeLines": 19,
+          "fileCategory": "code"
+        },
+        {
+          "path": "Rmms.Application/Common/Abstractions/ITokenCleanupService.cs",
+          "language": "csharp",
+          "sizeLines": 25,
+          "fileCategory": "code"
+        },
+        {
+          "path": "Rmms.Application/Common/Behaviors/LoggingBehavior.cs",
+          "language": "csharp",
+          "sizeLines": 45,
+          "fileCategory": "code"
+        }
+      ],
+      "batchImportData": {
+        "Rmms.Application/Auth/ResetPassword/ResetPasswordCommandHandler.cs": [],
+        "Rmms.Application/Auth/ResetPassword/ResetPasswordCommandValidator.cs": [],
+        "Rmms.Application/Auth/VerifyEmail/VerifyEmailCommand.cs": [],
+        "Rmms.Application/Auth/VerifyEmail/VerifyEmailCommandHandler.cs": [],
+        "Rmms.Application/Auth/VerifyEmail/VerifyEmailCommandValidator.cs": [],
+        "Rmms.Application/Auth/VerifyEmail/VerifyEmailResponse.cs": [],
+        "Rmms.Application/Common/Abstractions/IApprovalService.cs": [],
+        "Rmms.Application/Common/Abstractions/IApprovalTokenService.cs": [],
+        "Rmms.Application/Common/Abstractions/IAttendancePhotoRetentionService.cs": [],
+        "Rmms.Application/Common/Abstractions/IAttendancePhotoStorage.cs": [],
+        "Rmms.Application/Common/Abstractions/IAuditLogger.cs": [],
+        "Rmms.Application/Common/Abstractions/IClientContext.cs": [],
+        "Rmms.Application/Common/Abstractions/IEmailSender.cs": [],
+        "Rmms.Application/Common/Abstractions/IFaceClient.cs": [],
+        "Rmms.Application/Common/Abstractions/IFaceVerificationService.cs": [],
+        "Rmms.Application/Common/Abstractions/IJwtTokenService.cs": [],
+        "Rmms.Application/Common/Abstractions/ILoginRateLimiter.cs": [],
+        "Rmms.Application/Common/Abstractions/INotificationService.cs": [],
+        "Rmms.Application/Common/Abstractions/IPasswordHasher.cs": [],
+        "Rmms.Application/Common/Abstractions/IPushSender.cs": [],
+        "Rmms.Application/Common/Abstractions/IRealtimeNotifier.cs": [],
+        "Rmms.Application/Common/Abstractions/IRefreshTokenGenerator.cs": [],
+        "Rmms.Application/Common/Abstractions/IReportExporter.cs": [],
+        "Rmms.Application/Common/Abstractions/ITokenCleanupService.cs": [],
+        "Rmms.Application/Common/Behaviors/LoggingBehavior.cs": []
+      },
+      "neighborMap": {}
+    },
+    {
+      "batchIndex": 11,
+      "files": [
+        {
+          "path": "Rmms.Application/Common/Behaviors/ValidationBehavior.cs",
+          "language": "csharp",
+          "sizeLines": 34,
+          "fileCategory": "code"
+        },
+        {
+          "path": "Rmms.Application/Common/EnumFormatting.cs",
+          "language": "csharp",
+          "sizeLines": 34,
+          "fileCategory": "code"
+        },
+        {
+          "path": "Rmms.Application/Common/Interfaces/IAppDbContext.cs",
+          "language": "csharp",
+          "sizeLines": 85,
+          "fileCategory": "code"
+        },
+        {
+          "path": "Rmms.Application/Common/Interfaces/ICurrentUser.cs",
+          "language": "csharp",
+          "sizeLines": 16,
+          "fileCategory": "code"
+        },
+        {
+          "path": "Rmms.Application/Common/Interfaces/IDateTimeProvider.cs",
+          "language": "csharp",
+          "sizeLines": 10,
+          "fileCategory": "code"
+        },
+        {
+          "path": "Rmms.Application/Common/Options/ApprovalOptions.cs",
+          "language": "csharp",
+          "sizeLines": 21,
+          "fileCategory": "code"
+        },
+        {
+          "path": "Rmms.Application/Common/Options/CompreFaceOptions.cs",
+          "language": "csharp",
+          "sizeLines": 23,
+          "fileCategory": "code"
+        },
+        {
+          "path": "Rmms.Application/Common/Options/JwtOptions.cs",
+          "language": "csharp",
+          "sizeLines": 25,
+          "fileCategory": "code"
+        },
+        {
+          "path": "Rmms.Application/Common/Options/MinioOptions.cs",
+          "language": "csharp",
+          "sizeLines": 32,
+          "fileCategory": "code"
+        },
+        {
+          "path": "Rmms.Application/Common/Security/OpaqueToken.cs",
+          "language": "csharp",
+          "sizeLines": 48,
+          "fileCategory": "code"
+        },
+        {
+          "path": "Rmms.Application/Common/SuperAdminAccess.cs",
+          "language": "csharp",
+          "sizeLines": 15,
+          "fileCategory": "code"
+        },
+        {
+          "path": "Rmms.Application/Dashboard/GetDashboardSummary.cs",
+          "language": "csharp",
+          "sizeLines": 145,
+          "fileCategory": "code"
+        },
+        {
+          "path": "Rmms.Application/DependencyInjection.cs",
+          "language": "csharp",
+          "sizeLines": 39,
+          "fileCategory": "code"
+        },
+        {
+          "path": "Rmms.Application/Devices/ApproveDevice/ApproveDeviceCommand.cs",
+          "language": "csharp",
+          "sizeLines": 14,
+          "fileCategory": "code"
+        },
+        {
+          "path": "Rmms.Application/Devices/ApproveDevice/ApproveDeviceCommandHandler.cs",
+          "language": "csharp",
+          "sizeLines": 84,
+          "fileCategory": "code"
+        },
+        {
+          "path": "Rmms.Application/Devices/GetMyDevice/GetMyDeviceQuery.cs",
+          "language": "csharp",
+          "sizeLines": 20,
+          "fileCategory": "code"
+        },
+        {
+          "path": "Rmms.Application/Devices/GetMyDevice/GetMyDeviceQueryHandler.cs",
+          "language": "csharp",
+          "sizeLines": 35,
+          "fileCategory": "code"
+        },
+        {
+          "path": "Rmms.Application/Devices/GetPendingDevices/GetPendingDevicesQuery.cs",
+          "language": "csharp",
+          "sizeLines": 24,
+          "fileCategory": "code"
+        },
+        {
+          "path": "Rmms.Application/Devices/GetPendingDevices/GetPendingDevicesQueryHandler.cs",
+          "language": "csharp",
+          "sizeLines": 66,
+          "fileCategory": "code"
+        },
+        {
+          "path": "Rmms.Application/Devices/RejectDevice/RejectDeviceCommand.cs",
+          "language": "csharp",
+          "sizeLines": 11,
+          "fileCategory": "code"
+        },
+        {
+          "path": "Rmms.Application/Devices/RejectDevice/RejectDeviceCommandHandler.cs",
+          "language": "csharp",
+          "sizeLines": 60,
+          "fileCategory": "code"
+        },
+        {
+          "path": "Rmms.Application/Devices/RejectDevice/RejectDeviceCommandValidator.cs",
+          "language": "csharp",
+          "sizeLines": 15,
+          "fileCategory": "code"
+        },
+        {
+          "path": "Rmms.Application/Documents/DocumentDtos.cs",
+          "language": "csharp",
+          "sizeLines": 21,
+          "fileCategory": "code"
+        },
+        {
+          "path": "Rmms.Application/Documents/Documents.cs",
+          "language": "csharp",
+          "sizeLines": 310,
+          "fileCategory": "code"
+        },
+        {
+          "path": "Rmms.Application/Email/IEmailTemplateRenderer.cs",
+          "language": "csharp",
+          "sizeLines": 22,
+          "fileCategory": "code"
+        }
+      ],
+      "batchImportData": {
+        "Rmms.Application/Common/Behaviors/ValidationBehavior.cs": [],
+        "Rmms.Application/Common/EnumFormatting.cs": [],
+        "Rmms.Application/Common/Interfaces/IAppDbContext.cs": [],
+        "Rmms.Application/Common/Interfaces/ICurrentUser.cs": [],
+        "Rmms.Application/Common/Interfaces/IDateTimeProvider.cs": [],
+        "Rmms.Application/Common/Options/ApprovalOptions.cs": [],
+        "Rmms.Application/Common/Options/CompreFaceOptions.cs": [],
+        "Rmms.Application/Common/Options/JwtOptions.cs": [],
+        "Rmms.Application/Common/Options/MinioOptions.cs": [],
+        "Rmms.Application/Common/Security/OpaqueToken.cs": [],
+        "Rmms.Application/Common/SuperAdminAccess.cs": [],
+        "Rmms.Application/Dashboard/GetDashboardSummary.cs": [],
+        "Rmms.Application/DependencyInjection.cs": [],
+        "Rmms.Application/Devices/ApproveDevice/ApproveDeviceCommand.cs": [],
+        "Rmms.Application/Devices/ApproveDevice/ApproveDeviceCommandHandler.cs": [],
+        "Rmms.Application/Devices/GetMyDevice/GetMyDeviceQuery.cs": [],
+        "Rmms.Application/Devices/GetMyDevice/GetMyDeviceQueryHandler.cs": [],
+        "Rmms.Application/Devices/GetPendingDevices/GetPendingDevicesQuery.cs": [],
+        "Rmms.Application/Devices/GetPendingDevices/GetPendingDevicesQueryHandler.cs": [],
+        "Rmms.Application/Devices/RejectDevice/RejectDeviceCommand.cs": [],
+        "Rmms.Application/Devices/RejectDevice/RejectDeviceCommandHandler.cs": [],
+        "Rmms.Application/Devices/RejectDevice/RejectDeviceCommandValidator.cs": [],
+        "Rmms.Application/Documents/DocumentDtos.cs": [],
+        "Rmms.Application/Documents/Documents.cs": [],
+        "Rmms.Application/Email/IEmailTemplateRenderer.cs": []
+      },
+      "neighborMap": {}
+    },
+    {
+      "batchIndex": 12,
+      "files": [
+        {
+          "path": "Rmms.Application/FaceRecognition/AdminRemoveFace.cs",
+          "language": "csharp",
+          "sizeLines": 58,
+          "fileCategory": "code"
+        },
+        {
+          "path": "Rmms.Application/FaceRecognition/EnrollFace.cs",
+          "language": "csharp",
+          "sizeLines": 79,
+          "fileCategory": "code"
+        },
+        {
+          "path": "Rmms.Application/FaceRecognition/FaceDtos.cs",
+          "language": "csharp",
+          "sizeLines": 7,
+          "fileCategory": "code"
+        },
+        {
+          "path": "Rmms.Application/FaceRecognition/RemoveMyFace.cs",
+          "language": "csharp",
+          "sizeLines": 59,
+          "fileCategory": "code"
+        },
+        {
+          "path": "Rmms.Application/FaceRecognition/VerifyFace.cs",
+          "language": "csharp",
+          "sizeLines": 57,
+          "fileCategory": "code"
+        },
+        {
+          "path": "Rmms.Application/Forms/FormFill.cs",
+          "language": "csharp",
+          "sizeLines": 440,
+          "fileCategory": "code"
+        },
+        {
+          "path": "Rmms.Application/Forms/Forms.cs",
+          "language": "csharp",
+          "sizeLines": 327,
+          "fileCategory": "code"
+        },
+        {
+          "path": "Rmms.Application/Forms/FormSchema.cs",
+          "language": "csharp",
+          "sizeLines": 100,
+          "fileCategory": "code"
+        },
+        {
+          "path": "Rmms.Application/LeaveOt/AdminGetRequests.cs",
+          "language": "csharp",
+          "sizeLines": 74,
+          "fileCategory": "code"
+        },
+        {
+          "path": "Rmms.Application/LeaveOt/CreateLeaveRequest.cs",
+          "language": "csharp",
+          "sizeLines": 103,
+          "fileCategory": "code"
+        },
+        {
+          "path": "Rmms.Application/LeaveOt/CreateOtRequest.cs",
+          "language": "csharp",
+          "sizeLines": 50,
+          "fileCategory": "code"
+        },
+        {
+          "path": "Rmms.Application/LeaveOt/GetMyRequests.cs",
+          "language": "csharp",
+          "sizeLines": 44,
+          "fileCategory": "code"
+        },
+        {
+          "path": "Rmms.Application/LeaveOt/LeaveOtDtos.cs",
+          "language": "csharp",
+          "sizeLines": 43,
+          "fileCategory": "code"
+        },
+        {
+          "path": "Rmms.Application/LeaveOt/RequestRouting.cs",
+          "language": "csharp",
+          "sizeLines": 68,
+          "fileCategory": "code"
+        },
+        {
+          "path": "Rmms.Application/LeaveOt/WithdrawLeaveRequest.cs",
+          "language": "csharp",
+          "sizeLines": 49,
+          "fileCategory": "code"
+        },
+        {
+          "path": "Rmms.Application/Maintenance/AttendancePhotoRetentionService.cs",
+          "language": "csharp",
+          "sizeLines": 64,
+          "fileCategory": "code"
+        },
+        {
+          "path": "Rmms.Application/Maintenance/TokenCleanupService.cs",
+          "language": "csharp",
+          "sizeLines": 58,
+          "fileCategory": "code"
+        },
+        {
+          "path": "Rmms.Application/News/News.cs",
+          "language": "csharp",
+          "sizeLines": 372,
+          "fileCategory": "code"
+        },
+        {
+          "path": "Rmms.Application/News/NewsDtos.cs",
+          "language": "csharp",
+          "sizeLines": 40,
+          "fileCategory": "code"
+        },
+        {
+          "path": "Rmms.Application/Notifications/GetMyNotifications.cs",
+          "language": "csharp",
+          "sizeLines": 37,
+          "fileCategory": "code"
+        },
+        {
+          "path": "Rmms.Application/Notifications/MarkNotificationRead.cs",
+          "language": "csharp",
+          "sizeLines": 62,
+          "fileCategory": "code"
+        },
+        {
+          "path": "Rmms.Application/Notifications/NotificationDtos.cs",
+          "language": "csharp",
+          "sizeLines": 50,
+          "fileCategory": "code"
+        },
+        {
+          "path": "Rmms.Application/Notifications/RegisterFcmToken.cs",
+          "language": "csharp",
+          "sizeLines": 71,
+          "fileCategory": "code"
+        },
+        {
+          "path": "Rmms.Application/Organization/Areas/Areas.cs",
+          "language": "csharp",
+          "sizeLines": 177,
+          "fileCategory": "code"
+        },
+        {
+          "path": "Rmms.Application/Organization/Assignments/Assignments.cs",
+          "language": "csharp",
+          "sizeLines": 286,
+          "fileCategory": "code"
+        }
+      ],
+      "batchImportData": {
+        "Rmms.Application/FaceRecognition/AdminRemoveFace.cs": [],
+        "Rmms.Application/FaceRecognition/EnrollFace.cs": [],
+        "Rmms.Application/FaceRecognition/FaceDtos.cs": [],
+        "Rmms.Application/FaceRecognition/RemoveMyFace.cs": [],
+        "Rmms.Application/FaceRecognition/VerifyFace.cs": [],
+        "Rmms.Application/Forms/FormFill.cs": [],
+        "Rmms.Application/Forms/Forms.cs": [],
+        "Rmms.Application/Forms/FormSchema.cs": [],
+        "Rmms.Application/LeaveOt/AdminGetRequests.cs": [],
+        "Rmms.Application/LeaveOt/CreateLeaveRequest.cs": [],
+        "Rmms.Application/LeaveOt/CreateOtRequest.cs": [],
+        "Rmms.Application/LeaveOt/GetMyRequests.cs": [],
+        "Rmms.Application/LeaveOt/LeaveOtDtos.cs": [],
+        "Rmms.Application/LeaveOt/RequestRouting.cs": [],
+        "Rmms.Application/LeaveOt/WithdrawLeaveRequest.cs": [],
+        "Rmms.Application/Maintenance/AttendancePhotoRetentionService.cs": [],
+        "Rmms.Application/Maintenance/TokenCleanupService.cs": [],
+        "Rmms.Application/News/News.cs": [],
+        "Rmms.Application/News/NewsDtos.cs": [],
+        "Rmms.Application/Notifications/GetMyNotifications.cs": [],
+        "Rmms.Application/Notifications/MarkNotificationRead.cs": [],
+        "Rmms.Application/Notifications/NotificationDtos.cs": [],
+        "Rmms.Application/Notifications/RegisterFcmToken.cs": [],
+        "Rmms.Application/Organization/Areas/Areas.cs": [],
+        "Rmms.Application/Organization/Assignments/Assignments.cs": []
+      },
+      "neighborMap": {}
+    },
+    {
+      "batchIndex": 13,
+      "files": [
+        {
+          "path": "Rmms.Application/Organization/Categories/Categories.cs",
+          "language": "csharp",
+          "sizeLines": 144,
+          "fileCategory": "code"
+        },
+        {
+          "path": "Rmms.Application/Organization/Me/GetMyLeader.cs",
+          "language": "csharp",
+          "sizeLines": 33,
+          "fileCategory": "code"
+        },
+        {
+          "path": "Rmms.Application/Organization/Me/GetMyStores.cs",
+          "language": "csharp",
+          "sizeLines": 46,
+          "fileCategory": "code"
+        },
+        {
+          "path": "Rmms.Application/Organization/Products/Products.cs",
+          "language": "csharp",
+          "sizeLines": 285,
+          "fileCategory": "code"
+        },
+        {
+          "path": "Rmms.Application/Organization/Stores/ChangeStoreStatus.cs",
+          "language": "csharp",
+          "sizeLines": 60,
+          "fileCategory": "code"
+        },
+        {
+          "path": "Rmms.Application/Organization/Stores/CreateStore.cs",
+          "language": "csharp",
+          "sizeLines": 71,
+          "fileCategory": "code"
+        },
+        {
+          "path": "Rmms.Application/Organization/Stores/DeleteStore.cs",
+          "language": "csharp",
+          "sizeLines": 45,
+          "fileCategory": "code"
+        },
+        {
+          "path": "Rmms.Application/Organization/Stores/GetStores.cs",
+          "language": "csharp",
+          "sizeLines": 81,
+          "fileCategory": "code"
+        },
+        {
+          "path": "Rmms.Application/Organization/Stores/StoreDtos.cs",
+          "language": "csharp",
+          "sizeLines": 15,
+          "fileCategory": "code"
+        },
+        {
+          "path": "Rmms.Application/Organization/Stores/UpdateStore.cs",
+          "language": "csharp",
+          "sizeLines": 67,
+          "fileCategory": "code"
+        },
+        {
+          "path": "Rmms.Application/Organization/Views/OrgViews.cs",
+          "language": "csharp",
+          "sizeLines": 158,
+          "fileCategory": "code"
+        },
+        {
+          "path": "Rmms.Application/Reports/AttendanceReports.cs",
+          "language": "csharp",
+          "sizeLines": 211,
+          "fileCategory": "code"
+        },
+        {
+          "path": "Rmms.Application/Reports/RequestReports.cs",
+          "language": "csharp",
+          "sizeLines": 102,
+          "fileCategory": "code"
+        },
+        {
+          "path": "Rmms.Application/Rmms.Application.csproj",
+          "language": "csproj",
+          "sizeLines": 34,
+          "fileCategory": "config"
+        },
+        {
+          "path": "Rmms.Application/TeamMonitoring/GetTeamToday.cs",
+          "language": "csharp",
+          "sizeLines": 159,
+          "fileCategory": "code"
+        },
+        {
+          "path": "Rmms.Application/VisitPlans/CreateVisitPlan.cs",
+          "language": "csharp",
+          "sizeLines": 104,
+          "fileCategory": "code"
+        },
+        {
+          "path": "Rmms.Application/VisitPlans/EditVisitPlan.cs",
+          "language": "csharp",
+          "sizeLines": 74,
+          "fileCategory": "code"
+        },
+        {
+          "path": "Rmms.Application/VisitPlans/ExecuteVisitPlanItem.cs",
+          "language": "csharp",
+          "sizeLines": 83,
+          "fileCategory": "code"
+        },
+        {
+          "path": "Rmms.Application/VisitPlans/GetVisitPlans.cs",
+          "language": "csharp",
+          "sizeLines": 131,
+          "fileCategory": "code"
+        },
+        {
+          "path": "Rmms.Application/VisitPlans/VisitPlanDtos.cs",
+          "language": "csharp",
+          "sizeLines": 67,
+          "fileCategory": "code"
+        },
+        {
+          "path": "Rmms.Application/VisitPlans/VisitPlanRouting.cs",
+          "language": "csharp",
+          "sizeLines": 44,
+          "fileCategory": "code"
+        },
+        {
+          "path": "Rmms.Application/WorkSchedule/ApproveRejectSchedule.cs",
+          "language": "csharp",
+          "sizeLines": 145,
+          "fileCategory": "code"
+        },
+        {
+          "path": "Rmms.Application/WorkSchedule/CreateSchedule.cs",
+          "language": "csharp",
+          "sizeLines": 108,
+          "fileCategory": "code"
+        },
+        {
+          "path": "Rmms.Application/WorkSchedule/EditSchedule.cs",
+          "language": "csharp",
+          "sizeLines": 104,
+          "fileCategory": "code"
+        },
+        {
+          "path": "Rmms.Application/WorkSchedule/GetSchedules.cs",
+          "language": "csharp",
+          "sizeLines": 83,
+          "fileCategory": "code"
+        }
+      ],
+      "batchImportData": {
+        "Rmms.Application/Organization/Categories/Categories.cs": [],
+        "Rmms.Application/Organization/Me/GetMyLeader.cs": [],
+        "Rmms.Application/Organization/Me/GetMyStores.cs": [],
+        "Rmms.Application/Organization/Products/Products.cs": [],
+        "Rmms.Application/Organization/Stores/ChangeStoreStatus.cs": [],
+        "Rmms.Application/Organization/Stores/CreateStore.cs": [],
+        "Rmms.Application/Organization/Stores/DeleteStore.cs": [],
+        "Rmms.Application/Organization/Stores/GetStores.cs": [],
+        "Rmms.Application/Organization/Stores/StoreDtos.cs": [],
+        "Rmms.Application/Organization/Stores/UpdateStore.cs": [],
+        "Rmms.Application/Organization/Views/OrgViews.cs": [],
+        "Rmms.Application/Reports/AttendanceReports.cs": [],
+        "Rmms.Application/Reports/RequestReports.cs": [],
+        "Rmms.Application/Rmms.Application.csproj": [],
+        "Rmms.Application/TeamMonitoring/GetTeamToday.cs": [],
+        "Rmms.Application/VisitPlans/CreateVisitPlan.cs": [],
+        "Rmms.Application/VisitPlans/EditVisitPlan.cs": [],
+        "Rmms.Application/VisitPlans/ExecuteVisitPlanItem.cs": [],
+        "Rmms.Application/VisitPlans/GetVisitPlans.cs": [],
+        "Rmms.Application/VisitPlans/VisitPlanDtos.cs": [],
+        "Rmms.Application/VisitPlans/VisitPlanRouting.cs": [],
+        "Rmms.Application/WorkSchedule/ApproveRejectSchedule.cs": [],
+        "Rmms.Application/WorkSchedule/CreateSchedule.cs": [],
+        "Rmms.Application/WorkSchedule/EditSchedule.cs": [],
+        "Rmms.Application/WorkSchedule/GetSchedules.cs": []
+      },
+      "neighborMap": {}
+    },
+    {
+      "batchIndex": 14,
+      "files": [
+        {
+          "path": "Rmms.Application/WorkSchedule/SubmitWithdrawSchedule.cs",
+          "language": "csharp",
+          "sizeLines": 114,
+          "fileCategory": "code"
+        },
+        {
+          "path": "Rmms.Application/WorkSchedule/WorkScheduleDtos.cs",
+          "language": "csharp",
+          "sizeLines": 73,
+          "fileCategory": "code"
+        },
+        {
+          "path": "Rmms.Domain/Approvals/Approval.cs",
+          "language": "csharp",
+          "sizeLines": 110,
+          "fileCategory": "code"
+        },
+        {
+          "path": "Rmms.Domain/Approvals/ApprovalEmailToken.cs",
+          "language": "csharp",
+          "sizeLines": 46,
+          "fileCategory": "code"
+        },
+        {
+          "path": "Rmms.Domain/Attendance/AttendanceRecord.cs",
+          "language": "csharp",
+          "sizeLines": 206,
+          "fileCategory": "code"
+        },
+        {
+          "path": "Rmms.Domain/Audit/AuditLog.cs",
+          "language": "csharp",
+          "sizeLines": 63,
+          "fileCategory": "code"
+        },
+        {
+          "path": "Rmms.Domain/Auth/EmailVerificationToken.cs",
+          "language": "csharp",
+          "sizeLines": 44,
+          "fileCategory": "code"
+        },
+        {
+          "path": "Rmms.Domain/Auth/LoginHistory.cs",
+          "language": "csharp",
+          "sizeLines": 67,
+          "fileCategory": "code"
+        },
+        {
+          "path": "Rmms.Domain/Auth/PasswordResetToken.cs",
+          "language": "csharp",
+          "sizeLines": 43,
+          "fileCategory": "code"
+        },
+        {
+          "path": "Rmms.Domain/Auth/RefreshToken.cs",
+          "language": "csharp",
+          "sizeLines": 63,
+          "fileCategory": "code"
+        },
+        {
+          "path": "Rmms.Domain/Common/AggregateRoot.cs",
+          "language": "csharp",
+          "sizeLines": 13,
+          "fileCategory": "code"
+        },
+        {
+          "path": "Rmms.Domain/Common/AuditableEntity.cs",
+          "language": "csharp",
+          "sizeLines": 19,
+          "fileCategory": "code"
+        },
+        {
+          "path": "Rmms.Domain/Common/Entity.cs",
+          "language": "csharp",
+          "sizeLines": 23,
+          "fileCategory": "code"
+        },
+        {
+          "path": "Rmms.Domain/Common/Error.cs",
+          "language": "csharp",
+          "sizeLines": 27,
+          "fileCategory": "code"
+        },
+        {
+          "path": "Rmms.Domain/Common/IAggregateRoot.cs",
+          "language": "csharp",
+          "sizeLines": 12,
+          "fileCategory": "code"
+        },
+        {
+          "path": "Rmms.Domain/Common/IDomainEvent.cs",
+          "language": "csharp",
+          "sizeLines": 11,
+          "fileCategory": "code"
+        },
+        {
+          "path": "Rmms.Domain/Common/Result.cs",
+          "language": "csharp",
+          "sizeLines": 44,
+          "fileCategory": "code"
+        },
+        {
+          "path": "Rmms.Domain/Common/UuidV7.cs",
+          "language": "csharp",
+          "sizeLines": 40,
+          "fileCategory": "code"
+        },
+        {
+          "path": "Rmms.Domain/Common/ValueObject.cs",
+          "language": "csharp",
+          "sizeLines": 24,
+          "fileCategory": "code"
+        },
+        {
+          "path": "Rmms.Domain/Devices/UserDevice.cs",
+          "language": "csharp",
+          "sizeLines": 148,
+          "fileCategory": "code"
+        },
+        {
+          "path": "Rmms.Domain/Documents/Document.cs",
+          "language": "csharp",
+          "sizeLines": 48,
+          "fileCategory": "code"
+        },
+        {
+          "path": "Rmms.Domain/Documents/DocumentAssignment.cs",
+          "language": "csharp",
+          "sizeLines": 36,
+          "fileCategory": "code"
+        },
+        {
+          "path": "Rmms.Domain/Enums/ApprovalDecisionVia.cs",
+          "language": "csharp",
+          "sizeLines": 13,
+          "fileCategory": "code"
+        },
+        {
+          "path": "Rmms.Domain/Enums/ApprovalEntityType.cs",
+          "language": "csharp",
+          "sizeLines": 14,
+          "fileCategory": "code"
+        },
+        {
+          "path": "Rmms.Domain/Enums/ApprovalStatus.cs",
+          "language": "csharp",
+          "sizeLines": 14,
+          "fileCategory": "code"
+        }
+      ],
+      "batchImportData": {
+        "Rmms.Application/WorkSchedule/SubmitWithdrawSchedule.cs": [],
+        "Rmms.Application/WorkSchedule/WorkScheduleDtos.cs": [],
+        "Rmms.Domain/Approvals/Approval.cs": [],
+        "Rmms.Domain/Approvals/ApprovalEmailToken.cs": [],
+        "Rmms.Domain/Attendance/AttendanceRecord.cs": [],
+        "Rmms.Domain/Audit/AuditLog.cs": [],
+        "Rmms.Domain/Auth/EmailVerificationToken.cs": [],
+        "Rmms.Domain/Auth/LoginHistory.cs": [],
+        "Rmms.Domain/Auth/PasswordResetToken.cs": [],
+        "Rmms.Domain/Auth/RefreshToken.cs": [],
+        "Rmms.Domain/Common/AggregateRoot.cs": [],
+        "Rmms.Domain/Common/AuditableEntity.cs": [],
+        "Rmms.Domain/Common/Entity.cs": [],
+        "Rmms.Domain/Common/Error.cs": [],
+        "Rmms.Domain/Common/IAggregateRoot.cs": [],
+        "Rmms.Domain/Common/IDomainEvent.cs": [],
+        "Rmms.Domain/Common/Result.cs": [],
+        "Rmms.Domain/Common/UuidV7.cs": [],
+        "Rmms.Domain/Common/ValueObject.cs": [],
+        "Rmms.Domain/Devices/UserDevice.cs": [],
+        "Rmms.Domain/Documents/Document.cs": [],
+        "Rmms.Domain/Documents/DocumentAssignment.cs": [],
+        "Rmms.Domain/Enums/ApprovalDecisionVia.cs": [],
+        "Rmms.Domain/Enums/ApprovalEntityType.cs": [],
+        "Rmms.Domain/Enums/ApprovalStatus.cs": []
+      },
+      "neighborMap": {}
+    },
+    {
+      "batchIndex": 15,
+      "files": [
+        {
+          "path": "Rmms.Domain/Enums/AttendanceStatus.cs",
+          "language": "csharp",
+          "sizeLines": 33,
+          "fileCategory": "code"
+        },
+        {
+          "path": "Rmms.Domain/Enums/AuditAction.cs",
+          "language": "csharp",
+          "sizeLines": 117,
+          "fileCategory": "code"
+        },
+        {
+          "path": "Rmms.Domain/Enums/DeviceStatus.cs",
+          "language": "csharp",
+          "sizeLines": 20,
+          "fileCategory": "code"
+        },
+        {
+          "path": "Rmms.Domain/Enums/DocumentFolderType.cs",
+          "language": "csharp",
+          "sizeLines": 12,
+          "fileCategory": "code"
+        },
+        {
+          "path": "Rmms.Domain/Enums/FaceVerificationResult.cs",
+          "language": "csharp",
+          "sizeLines": 17,
+          "fileCategory": "code"
+        },
+        {
+          "path": "Rmms.Domain/Enums/FormStatus.cs",
+          "language": "csharp",
+          "sizeLines": 9,
+          "fileCategory": "code"
+        },
+        {
+          "path": "Rmms.Domain/Enums/FormSubmissionStatus.cs",
+          "language": "csharp",
+          "sizeLines": 9,
+          "fileCategory": "code"
+        },
+        {
+          "path": "Rmms.Domain/Enums/FormType.cs",
+          "language": "csharp",
+          "sizeLines": 15,
+          "fileCategory": "code"
+        },
+        {
+          "path": "Rmms.Domain/Enums/LeaveType.cs",
+          "language": "csharp",
+          "sizeLines": 8,
+          "fileCategory": "code"
+        },
+        {
+          "path": "Rmms.Domain/Enums/NotificationType.cs",
+          "language": "csharp",
+          "sizeLines": 39,
+          "fileCategory": "code"
+        },
+        {
+          "path": "Rmms.Domain/Enums/ProductStatus.cs",
+          "language": "csharp",
+          "sizeLines": 8,
+          "fileCategory": "code"
+        },
+        {
+          "path": "Rmms.Domain/Enums/RequestStatus.cs",
+          "language": "csharp",
+          "sizeLines": 12,
+          "fileCategory": "code"
+        },
+        {
+          "path": "Rmms.Domain/Enums/StoreStatus.cs",
+          "language": "csharp",
+          "sizeLines": 17,
+          "fileCategory": "code"
+        },
+        {
+          "path": "Rmms.Domain/Enums/UserRole.cs",
+          "language": "csharp",
+          "sizeLines": 13,
+          "fileCategory": "code"
+        },
+        {
+          "path": "Rmms.Domain/Enums/UserStatus.cs",
+          "language": "csharp",
+          "sizeLines": 17,
+          "fileCategory": "code"
+        },
+        {
+          "path": "Rmms.Domain/Enums/VisitPlanStatus.cs",
+          "language": "csharp",
+          "sizeLines": 15,
+          "fileCategory": "code"
+        },
+        {
+          "path": "Rmms.Domain/Enums/WorkScheduleStatus.cs",
+          "language": "csharp",
+          "sizeLines": 29,
+          "fileCategory": "code"
+        },
+        {
+          "path": "Rmms.Domain/Forms/Form.cs",
+          "language": "csharp",
+          "sizeLines": 69,
+          "fileCategory": "code"
+        },
+        {
+          "path": "Rmms.Domain/Forms/FormAssignment.cs",
+          "language": "csharp",
+          "sizeLines": 47,
+          "fileCategory": "code"
+        },
+        {
+          "path": "Rmms.Domain/Forms/FormSubmission.cs",
+          "language": "csharp",
+          "sizeLines": 67,
+          "fileCategory": "code"
+        },
+        {
+          "path": "Rmms.Domain/Forms/FormVersion.cs",
+          "language": "csharp",
+          "sizeLines": 55,
+          "fileCategory": "code"
+        },
+        {
+          "path": "Rmms.Domain/LeaveOt/LeaveRequest.cs",
+          "language": "csharp",
+          "sizeLines": 70,
+          "fileCategory": "code"
+        },
+        {
+          "path": "Rmms.Domain/LeaveOt/OtRequest.cs",
+          "language": "csharp",
+          "sizeLines": 61,
+          "fileCategory": "code"
+        },
+        {
+          "path": "Rmms.Domain/News/NewsAssignment.cs",
+          "language": "csharp",
+          "sizeLines": 32,
+          "fileCategory": "code"
+        },
+        {
+          "path": "Rmms.Domain/News/NewsItem.cs",
+          "language": "csharp",
+          "sizeLines": 67,
+          "fileCategory": "code"
+        }
+      ],
+      "batchImportData": {
+        "Rmms.Domain/Enums/AttendanceStatus.cs": [],
+        "Rmms.Domain/Enums/AuditAction.cs": [],
+        "Rmms.Domain/Enums/DeviceStatus.cs": [],
+        "Rmms.Domain/Enums/DocumentFolderType.cs": [],
+        "Rmms.Domain/Enums/FaceVerificationResult.cs": [],
+        "Rmms.Domain/Enums/FormStatus.cs": [],
+        "Rmms.Domain/Enums/FormSubmissionStatus.cs": [],
+        "Rmms.Domain/Enums/FormType.cs": [],
+        "Rmms.Domain/Enums/LeaveType.cs": [],
+        "Rmms.Domain/Enums/NotificationType.cs": [],
+        "Rmms.Domain/Enums/ProductStatus.cs": [],
+        "Rmms.Domain/Enums/RequestStatus.cs": [],
+        "Rmms.Domain/Enums/StoreStatus.cs": [],
+        "Rmms.Domain/Enums/UserRole.cs": [],
+        "Rmms.Domain/Enums/UserStatus.cs": [],
+        "Rmms.Domain/Enums/VisitPlanStatus.cs": [],
+        "Rmms.Domain/Enums/WorkScheduleStatus.cs": [],
+        "Rmms.Domain/Forms/Form.cs": [],
+        "Rmms.Domain/Forms/FormAssignment.cs": [],
+        "Rmms.Domain/Forms/FormSubmission.cs": [],
+        "Rmms.Domain/Forms/FormVersion.cs": [],
+        "Rmms.Domain/LeaveOt/LeaveRequest.cs": [],
+        "Rmms.Domain/LeaveOt/OtRequest.cs": [],
+        "Rmms.Domain/News/NewsAssignment.cs": [],
+        "Rmms.Domain/News/NewsItem.cs": []
+      },
+      "neighborMap": {}
+    },
+    {
+      "batchIndex": 16,
+      "files": [
+        {
+          "path": "Rmms.Domain/News/NewsRead.cs",
+          "language": "csharp",
+          "sizeLines": 33,
+          "fileCategory": "code"
+        },
+        {
+          "path": "Rmms.Domain/Notifications/Notification.cs",
+          "language": "csharp",
+          "sizeLines": 64,
+          "fileCategory": "code"
+        },
+        {
+          "path": "Rmms.Domain/Notifications/PushToken.cs",
+          "language": "csharp",
+          "sizeLines": 43,
+          "fileCategory": "code"
+        },
+        {
+          "path": "Rmms.Domain/Organization/Area.cs",
+          "language": "csharp",
+          "sizeLines": 46,
+          "fileCategory": "code"
+        },
+        {
+          "path": "Rmms.Domain/Organization/Category.cs",
+          "language": "csharp",
+          "sizeLines": 35,
+          "fileCategory": "code"
+        },
+        {
+          "path": "Rmms.Domain/Organization/Product.cs",
+          "language": "csharp",
+          "sizeLines": 59,
+          "fileCategory": "code"
+        },
+        {
+          "path": "Rmms.Domain/Organization/Store.cs",
+          "language": "csharp",
+          "sizeLines": 78,
+          "fileCategory": "code"
+        },
+        {
+          "path": "Rmms.Domain/Organization/UserCategoryAssignment.cs",
+          "language": "csharp",
+          "sizeLines": 28,
+          "fileCategory": "code"
+        },
+        {
+          "path": "Rmms.Domain/Organization/UserLeaderAssignment.cs",
+          "language": "csharp",
+          "sizeLines": 52,
+          "fileCategory": "code"
+        },
+        {
+          "path": "Rmms.Domain/Organization/UserStoreAssignment.cs",
+          "language": "csharp",
+          "sizeLines": 44,
+          "fileCategory": "code"
+        },
+        {
+          "path": "Rmms.Domain/Rmms.Domain.csproj",
+          "language": "csproj",
+          "sizeLines": 11,
+          "fileCategory": "config"
+        },
+        {
+          "path": "Rmms.Domain/Users/User.cs",
+          "language": "csharp",
+          "sizeLines": 222,
+          "fileCategory": "code"
+        },
+        {
+          "path": "Rmms.Domain/ValueObjects/GpsCoordinate.cs",
+          "language": "csharp",
+          "sizeLines": 59,
+          "fileCategory": "code"
+        },
+        {
+          "path": "Rmms.Domain/VisitPlan/VisitPlan.cs",
+          "language": "csharp",
+          "sizeLines": 153,
+          "fileCategory": "code"
+        },
+        {
+          "path": "Rmms.Domain/VisitPlan/VisitPlanItem.cs",
+          "language": "csharp",
+          "sizeLines": 62,
+          "fileCategory": "code"
+        },
+        {
+          "path": "Rmms.Domain/WorkSchedule/WorkSchedule.cs",
+          "language": "csharp",
+          "sizeLines": 199,
+          "fileCategory": "code"
+        },
+        {
+          "path": "Rmms.Domain/WorkSchedule/WorkScheduleShift.cs",
+          "language": "csharp",
+          "sizeLines": 57,
+          "fileCategory": "code"
+        },
+        {
+          "path": "Rmms.Infrastructure/Approvals/ApprovalService.cs",
+          "language": "csharp",
+          "sizeLines": 113,
+          "fileCategory": "code"
+        },
+        {
+          "path": "Rmms.Infrastructure/Approvals/ApprovalTokenService.cs",
+          "language": "csharp",
+          "sizeLines": 101,
+          "fileCategory": "code"
+        },
+        {
+          "path": "Rmms.Infrastructure/Attendance/LocalAttendancePhotoStorage.cs",
+          "language": "csharp",
+          "sizeLines": 24,
+          "fileCategory": "code"
+        },
+        {
+          "path": "Rmms.Infrastructure/Attendance/MinioAttendancePhotoStorage.cs",
+          "language": "csharp",
+          "sizeLines": 145,
+          "fileCategory": "code"
+        },
+        {
+          "path": "Rmms.Infrastructure/Audit/DbAuditLogger.cs",
+          "language": "csharp",
+          "sizeLines": 52,
+          "fileCategory": "code"
+        },
+        {
+          "path": "Rmms.Infrastructure/DependencyInjection.cs",
+          "language": "csharp",
+          "sizeLines": 182,
+          "fileCategory": "code"
+        },
+        {
+          "path": "Rmms.Infrastructure/Email/AppUrlOptions.cs",
+          "language": "csharp",
+          "sizeLines": 18,
+          "fileCategory": "code"
+        },
+        {
+          "path": "Rmms.Infrastructure/Email/ConsoleEmailSender.cs",
+          "language": "csharp",
+          "sizeLines": 33,
+          "fileCategory": "code"
+        }
+      ],
+      "batchImportData": {
+        "Rmms.Domain/News/NewsRead.cs": [],
+        "Rmms.Domain/Notifications/Notification.cs": [],
+        "Rmms.Domain/Notifications/PushToken.cs": [],
+        "Rmms.Domain/Organization/Area.cs": [],
+        "Rmms.Domain/Organization/Category.cs": [],
+        "Rmms.Domain/Organization/Product.cs": [],
+        "Rmms.Domain/Organization/Store.cs": [],
+        "Rmms.Domain/Organization/UserCategoryAssignment.cs": [],
+        "Rmms.Domain/Organization/UserLeaderAssignment.cs": [],
+        "Rmms.Domain/Organization/UserStoreAssignment.cs": [],
+        "Rmms.Domain/Rmms.Domain.csproj": [],
+        "Rmms.Domain/Users/User.cs": [],
+        "Rmms.Domain/ValueObjects/GpsCoordinate.cs": [],
+        "Rmms.Domain/VisitPlan/VisitPlan.cs": [],
+        "Rmms.Domain/VisitPlan/VisitPlanItem.cs": [],
+        "Rmms.Domain/WorkSchedule/WorkSchedule.cs": [],
+        "Rmms.Domain/WorkSchedule/WorkScheduleShift.cs": [],
+        "Rmms.Infrastructure/Approvals/ApprovalService.cs": [],
+        "Rmms.Infrastructure/Approvals/ApprovalTokenService.cs": [],
+        "Rmms.Infrastructure/Attendance/LocalAttendancePhotoStorage.cs": [],
+        "Rmms.Infrastructure/Attendance/MinioAttendancePhotoStorage.cs": [],
+        "Rmms.Infrastructure/Audit/DbAuditLogger.cs": [],
+        "Rmms.Infrastructure/DependencyInjection.cs": [],
+        "Rmms.Infrastructure/Email/AppUrlOptions.cs": [],
+        "Rmms.Infrastructure/Email/ConsoleEmailSender.cs": []
+      },
+      "neighborMap": {}
+    },
+    {
+      "batchIndex": 17,
+      "files": [
+        {
+          "path": "Rmms.Infrastructure/Email/EmailOptions.cs",
+          "language": "csharp",
+          "sizeLines": 35,
+          "fileCategory": "code"
+        },
+        {
+          "path": "Rmms.Infrastructure/Email/EmailTemplateRenderer.cs",
+          "language": "csharp",
+          "sizeLines": 138,
+          "fileCategory": "code"
+        },
+        {
+          "path": "Rmms.Infrastructure/Email/SendGridEmailSender.cs",
+          "language": "csharp",
+          "sizeLines": 57,
+          "fileCategory": "code"
+        },
+        {
+          "path": "Rmms.Infrastructure/Email/SmtpEmailSender.cs",
+          "language": "csharp",
+          "sizeLines": 68,
+          "fileCategory": "code"
+        },
+        {
+          "path": "Rmms.Infrastructure/Face/CompreFaceClient.cs",
+          "language": "csharp",
+          "sizeLines": 91,
+          "fileCategory": "code"
+        },
+        {
+          "path": "Rmms.Infrastructure/Face/DevFaceClient.cs",
+          "language": "csharp",
+          "sizeLines": 21,
+          "fileCategory": "code"
+        },
+        {
+          "path": "Rmms.Infrastructure/Face/FaceVerificationService.cs",
+          "language": "csharp",
+          "sizeLines": 56,
+          "fileCategory": "code"
+        },
+        {
+          "path": "Rmms.Infrastructure/Identity/BCryptPasswordHasher.cs",
+          "language": "csharp",
+          "sizeLines": 51,
+          "fileCategory": "code"
+        },
+        {
+          "path": "Rmms.Infrastructure/Identity/JwtOptions.cs",
+          "language": "csharp",
+          "sizeLines": 6,
+          "fileCategory": "code"
+        },
+        {
+          "path": "Rmms.Infrastructure/Identity/JwtTokenService.cs",
+          "language": "csharp",
+          "sizeLines": 71,
+          "fileCategory": "code"
+        },
+        {
+          "path": "Rmms.Infrastructure/Identity/RefreshTokenGenerator.cs",
+          "language": "csharp",
+          "sizeLines": 33,
+          "fileCategory": "code"
+        },
+        {
+          "path": "Rmms.Infrastructure/Logging/SerilogElasticsearchExtensions.cs",
+          "language": "csharp",
+          "sizeLines": 88,
+          "fileCategory": "code"
+        },
+        {
+          "path": "Rmms.Infrastructure/Notifications/FcmPushSender.cs",
+          "language": "csharp",
+          "sizeLines": 41,
+          "fileCategory": "code"
+        },
+        {
+          "path": "Rmms.Infrastructure/Notifications/LoggingPushSender.cs",
+          "language": "csharp",
+          "sizeLines": 31,
+          "fileCategory": "code"
+        },
+        {
+          "path": "Rmms.Infrastructure/Notifications/NoOpRealtimeNotifier.cs",
+          "language": "csharp",
+          "sizeLines": 13,
+          "fileCategory": "code"
+        },
+        {
+          "path": "Rmms.Infrastructure/Notifications/NotificationService.cs",
+          "language": "csharp",
+          "sizeLines": 134,
+          "fileCategory": "code"
+        },
+        {
+          "path": "Rmms.Infrastructure/Notifications/PushOptions.cs",
+          "language": "csharp",
+          "sizeLines": 21,
+          "fileCategory": "code"
+        },
+        {
+          "path": "Rmms.Infrastructure/Persistence/AppDbContext.cs",
+          "language": "csharp",
+          "sizeLines": 94,
+          "fileCategory": "code"
+        },
+        {
+          "path": "Rmms.Infrastructure/Persistence/Configurations/ApprovalConfiguration.cs",
+          "language": "csharp",
+          "sizeLines": 58,
+          "fileCategory": "code"
+        },
+        {
+          "path": "Rmms.Infrastructure/Persistence/Configurations/ApprovalEmailTokenConfiguration.cs",
+          "language": "csharp",
+          "sizeLines": 27,
+          "fileCategory": "code"
+        },
+        {
+          "path": "Rmms.Infrastructure/Persistence/Configurations/AreaConfiguration.cs",
+          "language": "csharp",
+          "sizeLines": 27,
+          "fileCategory": "code"
+        },
+        {
+          "path": "Rmms.Infrastructure/Persistence/Configurations/AttendanceRecordConfiguration.cs",
+          "language": "csharp",
+          "sizeLines": 112,
+          "fileCategory": "code"
+        },
+        {
+          "path": "Rmms.Infrastructure/Persistence/Configurations/AuditLogConfiguration.cs",
+          "language": "csharp",
+          "sizeLines": 45,
+          "fileCategory": "code"
+        },
+        {
+          "path": "Rmms.Infrastructure/Persistence/Configurations/CategoryConfiguration.cs",
+          "language": "csharp",
+          "sizeLines": 24,
+          "fileCategory": "code"
+        },
+        {
+          "path": "Rmms.Infrastructure/Persistence/Configurations/DocumentConfiguration.cs",
+          "language": "csharp",
+          "sizeLines": 63,
+          "fileCategory": "code"
+        }
+      ],
+      "batchImportData": {
+        "Rmms.Infrastructure/Email/EmailOptions.cs": [],
+        "Rmms.Infrastructure/Email/EmailTemplateRenderer.cs": [],
+        "Rmms.Infrastructure/Email/SendGridEmailSender.cs": [],
+        "Rmms.Infrastructure/Email/SmtpEmailSender.cs": [],
+        "Rmms.Infrastructure/Face/CompreFaceClient.cs": [],
+        "Rmms.Infrastructure/Face/DevFaceClient.cs": [],
+        "Rmms.Infrastructure/Face/FaceVerificationService.cs": [],
+        "Rmms.Infrastructure/Identity/BCryptPasswordHasher.cs": [],
+        "Rmms.Infrastructure/Identity/JwtOptions.cs": [],
+        "Rmms.Infrastructure/Identity/JwtTokenService.cs": [],
+        "Rmms.Infrastructure/Identity/RefreshTokenGenerator.cs": [],
+        "Rmms.Infrastructure/Logging/SerilogElasticsearchExtensions.cs": [],
+        "Rmms.Infrastructure/Notifications/FcmPushSender.cs": [],
+        "Rmms.Infrastructure/Notifications/LoggingPushSender.cs": [],
+        "Rmms.Infrastructure/Notifications/NoOpRealtimeNotifier.cs": [],
+        "Rmms.Infrastructure/Notifications/NotificationService.cs": [],
+        "Rmms.Infrastructure/Notifications/PushOptions.cs": [],
+        "Rmms.Infrastructure/Persistence/AppDbContext.cs": [],
+        "Rmms.Infrastructure/Persistence/Configurations/ApprovalConfiguration.cs": [],
+        "Rmms.Infrastructure/Persistence/Configurations/ApprovalEmailTokenConfiguration.cs": [],
+        "Rmms.Infrastructure/Persistence/Configurations/AreaConfiguration.cs": [],
+        "Rmms.Infrastructure/Persistence/Configurations/AttendanceRecordConfiguration.cs": [],
+        "Rmms.Infrastructure/Persistence/Configurations/AuditLogConfiguration.cs": [],
+        "Rmms.Infrastructure/Persistence/Configurations/CategoryConfiguration.cs": [],
+        "Rmms.Infrastructure/Persistence/Configurations/DocumentConfiguration.cs": []
+      },
+      "neighborMap": {}
+    },
+    {
+      "batchIndex": 18,
+      "files": [
+        {
+          "path": "Rmms.Infrastructure/Persistence/Configurations/EmailVerificationTokenConfiguration.cs",
+          "language": "csharp",
+          "sizeLines": 29,
+          "fileCategory": "code"
+        },
+        {
+          "path": "Rmms.Infrastructure/Persistence/Configurations/FormAssignmentConfiguration.cs",
+          "language": "csharp",
+          "sizeLines": 26,
+          "fileCategory": "code"
+        },
+        {
+          "path": "Rmms.Infrastructure/Persistence/Configurations/FormConfiguration.cs",
+          "language": "csharp",
+          "sizeLines": 87,
+          "fileCategory": "code"
+        },
+        {
+          "path": "Rmms.Infrastructure/Persistence/Configurations/FormSubmissionConfiguration.cs",
+          "language": "csharp",
+          "sizeLines": 57,
+          "fileCategory": "code"
+        },
+        {
+          "path": "Rmms.Infrastructure/Persistence/Configurations/FormVersionConfiguration.cs",
+          "language": "csharp",
+          "sizeLines": 28,
+          "fileCategory": "code"
+        },
+        {
+          "path": "Rmms.Infrastructure/Persistence/Configurations/LeaveRequestConfiguration.cs",
+          "language": "csharp",
+          "sizeLines": 35,
+          "fileCategory": "code"
+        },
+        {
+          "path": "Rmms.Infrastructure/Persistence/Configurations/LoginHistoryConfiguration.cs",
+          "language": "csharp",
+          "sizeLines": 29,
+          "fileCategory": "code"
+        },
+        {
+          "path": "Rmms.Infrastructure/Persistence/Configurations/NewsConfiguration.cs",
+          "language": "csharp",
+          "sizeLines": 67,
+          "fileCategory": "code"
+        },
+        {
+          "path": "Rmms.Infrastructure/Persistence/Configurations/NotificationConfiguration.cs",
+          "language": "csharp",
+          "sizeLines": 42,
+          "fileCategory": "code"
+        },
+        {
+          "path": "Rmms.Infrastructure/Persistence/Configurations/OtRequestConfiguration.cs",
+          "language": "csharp",
+          "sizeLines": 30,
+          "fileCategory": "code"
+        },
+        {
+          "path": "Rmms.Infrastructure/Persistence/Configurations/PasswordResetTokenConfiguration.cs",
+          "language": "csharp",
+          "sizeLines": 29,
+          "fileCategory": "code"
+        },
+        {
+          "path": "Rmms.Infrastructure/Persistence/Configurations/ProductConfiguration.cs",
+          "language": "csharp",
+          "sizeLines": 58,
+          "fileCategory": "code"
+        },
+        {
+          "path": "Rmms.Infrastructure/Persistence/Configurations/PushTokenConfiguration.cs",
+          "language": "csharp",
+          "sizeLines": 28,
+          "fileCategory": "code"
+        },
+        {
+          "path": "Rmms.Infrastructure/Persistence/Configurations/RefreshTokenConfiguration.cs",
+          "language": "csharp",
+          "sizeLines": 34,
+          "fileCategory": "code"
+        },
+        {
+          "path": "Rmms.Infrastructure/Persistence/Configurations/StoreConfiguration.cs",
+          "language": "csharp",
+          "sizeLines": 66,
+          "fileCategory": "code"
+        },
+        {
+          "path": "Rmms.Infrastructure/Persistence/Configurations/UserCategoryAssignmentConfiguration.cs",
+          "language": "csharp",
+          "sizeLines": 27,
+          "fileCategory": "code"
+        },
+        {
+          "path": "Rmms.Infrastructure/Persistence/Configurations/UserConfiguration.cs",
+          "language": "csharp",
+          "sizeLines": 110,
+          "fileCategory": "code"
+        },
+        {
+          "path": "Rmms.Infrastructure/Persistence/Configurations/UserDeviceConfiguration.cs",
+          "language": "csharp",
+          "sizeLines": 77,
+          "fileCategory": "code"
+        },
+        {
+          "path": "Rmms.Infrastructure/Persistence/Configurations/UserLeaderAssignmentConfiguration.cs",
+          "language": "csharp",
+          "sizeLines": 29,
+          "fileCategory": "code"
+        },
+        {
+          "path": "Rmms.Infrastructure/Persistence/Configurations/UserStoreAssignmentConfiguration.cs",
+          "language": "csharp",
+          "sizeLines": 30,
+          "fileCategory": "code"
+        },
+        {
+          "path": "Rmms.Infrastructure/Persistence/Configurations/VisitPlanConfiguration.cs",
+          "language": "csharp",
+          "sizeLines": 70,
+          "fileCategory": "code"
+        },
+        {
+          "path": "Rmms.Infrastructure/Persistence/Configurations/WorkScheduleConfiguration.cs",
+          "language": "csharp",
+          "sizeLines": 82,
+          "fileCategory": "code"
+        },
+        {
+          "path": "Rmms.Infrastructure/Persistence/Interceptors/AuditableEntityInterceptor.cs",
+          "language": "csharp",
+          "sizeLines": 67,
+          "fileCategory": "code"
+        },
+        {
+          "path": "Rmms.Infrastructure/Persistence/Migrations/20260529022602_Init_M01_M02_Foundation.cs",
+          "language": "csharp",
+          "sizeLines": 292,
+          "fileCategory": "code"
+        },
+        {
+          "path": "Rmms.Infrastructure/Persistence/Migrations/20260529022602_Init_M01_M02_Foundation.Designer.cs",
+          "language": "csharp",
+          "sizeLines": 518,
+          "fileCategory": "code"
+        }
+      ],
+      "batchImportData": {
+        "Rmms.Infrastructure/Persistence/Configurations/EmailVerificationTokenConfiguration.cs": [],
+        "Rmms.Infrastructure/Persistence/Configurations/FormAssignmentConfiguration.cs": [],
+        "Rmms.Infrastructure/Persistence/Configurations/FormConfiguration.cs": [],
+        "Rmms.Infrastructure/Persistence/Configurations/FormSubmissionConfiguration.cs": [],
+        "Rmms.Infrastructure/Persistence/Configurations/FormVersionConfiguration.cs": [],
+        "Rmms.Infrastructure/Persistence/Configurations/LeaveRequestConfiguration.cs": [],
+        "Rmms.Infrastructure/Persistence/Configurations/LoginHistoryConfiguration.cs": [],
+        "Rmms.Infrastructure/Persistence/Configurations/NewsConfiguration.cs": [],
+        "Rmms.Infrastructure/Persistence/Configurations/NotificationConfiguration.cs": [],
+        "Rmms.Infrastructure/Persistence/Configurations/OtRequestConfiguration.cs": [],
+        "Rmms.Infrastructure/Persistence/Configurations/PasswordResetTokenConfiguration.cs": [],
+        "Rmms.Infrastructure/Persistence/Configurations/ProductConfiguration.cs": [],
+        "Rmms.Infrastructure/Persistence/Configurations/PushTokenConfiguration.cs": [],
+        "Rmms.Infrastructure/Persistence/Configurations/RefreshTokenConfiguration.cs": [],
+        "Rmms.Infrastructure/Persistence/Configurations/StoreConfiguration.cs": [],
+        "Rmms.Infrastructure/Persistence/Configurations/UserCategoryAssignmentConfiguration.cs": [],
+        "Rmms.Infrastructure/Persistence/Configurations/UserConfiguration.cs": [],
+        "Rmms.Infrastructure/Persistence/Configurations/UserDeviceConfiguration.cs": [],
+        "Rmms.Infrastructure/Persistence/Configurations/UserLeaderAssignmentConfiguration.cs": [],
+        "Rmms.Infrastructure/Persistence/Configurations/UserStoreAssignmentConfiguration.cs": [],
+        "Rmms.Infrastructure/Persistence/Configurations/VisitPlanConfiguration.cs": [],
+        "Rmms.Infrastructure/Persistence/Configurations/WorkScheduleConfiguration.cs": [],
+        "Rmms.Infrastructure/Persistence/Interceptors/AuditableEntityInterceptor.cs": [],
+        "Rmms.Infrastructure/Persistence/Migrations/20260529022602_Init_M01_M02_Foundation.cs": [],
+        "Rmms.Infrastructure/Persistence/Migrations/20260529022602_Init_M01_M02_Foundation.Designer.cs": []
+      },
+      "neighborMap": {}
+    },
+    {
+      "batchIndex": 19,
+      "files": [
+        {
+          "path": "Rmms.Infrastructure/Persistence/Migrations/20260605034359_M03_Organization_Assignment.cs",
+          "language": "csharp",
+          "sizeLines": 234,
+          "fileCategory": "code"
+        },
+        {
+          "path": "Rmms.Infrastructure/Persistence/Migrations/20260605034359_M03_Organization_Assignment.Designer.cs",
+          "language": "csharp",
+          "sizeLines": 891,
+          "fileCategory": "code"
+        },
+        {
+          "path": "Rmms.Infrastructure/Persistence/Migrations/20260606042427_M07_WorkSchedule.cs",
+          "language": "csharp",
+          "sizeLines": 94,
+          "fileCategory": "code"
+        },
+        {
+          "path": "Rmms.Infrastructure/Persistence/Migrations/20260606042427_M07_WorkSchedule.Designer.cs",
+          "language": "csharp",
+          "sizeLines": 1024,
+          "fileCategory": "code"
+        },
+        {
+          "path": "Rmms.Infrastructure/Persistence/Migrations/20260606082819_M05_Attendance.cs",
+          "language": "csharp",
+          "sizeLines": 86,
+          "fileCategory": "code"
+        },
+        {
+          "path": "Rmms.Infrastructure/Persistence/Migrations/20260606082819_M05_Attendance.Designer.cs",
+          "language": "csharp",
+          "sizeLines": 1186,
+          "fileCategory": "code"
+        },
+        {
+          "path": "Rmms.Infrastructure/Persistence/Migrations/20260606171533_M09_Approvals.cs",
+          "language": "csharp",
+          "sizeLines": 97,
+          "fileCategory": "code"
+        },
+        {
+          "path": "Rmms.Infrastructure/Persistence/Migrations/20260606171533_M09_Approvals.Designer.cs",
+          "language": "csharp",
+          "sizeLines": 1334,
+          "fileCategory": "code"
+        },
+        {
+          "path": "Rmms.Infrastructure/Persistence/Migrations/20260607024229_M08_LeaveOt.cs",
+          "language": "csharp",
+          "sizeLines": 96,
+          "fileCategory": "code"
+        },
+        {
+          "path": "Rmms.Infrastructure/Persistence/Migrations/20260607024229_M08_LeaveOt.Designer.cs",
+          "language": "csharp",
+          "sizeLines": 1496,
+          "fileCategory": "code"
+        },
+        {
+          "path": "Rmms.Infrastructure/Persistence/Migrations/20260608034404_M14_Notifications.cs",
+          "language": "csharp",
+          "sizeLines": 53,
+          "fileCategory": "code"
+        },
+        {
+          "path": "Rmms.Infrastructure/Persistence/Migrations/20260608034404_M14_Notifications.Designer.cs",
+          "language": "csharp",
+          "sizeLines": 1575,
+          "fileCategory": "code"
+        },
+        {
+          "path": "Rmms.Infrastructure/Persistence/Migrations/20260614092038_M04_ProductMaster.cs",
+          "language": "csharp",
+          "sizeLines": 63,
+          "fileCategory": "code"
+        },
+        {
+          "path": "Rmms.Infrastructure/Persistence/Migrations/20260614092038_M04_ProductMaster.Designer.cs",
+          "language": "csharp",
+          "sizeLines": 1655,
+          "fileCategory": "code"
+        },
+        {
+          "path": "Rmms.Infrastructure/Persistence/Migrations/20260614102719_M10_Forms.cs",
+          "language": "csharp",
+          "sizeLines": 92,
+          "fileCategory": "code"
+        },
+        {
+          "path": "Rmms.Infrastructure/Persistence/Migrations/20260614102719_M10_Forms.Designer.cs",
+          "language": "csharp",
+          "sizeLines": 1806,
+          "fileCategory": "code"
+        },
+        {
+          "path": "Rmms.Infrastructure/Persistence/Migrations/20260614104723_M10_FormFill.cs",
+          "language": "csharp",
+          "sizeLines": 117,
+          "fileCategory": "code"
+        },
+        {
+          "path": "Rmms.Infrastructure/Persistence/Migrations/20260614104723_M10_FormFill.Designer.cs",
+          "language": "csharp",
+          "sizeLines": 1993,
+          "fileCategory": "code"
+        },
+        {
+          "path": "Rmms.Infrastructure/Persistence/Migrations/20260614125121_M11_VisitPlan.cs",
+          "language": "csharp",
+          "sizeLines": 91,
+          "fileCategory": "code"
+        },
+        {
+          "path": "Rmms.Infrastructure/Persistence/Migrations/20260614125121_M11_VisitPlan.Designer.cs",
+          "language": "csharp",
+          "sizeLines": 2114,
+          "fileCategory": "code"
+        },
+        {
+          "path": "Rmms.Infrastructure/Persistence/Migrations/20260614164936_M13_Documents.cs",
+          "language": "csharp",
+          "sizeLines": 84,
+          "fileCategory": "code"
+        },
+        {
+          "path": "Rmms.Infrastructure/Persistence/Migrations/20260614164936_M13_Documents.Designer.cs",
+          "language": "csharp",
+          "sizeLines": 2245,
+          "fileCategory": "code"
+        },
+        {
+          "path": "Rmms.Infrastructure/Persistence/Migrations/20260614165737_M14_News.cs",
+          "language": "csharp",
+          "sizeLines": 116,
+          "fileCategory": "code"
+        },
+        {
+          "path": "Rmms.Infrastructure/Persistence/Migrations/20260614165737_M14_News.Designer.cs",
+          "language": "csharp",
+          "sizeLines": 2438,
+          "fileCategory": "code"
+        },
+        {
+          "path": "Rmms.Infrastructure/Persistence/Migrations/20260615022635_S17_AttendanceCheckInIndex.cs",
+          "language": "csharp",
+          "sizeLines": 27,
+          "fileCategory": "code"
+        }
+      ],
+      "batchImportData": {
+        "Rmms.Infrastructure/Persistence/Migrations/20260605034359_M03_Organization_Assignment.cs": [],
+        "Rmms.Infrastructure/Persistence/Migrations/20260605034359_M03_Organization_Assignment.Designer.cs": [],
+        "Rmms.Infrastructure/Persistence/Migrations/20260606042427_M07_WorkSchedule.cs": [],
+        "Rmms.Infrastructure/Persistence/Migrations/20260606042427_M07_WorkSchedule.Designer.cs": [],
+        "Rmms.Infrastructure/Persistence/Migrations/20260606082819_M05_Attendance.cs": [],
+        "Rmms.Infrastructure/Persistence/Migrations/20260606082819_M05_Attendance.Designer.cs": [],
+        "Rmms.Infrastructure/Persistence/Migrations/20260606171533_M09_Approvals.cs": [],
+        "Rmms.Infrastructure/Persistence/Migrations/20260606171533_M09_Approvals.Designer.cs": [],
+        "Rmms.Infrastructure/Persistence/Migrations/20260607024229_M08_LeaveOt.cs": [],
+        "Rmms.Infrastructure/Persistence/Migrations/20260607024229_M08_LeaveOt.Designer.cs": [],
+        "Rmms.Infrastructure/Persistence/Migrations/20260608034404_M14_Notifications.cs": [],
+        "Rmms.Infrastructure/Persistence/Migrations/20260608034404_M14_Notifications.Designer.cs": [],
+        "Rmms.Infrastructure/Persistence/Migrations/20260614092038_M04_ProductMaster.cs": [],
+        "Rmms.Infrastructure/Persistence/Migrations/20260614092038_M04_ProductMaster.Designer.cs": [],
+        "Rmms.Infrastructure/Persistence/Migrations/20260614102719_M10_Forms.cs": [],
+        "Rmms.Infrastructure/Persistence/Migrations/20260614102719_M10_Forms.Designer.cs": [],
+        "Rmms.Infrastructure/Persistence/Migrations/20260614104723_M10_FormFill.cs": [],
+        "Rmms.Infrastructure/Persistence/Migrations/20260614104723_M10_FormFill.Designer.cs": [],
+        "Rmms.Infrastructure/Persistence/Migrations/20260614125121_M11_VisitPlan.cs": [],
+        "Rmms.Infrastructure/Persistence/Migrations/20260614125121_M11_VisitPlan.Designer.cs": [],
+        "Rmms.Infrastructure/Persistence/Migrations/20260614164936_M13_Documents.cs": [],
+        "Rmms.Infrastructure/Persistence/Migrations/20260614164936_M13_Documents.Designer.cs": [],
+        "Rmms.Infrastructure/Persistence/Migrations/20260614165737_M14_News.cs": [],
+        "Rmms.Infrastructure/Persistence/Migrations/20260614165737_M14_News.Designer.cs": [],
+        "Rmms.Infrastructure/Persistence/Migrations/20260615022635_S17_AttendanceCheckInIndex.cs": []
+      },
+      "neighborMap": {}
+    },
+    {
+      "batchIndex": 20,
+      "files": [
+        {
+          "path": "Rmms.Infrastructure/Persistence/Migrations/20260615022635_S17_AttendanceCheckInIndex.Designer.cs",
+          "language": "csharp",
+          "sizeLines": 2441,
+          "fileCategory": "code"
+        },
+        {
+          "path": "Rmms.Infrastructure/Persistence/Migrations/20260616081404_M10_FormSubmissionGps.cs",
+          "language": "csharp",
+          "sizeLines": 38,
+          "fileCategory": "code"
+        },
+        {
+          "path": "Rmms.Infrastructure/Persistence/Migrations/20260616081404_M10_FormSubmissionGps.Designer.cs",
+          "language": "csharp",
+          "sizeLines": 2449,
+          "fileCategory": "code"
+        },
+        {
+          "path": "Rmms.Infrastructure/Persistence/Migrations/20260616111821_M14_PushTokens.cs",
+          "language": "csharp",
+          "sizeLines": 53,
+          "fileCategory": "code"
+        },
+        {
+          "path": "Rmms.Infrastructure/Persistence/Migrations/20260616111821_M14_PushTokens.Designer.cs",
+          "language": "csharp",
+          "sizeLines": 2504,
+          "fileCategory": "code"
+        },
+        {
+          "path": "Rmms.Infrastructure/Persistence/Migrations/20260617151300_M01_SuperAdminFlag.cs",
+          "language": "csharp",
+          "sizeLines": 29,
+          "fileCategory": "code"
+        },
+        {
+          "path": "Rmms.Infrastructure/Persistence/Migrations/20260617151300_M01_SuperAdminFlag.Designer.cs",
+          "language": "csharp",
+          "sizeLines": 2510,
+          "fileCategory": "code"
+        },
+        {
+          "path": "Rmms.Infrastructure/Persistence/Migrations/AppDbContextModelSnapshot.cs",
+          "language": "csharp",
+          "sizeLines": 2507,
+          "fileCategory": "code"
+        },
+        {
+          "path": "Rmms.Infrastructure/Persistence/Migrations/PostMigrationScripts/001_audit_log_append_only.sql",
+          "language": "sql",
+          "sizeLines": 36,
+          "fileCategory": "data"
+        },
+        {
+          "path": "Rmms.Infrastructure/Reports/ClosedXmlReportExporter.cs",
+          "language": "csharp",
+          "sizeLines": 54,
+          "fileCategory": "code"
+        },
+        {
+          "path": "Rmms.Infrastructure/Rmms.Infrastructure.csproj",
+          "language": "csproj",
+          "sizeLines": 58,
+          "fileCategory": "config"
+        },
+        {
+          "path": "Rmms.Infrastructure/Services/RedisLoginRateLimiter.cs",
+          "language": "csharp",
+          "sizeLines": 79,
+          "fileCategory": "code"
+        },
+        {
+          "path": "Rmms.Infrastructure/Services/SystemDateTimeProvider.cs",
+          "language": "csharp",
+          "sizeLines": 9,
+          "fileCategory": "code"
+        },
+        {
+          "path": "Rmms.Shared/Errors/ErrorCodes.cs",
+          "language": "csharp",
+          "sizeLines": 70,
+          "fileCategory": "code"
+        },
+        {
+          "path": "Rmms.Shared/Errors/ErrorEnvelope.cs",
+          "language": "csharp",
+          "sizeLines": 17,
+          "fileCategory": "code"
+        },
+        {
+          "path": "Rmms.Shared/Pagination/PaginatedResponse.cs",
+          "language": "csharp",
+          "sizeLines": 31,
+          "fileCategory": "code"
+        },
+        {
+          "path": "Rmms.Shared/Rmms.Shared.csproj",
+          "language": "csproj",
+          "sizeLines": 11,
+          "fileCategory": "config"
+        },
+        {
+          "path": "Rmms.Worker/Program.cs",
+          "language": "csharp",
+          "sizeLines": 68,
+          "fileCategory": "code"
+        },
+        {
+          "path": "Rmms.Worker/SystemCurrentUser.cs",
+          "language": "csharp",
+          "sizeLines": 16,
+          "fileCategory": "code"
+        }
+      ],
+      "batchImportData": {
+        "Rmms.Infrastructure/Persistence/Migrations/20260615022635_S17_AttendanceCheckInIndex.Designer.cs": [],
+        "Rmms.Infrastructure/Persistence/Migrations/20260616081404_M10_FormSubmissionGps.cs": [],
+        "Rmms.Infrastructure/Persistence/Migrations/20260616081404_M10_FormSubmissionGps.Designer.cs": [],
+        "Rmms.Infrastructure/Persistence/Migrations/20260616111821_M14_PushTokens.cs": [],
+        "Rmms.Infrastructure/Persistence/Migrations/20260616111821_M14_PushTokens.Designer.cs": [],
+        "Rmms.Infrastructure/Persistence/Migrations/20260617151300_M01_SuperAdminFlag.cs": [],
+        "Rmms.Infrastructure/Persistence/Migrations/20260617151300_M01_SuperAdminFlag.Designer.cs": [],
+        "Rmms.Infrastructure/Persistence/Migrations/AppDbContextModelSnapshot.cs": [],
+        "Rmms.Infrastructure/Persistence/Migrations/PostMigrationScripts/001_audit_log_append_only.sql": [],
+        "Rmms.Infrastructure/Reports/ClosedXmlReportExporter.cs": [],
+        "Rmms.Infrastructure/Rmms.Infrastructure.csproj": [],
+        "Rmms.Infrastructure/Services/RedisLoginRateLimiter.cs": [],
+        "Rmms.Infrastructure/Services/SystemDateTimeProvider.cs": [],
+        "Rmms.Shared/Errors/ErrorCodes.cs": [],
+        "Rmms.Shared/Errors/ErrorEnvelope.cs": [],
+        "Rmms.Shared/Pagination/PaginatedResponse.cs": [],
+        "Rmms.Shared/Rmms.Shared.csproj": [],
+        "Rmms.Worker/Program.cs": [],
+        "Rmms.Worker/SystemCurrentUser.cs": []
+      },
+      "neighborMap": {}
+    }
+  ]
+}

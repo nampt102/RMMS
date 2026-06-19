@@ -1,0 +1,1396 @@
+{
+  "nodes": [
+    {
+      "id": "file:Rmms.Domain/Enums/AttendanceStatus.cs",
+      "type": "file",
+      "name": "AttendanceStatus.cs",
+      "filePath": "Rmms.Domain/Enums/AttendanceStatus.cs",
+      "summary": "AttendanceStatus.cs — tệp mã nguồn C# trong backend RMMS (0 hàm, 0 class).",
+      "tags": [
+        "rmms.domain",
+        "enums",
+        "code",
+        "cs"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:Rmms.Domain/Enums/AuditAction.cs",
+      "type": "file",
+      "name": "AuditAction.cs",
+      "filePath": "Rmms.Domain/Enums/AuditAction.cs",
+      "summary": "AuditAction.cs — tệp mã nguồn C# trong backend RMMS (0 hàm, 1 class).",
+      "tags": [
+        "rmms.domain",
+        "enums",
+        "code",
+        "cs"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:Rmms.Domain/Enums/AuditAction.cs:AuditAction",
+      "type": "class",
+      "name": "AuditAction",
+      "filePath": "Rmms.Domain/Enums/AuditAction.cs",
+      "lineRange": [
+        11,
+        117
+      ],
+      "summary": "Class AuditAction trong AuditAction.cs.",
+      "tags": [
+        "rmms.domain",
+        "enums",
+        "code",
+        "cs",
+        "class"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:Rmms.Domain/Enums/DeviceStatus.cs",
+      "type": "file",
+      "name": "DeviceStatus.cs",
+      "filePath": "Rmms.Domain/Enums/DeviceStatus.cs",
+      "summary": "DeviceStatus.cs — tệp mã nguồn C# trong backend RMMS (0 hàm, 0 class).",
+      "tags": [
+        "rmms.domain",
+        "enums",
+        "code",
+        "cs"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:Rmms.Domain/Enums/DocumentFolderType.cs",
+      "type": "file",
+      "name": "DocumentFolderType.cs",
+      "filePath": "Rmms.Domain/Enums/DocumentFolderType.cs",
+      "summary": "DocumentFolderType.cs — tệp mã nguồn C# trong backend RMMS (0 hàm, 0 class).",
+      "tags": [
+        "rmms.domain",
+        "enums",
+        "code",
+        "cs"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:Rmms.Domain/Enums/FaceVerificationResult.cs",
+      "type": "file",
+      "name": "FaceVerificationResult.cs",
+      "filePath": "Rmms.Domain/Enums/FaceVerificationResult.cs",
+      "summary": "FaceVerificationResult.cs — tệp mã nguồn C# trong backend RMMS (0 hàm, 0 class).",
+      "tags": [
+        "rmms.domain",
+        "enums",
+        "code",
+        "cs"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:Rmms.Domain/Enums/FormStatus.cs",
+      "type": "file",
+      "name": "FormStatus.cs",
+      "filePath": "Rmms.Domain/Enums/FormStatus.cs",
+      "summary": "FormStatus.cs — tệp mã nguồn C# trong backend RMMS (0 hàm, 0 class).",
+      "tags": [
+        "rmms.domain",
+        "enums",
+        "code",
+        "cs"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:Rmms.Domain/Enums/FormSubmissionStatus.cs",
+      "type": "file",
+      "name": "FormSubmissionStatus.cs",
+      "filePath": "Rmms.Domain/Enums/FormSubmissionStatus.cs",
+      "summary": "FormSubmissionStatus.cs — tệp mã nguồn C# trong backend RMMS (0 hàm, 0 class).",
+      "tags": [
+        "rmms.domain",
+        "enums",
+        "code",
+        "cs"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:Rmms.Domain/Enums/FormType.cs",
+      "type": "file",
+      "name": "FormType.cs",
+      "filePath": "Rmms.Domain/Enums/FormType.cs",
+      "summary": "FormType.cs — tệp mã nguồn C# trong backend RMMS (0 hàm, 0 class).",
+      "tags": [
+        "rmms.domain",
+        "enums",
+        "code",
+        "cs"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:Rmms.Domain/Enums/LeaveType.cs",
+      "type": "file",
+      "name": "LeaveType.cs",
+      "filePath": "Rmms.Domain/Enums/LeaveType.cs",
+      "summary": "LeaveType.cs — tệp mã nguồn C# trong backend RMMS (0 hàm, 0 class).",
+      "tags": [
+        "rmms.domain",
+        "enums",
+        "code",
+        "cs"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:Rmms.Domain/Enums/NotificationType.cs",
+      "type": "file",
+      "name": "NotificationType.cs",
+      "filePath": "Rmms.Domain/Enums/NotificationType.cs",
+      "summary": "NotificationType.cs — tệp mã nguồn C# trong backend RMMS (0 hàm, 0 class).",
+      "tags": [
+        "rmms.domain",
+        "enums",
+        "code",
+        "cs"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:Rmms.Domain/Enums/ProductStatus.cs",
+      "type": "file",
+      "name": "ProductStatus.cs",
+      "filePath": "Rmms.Domain/Enums/ProductStatus.cs",
+      "summary": "ProductStatus.cs — tệp mã nguồn C# trong backend RMMS (0 hàm, 0 class).",
+      "tags": [
+        "rmms.domain",
+        "enums",
+        "code",
+        "cs"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:Rmms.Domain/Enums/RequestStatus.cs",
+      "type": "file",
+      "name": "RequestStatus.cs",
+      "filePath": "Rmms.Domain/Enums/RequestStatus.cs",
+      "summary": "RequestStatus.cs — tệp mã nguồn C# trong backend RMMS (0 hàm, 0 class).",
+      "tags": [
+        "rmms.domain",
+        "enums",
+        "code",
+        "cs"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:Rmms.Domain/Enums/StoreStatus.cs",
+      "type": "file",
+      "name": "StoreStatus.cs",
+      "filePath": "Rmms.Domain/Enums/StoreStatus.cs",
+      "summary": "StoreStatus.cs — tệp mã nguồn C# trong backend RMMS (0 hàm, 0 class).",
+      "tags": [
+        "rmms.domain",
+        "enums",
+        "code",
+        "cs"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:Rmms.Domain/Enums/UserRole.cs",
+      "type": "file",
+      "name": "UserRole.cs",
+      "filePath": "Rmms.Domain/Enums/UserRole.cs",
+      "summary": "UserRole.cs — tệp mã nguồn C# trong backend RMMS (0 hàm, 0 class).",
+      "tags": [
+        "rmms.domain",
+        "enums",
+        "code",
+        "cs"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:Rmms.Domain/Enums/UserStatus.cs",
+      "type": "file",
+      "name": "UserStatus.cs",
+      "filePath": "Rmms.Domain/Enums/UserStatus.cs",
+      "summary": "UserStatus.cs — tệp mã nguồn C# trong backend RMMS (0 hàm, 0 class).",
+      "tags": [
+        "rmms.domain",
+        "enums",
+        "code",
+        "cs"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:Rmms.Domain/Enums/VisitPlanStatus.cs",
+      "type": "file",
+      "name": "VisitPlanStatus.cs",
+      "filePath": "Rmms.Domain/Enums/VisitPlanStatus.cs",
+      "summary": "VisitPlanStatus.cs — tệp mã nguồn C# trong backend RMMS (0 hàm, 0 class).",
+      "tags": [
+        "rmms.domain",
+        "enums",
+        "code",
+        "cs"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:Rmms.Domain/Enums/WorkScheduleStatus.cs",
+      "type": "file",
+      "name": "WorkScheduleStatus.cs",
+      "filePath": "Rmms.Domain/Enums/WorkScheduleStatus.cs",
+      "summary": "WorkScheduleStatus.cs — tệp mã nguồn C# trong backend RMMS (0 hàm, 0 class).",
+      "tags": [
+        "rmms.domain",
+        "enums",
+        "code",
+        "cs"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:Rmms.Domain/Forms/Form.cs",
+      "type": "file",
+      "name": "Form.cs",
+      "filePath": "Rmms.Domain/Forms/Form.cs",
+      "summary": "Form.cs — tệp mã nguồn C# trong backend RMMS (5 hàm, 1 class).",
+      "tags": [
+        "rmms.domain",
+        "forms",
+        "code",
+        "cs"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:Rmms.Domain/Forms/Form.cs:Form",
+      "type": "function",
+      "name": "Form",
+      "filePath": "Rmms.Domain/Forms/Form.cs",
+      "lineRange": [
+        26,
+        26
+      ],
+      "summary": "Hàm Form trong Form.cs.",
+      "tags": [
+        "rmms.domain",
+        "forms",
+        "code",
+        "cs",
+        "ham"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Rmms.Domain/Forms/Form.cs:Create",
+      "type": "function",
+      "name": "Create",
+      "filePath": "Rmms.Domain/Forms/Form.cs",
+      "lineRange": [
+        28,
+        46
+      ],
+      "summary": "Hàm Create trong Form.cs.",
+      "tags": [
+        "rmms.domain",
+        "forms",
+        "code",
+        "cs",
+        "ham"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Rmms.Domain/Forms/Form.cs:UpdateMeta",
+      "type": "function",
+      "name": "UpdateMeta",
+      "filePath": "Rmms.Domain/Forms/Form.cs",
+      "lineRange": [
+        49,
+        58
+      ],
+      "summary": "Hàm UpdateMeta trong Form.cs.",
+      "tags": [
+        "rmms.domain",
+        "forms",
+        "code",
+        "cs",
+        "ham"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Rmms.Domain/Forms/Form.cs:MarkPublished",
+      "type": "function",
+      "name": "MarkPublished",
+      "filePath": "Rmms.Domain/Forms/Form.cs",
+      "lineRange": [
+        61,
+        66
+      ],
+      "summary": "Hàm MarkPublished trong Form.cs.",
+      "tags": [
+        "rmms.domain",
+        "forms",
+        "code",
+        "cs",
+        "ham"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Rmms.Domain/Forms/Form.cs:Archive",
+      "type": "function",
+      "name": "Archive",
+      "filePath": "Rmms.Domain/Forms/Form.cs",
+      "lineRange": [
+        68,
+        68
+      ],
+      "summary": "Hàm Archive trong Form.cs.",
+      "tags": [
+        "rmms.domain",
+        "forms",
+        "code",
+        "cs",
+        "ham"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:Rmms.Domain/Forms/Form.cs:Form",
+      "type": "class",
+      "name": "Form",
+      "filePath": "Rmms.Domain/Forms/Form.cs",
+      "lineRange": [
+        12,
+        69
+      ],
+      "summary": "Class Form trong Form.cs.",
+      "tags": [
+        "rmms.domain",
+        "forms",
+        "code",
+        "cs",
+        "class"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:Rmms.Domain/Forms/FormAssignment.cs",
+      "type": "file",
+      "name": "FormAssignment.cs",
+      "filePath": "Rmms.Domain/Forms/FormAssignment.cs",
+      "summary": "FormAssignment.cs — tệp mã nguồn C# trong backend RMMS (2 hàm, 1 class).",
+      "tags": [
+        "rmms.domain",
+        "forms",
+        "code",
+        "cs"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Rmms.Domain/Forms/FormAssignment.cs:FormAssignment",
+      "type": "function",
+      "name": "FormAssignment",
+      "filePath": "Rmms.Domain/Forms/FormAssignment.cs",
+      "lineRange": [
+        26,
+        26
+      ],
+      "summary": "Hàm FormAssignment trong FormAssignment.cs.",
+      "tags": [
+        "rmms.domain",
+        "forms",
+        "code",
+        "cs",
+        "ham"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Rmms.Domain/Forms/FormAssignment.cs:Create",
+      "type": "function",
+      "name": "Create",
+      "filePath": "Rmms.Domain/Forms/FormAssignment.cs",
+      "lineRange": [
+        28,
+        46
+      ],
+      "summary": "Hàm Create trong FormAssignment.cs.",
+      "tags": [
+        "rmms.domain",
+        "forms",
+        "code",
+        "cs",
+        "ham"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:Rmms.Domain/Forms/FormAssignment.cs:FormAssignment",
+      "type": "class",
+      "name": "FormAssignment",
+      "filePath": "Rmms.Domain/Forms/FormAssignment.cs",
+      "lineRange": [
+        11,
+        47
+      ],
+      "summary": "Class FormAssignment trong FormAssignment.cs.",
+      "tags": [
+        "rmms.domain",
+        "forms",
+        "code",
+        "cs",
+        "class"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:Rmms.Domain/Forms/FormSubmission.cs",
+      "type": "file",
+      "name": "FormSubmission.cs",
+      "filePath": "Rmms.Domain/Forms/FormSubmission.cs",
+      "summary": "FormSubmission.cs — tệp mã nguồn C# trong backend RMMS (2 hàm, 1 class).",
+      "tags": [
+        "rmms.domain",
+        "forms",
+        "code",
+        "cs"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Rmms.Domain/Forms/FormSubmission.cs:FormSubmission",
+      "type": "function",
+      "name": "FormSubmission",
+      "filePath": "Rmms.Domain/Forms/FormSubmission.cs",
+      "lineRange": [
+        36,
+        36
+      ],
+      "summary": "Hàm FormSubmission trong FormSubmission.cs.",
+      "tags": [
+        "rmms.domain",
+        "forms",
+        "code",
+        "cs",
+        "ham"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Rmms.Domain/Forms/FormSubmission.cs:Create",
+      "type": "function",
+      "name": "Create",
+      "filePath": "Rmms.Domain/Forms/FormSubmission.cs",
+      "lineRange": [
+        38,
+        66
+      ],
+      "summary": "Hàm Create trong FormSubmission.cs.",
+      "tags": [
+        "rmms.domain",
+        "forms",
+        "code",
+        "cs",
+        "ham"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:Rmms.Domain/Forms/FormSubmission.cs:FormSubmission",
+      "type": "class",
+      "name": "FormSubmission",
+      "filePath": "Rmms.Domain/Forms/FormSubmission.cs",
+      "lineRange": [
+        11,
+        67
+      ],
+      "summary": "Class FormSubmission trong FormSubmission.cs.",
+      "tags": [
+        "rmms.domain",
+        "forms",
+        "code",
+        "cs",
+        "class"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:Rmms.Domain/Forms/FormVersion.cs",
+      "type": "file",
+      "name": "FormVersion.cs",
+      "filePath": "Rmms.Domain/Forms/FormVersion.cs",
+      "summary": "FormVersion.cs — tệp mã nguồn C# trong backend RMMS (4 hàm, 1 class).",
+      "tags": [
+        "rmms.domain",
+        "forms",
+        "code",
+        "cs"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Rmms.Domain/Forms/FormVersion.cs:FormVersion",
+      "type": "function",
+      "name": "FormVersion",
+      "filePath": "Rmms.Domain/Forms/FormVersion.cs",
+      "lineRange": [
+        25,
+        25
+      ],
+      "summary": "Hàm FormVersion trong FormVersion.cs.",
+      "tags": [
+        "rmms.domain",
+        "forms",
+        "code",
+        "cs",
+        "ham"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Rmms.Domain/Forms/FormVersion.cs:CreateDraft",
+      "type": "function",
+      "name": "CreateDraft",
+      "filePath": "Rmms.Domain/Forms/FormVersion.cs",
+      "lineRange": [
+        27,
+        39
+      ],
+      "summary": "Hàm CreateDraft trong FormVersion.cs.",
+      "tags": [
+        "rmms.domain",
+        "forms",
+        "code",
+        "cs",
+        "ham"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Rmms.Domain/Forms/FormVersion.cs:UpdateSchema",
+      "type": "function",
+      "name": "UpdateSchema",
+      "filePath": "Rmms.Domain/Forms/FormVersion.cs",
+      "lineRange": [
+        42,
+        47
+      ],
+      "summary": "Hàm UpdateSchema trong FormVersion.cs.",
+      "tags": [
+        "rmms.domain",
+        "forms",
+        "code",
+        "cs",
+        "ham"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Rmms.Domain/Forms/FormVersion.cs:Publish",
+      "type": "function",
+      "name": "Publish",
+      "filePath": "Rmms.Domain/Forms/FormVersion.cs",
+      "lineRange": [
+        49,
+        54
+      ],
+      "summary": "Hàm Publish trong FormVersion.cs.",
+      "tags": [
+        "rmms.domain",
+        "forms",
+        "code",
+        "cs",
+        "ham"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:Rmms.Domain/Forms/FormVersion.cs:FormVersion",
+      "type": "class",
+      "name": "FormVersion",
+      "filePath": "Rmms.Domain/Forms/FormVersion.cs",
+      "lineRange": [
+        12,
+        55
+      ],
+      "summary": "Class FormVersion trong FormVersion.cs.",
+      "tags": [
+        "rmms.domain",
+        "forms",
+        "code",
+        "cs",
+        "class"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:Rmms.Domain/LeaveOt/LeaveRequest.cs",
+      "type": "file",
+      "name": "LeaveRequest.cs",
+      "filePath": "Rmms.Domain/LeaveOt/LeaveRequest.cs",
+      "summary": "LeaveRequest.cs — tệp mã nguồn C# trong backend RMMS (6 hàm, 1 class).",
+      "tags": [
+        "rmms.domain",
+        "leaveot",
+        "code",
+        "cs"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:Rmms.Domain/LeaveOt/LeaveRequest.cs:LeaveRequest",
+      "type": "function",
+      "name": "LeaveRequest",
+      "filePath": "Rmms.Domain/LeaveOt/LeaveRequest.cs",
+      "lineRange": [
+        24,
+        24
+      ],
+      "summary": "Hàm LeaveRequest trong LeaveRequest.cs.",
+      "tags": [
+        "rmms.domain",
+        "leaveot",
+        "code",
+        "cs",
+        "ham"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Rmms.Domain/LeaveOt/LeaveRequest.cs:Create",
+      "type": "function",
+      "name": "Create",
+      "filePath": "Rmms.Domain/LeaveOt/LeaveRequest.cs",
+      "lineRange": [
+        26,
+        45
+      ],
+      "summary": "Hàm Create trong LeaveRequest.cs.",
+      "tags": [
+        "rmms.domain",
+        "leaveot",
+        "code",
+        "cs",
+        "ham"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Rmms.Domain/LeaveOt/LeaveRequest.cs:LinkApproval",
+      "type": "function",
+      "name": "LinkApproval",
+      "filePath": "Rmms.Domain/LeaveOt/LeaveRequest.cs",
+      "lineRange": [
+        49,
+        49
+      ],
+      "summary": "Hàm LinkApproval trong LeaveRequest.cs.",
+      "tags": [
+        "rmms.domain",
+        "leaveot",
+        "code",
+        "cs",
+        "ham"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Rmms.Domain/LeaveOt/LeaveRequest.cs:Approve",
+      "type": "function",
+      "name": "Approve",
+      "filePath": "Rmms.Domain/LeaveOt/LeaveRequest.cs",
+      "lineRange": [
+        51,
+        56
+      ],
+      "summary": "Hàm Approve trong LeaveRequest.cs.",
+      "tags": [
+        "rmms.domain",
+        "leaveot",
+        "code",
+        "cs",
+        "ham"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Rmms.Domain/LeaveOt/LeaveRequest.cs:Reject",
+      "type": "function",
+      "name": "Reject",
+      "filePath": "Rmms.Domain/LeaveOt/LeaveRequest.cs",
+      "lineRange": [
+        58,
+        63
+      ],
+      "summary": "Hàm Reject trong LeaveRequest.cs.",
+      "tags": [
+        "rmms.domain",
+        "leaveot",
+        "code",
+        "cs",
+        "ham"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Rmms.Domain/LeaveOt/LeaveRequest.cs:EnsurePending",
+      "type": "function",
+      "name": "EnsurePending",
+      "filePath": "Rmms.Domain/LeaveOt/LeaveRequest.cs",
+      "lineRange": [
+        65,
+        69
+      ],
+      "summary": "Hàm EnsurePending trong LeaveRequest.cs.",
+      "tags": [
+        "rmms.domain",
+        "leaveot",
+        "code",
+        "cs",
+        "ham"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:Rmms.Domain/LeaveOt/LeaveRequest.cs:LeaveRequest",
+      "type": "class",
+      "name": "LeaveRequest",
+      "filePath": "Rmms.Domain/LeaveOt/LeaveRequest.cs",
+      "lineRange": [
+        11,
+        70
+      ],
+      "summary": "Class LeaveRequest trong LeaveRequest.cs.",
+      "tags": [
+        "rmms.domain",
+        "leaveot",
+        "code",
+        "cs",
+        "class"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:Rmms.Domain/LeaveOt/OtRequest.cs",
+      "type": "file",
+      "name": "OtRequest.cs",
+      "filePath": "Rmms.Domain/LeaveOt/OtRequest.cs",
+      "summary": "OtRequest.cs — tệp mã nguồn C# trong backend RMMS (6 hàm, 1 class).",
+      "tags": [
+        "rmms.domain",
+        "leaveot",
+        "code",
+        "cs"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:Rmms.Domain/LeaveOt/OtRequest.cs:OtRequest",
+      "type": "function",
+      "name": "OtRequest",
+      "filePath": "Rmms.Domain/LeaveOt/OtRequest.cs",
+      "lineRange": [
+        20,
+        20
+      ],
+      "summary": "Hàm OtRequest trong OtRequest.cs.",
+      "tags": [
+        "rmms.domain",
+        "leaveot",
+        "code",
+        "cs",
+        "ham"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Rmms.Domain/LeaveOt/OtRequest.cs:Create",
+      "type": "function",
+      "name": "Create",
+      "filePath": "Rmms.Domain/LeaveOt/OtRequest.cs",
+      "lineRange": [
+        22,
+        36
+      ],
+      "summary": "Hàm Create trong OtRequest.cs.",
+      "tags": [
+        "rmms.domain",
+        "leaveot",
+        "code",
+        "cs",
+        "ham"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Rmms.Domain/LeaveOt/OtRequest.cs:LinkApproval",
+      "type": "function",
+      "name": "LinkApproval",
+      "filePath": "Rmms.Domain/LeaveOt/OtRequest.cs",
+      "lineRange": [
+        40,
+        40
+      ],
+      "summary": "Hàm LinkApproval trong OtRequest.cs.",
+      "tags": [
+        "rmms.domain",
+        "leaveot",
+        "code",
+        "cs",
+        "ham"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Rmms.Domain/LeaveOt/OtRequest.cs:Approve",
+      "type": "function",
+      "name": "Approve",
+      "filePath": "Rmms.Domain/LeaveOt/OtRequest.cs",
+      "lineRange": [
+        42,
+        47
+      ],
+      "summary": "Hàm Approve trong OtRequest.cs.",
+      "tags": [
+        "rmms.domain",
+        "leaveot",
+        "code",
+        "cs",
+        "ham"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Rmms.Domain/LeaveOt/OtRequest.cs:Reject",
+      "type": "function",
+      "name": "Reject",
+      "filePath": "Rmms.Domain/LeaveOt/OtRequest.cs",
+      "lineRange": [
+        49,
+        54
+      ],
+      "summary": "Hàm Reject trong OtRequest.cs.",
+      "tags": [
+        "rmms.domain",
+        "leaveot",
+        "code",
+        "cs",
+        "ham"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Rmms.Domain/LeaveOt/OtRequest.cs:EnsurePending",
+      "type": "function",
+      "name": "EnsurePending",
+      "filePath": "Rmms.Domain/LeaveOt/OtRequest.cs",
+      "lineRange": [
+        56,
+        60
+      ],
+      "summary": "Hàm EnsurePending trong OtRequest.cs.",
+      "tags": [
+        "rmms.domain",
+        "leaveot",
+        "code",
+        "cs",
+        "ham"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:Rmms.Domain/LeaveOt/OtRequest.cs:OtRequest",
+      "type": "class",
+      "name": "OtRequest",
+      "filePath": "Rmms.Domain/LeaveOt/OtRequest.cs",
+      "lineRange": [
+        10,
+        61
+      ],
+      "summary": "Class OtRequest trong OtRequest.cs.",
+      "tags": [
+        "rmms.domain",
+        "leaveot",
+        "code",
+        "cs",
+        "class"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:Rmms.Domain/News/NewsAssignment.cs",
+      "type": "file",
+      "name": "NewsAssignment.cs",
+      "filePath": "Rmms.Domain/News/NewsAssignment.cs",
+      "summary": "NewsAssignment.cs — tệp mã nguồn C# trong backend RMMS (2 hàm, 1 class).",
+      "tags": [
+        "rmms.domain",
+        "news",
+        "code",
+        "cs"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Rmms.Domain/News/NewsAssignment.cs:NewsAssignment",
+      "type": "function",
+      "name": "NewsAssignment",
+      "filePath": "Rmms.Domain/News/NewsAssignment.cs",
+      "lineRange": [
+        15,
+        15
+      ],
+      "summary": "Hàm NewsAssignment trong NewsAssignment.cs.",
+      "tags": [
+        "rmms.domain",
+        "news",
+        "code",
+        "cs",
+        "ham"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Rmms.Domain/News/NewsAssignment.cs:Create",
+      "type": "function",
+      "name": "Create",
+      "filePath": "Rmms.Domain/News/NewsAssignment.cs",
+      "lineRange": [
+        17,
+        31
+      ],
+      "summary": "Hàm Create trong NewsAssignment.cs.",
+      "tags": [
+        "rmms.domain",
+        "news",
+        "code",
+        "cs",
+        "ham"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:Rmms.Domain/News/NewsAssignment.cs:NewsAssignment",
+      "type": "class",
+      "name": "NewsAssignment",
+      "filePath": "Rmms.Domain/News/NewsAssignment.cs",
+      "lineRange": [
+        9,
+        32
+      ],
+      "summary": "Class NewsAssignment trong NewsAssignment.cs.",
+      "tags": [
+        "rmms.domain",
+        "news",
+        "code",
+        "cs",
+        "class"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:Rmms.Domain/News/NewsItem.cs",
+      "type": "file",
+      "name": "NewsItem.cs",
+      "filePath": "Rmms.Domain/News/NewsItem.cs",
+      "summary": "NewsItem.cs — tệp mã nguồn C# trong backend RMMS (4 hàm, 1 class).",
+      "tags": [
+        "rmms.domain",
+        "news",
+        "code",
+        "cs"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Rmms.Domain/News/NewsItem.cs:NewsItem",
+      "type": "function",
+      "name": "NewsItem",
+      "filePath": "Rmms.Domain/News/NewsItem.cs",
+      "lineRange": [
+        28,
+        28
+      ],
+      "summary": "Hàm NewsItem trong NewsItem.cs.",
+      "tags": [
+        "rmms.domain",
+        "news",
+        "code",
+        "cs",
+        "ham"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Rmms.Domain/News/NewsItem.cs:Create",
+      "type": "function",
+      "name": "Create",
+      "filePath": "Rmms.Domain/News/NewsItem.cs",
+      "lineRange": [
+        30,
+        45
+      ],
+      "summary": "Hàm Create trong NewsItem.cs.",
+      "tags": [
+        "rmms.domain",
+        "news",
+        "code",
+        "cs",
+        "ham"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Rmms.Domain/News/NewsItem.cs:UpdateContent",
+      "type": "function",
+      "name": "UpdateContent",
+      "filePath": "Rmms.Domain/News/NewsItem.cs",
+      "lineRange": [
+        47,
+        59
+      ],
+      "summary": "Hàm UpdateContent trong NewsItem.cs.",
+      "tags": [
+        "rmms.domain",
+        "news",
+        "code",
+        "cs",
+        "ham"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Rmms.Domain/News/NewsItem.cs:Publish",
+      "type": "function",
+      "name": "Publish",
+      "filePath": "Rmms.Domain/News/NewsItem.cs",
+      "lineRange": [
+        61,
+        66
+      ],
+      "summary": "Hàm Publish trong NewsItem.cs.",
+      "tags": [
+        "rmms.domain",
+        "news",
+        "code",
+        "cs",
+        "ham"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:Rmms.Domain/News/NewsItem.cs:NewsItem",
+      "type": "class",
+      "name": "NewsItem",
+      "filePath": "Rmms.Domain/News/NewsItem.cs",
+      "lineRange": [
+        14,
+        67
+      ],
+      "summary": "Class NewsItem trong NewsItem.cs.",
+      "tags": [
+        "rmms.domain",
+        "news",
+        "code",
+        "cs",
+        "class"
+      ],
+      "complexity": "moderate"
+    }
+  ],
+  "edges": [
+    {
+      "source": "file:Rmms.Domain/Enums/AuditAction.cs",
+      "target": "class:Rmms.Domain/Enums/AuditAction.cs:AuditAction",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Domain/Forms/Form.cs",
+      "target": "function:Rmms.Domain/Forms/Form.cs:Form",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Domain/Forms/Form.cs",
+      "target": "function:Rmms.Domain/Forms/Form.cs:Create",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Domain/Forms/Form.cs",
+      "target": "function:Rmms.Domain/Forms/Form.cs:UpdateMeta",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Domain/Forms/Form.cs",
+      "target": "function:Rmms.Domain/Forms/Form.cs:MarkPublished",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Domain/Forms/Form.cs",
+      "target": "function:Rmms.Domain/Forms/Form.cs:Archive",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Domain/Forms/Form.cs",
+      "target": "class:Rmms.Domain/Forms/Form.cs:Form",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Domain/Forms/FormAssignment.cs",
+      "target": "function:Rmms.Domain/Forms/FormAssignment.cs:FormAssignment",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Domain/Forms/FormAssignment.cs",
+      "target": "function:Rmms.Domain/Forms/FormAssignment.cs:Create",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Domain/Forms/FormAssignment.cs",
+      "target": "class:Rmms.Domain/Forms/FormAssignment.cs:FormAssignment",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Domain/Forms/FormSubmission.cs",
+      "target": "function:Rmms.Domain/Forms/FormSubmission.cs:FormSubmission",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Domain/Forms/FormSubmission.cs",
+      "target": "function:Rmms.Domain/Forms/FormSubmission.cs:Create",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Domain/Forms/FormSubmission.cs",
+      "target": "class:Rmms.Domain/Forms/FormSubmission.cs:FormSubmission",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Domain/Forms/FormVersion.cs",
+      "target": "function:Rmms.Domain/Forms/FormVersion.cs:FormVersion",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Domain/Forms/FormVersion.cs",
+      "target": "function:Rmms.Domain/Forms/FormVersion.cs:CreateDraft",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Domain/Forms/FormVersion.cs",
+      "target": "function:Rmms.Domain/Forms/FormVersion.cs:UpdateSchema",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Domain/Forms/FormVersion.cs",
+      "target": "function:Rmms.Domain/Forms/FormVersion.cs:Publish",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Domain/Forms/FormVersion.cs",
+      "target": "class:Rmms.Domain/Forms/FormVersion.cs:FormVersion",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Domain/LeaveOt/LeaveRequest.cs",
+      "target": "function:Rmms.Domain/LeaveOt/LeaveRequest.cs:LeaveRequest",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Domain/LeaveOt/LeaveRequest.cs",
+      "target": "function:Rmms.Domain/LeaveOt/LeaveRequest.cs:Create",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Domain/LeaveOt/LeaveRequest.cs",
+      "target": "function:Rmms.Domain/LeaveOt/LeaveRequest.cs:LinkApproval",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Domain/LeaveOt/LeaveRequest.cs",
+      "target": "function:Rmms.Domain/LeaveOt/LeaveRequest.cs:Approve",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Domain/LeaveOt/LeaveRequest.cs",
+      "target": "function:Rmms.Domain/LeaveOt/LeaveRequest.cs:Reject",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Domain/LeaveOt/LeaveRequest.cs",
+      "target": "function:Rmms.Domain/LeaveOt/LeaveRequest.cs:EnsurePending",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Domain/LeaveOt/LeaveRequest.cs",
+      "target": "class:Rmms.Domain/LeaveOt/LeaveRequest.cs:LeaveRequest",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Domain/LeaveOt/OtRequest.cs",
+      "target": "function:Rmms.Domain/LeaveOt/OtRequest.cs:OtRequest",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Domain/LeaveOt/OtRequest.cs",
+      "target": "function:Rmms.Domain/LeaveOt/OtRequest.cs:Create",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Domain/LeaveOt/OtRequest.cs",
+      "target": "function:Rmms.Domain/LeaveOt/OtRequest.cs:LinkApproval",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Domain/LeaveOt/OtRequest.cs",
+      "target": "function:Rmms.Domain/LeaveOt/OtRequest.cs:Approve",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Domain/LeaveOt/OtRequest.cs",
+      "target": "function:Rmms.Domain/LeaveOt/OtRequest.cs:Reject",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Domain/LeaveOt/OtRequest.cs",
+      "target": "function:Rmms.Domain/LeaveOt/OtRequest.cs:EnsurePending",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Domain/LeaveOt/OtRequest.cs",
+      "target": "class:Rmms.Domain/LeaveOt/OtRequest.cs:OtRequest",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Domain/News/NewsAssignment.cs",
+      "target": "function:Rmms.Domain/News/NewsAssignment.cs:NewsAssignment",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Domain/News/NewsAssignment.cs",
+      "target": "function:Rmms.Domain/News/NewsAssignment.cs:Create",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Domain/News/NewsAssignment.cs",
+      "target": "class:Rmms.Domain/News/NewsAssignment.cs:NewsAssignment",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Domain/News/NewsItem.cs",
+      "target": "function:Rmms.Domain/News/NewsItem.cs:NewsItem",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Domain/News/NewsItem.cs",
+      "target": "function:Rmms.Domain/News/NewsItem.cs:Create",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Domain/News/NewsItem.cs",
+      "target": "function:Rmms.Domain/News/NewsItem.cs:UpdateContent",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Domain/News/NewsItem.cs",
+      "target": "function:Rmms.Domain/News/NewsItem.cs:Publish",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Domain/News/NewsItem.cs",
+      "target": "class:Rmms.Domain/News/NewsItem.cs:NewsItem",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    }
+  ]
+}

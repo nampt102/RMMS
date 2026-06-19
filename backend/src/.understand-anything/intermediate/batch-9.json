@@ -1,0 +1,1344 @@
+{
+  "nodes": [
+    {
+      "id": "file:Rmms.Application/Audit/GetAuditLogs.cs",
+      "type": "file",
+      "name": "GetAuditLogs.cs",
+      "filePath": "Rmms.Application/Audit/GetAuditLogs.cs",
+      "summary": "GetAuditLogs.cs — tệp mã nguồn C# trong backend RMMS (2 hàm, 1 class).",
+      "tags": [
+        "rmms.application",
+        "audit",
+        "code",
+        "cs"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Rmms.Application/Audit/GetAuditLogs.cs:GetAuditLogsQueryHandler",
+      "type": "function",
+      "name": "GetAuditLogsQueryHandler",
+      "filePath": "Rmms.Application/Audit/GetAuditLogs.cs",
+      "lineRange": [
+        32,
+        32
+      ],
+      "summary": "Hàm GetAuditLogsQueryHandler trong GetAuditLogs.cs.",
+      "tags": [
+        "rmms.application",
+        "audit",
+        "code",
+        "cs",
+        "ham"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Rmms.Application/Audit/GetAuditLogs.cs:Handle",
+      "type": "function",
+      "name": "Handle",
+      "filePath": "Rmms.Application/Audit/GetAuditLogs.cs",
+      "lineRange": [
+        34,
+        64
+      ],
+      "summary": "Hàm Handle trong GetAuditLogs.cs.",
+      "tags": [
+        "rmms.application",
+        "audit",
+        "code",
+        "cs",
+        "ham"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:Rmms.Application/Audit/GetAuditLogs.cs:GetAuditLogsQueryHandler",
+      "type": "class",
+      "name": "GetAuditLogsQueryHandler",
+      "filePath": "Rmms.Application/Audit/GetAuditLogs.cs",
+      "lineRange": [
+        26,
+        65
+      ],
+      "summary": "Class GetAuditLogsQueryHandler trong GetAuditLogs.cs.",
+      "tags": [
+        "rmms.application",
+        "audit",
+        "code",
+        "cs",
+        "class"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:Rmms.Application/Auth/ForgotPassword/ForgotPasswordCommand.cs",
+      "type": "file",
+      "name": "ForgotPasswordCommand.cs",
+      "filePath": "Rmms.Application/Auth/ForgotPassword/ForgotPasswordCommand.cs",
+      "summary": "ForgotPasswordCommand.cs — tệp mã nguồn C# trong backend RMMS (0 hàm, 0 class).",
+      "tags": [
+        "rmms.application",
+        "auth",
+        "code",
+        "cs"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:Rmms.Application/Auth/ForgotPassword/ForgotPasswordCommandHandler.cs",
+      "type": "file",
+      "name": "ForgotPasswordCommandHandler.cs",
+      "filePath": "Rmms.Application/Auth/ForgotPassword/ForgotPasswordCommandHandler.cs",
+      "summary": "ForgotPasswordCommandHandler.cs — tệp mã nguồn C# trong backend RMMS (2 hàm, 1 class).",
+      "tags": [
+        "rmms.application",
+        "auth",
+        "code",
+        "cs"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Rmms.Application/Auth/ForgotPassword/ForgotPasswordCommandHandler.cs:ForgotPasswordCommandHandler",
+      "type": "function",
+      "name": "ForgotPasswordCommandHandler",
+      "filePath": "Rmms.Application/Auth/ForgotPassword/ForgotPasswordCommandHandler.cs",
+      "lineRange": [
+        33,
+        45
+      ],
+      "summary": "Hàm ForgotPasswordCommandHandler trong ForgotPasswordCommandHandler.cs.",
+      "tags": [
+        "rmms.application",
+        "auth",
+        "code",
+        "cs",
+        "ham"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Rmms.Application/Auth/ForgotPassword/ForgotPasswordCommandHandler.cs:Handle",
+      "type": "function",
+      "name": "Handle",
+      "filePath": "Rmms.Application/Auth/ForgotPassword/ForgotPasswordCommandHandler.cs",
+      "lineRange": [
+        47,
+        104
+      ],
+      "summary": "Hàm Handle trong ForgotPasswordCommandHandler.cs.",
+      "tags": [
+        "rmms.application",
+        "auth",
+        "code",
+        "cs",
+        "ham"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:Rmms.Application/Auth/ForgotPassword/ForgotPasswordCommandHandler.cs:ForgotPasswordCommandHandler",
+      "type": "class",
+      "name": "ForgotPasswordCommandHandler",
+      "filePath": "Rmms.Application/Auth/ForgotPassword/ForgotPasswordCommandHandler.cs",
+      "lineRange": [
+        23,
+        105
+      ],
+      "summary": "Class ForgotPasswordCommandHandler trong ForgotPasswordCommandHandler.cs.",
+      "tags": [
+        "rmms.application",
+        "auth",
+        "code",
+        "cs",
+        "class"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:Rmms.Application/Auth/ForgotPassword/ForgotPasswordCommandValidator.cs",
+      "type": "file",
+      "name": "ForgotPasswordCommandValidator.cs",
+      "filePath": "Rmms.Application/Auth/ForgotPassword/ForgotPasswordCommandValidator.cs",
+      "summary": "ForgotPasswordCommandValidator.cs — tệp mã nguồn C# trong backend RMMS (1 hàm, 1 class).",
+      "tags": [
+        "rmms.application",
+        "auth",
+        "code",
+        "cs"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Rmms.Application/Auth/ForgotPassword/ForgotPasswordCommandValidator.cs:ForgotPasswordCommandValidator",
+      "type": "function",
+      "name": "ForgotPasswordCommandValidator",
+      "filePath": "Rmms.Application/Auth/ForgotPassword/ForgotPasswordCommandValidator.cs",
+      "lineRange": [
+        7,
+        13
+      ],
+      "summary": "Hàm ForgotPasswordCommandValidator trong ForgotPasswordCommandValidator.cs.",
+      "tags": [
+        "rmms.application",
+        "auth",
+        "code",
+        "cs",
+        "ham"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:Rmms.Application/Auth/ForgotPassword/ForgotPasswordCommandValidator.cs:ForgotPasswordCommandValidator",
+      "type": "class",
+      "name": "ForgotPasswordCommandValidator",
+      "filePath": "Rmms.Application/Auth/ForgotPassword/ForgotPasswordCommandValidator.cs",
+      "lineRange": [
+        5,
+        14
+      ],
+      "summary": "Class ForgotPasswordCommandValidator trong ForgotPasswordCommandValidator.cs.",
+      "tags": [
+        "rmms.application",
+        "auth",
+        "code",
+        "cs",
+        "class"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:Rmms.Application/Auth/Login/LoginCommand.cs",
+      "type": "file",
+      "name": "LoginCommand.cs",
+      "filePath": "Rmms.Application/Auth/Login/LoginCommand.cs",
+      "summary": "LoginCommand.cs — tệp mã nguồn C# trong backend RMMS (0 hàm, 0 class).",
+      "tags": [
+        "rmms.application",
+        "auth",
+        "code",
+        "cs"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:Rmms.Application/Auth/Login/LoginCommandHandler.cs",
+      "type": "file",
+      "name": "LoginCommandHandler.cs",
+      "filePath": "Rmms.Application/Auth/Login/LoginCommandHandler.cs",
+      "summary": "LoginCommandHandler.cs — tệp mã nguồn C# trong backend RMMS (4 hàm, 1 class).",
+      "tags": [
+        "rmms.application",
+        "auth",
+        "code",
+        "cs"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:Rmms.Application/Auth/Login/LoginCommandHandler.cs:LoginCommandHandler",
+      "type": "function",
+      "name": "LoginCommandHandler",
+      "filePath": "Rmms.Application/Auth/Login/LoginCommandHandler.cs",
+      "lineRange": [
+        40,
+        58
+      ],
+      "summary": "Hàm LoginCommandHandler trong LoginCommandHandler.cs.",
+      "tags": [
+        "rmms.application",
+        "auth",
+        "code",
+        "cs",
+        "ham"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Rmms.Application/Auth/Login/LoginCommandHandler.cs:Handle",
+      "type": "function",
+      "name": "Handle",
+      "filePath": "Rmms.Application/Auth/Login/LoginCommandHandler.cs",
+      "lineRange": [
+        60,
+        172
+      ],
+      "summary": "Hàm Handle trong LoginCommandHandler.cs.",
+      "tags": [
+        "rmms.application",
+        "auth",
+        "code",
+        "cs",
+        "ham"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Rmms.Application/Auth/Login/LoginCommandHandler.cs:ResolveDeviceAsync",
+      "type": "function",
+      "name": "ResolveDeviceAsync",
+      "filePath": "Rmms.Application/Auth/Login/LoginCommandHandler.cs",
+      "lineRange": [
+        179,
+        266
+      ],
+      "summary": "Hàm ResolveDeviceAsync trong LoginCommandHandler.cs.",
+      "tags": [
+        "rmms.application",
+        "auth",
+        "code",
+        "cs",
+        "ham"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Rmms.Application/Auth/Login/LoginCommandHandler.cs:FailLoginAsync",
+      "type": "function",
+      "name": "FailLoginAsync",
+      "filePath": "Rmms.Application/Auth/Login/LoginCommandHandler.cs",
+      "lineRange": [
+        268,
+        291
+      ],
+      "summary": "Hàm FailLoginAsync trong LoginCommandHandler.cs.",
+      "tags": [
+        "rmms.application",
+        "auth",
+        "code",
+        "cs",
+        "ham"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:Rmms.Application/Auth/Login/LoginCommandHandler.cs:LoginCommandHandler",
+      "type": "class",
+      "name": "LoginCommandHandler",
+      "filePath": "Rmms.Application/Auth/Login/LoginCommandHandler.cs",
+      "lineRange": [
+        29,
+        292
+      ],
+      "summary": "Class LoginCommandHandler trong LoginCommandHandler.cs.",
+      "tags": [
+        "rmms.application",
+        "auth",
+        "code",
+        "cs",
+        "class"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:Rmms.Application/Auth/Login/LoginCommandValidator.cs",
+      "type": "file",
+      "name": "LoginCommandValidator.cs",
+      "filePath": "Rmms.Application/Auth/Login/LoginCommandValidator.cs",
+      "summary": "LoginCommandValidator.cs — tệp mã nguồn C# trong backend RMMS (1 hàm, 1 class).",
+      "tags": [
+        "rmms.application",
+        "auth",
+        "code",
+        "cs"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Rmms.Application/Auth/Login/LoginCommandValidator.cs:LoginCommandValidator",
+      "type": "function",
+      "name": "LoginCommandValidator",
+      "filePath": "Rmms.Application/Auth/Login/LoginCommandValidator.cs",
+      "lineRange": [
+        7,
+        40
+      ],
+      "summary": "Hàm LoginCommandValidator trong LoginCommandValidator.cs.",
+      "tags": [
+        "rmms.application",
+        "auth",
+        "code",
+        "cs",
+        "ham"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:Rmms.Application/Auth/Login/LoginCommandValidator.cs:LoginCommandValidator",
+      "type": "class",
+      "name": "LoginCommandValidator",
+      "filePath": "Rmms.Application/Auth/Login/LoginCommandValidator.cs",
+      "lineRange": [
+        5,
+        41
+      ],
+      "summary": "Class LoginCommandValidator trong LoginCommandValidator.cs.",
+      "tags": [
+        "rmms.application",
+        "auth",
+        "code",
+        "cs",
+        "class"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:Rmms.Application/Auth/Login/LoginResponse.cs",
+      "type": "file",
+      "name": "LoginResponse.cs",
+      "filePath": "Rmms.Application/Auth/Login/LoginResponse.cs",
+      "summary": "LoginResponse.cs — tệp mã nguồn C# trong backend RMMS (0 hàm, 0 class).",
+      "tags": [
+        "rmms.application",
+        "auth",
+        "code",
+        "cs"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:Rmms.Application/Auth/Logout/LogoutCommand.cs",
+      "type": "file",
+      "name": "LogoutCommand.cs",
+      "filePath": "Rmms.Application/Auth/Logout/LogoutCommand.cs",
+      "summary": "LogoutCommand.cs — tệp mã nguồn C# trong backend RMMS (0 hàm, 0 class).",
+      "tags": [
+        "rmms.application",
+        "auth",
+        "code",
+        "cs"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:Rmms.Application/Auth/Logout/LogoutCommandHandler.cs",
+      "type": "file",
+      "name": "LogoutCommandHandler.cs",
+      "filePath": "Rmms.Application/Auth/Logout/LogoutCommandHandler.cs",
+      "summary": "LogoutCommandHandler.cs — tệp mã nguồn C# trong backend RMMS (2 hàm, 1 class).",
+      "tags": [
+        "rmms.application",
+        "auth",
+        "code",
+        "cs"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Rmms.Application/Auth/Logout/LogoutCommandHandler.cs:LogoutCommandHandler",
+      "type": "function",
+      "name": "LogoutCommandHandler",
+      "filePath": "Rmms.Application/Auth/Logout/LogoutCommandHandler.cs",
+      "lineRange": [
+        20,
+        30
+      ],
+      "summary": "Hàm LogoutCommandHandler trong LogoutCommandHandler.cs.",
+      "tags": [
+        "rmms.application",
+        "auth",
+        "code",
+        "cs",
+        "ham"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Rmms.Application/Auth/Logout/LogoutCommandHandler.cs:Handle",
+      "type": "function",
+      "name": "Handle",
+      "filePath": "Rmms.Application/Auth/Logout/LogoutCommandHandler.cs",
+      "lineRange": [
+        32,
+        56
+      ],
+      "summary": "Hàm Handle trong LogoutCommandHandler.cs.",
+      "tags": [
+        "rmms.application",
+        "auth",
+        "code",
+        "cs",
+        "ham"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:Rmms.Application/Auth/Logout/LogoutCommandHandler.cs:LogoutCommandHandler",
+      "type": "class",
+      "name": "LogoutCommandHandler",
+      "filePath": "Rmms.Application/Auth/Logout/LogoutCommandHandler.cs",
+      "lineRange": [
+        13,
+        57
+      ],
+      "summary": "Class LogoutCommandHandler trong LogoutCommandHandler.cs.",
+      "tags": [
+        "rmms.application",
+        "auth",
+        "code",
+        "cs",
+        "class"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:Rmms.Application/Auth/Logout/LogoutCommandValidator.cs",
+      "type": "file",
+      "name": "LogoutCommandValidator.cs",
+      "filePath": "Rmms.Application/Auth/Logout/LogoutCommandValidator.cs",
+      "summary": "LogoutCommandValidator.cs — tệp mã nguồn C# trong backend RMMS (1 hàm, 1 class).",
+      "tags": [
+        "rmms.application",
+        "auth",
+        "code",
+        "cs"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Rmms.Application/Auth/Logout/LogoutCommandValidator.cs:LogoutCommandValidator",
+      "type": "function",
+      "name": "LogoutCommandValidator",
+      "filePath": "Rmms.Application/Auth/Logout/LogoutCommandValidator.cs",
+      "lineRange": [
+        7,
+        12
+      ],
+      "summary": "Hàm LogoutCommandValidator trong LogoutCommandValidator.cs.",
+      "tags": [
+        "rmms.application",
+        "auth",
+        "code",
+        "cs",
+        "ham"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:Rmms.Application/Auth/Logout/LogoutCommandValidator.cs:LogoutCommandValidator",
+      "type": "class",
+      "name": "LogoutCommandValidator",
+      "filePath": "Rmms.Application/Auth/Logout/LogoutCommandValidator.cs",
+      "lineRange": [
+        5,
+        13
+      ],
+      "summary": "Class LogoutCommandValidator trong LogoutCommandValidator.cs.",
+      "tags": [
+        "rmms.application",
+        "auth",
+        "code",
+        "cs",
+        "class"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:Rmms.Application/Auth/Me/GetDeviceStatusQuery.cs",
+      "type": "file",
+      "name": "GetDeviceStatusQuery.cs",
+      "filePath": "Rmms.Application/Auth/Me/GetDeviceStatusQuery.cs",
+      "summary": "GetDeviceStatusQuery.cs — tệp mã nguồn C# trong backend RMMS (0 hàm, 0 class).",
+      "tags": [
+        "rmms.application",
+        "auth",
+        "code",
+        "cs"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:Rmms.Application/Auth/Me/GetDeviceStatusQueryHandler.cs",
+      "type": "file",
+      "name": "GetDeviceStatusQueryHandler.cs",
+      "filePath": "Rmms.Application/Auth/Me/GetDeviceStatusQueryHandler.cs",
+      "summary": "GetDeviceStatusQueryHandler.cs — tệp mã nguồn C# trong backend RMMS (2 hàm, 1 class).",
+      "tags": [
+        "rmms.application",
+        "auth",
+        "code",
+        "cs"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Rmms.Application/Auth/Me/GetDeviceStatusQueryHandler.cs:GetDeviceStatusQueryHandler",
+      "type": "function",
+      "name": "GetDeviceStatusQueryHandler",
+      "filePath": "Rmms.Application/Auth/Me/GetDeviceStatusQueryHandler.cs",
+      "lineRange": [
+        13,
+        13
+      ],
+      "summary": "Hàm GetDeviceStatusQueryHandler trong GetDeviceStatusQueryHandler.cs.",
+      "tags": [
+        "rmms.application",
+        "auth",
+        "code",
+        "cs",
+        "ham"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Rmms.Application/Auth/Me/GetDeviceStatusQueryHandler.cs:Handle",
+      "type": "function",
+      "name": "Handle",
+      "filePath": "Rmms.Application/Auth/Me/GetDeviceStatusQueryHandler.cs",
+      "lineRange": [
+        15,
+        35
+      ],
+      "summary": "Hàm Handle trong GetDeviceStatusQueryHandler.cs.",
+      "tags": [
+        "rmms.application",
+        "auth",
+        "code",
+        "cs",
+        "ham"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:Rmms.Application/Auth/Me/GetDeviceStatusQueryHandler.cs:GetDeviceStatusQueryHandler",
+      "type": "class",
+      "name": "GetDeviceStatusQueryHandler",
+      "filePath": "Rmms.Application/Auth/Me/GetDeviceStatusQueryHandler.cs",
+      "lineRange": [
+        9,
+        36
+      ],
+      "summary": "Class GetDeviceStatusQueryHandler trong GetDeviceStatusQueryHandler.cs.",
+      "tags": [
+        "rmms.application",
+        "auth",
+        "code",
+        "cs",
+        "class"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:Rmms.Application/Auth/Me/GetMeQuery.cs",
+      "type": "file",
+      "name": "GetMeQuery.cs",
+      "filePath": "Rmms.Application/Auth/Me/GetMeQuery.cs",
+      "summary": "GetMeQuery.cs — tệp mã nguồn C# trong backend RMMS (0 hàm, 0 class).",
+      "tags": [
+        "rmms.application",
+        "auth",
+        "code",
+        "cs"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:Rmms.Application/Auth/Me/GetMeQueryHandler.cs",
+      "type": "file",
+      "name": "GetMeQueryHandler.cs",
+      "filePath": "Rmms.Application/Auth/Me/GetMeQueryHandler.cs",
+      "summary": "GetMeQueryHandler.cs — tệp mã nguồn C# trong backend RMMS (2 hàm, 1 class).",
+      "tags": [
+        "rmms.application",
+        "auth",
+        "code",
+        "cs"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Rmms.Application/Auth/Me/GetMeQueryHandler.cs:GetMeQueryHandler",
+      "type": "function",
+      "name": "GetMeQueryHandler",
+      "filePath": "Rmms.Application/Auth/Me/GetMeQueryHandler.cs",
+      "lineRange": [
+        14,
+        14
+      ],
+      "summary": "Hàm GetMeQueryHandler trong GetMeQueryHandler.cs.",
+      "tags": [
+        "rmms.application",
+        "auth",
+        "code",
+        "cs",
+        "ham"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Rmms.Application/Auth/Me/GetMeQueryHandler.cs:Handle",
+      "type": "function",
+      "name": "Handle",
+      "filePath": "Rmms.Application/Auth/Me/GetMeQueryHandler.cs",
+      "lineRange": [
+        16,
+        58
+      ],
+      "summary": "Hàm Handle trong GetMeQueryHandler.cs.",
+      "tags": [
+        "rmms.application",
+        "auth",
+        "code",
+        "cs",
+        "ham"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:Rmms.Application/Auth/Me/GetMeQueryHandler.cs:GetMeQueryHandler",
+      "type": "class",
+      "name": "GetMeQueryHandler",
+      "filePath": "Rmms.Application/Auth/Me/GetMeQueryHandler.cs",
+      "lineRange": [
+        10,
+        59
+      ],
+      "summary": "Class GetMeQueryHandler trong GetMeQueryHandler.cs.",
+      "tags": [
+        "rmms.application",
+        "auth",
+        "code",
+        "cs",
+        "class"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:Rmms.Application/Auth/Me/MeDto.cs",
+      "type": "file",
+      "name": "MeDto.cs",
+      "filePath": "Rmms.Application/Auth/Me/MeDto.cs",
+      "summary": "MeDto.cs — tệp mã nguồn C# trong backend RMMS (0 hàm, 0 class).",
+      "tags": [
+        "rmms.application",
+        "auth",
+        "code",
+        "cs"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:Rmms.Application/Auth/Refresh/RefreshTokenCommand.cs",
+      "type": "file",
+      "name": "RefreshTokenCommand.cs",
+      "filePath": "Rmms.Application/Auth/Refresh/RefreshTokenCommand.cs",
+      "summary": "RefreshTokenCommand.cs — tệp mã nguồn C# trong backend RMMS (0 hàm, 0 class).",
+      "tags": [
+        "rmms.application",
+        "auth",
+        "code",
+        "cs"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:Rmms.Application/Auth/Refresh/RefreshTokenCommandHandler.cs",
+      "type": "file",
+      "name": "RefreshTokenCommandHandler.cs",
+      "filePath": "Rmms.Application/Auth/Refresh/RefreshTokenCommandHandler.cs",
+      "summary": "RefreshTokenCommandHandler.cs — tệp mã nguồn C# trong backend RMMS (2 hàm, 1 class).",
+      "tags": [
+        "rmms.application",
+        "auth",
+        "code",
+        "cs"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:Rmms.Application/Auth/Refresh/RefreshTokenCommandHandler.cs:RefreshTokenCommandHandler",
+      "type": "function",
+      "name": "RefreshTokenCommandHandler",
+      "filePath": "Rmms.Application/Auth/Refresh/RefreshTokenCommandHandler.cs",
+      "lineRange": [
+        39,
+        53
+      ],
+      "summary": "Hàm RefreshTokenCommandHandler trong RefreshTokenCommandHandler.cs.",
+      "tags": [
+        "rmms.application",
+        "auth",
+        "code",
+        "cs",
+        "ham"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Rmms.Application/Auth/Refresh/RefreshTokenCommandHandler.cs:Handle",
+      "type": "function",
+      "name": "Handle",
+      "filePath": "Rmms.Application/Auth/Refresh/RefreshTokenCommandHandler.cs",
+      "lineRange": [
+        55,
+        152
+      ],
+      "summary": "Hàm Handle trong RefreshTokenCommandHandler.cs.",
+      "tags": [
+        "rmms.application",
+        "auth",
+        "code",
+        "cs",
+        "ham"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:Rmms.Application/Auth/Refresh/RefreshTokenCommandHandler.cs:RefreshTokenCommandHandler",
+      "type": "class",
+      "name": "RefreshTokenCommandHandler",
+      "filePath": "Rmms.Application/Auth/Refresh/RefreshTokenCommandHandler.cs",
+      "lineRange": [
+        30,
+        153
+      ],
+      "summary": "Class RefreshTokenCommandHandler trong RefreshTokenCommandHandler.cs.",
+      "tags": [
+        "rmms.application",
+        "auth",
+        "code",
+        "cs",
+        "class"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:Rmms.Application/Auth/Refresh/RefreshTokenCommandValidator.cs",
+      "type": "file",
+      "name": "RefreshTokenCommandValidator.cs",
+      "filePath": "Rmms.Application/Auth/Refresh/RefreshTokenCommandValidator.cs",
+      "summary": "RefreshTokenCommandValidator.cs — tệp mã nguồn C# trong backend RMMS (1 hàm, 1 class).",
+      "tags": [
+        "rmms.application",
+        "auth",
+        "code",
+        "cs"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Rmms.Application/Auth/Refresh/RefreshTokenCommandValidator.cs:RefreshTokenCommandValidator",
+      "type": "function",
+      "name": "RefreshTokenCommandValidator",
+      "filePath": "Rmms.Application/Auth/Refresh/RefreshTokenCommandValidator.cs",
+      "lineRange": [
+        7,
+        13
+      ],
+      "summary": "Hàm RefreshTokenCommandValidator trong RefreshTokenCommandValidator.cs.",
+      "tags": [
+        "rmms.application",
+        "auth",
+        "code",
+        "cs",
+        "ham"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:Rmms.Application/Auth/Refresh/RefreshTokenCommandValidator.cs:RefreshTokenCommandValidator",
+      "type": "class",
+      "name": "RefreshTokenCommandValidator",
+      "filePath": "Rmms.Application/Auth/Refresh/RefreshTokenCommandValidator.cs",
+      "lineRange": [
+        5,
+        14
+      ],
+      "summary": "Class RefreshTokenCommandValidator trong RefreshTokenCommandValidator.cs.",
+      "tags": [
+        "rmms.application",
+        "auth",
+        "code",
+        "cs",
+        "class"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:Rmms.Application/Auth/Refresh/RefreshTokenResponse.cs",
+      "type": "file",
+      "name": "RefreshTokenResponse.cs",
+      "filePath": "Rmms.Application/Auth/Refresh/RefreshTokenResponse.cs",
+      "summary": "RefreshTokenResponse.cs — tệp mã nguồn C# trong backend RMMS (0 hàm, 0 class).",
+      "tags": [
+        "rmms.application",
+        "auth",
+        "code",
+        "cs"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:Rmms.Application/Auth/Register/RegisterUserCommand.cs",
+      "type": "file",
+      "name": "RegisterUserCommand.cs",
+      "filePath": "Rmms.Application/Auth/Register/RegisterUserCommand.cs",
+      "summary": "RegisterUserCommand.cs — tệp mã nguồn C# trong backend RMMS (0 hàm, 0 class).",
+      "tags": [
+        "rmms.application",
+        "auth",
+        "code",
+        "cs"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:Rmms.Application/Auth/Register/RegisterUserCommandHandler.cs",
+      "type": "file",
+      "name": "RegisterUserCommandHandler.cs",
+      "filePath": "Rmms.Application/Auth/Register/RegisterUserCommandHandler.cs",
+      "summary": "RegisterUserCommandHandler.cs — tệp mã nguồn C# trong backend RMMS (2 hàm, 1 class).",
+      "tags": [
+        "rmms.application",
+        "auth",
+        "code",
+        "cs"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Rmms.Application/Auth/Register/RegisterUserCommandHandler.cs:RegisterUserCommandHandler",
+      "type": "function",
+      "name": "RegisterUserCommandHandler",
+      "filePath": "Rmms.Application/Auth/Register/RegisterUserCommandHandler.cs",
+      "lineRange": [
+        40,
+        54
+      ],
+      "summary": "Hàm RegisterUserCommandHandler trong RegisterUserCommandHandler.cs.",
+      "tags": [
+        "rmms.application",
+        "auth",
+        "code",
+        "cs",
+        "ham"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Rmms.Application/Auth/Register/RegisterUserCommandHandler.cs:Handle",
+      "type": "function",
+      "name": "Handle",
+      "filePath": "Rmms.Application/Auth/Register/RegisterUserCommandHandler.cs",
+      "lineRange": [
+        56,
+        117
+      ],
+      "summary": "Hàm Handle trong RegisterUserCommandHandler.cs.",
+      "tags": [
+        "rmms.application",
+        "auth",
+        "code",
+        "cs",
+        "ham"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:Rmms.Application/Auth/Register/RegisterUserCommandHandler.cs:RegisterUserCommandHandler",
+      "type": "class",
+      "name": "RegisterUserCommandHandler",
+      "filePath": "Rmms.Application/Auth/Register/RegisterUserCommandHandler.cs",
+      "lineRange": [
+        29,
+        118
+      ],
+      "summary": "Class RegisterUserCommandHandler trong RegisterUserCommandHandler.cs.",
+      "tags": [
+        "rmms.application",
+        "auth",
+        "code",
+        "cs",
+        "class"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:Rmms.Application/Auth/Register/RegisterUserCommandValidator.cs",
+      "type": "file",
+      "name": "RegisterUserCommandValidator.cs",
+      "filePath": "Rmms.Application/Auth/Register/RegisterUserCommandValidator.cs",
+      "summary": "RegisterUserCommandValidator.cs — tệp mã nguồn C# trong backend RMMS (3 hàm, 1 class).",
+      "tags": [
+        "rmms.application",
+        "auth",
+        "code",
+        "cs"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Rmms.Application/Auth/Register/RegisterUserCommandValidator.cs:RegisterUserCommandValidator",
+      "type": "function",
+      "name": "RegisterUserCommandValidator",
+      "filePath": "Rmms.Application/Auth/Register/RegisterUserCommandValidator.cs",
+      "lineRange": [
+        15,
+        41
+      ],
+      "summary": "Hàm RegisterUserCommandValidator trong RegisterUserCommandValidator.cs.",
+      "tags": [
+        "rmms.application",
+        "auth",
+        "code",
+        "cs",
+        "ham"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Rmms.Application/Auth/Register/RegisterUserCommandValidator.cs:HasLetter",
+      "type": "function",
+      "name": "HasLetter",
+      "filePath": "Rmms.Application/Auth/Register/RegisterUserCommandValidator.cs",
+      "lineRange": [
+        43,
+        44
+      ],
+      "summary": "Hàm HasLetter trong RegisterUserCommandValidator.cs.",
+      "tags": [
+        "rmms.application",
+        "auth",
+        "code",
+        "cs",
+        "ham"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Rmms.Application/Auth/Register/RegisterUserCommandValidator.cs:HasDigit",
+      "type": "function",
+      "name": "HasDigit",
+      "filePath": "Rmms.Application/Auth/Register/RegisterUserCommandValidator.cs",
+      "lineRange": [
+        46,
+        47
+      ],
+      "summary": "Hàm HasDigit trong RegisterUserCommandValidator.cs.",
+      "tags": [
+        "rmms.application",
+        "auth",
+        "code",
+        "cs",
+        "ham"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:Rmms.Application/Auth/Register/RegisterUserCommandValidator.cs:RegisterUserCommandValidator",
+      "type": "class",
+      "name": "RegisterUserCommandValidator",
+      "filePath": "Rmms.Application/Auth/Register/RegisterUserCommandValidator.cs",
+      "lineRange": [
+        13,
+        48
+      ],
+      "summary": "Class RegisterUserCommandValidator trong RegisterUserCommandValidator.cs.",
+      "tags": [
+        "rmms.application",
+        "auth",
+        "code",
+        "cs",
+        "class"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:Rmms.Application/Auth/Register/RegisterUserResponse.cs",
+      "type": "file",
+      "name": "RegisterUserResponse.cs",
+      "filePath": "Rmms.Application/Auth/Register/RegisterUserResponse.cs",
+      "summary": "RegisterUserResponse.cs — tệp mã nguồn C# trong backend RMMS (0 hàm, 0 class).",
+      "tags": [
+        "rmms.application",
+        "auth",
+        "code",
+        "cs"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:Rmms.Application/Auth/ResetPassword/ResetPasswordCommand.cs",
+      "type": "file",
+      "name": "ResetPasswordCommand.cs",
+      "filePath": "Rmms.Application/Auth/ResetPassword/ResetPasswordCommand.cs",
+      "summary": "ResetPasswordCommand.cs — tệp mã nguồn C# trong backend RMMS (0 hàm, 0 class).",
+      "tags": [
+        "rmms.application",
+        "auth",
+        "code",
+        "cs"
+      ],
+      "complexity": "simple"
+    }
+  ],
+  "edges": [
+    {
+      "source": "file:Rmms.Application/Audit/GetAuditLogs.cs",
+      "target": "function:Rmms.Application/Audit/GetAuditLogs.cs:GetAuditLogsQueryHandler",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Application/Audit/GetAuditLogs.cs",
+      "target": "function:Rmms.Application/Audit/GetAuditLogs.cs:Handle",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Application/Audit/GetAuditLogs.cs",
+      "target": "class:Rmms.Application/Audit/GetAuditLogs.cs:GetAuditLogsQueryHandler",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Application/Auth/ForgotPassword/ForgotPasswordCommandHandler.cs",
+      "target": "function:Rmms.Application/Auth/ForgotPassword/ForgotPasswordCommandHandler.cs:ForgotPasswordCommandHandler",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Application/Auth/ForgotPassword/ForgotPasswordCommandHandler.cs",
+      "target": "function:Rmms.Application/Auth/ForgotPassword/ForgotPasswordCommandHandler.cs:Handle",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Application/Auth/ForgotPassword/ForgotPasswordCommandHandler.cs",
+      "target": "class:Rmms.Application/Auth/ForgotPassword/ForgotPasswordCommandHandler.cs:ForgotPasswordCommandHandler",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Application/Auth/ForgotPassword/ForgotPasswordCommandValidator.cs",
+      "target": "function:Rmms.Application/Auth/ForgotPassword/ForgotPasswordCommandValidator.cs:ForgotPasswordCommandValidator",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Application/Auth/ForgotPassword/ForgotPasswordCommandValidator.cs",
+      "target": "class:Rmms.Application/Auth/ForgotPassword/ForgotPasswordCommandValidator.cs:ForgotPasswordCommandValidator",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Application/Auth/Login/LoginCommandHandler.cs",
+      "target": "function:Rmms.Application/Auth/Login/LoginCommandHandler.cs:LoginCommandHandler",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Application/Auth/Login/LoginCommandHandler.cs",
+      "target": "function:Rmms.Application/Auth/Login/LoginCommandHandler.cs:Handle",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Application/Auth/Login/LoginCommandHandler.cs",
+      "target": "function:Rmms.Application/Auth/Login/LoginCommandHandler.cs:ResolveDeviceAsync",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Application/Auth/Login/LoginCommandHandler.cs",
+      "target": "function:Rmms.Application/Auth/Login/LoginCommandHandler.cs:FailLoginAsync",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Application/Auth/Login/LoginCommandHandler.cs",
+      "target": "class:Rmms.Application/Auth/Login/LoginCommandHandler.cs:LoginCommandHandler",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Application/Auth/Login/LoginCommandValidator.cs",
+      "target": "function:Rmms.Application/Auth/Login/LoginCommandValidator.cs:LoginCommandValidator",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Application/Auth/Login/LoginCommandValidator.cs",
+      "target": "class:Rmms.Application/Auth/Login/LoginCommandValidator.cs:LoginCommandValidator",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Application/Auth/Logout/LogoutCommandHandler.cs",
+      "target": "function:Rmms.Application/Auth/Logout/LogoutCommandHandler.cs:LogoutCommandHandler",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Application/Auth/Logout/LogoutCommandHandler.cs",
+      "target": "function:Rmms.Application/Auth/Logout/LogoutCommandHandler.cs:Handle",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Application/Auth/Logout/LogoutCommandHandler.cs",
+      "target": "class:Rmms.Application/Auth/Logout/LogoutCommandHandler.cs:LogoutCommandHandler",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Application/Auth/Logout/LogoutCommandValidator.cs",
+      "target": "function:Rmms.Application/Auth/Logout/LogoutCommandValidator.cs:LogoutCommandValidator",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Application/Auth/Logout/LogoutCommandValidator.cs",
+      "target": "class:Rmms.Application/Auth/Logout/LogoutCommandValidator.cs:LogoutCommandValidator",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Application/Auth/Me/GetDeviceStatusQueryHandler.cs",
+      "target": "function:Rmms.Application/Auth/Me/GetDeviceStatusQueryHandler.cs:GetDeviceStatusQueryHandler",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Application/Auth/Me/GetDeviceStatusQueryHandler.cs",
+      "target": "function:Rmms.Application/Auth/Me/GetDeviceStatusQueryHandler.cs:Handle",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Application/Auth/Me/GetDeviceStatusQueryHandler.cs",
+      "target": "class:Rmms.Application/Auth/Me/GetDeviceStatusQueryHandler.cs:GetDeviceStatusQueryHandler",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Application/Auth/Me/GetMeQueryHandler.cs",
+      "target": "function:Rmms.Application/Auth/Me/GetMeQueryHandler.cs:GetMeQueryHandler",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Application/Auth/Me/GetMeQueryHandler.cs",
+      "target": "function:Rmms.Application/Auth/Me/GetMeQueryHandler.cs:Handle",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Application/Auth/Me/GetMeQueryHandler.cs",
+      "target": "class:Rmms.Application/Auth/Me/GetMeQueryHandler.cs:GetMeQueryHandler",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Application/Auth/Refresh/RefreshTokenCommandHandler.cs",
+      "target": "function:Rmms.Application/Auth/Refresh/RefreshTokenCommandHandler.cs:RefreshTokenCommandHandler",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Application/Auth/Refresh/RefreshTokenCommandHandler.cs",
+      "target": "function:Rmms.Application/Auth/Refresh/RefreshTokenCommandHandler.cs:Handle",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Application/Auth/Refresh/RefreshTokenCommandHandler.cs",
+      "target": "class:Rmms.Application/Auth/Refresh/RefreshTokenCommandHandler.cs:RefreshTokenCommandHandler",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Application/Auth/Refresh/RefreshTokenCommandValidator.cs",
+      "target": "function:Rmms.Application/Auth/Refresh/RefreshTokenCommandValidator.cs:RefreshTokenCommandValidator",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Application/Auth/Refresh/RefreshTokenCommandValidator.cs",
+      "target": "class:Rmms.Application/Auth/Refresh/RefreshTokenCommandValidator.cs:RefreshTokenCommandValidator",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Application/Auth/Register/RegisterUserCommandHandler.cs",
+      "target": "function:Rmms.Application/Auth/Register/RegisterUserCommandHandler.cs:RegisterUserCommandHandler",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Application/Auth/Register/RegisterUserCommandHandler.cs",
+      "target": "function:Rmms.Application/Auth/Register/RegisterUserCommandHandler.cs:Handle",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Application/Auth/Register/RegisterUserCommandHandler.cs",
+      "target": "class:Rmms.Application/Auth/Register/RegisterUserCommandHandler.cs:RegisterUserCommandHandler",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Application/Auth/Register/RegisterUserCommandValidator.cs",
+      "target": "function:Rmms.Application/Auth/Register/RegisterUserCommandValidator.cs:RegisterUserCommandValidator",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Application/Auth/Register/RegisterUserCommandValidator.cs",
+      "target": "function:Rmms.Application/Auth/Register/RegisterUserCommandValidator.cs:HasLetter",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Application/Auth/Register/RegisterUserCommandValidator.cs",
+      "target": "function:Rmms.Application/Auth/Register/RegisterUserCommandValidator.cs:HasDigit",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Application/Auth/Register/RegisterUserCommandValidator.cs",
+      "target": "class:Rmms.Application/Auth/Register/RegisterUserCommandValidator.cs:RegisterUserCommandValidator",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    }
+  ]
+}

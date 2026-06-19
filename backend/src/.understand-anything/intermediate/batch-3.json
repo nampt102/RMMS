@@ -1,0 +1,47 @@
+{
+  "nodes": [
+    {
+      "id": "config:Rmms.Api/Rmms.Api.csproj",
+      "type": "config",
+      "name": "Rmms.Api.csproj",
+      "filePath": "Rmms.Api/Rmms.Api.csproj",
+      "summary": "Rmms.Api.csproj — tệp cấu hình backend RMMS.",
+      "tags": [
+        "rmms.api",
+        "rmms.api.csproj",
+        "config",
+        "csproj"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "config:Rmms.Api/appsettings.Development.json",
+      "type": "config",
+      "name": "appsettings.Development.json",
+      "filePath": "Rmms.Api/appsettings.Development.json",
+      "summary": "appsettings.Development.json — tệp cấu hình backend RMMS.",
+      "tags": [
+        "rmms.api",
+        "appsettings.development.json",
+        "config",
+        "json"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "config:Rmms.Api/appsettings.json",
+      "type": "config",
+      "name": "appsettings.json",
+      "filePath": "Rmms.Api/appsettings.json",
+      "summary": "appsettings.json — tệp cấu hình backend RMMS.",
+      "tags": [
+        "rmms.api",
+        "appsettings.json",
+        "config",
+        "json"
+      ],
+      "complexity": "simple"
+    }
+  ],
+  "edges": []
+}

@@ -1,0 +1,1994 @@
+{
+  "nodes": [
+    {
+      "id": "file:Rmms.Infrastructure/Persistence/Migrations/20260605034359_M03_Organization_Assignment.cs",
+      "type": "file",
+      "name": "20260605034359_M03_Organization_Assignment.cs",
+      "filePath": "Rmms.Infrastructure/Persistence/Migrations/20260605034359_M03_Organization_Assignment.cs",
+      "summary": "20260605034359_M03_Organization_Assignment.cs — tệp mã nguồn C# trong backend RMMS (2 hàm, 1 class).",
+      "tags": [
+        "rmms.infrastructure",
+        "persistence",
+        "code",
+        "cs"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:Rmms.Infrastructure/Persistence/Migrations/20260605034359_M03_Organization_Assignment.cs:Up",
+      "type": "function",
+      "name": "Up",
+      "filePath": "Rmms.Infrastructure/Persistence/Migrations/20260605034359_M03_Organization_Assignment.cs",
+      "lineRange": [
+        12,
+        210
+      ],
+      "summary": "Hàm Up trong 20260605034359_M03_Organization_Assignment.cs.",
+      "tags": [
+        "rmms.infrastructure",
+        "persistence",
+        "code",
+        "cs",
+        "ham"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Rmms.Infrastructure/Persistence/Migrations/20260605034359_M03_Organization_Assignment.cs:Down",
+      "type": "function",
+      "name": "Down",
+      "filePath": "Rmms.Infrastructure/Persistence/Migrations/20260605034359_M03_Organization_Assignment.cs",
+      "lineRange": [
+        213,
+        232
+      ],
+      "summary": "Hàm Down trong 20260605034359_M03_Organization_Assignment.cs.",
+      "tags": [
+        "rmms.infrastructure",
+        "persistence",
+        "code",
+        "cs",
+        "ham"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:Rmms.Infrastructure/Persistence/Migrations/20260605034359_M03_Organization_Assignment.cs:M03_Organization_Assignment",
+      "type": "class",
+      "name": "M03_Organization_Assignment",
+      "filePath": "Rmms.Infrastructure/Persistence/Migrations/20260605034359_M03_Organization_Assignment.cs",
+      "lineRange": [
+        9,
+        233
+      ],
+      "summary": "Class M03_Organization_Assignment trong 20260605034359_M03_Organization_Assignment.cs.",
+      "tags": [
+        "rmms.infrastructure",
+        "persistence",
+        "code",
+        "cs",
+        "class"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:Rmms.Infrastructure/Persistence/Migrations/20260605034359_M03_Organization_Assignment.Designer.cs",
+      "type": "file",
+      "name": "20260605034359_M03_Organization_Assignment.Designer.cs",
+      "filePath": "Rmms.Infrastructure/Persistence/Migrations/20260605034359_M03_Organization_Assignment.Designer.cs",
+      "summary": "20260605034359_M03_Organization_Assignment.Designer.cs — tệp mã nguồn C# trong backend RMMS (1 hàm, 1 class).",
+      "tags": [
+        "rmms.infrastructure",
+        "persistence",
+        "code",
+        "cs"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:Rmms.Infrastructure/Persistence/Migrations/20260605034359_M03_Organization_Assignment.Designer.cs:BuildTargetModel",
+      "type": "function",
+      "name": "BuildTargetModel",
+      "filePath": "Rmms.Infrastructure/Persistence/Migrations/20260605034359_M03_Organization_Assignment.Designer.cs",
+      "lineRange": [
+        20,
+        889
+      ],
+      "summary": "Hàm BuildTargetModel trong 20260605034359_M03_Organization_Assignment.Designer.cs.",
+      "tags": [
+        "rmms.infrastructure",
+        "persistence",
+        "code",
+        "cs",
+        "ham"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:Rmms.Infrastructure/Persistence/Migrations/20260605034359_M03_Organization_Assignment.Designer.cs:M03_Organization_Assignment",
+      "type": "class",
+      "name": "M03_Organization_Assignment",
+      "filePath": "Rmms.Infrastructure/Persistence/Migrations/20260605034359_M03_Organization_Assignment.Designer.cs",
+      "lineRange": [
+        15,
+        890
+      ],
+      "summary": "Class M03_Organization_Assignment trong 20260605034359_M03_Organization_Assignment.Designer.cs.",
+      "tags": [
+        "rmms.infrastructure",
+        "persistence",
+        "code",
+        "cs",
+        "class"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:Rmms.Infrastructure/Persistence/Migrations/20260606042427_M07_WorkSchedule.cs",
+      "type": "file",
+      "name": "20260606042427_M07_WorkSchedule.cs",
+      "filePath": "Rmms.Infrastructure/Persistence/Migrations/20260606042427_M07_WorkSchedule.cs",
+      "summary": "20260606042427_M07_WorkSchedule.cs — tệp mã nguồn C# trong backend RMMS (2 hàm, 1 class).",
+      "tags": [
+        "rmms.infrastructure",
+        "persistence",
+        "code",
+        "cs"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Rmms.Infrastructure/Persistence/Migrations/20260606042427_M07_WorkSchedule.cs:Up",
+      "type": "function",
+      "name": "Up",
+      "filePath": "Rmms.Infrastructure/Persistence/Migrations/20260606042427_M07_WorkSchedule.cs",
+      "lineRange": [
+        12,
+        82
+      ],
+      "summary": "Hàm Up trong 20260606042427_M07_WorkSchedule.cs.",
+      "tags": [
+        "rmms.infrastructure",
+        "persistence",
+        "code",
+        "cs",
+        "ham"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Rmms.Infrastructure/Persistence/Migrations/20260606042427_M07_WorkSchedule.cs:Down",
+      "type": "function",
+      "name": "Down",
+      "filePath": "Rmms.Infrastructure/Persistence/Migrations/20260606042427_M07_WorkSchedule.cs",
+      "lineRange": [
+        85,
+        92
+      ],
+      "summary": "Hàm Down trong 20260606042427_M07_WorkSchedule.cs.",
+      "tags": [
+        "rmms.infrastructure",
+        "persistence",
+        "code",
+        "cs",
+        "ham"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:Rmms.Infrastructure/Persistence/Migrations/20260606042427_M07_WorkSchedule.cs:M07_WorkSchedule",
+      "type": "class",
+      "name": "M07_WorkSchedule",
+      "filePath": "Rmms.Infrastructure/Persistence/Migrations/20260606042427_M07_WorkSchedule.cs",
+      "lineRange": [
+        9,
+        93
+      ],
+      "summary": "Class M07_WorkSchedule trong 20260606042427_M07_WorkSchedule.cs.",
+      "tags": [
+        "rmms.infrastructure",
+        "persistence",
+        "code",
+        "cs",
+        "class"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:Rmms.Infrastructure/Persistence/Migrations/20260606042427_M07_WorkSchedule.Designer.cs",
+      "type": "file",
+      "name": "20260606042427_M07_WorkSchedule.Designer.cs",
+      "filePath": "Rmms.Infrastructure/Persistence/Migrations/20260606042427_M07_WorkSchedule.Designer.cs",
+      "summary": "20260606042427_M07_WorkSchedule.Designer.cs — tệp mã nguồn C# trong backend RMMS (1 hàm, 1 class).",
+      "tags": [
+        "rmms.infrastructure",
+        "persistence",
+        "code",
+        "cs"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:Rmms.Infrastructure/Persistence/Migrations/20260606042427_M07_WorkSchedule.Designer.cs:BuildTargetModel",
+      "type": "function",
+      "name": "BuildTargetModel",
+      "filePath": "Rmms.Infrastructure/Persistence/Migrations/20260606042427_M07_WorkSchedule.Designer.cs",
+      "lineRange": [
+        20,
+        1022
+      ],
+      "summary": "Hàm BuildTargetModel trong 20260606042427_M07_WorkSchedule.Designer.cs.",
+      "tags": [
+        "rmms.infrastructure",
+        "persistence",
+        "code",
+        "cs",
+        "ham"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:Rmms.Infrastructure/Persistence/Migrations/20260606042427_M07_WorkSchedule.Designer.cs:M07_WorkSchedule",
+      "type": "class",
+      "name": "M07_WorkSchedule",
+      "filePath": "Rmms.Infrastructure/Persistence/Migrations/20260606042427_M07_WorkSchedule.Designer.cs",
+      "lineRange": [
+        15,
+        1023
+      ],
+      "summary": "Class M07_WorkSchedule trong 20260606042427_M07_WorkSchedule.Designer.cs.",
+      "tags": [
+        "rmms.infrastructure",
+        "persistence",
+        "code",
+        "cs",
+        "class"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:Rmms.Infrastructure/Persistence/Migrations/20260606082819_M05_Attendance.cs",
+      "type": "file",
+      "name": "20260606082819_M05_Attendance.cs",
+      "filePath": "Rmms.Infrastructure/Persistence/Migrations/20260606082819_M05_Attendance.cs",
+      "summary": "20260606082819_M05_Attendance.cs — tệp mã nguồn C# trong backend RMMS (2 hàm, 1 class).",
+      "tags": [
+        "rmms.infrastructure",
+        "persistence",
+        "code",
+        "cs"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Rmms.Infrastructure/Persistence/Migrations/20260606082819_M05_Attendance.cs:Up",
+      "type": "function",
+      "name": "Up",
+      "filePath": "Rmms.Infrastructure/Persistence/Migrations/20260606082819_M05_Attendance.cs",
+      "lineRange": [
+        12,
+        77
+      ],
+      "summary": "Hàm Up trong 20260606082819_M05_Attendance.cs.",
+      "tags": [
+        "rmms.infrastructure",
+        "persistence",
+        "code",
+        "cs",
+        "ham"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Rmms.Infrastructure/Persistence/Migrations/20260606082819_M05_Attendance.cs:Down",
+      "type": "function",
+      "name": "Down",
+      "filePath": "Rmms.Infrastructure/Persistence/Migrations/20260606082819_M05_Attendance.cs",
+      "lineRange": [
+        80,
+        84
+      ],
+      "summary": "Hàm Down trong 20260606082819_M05_Attendance.cs.",
+      "tags": [
+        "rmms.infrastructure",
+        "persistence",
+        "code",
+        "cs",
+        "ham"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:Rmms.Infrastructure/Persistence/Migrations/20260606082819_M05_Attendance.cs:M05_Attendance",
+      "type": "class",
+      "name": "M05_Attendance",
+      "filePath": "Rmms.Infrastructure/Persistence/Migrations/20260606082819_M05_Attendance.cs",
+      "lineRange": [
+        9,
+        85
+      ],
+      "summary": "Class M05_Attendance trong 20260606082819_M05_Attendance.cs.",
+      "tags": [
+        "rmms.infrastructure",
+        "persistence",
+        "code",
+        "cs",
+        "class"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:Rmms.Infrastructure/Persistence/Migrations/20260606082819_M05_Attendance.Designer.cs",
+      "type": "file",
+      "name": "20260606082819_M05_Attendance.Designer.cs",
+      "filePath": "Rmms.Infrastructure/Persistence/Migrations/20260606082819_M05_Attendance.Designer.cs",
+      "summary": "20260606082819_M05_Attendance.Designer.cs — tệp mã nguồn C# trong backend RMMS (1 hàm, 1 class).",
+      "tags": [
+        "rmms.infrastructure",
+        "persistence",
+        "code",
+        "cs"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:Rmms.Infrastructure/Persistence/Migrations/20260606082819_M05_Attendance.Designer.cs:BuildTargetModel",
+      "type": "function",
+      "name": "BuildTargetModel",
+      "filePath": "Rmms.Infrastructure/Persistence/Migrations/20260606082819_M05_Attendance.Designer.cs",
+      "lineRange": [
+        20,
+        1184
+      ],
+      "summary": "Hàm BuildTargetModel trong 20260606082819_M05_Attendance.Designer.cs.",
+      "tags": [
+        "rmms.infrastructure",
+        "persistence",
+        "code",
+        "cs",
+        "ham"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:Rmms.Infrastructure/Persistence/Migrations/20260606082819_M05_Attendance.Designer.cs:M05_Attendance",
+      "type": "class",
+      "name": "M05_Attendance",
+      "filePath": "Rmms.Infrastructure/Persistence/Migrations/20260606082819_M05_Attendance.Designer.cs",
+      "lineRange": [
+        15,
+        1185
+      ],
+      "summary": "Class M05_Attendance trong 20260606082819_M05_Attendance.Designer.cs.",
+      "tags": [
+        "rmms.infrastructure",
+        "persistence",
+        "code",
+        "cs",
+        "class"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:Rmms.Infrastructure/Persistence/Migrations/20260606171533_M09_Approvals.cs",
+      "type": "file",
+      "name": "20260606171533_M09_Approvals.cs",
+      "filePath": "Rmms.Infrastructure/Persistence/Migrations/20260606171533_M09_Approvals.cs",
+      "summary": "20260606171533_M09_Approvals.cs — tệp mã nguồn C# trong backend RMMS (2 hàm, 1 class).",
+      "tags": [
+        "rmms.infrastructure",
+        "persistence",
+        "code",
+        "cs"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Rmms.Infrastructure/Persistence/Migrations/20260606171533_M09_Approvals.cs:Up",
+      "type": "function",
+      "name": "Up",
+      "filePath": "Rmms.Infrastructure/Persistence/Migrations/20260606171533_M09_Approvals.cs",
+      "lineRange": [
+        12,
+        85
+      ],
+      "summary": "Hàm Up trong 20260606171533_M09_Approvals.cs.",
+      "tags": [
+        "rmms.infrastructure",
+        "persistence",
+        "code",
+        "cs",
+        "ham"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Rmms.Infrastructure/Persistence/Migrations/20260606171533_M09_Approvals.cs:Down",
+      "type": "function",
+      "name": "Down",
+      "filePath": "Rmms.Infrastructure/Persistence/Migrations/20260606171533_M09_Approvals.cs",
+      "lineRange": [
+        88,
+        95
+      ],
+      "summary": "Hàm Down trong 20260606171533_M09_Approvals.cs.",
+      "tags": [
+        "rmms.infrastructure",
+        "persistence",
+        "code",
+        "cs",
+        "ham"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:Rmms.Infrastructure/Persistence/Migrations/20260606171533_M09_Approvals.cs:M09_Approvals",
+      "type": "class",
+      "name": "M09_Approvals",
+      "filePath": "Rmms.Infrastructure/Persistence/Migrations/20260606171533_M09_Approvals.cs",
+      "lineRange": [
+        9,
+        96
+      ],
+      "summary": "Class M09_Approvals trong 20260606171533_M09_Approvals.cs.",
+      "tags": [
+        "rmms.infrastructure",
+        "persistence",
+        "code",
+        "cs",
+        "class"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:Rmms.Infrastructure/Persistence/Migrations/20260606171533_M09_Approvals.Designer.cs",
+      "type": "file",
+      "name": "20260606171533_M09_Approvals.Designer.cs",
+      "filePath": "Rmms.Infrastructure/Persistence/Migrations/20260606171533_M09_Approvals.Designer.cs",
+      "summary": "20260606171533_M09_Approvals.Designer.cs — tệp mã nguồn C# trong backend RMMS (1 hàm, 1 class).",
+      "tags": [
+        "rmms.infrastructure",
+        "persistence",
+        "code",
+        "cs"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:Rmms.Infrastructure/Persistence/Migrations/20260606171533_M09_Approvals.Designer.cs:BuildTargetModel",
+      "type": "function",
+      "name": "BuildTargetModel",
+      "filePath": "Rmms.Infrastructure/Persistence/Migrations/20260606171533_M09_Approvals.Designer.cs",
+      "lineRange": [
+        20,
+        1332
+      ],
+      "summary": "Hàm BuildTargetModel trong 20260606171533_M09_Approvals.Designer.cs.",
+      "tags": [
+        "rmms.infrastructure",
+        "persistence",
+        "code",
+        "cs",
+        "ham"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:Rmms.Infrastructure/Persistence/Migrations/20260606171533_M09_Approvals.Designer.cs:M09_Approvals",
+      "type": "class",
+      "name": "M09_Approvals",
+      "filePath": "Rmms.Infrastructure/Persistence/Migrations/20260606171533_M09_Approvals.Designer.cs",
+      "lineRange": [
+        15,
+        1333
+      ],
+      "summary": "Class M09_Approvals trong 20260606171533_M09_Approvals.Designer.cs.",
+      "tags": [
+        "rmms.infrastructure",
+        "persistence",
+        "code",
+        "cs",
+        "class"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:Rmms.Infrastructure/Persistence/Migrations/20260607024229_M08_LeaveOt.cs",
+      "type": "file",
+      "name": "20260607024229_M08_LeaveOt.cs",
+      "filePath": "Rmms.Infrastructure/Persistence/Migrations/20260607024229_M08_LeaveOt.cs",
+      "summary": "20260607024229_M08_LeaveOt.cs — tệp mã nguồn C# trong backend RMMS (2 hàm, 1 class).",
+      "tags": [
+        "rmms.infrastructure",
+        "persistence",
+        "code",
+        "cs"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Rmms.Infrastructure/Persistence/Migrations/20260607024229_M08_LeaveOt.cs:Up",
+      "type": "function",
+      "name": "Up",
+      "filePath": "Rmms.Infrastructure/Persistence/Migrations/20260607024229_M08_LeaveOt.cs",
+      "lineRange": [
+        12,
+        84
+      ],
+      "summary": "Hàm Up trong 20260607024229_M08_LeaveOt.cs.",
+      "tags": [
+        "rmms.infrastructure",
+        "persistence",
+        "code",
+        "cs",
+        "ham"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Rmms.Infrastructure/Persistence/Migrations/20260607024229_M08_LeaveOt.cs:Down",
+      "type": "function",
+      "name": "Down",
+      "filePath": "Rmms.Infrastructure/Persistence/Migrations/20260607024229_M08_LeaveOt.cs",
+      "lineRange": [
+        87,
+        94
+      ],
+      "summary": "Hàm Down trong 20260607024229_M08_LeaveOt.cs.",
+      "tags": [
+        "rmms.infrastructure",
+        "persistence",
+        "code",
+        "cs",
+        "ham"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:Rmms.Infrastructure/Persistence/Migrations/20260607024229_M08_LeaveOt.cs:M08_LeaveOt",
+      "type": "class",
+      "name": "M08_LeaveOt",
+      "filePath": "Rmms.Infrastructure/Persistence/Migrations/20260607024229_M08_LeaveOt.cs",
+      "lineRange": [
+        9,
+        95
+      ],
+      "summary": "Class M08_LeaveOt trong 20260607024229_M08_LeaveOt.cs.",
+      "tags": [
+        "rmms.infrastructure",
+        "persistence",
+        "code",
+        "cs",
+        "class"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:Rmms.Infrastructure/Persistence/Migrations/20260607024229_M08_LeaveOt.Designer.cs",
+      "type": "file",
+      "name": "20260607024229_M08_LeaveOt.Designer.cs",
+      "filePath": "Rmms.Infrastructure/Persistence/Migrations/20260607024229_M08_LeaveOt.Designer.cs",
+      "summary": "20260607024229_M08_LeaveOt.Designer.cs — tệp mã nguồn C# trong backend RMMS (1 hàm, 1 class).",
+      "tags": [
+        "rmms.infrastructure",
+        "persistence",
+        "code",
+        "cs"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:Rmms.Infrastructure/Persistence/Migrations/20260607024229_M08_LeaveOt.Designer.cs:BuildTargetModel",
+      "type": "function",
+      "name": "BuildTargetModel",
+      "filePath": "Rmms.Infrastructure/Persistence/Migrations/20260607024229_M08_LeaveOt.Designer.cs",
+      "lineRange": [
+        20,
+        1494
+      ],
+      "summary": "Hàm BuildTargetModel trong 20260607024229_M08_LeaveOt.Designer.cs.",
+      "tags": [
+        "rmms.infrastructure",
+        "persistence",
+        "code",
+        "cs",
+        "ham"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:Rmms.Infrastructure/Persistence/Migrations/20260607024229_M08_LeaveOt.Designer.cs:M08_LeaveOt",
+      "type": "class",
+      "name": "M08_LeaveOt",
+      "filePath": "Rmms.Infrastructure/Persistence/Migrations/20260607024229_M08_LeaveOt.Designer.cs",
+      "lineRange": [
+        15,
+        1495
+      ],
+      "summary": "Class M08_LeaveOt trong 20260607024229_M08_LeaveOt.Designer.cs.",
+      "tags": [
+        "rmms.infrastructure",
+        "persistence",
+        "code",
+        "cs",
+        "class"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:Rmms.Infrastructure/Persistence/Migrations/20260608034404_M14_Notifications.cs",
+      "type": "file",
+      "name": "20260608034404_M14_Notifications.cs",
+      "filePath": "Rmms.Infrastructure/Persistence/Migrations/20260608034404_M14_Notifications.cs",
+      "summary": "20260608034404_M14_Notifications.cs — tệp mã nguồn C# trong backend RMMS (2 hàm, 1 class).",
+      "tags": [
+        "rmms.infrastructure",
+        "persistence",
+        "code",
+        "cs"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Rmms.Infrastructure/Persistence/Migrations/20260608034404_M14_Notifications.cs:Up",
+      "type": "function",
+      "name": "Up",
+      "filePath": "Rmms.Infrastructure/Persistence/Migrations/20260608034404_M14_Notifications.cs",
+      "lineRange": [
+        13,
+        44
+      ],
+      "summary": "Hàm Up trong 20260608034404_M14_Notifications.cs.",
+      "tags": [
+        "rmms.infrastructure",
+        "persistence",
+        "code",
+        "cs",
+        "ham"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Rmms.Infrastructure/Persistence/Migrations/20260608034404_M14_Notifications.cs:Down",
+      "type": "function",
+      "name": "Down",
+      "filePath": "Rmms.Infrastructure/Persistence/Migrations/20260608034404_M14_Notifications.cs",
+      "lineRange": [
+        47,
+        51
+      ],
+      "summary": "Hàm Down trong 20260608034404_M14_Notifications.cs.",
+      "tags": [
+        "rmms.infrastructure",
+        "persistence",
+        "code",
+        "cs",
+        "ham"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:Rmms.Infrastructure/Persistence/Migrations/20260608034404_M14_Notifications.cs:M14_Notifications",
+      "type": "class",
+      "name": "M14_Notifications",
+      "filePath": "Rmms.Infrastructure/Persistence/Migrations/20260608034404_M14_Notifications.cs",
+      "lineRange": [
+        10,
+        52
+      ],
+      "summary": "Class M14_Notifications trong 20260608034404_M14_Notifications.cs.",
+      "tags": [
+        "rmms.infrastructure",
+        "persistence",
+        "code",
+        "cs",
+        "class"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:Rmms.Infrastructure/Persistence/Migrations/20260608034404_M14_Notifications.Designer.cs",
+      "type": "file",
+      "name": "20260608034404_M14_Notifications.Designer.cs",
+      "filePath": "Rmms.Infrastructure/Persistence/Migrations/20260608034404_M14_Notifications.Designer.cs",
+      "summary": "20260608034404_M14_Notifications.Designer.cs — tệp mã nguồn C# trong backend RMMS (1 hàm, 1 class).",
+      "tags": [
+        "rmms.infrastructure",
+        "persistence",
+        "code",
+        "cs"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:Rmms.Infrastructure/Persistence/Migrations/20260608034404_M14_Notifications.Designer.cs:BuildTargetModel",
+      "type": "function",
+      "name": "BuildTargetModel",
+      "filePath": "Rmms.Infrastructure/Persistence/Migrations/20260608034404_M14_Notifications.Designer.cs",
+      "lineRange": [
+        21,
+        1573
+      ],
+      "summary": "Hàm BuildTargetModel trong 20260608034404_M14_Notifications.Designer.cs.",
+      "tags": [
+        "rmms.infrastructure",
+        "persistence",
+        "code",
+        "cs",
+        "ham"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:Rmms.Infrastructure/Persistence/Migrations/20260608034404_M14_Notifications.Designer.cs:M14_Notifications",
+      "type": "class",
+      "name": "M14_Notifications",
+      "filePath": "Rmms.Infrastructure/Persistence/Migrations/20260608034404_M14_Notifications.Designer.cs",
+      "lineRange": [
+        16,
+        1574
+      ],
+      "summary": "Class M14_Notifications trong 20260608034404_M14_Notifications.Designer.cs.",
+      "tags": [
+        "rmms.infrastructure",
+        "persistence",
+        "code",
+        "cs",
+        "class"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:Rmms.Infrastructure/Persistence/Migrations/20260614092038_M04_ProductMaster.cs",
+      "type": "file",
+      "name": "20260614092038_M04_ProductMaster.cs",
+      "filePath": "Rmms.Infrastructure/Persistence/Migrations/20260614092038_M04_ProductMaster.cs",
+      "summary": "20260614092038_M04_ProductMaster.cs — tệp mã nguồn C# trong backend RMMS (2 hàm, 1 class).",
+      "tags": [
+        "rmms.infrastructure",
+        "persistence",
+        "code",
+        "cs"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Rmms.Infrastructure/Persistence/Migrations/20260614092038_M04_ProductMaster.cs:Up",
+      "type": "function",
+      "name": "Up",
+      "filePath": "Rmms.Infrastructure/Persistence/Migrations/20260614092038_M04_ProductMaster.cs",
+      "lineRange": [
+        12,
+        54
+      ],
+      "summary": "Hàm Up trong 20260614092038_M04_ProductMaster.cs.",
+      "tags": [
+        "rmms.infrastructure",
+        "persistence",
+        "code",
+        "cs",
+        "ham"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Rmms.Infrastructure/Persistence/Migrations/20260614092038_M04_ProductMaster.cs:Down",
+      "type": "function",
+      "name": "Down",
+      "filePath": "Rmms.Infrastructure/Persistence/Migrations/20260614092038_M04_ProductMaster.cs",
+      "lineRange": [
+        57,
+        61
+      ],
+      "summary": "Hàm Down trong 20260614092038_M04_ProductMaster.cs.",
+      "tags": [
+        "rmms.infrastructure",
+        "persistence",
+        "code",
+        "cs",
+        "ham"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:Rmms.Infrastructure/Persistence/Migrations/20260614092038_M04_ProductMaster.cs:M04_ProductMaster",
+      "type": "class",
+      "name": "M04_ProductMaster",
+      "filePath": "Rmms.Infrastructure/Persistence/Migrations/20260614092038_M04_ProductMaster.cs",
+      "lineRange": [
+        9,
+        62
+      ],
+      "summary": "Class M04_ProductMaster trong 20260614092038_M04_ProductMaster.cs.",
+      "tags": [
+        "rmms.infrastructure",
+        "persistence",
+        "code",
+        "cs",
+        "class"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:Rmms.Infrastructure/Persistence/Migrations/20260614092038_M04_ProductMaster.Designer.cs",
+      "type": "file",
+      "name": "20260614092038_M04_ProductMaster.Designer.cs",
+      "filePath": "Rmms.Infrastructure/Persistence/Migrations/20260614092038_M04_ProductMaster.Designer.cs",
+      "summary": "20260614092038_M04_ProductMaster.Designer.cs — tệp mã nguồn C# trong backend RMMS (1 hàm, 1 class).",
+      "tags": [
+        "rmms.infrastructure",
+        "persistence",
+        "code",
+        "cs"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:Rmms.Infrastructure/Persistence/Migrations/20260614092038_M04_ProductMaster.Designer.cs:BuildTargetModel",
+      "type": "function",
+      "name": "BuildTargetModel",
+      "filePath": "Rmms.Infrastructure/Persistence/Migrations/20260614092038_M04_ProductMaster.Designer.cs",
+      "lineRange": [
+        21,
+        1653
+      ],
+      "summary": "Hàm BuildTargetModel trong 20260614092038_M04_ProductMaster.Designer.cs.",
+      "tags": [
+        "rmms.infrastructure",
+        "persistence",
+        "code",
+        "cs",
+        "ham"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:Rmms.Infrastructure/Persistence/Migrations/20260614092038_M04_ProductMaster.Designer.cs:M04_ProductMaster",
+      "type": "class",
+      "name": "M04_ProductMaster",
+      "filePath": "Rmms.Infrastructure/Persistence/Migrations/20260614092038_M04_ProductMaster.Designer.cs",
+      "lineRange": [
+        16,
+        1654
+      ],
+      "summary": "Class M04_ProductMaster trong 20260614092038_M04_ProductMaster.Designer.cs.",
+      "tags": [
+        "rmms.infrastructure",
+        "persistence",
+        "code",
+        "cs",
+        "class"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:Rmms.Infrastructure/Persistence/Migrations/20260614102719_M10_Forms.cs",
+      "type": "file",
+      "name": "20260614102719_M10_Forms.cs",
+      "filePath": "Rmms.Infrastructure/Persistence/Migrations/20260614102719_M10_Forms.cs",
+      "summary": "20260614102719_M10_Forms.cs — tệp mã nguồn C# trong backend RMMS (2 hàm, 1 class).",
+      "tags": [
+        "rmms.infrastructure",
+        "persistence",
+        "code",
+        "cs"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Rmms.Infrastructure/Persistence/Migrations/20260614102719_M10_Forms.cs:Up",
+      "type": "function",
+      "name": "Up",
+      "filePath": "Rmms.Infrastructure/Persistence/Migrations/20260614102719_M10_Forms.cs",
+      "lineRange": [
+        12,
+        80
+      ],
+      "summary": "Hàm Up trong 20260614102719_M10_Forms.cs.",
+      "tags": [
+        "rmms.infrastructure",
+        "persistence",
+        "code",
+        "cs",
+        "ham"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Rmms.Infrastructure/Persistence/Migrations/20260614102719_M10_Forms.cs:Down",
+      "type": "function",
+      "name": "Down",
+      "filePath": "Rmms.Infrastructure/Persistence/Migrations/20260614102719_M10_Forms.cs",
+      "lineRange": [
+        83,
+        90
+      ],
+      "summary": "Hàm Down trong 20260614102719_M10_Forms.cs.",
+      "tags": [
+        "rmms.infrastructure",
+        "persistence",
+        "code",
+        "cs",
+        "ham"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:Rmms.Infrastructure/Persistence/Migrations/20260614102719_M10_Forms.cs:M10_Forms",
+      "type": "class",
+      "name": "M10_Forms",
+      "filePath": "Rmms.Infrastructure/Persistence/Migrations/20260614102719_M10_Forms.cs",
+      "lineRange": [
+        9,
+        91
+      ],
+      "summary": "Class M10_Forms trong 20260614102719_M10_Forms.cs.",
+      "tags": [
+        "rmms.infrastructure",
+        "persistence",
+        "code",
+        "cs",
+        "class"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:Rmms.Infrastructure/Persistence/Migrations/20260614102719_M10_Forms.Designer.cs",
+      "type": "file",
+      "name": "20260614102719_M10_Forms.Designer.cs",
+      "filePath": "Rmms.Infrastructure/Persistence/Migrations/20260614102719_M10_Forms.Designer.cs",
+      "summary": "20260614102719_M10_Forms.Designer.cs — tệp mã nguồn C# trong backend RMMS (1 hàm, 1 class).",
+      "tags": [
+        "rmms.infrastructure",
+        "persistence",
+        "code",
+        "cs"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:Rmms.Infrastructure/Persistence/Migrations/20260614102719_M10_Forms.Designer.cs:BuildTargetModel",
+      "type": "function",
+      "name": "BuildTargetModel",
+      "filePath": "Rmms.Infrastructure/Persistence/Migrations/20260614102719_M10_Forms.Designer.cs",
+      "lineRange": [
+        21,
+        1804
+      ],
+      "summary": "Hàm BuildTargetModel trong 20260614102719_M10_Forms.Designer.cs.",
+      "tags": [
+        "rmms.infrastructure",
+        "persistence",
+        "code",
+        "cs",
+        "ham"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:Rmms.Infrastructure/Persistence/Migrations/20260614102719_M10_Forms.Designer.cs:M10_Forms",
+      "type": "class",
+      "name": "M10_Forms",
+      "filePath": "Rmms.Infrastructure/Persistence/Migrations/20260614102719_M10_Forms.Designer.cs",
+      "lineRange": [
+        16,
+        1805
+      ],
+      "summary": "Class M10_Forms trong 20260614102719_M10_Forms.Designer.cs.",
+      "tags": [
+        "rmms.infrastructure",
+        "persistence",
+        "code",
+        "cs",
+        "class"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:Rmms.Infrastructure/Persistence/Migrations/20260614104723_M10_FormFill.cs",
+      "type": "file",
+      "name": "20260614104723_M10_FormFill.cs",
+      "filePath": "Rmms.Infrastructure/Persistence/Migrations/20260614104723_M10_FormFill.cs",
+      "summary": "20260614104723_M10_FormFill.cs — tệp mã nguồn C# trong backend RMMS (2 hàm, 1 class).",
+      "tags": [
+        "rmms.infrastructure",
+        "persistence",
+        "code",
+        "cs"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Rmms.Infrastructure/Persistence/Migrations/20260614104723_M10_FormFill.cs:Up",
+      "type": "function",
+      "name": "Up",
+      "filePath": "Rmms.Infrastructure/Persistence/Migrations/20260614104723_M10_FormFill.cs",
+      "lineRange": [
+        12,
+        105
+      ],
+      "summary": "Hàm Up trong 20260614104723_M10_FormFill.cs.",
+      "tags": [
+        "rmms.infrastructure",
+        "persistence",
+        "code",
+        "cs",
+        "ham"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Rmms.Infrastructure/Persistence/Migrations/20260614104723_M10_FormFill.cs:Down",
+      "type": "function",
+      "name": "Down",
+      "filePath": "Rmms.Infrastructure/Persistence/Migrations/20260614104723_M10_FormFill.cs",
+      "lineRange": [
+        108,
+        115
+      ],
+      "summary": "Hàm Down trong 20260614104723_M10_FormFill.cs.",
+      "tags": [
+        "rmms.infrastructure",
+        "persistence",
+        "code",
+        "cs",
+        "ham"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:Rmms.Infrastructure/Persistence/Migrations/20260614104723_M10_FormFill.cs:M10_FormFill",
+      "type": "class",
+      "name": "M10_FormFill",
+      "filePath": "Rmms.Infrastructure/Persistence/Migrations/20260614104723_M10_FormFill.cs",
+      "lineRange": [
+        9,
+        116
+      ],
+      "summary": "Class M10_FormFill trong 20260614104723_M10_FormFill.cs.",
+      "tags": [
+        "rmms.infrastructure",
+        "persistence",
+        "code",
+        "cs",
+        "class"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:Rmms.Infrastructure/Persistence/Migrations/20260614104723_M10_FormFill.Designer.cs",
+      "type": "file",
+      "name": "20260614104723_M10_FormFill.Designer.cs",
+      "filePath": "Rmms.Infrastructure/Persistence/Migrations/20260614104723_M10_FormFill.Designer.cs",
+      "summary": "20260614104723_M10_FormFill.Designer.cs — tệp mã nguồn C# trong backend RMMS (1 hàm, 1 class).",
+      "tags": [
+        "rmms.infrastructure",
+        "persistence",
+        "code",
+        "cs"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:Rmms.Infrastructure/Persistence/Migrations/20260614104723_M10_FormFill.Designer.cs:BuildTargetModel",
+      "type": "function",
+      "name": "BuildTargetModel",
+      "filePath": "Rmms.Infrastructure/Persistence/Migrations/20260614104723_M10_FormFill.Designer.cs",
+      "lineRange": [
+        21,
+        1991
+      ],
+      "summary": "Hàm BuildTargetModel trong 20260614104723_M10_FormFill.Designer.cs.",
+      "tags": [
+        "rmms.infrastructure",
+        "persistence",
+        "code",
+        "cs",
+        "ham"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:Rmms.Infrastructure/Persistence/Migrations/20260614104723_M10_FormFill.Designer.cs:M10_FormFill",
+      "type": "class",
+      "name": "M10_FormFill",
+      "filePath": "Rmms.Infrastructure/Persistence/Migrations/20260614104723_M10_FormFill.Designer.cs",
+      "lineRange": [
+        16,
+        1992
+      ],
+      "summary": "Class M10_FormFill trong 20260614104723_M10_FormFill.Designer.cs.",
+      "tags": [
+        "rmms.infrastructure",
+        "persistence",
+        "code",
+        "cs",
+        "class"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:Rmms.Infrastructure/Persistence/Migrations/20260614125121_M11_VisitPlan.cs",
+      "type": "file",
+      "name": "20260614125121_M11_VisitPlan.cs",
+      "filePath": "Rmms.Infrastructure/Persistence/Migrations/20260614125121_M11_VisitPlan.cs",
+      "summary": "20260614125121_M11_VisitPlan.cs — tệp mã nguồn C# trong backend RMMS (2 hàm, 1 class).",
+      "tags": [
+        "rmms.infrastructure",
+        "persistence",
+        "code",
+        "cs"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Rmms.Infrastructure/Persistence/Migrations/20260614125121_M11_VisitPlan.cs:Up",
+      "type": "function",
+      "name": "Up",
+      "filePath": "Rmms.Infrastructure/Persistence/Migrations/20260614125121_M11_VisitPlan.cs",
+      "lineRange": [
+        12,
+        79
+      ],
+      "summary": "Hàm Up trong 20260614125121_M11_VisitPlan.cs.",
+      "tags": [
+        "rmms.infrastructure",
+        "persistence",
+        "code",
+        "cs",
+        "ham"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Rmms.Infrastructure/Persistence/Migrations/20260614125121_M11_VisitPlan.cs:Down",
+      "type": "function",
+      "name": "Down",
+      "filePath": "Rmms.Infrastructure/Persistence/Migrations/20260614125121_M11_VisitPlan.cs",
+      "lineRange": [
+        82,
+        89
+      ],
+      "summary": "Hàm Down trong 20260614125121_M11_VisitPlan.cs.",
+      "tags": [
+        "rmms.infrastructure",
+        "persistence",
+        "code",
+        "cs",
+        "ham"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:Rmms.Infrastructure/Persistence/Migrations/20260614125121_M11_VisitPlan.cs:M11_VisitPlan",
+      "type": "class",
+      "name": "M11_VisitPlan",
+      "filePath": "Rmms.Infrastructure/Persistence/Migrations/20260614125121_M11_VisitPlan.cs",
+      "lineRange": [
+        9,
+        90
+      ],
+      "summary": "Class M11_VisitPlan trong 20260614125121_M11_VisitPlan.cs.",
+      "tags": [
+        "rmms.infrastructure",
+        "persistence",
+        "code",
+        "cs",
+        "class"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:Rmms.Infrastructure/Persistence/Migrations/20260614125121_M11_VisitPlan.Designer.cs",
+      "type": "file",
+      "name": "20260614125121_M11_VisitPlan.Designer.cs",
+      "filePath": "Rmms.Infrastructure/Persistence/Migrations/20260614125121_M11_VisitPlan.Designer.cs",
+      "summary": "20260614125121_M11_VisitPlan.Designer.cs — tệp mã nguồn C# trong backend RMMS (1 hàm, 1 class).",
+      "tags": [
+        "rmms.infrastructure",
+        "persistence",
+        "code",
+        "cs"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:Rmms.Infrastructure/Persistence/Migrations/20260614125121_M11_VisitPlan.Designer.cs:BuildTargetModel",
+      "type": "function",
+      "name": "BuildTargetModel",
+      "filePath": "Rmms.Infrastructure/Persistence/Migrations/20260614125121_M11_VisitPlan.Designer.cs",
+      "lineRange": [
+        21,
+        2112
+      ],
+      "summary": "Hàm BuildTargetModel trong 20260614125121_M11_VisitPlan.Designer.cs.",
+      "tags": [
+        "rmms.infrastructure",
+        "persistence",
+        "code",
+        "cs",
+        "ham"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:Rmms.Infrastructure/Persistence/Migrations/20260614125121_M11_VisitPlan.Designer.cs:M11_VisitPlan",
+      "type": "class",
+      "name": "M11_VisitPlan",
+      "filePath": "Rmms.Infrastructure/Persistence/Migrations/20260614125121_M11_VisitPlan.Designer.cs",
+      "lineRange": [
+        16,
+        2113
+      ],
+      "summary": "Class M11_VisitPlan trong 20260614125121_M11_VisitPlan.Designer.cs.",
+      "tags": [
+        "rmms.infrastructure",
+        "persistence",
+        "code",
+        "cs",
+        "class"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:Rmms.Infrastructure/Persistence/Migrations/20260614164936_M13_Documents.cs",
+      "type": "file",
+      "name": "20260614164936_M13_Documents.cs",
+      "filePath": "Rmms.Infrastructure/Persistence/Migrations/20260614164936_M13_Documents.cs",
+      "summary": "20260614164936_M13_Documents.cs — tệp mã nguồn C# trong backend RMMS (2 hàm, 1 class).",
+      "tags": [
+        "rmms.infrastructure",
+        "persistence",
+        "code",
+        "cs"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Rmms.Infrastructure/Persistence/Migrations/20260614164936_M13_Documents.cs:Up",
+      "type": "function",
+      "name": "Up",
+      "filePath": "Rmms.Infrastructure/Persistence/Migrations/20260614164936_M13_Documents.cs",
+      "lineRange": [
+        12,
+        72
+      ],
+      "summary": "Hàm Up trong 20260614164936_M13_Documents.cs.",
+      "tags": [
+        "rmms.infrastructure",
+        "persistence",
+        "code",
+        "cs",
+        "ham"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Rmms.Infrastructure/Persistence/Migrations/20260614164936_M13_Documents.cs:Down",
+      "type": "function",
+      "name": "Down",
+      "filePath": "Rmms.Infrastructure/Persistence/Migrations/20260614164936_M13_Documents.cs",
+      "lineRange": [
+        75,
+        82
+      ],
+      "summary": "Hàm Down trong 20260614164936_M13_Documents.cs.",
+      "tags": [
+        "rmms.infrastructure",
+        "persistence",
+        "code",
+        "cs",
+        "ham"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:Rmms.Infrastructure/Persistence/Migrations/20260614164936_M13_Documents.cs:M13_Documents",
+      "type": "class",
+      "name": "M13_Documents",
+      "filePath": "Rmms.Infrastructure/Persistence/Migrations/20260614164936_M13_Documents.cs",
+      "lineRange": [
+        9,
+        83
+      ],
+      "summary": "Class M13_Documents trong 20260614164936_M13_Documents.cs.",
+      "tags": [
+        "rmms.infrastructure",
+        "persistence",
+        "code",
+        "cs",
+        "class"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:Rmms.Infrastructure/Persistence/Migrations/20260614164936_M13_Documents.Designer.cs",
+      "type": "file",
+      "name": "20260614164936_M13_Documents.Designer.cs",
+      "filePath": "Rmms.Infrastructure/Persistence/Migrations/20260614164936_M13_Documents.Designer.cs",
+      "summary": "20260614164936_M13_Documents.Designer.cs — tệp mã nguồn C# trong backend RMMS (1 hàm, 1 class).",
+      "tags": [
+        "rmms.infrastructure",
+        "persistence",
+        "code",
+        "cs"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:Rmms.Infrastructure/Persistence/Migrations/20260614164936_M13_Documents.Designer.cs:BuildTargetModel",
+      "type": "function",
+      "name": "BuildTargetModel",
+      "filePath": "Rmms.Infrastructure/Persistence/Migrations/20260614164936_M13_Documents.Designer.cs",
+      "lineRange": [
+        21,
+        2243
+      ],
+      "summary": "Hàm BuildTargetModel trong 20260614164936_M13_Documents.Designer.cs.",
+      "tags": [
+        "rmms.infrastructure",
+        "persistence",
+        "code",
+        "cs",
+        "ham"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:Rmms.Infrastructure/Persistence/Migrations/20260614164936_M13_Documents.Designer.cs:M13_Documents",
+      "type": "class",
+      "name": "M13_Documents",
+      "filePath": "Rmms.Infrastructure/Persistence/Migrations/20260614164936_M13_Documents.Designer.cs",
+      "lineRange": [
+        16,
+        2244
+      ],
+      "summary": "Class M13_Documents trong 20260614164936_M13_Documents.Designer.cs.",
+      "tags": [
+        "rmms.infrastructure",
+        "persistence",
+        "code",
+        "cs",
+        "class"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:Rmms.Infrastructure/Persistence/Migrations/20260614165737_M14_News.cs",
+      "type": "file",
+      "name": "20260614165737_M14_News.cs",
+      "filePath": "Rmms.Infrastructure/Persistence/Migrations/20260614165737_M14_News.cs",
+      "summary": "20260614165737_M14_News.cs — tệp mã nguồn C# trong backend RMMS (2 hàm, 1 class).",
+      "tags": [
+        "rmms.infrastructure",
+        "persistence",
+        "code",
+        "cs"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Rmms.Infrastructure/Persistence/Migrations/20260614165737_M14_News.cs:Up",
+      "type": "function",
+      "name": "Up",
+      "filePath": "Rmms.Infrastructure/Persistence/Migrations/20260614165737_M14_News.cs",
+      "lineRange": [
+        12,
+        101
+      ],
+      "summary": "Hàm Up trong 20260614165737_M14_News.cs.",
+      "tags": [
+        "rmms.infrastructure",
+        "persistence",
+        "code",
+        "cs",
+        "ham"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Rmms.Infrastructure/Persistence/Migrations/20260614165737_M14_News.cs:Down",
+      "type": "function",
+      "name": "Down",
+      "filePath": "Rmms.Infrastructure/Persistence/Migrations/20260614165737_M14_News.cs",
+      "lineRange": [
+        104,
+        114
+      ],
+      "summary": "Hàm Down trong 20260614165737_M14_News.cs.",
+      "tags": [
+        "rmms.infrastructure",
+        "persistence",
+        "code",
+        "cs",
+        "ham"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:Rmms.Infrastructure/Persistence/Migrations/20260614165737_M14_News.cs:M14_News",
+      "type": "class",
+      "name": "M14_News",
+      "filePath": "Rmms.Infrastructure/Persistence/Migrations/20260614165737_M14_News.cs",
+      "lineRange": [
+        9,
+        115
+      ],
+      "summary": "Class M14_News trong 20260614165737_M14_News.cs.",
+      "tags": [
+        "rmms.infrastructure",
+        "persistence",
+        "code",
+        "cs",
+        "class"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:Rmms.Infrastructure/Persistence/Migrations/20260614165737_M14_News.Designer.cs",
+      "type": "file",
+      "name": "20260614165737_M14_News.Designer.cs",
+      "filePath": "Rmms.Infrastructure/Persistence/Migrations/20260614165737_M14_News.Designer.cs",
+      "summary": "20260614165737_M14_News.Designer.cs — tệp mã nguồn C# trong backend RMMS (1 hàm, 1 class).",
+      "tags": [
+        "rmms.infrastructure",
+        "persistence",
+        "code",
+        "cs"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:Rmms.Infrastructure/Persistence/Migrations/20260614165737_M14_News.Designer.cs:BuildTargetModel",
+      "type": "function",
+      "name": "BuildTargetModel",
+      "filePath": "Rmms.Infrastructure/Persistence/Migrations/20260614165737_M14_News.Designer.cs",
+      "lineRange": [
+        21,
+        2436
+      ],
+      "summary": "Hàm BuildTargetModel trong 20260614165737_M14_News.Designer.cs.",
+      "tags": [
+        "rmms.infrastructure",
+        "persistence",
+        "code",
+        "cs",
+        "ham"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:Rmms.Infrastructure/Persistence/Migrations/20260614165737_M14_News.Designer.cs:M14_News",
+      "type": "class",
+      "name": "M14_News",
+      "filePath": "Rmms.Infrastructure/Persistence/Migrations/20260614165737_M14_News.Designer.cs",
+      "lineRange": [
+        16,
+        2437
+      ],
+      "summary": "Class M14_News trong 20260614165737_M14_News.Designer.cs.",
+      "tags": [
+        "rmms.infrastructure",
+        "persistence",
+        "code",
+        "cs",
+        "class"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:Rmms.Infrastructure/Persistence/Migrations/20260615022635_S17_AttendanceCheckInIndex.cs",
+      "type": "file",
+      "name": "20260615022635_S17_AttendanceCheckInIndex.cs",
+      "filePath": "Rmms.Infrastructure/Persistence/Migrations/20260615022635_S17_AttendanceCheckInIndex.cs",
+      "summary": "20260615022635_S17_AttendanceCheckInIndex.cs — tệp mã nguồn C# trong backend RMMS (2 hàm, 1 class).",
+      "tags": [
+        "rmms.infrastructure",
+        "persistence",
+        "code",
+        "cs"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Rmms.Infrastructure/Persistence/Migrations/20260615022635_S17_AttendanceCheckInIndex.cs:Up",
+      "type": "function",
+      "name": "Up",
+      "filePath": "Rmms.Infrastructure/Persistence/Migrations/20260615022635_S17_AttendanceCheckInIndex.cs",
+      "lineRange": [
+        11,
+        17
+      ],
+      "summary": "Hàm Up trong 20260615022635_S17_AttendanceCheckInIndex.cs.",
+      "tags": [
+        "rmms.infrastructure",
+        "persistence",
+        "code",
+        "cs",
+        "ham"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:Rmms.Infrastructure/Persistence/Migrations/20260615022635_S17_AttendanceCheckInIndex.cs:Down",
+      "type": "function",
+      "name": "Down",
+      "filePath": "Rmms.Infrastructure/Persistence/Migrations/20260615022635_S17_AttendanceCheckInIndex.cs",
+      "lineRange": [
+        20,
+        25
+      ],
+      "summary": "Hàm Down trong 20260615022635_S17_AttendanceCheckInIndex.cs.",
+      "tags": [
+        "rmms.infrastructure",
+        "persistence",
+        "code",
+        "cs",
+        "ham"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:Rmms.Infrastructure/Persistence/Migrations/20260615022635_S17_AttendanceCheckInIndex.cs:S17_AttendanceCheckInIndex",
+      "type": "class",
+      "name": "S17_AttendanceCheckInIndex",
+      "filePath": "Rmms.Infrastructure/Persistence/Migrations/20260615022635_S17_AttendanceCheckInIndex.cs",
+      "lineRange": [
+        8,
+        26
+      ],
+      "summary": "Class S17_AttendanceCheckInIndex trong 20260615022635_S17_AttendanceCheckInIndex.cs.",
+      "tags": [
+        "rmms.infrastructure",
+        "persistence",
+        "code",
+        "cs",
+        "class"
+      ],
+      "complexity": "moderate"
+    }
+  ],
+  "edges": [
+    {
+      "source": "file:Rmms.Infrastructure/Persistence/Migrations/20260605034359_M03_Organization_Assignment.cs",
+      "target": "function:Rmms.Infrastructure/Persistence/Migrations/20260605034359_M03_Organization_Assignment.cs:Up",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Infrastructure/Persistence/Migrations/20260605034359_M03_Organization_Assignment.cs",
+      "target": "function:Rmms.Infrastructure/Persistence/Migrations/20260605034359_M03_Organization_Assignment.cs:Down",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Infrastructure/Persistence/Migrations/20260605034359_M03_Organization_Assignment.cs",
+      "target": "class:Rmms.Infrastructure/Persistence/Migrations/20260605034359_M03_Organization_Assignment.cs:M03_Organization_Assignment",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Infrastructure/Persistence/Migrations/20260605034359_M03_Organization_Assignment.Designer.cs",
+      "target": "function:Rmms.Infrastructure/Persistence/Migrations/20260605034359_M03_Organization_Assignment.Designer.cs:BuildTargetModel",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Infrastructure/Persistence/Migrations/20260605034359_M03_Organization_Assignment.Designer.cs",
+      "target": "class:Rmms.Infrastructure/Persistence/Migrations/20260605034359_M03_Organization_Assignment.Designer.cs:M03_Organization_Assignment",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Infrastructure/Persistence/Migrations/20260606042427_M07_WorkSchedule.cs",
+      "target": "function:Rmms.Infrastructure/Persistence/Migrations/20260606042427_M07_WorkSchedule.cs:Up",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Infrastructure/Persistence/Migrations/20260606042427_M07_WorkSchedule.cs",
+      "target": "function:Rmms.Infrastructure/Persistence/Migrations/20260606042427_M07_WorkSchedule.cs:Down",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Infrastructure/Persistence/Migrations/20260606042427_M07_WorkSchedule.cs",
+      "target": "class:Rmms.Infrastructure/Persistence/Migrations/20260606042427_M07_WorkSchedule.cs:M07_WorkSchedule",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Infrastructure/Persistence/Migrations/20260606042427_M07_WorkSchedule.Designer.cs",
+      "target": "function:Rmms.Infrastructure/Persistence/Migrations/20260606042427_M07_WorkSchedule.Designer.cs:BuildTargetModel",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Infrastructure/Persistence/Migrations/20260606042427_M07_WorkSchedule.Designer.cs",
+      "target": "class:Rmms.Infrastructure/Persistence/Migrations/20260606042427_M07_WorkSchedule.Designer.cs:M07_WorkSchedule",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Infrastructure/Persistence/Migrations/20260606082819_M05_Attendance.cs",
+      "target": "function:Rmms.Infrastructure/Persistence/Migrations/20260606082819_M05_Attendance.cs:Up",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Infrastructure/Persistence/Migrations/20260606082819_M05_Attendance.cs",
+      "target": "function:Rmms.Infrastructure/Persistence/Migrations/20260606082819_M05_Attendance.cs:Down",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Infrastructure/Persistence/Migrations/20260606082819_M05_Attendance.cs",
+      "target": "class:Rmms.Infrastructure/Persistence/Migrations/20260606082819_M05_Attendance.cs:M05_Attendance",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Infrastructure/Persistence/Migrations/20260606082819_M05_Attendance.Designer.cs",
+      "target": "function:Rmms.Infrastructure/Persistence/Migrations/20260606082819_M05_Attendance.Designer.cs:BuildTargetModel",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Infrastructure/Persistence/Migrations/20260606082819_M05_Attendance.Designer.cs",
+      "target": "class:Rmms.Infrastructure/Persistence/Migrations/20260606082819_M05_Attendance.Designer.cs:M05_Attendance",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Infrastructure/Persistence/Migrations/20260606171533_M09_Approvals.cs",
+      "target": "function:Rmms.Infrastructure/Persistence/Migrations/20260606171533_M09_Approvals.cs:Up",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Infrastructure/Persistence/Migrations/20260606171533_M09_Approvals.cs",
+      "target": "function:Rmms.Infrastructure/Persistence/Migrations/20260606171533_M09_Approvals.cs:Down",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Infrastructure/Persistence/Migrations/20260606171533_M09_Approvals.cs",
+      "target": "class:Rmms.Infrastructure/Persistence/Migrations/20260606171533_M09_Approvals.cs:M09_Approvals",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Infrastructure/Persistence/Migrations/20260606171533_M09_Approvals.Designer.cs",
+      "target": "function:Rmms.Infrastructure/Persistence/Migrations/20260606171533_M09_Approvals.Designer.cs:BuildTargetModel",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Infrastructure/Persistence/Migrations/20260606171533_M09_Approvals.Designer.cs",
+      "target": "class:Rmms.Infrastructure/Persistence/Migrations/20260606171533_M09_Approvals.Designer.cs:M09_Approvals",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Infrastructure/Persistence/Migrations/20260607024229_M08_LeaveOt.cs",
+      "target": "function:Rmms.Infrastructure/Persistence/Migrations/20260607024229_M08_LeaveOt.cs:Up",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Infrastructure/Persistence/Migrations/20260607024229_M08_LeaveOt.cs",
+      "target": "function:Rmms.Infrastructure/Persistence/Migrations/20260607024229_M08_LeaveOt.cs:Down",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Infrastructure/Persistence/Migrations/20260607024229_M08_LeaveOt.cs",
+      "target": "class:Rmms.Infrastructure/Persistence/Migrations/20260607024229_M08_LeaveOt.cs:M08_LeaveOt",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Infrastructure/Persistence/Migrations/20260607024229_M08_LeaveOt.Designer.cs",
+      "target": "function:Rmms.Infrastructure/Persistence/Migrations/20260607024229_M08_LeaveOt.Designer.cs:BuildTargetModel",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Infrastructure/Persistence/Migrations/20260607024229_M08_LeaveOt.Designer.cs",
+      "target": "class:Rmms.Infrastructure/Persistence/Migrations/20260607024229_M08_LeaveOt.Designer.cs:M08_LeaveOt",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Infrastructure/Persistence/Migrations/20260608034404_M14_Notifications.cs",
+      "target": "function:Rmms.Infrastructure/Persistence/Migrations/20260608034404_M14_Notifications.cs:Up",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Infrastructure/Persistence/Migrations/20260608034404_M14_Notifications.cs",
+      "target": "function:Rmms.Infrastructure/Persistence/Migrations/20260608034404_M14_Notifications.cs:Down",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Infrastructure/Persistence/Migrations/20260608034404_M14_Notifications.cs",
+      "target": "class:Rmms.Infrastructure/Persistence/Migrations/20260608034404_M14_Notifications.cs:M14_Notifications",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Infrastructure/Persistence/Migrations/20260608034404_M14_Notifications.Designer.cs",
+      "target": "function:Rmms.Infrastructure/Persistence/Migrations/20260608034404_M14_Notifications.Designer.cs:BuildTargetModel",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Infrastructure/Persistence/Migrations/20260608034404_M14_Notifications.Designer.cs",
+      "target": "class:Rmms.Infrastructure/Persistence/Migrations/20260608034404_M14_Notifications.Designer.cs:M14_Notifications",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Infrastructure/Persistence/Migrations/20260614092038_M04_ProductMaster.cs",
+      "target": "function:Rmms.Infrastructure/Persistence/Migrations/20260614092038_M04_ProductMaster.cs:Up",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Infrastructure/Persistence/Migrations/20260614092038_M04_ProductMaster.cs",
+      "target": "function:Rmms.Infrastructure/Persistence/Migrations/20260614092038_M04_ProductMaster.cs:Down",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Infrastructure/Persistence/Migrations/20260614092038_M04_ProductMaster.cs",
+      "target": "class:Rmms.Infrastructure/Persistence/Migrations/20260614092038_M04_ProductMaster.cs:M04_ProductMaster",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Infrastructure/Persistence/Migrations/20260614092038_M04_ProductMaster.Designer.cs",
+      "target": "function:Rmms.Infrastructure/Persistence/Migrations/20260614092038_M04_ProductMaster.Designer.cs:BuildTargetModel",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Infrastructure/Persistence/Migrations/20260614092038_M04_ProductMaster.Designer.cs",
+      "target": "class:Rmms.Infrastructure/Persistence/Migrations/20260614092038_M04_ProductMaster.Designer.cs:M04_ProductMaster",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Infrastructure/Persistence/Migrations/20260614102719_M10_Forms.cs",
+      "target": "function:Rmms.Infrastructure/Persistence/Migrations/20260614102719_M10_Forms.cs:Up",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Infrastructure/Persistence/Migrations/20260614102719_M10_Forms.cs",
+      "target": "function:Rmms.Infrastructure/Persistence/Migrations/20260614102719_M10_Forms.cs:Down",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Infrastructure/Persistence/Migrations/20260614102719_M10_Forms.cs",
+      "target": "class:Rmms.Infrastructure/Persistence/Migrations/20260614102719_M10_Forms.cs:M10_Forms",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Infrastructure/Persistence/Migrations/20260614102719_M10_Forms.Designer.cs",
+      "target": "function:Rmms.Infrastructure/Persistence/Migrations/20260614102719_M10_Forms.Designer.cs:BuildTargetModel",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Infrastructure/Persistence/Migrations/20260614102719_M10_Forms.Designer.cs",
+      "target": "class:Rmms.Infrastructure/Persistence/Migrations/20260614102719_M10_Forms.Designer.cs:M10_Forms",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Infrastructure/Persistence/Migrations/20260614104723_M10_FormFill.cs",
+      "target": "function:Rmms.Infrastructure/Persistence/Migrations/20260614104723_M10_FormFill.cs:Up",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Infrastructure/Persistence/Migrations/20260614104723_M10_FormFill.cs",
+      "target": "function:Rmms.Infrastructure/Persistence/Migrations/20260614104723_M10_FormFill.cs:Down",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Infrastructure/Persistence/Migrations/20260614104723_M10_FormFill.cs",
+      "target": "class:Rmms.Infrastructure/Persistence/Migrations/20260614104723_M10_FormFill.cs:M10_FormFill",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Infrastructure/Persistence/Migrations/20260614104723_M10_FormFill.Designer.cs",
+      "target": "function:Rmms.Infrastructure/Persistence/Migrations/20260614104723_M10_FormFill.Designer.cs:BuildTargetModel",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Infrastructure/Persistence/Migrations/20260614104723_M10_FormFill.Designer.cs",
+      "target": "class:Rmms.Infrastructure/Persistence/Migrations/20260614104723_M10_FormFill.Designer.cs:M10_FormFill",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Infrastructure/Persistence/Migrations/20260614125121_M11_VisitPlan.cs",
+      "target": "function:Rmms.Infrastructure/Persistence/Migrations/20260614125121_M11_VisitPlan.cs:Up",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Infrastructure/Persistence/Migrations/20260614125121_M11_VisitPlan.cs",
+      "target": "function:Rmms.Infrastructure/Persistence/Migrations/20260614125121_M11_VisitPlan.cs:Down",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Infrastructure/Persistence/Migrations/20260614125121_M11_VisitPlan.cs",
+      "target": "class:Rmms.Infrastructure/Persistence/Migrations/20260614125121_M11_VisitPlan.cs:M11_VisitPlan",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Infrastructure/Persistence/Migrations/20260614125121_M11_VisitPlan.Designer.cs",
+      "target": "function:Rmms.Infrastructure/Persistence/Migrations/20260614125121_M11_VisitPlan.Designer.cs:BuildTargetModel",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Infrastructure/Persistence/Migrations/20260614125121_M11_VisitPlan.Designer.cs",
+      "target": "class:Rmms.Infrastructure/Persistence/Migrations/20260614125121_M11_VisitPlan.Designer.cs:M11_VisitPlan",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Infrastructure/Persistence/Migrations/20260614164936_M13_Documents.cs",
+      "target": "function:Rmms.Infrastructure/Persistence/Migrations/20260614164936_M13_Documents.cs:Up",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Infrastructure/Persistence/Migrations/20260614164936_M13_Documents.cs",
+      "target": "function:Rmms.Infrastructure/Persistence/Migrations/20260614164936_M13_Documents.cs:Down",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Infrastructure/Persistence/Migrations/20260614164936_M13_Documents.cs",
+      "target": "class:Rmms.Infrastructure/Persistence/Migrations/20260614164936_M13_Documents.cs:M13_Documents",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Infrastructure/Persistence/Migrations/20260614164936_M13_Documents.Designer.cs",
+      "target": "function:Rmms.Infrastructure/Persistence/Migrations/20260614164936_M13_Documents.Designer.cs:BuildTargetModel",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Infrastructure/Persistence/Migrations/20260614164936_M13_Documents.Designer.cs",
+      "target": "class:Rmms.Infrastructure/Persistence/Migrations/20260614164936_M13_Documents.Designer.cs:M13_Documents",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Infrastructure/Persistence/Migrations/20260614165737_M14_News.cs",
+      "target": "function:Rmms.Infrastructure/Persistence/Migrations/20260614165737_M14_News.cs:Up",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Infrastructure/Persistence/Migrations/20260614165737_M14_News.cs",
+      "target": "function:Rmms.Infrastructure/Persistence/Migrations/20260614165737_M14_News.cs:Down",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Infrastructure/Persistence/Migrations/20260614165737_M14_News.cs",
+      "target": "class:Rmms.Infrastructure/Persistence/Migrations/20260614165737_M14_News.cs:M14_News",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Infrastructure/Persistence/Migrations/20260614165737_M14_News.Designer.cs",
+      "target": "function:Rmms.Infrastructure/Persistence/Migrations/20260614165737_M14_News.Designer.cs:BuildTargetModel",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Infrastructure/Persistence/Migrations/20260614165737_M14_News.Designer.cs",
+      "target": "class:Rmms.Infrastructure/Persistence/Migrations/20260614165737_M14_News.Designer.cs:M14_News",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Infrastructure/Persistence/Migrations/20260615022635_S17_AttendanceCheckInIndex.cs",
+      "target": "function:Rmms.Infrastructure/Persistence/Migrations/20260615022635_S17_AttendanceCheckInIndex.cs:Up",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Infrastructure/Persistence/Migrations/20260615022635_S17_AttendanceCheckInIndex.cs",
+      "target": "function:Rmms.Infrastructure/Persistence/Migrations/20260615022635_S17_AttendanceCheckInIndex.cs:Down",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:Rmms.Infrastructure/Persistence/Migrations/20260615022635_S17_AttendanceCheckInIndex.cs",
+      "target": "class:Rmms.Infrastructure/Persistence/Migrations/20260615022635_S17_AttendanceCheckInIndex.cs:S17_AttendanceCheckInIndex",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    }
+  ]
+}
